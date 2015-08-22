@@ -1,4 +1,4 @@
-package cherokee.dictionary.conjugation
+package cherokee.dictionary.conjugation.old
 
 import cherokee.dictionary.conjugation.conjugate.CompoundPrefix
 import cherokee.dictionary.conjugation.conjugate.CompoundPrefixes

@@ -13,5 +13,13 @@ public enum PrefixTableSubject {
     PL1EXCL,
     DL2,
     PL2,
-    PL3
+    PL3,
+    DL2INCL,
+    DL2EXCL,
+    PL2INCL,
+    PL2EXCL,
+    DL3INCL,
+    DL3EXCL,
+    PL3INCL,
+    PL3EXCL
 }

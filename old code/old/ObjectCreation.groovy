@@ -1,4 +1,4 @@
-package cherokee.dictionary.conjugation
+package cherokee.dictionary.conjugation.old
 
 
 /**
