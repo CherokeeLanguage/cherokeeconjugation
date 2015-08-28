@@ -42,8 +42,8 @@ public class Stemmer {
             e.imp = StringUtils.strip(e.imp);
         }
         e.imp = fixImperativeSuffix(e.imp);
-        e.inf = StringUtils.strip(infinitive.syllabary);
-        if (e.inf.contains(",")) {
+        e.inf = StringUtils.strip(infinitive?.syllabary);
+        if (e?.inf?.contains(",")) {
             e.inf = StringUtils.substringBefore(e.inf, ",");
             e.inf = StringUtils.strip(e.inf);
         }
@@ -68,55 +68,50 @@ public class Stemmer {
      */
         NormalizedVerbEntry.removeᎢprefix(e);
 
-        /*
-     * Ꭰ
-     */
-        if (e.pres3.startsWith("Ꭰ") && e.pres1.startsWith("Ꮵ")) {
-            return generateConsonentStems(e);
-        }
-        if (e.pres3.startsWith("Ꭰ") && e.pres1.startsWith("Ꭶ")) {
-            return generateVowelStems("Ꭰ", e);
-        }
-        if (e.pres3.startsWith("Ꭰ") && !e.past.startsWith("ᎤᏩ")) {
-            if (e.pres3.equals("ᎠᎦᏍᎦ")) {
-
-//            new JsonConverter().toJson(generateVowelStems("Ꭰ", e));
-            }
-            return generateVowelStems("Ꭰ", e);
+        List<StemEntry> a3rd = a3rd(e);
+        if (a3rd) {
+            return a3rd;
         }
 
-        /*
-     * Ꭶ
-     */
-        if (e.pres3.startsWith("Ꭶ") && e.pres1.startsWith("Ꮵ")) {
-            return generateConsonentStems(e);
-        }
-        if (e.pres3.startsWith("Ꭶ") && e.pres1.startsWith("Ꭶ")) {
-            return generateVowelStems("Ꭰ", e);
+        List<StemEntry> ga3rd = ga3rd(e);
+        if (ga3rd) {
+            return ga3rd;
         }
 
-        /*
-     * Ꭷ
-     */
-        if (e.pres3.startsWith("Ꭷ") && e.pres1.startsWith("Ꮵ")) {
-            return generateConsonentStems(e);
-        }
-        if (e.pres3.startsWith("Ꭷ") && e.pres1.startsWith("Ꭶ")) {
-            return generateVowelStems("Ꭰ", e);
-        }
-        if (e.pres3.startsWith("Ꭷ") && e.imp.startsWith("Ꭿ")) {
-            return generateConsonentStems(e);
+        List<StemEntry> ka3rd = ka3rd(e);
+        if (ka3rd) {
+            return ka3rd;
         }
 
-        if (e.pres3.startsWith("Ꭷ") && e.past.startsWith("Ꭴ") && !e.past.matches("^[Ꮹ-Ꮾ].*")) {
-            return generateConsonentStems(e);
-        }
-
-        if (e.pres3.startsWith("Ꭷ") && StringUtils.isEmpty(e.past)
-                && StringUtils.isEmpty(e.imp) && StringUtils.isEmpty(e.inf)) {
-            return generateConsonentStems(e);
-        }
-
+		/*
+		 * Ꭷ
+		 */
+		/*ka_3rd: {
+			if (!e.pres3.startsWith("Ꭷ")) {
+				break ka_3rd;
+			}
+			if (!e.pres3.matches("Ꭷ[ᏯᏰᏱᏲᏳᏴ].*") && e.pres1.matches("Ꮵ[ᏯᏰᏱᏲᏳᏴ].*")){
+				return generateVowelStems("Ꭰ", e);
+			}
+			if (e.pres1.startsWith("Ꮵ")) {
+				return generateConsonentStems(e);
+			}
+			if (e.pres1.startsWith("Ꭶ")) {
+				return generateVowelStems("Ꭰ", e);
+			}
+			if (e.imp.startsWith("Ꭿ")) {
+				return generateConsonentStems(e);
+			}
+			
+			if (e.past.startsWith("Ꭴ") && !e.past.matches("^[Ꮹ-Ꮾ].*")) {
+				return generateConsonentStems(e);
+			}
+			
+			if (StringUtils.isEmpty(e.past)
+					&& StringUtils.isEmpty(e.imp) && StringUtils.isEmpty(e.inf)) {
+				return generateConsonentStems(e);
+			}
+		}*/
 
         if (e.pres3.startsWith("Ꭴ") && e.pres1.startsWith("ᎠᏆ")) {
             return generateVowelStems("Ꭰ", e);
@@ -244,6 +239,82 @@ public class Stemmer {
         return new ArrayList<StemEntry>();
     }
 
+    public List<StemEntry> a3rd(e) {
+        /*
+     * Ꭰ
+     */
+//        a_3rd: {
+            if (!e.pres3.startsWith("Ꭰ")){
+                return null;
+            }
+            if (!e.pres3.matches("Ꭰ[ᏯᏰᏱᏲᏳᏴ].*") && e.pres1.matches("Ꮵ[ᏯᏰᏱᏲᏳᏴ].*")){
+                return generateVowelStems("Ꭰ", e);
+            }
+            if (e.pres1.startsWith("Ꮵ")) {
+                return generateConsonentStems(e);
+            }
+            if (e.pres1.startsWith("Ꭶ")) {
+                return generateVowelStems("Ꭰ", e);
+            }
+            if (!e.past.startsWith("ᎤᏩ")) {
+                if (e.pres3.equals("ᎠᎦᏍᎦ")){
+//                    new JsonConverter().toJson(generateVowelStems("Ꭰ", e));
+                }
+                return generateVowelStems("Ꭰ", e);
+            }
+//        }
+    }
+
+    public List<StemEntry> ga3rd(e) {
+        /*
+		 * Ꭶ
+		 */
+//        ga_3rd: {
+            if (!e.pres3.startsWith("Ꭶ")){
+//                break ga_3rd;
+//                ga3rd(e);
+                return null;
+            }
+            if (!e.pres3.matches("Ꭶ[ᏯᏰᏱᏲᏳᏴ].*") && e.pres1.matches("Ꮵ[ᏯᏰᏱᏲᏳᏴ].*")){
+                return generateVowelStems("Ꭰ", e);
+            }
+            if (e.pres1.startsWith("Ꮵ")) {
+                return generateConsonentStems(e);
+            }
+            if (e.pres1.startsWith("Ꭶ")) {
+                return generateVowelStems("Ꭰ", e);
+            }
+//        }
+    }
+
+    public List<StemEntry> ka3rd(e) {
+        if (!e.pres3.startsWith("Ꭷ")) {
+//            ka3rd(e);
+            return null;
+        }
+        if (!e.pres3.matches("Ꭷ[ᏯᏰᏱᏲᏳᏴ].*") && e.pres1.matches("Ꮵ[ᏯᏰᏱᏲᏳᏴ].*")){
+            return generateVowelStems("Ꭰ", e);
+        }
+        if (e.pres1.startsWith("Ꮵ")) {
+            return generateConsonentStems(e);
+        }
+        if (e.pres1.startsWith("Ꭶ")) {
+            return generateVowelStems("Ꭰ", e);
+        }
+        if (e.imp.startsWith("Ꭿ")) {
+            return generateConsonentStems(e);
+        }
+
+        if (e.past.startsWith("Ꭴ") && !e.past.matches("^[Ꮹ-Ꮾ].*")) {
+            return generateConsonentStems(e);
+        }
+
+        if (StringUtils.isEmpty(e.past)
+                && StringUtils.isEmpty(e.imp) && StringUtils.isEmpty(e.inf)) {
+            return generateConsonentStems(e);
+        }
+    }
+
     public List<StemEntry> generateVowelStems(String vowel, NormalizedVerbEntry e) {
         if (e.imp.startsWith("Ꮻ")) {
             e.imp = chopPrefix(e.imp);
@@ -269,7 +340,6 @@ public class Stemmer {
         list.add(new StemEntry(chopPrefix(e.inf), StemType.Deverbal));
         return list;
     }
-
 
     private String fixImperativeSuffix(String imp) {
         if (StringUtils.isBlank(imp)) {

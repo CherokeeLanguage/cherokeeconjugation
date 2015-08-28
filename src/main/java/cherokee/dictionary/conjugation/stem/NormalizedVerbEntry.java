@@ -103,9 +103,11 @@ public class NormalizedVerbEntry {
 		if (e.past.startsWith("Ꮽ")){
 			e.past=newPrefix("Ꭴ", e.past);
 		}
-		if (e.inf.startsWith("Ꮽ")){
-			e.inf=newPrefix("Ꭴ", e.inf);
+
+		if (e.inf != null && e.inf.startsWith("Ꮽ")){
+			e.inf = newPrefix("Ꭴ", e.inf);
 		}
+
 		warnIfStartsWithAnyRange("Ꮻ", "Ꮾ", e);
 	}
 	

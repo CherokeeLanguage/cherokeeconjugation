@@ -23,9 +23,13 @@ class RuleUW implements PrefixRule {
         def processedValue = verbStem;
 
         if (verbSet == VerbSet.B
-            && pto== PrefixTableObject.SG3IN
+            && pto != null && pto== PrefixTableObject.SG3IN
             && pts == PrefixTableSubject.SG3) {
+            //todo: should change this so that the stem starts with = a vowel instead of 'uwa'
             if (verbStem.startsWith("ᎤᏩ")) {
+                //if the verb starts with the two syllables (uwa) then we want to remove both and add the 'u' only
+                // this won't change when we add more prefixes
+                //todo: remember to process the prefixes in order from closest to root and stem out ward
                 processedValue = "Ꭴ${verbStem.substring(2)}"
             }
         }

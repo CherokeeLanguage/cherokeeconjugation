@@ -1,7 +1,5 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.conjugation.conjugate.IntransitiveProcessor
-import cherokee.dictionary.conjugation.conjugate.TransitiveProcessor
 import cherokee.dictionary.conjugation.conjugate.VerbType
 import cherokee.dictionary.conjugation.stem.Stemmer
 
@@ -29,12 +27,7 @@ class Conjugate {
                   final Stemmer stemmer,
                   final String tense,//verb tense
                   final VerbType verbType) { // vi or vt
-        if (verbType == VerbType.TRANSITIVE) {
-            TransitiveProcessor tp = new TransitiveProcessor();
-            return tp.processTransitive(subject, object, stemmer, tense, verbType)
-        } else if (verbType == VerbType.INTRANSITIVE) {
-            IntransitiveProcessor ip = new IntransitiveProcessor();
-            return ip.processIntransitive(subject, "", stemmer, tense, verbType);
-        }
+        VerbConjugationProcessor vcp = new VerbConjugationProcessor();
+        vcp.process(subject, object, stemmer, tense, verbType);
     }
 }

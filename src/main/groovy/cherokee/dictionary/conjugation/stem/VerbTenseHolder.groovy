@@ -29,7 +29,7 @@ class VerbTenseHolder {
 //        def su = new SyllabaryUtil()
 
 //        infinitive = su.parseSyllabary(stemmer.infinitive.syllabary.substring(1))
-        infinitive = stemmer.infinitive.syllabary.substring(1)
+        infinitive = stemmer?.infinitive?.syllabary ? stemmer?.infinitive?.syllabary?.substring(1) : ''
 
         stemmer.getStems().each {
             switch (it.stemtype) {
