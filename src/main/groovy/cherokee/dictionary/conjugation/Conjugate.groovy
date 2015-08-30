@@ -1,7 +1,7 @@
 package cherokee.dictionary.conjugation
 
 import cherokee.dictionary.conjugation.conjugate.VerbType
-import cherokee.dictionary.conjugation.stem.Stemmer
+import cherokee.dictionary.conjugation.cdpbook.Stemmer
 
 /**
  * Created by torr on 8/20/2015.

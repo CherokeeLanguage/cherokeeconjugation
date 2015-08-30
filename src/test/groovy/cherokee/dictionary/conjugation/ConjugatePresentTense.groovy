@@ -1,94 +1,8 @@
 package cherokee.dictionary.conjugation
-
-import cherokee.dictionary.conjugation.conjugate.CompoundPrefixes
-import cherokee.dictionary.conjugation.stem.DefinitionLine
-import cherokee.dictionary.conjugation.stem.Stemmer
-import com.cobradoc.cherokee.SyllabaryUtil
-
 /**
  * Created by torr on 8/21/2015.
  */
-class ConjugateTest extends GroovyTestCase {
-    static def heWantsIt = new Stemmer()
-    static def hiwoniha = new Stemmer()
-    static def ganeneha = new Stemmer()
-    static def tohave = new Stemmer()
-    static def togreet = new Stemmer()
-    static def tohear = new Stemmer()
-    static def tofish = new Stemmer()
-    static def toeatLiving = new Stemmer()
-    static def takeABite = new Stemmer()
-
-    static {
-        heWantsIt.habitual = new DefinitionLine(syllabary: "ᎤᏚᎵᏍᎪᎢ")
-        heWantsIt.imperative = new DefinitionLine(syllabary: "ᏣᏚᎳ")
-        heWantsIt.infinitive = new DefinitionLine(syllabary: "ᎤᏚᎸᏗ")
-        heWantsIt.present1st = new DefinitionLine(syllabary: "ᎠᏆᏚᎵᎭ")
-        heWantsIt.present3rd = new DefinitionLine(syllabary: "ᎤᏚᎵᎭ")
-        heWantsIt.remotepast = new DefinitionLine(syllabary: "ᎤᏚᎸᎲᎢ")
-
-        hiwoniha.habitual = new DefinitionLine(syllabary: "ᎦᏬᏂᏍᎪᎢ")
-        hiwoniha.imperative = new DefinitionLine(syllabary: "ᎯᏬᏂᎯ")
-        hiwoniha.infinitive = new DefinitionLine(syllabary: "ᎤᏬᏂᎯᏍᏗ")
-        hiwoniha.present1st = new DefinitionLine(syllabary:  "ᏥᏬᏂᎭ")
-        hiwoniha.present3rd = new DefinitionLine(syllabary: "ᎦᏬᏂᎭ")
-        hiwoniha.remotepast = new DefinitionLine(syllabary: "ᎤᏬᏂᏒᎢ")
-
-        ganeneha.habitual = new DefinitionLine(syllabary: "ᎦᏁᏁᎰᎢ")
-        ganeneha.imperative = new DefinitionLine(syllabary: "ᎯᏁᎥᏏ")
-        ganeneha.infinitive = new DefinitionLine(syllabary: "ᎤᏁᏁᏗ")
-        ganeneha.present1st = new DefinitionLine(syllabary:  "ᏥᏁᏁᎭ")
-        ganeneha.present3rd = new DefinitionLine(syllabary: "ᎦᏁᏁᎭ")
-        ganeneha.remotepast = new DefinitionLine(syllabary: "ᎤᏁᏁᎸᎢ")
-
-        tohave.habitual = new DefinitionLine(syllabary: "ᎤᎰᎢ")
-        tohave.imperative = new DefinitionLine(syllabary: "ᏣᎮᏍᏗ")
-        tohave.infinitive = new DefinitionLine(syllabary: "")
-        tohave.present1st = new DefinitionLine(syllabary:  "ᎠᎩᎭ")
-        tohave.present3rd = new DefinitionLine(syllabary: "ᎤᎭ")
-        tohave.remotepast = new DefinitionLine(syllabary: "ᎤᎲᎢ")
-
-        togreet.habitual = new DefinitionLine(syllabary: "ᎠᏲᎵᎰᎢ")
-        togreet.imperative = new DefinitionLine(syllabary: "ᎯᏲᎵᎦ")
-        togreet.infinitive = new DefinitionLine(syllabary: "ᎤᏲᎵᏍᏗ")
-        togreet.present1st = new DefinitionLine(syllabary:  "ᏥᏲᎵᎭ")
-        togreet.present3rd = new DefinitionLine(syllabary: "ᎠᏲᎵᎭ")
-        togreet.remotepast = new DefinitionLine(syllabary: "ᎤᏲᎵᎸᎢ")
-
-        tohear.habitual = new DefinitionLine(syllabary: "ᎠᏛᎩᏍᎪᎢ")
-        tohear.imperative = new DefinitionLine(syllabary: "ᎯᏯᏛᎬᎦ")
-        tohear.infinitive = new DefinitionLine(syllabary: "ᎤᏛᎪᏗ")
-        tohear.present1st = new DefinitionLine(syllabary:  "ᏥᏯᏛᎩᎠ")
-        tohear.present3rd = new DefinitionLine(syllabary: "ᎠᏛᎩᎠ")
-        tohear.remotepast = new DefinitionLine(syllabary: "ᎤᏛᎦᏅᎢ")
-
-        tofish.habitual = new DefinitionLine(syllabary: "ᎠᏑᎲᏍᎪᎢ")
-        tofish.imperative = new DefinitionLine(syllabary: "ᎭᏑᎲᎦ")
-        tofish.infinitive = new DefinitionLine(syllabary: "ᎤᏑᏗ")
-        tofish.present1st = new DefinitionLine(syllabary:  "ᎦᏑᎲᏍᎦ")
-        tofish.present3rd = new DefinitionLine(syllabary: "ᎠᏑᎲᏍᎦ")
-        tofish.remotepast = new DefinitionLine(syllabary: "ᎤᏑᏅᎢ")
-
-        toeatLiving.habitual = new DefinitionLine(syllabary: "ᎦᏰᏍᎪᎢ")
-        toeatLiving.imperative = new DefinitionLine(syllabary: "ᎯᏯᏯᎦ")
-        toeatLiving.infinitive = new DefinitionLine(syllabary: "ᎤᏩᏰᏍᏗ")
-        toeatLiving.present1st = new DefinitionLine(syllabary:  "ᏥᏯᏰᎠ")
-        toeatLiving.present3rd = new DefinitionLine(syllabary: "ᎦᏰᎠ")
-        toeatLiving.remotepast = new DefinitionLine(syllabary: "ᎤᏩᏯᎥᎢ")
-
-        takeABite.habitual = new DefinitionLine(syllabary: "ᎠᏥᏍᏕᏍᎪᎢ")
-        takeABite.imperative = new DefinitionLine(syllabary: "ᎭᏥᏍᏓᎩ")
-        takeABite.infinitive = new DefinitionLine(syllabary: "ᎤᏥᏕᏍᎢ")
-        takeABite.present1st = new DefinitionLine(syllabary:  "ᎦᏥᏍᏕᎠ")
-        takeABite.present3rd = new DefinitionLine(syllabary: "ᎠᏥᏍᏕᎠ")
-        takeABite.remotepast = new DefinitionLine(syllabary: "ᎤᏥᏍᏕᏒᎢ")
-    }
-
-    def conj(subject, object, stemmer, verbTense, partofspeechc){
-        Conjugate conjugate = new Conjugate()
-        return conjugate.conjugate(subject, object, stemmer, verbTense, partofspeechc)
-    }
-
+class ConjugatePresentTense extends ConjugateBase {
     //finished and good
     public void testWantConjgationTransitivePresent() {
         def partofspeechc = "v.t."
@@ -116,7 +30,6 @@ class ConjugateTest extends GroovyTestCase {
         //todo: probably a spelling rule - if u precedes wa then wa goes away
         println conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
 //        assertTrue "", "ᏚᏚᎵᎭ" == conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
-
         assertTrue "", "ᏚᎩᎾᏚᎵᎭ" == conj("DL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
 
         //ᏙᎦᏚᎵᎭ
@@ -166,9 +79,6 @@ class ConjugateTest extends GroovyTestCase {
         def partofspeechc = "v.i."
         def verbTense = "PRESENT"
 
-        //make intransitive follow the below - pass in the subject - if intransitive then use SG3IN as the object
-        // same columnar values, why make it more complicated
-
         assertTrue "", "ᏥᏬᏂᎭ" == conj("SG1", "", hiwoniha, verbTense, partofspeechc)
         assertTrue "", "ᎯᏬᏂᎭ" == conj("SG2", "", hiwoniha, verbTense, partofspeechc)
         assertTrue "", "ᎦᏬᏂᎭ" == conj("SG3", "", hiwoniha, verbTense, partofspeechc)
@@ -178,8 +88,6 @@ class ConjugateTest extends GroovyTestCase {
         assertTrue "", "ᎢᏗᏬᏂᎭ" == conj("PL1INCL", "", hiwoniha, verbTense, partofspeechc)
         assertTrue "", "ᎣᏥᏬᏂᎭ" == conj("PL1EXCL", "", hiwoniha, verbTense, partofspeechc)
         assertTrue "", "ᎢᏥᏬᏂᎭ" == conj("PL2", "", hiwoniha, verbTense, partofspeechc)
-
-        //aniwoniha is correct -- something is wrong with the code
         assertTrue "", "ᎠᏂᏬᏂᎭ" == conj("PL3", "", hiwoniha, verbTense, partofspeechc)
     }
 
@@ -234,33 +142,53 @@ class ConjugateTest extends GroovyTestCase {
         assertTrue "", "ᎠᏂᏲᎵᎭ" == conj("PL3", "SG3AN", togreet, verbTense, partofspeechc)
     }
 
-   /* //not good
-    public void testEatPresent() {
+    //not good
+    public void testKillPresent() {
         def partofspeechc = "v.t."
         def verbTense = "PRESENT"
 
-        println conj("SG1", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("SG2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("SG3", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("SG3", "SG3IN", toeatLiving, verbTense, partofspeechc)
-        println conj("DL1INCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("DL1EXCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("DL2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("PL1INCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("PL1EXCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("PL2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        println conj("PL3", "SG3AN", toeatLiving, verbTense, partofspeechc)
+//        println conj("SG1", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("SG2", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("SG3", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL2", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL2", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL3", "SG3AN", tokill, verbTense, partofspeechc)
+//        println conj("SG1", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("SG2", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("DL2", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL2", "PL3AN", tokill, verbTense, partofspeechc)
+//        println conj("PL3", "PL3AN", tokill, verbTense, partofspeechc)
 
-        assertTrue "", "ᏥᏲᎵᎭ" == conj("SG1", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎯᏲᎵᎭ" == conj("SG2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎠᏲᎵᎭ" == conj("SG3", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎦᏲᎵᎭ" == conj("SG3", "SG3IN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎡᏂᏲᎵᎭ" == conj("DL1INCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎣᏍᏗᏲᎵᎭ" == conj("DL1EXCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎡᏍᏗᏲᎵᎭ" == conj("DL2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎡᏗᏲᎵᎭ" == conj("PL1INCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎣᏥᏲᎵᎭ" == conj("PL1EXCL", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎡᏥᏲᎵᎭ" == conj("PL2", "SG3AN", toeatLiving, verbTense, partofspeechc)
-        assertTrue "", "ᎠᏂᏲᎵᎭ" == conj("PL3", "SG3AN", toeatLiving, verbTense, partofspeechc)
-    }*/
+        assertTrue "", "ᏥᎢᎭ" == conj("SG1", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎯᎢᎭ" == conj("SG2", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎠᎯᎭ" == conj("SG3", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎡᏂᎢᎭ" == conj("DL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎣᏍᏗᎢᎭ" == conj("DL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎡᏍᏗᎢᎭ" == conj("DL2", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎡᏗᎢᎭ" == conj("PL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎣᏥᎢᎭ" == conj("PL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎡᏥᎢᎭ" == conj("PL2", "SG3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎠᏂᎯᎠ" == conj("PL3", "SG3AN", tokill, verbTense, partofspeechc)
+
+        assertTrue "", "ᎦᏥᎢᎭ" == conj("SG1", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎦᎯᎢᎭ" == conj("SG2", "PL3AN", tokill, verbTense, partofspeechc)
+        println conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+//        assertTrue "", "ᏓᎪᎯᎠ" == conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎨᏂᎢᎭ" == conj("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎪᏍᏗᎢᎭ" == conj("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎨᏍᏗᎢᎭ" == conj("DL2", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎨᏗᎢᎭ" == conj("PL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎪᏥᎢᎭ" == conj("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᎨᏥᎢᎭ" == conj("PL2", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3AN", tokill, verbTense, partofspeechc)
+    }
 }

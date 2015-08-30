@@ -12,7 +12,7 @@ import static cherokee.dictionary.conjugation.conjugate.Tense.*
 import static cherokee.dictionary.conjugation.conjugate.VerbSet.*
 import cherokee.dictionary.conjugation.stem.VerbTenseHolder
 import cherokee.dictionary.conjugation.stem.DefinitionLine
-import cherokee.dictionary.conjugation.stem.Stemmer
+import cherokee.dictionary.conjugation.cdpbook.Stemmer
 
 /**
  * Created by torr on 8/16/2015.

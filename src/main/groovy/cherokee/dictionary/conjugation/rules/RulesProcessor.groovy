@@ -15,9 +15,7 @@ class RulesProcessor {
         rules << new RuleUW();
     }
 
-    def processRules(final Prefix prefix1,
-                     final Prefix prefix2,
-                     final PrefixTableSubject pts,
+    def processRules(final PrefixTableSubject pts,
                      final PrefixTableObject pto,
                      final Tense tense,
                      final boolean isLiquid,
@@ -25,7 +23,7 @@ class RulesProcessor {
                      final VerbSet verbSet) {
         def returnValue = verbStem
         rules.each {
-            returnValue = it.process(prefix1, prefix2, pts, pto, tense, isLiquid, returnValue, verbSet)
+            returnValue = it.process(pts, pto, tense, isLiquid, returnValue, verbSet)
         }
 
         return returnValue;

@@ -8,8 +8,10 @@ import cherokee.dictionary.conjugation.conjugate.PrefixTableSubject
 import cherokee.dictionary.conjugation.conjugate.Tense
 import cherokee.dictionary.conjugation.conjugate.VerbSet
 import cherokee.dictionary.conjugation.conjugate.VerbType
+import cherokee.dictionary.conjugation.rules.RuleLaryngealAlteration
+import cherokee.dictionary.conjugation.rules.RuleUW
 import cherokee.dictionary.conjugation.rules.RulesProcessor
-import cherokee.dictionary.conjugation.stem.Stemmer
+import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import cherokee.dictionary.conjugation.stem.VerbTenseHolder
 
 /**
@@ -23,14 +25,21 @@ class VerbConjugationProcessor {
         }
     }
 
+    def processVowels() {
+        
+    }
+
     def processPrefixes(//final PronominalPrefix pref,
                             final CompoundPrefix pref,
                             final VerbSet verbset,
+                            final Tense tense,
                             String it ) {
         def returnPrefix = "";
 
         def vs = verbset == VerbSet.A ? "" : "B"
         def verbPrefix = pref?.prefix2 ? "${pref?.prefix1}${pref?.prefix2}${vs}" as String : "${pref?.prefix1}${vs}" as String;
+
+        def returnValue
 
         if (it.startsWith("Ꭰ")
             || it.startsWith("Ꭱ")
@@ -68,6 +77,11 @@ class VerbConjugationProcessor {
                 returnPrefix = prefixStart + fixedPrefix[0]
                 it = fixedPrefix[1]
             }
+
+            returnValue = new RuleUW().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
+            if (!returnValue) {
+                returnValue = returnPrefix + it
+            }
         } else {
             returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
 
@@ -77,13 +91,23 @@ class VerbConjugationProcessor {
 
                 returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
             }
+
+            //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
+            if (verbset != VerbSet.B) {
+                //this will return something if it can - if not then the returnValue will be null and should be checked against
+                returnValue = new RuleLaryngealAlteration().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
+            }
+
+            if (!returnValue) {
+                returnValue = returnPrefix + it;
+            }
         }
 
         if (!returnPrefix) {
-            it = ""
+            returnValue = ""
         }
 
-        return returnPrefix + it
+        return returnValue
     }
 
     def process(final String subject,
@@ -164,12 +188,12 @@ class VerbConjugationProcessor {
         }
 
         def returnValue = ""
-        def presentTense = processPrefixes(compoundPrefix, verbset, verbToConjugate)
+        def presentTense = processPrefixes(compoundPrefix, verbset, Tense.valueOf(tense), verbToConjugate)
 
-        //is this only run when the verb is Transitive?
-        if (verbType == VerbType.TRANSITIVE) {
-            presentTense = new RulesProcessor().processRules(null, null, PrefixTableSubject.valueOf(subject), PrefixTableObject.valueOf(object), Tense.valueOf(tense), false, presentTense, verbset)
-        }
+//        //is this only run when the verb is Transitive?
+//        if (verbType == VerbType.TRANSITIVE) {
+//            presentTense = new RulesProcessor().processRules(PrefixTableSubject.valueOf(subject), PrefixTableObject.valueOf(object), Tense.valueOf(tense), false, presentTense, verbset)
+//        }
 
         if (presentTense) {
             returnValue = presentTense
