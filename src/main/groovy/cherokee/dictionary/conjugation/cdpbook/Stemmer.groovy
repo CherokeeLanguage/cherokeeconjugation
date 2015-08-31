@@ -365,8 +365,8 @@ public class Stemmer {
             c--;
             suffix = String.valueOf(c);
         }
-        String recent_past_form = StringUtils.left(imp, imp.length() - 1)+suffix;
-        return recent_past_form;
+        String recentPastForm = StringUtils.left(imp, imp.length() - 1)+suffix;
+        return recentPastForm;
     }
 
 	static String discardPrefix(String text) {

@@ -1,17 +1,15 @@
 package cherokee.dictionary.conjugation
+
+import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import cherokee.dictionary.conjugation.conjugate.CompoundPrefix
 import cherokee.dictionary.conjugation.conjugate.CompoundPrefixes
-import cherokee.dictionary.conjugation.conjugate.Morphemes
-import cherokee.dictionary.conjugation.conjugate.Prefix
-import cherokee.dictionary.conjugation.conjugate.PrefixTableObject
-import cherokee.dictionary.conjugation.conjugate.PrefixTableSubject
-import cherokee.dictionary.conjugation.conjugate.Tense
 import cherokee.dictionary.conjugation.conjugate.VerbSet
+import cherokee.dictionary.conjugation.conjugate.Tense
+import cherokee.dictionary.conjugation.conjugate.Prefix
 import cherokee.dictionary.conjugation.conjugate.VerbType
+import cherokee.dictionary.conjugation.conjugate.Morphemes
 import cherokee.dictionary.conjugation.rules.RuleLaryngealAlteration
 import cherokee.dictionary.conjugation.rules.RuleUW
-import cherokee.dictionary.conjugation.rules.RulesProcessor
-import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import cherokee.dictionary.conjugation.stem.VerbTenseHolder
 
 /**
@@ -25,15 +23,11 @@ class VerbConjugationProcessor {
         }
     }
 
-    def processVowels() {
-        
-    }
-
     def processPrefixes(//final PronominalPrefix pref,
-                            final CompoundPrefix pref,
-                            final VerbSet verbset,
-                            final Tense tense,
-                            String it ) {
+                        final CompoundPrefix pref,
+                        final VerbSet verbset,
+                        final Tense tense,
+                        String it ) {
         def returnPrefix = "";
 
         def vs = verbset == VerbSet.A ? "" : "B"
@@ -189,11 +183,6 @@ class VerbConjugationProcessor {
 
         def returnValue = ""
         def presentTense = processPrefixes(compoundPrefix, verbset, Tense.valueOf(tense), verbToConjugate)
-
-//        //is this only run when the verb is Transitive?
-//        if (verbType == VerbType.TRANSITIVE) {
-//            presentTense = new RulesProcessor().processRules(PrefixTableSubject.valueOf(subject), PrefixTableObject.valueOf(object), Tense.valueOf(tense), false, presentTense, verbset)
-//        }
 
         if (presentTense) {
             returnValue = presentTense

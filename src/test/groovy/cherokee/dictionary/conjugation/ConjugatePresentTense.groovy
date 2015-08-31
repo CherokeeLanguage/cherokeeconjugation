@@ -26,15 +26,10 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᏓᏆᏚᎵᎭ" == conj("SG1", "PL3IN", heWantsIt, verbTense, partofspeechc)
         assertTrue "", "ᏚᏣᏚᎵᎭ" == conj("SG2", "PL3IN", heWantsIt, verbTense, partofspeechc)
 
-        //ᏚᏩᏚᎵᎭ
-        //todo: probably a spelling rule - if u precedes wa then wa goes away
-        println conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
-//        assertTrue "", "ᏚᏚᎵᎭ" == conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
+        assertTrue "", "ᏚᏚᎵᎭ" == conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
         assertTrue "", "ᏚᎩᎾᏚᎵᎭ" == conj("DL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
 
-        //ᏙᎦᏚᎵᎭ
-        println conj("DL1EXCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
-//        assertTrue "", "ᏙᎩᎾᏚᎵᎭ" == conj("DL1EXCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
+        assertTrue "", "ᏙᎩᎾᏚᎵᎭ" == conj("DL1EXCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
 
         assertTrue "", "ᏕᏍᏓᏚᎵᎭ" == conj("DL2", "PL3IN", heWantsIt, verbTense, partofspeechc)
         assertTrue "", "ᏚᎦᏚᎵᎭ" == conj("PL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
@@ -181,8 +176,9 @@ class ConjugatePresentTense extends ConjugateBase {
 
         assertTrue "", "ᎦᏥᎢᎭ" == conj("SG1", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎦᎯᎢᎭ" == conj("SG2", "PL3AN", tokill, verbTense, partofspeechc)
-        println conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
-//        assertTrue "", "ᏓᎪᎯᎠ" == conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+
+        //todo: if any are incorrect - it would be this one - the book says: ᏓᎪᎯᎠ -- pp15 Structured Approach
+        assertTrue "", "ᏕᎩᎯᎠ" == conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏂᎢᎭ" == conj("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎪᏍᏗᎢᎭ" == conj("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏍᏗᎢᎭ" == conj("DL2", "PL3AN", tokill, verbTense, partofspeechc)

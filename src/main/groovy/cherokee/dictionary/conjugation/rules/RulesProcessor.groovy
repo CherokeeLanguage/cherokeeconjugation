@@ -1,6 +1,5 @@
 package cherokee.dictionary.conjugation.rules
 
-import cherokee.dictionary.conjugation.conjugate.Prefix
 import cherokee.dictionary.conjugation.conjugate.PrefixTableObject
 import cherokee.dictionary.conjugation.conjugate.PrefixTableSubject
 import cherokee.dictionary.conjugation.conjugate.Tense

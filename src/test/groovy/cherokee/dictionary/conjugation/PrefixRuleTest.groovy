@@ -18,6 +18,6 @@ class PrefixRuleTest extends GroovyTestCase {
     public void testRuleUW() {
         RuleUW ruleUW = new RuleUW();
 
-        assertTrue "ᎤᏚᎵᎭ" == ruleUW.process (PrefixTableSubject.SG3, PrefixTableObject.SG3IN, Tense.PRESENT, false, "ᎤᏩᏚᎵᎭ", VerbSet.B )
+        assertTrue "ᎤᏚᎵᎭ" == ruleUW.process(PrefixTableSubject.SG3, PrefixTableObject.SG3IN, "ᎤᏩ", Tense.PRESENT, false, "ᏚᎵᎭ", VerbSet.B )
     }
 }

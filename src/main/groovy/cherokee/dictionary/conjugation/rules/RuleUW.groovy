@@ -1,6 +1,5 @@
 package cherokee.dictionary.conjugation.rules
 
-import cherokee.dictionary.conjugation.conjugate.Prefix
 import cherokee.dictionary.conjugation.conjugate.PrefixTableObject
 import cherokee.dictionary.conjugation.conjugate.PrefixTableSubject
 import cherokee.dictionary.conjugation.conjugate.Tense
@@ -23,8 +22,10 @@ class RuleUW implements PrefixRule {
 
         def tmpValue = prefix + verbStem;
 
+        //todo: find out if this is all /uwa/ starts or not - b/c /duwa/ is clearly /du/ according to ᏚᏚᎵᎭ
+
         if (verbSet == VerbSet.B
-            && pto != null && pto== PrefixTableObject.SG3IN
+            && pto != null && pto == PrefixTableObject.SG3IN
             && pts == PrefixTableSubject.SG3) {
 
             //todo: should change this so that the stem starts with = a vowel instead of 'uwa'
@@ -33,6 +34,12 @@ class RuleUW implements PrefixRule {
                 // this won't change when we add more prefixes
                 //todo: remember to process the prefixes in order from closest to root and stem out ward
                 processedValue = "Ꭴ$verbStem"
+            }
+        } else if (pto != null && pto == PrefixTableObject.PL3IN) {
+            if (tmpValue.startsWith("ᎤᏩ")) {
+                processedValue = "Ꭴ$verbStem"
+            } else if(tmpValue.startsWith("ᏚᏩ")) {
+                processedValue = "Ꮪ$verbStem"
             }
         }
 

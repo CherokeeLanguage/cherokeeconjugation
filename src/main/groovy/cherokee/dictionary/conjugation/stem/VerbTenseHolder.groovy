@@ -1,8 +1,5 @@
 package cherokee.dictionary.conjugation.stem
 
-import cherokee.dictionary.conjugation.stem.StemType
-import com.cobradoc.cherokee.SyllabaryUtil
-
 /**
  * Created by torr on 8/16/2015.
  */
