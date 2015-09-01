@@ -39,7 +39,7 @@ class RuleLaryngealAlteration implements PrefixRule {
             }
 
             returnValue = prefix + verbStem
-        } else if (pto == PrefixTableObject.PL3AN && verbStem.startsWith("Ꭿ")) {
+        } else if ((pto == PrefixTableObject.PL3AN || pto == PrefixTableObject.PL3IN) && verbStem.startsWith("Ꭿ")) {
 
             if ((pts == PrefixTableSubject.PL3 || pts == PrefixTableSubject.SG3)) {
                 verbStem = "ᎯᎠ"

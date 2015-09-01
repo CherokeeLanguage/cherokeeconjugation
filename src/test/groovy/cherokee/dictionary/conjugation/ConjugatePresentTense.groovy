@@ -163,6 +163,8 @@ class ConjugatePresentTense extends ConjugateBase {
 //        println conj("PL2", "PL3AN", tokill, verbTense, partofspeechc)
 //        println conj("PL3", "PL3AN", tokill, verbTense, partofspeechc)
 
+//        sn3 and pl3 - pl3in & pl3an should be the same but they aren't. They have different /h/ /?/ substituions
+
         assertTrue "", "ᏥᎢᎭ" == conj("SG1", "SG3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎯᎢᎭ" == conj("SG2", "SG3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎠᎯᎭ" == conj("SG3", "SG3AN", tokill, verbTense, partofspeechc)
@@ -178,7 +180,10 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᎦᎯᎢᎭ" == conj("SG2", "PL3AN", tokill, verbTense, partofspeechc)
 
         //todo: if any are incorrect - it would be this one - the book says: ᏓᎪᎯᎠ -- pp15 Structured Approach
+//        sn3 and pl3 - pl3in & pl3an should be the same but they aren't. They have different /h/ /?/ substituions
         assertTrue "", "ᏕᎩᎯᎠ" == conj("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᏕᎩᎯᎠ" == conj("SG3", "PL3IN", tokill, verbTense, partofspeechc)
+
         assertTrue "", "ᎨᏂᎢᎭ" == conj("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎪᏍᏗᎢᎭ" == conj("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏍᏗᎢᎭ" == conj("DL2", "PL3AN", tokill, verbTense, partofspeechc)
@@ -186,5 +191,6 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᎪᏥᎢᎭ" == conj("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏥᎢᎭ" == conj("PL2", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3AN", tokill, verbTense, partofspeechc)
+        assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3IN", tokill, verbTense, partofspeechc)
     }
 }

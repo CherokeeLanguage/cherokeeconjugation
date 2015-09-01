@@ -14,7 +14,7 @@ enum PTO {
     DL1INCL,
     DL1EXCL,
     PL1INCL,
-    PL1EXCl,
+    PL1EXCL,
     DL2,
     PL2,
     PL3AN,

@@ -13,6 +13,12 @@ import groovy.sql.Sql
  */
 
 def SQL = Sql.newInstance( 'jdbc:mysql://localhost/cherokeedictionary?useUnicode=yes&characterEncoding=UTF-8', 'root', 'tk0203', 'org.gjt.mm.mysql.Driver' )
-SQL.eachRow("select l.vfirstpresh, l.syllabaryb from likespreadsheets l where l.vfirstpresh like ? and l.syllabaryb like ? and (l.partofspeechc like 'v.i%' or l.partofspeechc like 'v.t%') and l.partofspeechc not like '%pref%' and l.partofspeechc not like '%suf%' and l.source = 'ced'", ["ᏥᏯ%", "Ꭰ%"]) {
+SQL.eachRow("select * from likespreadsheets l where l.vfirstpresh like ? and l.syllabaryb like ? and (l.partofspeechc like 'v.i%' or l.partofspeechc like 'v.t%') and l.partofspeechc not like '%pref%' and l.partofspeechc not like '%suf%' and l.source = 'ced'", ["ᏥᏯ%", "Ꭰ%"]) {
     println it
 }
+vfirstpresh
+vsecondimperm
+vthirdinfo
+entrya
+vthirdpasti
+vthirdpressyll
