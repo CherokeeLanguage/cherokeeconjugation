@@ -10,5 +10,5 @@ def conj(String subject, String object, Stemmer stemmer, String verbTense, Strin
     return conjugate.conjugate(subject, object, stemmer, verbTense, partofspeechc)
 }
 
-//ᏓᎪᎯᎠ
-println conj("SG3", "PL3AN", ConjugateBase.tokill, "PRESENT", "v.t.")
+println conj("SG3", "SG1", ConjugateBase.wearShoes, "PRESENT", "v.t.")
+

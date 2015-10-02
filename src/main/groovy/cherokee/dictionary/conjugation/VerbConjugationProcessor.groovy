@@ -112,6 +112,9 @@ class VerbConjugationProcessor {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: stemmer)
         vth.process()
 
+        //todo: find prefix for plurals (e.g. d-) -- probably detect if verb starts with /d-/ if it does then add a /d-/
+        // - should wait until other prefixes are put together in whole? timo 22Sep15
+
         //this column matches - so intransitive specific code was removed in favor of using existing code and keys
         if (verbType == VerbType.INTRANSITIVE) {
             object = "SG3IN"
