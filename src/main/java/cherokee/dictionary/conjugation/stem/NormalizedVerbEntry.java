@@ -28,7 +28,7 @@ public class NormalizedVerbEntry {
 		if (StringUtils.isBlank(object)) {
 			return;
 		}
-		System.out.println("Found direct object: '"+object+"'");
+//		System.out.println("Found direct object: '"+object+"'");
 		e.habit=StringUtils.removeStart(e.habit, object);
 		e.pres1=StringUtils.removeStart(e.pres1, object);
 		e.imp=StringUtils.removeStart(e.imp, object);
