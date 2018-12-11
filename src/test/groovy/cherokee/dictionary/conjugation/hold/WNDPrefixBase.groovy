@@ -1,5 +1,6 @@
-package cherokee.dictionary.conjugation
+package cherokee.dictionary.conjugation.hold
 
+import cherokee.dictionary.conjugation.Conjugate
 import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import cherokee.dictionary.conjugation.stem.DefinitionLine
 

@@ -1,4 +1,4 @@
-package cherokee.dictionary.conjugation
+package cherokee.dictionary.conjugation.hold
 
 import cherokee.dictionary.conjugation.conjugate.PrefixTableObject
 import cherokee.dictionary.conjugation.conjugate.PrefixTableSubject

@@ -1,3 +1,5 @@
+package cherokee.dictionary.conjugation.hold
+
 import groovy.sql.Sql
 
 def lst = ["dadahnesea",

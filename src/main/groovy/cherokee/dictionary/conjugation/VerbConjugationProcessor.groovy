@@ -35,12 +35,12 @@ class VerbConjugationProcessor {
 
         def returnValue
 
-        if (it.startsWith("Ꭰ")
+        if (it != null && (it.startsWith("Ꭰ")
             || it.startsWith("Ꭱ")
             || it.startsWith("Ꭲ")
             || it.startsWith("Ꭳ")
             || it.startsWith("Ꭴ")
-            || it.startsWith("Ꭵ")) {
+            || it.startsWith("Ꭵ"))) {
 
             //get the prefix from the table
             def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
@@ -84,6 +84,7 @@ class VerbConjugationProcessor {
                 verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
 
                 returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
@@ -92,9 +93,10 @@ class VerbConjugationProcessor {
                 returnValue = new RuleLaryngealAlteration().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
             }
 
-            if (!returnValue) {
+            if (!returnValue && returnPrefix != null && it != null) {
                 returnValue = returnPrefix + it;
             }
+
         }
 
         if (!returnPrefix) {

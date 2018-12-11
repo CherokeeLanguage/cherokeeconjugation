@@ -182,14 +182,15 @@ public class NormalizedVerbEntry {
 		if (e.inf.startsWith("ᎢᏲ")){
 			e.inf=newPrefix("Ꭳ", e.inf);
 		}
+
 		warnIfStartsWithAnyRange("Ꮒ", "Ꮕ", e);
+
 		if (e.inf.startsWith("Ꭲ")){
             System.out.println("Need to add Ꮒ/inf rule for: "+e.getEntries().toString());
 		}
 	}
 	
-	private static void warnIfStartsWithAnyRange(String start,
-			String end, NormalizedVerbEntry e) {
+	private static void warnIfStartsWithAnyRange(String start, String end, NormalizedVerbEntry e) {
 		String regex="^["+Pattern.quote(start)+"-"+Pattern.quote(end)+"].*";
 		Pattern pattern = Pattern.compile(regex);
 		for (String element: e.getEntries()) {

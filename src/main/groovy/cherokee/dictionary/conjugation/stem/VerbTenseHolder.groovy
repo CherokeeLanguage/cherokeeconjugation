@@ -53,7 +53,9 @@ class VerbTenseHolder {
             }
         }
 
-        completiveFuture = present.substring(0, present.size() - 1)
+        if (present != null) {
+            completiveFuture = present.substring(0, present.size() - 1)
+        }
         futureCommand = completiveFuture
         progressivePast = completiveFuture
         progressiveFuture = completiveFuture

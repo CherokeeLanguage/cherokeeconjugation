@@ -1,10 +1,6 @@
-package cherokee.dictionary.conjugation
-
-import cherokee.dictionary.conjugation.cdpbook.Stemmer
-import cherokee.dictionary.conjugation.stem.DefinitionLine
-
+package cherokee.dictionary.conjugation.hold
 /**
- * test the /d-/ /w-/ and /n-/ prerixes
+ * test the /d-/ /w-/ and /n-/ prefixes
  *
  * todo: fix so that the prefixes are getting through to the conjugation process and then preserved
  *
@@ -47,7 +43,7 @@ class WNDPrefixTest extends WNDPrefixBase {
 //        dadanilvga.remotepast = new DefinitionLine ( syllabary: "ᏚᏓᏂᎸᏨᎢ" )
 //        printAll(partofspeechc, verbTense, dadanilvga)
 
-        def conjugated = conj("SG1", "SG3AN", dadanilvga, verbTense, partofspeechc)
+        def conjugated = conj("SG1", "SG3AN", WNDPrefixBase.dadanilvga, verbTense, partofspeechc)
 
         //todo: take this code and when the verb is finished conjugating
         //      check the first syllable
@@ -55,7 +51,8 @@ class WNDPrefixTest extends WNDPrefixBase {
         //      add that prefix back onto the conjugated verb
         def wndPrefix = null;
 
-        def verbToCheck = dadanilvga.present1st.syllabary;
+        def verbToCheck = WNDPrefixBase.dadanilvga.present1st.syllabary;
+        println verbToCheck
 
         if (verbToCheck.startsWith("Ꮣ")
                 || verbToCheck.startsWith("Ꮥ")

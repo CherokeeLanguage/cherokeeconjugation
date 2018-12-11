@@ -179,7 +179,7 @@ public class Stemmer {
             if (e.imp.startsWith("Ꮂ")) {
                 list.add(new StemEntry(newPrefix("Ꭵ", e.imp), StemType.Immediate));
             } else {
-                App.err("Normalize Corner Case Needed: " + e.getEntries().toString());
+                //App.err("Normalize Corner Case Needed: " + e.getEntries().toString());
             }
 			list.add(new StemEntry(newPrefix("Ꭿ",discardPrefix(e.inf)), StemType.Deverbal));
             return list;
@@ -214,7 +214,7 @@ public class Stemmer {
         if (e.pres3.startsWith("Ꭼ") && e.past.startsWith("Ꭴ")) {
             return generateVowelStems("Ꭵ", e);
         }
-        App.info("No normalization method for: " + e.getEntries().toString());
+//        .info("No normalization method for: " + e.getEntries().toString());
         return new ArrayList<StemEntry>();
     }
 

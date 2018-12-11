@@ -26,28 +26,30 @@ class RuleLaryngealAlteration implements PrefixRule {
 //            return verbStem;
 //        }
 
-        def returnValue
+        def returnValue = ""
 
-        //M-A pp 209 -- "In Oklahoma Cherokee all of the Set A animate object prefixes trigger the alternation."
-        if (pto == PrefixTableObject.SG3AN && verbStem.startsWith("Ꭿ")) {
+        if (verbStem != null) {
+            //M-A pp 209 -- "In Oklahoma Cherokee all of the Set A animate object prefixes trigger the alternation."
+            if (pto == PrefixTableObject.SG3AN && verbStem.startsWith("Ꭿ")) {
 
-            if (pts == PrefixTableSubject.PL3) {
-                verbStem = "ᎯᎠ"
-            } else {
-                verbStem = "Ꭲ" + verbStem.substring(1);
+                if (pts == PrefixTableSubject.PL3) {
+                    verbStem = "ᎯᎠ"
+                } else {
+                    verbStem = "Ꭲ" + verbStem.substring(1);
 //            returnValue = returnPrefix + it
+                }
+
+                returnValue = prefix + verbStem
+            } else if ((pto == PrefixTableObject.PL3AN || pto == PrefixTableObject.PL3IN) && verbStem.startsWith("Ꭿ")) {
+
+                if ((pts == PrefixTableSubject.PL3 || pts == PrefixTableSubject.SG3)) {
+                    verbStem = "ᎯᎠ"
+                } else {
+                    verbStem = "Ꭲ" + verbStem.substring(1);
+                }
+
+                returnValue = prefix + verbStem
             }
-
-            returnValue = prefix + verbStem
-        } else if ((pto == PrefixTableObject.PL3AN || pto == PrefixTableObject.PL3IN) && verbStem.startsWith("Ꭿ")) {
-
-            if ((pts == PrefixTableSubject.PL3 || pts == PrefixTableSubject.SG3)) {
-                verbStem = "ᎯᎠ"
-            } else {
-                verbStem = "Ꭲ" + verbStem.substring(1);
-            }
-
-            returnValue = prefix + verbStem
         }
 
         return returnValue

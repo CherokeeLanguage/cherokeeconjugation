@@ -13,7 +13,7 @@ class Conjugate {
                   final String tense,//verb tense
                   final String tmpVerbType){// vi or vt
         def verbType
-        if (tmpVerbType == 'v.i.') {
+        if (tmpVerbType == 'v.i.' || tmpVerbType == 'vi') {
             verbType = VerbType.INTRANSITIVE
         } else {
             verbType = VerbType.TRANSITIVE
