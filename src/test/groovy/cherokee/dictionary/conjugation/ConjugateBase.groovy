@@ -105,4 +105,8 @@ class ConjugateBase extends GroovyTestCase {
         Conjugate conjugate = new Conjugate()
         return conjugate.conjugate(subject, object, stemmer, verbTense, partofspeechc)
     }
+
+    public void testNothing() {
+        //removes warning
+    }
 }

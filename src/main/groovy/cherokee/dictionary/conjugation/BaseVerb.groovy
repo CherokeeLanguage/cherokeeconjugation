@@ -1,15 +1,15 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.conjugation.affixes.PrefixDa
-import cherokee.dictionary.conjugation.affixes.PrefixDe
-import cherokee.dictionary.conjugation.affixes.PrefixDi
-import cherokee.dictionary.conjugation.affixes.PrefixE
-import cherokee.dictionary.conjugation.affixes.PrefixGa
-import cherokee.dictionary.conjugation.affixes.PrefixI
-import cherokee.dictionary.conjugation.affixes.PrefixJi
-import cherokee.dictionary.conjugation.affixes.PrefixNi
-import cherokee.dictionary.conjugation.affixes.PrefixWi
-import cherokee.dictionary.conjugation.affixes.PrefixYi
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDa
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDe
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDi
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixE
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixGa
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixI
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixJi
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixNi
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixWi
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixYi
 
 class BaseVerb implements Verb {
 //    y- j- w- n- de- da- di- i- ga- e- pronouns-

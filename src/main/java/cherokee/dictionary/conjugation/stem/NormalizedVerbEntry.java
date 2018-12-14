@@ -94,12 +94,15 @@ public class NormalizedVerbEntry {
 		if (e.habit.startsWith("Ꮻ")){
 			e.habit=chop(e.habit);
 		}
-		if (e.pres1.startsWith("Ꮹ")){
-			e.pres1=newPrefix("Ꭰ", e.pres1);
+
+		if (e.pres1.startsWith("Ꮹ")) {
+			e.pres1 = newPrefix("Ꭰ", e.pres1);
 		}
-		if (e.pres1.startsWith("Ꮻ")){
-			e.pres1=chop(e.pres1);
+
+		if (e.pres1.startsWith("Ꮻ")) {
+			e.pres1 = chop(e.pres1);
 		}
+
 		if (e.past.startsWith("Ꮽ")){
 			e.past=newPrefix("Ꭴ", e.past);
 		}

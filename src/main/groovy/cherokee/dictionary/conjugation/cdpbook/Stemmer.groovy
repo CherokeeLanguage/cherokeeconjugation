@@ -17,40 +17,80 @@ public class Stemmer {
     public DefinitionLine imperative = null;
     public DefinitionLine infinitive = null;
 
+    public String getStem(StemType type) {
+        def returnValue = ""
+        getStems().each {
+            if (it.stemtype == type) {
+                returnValue = it.syllabary
+            }
+        }
+
+        return returnValue
+    }
+
     public List<StemEntry> getStems() {
         NormalizedVerbEntry e = new NormalizedVerbEntry();
 
-        e.pres3 = StringUtils.strip(present3rd.syllabary);
-        if (e.pres3.contains(",")) {
-            e.pres3 = StringUtils.substringBefore(e.pres3, ",");
-            e.pres3 = StringUtils.strip(e.pres3);
+        if (present3rd != null && present3rd.syllabary != null) {
+            e.pres3 = StringUtils.strip(present3rd.syllabary);
+            if (e.pres3.contains(",")) {
+                e.pres3 = StringUtils.substringBefore(e.pres3, ",");
+                e.pres3 = StringUtils.strip(e.pres3);
+            }
+        } else {
+            e.pres3 = ""
         }
-        e.pres1 = StringUtils.strip(present1st.syllabary);
-        if (e.pres1.contains(",")) {
-            e.pres1 = StringUtils.substringAfterLast(e.pres1, ",");
-            e.pres1 = StringUtils.strip(e.pres1);
+        if (present1st && present1st.syllabary) {
+            e.pres1 = StringUtils.strip(present1st.syllabary);
+            if (e.pres1.contains(",")) {
+                e.pres1 = StringUtils.substringAfterLast(e.pres1, ",");
+                e.pres1 = StringUtils.strip(e.pres1);
+            }
+        } else {
+            e.pres1 = ""
         }
-        e.past = StringUtils.strip(remotepast.syllabary);
-        if (e.past.contains(",")) {
-            e.past = StringUtils.substringBefore(e.past, ",");
-            e.past = StringUtils.strip(e.past);
+
+        if (remotepast && remotepast.syllabary) {
+            e.past = StringUtils.strip(remotepast.syllabary);
+            if (e.past.contains(",")) {
+                e.past = StringUtils.substringBefore(e.past, ",");
+                e.past = StringUtils.strip(e.past);
+            }
+        } else {
+            e.past = ""
         }
-        e.habit = StringUtils.strip(habitual.syllabary);
-        if (e.habit.contains(",")) {
-            e.habit = StringUtils.substringBefore(e.habit, ",");
-            e.habit = StringUtils.strip(e.habit);
+
+        if (habitual && habitual.syllabary) {
+            e.habit = StringUtils.strip(habitual.syllabary);
+            if (e.habit.contains(",")) {
+                e.habit = StringUtils.substringBefore(e.habit, ",");
+                e.habit = StringUtils.strip(e.habit);
+            }
+        } else {
+            e.habit = ""
         }
-        e.imp = StringUtils.strip(imperative.syllabary);
-        if (e.imp.contains(",")) {
-            e.imp = StringUtils.substringAfterLast(e.imp, ",");
-            e.imp = StringUtils.strip(e.imp);
+
+        if (imperative && imperative.syllabary) {
+            e.imp = StringUtils.strip(imperative.syllabary);
+            if (e.imp.contains(",")) {
+                e.imp = StringUtils.substringAfterLast(e.imp, ",");
+                e.imp = StringUtils.strip(e.imp);
+            }
+            e.imp = fixImperativeSuffix(e.imp);
+        } else {
+            e.imp = ""
         }
-        e.imp = fixImperativeSuffix(e.imp);
-        e.inf = StringUtils.strip(infinitive?.syllabary);
-        if (e?.inf?.contains(",")) {
-            e.inf = StringUtils.substringBefore(e.inf, ",");
-            e.inf = StringUtils.strip(e.inf);
+
+        if (infinitive && infinitive.syllabary) {
+            e.inf = StringUtils.strip(infinitive?.syllabary);
+            if (e?.inf?.contains(",")) {
+                e.inf = StringUtils.substringBefore(e.inf, ",");
+                e.inf = StringUtils.strip(e.inf);
+            }
+        }  else {
+            e.inf = ""
         }
+
         /*
      * Strip direct object if easy to identify
      */
