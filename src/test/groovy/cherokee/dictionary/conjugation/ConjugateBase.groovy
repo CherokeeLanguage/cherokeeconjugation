@@ -1,5 +1,7 @@
 package cherokee.dictionary.conjugation
 
+import cherokee.dictionary.conjugation.affixes.processors.FinalSuffixProcessor
+import cherokee.dictionary.conjugation.affixes.processors.PrefixProcessor
 import cherokee.dictionary.conjugation.stem.DefinitionLine
 import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import com.cobradoc.cherokee.SyllabaryUtil
@@ -108,5 +110,49 @@ class ConjugateBase extends GroovyTestCase {
 
     public void testNothing() {
         //removes warning
+    }
+
+    public static String processOriginal(original, assertion) {
+        HolderWord hw = processHolderWord(original, assertion)
+        def syllabary = hw.syllabary
+        def nonFinalSuffix = hw.nonfinalEndingLatin
+        def finalEndingLatin = hw.finalEndingLatin
+        def prefixLatin = hw.pho.pronounPrefixLatin
+
+        def sb = new StringBuilder()
+        if (prefixLatin && prefixLatin != 'null') {
+            sb << prefixLatin
+        }
+
+        sb << su.parseSyllabary(syllabary)
+
+        if (nonFinalSuffix && finalEndingLatin) {
+            sb << nonFinalSuffix
+            sb << finalEndingLatin
+        } else if (finalEndingLatin) {
+            sb << finalEndingLatin
+        }
+
+        return sb.toString()
+    }
+
+    public static HolderWord processHolderWord(original, assertion) {
+        HolderWord hw = new HolderWord()
+        def su = new SyllabaryUtil()
+        hw.syllabary = original
+        FinalSuffixProcessor.removeFinalSuffix(hw)
+        PrefixProcessor.removeAllPrefixes(hw)
+
+        return hw;
+    }
+
+    public static void processRootForCompare(original, assertion) {
+        HolderWord hw = processHolderWord(original, assertion)
+        assertEquals("original did not match converted", hw.syllabary + hw.nonfinalEndingLatin, assertion)
+    }
+
+    public static void compareForAssertion(original, assertion) {
+
+        assertEquals("original did not match converted", original, su.tsalagiToSyllabary(processOriginal(original, assertion)))
     }
 }

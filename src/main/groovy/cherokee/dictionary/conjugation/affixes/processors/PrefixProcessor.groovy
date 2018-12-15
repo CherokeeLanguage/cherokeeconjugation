@@ -137,7 +137,7 @@ class PrefixProcessor {
     }
 
     private static void removePronounPrefix(HolderWord data) {
-        def dataLatin = su.parseSyllabary(data.syllabary)
+        String dataLatin = su.parseSyllabary(data.syllabary)
 
         boolean startsWithVowel = false;
         String latV = ""
@@ -184,6 +184,18 @@ class PrefixProcessor {
             dataLatin = dataLatin.substring(1)
             data.syllabary = su.tsalagiToSyllabary(dataLatin)
             data.pho.pronounPrefixLatin = "g"
+        }
+
+        if (dataLatin.startsWith("a")
+                || dataLatin.startsWith("e")
+                || dataLatin.startsWith("i")
+                || dataLatin.startsWith("o")
+                || dataLatin.startsWith("u")
+                || dataLatin.startsWith("v")) {
+            data.pho.pronounPrefixLatin = dataLatin.substring(0, 1)
+            data.pho.pronounPrefixSyllabary = su.tsalagiToSyllabary(data.pho.pronounPrefixLatin)
+            dataLatin = dataLatin.substring(1)
+            data.syllabary = su.tsalagiToSyllabary(dataLatin)
         }
     }
 }

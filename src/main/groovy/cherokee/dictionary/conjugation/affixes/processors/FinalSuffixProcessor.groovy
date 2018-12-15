@@ -39,6 +39,13 @@ class FinalSuffixProcessor {
     def ei = ["ᎡᎢ", "ᎨᎢ", "ᎮᎢ", "ᎴᎢ", "ᎺᎢ", "ᏁᎢ", "ᏇᎢ", "ᏎᎢ", "ᏕᎢ", "ᏞᎢ", "ᏤᎢ", "ᏪᎢ", "ᏰᎢ"]
 
 
+    public static HolderWord removeFinalSuffix(String str) {
+        HolderWord hw = new HolderWord()
+        hw.syllabary = str
+        removeFinalSuffix(hw)
+        return hw
+    }
+
     public static void removeFinalSuffix(HolderWord hw) {
         def su = new SyllabaryUtil()
         String tsalagi = su.parseSyllabary(hw.syllabary)

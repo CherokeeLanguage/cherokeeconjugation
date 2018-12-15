@@ -9,7 +9,9 @@ import cherokee.dictionary.conjugation.conjugate.Tense
 class AffixProcessor {
     //this method is where the holder objects determine which affixes are added to the root object
     public static String processWordAdd(String data, PrefixHolderObject pho, NonFinalSuffixHolderObject nfsho, SuffixHolderObject fsho, Tense verbTense) {
-        HolderWord hw = FinalSuffixProcessor.removeFinalSuffix(data);
+        HolderWord hw = new HolderWord()
+        hw.syllabary = data
+        FinalSuffixProcessor.removeFinalSuffix(hw);
 
         data = PrefixProcessor.processPrefixes(data, pho, verbTense)
         data = NonFinalSuffixProcessor.processNonFinalSuffixes(data, nfsho, verbTense)
