@@ -128,6 +128,8 @@ class VerbConjugationProcessor {
             return stemmer.present3rd.syllabary;
         }
 
+
+
         def verbTense = Tense.valueOf(tense);
 
         def verbset = VerbSet.A
