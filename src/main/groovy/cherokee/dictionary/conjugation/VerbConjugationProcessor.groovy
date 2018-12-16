@@ -128,6 +128,10 @@ class VerbConjugationProcessor {
             return stemmer.present3rd.syllabary;
         }
 
+        if (verbType == VerbType.INTRANSITIVE && combinedSubjectObject == "SG3SG3IN") {
+            return stemmer.present3rd.syllabary;
+        }
+
 
 
         def verbTense = Tense.valueOf(tense);

@@ -20,5 +20,7 @@ class EgaTest extends GroovyTestCase {
         Conjugate conjugate = new Conjugate()
         println conjugate.conjugate("SG1", "SG3AN", ega, Tense.PRESENT.toString(), "v.i.")
         println conjugate.conjugate("SG1", "SG3IN", ega, Tense.PRESENT.toString(), "v.i.")
+        println conjugate.conjugate("SG3", "SG3AN", ega, Tense.PRESENT.toString(), "v.i.")
+        println conjugate.conjugate("SG3", "SG3IN", ega, Tense.PRESENT.toString(), "v.i.")
     }
 }
