@@ -148,6 +148,7 @@ class ConjugateBase extends GroovyTestCase {
 
     public static void processRootForCompare(original, assertion) {
         HolderWord hw = processHolderWord(original, assertion)
+        println hw.syllabary + hw.nonfinalEndingLatin + " " + assertion
         assertEquals("original did not match converted", hw.syllabary + hw.nonfinalEndingLatin, assertion)
     }
 

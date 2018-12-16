@@ -149,36 +149,36 @@ class CEDGrammarVerbTest extends GroovyTestCase {
     }
 
     public void testForgetPage268() {
-        rootProcessorForCompare("agwvkewisga", "kewsg", "")
-        rootProcessorForCompare("dagwvkewisga", "kewsg", "")
-        rootProcessorForCompare("jvkewisga", "kewsg", "")
-        rootProcessorForCompare("dejvkewisga", "kewsg", "")
-        rootProcessorForCompare("gvkewisga", "kewsg", "")
-        rootProcessorForCompare("uwakewisga", "kewsg", "")
-        rootProcessorForCompare("degvkewisga", "kewsg", "")
-        rootProcessorForCompare("duwakewisga", "kewsg", "")
-        rootProcessorForCompare("ginvkewisga", "kewsg", "")
-        rootProcessorForCompare("deginvkewisga", "kewsg", "")
-        rootProcessorForCompare("igvkewisga", "kewsg", "")
-        rootProcessorForCompare("degvkewisga", "kewsg", "")
-        rootProcessorForCompare("osdvkewisga", "kewsg", "")
-        rootProcessorForCompare("oginvkewisga", "kewsg", "")
-        rootProcessorForCompare("dosdvkewisga", "kewsg", "")
-        rootProcessorForCompare("doginvkewisga", "kewsg", "")
-        rootProcessorForCompare("ojvkewisga", "kewsg", "")
-        rootProcessorForCompare("ogvkewisga", "kewsg", "")
-        rootProcessorForCompare("ogvkewisga", "kewsg", "")
-        rootProcessorForCompare("gojvkewisga", "kewsg", "")
-        rootProcessorForCompare("dogvkewisga", "kewsg", "")
-        rootProcessorForCompare("anvkewisga", "kewsg", "")
-        rootProcessorForCompare("unvkewisga", "kewsg", "")
-        rootProcessorForCompare("danvkewisga", "kewsg", "")
-        rootProcessorForCompare("dunvkewisga", "kewsg", "")
+        rootProcessorForCompare("agwvkewisga", "kewis", "g")
+        rootProcessorForCompare("dagwvkewisga", "kewis", "g")
+        rootProcessorForCompare("jvkewisga", "kewis", "g")
+        rootProcessorForCompare("dejvkewisga", "kewis", "g")
+        rootProcessorForCompare("gvkewisga", "kewis", "g")
+        rootProcessorForCompare("uwakewisga", "kewis", "g")
+        rootProcessorForCompare("degvkewisga", "kewis", "g")
+        rootProcessorForCompare("duwakewisga", "kewis", "g")
+        rootProcessorForCompare("ginvkewisga", "kewis", "g")
+        rootProcessorForCompare("deginvkewisga", "kewis", "g")
+        rootProcessorForCompare("igvkewisga", "kewis", "g")
+        rootProcessorForCompare("degvkewisga", "kewis", "g")
+        rootProcessorForCompare("osdvkewisga", "kewis", "g")
+        rootProcessorForCompare("oginvkewisga", "kewis", "g")
+        rootProcessorForCompare("dosdvkewisga", "kewis", "g")
+        rootProcessorForCompare("doginvkewisga", "kewis", "g")
+        rootProcessorForCompare("ojvkewisga", "kewis", "g")
+        rootProcessorForCompare("ogvkewisga", "kewis", "g")
+        rootProcessorForCompare("ogvkewisga", "kewis", "g")
+        rootProcessorForCompare("gojvkewisga", "kewis", "g")
+        rootProcessorForCompare("dogvkewisga", "kewis", "g")
+        rootProcessorForCompare("anvkewisga", "kewis", "g")
+        rootProcessorForCompare("unvkewisga", "kewis", "g")
+        rootProcessorForCompare("danvkewisga", "kewis", "g")
+        rootProcessorForCompare("dunvkewisga", "kewis", "g")
     }
 
     public void testToLikePage270() {
-//        println su.tsalagiToSyllabary("")
-        rootProcessorForCompare("agilvkwodi", "kewsg", "")
+        //todo: fix ᏋᎡᏫᏍg not a valid letterᎡᏫᏍg
+        rootProcessorForCompare("agwvkewisga", "kewis", "g")
     }
 
     public void testSolo() {
@@ -188,6 +188,8 @@ class CEDGrammarVerbTest extends GroovyTestCase {
     private void rootProcessorForCompare(original, assertion, ending) {
         original = su.tsalagiToSyllabary(original)
         assertion = su.tsalagiToSyllabary(assertion)+ending
+
+
         ConjugateBase.compareForAssertion(original,assertion)
         ConjugateBase.processRootForCompare(original, assertion)
     }
