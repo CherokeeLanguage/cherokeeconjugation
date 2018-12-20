@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cherokee.dictionary.VRBDideloquasdi2012Test" tests="11" skipped="0" failures="0" errors="0" timestamp="2018-12-20T03:09:02" hostname="standtroopers-iMac.local" time="0.159">
+  <properties/>
+  <testcase name="testAgwanvta" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.012"/>
+  <testcase name="testIgiwonisvi" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.002"/>
+  <testcase name="testEga" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.012"/>
+  <testcase name="testOli" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.012"/>
+  <testcase name="testSpeaking" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.086"/>
+  <testcase name="testAgiha" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.004"/>
+  <testcase name="testElihi" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.005"/>
+  <testcase name="testGawonih" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.006"/>
+  <testcase name="testJiWonisvi" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.008"/>
+  <testcase name="testAgiwonisvi" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.009"/>
+  <testcase name="testAniwoniha" classname="cherokee.dictionary.VRBDideloquasdi2012Test" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

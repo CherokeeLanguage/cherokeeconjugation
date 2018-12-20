@@ -156,6 +156,144 @@ class VRBDideloquasdi2012Test extends GroovyTestCase {
         rootProcessorForCompare("dajiwonisi", "wonisi")
     }
 
+    public void testSpeaking() {
+        rootProcessorForCompare("jiwoniha", "woniha")
+        rootProcessorForCompare("jiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("jiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("jiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("hiwoniha", "woniha")
+        rootProcessorForCompare("hiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("hiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("hiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("gawoniha", "woniha")
+        rootProcessorForCompare("gawonisgoi", "wonisgoi")
+        rootProcessorForCompare("gawonisgvi", "wonisgvi")
+        rootProcessorForCompare("gawonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("aniwoniha", "woniha")
+        rootProcessorForCompare("aniwonisgoi", "wonisgoi")
+        rootProcessorForCompare("aniwonisgvi", "wonisgvi")
+        rootProcessorForCompare("aniwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("idiwoniha", "woniha")
+        rootProcessorForCompare("idiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("idiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("idiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("iniwoniha", "woniha")
+        rootProcessorForCompare("iniwonisgoi", "wonisgoi")
+        rootProcessorForCompare("iniwonisgvi", "wonisgvi")
+        rootProcessorForCompare("iniwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("osdiwoniha", "woniha")
+        rootProcessorForCompare("osdiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("osdiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("osdiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("ojiwoniha", "woniha")
+        rootProcessorForCompare("ojiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("ojiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("ojiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("sdiwoniha", "woniha")
+        rootProcessorForCompare("sdiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("sdiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("sdiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("ijiwoniha", "woniha")
+        rootProcessorForCompare("ijiwonisgoi", "wonisgoi")
+        rootProcessorForCompare("ijiwonisgvi", "wonisgvi")
+        rootProcessorForCompare("ijiwonisgesdi", "wonisgesdi")
+        rootProcessorForCompare("agiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dajiwonisi", "wonisi")
+        rootProcessorForCompare("jiwonihi", "wonihi")
+        rootProcessorForCompare("agiwonihisdi", "wonihisdi")
+        rootProcessorForCompare("jawonisvi", "wonisvi")
+//        rootProcessorForCompare("tiwonisi", "wonisi")
+        rootProcessorForCompare("hiwonihi", "wonihi")
+        rootProcessorForCompare("jawonihisdi", "wonihisdi")
+//        rootProcessorForCompare("uwonisvi", "wonisvi")
+//        rootProcessorForCompare("dagawonisi", "wonisi")
+        rootProcessorForCompare("gawonihi", "wonihi")
+//        rootProcessorForCompare("uwonihisdi", "wonihisdi")
+//        rootProcessorForCompare("uniwonisvi", "wonisvi")
+//        rootProcessorForCompare("dvniwonisi", "wonisi")
+        rootProcessorForCompare("aniwonihi", "wonihi")
+//        rootProcessorForCompare("uniwonihisdi", "wonihisdi")
+        rootProcessorForCompare("igiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dadiwonisi", "wonisi")
+        rootProcessorForCompare("idiwonihi", "wonihi")
+        rootProcessorForCompare("igiwonihisdi", "wonihisdi")
+        rootProcessorForCompare("giniwonisvi", "wonisvi")
+//        rootProcessorForCompare("daniwonisi", "wonisi")
+        rootProcessorForCompare("iniwonihi", "wonihi")
+        rootProcessorForCompare("giniwonihisdi", "wonihisdi")
+        rootProcessorForCompare("oginiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dayosdiwonisi", "wonisi")
+        rootProcessorForCompare("osdiwonihi", "wonihi")
+        rootProcessorForCompare("oginiwonihisdi", "wonihisdi")
+        rootProcessorForCompare("ogiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dayojiwonisi", "wonisi")
+        rootProcessorForCompare("ojiwonihi", "wonihi")
+        rootProcessorForCompare("ogiwonihisdi", "wonihisdi")
+        rootProcessorForCompare("sdiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dasdiwonisi", "wonisi")
+        rootProcessorForCompare("sdiwonihi", "wonihi")
+        rootProcessorForCompare("sdiwonihisdi", "wonihisdi")
+        rootProcessorForCompare("ijiwonisvi", "wonisvi")
+//        rootProcessorForCompare("dajiwonisi", "wonisi")
+        rootProcessorForCompare("ijiwonihi", "wonihi")
+        rootProcessorForCompare("ijiwonihisdi", "wonihisdi")
+    }
+
+    public void testAgwaduliha() {
+        rootProcessorForCompare("agwaduliha", "aduliha")
+        rootProcessorForCompare("agwadulihoi", "adulihoi")
+        rootProcessorForCompare("agwadulihvi", "adulihvi")
+        rootProcessorForCompare("agwadulia", "adulia")
+        rootProcessorForCompare("agwadulidi", "adulidi")
+        rootProcessorForCompare("jaduliha", "duliha")
+        rootProcessorForCompare("jadulihoi", "dulihoi")
+        rootProcessorForCompare("jadulihvi", "dulihvi")
+        rootProcessorForCompare("jadulia", "dulia")
+        rootProcessorForCompare("jadulidi", "dulidi")
+//        rootProcessorForCompare("uduliha", "duliha")
+//        rootProcessorForCompare("udulihoi", "dulihoi")
+//        rootProcessorForCompare("udulihvi", "dulihvi")
+//        rootProcessorForCompare("udulia", "dulia")
+//        rootProcessorForCompare("udulidi", "dulidi")
+//        rootProcessorForCompare("unaduliha", "aduliha")
+//        rootProcessorForCompare("unadulihoi", "dulihoi")
+//        rootProcessorForCompare("unadulihvi", "dulihvi")
+//        rootProcessorForCompare("unadulia", "dulia")
+//        rootProcessorForCompare("unadulidi", "dulidi")
+        rootProcessorForCompare("igaduliha", "aduliha")
+        rootProcessorForCompare("igadulihoi", "adulihoi")
+        rootProcessorForCompare("igadulihvi", "adulihvi")
+        rootProcessorForCompare("igadulia", "adulia")
+        rootProcessorForCompare("igadulidi", "adulidi")
+    }
+
+    public void testGenerator() {
+//        def f = new File("/Volumes/Zeus/projects/wholecedproject/cherokeeconjugation/src/test/groovy/cherokee/dictionary/VRB.txt").readLines()
+        def f = """"""
+        def indexed = "duli"
+        f.eachLine {
+            if (it.startsWith("#") || it.trim() == "") {
+
+            } else {
+                def split = it.split(" ")
+                if (split.size() < 5) {
+
+                } else {
+                    def first = split[0].replaceAll("’", "")
+                    def second = split[1].replaceAll("’", "")
+                    def third = split[2].replaceAll("’", "")
+                    def fourth = split[3].replaceAll("’", "")
+                    def fifth = split[4].replaceAll("’", "")
+                    println "rootProcessorForCompare(\"${first}\", \"${first.substring(first.indexOf(indexed))}\")"
+                    println "rootProcessorForCompare(\"${second}\", \"${second.substring(second.indexOf(indexed))}\")"
+                    println "rootProcessorForCompare(\"${third}\", \"${third.substring(third.indexOf(indexed))}\")"
+                    println "rootProcessorForCompare(\"${fourth}\", \"${fourth.substring(fourth.indexOf(indexed))}\")"
+                    println "rootProcessorForCompare(\"${fifth}\", \"${fifth.substring(fifth.indexOf(indexed))}\")"
+                }
+            }
+        }
+    }
+
     private void rootProcessorForCompare(original, assertion) {
         original = su.tsalagiToSyllabary(original)
         assertion = su.tsalagiToSyllabary(assertion)

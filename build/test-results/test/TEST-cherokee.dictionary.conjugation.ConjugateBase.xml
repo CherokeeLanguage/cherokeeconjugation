@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cherokee.dictionary.conjugation.ConjugateBase" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-12-20T03:09:02" hostname="standtroopers-iMac.local" time="0.002">
+  <properties/>
+  <testcase name="testNothing" classname="cherokee.dictionary.conjugation.ConjugateBase" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

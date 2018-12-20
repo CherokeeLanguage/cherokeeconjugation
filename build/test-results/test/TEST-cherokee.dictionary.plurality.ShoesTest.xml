@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cherokee.dictionary.plurality.ShoesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-12-20T03:09:02" hostname="standtroopers-iMac.local" time="0.035">
+  <properties/>
+  <testcase name="testShoes" classname="cherokee.dictionary.plurality.ShoesTest" time="0.034"/>
+  <testcase name="testNothing" classname="cherokee.dictionary.plurality.ShoesTest" time="0.0"/>
+  <system-out><![CDATA[ᏥᏯᎳᏒᏝ
+ᎯᏯᎳᏒᏝ
+ᏚᎳᏒᏝ
+ᎡᎾᎳᏒᏝ
+ᎣᏍᏓᎳᏒᏝ
+ᎡᏍᏓᎳᏒᏝ
+ᎡᏓᎳᏒᏝ
+ᎣᏣᎳᏒᏝ
+ᎡᏣᎳᏒᏝ
+ᎠᎾᎳᏒᏝ
+ᎦᏥᏯᎳᏒᏝ
+ᎦᎯᏯᎳᏒᏝ
+ᏕᎦᎳᏒᏝ
+ᎨᎾᎳᏒᏝ
+ᎪᏍᏓᎳᏒᏝ
+ᎨᏍᏓᎳᏒᏝ
+ᎨᏓᎳᏒᏝ
+ᎪᏣᎳᏒᏝ
+ᎨᏣᎳᏒᏝ
+ᏓᎾᎳᏒᏝ
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
