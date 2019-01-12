@@ -2,7 +2,7 @@ package cherokee.dictionary.addPrefixes
 
 import cherokee.dictionary.conjugation.conjugate.PartOfSpeech
 import cherokee.dictionary.conjugation.conjugate.Tense
-import cherokee.dictionary.conjugation.wordFormation.PronounProcessor
+import cherokee.dictionary.conjugation.processors.PronounProcessor
 import cherokee.dictionary.conjugation.wordFormation.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
