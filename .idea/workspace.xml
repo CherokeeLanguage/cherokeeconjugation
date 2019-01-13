@@ -2,82 +2,184 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6908055e-778c-43bb-989c-98dfd4076ee4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old code/Verb.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$__clinit__closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor$_removePronounPrefix_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/PronounProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/VerbRootProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/VRBDideloquasdi2012Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/VRBDideloquasdi2012Test.groovy" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/Affix.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/BaseVerb.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/BaseVerb.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/IntransitiveVerb.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/IntransitiveVerb.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/NonFinalSuffixHolderObject.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/NonFinalSuffixHolderObject.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/PrefixHolderObject.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/SuffixHolderObject.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/SuffixHolderObject.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/TransitiveVerb.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/TransitiveVerb.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/VerbConjugatedTensesHolder.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/VerbConjugatedTensesHolder.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixDa.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixDe.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixDi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixE.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixGa.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixI.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixJi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixNi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixWi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/prefixes/PrefixYi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixDan.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixDohdan.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixE.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixEl.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixG.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixIdol.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixIhi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixIlo.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/NonFinalSuffixOhn.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixA.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixDi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixDina.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixDv.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixEi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixEsdi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixGwu.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixHv.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixI.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixIdi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixIsi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixJu.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixKe.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixNa.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixOi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixSgo.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/affixes/suffixes/SuffixVi.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/old code/old2/factories/VerbFactory.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/factories/VerbFactory.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/PronounProcessor.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/PronounProcessor.groovy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/VerbRootProcessor.groovy" afterPath="$PROJECT_DIR$/old code/old2/processors/verbs/Verb.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Word.class" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Word.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.class" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.class" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePastTense.class" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePastTense.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePresentTense.class" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePresentTense.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Affix.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Affix.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.groovy" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.groovy" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_all_2_4_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_codehaus_groovy_groovy_all_2_4_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/Affix.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/Affix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/groovy/main/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/cherokee-conjugation-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/cherokee-conjugation-0.1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/Conjugate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/Conjugate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/ConjugatedVerb.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/ConjugatedVerb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/VerbConjugationProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/VerbConjugationProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/Affix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/Affix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/NonFinalSuffixHolderObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/NonFinalSuffixHolderObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/SuffixHolderObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/SuffixHolderObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/cdpbook/Stemmer$_getStem_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/cdpbook/Stemmer$_getStem_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/cdpbook/Stemmer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/cdpbook/Stemmer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/CompoundPrefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/CompoundPrefix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/CompoundPrefixes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/CompoundPrefixes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Morphemes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Morphemes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PartOfSpeech.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PartOfSpeech.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Prefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Prefix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PrefixTableObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PrefixTableObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PrefixTableSubject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PrefixTableSubject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PronominalPrefix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/PronominalPrefix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Tense.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Tense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/VerbSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/VerbSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/VerbType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/VerbType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Vowels.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/conjugate/Vowels.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$__clinit__closure6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$_removePronounPrefix_closure7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor$_removePronounPrefix_closure7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/PronounProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/PrefixRule.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/PrefixRule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RuleLaryngealAlteration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RuleLaryngealAlteration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RuleUW.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RuleUW.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RulesProcessor$_processRules_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RulesProcessor$_processRules_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RulesProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/rules/RulesProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/stem/VerbTenseHolder$_process_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/stem/VerbTenseHolder$_process_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/stem/VerbTenseHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/stem/VerbTenseHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/util/StringUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/util/StringUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Affix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Affix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/cherokee/dictionary/conjugation/wordFormation/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugateBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugateBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePastTense.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePastTense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePresentTense.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/conjugation/ConjugatePresentTense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/plurality/ShoesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/plurality/ShoesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/teardownToRoot/TeardownVerbToRootTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/teardownToRoot/TeardownVerbToRootTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/wordBreakdown/BreakdownTest$_testBreakdown_closure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/wordBreakdown/BreakdownTest$_testBreakdown_closure1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/wordBreakdown/BreakdownTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/cherokee/dictionary/wordBreakdown/BreakdownTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,42 +192,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PrefixDe.groovy" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="26" column="10" lean-forward="true" selection-start-line="25" selection-end-line="26" selection-end-column="10" />
+              <folding>
+                <element signature="e#58#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrefixYi.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="9" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="416">
+              <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+              <folding>
+                <element signature="e#53#118#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrefixJi.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="15" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="31" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrefixDa.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="121">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="e#55#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -135,363 +251,23 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>import Affix</find>
+      <find>, Object data, Object de, Object verbTense</find>
     </findStrings>
     <replaceStrings>
       <replace>import cherokee.dictionary.conjugation.affixes.Affix</replace>
+      <replace>, Word word</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes</dir>
+      <dir>C:\projects\wholecedproject\cherokeeconjugation\src\main\groovy\cherokee\dictionary\conjugation</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="myGradleHomes">
-      <map>
-        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.sdkman/candidates/gradle/4.9" />
-      </map>
-    </option>
-    <option name="myGradleVersions">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4.9" />
-      </map>
-    </option>
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="cherokee-conjugation" />
-              <option name="path" value="$PROJECT_DIR$" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="cherokee-conjugation" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="availableTasks">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Run CodeNarc analysis for main classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="codenarcMain" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'cherokee-conjugation'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="classes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'cherokee-conjugation'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Run Checkstyle analysis for test classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="checkstyleTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Gradle wrapper files." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="wrapper" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Run Checkstyle analysis for main classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="checkstyleMain" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles the test Groovy source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestGroovy" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="jar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'cherokee-conjugation'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles the main Groovy source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileGroovy" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes main resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Initializes a new Gradle build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles main Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Groovydoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="groovydoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles the outputs of this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="clean" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Run CodeNarc analysis for test classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="codenarcTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="srcZip" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="build" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="install" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'cherokee-conjugation'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="modificationStamps">
-      <map>
-        <entry key="$USER_HOME$/projects/CED_SITE/cedsite/site/trunk/parser" value="2960888823000" />
-        <entry key="$USER_HOME$/projects/FPVHUDHMD/CherokeeAffixSplitter" value="2961953192000" />
-        <entry key="$USER_HOME$/projects/FPVHUDHMD/SERINDA" value="2974972217000" />
-        <entry key="$USER_HOME$/projects/cedsite" value="1501546390000" />
-        <entry key="$USER_HOME$/projects/cedsiteg3" value="1501714794000" />
-        <entry key="$USER_HOME$/projects/testApp" value="1501809639000" />
-        <entry key="$USER_HOME$/projects/testApp2" value="1501887341000" />
-        <entry key="$PROJECT_DIR$" value="3090532102000" />
-      </map>
-    </option>
-    <option name="projectBuildClasspath">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <ExternalProjectBuildClasspathPojo>
-              <option name="modulesBuildClasspath">
-                <map>
-                  <entry key="$PROJECT_DIR$">
-                    <value>
-                      <ExternalModuleBuildClasspathPojo>
-                        <option name="path" value="$PROJECT_DIR$" />
-                      </ExternalModuleBuildClasspathPojo>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="name" value="cherokee-conjugation" />
-              <option name="projectBuildClasspath">
-                <list>
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/ant-1.9.11.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/ant-launcher-1.9.11.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-base-services-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-base-services-groovy-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-build-cache-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-build-option-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-cli-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-core-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-core-api-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-docs-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-installation-beacon-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-jvm-services-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-0.18.4.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-provider-plugins-0.18.4.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-tooling-builders-0.18.4.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-kotlin-dsl-tooling-models-0.18.4.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-launcher-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-logging-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-messaging-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-model-core-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-model-groovy-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-native-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-persistent-cache-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-process-services-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-resources-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-runtime-api-info-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-tooling-api-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/gradle-wrapper-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/groovy-all-2.4.12.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-announce-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-antlr-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-cache-http-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-comparison-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-build-init-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-code-quality-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-composite-builds-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-dependency-management-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-diagnostics-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ear-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-native-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ide-play-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-ivy-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-jacoco-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-javascript-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-groovy-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-java-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-jvm-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-native-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-language-scala-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-maven-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-osgi-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-base-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-jvm-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-native-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-platform-play-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugin-development-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugin-use-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-plugins-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-publish-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-reporting-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-gcs-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-http-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-s3-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-resources-sftp-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-scala-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-signing-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-test-kit-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-base-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-junit-platform-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-jvm-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-testing-native-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-tooling-api-builders-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-version-control-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/gradle-workers-4.9.jar" />
-                  <option value="$USER_HOME$/.sdkman/candidates/gradle/current/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
-                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
-                </list>
-              </option>
-            </ExternalProjectBuildClasspathPojo>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/TransitiveVerb.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/BaseVerb.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/VerbConjugatedTensesHolder.groovy" />
@@ -502,90 +278,65 @@
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/PronounProcessor.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Affix.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy" />
-        <option value="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="531" />
+    <option name="width" value="839" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
               <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="hold" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-              <item name="old" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-              <item name="old2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-              <item name="old2" type="462c0819:PsiDirectoryNode" />
-              <item name="processors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-              <item name="old2" type="462c0819:PsiDirectoryNode" />
-              <item name="processors" type="462c0819:PsiDirectoryNode" />
-              <item name="verbs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="old code" type="462c0819:PsiDirectoryNode" />
-              <item name="old2" type="462c0819:PsiDirectoryNode" />
-              <item name="processors" type="462c0819:PsiDirectoryNode" />
-              <item name="verbs" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
@@ -639,16 +390,8 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
               <item name="conjugation" type="462c0819:PsiDirectoryNode" />
-              <item name="cdpbook" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="conjugation" type="462c0819:PsiDirectoryNode" />
-              <item name="conjugate" type="462c0819:PsiDirectoryNode" />
+              <item name="affixes" type="462c0819:PsiDirectoryNode" />
+              <item name="suffixes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
@@ -658,48 +401,6 @@
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
               <item name="conjugation" type="462c0819:PsiDirectoryNode" />
               <item name="processors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="conjugation" type="462c0819:PsiDirectoryNode" />
-              <item name="stem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="conjugation" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="groovy" type="462c0819:PsiDirectoryNode" />
-              <item name="conjugation" type="462c0819:PsiDirectoryNode" />
-              <item name="wordFormation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cherokeeconjugation" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cherokee-conjugation" type="b2602c69:ProjectViewProjectNode" />
@@ -771,15 +472,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547400851325" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -801,149 +502,86 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.BreakdownTest.testBreakdown">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BreakdownTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <module name="cherokee-conjugation_test" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cherokee.dictionary.wordBreakdown.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="cherokee-conjugation_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cherokee.dictionary.wordBreakdown" />
       <option name="MAIN_CLASS_NAME" value="cherokee.dictionary.wordBreakdown.BreakdownTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="BreakdownTest.testBreakdown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <module name="cherokee-conjugation_test" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cherokee.dictionary.wordBreakdown.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="cherokee-conjugation_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="cherokee.dictionary.wordBreakdown" />
       <option name="MAIN_CLASS_NAME" value="cherokee.dictionary.wordBreakdown.BreakdownTest" />
       <option name="METHOD_NAME" value="testBreakdown" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.BreakdownTest.testBreakdown" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BreakdownTest" />
+    <list>
+      <item itemvalue="JUnit.BreakdownTest.testBreakdown" />
+      <item itemvalue="JUnit.BreakdownTest" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BreakdownTest.testBreakdown" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BreakdownTest" />
+      <list>
+        <item itemvalue="JUnit.BreakdownTest.testBreakdown" />
+        <item itemvalue="JUnit.BreakdownTest" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -955,76 +593,86 @@
       <workItem from="1545604632779" duration="759000" />
       <workItem from="1547167398714" duration="4610000" />
       <workItem from="1547238820701" duration="8603000" />
+      <workItem from="1547340952079" duration="4502000" />
+      <workItem from="1547346328252" duration="7799000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 27m 24s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 21m 19s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 27m 43s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 25m 25s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 28m 16s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 25m 33s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 28m 33s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 26m 26s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 29m 26s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 32m 02s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 30m 49s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 32m 14s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 31m 31s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 32m 48s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 31m 48s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 33m 38s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 32m 48s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 34m 05s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BreakdownTest_testBreakdown - 2019.01.12 at 12h 33m 07s.xml">
+    <history-entry file="BreakdownTest_testBreakdown - 2019.01.13 at 11h 34m 14s.xml">
       <configuration name="BreakdownTest.testBreakdown" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13972000" />
+    <option name="totallyTimeSpent" value="26273000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
+    <frame x="531" y="0" width="839" height="733" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22018349" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19583334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34274712" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32925585" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39959225" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Build" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Palette" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1041,222 +689,33 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/PronounProcessor.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-          <folding>
-            <element signature="e#52#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-          <folding>
-            <element signature="e#53#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/teardownToRoot/TeardownVerbToRootTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/plurality/ShoesTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/tests/PrefixProcessorTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-413">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/rules/RuleUW.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/AffixProcessor.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/AffixSplitter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/VRB.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1489">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/stem/VerbTenseHolder.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/tests/VerbGeneratorTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/tests/CEDGrammarVerbTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2096">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/PrefixProcessor.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="156" column="5" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="156" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/VerbConjugatedTensesHolder.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/Verb.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/TransitiveVerb.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/IntransitiveVerb.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/BaseVerb.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/VerbRootProcessor.groovy" />
-    <entry file="file://$PROJECT_DIR$/old code/old2/processors/verbs/factories/VerbFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="162" column="31" lean-forward="false" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/SuffixHolderObject.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/NonFinalSuffixHolderObject.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/VRBDideloquasdi2012Test.groovy" />
     <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugatePresentTense.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old code/old2/processors/FinalSuffixProcessor.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state>
           <folding />
         </state>
       </provider>
@@ -1264,31 +723,7 @@
     <entry file="file://$PROJECT_DIR$/old code/old2/processors/NonFinalSuffixProcessor.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1296,142 +731,433 @@
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/CompoundPrefixes.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="58">
-          <caret line="149" column="57" lean-forward="false" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="57" />
-          <folding />
+          <caret line="149" column="57" selection-start-line="149" selection-start-column="55" selection-end-line="149" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/VerbConjugationProcessor.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1116">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="e#53#118#0" expanded="true" />
-          </folding>
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Affix.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="e#55#128#0" expanded="true" />
-          </folding>
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/PronounProcessor.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
             <element signature="e#52#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="85">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="-474">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="15" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="31" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="145">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="31" selection-end-column="9" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#55#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="25" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="e#58#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+          <folding>
+            <element signature="e#53#118#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

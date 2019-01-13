@@ -1,6 +1,7 @@
 package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.wordFormation.Word
 
 /*
 * p256 CED
@@ -21,8 +22,9 @@ class PrefixE implements Affix {
     String e;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Object data, Object de, Object verbTense) {
-        baseReturnValue = ""
+    String toSyllabary(Object baseReturnValue, Word word) {
+        def data = word.pronounPrefix.syllabary + word.rootSyllabary
+        def de = word.prefixHolderObject.de
 
         if (de) {
             baseReturnValue = 'Ꮧ' + data;
@@ -34,7 +36,7 @@ class PrefixE implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toEnglish(Object baseReturnValue, Word word) {
         return ""
     }
 

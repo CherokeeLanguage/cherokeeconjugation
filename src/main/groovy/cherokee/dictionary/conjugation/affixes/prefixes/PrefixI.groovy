@@ -2,12 +2,17 @@ package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
 import cherokee.dictionary.conjugation.conjugate.Tense
+import cherokee.dictionary.conjugation.wordFormation.Word
 
 class PrefixI implements Affix {
     String i;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toSyllabary(Object baseReturnValue, Word word) {
+        String data = word.pronounPrefix.syllabary + word.rootSyllabary
+        def de = word.prefixHolderObject.de
+        def verbTense = word.tense
+
         def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
         def startsWithVowel = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
 
@@ -39,7 +44,7 @@ class PrefixI implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toEnglish(Object baseReturnValue, Word word) {
         return null
     }
 

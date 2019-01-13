@@ -1,13 +1,15 @@
 package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.wordFormation.Word
 
 class PrefixGa implements Affix {
     String ga;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toSyllabary(Object baseReturnValue, Word word) {
         baseReturnValue = ""
+        def data = word.pronounPrefix.syllabary + word.rootSyllabary
         def charAtZero = data.charAt(0);
         def startsWithVowel = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
 
@@ -33,7 +35,7 @@ class PrefixGa implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toEnglish(Object baseReturnValue, Word Word) {
         return null
     }
 

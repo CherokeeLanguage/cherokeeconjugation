@@ -1,17 +1,18 @@
 package cherokee.dictionary.conjugation.affixes.suffixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.wordFormation.Word
 
 class NonFinalSuffixIhi implements Affix {
     String ihi
 
     @Override
-    String toSyllabary(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toSyllabary(Object baseReturnValue, Word word) {
         return null
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Object data, Object de, Object verbTense) {
+    String toEnglish(Object baseReturnValue, Word word) {
         return null
     }
 

@@ -13,16 +13,20 @@ class BreakdownTest extends GroovyTestCase {
     public void testBreakdown() {
         Word word = new Word()
         word.partOfSpeech = PartOfSpeech.VERB_INTRANSITIVE
-        word.rootLatin = "jiwoni"
+        word.rootLatin = "higowatiha"
         word.tense = Tense.REMOTE_PAST
         word.subject = "SG1"
-        word.rootSyllabary = new SyllabaryUtil().tsalagiToSyllabary("jiwoni")
+        word.rootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(word.rootLatin)
         word.prefixHolderObject.with {
-            yi = true
-            ni = true
-            ga = true
+//            yi = true
+//            ji = true
+//            ni = true
+//            ga = true
+            da = true
             de = true
-            i = true
+            di = true
+//            i = true
+//            wi = true
         }
 
         VerbPrefixFactory.process(word)
