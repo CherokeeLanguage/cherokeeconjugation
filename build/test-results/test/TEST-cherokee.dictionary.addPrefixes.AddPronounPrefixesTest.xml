@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cherokee.dictionary.addPrefixes.AddPronounPrefixesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-12-20T03:09:01" hostname="standtroopers-iMac.local" time="0.569">
-  <properties/>
-  <testcase name="testAddPronounPrefixesVowel" classname="cherokee.dictionary.addPrefixes.AddPronounPrefixesTest" time="0.562"/>
-  <testcase name="testAddPronounPrefixesConsonant" classname="cherokee.dictionary.addPrefixes.AddPronounPrefixesTest" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
