@@ -7,13 +7,13 @@ class NonFinalSuffixIlo implements Affix{
     String ilo
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
 
         return null
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 

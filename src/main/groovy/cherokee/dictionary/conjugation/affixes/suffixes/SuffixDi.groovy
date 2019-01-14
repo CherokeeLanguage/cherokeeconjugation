@@ -7,12 +7,12 @@ class SuffixDi implements Affix {
     String di
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         return null
     }
 

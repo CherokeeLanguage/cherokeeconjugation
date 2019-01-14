@@ -22,7 +22,7 @@ class PrefixE implements Affix {
     String e;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         def data = word.pronounPrefix.syllabary + word.rootSyllabary
         def de = word.prefixHolderObject.de
 
@@ -36,7 +36,7 @@ class PrefixE implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return ""
     }
 

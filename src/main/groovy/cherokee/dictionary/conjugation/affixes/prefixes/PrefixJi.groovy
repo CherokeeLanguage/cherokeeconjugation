@@ -1,58 +1,44 @@
 package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.util.StringUtility
 import cherokee.dictionary.conjugation.wordFormation.Word
+import com.cobradoc.cherokee.SyllabaryUtil
 
 class PrefixJi implements Affix {
     String ji;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         String data = word.pronounPrefix.syllabary + word.rootSyllabary
-        def de = word.prefixHolderObject.de
-        def verbTense = word.tense
+        baseReturnValue = baseReturnValue ?: data
+        def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
 
-        def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
-        boolean isVowelBeginning = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
-        //if yi -add n- or ni- then "-na jigi"
+        //check for past tense word.tense =
+        //j- cannot be used when reportative past tense suffix ei is used
+        // since that tense hasn't been implemented yet - we're just going to check for ei
+        if (latin.endsWith("ei")) {
+            return baseReturnValue
+        }
+
+        def charAtZero = baseReturnValue.charAt(0)
+        boolean isVowelBeginning = StringUtility.startsWithVowelSyllabary(baseReturnValue)
+
+        //if yi -add n- or ni- then "-na jigi" unless it's ga- then ga- jigi
         if (word.prefixHolderObject.yi || word.prefixHolderObject.ga) {
             if (isVowelBeginning) {
-                if (charAtZero == 'Ꭰ') {
-                    baseReturnValue = 'Ꮎ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭱ') {
-                    baseReturnValue = 'Ꮑ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭲ') {
-                    baseReturnValue = 'Ꮒ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭳ') {
-                    baseReturnValue = 'Ꮓ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭴ') {
-                    baseReturnValue = 'Ꮔ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭵ') {
-                    baseReturnValue = 'Ꮕ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                }
+                baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮎ', 'Ꮑ', 'Ꮒ', 'Ꮓ', 'Ꮔ', 'Ꮕ'])
             } else {
-                baseReturnValue = (word.prefixHolderObject.yi ? "Ꮒ" : "") + (baseReturnValue != '' ? baseReturnValue : data) + "Ꮎ ᏥᎩ";
+                baseReturnValue = (word.prefixHolderObject.yi ? "Ꮒ" : "") + baseReturnValue + (word.prefixHolderObject.yi ? "Ꮎ" : "") + " ᏥᎩ";
             }
         } else {
             if (isVowelBeginning) {
-                if (charAtZero == 'Ꭰ') {
-                    baseReturnValue = 'Ꮳ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭱ') {
-                    baseReturnValue = 'Ꮴ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭲ') {
-                    baseReturnValue = 'Ꮵ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭳ') {
-                    baseReturnValue = 'Ꮶ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭴ') {
-                    baseReturnValue = 'Ꮷ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                } else if (charAtZero == 'Ꭵ') {
-                    baseReturnValue = 'Ꮸ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                }
+                baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮳ', 'Ꮴ', 'Ꮵ', 'Ꮶ', 'Ꮷ', 'Ꮸ'])
             } else {
                 if (charAtZero == 'Ꮹ' || charAtZero == 'Ꮺ' || charAtZero == 'Ꮻ' || charAtZero == 'Ꮼ' || charAtZero == 'Ꮽ' || charAtZero == 'Ꮾ') {
-                    baseReturnValue = "Ꮸ" + (baseReturnValue != '' ? baseReturnValue : data);
+                    baseReturnValue = "Ꮸ" + baseReturnValue
                 } else {
-                    baseReturnValue = "Ꮵ" + (baseReturnValue != '' ? baseReturnValue : data);
+                    baseReturnValue = "Ꮵ" + baseReturnValue
                 }
             }
         }
@@ -61,7 +47,7 @@ class PrefixJi implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 

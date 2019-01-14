@@ -1,34 +1,28 @@
 package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.util.StringUtility
 import cherokee.dictionary.conjugation.wordFormation.Word
+import com.cobradoc.cherokee.SyllabaryUtil
 
 class PrefixWi implements Affix {
     String wi;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         String data = word.pronounPrefix.syllabary + word.rootSyllabary
-        def de = word.prefixHolderObject.de
-        def verbTense = word.tense
+        baseReturnValue = baseReturnValue ?: data
 
-        def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
-        boolean isVowelBeginning = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
+        def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
+        def startsWithH = latin.startsWith('h')
+        if (startsWithH) {
+            latin = latin.substring(1)
+            baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary(latin)
+        }
+        def charAtZero = baseReturnValue.charAt(0)
 
-        if (isVowelBeginning) {
-            if (charAtZero == 'Ꭰ') {
-                baseReturnValue = 'Ꮹ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            } else if (charAtZero == 'Ꭱ') {
-                baseReturnValue = 'Ꮺ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            } else if (charAtZero == 'Ꭲ') {
-                baseReturnValue = 'Ꮻ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            } else if (charAtZero == 'Ꭳ') {
-                baseReturnValue = 'Ꮼ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            } else if (charAtZero == 'Ꭴ') {
-                baseReturnValue = 'Ꮽ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            } else if (charAtZero == 'Ꭵ') {
-                baseReturnValue = 'Ꮾ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-            }
+        if (StringUtility.startsWithVowelSyllabary(baseReturnValue)) {
+            baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮹ', 'Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ'])
         } else {
             baseReturnValue = "Ꮻ" + (baseReturnValue != '' ? baseReturnValue : data);
         }
@@ -37,7 +31,7 @@ class PrefixWi implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 

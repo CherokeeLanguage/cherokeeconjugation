@@ -28,4 +28,35 @@ class StringUtility {
             return false;
         }
     }
+
+    public static int vowelByIndex(vowel) {
+        switch(vowel) {
+            case 'Ꭰ':
+                return 0;
+                break;
+            case 'Ꭱ':
+                return 1;
+                break;
+            case 'Ꭲ':
+                return 2;
+                break;
+            case 'Ꭳ':
+                return 3;
+                break;
+            case 'Ꭴ':
+                return 4;
+                break;
+            case 'Ꭵ':
+                return 5;
+                break;
+            default:
+                return -1;
+        }
+    }
+
+    public static String getOptionsByVowel(characterAtZero, baseReturnValue, lst) {
+        def charAtZero = vowelByIndex(characterAtZero)
+
+        return lst[charAtZero] + baseReturnValue.substring(1)
+    }
 }

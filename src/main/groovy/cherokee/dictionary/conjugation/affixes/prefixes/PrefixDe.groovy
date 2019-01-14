@@ -2,6 +2,7 @@ package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
 import cherokee.dictionary.conjugation.conjugate.Tense
+import cherokee.dictionary.conjugation.util.StringUtility
 import cherokee.dictionary.conjugation.wordFormation.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -9,8 +10,9 @@ class PrefixDe implements Affix {
     String de;
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         String data = word.pronounPrefix.syllabary + word.rootSyllabary
+
         def verbTense = word.tense
 
 //        /de- consonants d- vowels except -i-
@@ -26,43 +28,20 @@ class PrefixDe implements Affix {
 
         def latin = new SyllabaryUtil().parseSyllabary(data)
         def startsWithH = latin.startsWith('h')
+        baseReturnValue = baseReturnValue ?: data
 
         if (word.prefixHolderObject.da || word.prefixHolderObject.di) {
-            baseReturnValue = "Ꮩ" + (baseReturnValue != '' ? baseReturnValue : data);
+            baseReturnValue = "Ꮩ" + baseReturnValue
         } else {
             def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
-            boolean isVowelBeginning = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
+            boolean isVowelBeginning = StringUtility.startsWithVowelSyllabary(baseReturnValue)
 
             if (isVowelBeginning) {
                 if (verbTense == Tense.INFINITIVE
-                        || verbTense == Tense.FUTURE_COMMAND) {
-                    if (charAtZero == 'Ꭰ') {
-                        baseReturnValue = 'Ꮧ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭱ') {
-                        baseReturnValue = 'Ꮴ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭲ') {
-                        baseReturnValue = 'Ꮵ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭳ') {
-                        baseReturnValue = 'Ꮶ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭴ') {
-                        baseReturnValue = 'Ꮷ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭵ') {
-                        baseReturnValue = 'Ꮸ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    }
+                    || verbTense == Tense.FUTURE_COMMAND) {
+                    baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮧ', 'Ꮴ', 'Ꮵ', 'Ꮶ', 'Ꮷ', 'Ꮸ'])
                 } else {
-                    if (charAtZero == 'Ꭰ') {
-                        baseReturnValue = 'Ꮣ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭱ') {
-                        baseReturnValue = 'Ꮥ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭲ') {
-                        baseReturnValue = 'Ꮥ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭳ') {
-                        baseReturnValue = 'Ꮩ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭴ') {
-                        baseReturnValue = 'Ꮪ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    } else if (charAtZero == 'Ꭵ') {
-                        baseReturnValue = 'Ꮫ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                    }
+                    baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮥ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                 }
             } else {
                 if (word.prefixHolderObject.yi
@@ -71,25 +50,13 @@ class PrefixDe implements Affix {
                         || verbTense == Tense.INFINITIVE
                         || verbTense == Tense.FUTURE_COMMAND) {
                     if (isVowelBeginning) {
-                        if (charAtZero == 'Ꭰ') {
-                            baseReturnValue = 'Ꮣ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        } else if (charAtZero == 'Ꭱ') {
-                            baseReturnValue = 'Ꮥ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        } else if (charAtZero == 'Ꭲ') {
-                            baseReturnValue = 'Ꮧ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        } else if (charAtZero == 'Ꭳ') {
-                            baseReturnValue = 'Ꮩ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        } else if (charAtZero == 'Ꭴ') {
-                            baseReturnValue = 'Ꮪ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        } else if (charAtZero == 'Ꭵ') {
-                            baseReturnValue = 'Ꮫ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
-                        }
+                        baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮥ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                     } else {
-                        baseReturnValue = "Ꮧ" + (baseReturnValue != '' ? baseReturnValue : data);
-//                        baseReturnValue = "Ꮥ" + (baseReturnValue != '' ? baseReturnValue : data);
+                        baseReturnValue = "Ꮧ" + baseReturnValue
+//                        baseReturnValue = "Ꮥ" + baseReturnValue
                     }
                 } else {
-                    baseReturnValue = "Ꮥ" + (baseReturnValue != '' ? baseReturnValue : data);
+                    baseReturnValue = "Ꮥ" + baseReturnValue
                 }
             }
 
@@ -105,7 +72,7 @@ class PrefixDe implements Affix {
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 

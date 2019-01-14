@@ -113,7 +113,7 @@ class VerbConjugationProcessor {
                 final VerbType verbType) {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: stemmer)
         vth.process()
-
+        def verbTense = Tense.valueOf(tense);
         //todo: find prefix for plurals (e.g. d-) -- probably detect if verb starts with /d-/ if it does then add a /d-/
         // - should wait until other prefixes are put together in whole? timo 22Sep15
 
@@ -128,13 +128,9 @@ class VerbConjugationProcessor {
             return stemmer.present3rd.syllabary;
         }
 
-        if (verbType == VerbType.INTRANSITIVE && combinedSubjectObject == "SG3SG3IN") {
+        if (verbType == VerbType.INTRANSITIVE && combinedSubjectObject == "SG3SG3IN" && tense == verbTense.PRESENT) {
             return stemmer.present3rd.syllabary;
         }
-
-
-
-        def verbTense = Tense.valueOf(tense);
 
         def verbset = VerbSet.A
 

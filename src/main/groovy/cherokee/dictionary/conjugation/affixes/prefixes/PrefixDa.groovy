@@ -1,6 +1,7 @@
 package cherokee.dictionary.conjugation.affixes.prefixes
 
 import cherokee.dictionary.conjugation.affixes.Affix
+import cherokee.dictionary.conjugation.util.StringUtility
 import cherokee.dictionary.conjugation.wordFormation.Word
 
 class PrefixDa implements Affix {
@@ -11,17 +12,21 @@ class PrefixDa implements Affix {
     }
 
     @Override
-    String toSyllabary(Object baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Word word) {
         def data = word.pronounPrefix.syllabary + word.rootSyllabary
+        baseReturnValue = baseReturnValue ?: data
+        def charAtZero = baseReturnValue.charAt(0)
+        def isVowelBeginning = StringUtility.startsWithVowelSyllabary(baseReturnValue)
+
         if (data.startsWith("Ꭰ")) {//da + a = dv
-            baseReturnValue = "Ꮫ" + (baseReturnValue != '' ? baseReturnValue : data).substring(1);
+            baseReturnValue = "Ꮫ" + baseReturnValue.substring(1);
         } else {
-            return baseReturnValue = "Ꮣ" + (baseReturnValue != '' ? baseReturnValue : data);
+            return baseReturnValue = "Ꮣ" + baseReturnValue
         }
     }
 
     @Override
-    String toEnglish(Object baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Word word) {
         return null
     }
 }
