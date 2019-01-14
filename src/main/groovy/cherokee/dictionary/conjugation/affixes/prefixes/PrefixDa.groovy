@@ -12,7 +12,12 @@ class PrefixDa implements Affix {
 
     @Override
     String toSyllabary(Object baseReturnValue, Word word) {
-        return null
+        def data = word.pronounPrefix.syllabary + word.rootSyllabary
+        if (data.startsWith("Ꭰ")) {//da + a = dv
+            baseReturnValue = "Ꮫ" + (baseReturnValue != '' ? baseReturnValue : data).substring(1);
+        } else {
+            return baseReturnValue = "Ꮣ" + (baseReturnValue != '' ? baseReturnValue : data);
+        }
     }
 
     @Override

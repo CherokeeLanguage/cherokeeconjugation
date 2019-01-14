@@ -34,4 +34,6 @@ class BreakdownTest extends GroovyTestCase {
         println "root " + word.rootSyllabary
         println "prefixes " + word.wholePrefixes.syllabary
     }
+
+
 }

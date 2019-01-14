@@ -27,16 +27,12 @@ class PrefixDe implements Affix {
         def latin = new SyllabaryUtil().parseSyllabary(data)
         def startsWithH = latin.startsWith('h')
 
-        def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
-        boolean isVowelBeginning = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
         if (word.prefixHolderObject.da || word.prefixHolderObject.di) {
-            if (startsWithH) {
-                baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary('t' + latin.substring(1))
-                println baseReturnValue
-            } else {
-                baseReturnValue = "Ꮧ" + (baseReturnValue != '' ? baseReturnValue : data);
-            }
+            baseReturnValue = "Ꮩ" + (baseReturnValue != '' ? baseReturnValue : data);
         } else {
+            def charAtZero = baseReturnValue != '' ? baseReturnValue.charAt(0) : data.charAt(0);
+            boolean isVowelBeginning = (charAtZero == 'Ꭰ' || charAtZero == 'Ꭱ' || charAtZero == 'Ꭲ' || charAtZero == 'Ꭳ' || charAtZero == 'Ꭴ' || charAtZero == 'Ꭵ')
+
             if (isVowelBeginning) {
                 if (verbTense == Tense.INFINITIVE
                         || verbTense == Tense.FUTURE_COMMAND) {
@@ -74,13 +70,36 @@ class PrefixDe implements Affix {
                         || word.prefixHolderObject.ni
                         || verbTense == Tense.INFINITIVE
                         || verbTense == Tense.FUTURE_COMMAND) {
-
-                    baseReturnValue = "Ꮧ" + (baseReturnValue != '' ? baseReturnValue : data);
+                    if (isVowelBeginning) {
+                        if (charAtZero == 'Ꭰ') {
+                            baseReturnValue = 'Ꮣ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        } else if (charAtZero == 'Ꭱ') {
+                            baseReturnValue = 'Ꮥ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        } else if (charAtZero == 'Ꭲ') {
+                            baseReturnValue = 'Ꮧ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        } else if (charAtZero == 'Ꭳ') {
+                            baseReturnValue = 'Ꮩ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        } else if (charAtZero == 'Ꭴ') {
+                            baseReturnValue = 'Ꮪ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        } else if (charAtZero == 'Ꭵ') {
+                            baseReturnValue = 'Ꮫ' + (baseReturnValue != '' ? baseReturnValue.substring(1) : data.substring(1));
+                        }
+                    } else {
+                        baseReturnValue = "Ꮧ" + (baseReturnValue != '' ? baseReturnValue : data);
+//                        baseReturnValue = "Ꮥ" + (baseReturnValue != '' ? baseReturnValue : data);
+                    }
                 } else {
                     baseReturnValue = "Ꮥ" + (baseReturnValue != '' ? baseReturnValue : data);
                 }
             }
+
+            if (baseReturnValue.startsWith("Ꮧ")) {
+                if (startsWithH) {
+                    baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary('t' + latin.substring(1))
+                }
+            }
         }
+
 
         return baseReturnValue;
     }

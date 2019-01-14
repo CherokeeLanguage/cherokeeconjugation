@@ -2,6 +2,7 @@ package cherokee.dictionary.conjugation.processors
 
 
 import cherokee.dictionary.conjugation.affixes.PrefixHolderObject
+import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDa
 import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDe
 import cherokee.dictionary.conjugation.affixes.prefixes.PrefixDi
 import cherokee.dictionary.conjugation.affixes.prefixes.PrefixE
@@ -47,6 +48,10 @@ class VerbPrefixFactory {
 
         if (pho.di) {
             baseReturnValue = new PrefixDi().toSyllabary(baseReturnValue, word);
+        }
+
+        if (pho.da) {
+            baseReturnValue = new PrefixDa().toSyllabary(baseReturnValue, word);
         }
 
         if (pho.de) {
