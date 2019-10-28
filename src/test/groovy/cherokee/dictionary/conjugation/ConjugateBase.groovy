@@ -1,9 +1,11 @@
 package cherokee.dictionary.conjugation
 
+import cherokee.dictionary.hold.stem.DefinitionLine
+import cherokee.dictionary.verb.conjugation.originalConjugation.Conjugate
+import cherokee.dictionary.verb.conjugation.originalConjugation.Stemmer
+
 //import FinalSuffixProcessor
 //import PrefixProcessor
-import cherokee.dictionary.conjugation.stem.DefinitionLine
-import cherokee.dictionary.conjugation.cdpbook.Stemmer
 import com.cobradoc.cherokee.SyllabaryUtil
 
 /**
@@ -23,6 +25,8 @@ class ConjugateBase extends GroovyTestCase {
     static def takeABite = new Stemmer()
     static def tokill = new Stemmer()
     static def wearShoes = new Stemmer()
+    
+    static def uwanvga = new Stemmer()
 
     static {
         heWantsIt.habitual = new DefinitionLine(syllabary: "ᎤᏚᎵᏍᎪᎢ")
@@ -101,6 +105,13 @@ class ConjugateBase extends GroovyTestCase {
         wearShoes.present1st = new DefinitionLine(syllabary:  "ᏓᏆᎳᏑᏝ")
         wearShoes.present3rd = new DefinitionLine(syllabary: "ᏚᎳᏒᏝ")
         wearShoes.remotepast = new DefinitionLine(syllabary: "ᏚᎳᏑᏢᎢ")
+
+        uwanvga.present3rd = new DefinitionLine(syllabary: "ᎤᏩᏅᎦ")
+        uwanvga.habitual = new DefinitionLine(syllabary: "ᎤᏩᏅᎪᎢ")
+        uwanvga.imperative = new DefinitionLine(syllabary: "ᏨᏅᎩ")
+        uwanvga.infinitive = new DefinitionLine(syllabary: "ᎤᏩᏅᏍᏗ")
+        uwanvga.present1st = new DefinitionLine(syllabary:  "ᎠᏋᏅᎦ")
+        uwanvga.remotepast = new DefinitionLine(syllabary: "ᎤᏩᏅᎬᎢ")
     }
 
     def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){
