@@ -2,6 +2,8 @@ package cherokee.dictionary.conjugation
 
 import cherokee.dictionary.hold.stem.DefinitionLine
 import cherokee.dictionary.verb.conjugation.originalConjugation.Conjugate
+import cherokee.dictionary.verb.conjugation.originalConjugation.PrefixTableObject
+import cherokee.dictionary.verb.conjugation.originalConjugation.PrefixTableSubject
 import cherokee.dictionary.verb.conjugation.originalConjugation.Stemmer
 
 //import FinalSuffixProcessor
@@ -112,6 +114,11 @@ class ConjugateBase extends GroovyTestCase {
         uwanvga.infinitive = new DefinitionLine(syllabary: "ᎤᏩᏅᏍᏗ")
         uwanvga.present1st = new DefinitionLine(syllabary:  "ᎠᏋᏅᎦ")
         uwanvga.remotepast = new DefinitionLine(syllabary: "ᎤᏩᏅᎬᎢ")
+    }
+
+    def conj(PrefixTableSubject subject, PrefixTableObject object, Stemmer stemmer, String verbTense, String partofspeechc){
+        Conjugate conjugate = new Conjugate()
+        return conjugate.conjugate(subject.toString(), object.toString(), stemmer, verbTense, partofspeechc)
     }
 
     def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){
