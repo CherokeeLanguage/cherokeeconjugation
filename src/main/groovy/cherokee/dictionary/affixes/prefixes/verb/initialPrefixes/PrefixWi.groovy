@@ -2,6 +2,7 @@ package cherokee.dictionary.affixes.prefixes.verb.initialPrefixes
 
 import cherokee.dictionary.affixes.Affix
 import cherokee.dictionary.utils.StringUtility
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -9,7 +10,7 @@ class PrefixWi implements Affix {
     String wi;
 
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         if (word.initialPrefix.wi) {
             String data = word.pronounPrefixSyllabary + word.rootSyllabary
             baseReturnValue = baseReturnValue ?: data
@@ -33,7 +34,7 @@ class PrefixWi implements Affix {
     }
 
 
-    String toEnglish(String baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return null
     }
 

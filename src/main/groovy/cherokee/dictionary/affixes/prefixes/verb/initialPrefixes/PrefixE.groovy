@@ -1,6 +1,7 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialPrefixes
 
 import cherokee.dictionary.affixes.Affix
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 
 /*
@@ -21,7 +22,7 @@ form e- which occurs in imperative forms when not preceded by another prefix.
 class PrefixE implements Affix {
     String e;
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         if (word.initialPrefix.e) {
             def data = word.pronounPrefixSyllabary + word.verbRootSyllabary
             def de = word.initialPrefix.de
@@ -37,7 +38,7 @@ class PrefixE implements Affix {
     }
 
 
-    String toEnglish(String baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return ""
     }
 

@@ -63,8 +63,13 @@ class Verb extends Word {
      * @return
      */
     public String getWholeWordSyllabary() {
-        def tmp = verbNonFinalSuffixPhonetic + verbRootSuffixLatinPhonetic  + finalSuffix.getTrueValue()
-        return new SyllabaryUtil().tsalagiToSyllabary(wholePrefixLatin) + verbRootSyllabary + new SyllabaryUtil().tsalagiToSyllabary(tmp)
+        def tmp = (verbNonFinalSuffixPhonetic ?: "") + verbRootSuffixLatinPhonetic  + finalSuffix.getTrueValue()
+
+        println "wholePrefixLatin ${wholePrefixLatin}"
+        println "verbRootSyllabary ${verbRootSyllabary}"
+        println "tmp ${tmp}"
+
+        return new SyllabaryUtil().tsalagiToSyllabary(wholePrefixLatin ?: "") + verbRootSyllabary + new SyllabaryUtil().tsalagiToSyllabary(tmp)
     }
 }
 
@@ -128,7 +133,11 @@ class VerbInitialPrefixHolderObject extends HolderObjectBase {
     // mean that the awkward computerization transliteration of ᎠᏂ before consonants and Ꭰn before vowels requires a split into ᎠᏂ for syllabary and nothing in latin
     // but Ꭰ for syllabary and n for latin - which will provide morphemes and at times ellison for some prefix rules
 
-
+    public boolean allFalse() {
+        if (!yi && !ji &&!wi && !ni && !de && !da && !di && !i && !ga && !e) {
+            return true
+        }
+    }
 
     @Override
     public String toString() {

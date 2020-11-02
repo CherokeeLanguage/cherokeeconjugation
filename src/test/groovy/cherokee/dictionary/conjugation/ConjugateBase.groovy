@@ -25,6 +25,7 @@ class ConjugateBase extends GroovyTestCase {
     static def takeABite = new Stemmer()
     static def tokill = new Stemmer()
     static def wearShoes = new Stemmer()
+    static def tosee = new Stemmer()
     
     static def uwanvga = new Stemmer()
 
@@ -112,6 +113,13 @@ class ConjugateBase extends GroovyTestCase {
         uwanvga.infinitive = new DefinitionLine(syllabary: "ᎤᏩᏅᏍᏗ")
         uwanvga.present1st = new DefinitionLine(syllabary:  "ᎠᏋᏅᎦ")
         uwanvga.remotepast = new DefinitionLine(syllabary: "ᎤᏩᏅᎬᎢ")
+
+        tosee.present3rd = new DefinitionLine(syllabary: "ᎠᎪᏩᏘᎭ")
+        tosee.habitual = new DefinitionLine(syllabary: "ᎠᎪᏩᏘᏍᎪᎢ")
+        tosee.imperative = new DefinitionLine(syllabary: "ᎯᎪᏩᏔ")
+        tosee.infinitive = new DefinitionLine(syllabary: "ᎤᎪᏩᏛᏗ")
+        tosee.present1st = new DefinitionLine(syllabary:  "ᏥᎪᏩᏘᎭ")
+        tosee.remotepast = new DefinitionLine(syllabary: "ᎤᎪᎲᎢ")
     }
 
     def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){

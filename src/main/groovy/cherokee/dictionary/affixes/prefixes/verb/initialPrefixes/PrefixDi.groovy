@@ -3,13 +3,14 @@ package cherokee.dictionary.affixes.prefixes.verb.initialPrefixes
 import cherokee.dictionary.affixes.Affix
 import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 
 class PrefixDi implements Affix {
     String di;
 
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         if (word.initialPrefix.di) {
             def verbTense = word.tense
             String data = word.pronounPrefixSyllabary + word.verbRootSyllabary
@@ -39,7 +40,7 @@ class PrefixDi implements Affix {
     }
 
 
-    String toEnglish(String baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return null
     }
 

@@ -1,124 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6908055e-778c-43bb-989c-98dfd4076ee4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_cobradoc_jalagiTranslit_0_1_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/affixes/verb/initialPrefixes/PrefixETest.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_cobradoc_jalagiTranslit_0_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_lang3_3_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/AffixSplitterTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/NegativePrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/ParseCompoundPrefixes.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/PrefixInterpreter.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/PrefixRuleTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/RunOne.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/WNDPrefixBase.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/WNDPrefixGenerator.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hold/WNDPrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jalagiTranslit-0.1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/Conjugate.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/ConjugatedVerb.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/VerbConjugationProcessor.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/Affix.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/NonFinalSuffixHolderObject.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/PrefixHolderObject.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/SuffixHolderObject.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDa.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDe.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixDi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixE.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixGa.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixI.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixJi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixNi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixWi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/prefixes/PrefixYi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDan.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixDohdan.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixE.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixEl.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixG.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIdol.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIhi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixIlo.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/NonFinalSuffixOhn.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixA.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDina.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixDv.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixEsdi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixGwu.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixHv.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixI.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIdi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixIsi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixJu.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixKe.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixNa.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixOi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixSgo.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/affixes/suffixes/SuffixVi.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/cdpbook/Stemmer.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/cdpbook/Syllabary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/CompoundPrefix.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/CompoundPrefixes.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/Morphemes.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/PartOfSpeech.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/Prefix.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/PrefixTableObject.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/PrefixTableSubject.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/PronominalPrefix.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/Tense.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/VerbSet.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/VerbType.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/conjugate/Vowels.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/PronounProcessor.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/processors/VerbPrefixFactory.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/rules/PrefixRule.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/rules/RuleLaryngealAlteration.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/rules/RuleUW.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/rules/RulesProcessor.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/stem/VerbTenseHolder.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/util/StringUtility.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Affix.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation/wordFormation/Word.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/AffixSplitter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/DefinitionLine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/NormalizedVerbEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/PatternMatchReplacement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/StemEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cherokee/dictionary/conjugation/stem/StemType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/VRB.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/AddPronounPrefixesTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/addPrefixes/RemovePronounPrefixesTest.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/Affix.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/Affix.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDa.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDe.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDe.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixDi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixE.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixE.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixGa.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixGa.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixI.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixI.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixJi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixJi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixNi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixNi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixWi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixWi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixYi.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/prefixes/verb/initialPrefixes/PrefixYi.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/suffixes/verb/nonFinalSuffixes/NonFinalSuffixDan.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/affixes/suffixes/verb/nonFinalSuffixes/NonFinalSuffixDan.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/processors/verb/VerbAffixFactory.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/processors/verb/VerbAffixFactory.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/word/WholeWord.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/word/WholeWord.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugateBase.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugateBase.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugatePastTense.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugatePastTense.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugationInfinitiveTense.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugationInfinitiveTense.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/plurality/ShoesTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/prefixes/DePrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/prefixes/JiPrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/prefixes/WiPrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/prefixes/YiPrefixTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/teardownToRoot/TeardownVerbToRootTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/util/TestUtil.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/wordBreakdown/BreakdownTest.groovy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/groovy/hold.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugatePresentTense.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/cherokee/dictionary/conjugation/ConjugatePresentTense.groovy" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,21 +88,28 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
-  </component>
   <component name="ProjectId" id="1SpphyTXhuO4vi9JXwRMa6vTnVz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547428928275" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -183,19 +124,7 @@
       <recent name="$PROJECT_DIR$/src/main/groovy/cherokee/dictionary/conjugation" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Gradle.ConjugateUwanvga.testUwanvga">
+  <component name="RunManager" selected="Gradle.PrefixETest.testPrefixEStartsWithDe">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -208,18 +137,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConjugateUwanvga.testUwanvga" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConjugatePresentTense.testToSeePresentDL2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;cherokee.dictionary.conjugation.ConjugateUwanvga.testUwanvga&quot;" />
+        <option name="scriptParameters" value="--tests &quot;cherokee.dictionary.conjugation.ConjugatePresentTense.testToSeePresentDL2&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
             <option value=":test" />
           </list>
         </option>
@@ -228,64 +167,81 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="All in cherokee-conjugation_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cherokee-conjugation_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="PrefixETest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;cherokee.dictionary.affixes.verb.initialPrefixes.PrefixETest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="ConjugationInfinitiveTense.testHiwonihi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cherokee-conjugation_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cherokee.dictionary.conjugation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cherokee.dictionary.conjugation" />
-      <option name="MAIN_CLASS_NAME" value="cherokee.dictionary.conjugation.ConjugationInfinitiveTense" />
-      <option name="METHOD_NAME" value="testHiwonihi" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="PrefixETest.testPrefixENotStartsWithDe" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;cherokee.dictionary.affixes.verb.initialPrefixes.PrefixETest.testPrefixENotStartsWithDe&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="JiPrefixTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cherokee-conjugation_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cherokee.dictionary.prefixes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cherokee.dictionary.prefixes" />
-      <option name="MAIN_CLASS_NAME" value="cherokee.dictionary.prefixes.JiPrefixTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="PrefixETest.testPrefixEStartsWithDe" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;cherokee.dictionary.affixes.verb.initialPrefixes.PrefixETest.testPrefixEStartsWithDe&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="WiPrefixTest.testDativeBenefactiveSuffix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cherokee-conjugation_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cherokee.dictionary.prefixes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cherokee.dictionary.prefixes" />
-      <option name="MAIN_CLASS_NAME" value="cherokee.dictionary.prefixes.WiPrefixTest" />
-      <option name="METHOD_NAME" value="testDativeBenefactiveSuffix" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Tests in 'cherokee-conjugation.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -313,22 +269,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in cherokee-conjugation_test" />
-      <item itemvalue="JUnit.WiPrefixTest.testDativeBenefactiveSuffix" />
-      <item itemvalue="JUnit.JiPrefixTest" />
-      <item itemvalue="JUnit.ConjugationInfinitiveTense.testHiwonihi" />
-      <item itemvalue="Gradle.ConjugateUwanvga.testUwanvga" />
+      <item itemvalue="Gradle.Tests in 'cherokee-conjugation.test'" />
+      <item itemvalue="Gradle.PrefixETest.testPrefixENotStartsWithDe" />
+      <item itemvalue="Gradle.PrefixETest" />
+      <item itemvalue="Gradle.ConjugatePresentTense.testToSeePresentDL2" />
+      <item itemvalue="Gradle.PrefixETest.testPrefixEStartsWithDe" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ConjugateUwanvga.testUwanvga" />
-        <item itemvalue="JUnit.All in cherokee-conjugation_test" />
-        <item itemvalue="JUnit.ConjugationInfinitiveTense.testHiwonihi" />
-        <item itemvalue="JUnit.JiPrefixTest" />
-        <item itemvalue="JUnit.WiPrefixTest.testDativeBenefactiveSuffix" />
+        <item itemvalue="Gradle.PrefixETest.testPrefixEStartsWithDe" />
+        <item itemvalue="Gradle.Tests in 'cherokee-conjugation.test'" />
+        <item itemvalue="Gradle.PrefixETest.testPrefixENotStartsWithDe" />
+        <item itemvalue="Gradle.PrefixETest" />
+        <item itemvalue="Gradle.ConjugatePresentTense.testToSeePresentDL2" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -346,11 +303,12 @@
       <workItem from="1547346328252" duration="18651000" />
       <workItem from="1547479341609" duration="18926000" />
       <workItem from="1572270517308" duration="219000" />
+      <workItem from="1604338991955" duration="9029000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -362,6 +320,57 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="100" y="123" width="1720" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1604346500328">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="100" y="123" width="1720" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604346500328" />
+    <state x="617" y="123" width="1200" height="800" key="DiffContextDialog" timestamp="1604340440814">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="617" y="123" width="1200" height="800" key="DiffContextDialog/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604340440814" />
+    <state width="1878" height="391" key="GridCell.Tab.0.bottom" timestamp="1604348658029">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="391" key="GridCell.Tab.0.bottom/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604348658029" />
+    <state width="1878" height="391" key="GridCell.Tab.0.center" timestamp="1604348658028">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="391" key="GridCell.Tab.0.center/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604348658028" />
+    <state width="1878" height="391" key="GridCell.Tab.0.left" timestamp="1604348658028">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="391" key="GridCell.Tab.0.left/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604348658028" />
+    <state width="1878" height="391" key="GridCell.Tab.0.right" timestamp="1604348658028">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="391" key="GridCell.Tab.0.right/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604348658028" />
+    <state width="1878" height="558" key="GridCell.Tab.1.bottom" timestamp="1604347270671">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="558" key="GridCell.Tab.1.bottom/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604347270671" />
+    <state width="1878" height="558" key="GridCell.Tab.1.center" timestamp="1604347270669">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="558" key="GridCell.Tab.1.center/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604347270669" />
+    <state width="1878" height="558" key="GridCell.Tab.1.left" timestamp="1604347270669">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="558" key="GridCell.Tab.1.left/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604347270669" />
+    <state width="1878" height="558" key="GridCell.Tab.1.right" timestamp="1604347270670">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="558" key="GridCell.Tab.1.right/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604347270670" />
+    <state width="960" height="528" key="XDebugger.FullValuePopup" timestamp="1604344126541">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="960" height="528" key="XDebugger.FullValuePopup/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604344126541" />
+    <state x="909" y="155" width="755" height="735" key="find.popup" timestamp="1604345592634">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="909" y="155" width="755" height="735" key="find.popup/-1440.119.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1604345592634" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -397,6 +406,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cherokee_conjugation$Tests_in__cherokee_conjugation_test_.ic" NAME="Tests in 'cherokee-conjugation.test' Coverage Results" MODIFIED="1604339979051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="masterDetails">
     <states>

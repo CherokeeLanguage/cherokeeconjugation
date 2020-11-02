@@ -3,6 +3,7 @@ package cherokee.dictionary.affixes.suffixes.verb.nonFinalSuffixes
 import cherokee.dictionary.affixes.Affix
 import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 
 class NonFinalSuffixDan implements Affix {
@@ -12,7 +13,7 @@ class NonFinalSuffixDan implements Affix {
         return dan
     }
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         def nonFinalSuffix = ""
 
         if (word.nonFinalSuffix.dan) {
@@ -57,7 +58,7 @@ class NonFinalSuffixDan implements Affix {
         return nonFinalSuffix
     }
 
-    String toEnglish(String baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return null
     }
 }

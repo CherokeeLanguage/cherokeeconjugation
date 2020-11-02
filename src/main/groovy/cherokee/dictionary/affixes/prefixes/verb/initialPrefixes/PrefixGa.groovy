@@ -3,6 +3,7 @@ package cherokee.dictionary.affixes.prefixes.verb.initialPrefixes
 import cherokee.dictionary.affixes.Affix
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
 import cherokee.dictionary.utils.StringUtility
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 
 /**
@@ -11,7 +12,7 @@ import cherokee.dictionary.word.Word
 class PrefixGa implements Affix {
     String ga
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         if (word.initialPrefix.ga) {
             String data = word.pronounPrefixSyllabary + word.verbRootSyllabary
             baseReturnValue = baseReturnValue ?: data
@@ -32,7 +33,7 @@ class PrefixGa implements Affix {
         return baseReturnValue
     }
 
-    String toEnglish(String baseReturnValue, Word Word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return null
     }
 

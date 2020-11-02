@@ -12,6 +12,7 @@ import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixNi
 import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixWi
 import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixYi
 import cherokee.dictionary.affixes.suffixes.verb.nonFinalSuffixes.NonFinalSuffixDan
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -31,15 +32,16 @@ class VerbAffixFactory {
         initialPrefixes << new PrefixJi()
     }
 
-    public static void process(Word word) {
+    public static void process(Verb word) {
         if (!word.initialPrefix.allFalse()) {
+            println "inside all false"
             processInitialPrefixes(word)
         } else {
             word.wholePrefixLatin = word.pronounPrefixLatin
         }
 
         processNonFinalSuffixes(word)
-//        processFinalSuffixes(word)
+        processFinalSuffixes(word)
 
 //        word.verbRootSyllabary = str
         word.verbRootLatinPhonetic = word.verbRootSyllabary != null ? new SyllabaryUtil().parseSyllabary(word.verbRootSyllabary) : ""
@@ -62,10 +64,6 @@ class VerbAffixFactory {
             baseReturnValue = new PrefixGa().toSyllabary(null, word);
         }
 
-        if (pho.e) {
-            baseReturnValue = new PrefixE().toSyllabary(baseReturnValue, word);
-        }
-
         if (pho.i) {
             baseReturnValue = new PrefixI().toSyllabary(baseReturnValue, word);
         }
@@ -80,6 +78,10 @@ class VerbAffixFactory {
 
         if (pho.de) {
             baseReturnValue = new PrefixDe().toSyllabary(baseReturnValue, word);
+        }
+
+        if (pho.e) {
+            baseReturnValue = new PrefixE().toSyllabary(baseReturnValue, word);
         }
 
         if (pho.ni) {
@@ -102,9 +104,8 @@ class VerbAffixFactory {
             baseReturnValue = data;
         }
 
+        word.wholePrefixLatin = ""
         word.verbRootSyllabary = baseReturnValue
-
-//        return baseReturnValue
     }
 
     private static void processNonFinalSuffixes(Word word) {

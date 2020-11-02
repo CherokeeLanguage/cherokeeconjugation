@@ -2,13 +2,14 @@ package cherokee.dictionary.affixes.prefixes.verb.initialPrefixes
 
 import cherokee.dictionary.affixes.Affix
 import cherokee.dictionary.utils.StringUtility
+import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class PrefixJi implements Affix {
     String ji;
 
-    String toSyllabary(String baseReturnValue, Word word) {
+    String toSyllabary(String baseReturnValue, Verb word) {
         if (word.initialPrefix.ji) {
             String data = word.pronounPrefixSyllabary + word.verbRootSyllabary
             baseReturnValue = baseReturnValue ?: data
@@ -48,7 +49,7 @@ class PrefixJi implements Affix {
     }
 
 
-    String toEnglish(String baseReturnValue, Word word) {
+    String toEnglish(String baseReturnValue, Verb word) {
         return null
     }
 
