@@ -15,14 +15,14 @@ import com.cobradoc.cherokee.SyllabaryUtil
 class PrefixJiTest extends ConjugateBase {
     private Verb generateBaseVerb() {
         Verb verb = new Verb()
-//        verb.verbSubject = VerbPrefixTableSubject.SG3
-//        verb.verbObject = VerbPrefixTableObject.SG2
-//        verb.tense = Tense.PRESENT
+        verb.verbSubject = VerbPrefixTableSubject.SG3
+        verb.verbObject = VerbPrefixTableObject.SG2
+        verb.tense = Tense.PRESENT
         verb.verbRootLatinPhonetic = "woni"
         verb.verbRootSuffixLatinPhonetic = "h"
-        verb.finalSuffix.with {a = true}
+        verb.finalSuffix.a = true
         verb.initialPrefix.e = false
-//        verb.pronounPrefixLatin = "hi"
+        verb.pronounPrefixLatin = "hi"
         verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
         verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 
@@ -34,7 +34,7 @@ class PrefixJiTest extends ConjugateBase {
         Verb verb = generateBaseVerb()
         VerbAffixFactory.process(verb)
 
-        assertEquals("ᎯᏬᏂᎯ", verb.getWholeWordSyllabary())
+        assertEquals("ᎯᏬᏂᎭ", verb.getWholeWordSyllabary())
 //        hiwoniha
     }
 
@@ -43,6 +43,8 @@ class PrefixJiTest extends ConjugateBase {
         Verb verb = conjugate.conjugateToVerbObject("SG3", "SG3IN", hiwoniha, Tense.REMOTE_PAST.toString(), PartOfSpeech.VERB_INTRANSITIVE.toString())
 
         VerbAffixFactory.process(verb)
+
+        assertTrue(true)
 
         println verb.toString()
 
