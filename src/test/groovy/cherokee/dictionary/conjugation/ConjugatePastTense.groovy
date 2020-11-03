@@ -1,13 +1,13 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.verb.conjugation.originalConjugation.Conjugate
+import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
 import cherokee.dictionary.hold.stem.DefinitionLine
-import cherokee.dictionary.verb.conjugation.originalConjugation.Stemmer
+import cherokee.dictionary.verb.conjugation.originalconjugation.Stemmer
 
 class ConjugatePastTense extends ConjugateBase {
     static def heSeesIt = new Stemmer()
 
-    static def DNM = "FAILURE DID NOT MATCH"
+    static def dnm = "FAILURE DID NOT MATCH"
     static {
         heSeesIt.habitual = new DefinitionLine(syllabary: "ᎠᎪᏩᏘᏍᎪᎢ")
         heSeesIt.imperative = new DefinitionLine(syllabary: "ᎯᎪᏩᏔ")

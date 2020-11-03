@@ -3,11 +3,8 @@ package cherokee.dictionary.word
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
 import cherokee.dictionary.utils.PartOfSpeech
-import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import com.cobradoc.cherokee.SyllabaryUtil
-import com.sun.org.apache.bcel.internal.generic.FieldObserver
-
-import javax.xml.ws.Holder
 
 class WholeWord {
 }
@@ -64,12 +61,33 @@ class Verb extends Word {
      */
     public String getWholeWordSyllabary() {
         def tmp = (verbNonFinalSuffixPhonetic ?: "") + verbRootSuffixLatinPhonetic  + finalSuffix.getTrueValue()
-
-        println "wholePrefixLatin ${wholePrefixLatin}"
-        println "verbRootSyllabary ${verbRootSyllabary}"
-        println "tmp ${tmp}"
-
         return new SyllabaryUtil().tsalagiToSyllabary(wholePrefixLatin ?: "") + verbRootSyllabary + new SyllabaryUtil().tsalagiToSyllabary(tmp)
+    }
+
+
+    @Override
+    public String toString() {
+        return "Verb{" +
+                "verbSubject=" + verbSubject +
+                ", \nverbObject=" + verbObject +
+                ", \ninitialPrefix=" + initialPrefix +
+                ", \ninitialPrefixSyllabary='" + initialPrefixSyllabary + '\'' +
+                ", \ninitialPrefixLatin='" + initialPrefixLatin + '\'' +
+                ", \npronounPrefixSyllabary='" + pronounPrefixSyllabary + '\'' +
+                ", \npronounPrefixLatin='" + pronounPrefixLatin + '\'' +
+                ", \nwholePrefixSyllabary='" + wholePrefixSyllabary + '\'' +
+                ", \n wholePrefixLatin='" + wholePrefixLatin + '\'' +
+                ", \n verbRootLatinPhonetic='" + verbRootLatinPhonetic + '\'' +
+                ", \n verbRootSyllabary='" + verbRootSyllabary + '\'' +
+                ", \n verbRootSuffixLatinPhonetic='" + verbRootSuffixLatinPhonetic + '\'' +
+                ", \n verbNonFinalSuffixPhonetic='" + verbNonFinalSuffixPhonetic + '\'' +
+                ", \n verbNonFinalSuffixSyllabary='" + verbNonFinalSuffixSyllabary + '\'' +
+                ", \n nonFinalSuffix=" + nonFinalSuffix +
+                ", \n finalSuffix=" + finalSuffix +
+                ", \n tense=" + tense +
+                ", \n wholeVerbSyll='" + wholeVerbSyll + '\'' +
+                ", \n wholeVerbLatinPhonetic='" + wholeVerbLatinPhonetic + '\'' +
+                '}';
     }
 }
 

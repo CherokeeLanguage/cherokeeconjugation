@@ -1,6 +1,6 @@
 package cherokee.dictionary.affixes.prefixes.verb
 
-import cherokee.dictionary.verb.conjugation.originalConjugation.Prefix
+import cherokee.dictionary.verb.conjugation.originalconjugation.Prefix
 
 /**
  * Created by torr on 8/17/2015.

@@ -1,6 +1,6 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 
 
 class ConjugationInfinitiveTense extends ConjugateBase {

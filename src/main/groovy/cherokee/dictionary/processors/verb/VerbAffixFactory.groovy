@@ -1,41 +1,40 @@
 package cherokee.dictionary.processors.verb
 
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixDa
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixDe
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixDi
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixE
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixGa
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixI
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixJi
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixNi
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixWi
-import cherokee.dictionary.affixes.prefixes.verb.initialPrefixes.PrefixYi
-import cherokee.dictionary.affixes.suffixes.verb.nonFinalSuffixes.NonFinalSuffixDan
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixDa
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixDe
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixDi
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixE
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixGa
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixI
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixJi
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixNi
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixWi
+import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixYi
+import cherokee.dictionary.affixes.suffixes.verb.nonfinalsuffixes.NonFinalSuffixDan
 import cherokee.dictionary.word.Verb
 import cherokee.dictionary.word.Word
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class VerbAffixFactory {
-    private static LinkedList<Affix> initialPrefixes = new LinkedList<Affix>();
+    private static LinkedList<Affix> initialprefixes = new LinkedList<Affix>();
 
     static {
-        initialPrefixes << new PrefixGa()
-        initialPrefixes << new PrefixE()
-        initialPrefixes << new PrefixI()
-        initialPrefixes << new PrefixDi()
-        initialPrefixes << new PrefixDa()
-        initialPrefixes << new PrefixDe()
-        initialPrefixes << new PrefixNi()
-        initialPrefixes << new PrefixWi()
-        initialPrefixes << new PrefixYi()
-        initialPrefixes << new PrefixJi()
+        initialprefixes << new PrefixGa()
+        initialprefixes << new PrefixE()
+        initialprefixes << new PrefixI()
+        initialprefixes << new PrefixDi()
+        initialprefixes << new PrefixDa()
+        initialprefixes << new PrefixDe()
+        initialprefixes << new PrefixNi()
+        initialprefixes << new PrefixWi()
+        initialprefixes << new PrefixYi()
+        initialprefixes << new PrefixJi()
     }
 
     public static void process(Verb word) {
         if (!word.initialPrefix.allFalse()) {
-            println "inside all false"
-            processInitialPrefixes(word)
+            processinitialprefixes(word)
         } else {
             word.wholePrefixLatin = word.pronounPrefixLatin
         }
@@ -43,18 +42,17 @@ class VerbAffixFactory {
         processNonFinalSuffixes(word)
         processFinalSuffixes(word)
 
-//        word.verbRootSyllabary = str
         word.verbRootLatinPhonetic = word.verbRootSyllabary != null ? new SyllabaryUtil().parseSyllabary(word.verbRootSyllabary) : ""
     }
 
-    public static void processInitialPrefixes(word) {
+    public static void processinitialprefixes(word) {
         def baseReturnValue = null;
         def data = word.verbRootSyllabary
         def pho = word.initialPrefix
 
         //TODO: Figure out why return is null when it should be something else
         //      this is how I want the prefixes to all be run
-//        initialPrefixes.each {
+//        initialprefixes.each {
 //            println it.getClass()
 //            baseReturnValue = it.toSyllabary(baseReturnValue, word)
 //            println baseReturnValue

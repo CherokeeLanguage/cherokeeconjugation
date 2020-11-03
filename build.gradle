@@ -8,7 +8,7 @@
 */
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 apply plugin: 'codenarc'
 apply plugin: 'java'
 
@@ -29,8 +29,6 @@ repositories {
 }
 
 dependencies {
-
-
     compile 'junit:junit:4.11'
     compile 'org.codehaus.groovy:groovy-all:2.4.0'
     compile 'com.cobradoc:jalagiTranslit:0.1.4'

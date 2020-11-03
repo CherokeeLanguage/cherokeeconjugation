@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.iml" group="cherokee-conjugation" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_main.iml" group="cherokee-conjugation" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/cherokee-conjugation_test.iml" group="cherokee-conjugation" />
     </modules>
   </component>
 </project>

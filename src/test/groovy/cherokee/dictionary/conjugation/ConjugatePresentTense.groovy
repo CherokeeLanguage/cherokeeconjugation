@@ -3,7 +3,7 @@ package cherokee.dictionary.conjugation
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
 import cherokee.dictionary.processors.verb.VerbAffixFactory
-import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 

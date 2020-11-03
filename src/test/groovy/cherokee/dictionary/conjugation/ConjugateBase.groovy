@@ -1,8 +1,10 @@
 package cherokee.dictionary.conjugation
 
 import cherokee.dictionary.hold.stem.DefinitionLine
-import cherokee.dictionary.verb.conjugation.originalConjugation.Conjugate
-import cherokee.dictionary.verb.conjugation.originalConjugation.Stemmer
+import cherokee.dictionary.utils.PartOfSpeech
+import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
+import cherokee.dictionary.verb.conjugation.originalconjugation.Stemmer
+import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 
 //import FinalSuffixProcessor
 //import PrefixProcessor
@@ -122,7 +124,11 @@ class ConjugateBase extends GroovyTestCase {
         tosee.remotepast = new DefinitionLine(syllabary: "ᎤᎪᎲᎢ")
     }
 
-    def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){
+    static def conj(String subject, String object, Stemmer stemmer, Tense verbTense, PartOfSpeech partofspeechc){
+        return conj(subject, object, stemmer, verbTense.toString(), partofspeechc.toString())
+    }
+
+    static def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){
         Conjugate conjugate = new Conjugate()
         return conjugate.conjugate(subject, object, stemmer, verbTense, partofspeechc)
     }

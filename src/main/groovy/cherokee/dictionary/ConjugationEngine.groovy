@@ -1,10 +1,10 @@
 package cherokee.dictionary
 
-import cherokee.dictionary.verb.conjugation.originalConjugation.Conjugate
+import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
 
 import cherokee.dictionary.utils.PartOfSpeech
-import cherokee.dictionary.verb.conjugation.originalConjugation.Stemmer
-import cherokee.dictionary.verb.conjugation.originalConjugation.VerbType
+import cherokee.dictionary.verb.conjugation.originalconjugation.Stemmer
+import cherokee.dictionary.verb.conjugation.originalconjugation.VerbType
 
 class ConjugationEngine {
     public static conjugate(String text, PartOfSpeech partOfSpeech, Stemmer stemmer, String subject, String object, String tense) {

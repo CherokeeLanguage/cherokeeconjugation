@@ -2,8 +2,8 @@ package cherokee.dictionary.word.prefixes
 
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
 import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
-import cherokee.dictionary.testUtils.BaseTest
-import cherokee.dictionary.verb.conjugation.originalConjugation.Tense
+import cherokee.dictionary.testutils.BaseTest
+import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 

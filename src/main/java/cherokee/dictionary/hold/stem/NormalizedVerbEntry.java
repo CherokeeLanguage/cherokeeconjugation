@@ -13,6 +13,7 @@ public class NormalizedVerbEntry {
 	public String habit;
 	public String imp;
 	public String inf;
+
 	public List<String> getEntries(){
 		List<String> list = new ArrayList<String>();
 		list.add(pres3);
@@ -23,6 +24,7 @@ public class NormalizedVerbEntry {
 		list.add(inf);
 		return list;
 	}
+
 	public static void removeDirectObject(NormalizedVerbEntry e) {
 		String object = StringUtils.getCommonPrefix(e.pres3, e.past, e.imp);
 		if (StringUtils.isBlank(object)) {
