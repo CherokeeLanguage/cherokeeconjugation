@@ -1,8 +1,8 @@
 package cherokee.dictionary.conjugation
 
+import cherokee.conjugation.stemming.DefinitionLine
+import cherokee.conjugation.stemming.Stemmer
 import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
-import cherokee.dictionary.hold.stem.DefinitionLine
-import cherokee.dictionary.verb.conjugation.originalconjugation.Stemmer
 
 class ConjugatePastTense extends ConjugateBase {
     static def heSeesIt = new Stemmer()

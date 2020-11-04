@@ -1,10 +1,10 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.hold.stem.DefinitionLine
-import cherokee.dictionary.utils.PartOfSpeech
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.stemming.DefinitionLine
+import cherokee.conjugation.stemming.Stemmer
+import cherokee.conjugation.util.PartOfSpeech
 import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
-import cherokee.dictionary.verb.conjugation.originalconjugation.Stemmer
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 
 //import FinalSuffixProcessor
 //import PrefixProcessor
@@ -14,7 +14,7 @@ import com.cobradoc.cherokee.SyllabaryUtil
  * Created by torr on 8/28/2015.
  */
 class ConjugateBase extends GroovyTestCase {
-    static def su = new SyllabaryUtil();
+    static def su = SyllabaryUtil;
 
     static def heWantsIt = new Stemmer()
     static def hiwoniha = new Stemmer()
@@ -163,7 +163,7 @@ class ConjugateBase extends GroovyTestCase {
 //
 //    public static HolderWord processHolderWord(original, assertion) {
 //        HolderWord hw = new HolderWord()
-//        def su = new SyllabaryUtil()
+//        def su = SyllabaryUtil
 //        hw.syllabary = original
 //        FinalSuffixProcessor.removeFinalSuffix(hw)
 //        PrefixProcessor.removeAllPrefixes(hw)

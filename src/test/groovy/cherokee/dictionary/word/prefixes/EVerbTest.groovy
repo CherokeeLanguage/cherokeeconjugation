@@ -1,16 +1,15 @@
 package cherokee.dictionary.word.prefixes
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.testutils.BaseTest
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
 //these tests are only to check the prefix pieces and not the verb conjugation itself
 //pp 255-256 Durbin Feeling Dictionary
 class EVerbTest extends BaseTest {
-
     public void atestVerbE() {
         Verb verb = new Verb()
         verb.verbSubject = VerbPrefixTableSubject.SG1
@@ -22,16 +21,16 @@ class EVerbTest extends BaseTest {
         verb.finalSuffix.with {a = true}
 
         verb.pronounPrefixLatin = "sdi"
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("esdigowatiha"))
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("esdigowatiha"))
 
         verb.initialPrefix.with {e = true; de = true}
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "sdi"
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("dodisdigowatiha"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("dodisdigowatiha"))
     }
 }

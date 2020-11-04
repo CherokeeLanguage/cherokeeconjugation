@@ -1,8 +1,8 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.utils.StringUtility
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -28,7 +28,7 @@ class PrefixDe implements Affix {
 //        /de = do before di- prefix
 //        Feeling Dictionary
 
-            def latin = new SyllabaryUtil().parseSyllabary(data)
+            def latin = SyllabaryUtil.parseSyllabary(data)
             def startsWithH = latin.startsWith('h')
             baseReturnValue = baseReturnValue ?: data
 
@@ -64,7 +64,7 @@ class PrefixDe implements Affix {
 
                 if (baseReturnValue.startsWith("Ꮧ")) {
                     if (startsWithH) {
-                        baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary('t' + latin.substring(1))
+                        baseReturnValue = SyllabaryUtil.tsalagiToSyllabary('t' + latin.substring(1))
                     }
                 }
             }

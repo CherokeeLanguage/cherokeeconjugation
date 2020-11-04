@@ -1,7 +1,7 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.word.Verb
 
 class PrefixNi implements Affix {

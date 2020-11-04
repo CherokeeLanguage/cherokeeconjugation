@@ -42,7 +42,7 @@ class VerbAffixFactory {
         processNonFinalSuffixes(word)
         processFinalSuffixes(word)
 
-        word.verbRootLatinPhonetic = word.verbRootSyllabary != null ? new SyllabaryUtil().parseSyllabary(word.verbRootSyllabary) : ""
+        word.verbRootLatinPhonetic = word.verbRootSyllabary != null ? SyllabaryUtil.parseSyllabary(word.verbRootSyllabary) : ""
     }
 
     public static void processinitialprefixes(word) {

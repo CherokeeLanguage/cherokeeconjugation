@@ -1,9 +1,15 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
-import cherokee.dictionary.utils.Morphemes
-import cherokee.dictionary.utils.PartOfSpeech
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
+import cherokee.conjugation.constants.VerbSet
+import cherokee.conjugation.constants.VerbType
+import cherokee.conjugation.stemming.Stemmer
+import cherokee.conjugation.util.Morphemes
+import cherokee.conjugation.verbal.CompoundPrefix
+import cherokee.conjugation.verbal.CompoundPrefixes
+import cherokee.conjugation.verbal.Prefix
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleLaryngealAlteration
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleUW
 import cherokee.dictionary.word.Verb
@@ -23,10 +29,10 @@ class VerbConjugationProcessor {
     }
 
     static def processPrefixes(//final PronominalPrefix pref,
-                        final CompoundPrefix pref,
-                        final VerbSet verbset,
-                        final Tense tense,
-                        String it ) {
+                               final CompoundPrefix pref,
+                               final VerbSet verbset,
+                               final Tense tense,
+                               String it ) {
         def returnPrefix = "";
 
         def vs = verbset == VerbSet.A ? "" : "B"
@@ -103,14 +109,12 @@ class VerbConjugationProcessor {
         return returnValue
     }
 
-
-
     //returns a String object of the entire verb conjugated with pronoun prefix
     static def process(final String subject,
-                String object,
-                final Stemmer stemmer,
-                final String tense,
-                final VerbType verbType) {
+                       String object,
+                       final Stemmer stemmer,
+                       final String tense,
+                       final VerbType verbType) {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: stemmer)
         vth.process()
         def verbTense = Tense.valueOf(tense);

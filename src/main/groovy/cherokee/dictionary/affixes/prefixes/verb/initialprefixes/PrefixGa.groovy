@@ -1,8 +1,8 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
+import cherokee.conjugation.constants.VerbPrefixTableSubject
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
-import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.word.Verb
 
 /**

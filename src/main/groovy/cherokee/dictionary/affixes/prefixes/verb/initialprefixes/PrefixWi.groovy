@@ -1,7 +1,7 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -14,11 +14,11 @@ class PrefixWi implements Affix {
             String data = word.pronounPrefixSyllabary + word.rootSyllabary
             baseReturnValue = baseReturnValue ?: data
 
-            def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
+            def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
             def startsWithH = latin.startsWith('h')
             if (startsWithH) {
                 latin = latin.substring(1)
-                baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary(latin)
+                baseReturnValue = SyllabaryUtil.tsalagiToSyllabary(latin)
             }
             def charAtZero = baseReturnValue.charAt(0)
 

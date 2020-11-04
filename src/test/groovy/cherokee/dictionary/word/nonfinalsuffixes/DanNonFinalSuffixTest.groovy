@@ -1,9 +1,9 @@
 package cherokee.dictionary.word.nonfinalsuffixes
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.testutils.BaseTest
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -24,9 +24,9 @@ class DanNonFinalSuffixTest extends BaseTest {
         verb.finalSuffix.with {ei = true}
         verb.nonFinalSuffix.with {dan = true}
         verb.pronounPrefixLatin = "u"
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("uwonihisdanelei"))
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("uwonihisdanelei"))
 
         //DF pp 284 #24
         //dis before g
@@ -36,20 +36,20 @@ class DanNonFinalSuffixTest extends BaseTest {
         verb.pronounPrefixLatin = "ga"
         verb.verbRootSuffixLatinPhonetic = "g"
         verb.finalSuffix.with {vi = true;ei = false}
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gawonihisdisgvi"))
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gawonihisdisgvi"))
 
         //DF pp284 - made up
         //present tense changes dis before g to dih and removes the g
         verb.tense = Tense.PRESENT
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gawonihisdihvi"))
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gawonihisdihvi"))
 
         //DF pp 284 #25
         verb.tense = Tense.PRESENT
         //TODO: I don't understand the suffix being /g/ when it should be /h/ anyway
         verb.verbRootSuffixLatinPhonetic = "g"
         verb.finalSuffix.with {vi = false; a = true}
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gawonihisdiha"))
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gawonihisdiha"))
     }
 }

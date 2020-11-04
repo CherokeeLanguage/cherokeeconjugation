@@ -1,9 +1,9 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.processors.verb.VerbAffixFactory
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -202,8 +202,6 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3IN", tokill, verbTense, partofspeechc)
     }
 
-
-
     public void testToSeePresentDL2() {
         //sdigowatiha -- CED pp256 #128
         assertTrue "ᏍᏗᎪᏩᏘᎭ" == conj("SG3", "DL2", tosee, "PRESENT", "v.t.")
@@ -216,10 +214,10 @@ class ConjugatePresentTense extends ConjugateBase {
         verb.verbRootSuffixLatinPhonetic = "h"
         verb.finalSuffix.with {a = true}
         verb.pronounPrefixLatin = "sdi"
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 
         VerbAffixFactory.process(verb)
-        assertEquals(new SyllabaryUtil().tsalagiToSyllabary("sdigowatiha"), verb.getWholeWordSyllabary())
+        assertEquals(SyllabaryUtil.tsalagiToSyllabary("sdigowatiha"), verb.getWholeWordSyllabary())
     }
 }

@@ -1,6 +1,6 @@
 package cherokee.dictionary.conjugation
 
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
+import cherokee.conjugation.constants.Tense
 
 class ConjugateUwanvga extends ConjugateBase {
     public void testUwanvga() {

@@ -1,9 +1,10 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation.rules
 
-import cherokee.dictionary.verb.conjugation.originalconjugation.PrefixTableObject
-import cherokee.dictionary.verb.conjugation.originalconjugation.PrefixTableSubject
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
-import cherokee.dictionary.verb.conjugation.originalconjugation.VerbSet
+import cherokee.conjugation.constants.PrefixTableObject
+import cherokee.conjugation.constants.PrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbSet
+
 
 /**
  * Created by torr on 8/30/2015.

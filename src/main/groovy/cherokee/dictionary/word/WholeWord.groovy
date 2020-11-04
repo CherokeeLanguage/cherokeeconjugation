@@ -1,9 +1,9 @@
 package cherokee.dictionary.word
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
-import cherokee.dictionary.utils.PartOfSpeech
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
+import cherokee.conjugation.util.PartOfSpeech
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class WholeWord {
@@ -52,7 +52,7 @@ class Verb extends Word {
      * @return
      */
     public String getWholeWordPhonetic() {
-        return new SyllabaryUtil().parseSyllabary(getWholeWordSyllabary())
+        return SyllabaryUtil.parseSyllabary(getWholeWordSyllabary())
     }
 
     /**
@@ -61,7 +61,7 @@ class Verb extends Word {
      */
     public String getWholeWordSyllabary() {
         def tmp = (verbNonFinalSuffixPhonetic ?: "") + verbRootSuffixLatinPhonetic  + finalSuffix.getTrueValue()
-        return new SyllabaryUtil().tsalagiToSyllabary(wholePrefixLatin ?: "") + verbRootSyllabary + new SyllabaryUtil().tsalagiToSyllabary(tmp)
+        return SyllabaryUtil.tsalagiToSyllabary(wholePrefixLatin ?: "") + verbRootSyllabary + SyllabaryUtil.tsalagiToSyllabary(tmp)
     }
 
 

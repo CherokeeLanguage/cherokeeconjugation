@@ -1,12 +1,12 @@
 package cherokee.dictionary.hold.stem;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Logger;
+//import java.util.ArrayList;
+//import java.util.Comparator;
+//import java.util.HashMap;
+//import java.util.Iterator;
+//import java.util.List;
+//import java.util.Map;
+//import java.util.logging.Logger;
 
 //import com.cherokeelessons.dict.client.ConsoleLogHandler2;
 //import com.cherokeelessons.dict.shared.Log;
@@ -15,11 +15,10 @@ import java.util.logging.Logger;
 
 //import commons.lang3.StringUtils;
 
-import cherokee.dictionary.hold.stem.Syllabary.Vowel;
-import org.apache.commons.lang3.StringUtils;
+//import org.apache.commons.lang3.StringUtils;
 
 public abstract class Affix {
-
+/*
 //    protected final Logger logger = Log.getGwtLogger(new ConsoleLogHandler2(), this.getClass().getSimpleName());
 
     protected boolean completiveStem = true;
@@ -655,5 +654,5 @@ public abstract class Affix {
             addSet("Ꭰ", "ᏕᎢ");
             addSet("Ꭰ", "ᏕᏍᏗ");
         }
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 package cherokee.dictionary.util
 
-import cherokee.dictionary.utils.Morphemes
+import cherokee.conjugation.util.Morphemes
 
 class MorphemeTest extends GroovyTestCase {
     public void testMorphemeG() {

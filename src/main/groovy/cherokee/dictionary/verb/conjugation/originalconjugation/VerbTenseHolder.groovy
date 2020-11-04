@@ -1,6 +1,6 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation
 
-import cherokee.dictionary.hold.stem.StemType
+import cherokee.conjugation.constants.Tense
 
 /**
  * Created by torr on 8/16/2015.
@@ -25,7 +25,7 @@ class VerbTenseHolder {
      * TODO: do checks to make sure these have values before we start crapping things up -- timo 16Aug15
      */
     public void process() {
-//        def su = new SyllabaryUtil()
+//        def su = SyllabaryUtil
 
 //        infinitive = su.parseSyllabary(stemmer.infinitive.syllabary.substring(1))
 //        println stemmer.infinitive.syllabary.substring(1)
@@ -33,23 +33,23 @@ class VerbTenseHolder {
 
         stemmer.getStems().each {
             switch (it.stemtype) {
-                case StemType.PresentContinous:
+                case Tense.PRESENT:
 //                    present = su.parseSyllabary(it.syllabary)
                     present = it.syllabary
                     break;
-                case StemType.Habitual:
+                case Tense.HABITUAL:
 //                    habitual = su.parseSyllabary(it.syllabary)
                     habitual = it.syllabary
                     break;
-                case StemType.Immediate:
+                case Tense.IMMEDIATE_COMMAND:
 //                    immediate = su.parseSyllabary(it.syllabary)
                     immediate = it.syllabary
                     break;
-                case StemType.Deverbal:
+                case Tense.DEVERBAL:
 //                    deverbal = su.parseSyllabary(it.syllabary)
                     deverbal = it.syllabary
                     break;
-                case StemType.RemotePast:
+                case Tense.REMOTE_PAST:
 //                    remotePast = su.parseSyllabary(it.syllabary)
                     remotePast = it.syllabary
                     break;

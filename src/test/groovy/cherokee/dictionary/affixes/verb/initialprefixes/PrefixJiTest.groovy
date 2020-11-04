@@ -1,14 +1,12 @@
 package cherokee.dictionary.affixes.verb.initialprefixes
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
+import cherokee.conjugation.util.PartOfSpeech
 import cherokee.dictionary.conjugation.ConjugateBase
-import cherokee.dictionary.hold.stem.AffixSplitter
-import cherokee.dictionary.hold.stem.StemType
 import cherokee.dictionary.processors.verb.VerbAffixFactory
-import cherokee.dictionary.utils.PartOfSpeech
 import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -23,8 +21,8 @@ class PrefixJiTest extends ConjugateBase {
         verb.finalSuffix.a = true
         verb.initialPrefix.e = false
         verb.pronounPrefixLatin = "hi"
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 
         return verb
     }

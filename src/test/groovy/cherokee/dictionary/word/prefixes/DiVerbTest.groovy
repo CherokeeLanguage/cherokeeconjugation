@@ -1,9 +1,9 @@
 package cherokee.dictionary.word.prefixes
 
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableObject
-import cherokee.dictionary.affixes.prefixes.verb.VerbPrefixTableSubject
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.testutils.BaseTest
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -22,60 +22,60 @@ class DiVerbTest extends BaseTest {
 //        verb.finalSuffix.a = true// {a = true}
         verb.finalSuffix.with {a = true}
         verb.pronounPrefixLatin = "ga"
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("digawoniha"))
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("digawoniha"))
 
         verb.verbRootLatinPhonetic = "go"
         verb.pronounPrefixLatin = "u"
         verb.finalSuffix.with {a = false;ei = true}
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("jugohei"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("jugohei"))
 
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "a"
         verb.finalSuffix.with {a = true;ei = false}
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("digowatiha"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("digowatiha"))
 
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "iji"
         verb.finalSuffix.with {a = true;ei = false}
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("dijigowatiha"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("dijigowatiha"))
 
         verb.verbRootLatinPhonetic = "go"
         verb.pronounPrefixLatin = "u"
         verb.finalSuffix.with {a = true;vi = false}
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("dayugohvi"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("dayugohvi"))
 
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "u"
         verb.finalSuffix.with {a = false; vi = true}
         verb.verbRootSuffixLatinPhonetic = "sg"
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("dvgowatisgvi"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("dvgowatisgvi"))
 
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "ini"
         verb.finalSuffix.with {a = false;vi = true}
         verb.verbRootSuffixLatinPhonetic = "sg"
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("danigowatisgvi"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("danigowatisgvi"))
 
         verb.verbRootLatinPhonetic = "gowati"
         verb.pronounPrefixLatin = "ini"
         verb.finalSuffix.with {a = true;vi = false; di = true}
         verb.verbRootSuffixLatinPhonetic = "tv"
-        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("nidayugowatvdi"))
+        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("nidayugowatvdi"))
     }
 }

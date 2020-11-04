@@ -10,7 +10,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 public class AffixSplitter extends Thread {
-
+/*
     private static final List<PatternMatchReplacement> pronouns;
     private static final String pronoun_splitter;
     private static final String[] pronoun_matches;
@@ -368,54 +368,54 @@ public class AffixSplitter extends Thread {
         matches.add(p);
         addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
         p = new PatternMatchReplacement();
         p.regex_match = "[ᎦᎨᎪᎫᎬ]";
         p.match = new String[] {"Ꭶ==", "Ꭸ==", "Ꭺ==", "Ꭻ==", "Ꭼ=="};
         p.replacement  = new String[] {"Ꭶ= ", "Ꭶ= Ꭱ", "Ꭶ= Ꭳ", "Ꭶ= Ꭴ", "Ꭶ= Ꭵ"};
         addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
         p = new PatternMatchReplacement();
         p.regex_match = "Ꭰ";
         p.match = new String[] {"Ꭰ=="};
         p.replacement  = new String[] {" Ꭰ"};
         addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
         p = new PatternMatchReplacement();
         p.regex_match = "Ꭱ";
         p.match = new String[] {"Ꭱ=="};
         p.replacement  = new String[] {" Ꭱ"};
         addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
 //		p = new PatternMatchReplacement();
 //		p.regex_match = "Ꭲ";
 //		p.match = new String[] {"Ꭲ=="};
 //		p.replacement  = new String[] {" "};
 //		addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
         p = new PatternMatchReplacement();
         p.regex_match = "Ꭳ";
         p.match = new String[] {"Ꭳ=="};
         p.replacement  = new String[] {" Ꭳ"};
         addCommonPrepronounPermutations(matches, p);
 
-		/*
+		*//*
 		 * only adding permutations, the bare matcher has too many false positives
-		 */
+		 *//*
         p = new PatternMatchReplacement();
         p.regex_match = "Ꭵ";
         p.match = new String[] {"Ꭵ=="};
@@ -830,5 +830,5 @@ public class AffixSplitter extends Thread {
         line = line.replaceAll("([Ꭰ-Ᏼ]{2,})Ᏹ\\b", "$1 =Ᏹ");
         line = line.replaceAll("([Ꭰ-Ᏼ]{2,})Ᏻ\\b", "$1 =Ᏻ");
         return line;
-    }
+    }*/
 }

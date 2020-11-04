@@ -1,7 +1,7 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.utils.StringUtility
 import cherokee.dictionary.word.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
@@ -12,7 +12,7 @@ class PrefixJi implements Affix {
         if (word.initialPrefix.ji) {
             String data = word.pronounPrefixSyllabary + word.verbRootSyllabary
             baseReturnValue = baseReturnValue ?: data
-            def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
+            def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
 
             //check for past tense word.tense =
             //j- cannot be used when reportative past tense suffix ei is used

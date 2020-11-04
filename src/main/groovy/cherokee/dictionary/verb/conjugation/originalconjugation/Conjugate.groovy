@@ -1,5 +1,9 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation
 
+import cherokee.conjugation.constants.VerbType
+import cherokee.conjugation.stemming.Stemmer
+
+
 /**
  * Created by torr on 8/20/2015.
  */

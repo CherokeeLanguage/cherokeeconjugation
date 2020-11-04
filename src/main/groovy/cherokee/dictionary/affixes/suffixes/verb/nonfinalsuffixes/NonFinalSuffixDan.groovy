@@ -1,8 +1,8 @@
 package cherokee.dictionary.affixes.suffixes.verb.nonfinalsuffixes
 
+import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.utils.StringUtility
-import cherokee.dictionary.verb.conjugation.originalconjugation.Tense
 import cherokee.dictionary.word.Verb
 
 class NonFinalSuffixDan implements Affix {
