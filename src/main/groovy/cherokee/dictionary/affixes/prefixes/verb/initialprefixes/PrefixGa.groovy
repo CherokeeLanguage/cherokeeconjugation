@@ -3,7 +3,7 @@ package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 
 /**
  * since -- pp 255 & 256 Durbin Feeling Dictionary

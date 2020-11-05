@@ -3,7 +3,7 @@ package cherokee.dictionary.affixes.suffixes.verb.nonfinalsuffixes
 import cherokee.conjugation.constants.Tense
 import cherokee.conjugation.util.StringUtility
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 
 class NonFinalSuffixDan implements Affix {
     String dan;

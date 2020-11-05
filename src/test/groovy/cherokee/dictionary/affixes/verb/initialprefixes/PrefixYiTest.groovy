@@ -4,7 +4,7 @@ import cherokee.conjugation.constants.Tense
 import cherokee.conjugation.constants.VerbPrefixTableObject
 import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.conjugation.ConjugateBase
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class PrefixYiTest extends ConjugateBase {

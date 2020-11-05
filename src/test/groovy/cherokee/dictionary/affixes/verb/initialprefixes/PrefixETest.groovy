@@ -5,7 +5,7 @@ import cherokee.conjugation.constants.VerbPrefixTableObject
 import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.conjugation.ConjugateBase
 import cherokee.dictionary.processors.verb.VerbAffixFactory
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class PrefixETest extends ConjugateBase {

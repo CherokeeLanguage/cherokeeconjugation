@@ -12,8 +12,8 @@ import cherokee.conjugation.verbal.CompoundPrefixes
 import cherokee.conjugation.verbal.Prefix
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleLaryngealAlteration
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleUW
-import cherokee.dictionary.word.Verb
-import cherokee.dictionary.word.VerbFinalSuffixHolderObject
+import cherokee.conjugation.verbal.Verb
+import cherokee.conjugation.verbal.VerbFinalSuffixHolderObject
 import com.cobradoc.cherokee.SyllabaryUtil
 
 

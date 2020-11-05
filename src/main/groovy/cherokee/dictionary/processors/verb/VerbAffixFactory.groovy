@@ -12,8 +12,7 @@ import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixNi
 import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixWi
 import cherokee.dictionary.affixes.prefixes.verb.initialprefixes.PrefixYi
 import cherokee.dictionary.affixes.suffixes.verb.nonfinalsuffixes.NonFinalSuffixDan
-import cherokee.dictionary.word.Verb
-import cherokee.dictionary.word.Word
+import cherokee.conjugation.verbal.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
 class VerbAffixFactory {
@@ -106,7 +105,7 @@ class VerbAffixFactory {
         word.verbRootSyllabary = baseReturnValue
     }
 
-    private static void processNonFinalSuffixes(Word word) {
+    private static void processNonFinalSuffixes(Verb word) {
         def nonFinalSuffixValue = ""
 
         if (word.nonFinalSuffix.dan) {
@@ -114,5 +113,5 @@ class VerbAffixFactory {
         }
     }
 
-    private static void processFinalSuffixes(Word word) {}
+    private static void processFinalSuffixes(Verb word) {}
 }

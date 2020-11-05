@@ -1,7 +1,7 @@
 package cherokee.dictionary.affixes.prefixes.verb.initialprefixes
 
 import cherokee.dictionary.affixes.Affix
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 
 /*
 * p256 CED

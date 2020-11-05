@@ -1,6 +1,6 @@
 package cherokee.dictionary.affixes
 
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 
 interface Affix {
     String toSyllabary(String baseReturnValue, Verb word)

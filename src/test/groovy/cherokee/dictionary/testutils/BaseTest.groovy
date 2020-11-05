@@ -1,7 +1,7 @@
 package cherokee.dictionary.testutils
 
 import cherokee.dictionary.processors.verb.VerbAffixFactory
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 
 class BaseTest extends GroovyTestCase {
     public void testSuppressWarnings() {

@@ -4,7 +4,7 @@ import cherokee.conjugation.constants.Tense
 import cherokee.conjugation.constants.VerbPrefixTableObject
 import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.dictionary.testutils.BaseTest
-import cherokee.dictionary.word.Verb
+import cherokee.conjugation.verbal.Verb
 import com.cobradoc.cherokee.SyllabaryUtil
 
 //these tests are only to check the prefix pieces and not the verb conjugation itself
