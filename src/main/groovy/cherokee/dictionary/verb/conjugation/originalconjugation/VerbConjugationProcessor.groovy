@@ -7,9 +7,9 @@ import cherokee.conjugation.constants.VerbSet
 import cherokee.conjugation.constants.VerbType
 import cherokee.conjugation.stemming.Stemmer
 import cherokee.conjugation.util.Morphemes
-import cherokee.conjugation.verbal.CompoundPrefix
-import cherokee.conjugation.verbal.CompoundPrefixes
 import cherokee.conjugation.verbal.Prefix
+import cherokee.conjugation.verbal.VerbCompoundPrefix
+import cherokee.conjugation.verbal.VerbCompoundPrefixes
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleLaryngealAlteration
 import cherokee.dictionary.verb.conjugation.originalconjugation.rules.RuleUW
 import cherokee.conjugation.verbal.Verb
@@ -29,7 +29,7 @@ class VerbConjugationProcessor {
     }
 
     static def processPrefixes(//final PronominalPrefix pref,
-                               final CompoundPrefix pref,
+                               final VerbCompoundPrefix pref,
                                final VerbSet verbset,
                                final Tense tense,
                                String it ) {
@@ -48,10 +48,10 @@ class VerbConjugationProcessor {
             || it.startsWith("Ꭵ"))) {
 
             //get the prefix from the table
-            def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+            def tmpReturnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))
 
             if (!tmpReturnPrefix) {
-                tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
+                tmpReturnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
             }
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
@@ -82,13 +82,13 @@ class VerbConjugationProcessor {
                 returnValue = returnPrefix + it
             }
         } else {
-            returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+            returnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
 
             if (!returnPrefix) {
                 //remove the 'B'? why is this here?
                 verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
 
-                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+                returnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
@@ -174,12 +174,12 @@ class VerbConjugationProcessor {
         try {
             if (verbset == VerbSet.B) {
                 try {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}B"
+                    compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}B"
                 } catch (Exception e) {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
+                    compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}"
                 }
             } else {
-                compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
+                compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}"
             }
         } catch (Exception e) {
             //todo: need to throw this exception back out if anything goes wrong
@@ -212,7 +212,7 @@ class VerbConjugationProcessor {
     }
 
     static def processPrefixesOnly(//final PronominalPrefix pref,
-                                   final CompoundPrefix pref,
+                                   final VerbCompoundPrefix pref,
                                    final VerbSet verbset,
                                    final Tense tense,
                                    String it ) {
@@ -231,10 +231,10 @@ class VerbConjugationProcessor {
                 || it.startsWith("Ꭵ"))) {
 
             //get the prefix from the table
-            def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+            def tmpReturnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))
 
             if (!tmpReturnPrefix) {
-                tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
+                tmpReturnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
             }
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
@@ -265,13 +265,13 @@ class VerbConjugationProcessor {
                 returnValue = returnPrefix + it
             }
         } else {
-            returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+            returnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
 
             if (!returnPrefix) {
                 //remove the 'B'? why is this here?
                 verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
 
-                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+                returnPrefix = ((Prefix) VerbCompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
@@ -377,12 +377,12 @@ class VerbConjugationProcessor {
         try {
             if (verbset == VerbSet.B) {
                 try {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}B"
+                    compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}B"
                 } catch (Exception e) {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
+                    compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}"
                 }
             } else {
-                compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
+                compoundPrefix = VerbCompoundPrefixes."${combinedSubjectObject}"
             }
         } catch (Exception e) {
             //todo: need to throw this exception back out if anything goes wrong

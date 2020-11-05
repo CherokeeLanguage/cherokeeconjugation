@@ -1,8 +1,8 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation.rules
 
-import cherokee.conjugation.constants.PrefixTableObject
-import cherokee.conjugation.constants.PrefixTableSubject
 import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.conjugation.constants.VerbSet
 
 /**
@@ -14,8 +14,8 @@ class RulesProcessor {
         rules << new RuleUW();
     }
 
-    def processRules(final PrefixTableSubject pts,
-                     final PrefixTableObject pto,
+    def processRules(final VerbPrefixTableSubject pts,
+                     final VerbPrefixTableObject pto,
                      final Tense tense,
                      final boolean isLiquid,
                      final String verbStem,

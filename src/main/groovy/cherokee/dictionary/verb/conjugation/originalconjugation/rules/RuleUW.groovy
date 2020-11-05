@@ -1,8 +1,8 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation.rules
 
-import cherokee.conjugation.constants.PrefixTableObject
-import cherokee.conjugation.constants.PrefixTableSubject
 import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.conjugation.constants.VerbSet
 
 /**
@@ -11,8 +11,8 @@ import cherokee.conjugation.constants.VerbSet
  */
 class RuleUW implements PrefixRule {
     @Override
-    def process(final PrefixTableSubject pts,
-                final PrefixTableObject pto,
+    def process(final VerbPrefixTableSubject pts,
+                final VerbPrefixTableObject pto,
                 final String prefix,
                 final Tense tense,
                 final boolean isLiquid,
@@ -25,8 +25,8 @@ class RuleUW implements PrefixRule {
         //todo: find out if this is all /uwa/ starts or not - b/c /duwa/ is clearly /du/ according to ᏚᏚᎵᎭ
 
         if (verbSet == VerbSet.B
-            && pto != null && pto == PrefixTableObject.SG3IN
-            && pts == PrefixTableSubject.SG3) {
+            && pto != null && pto == VerbPrefixTableObject.SG3IN
+            && pts == VerbPrefixTableSubject.SG3) {
 
             //todo: should change this so that the stem starts with = a vowel instead of 'uwa'
             if (tmpValue.startsWith("ᎤᏩ")) {
@@ -35,7 +35,7 @@ class RuleUW implements PrefixRule {
                 //todo: remember to process the prefixes in order from closest to root and stem out ward
                 processedValue = "Ꭴ$verbStem"
             }
-        } else if (pto != null && pto == PrefixTableObject.PL3IN) {
+        } else if (pto != null && pto == VerbPrefixTableObject.PL3IN) {
             if (tmpValue.startsWith("ᎤᏩ")) {
                 processedValue = "Ꭴ$verbStem"
             } else if(tmpValue.startsWith("ᏚᏩ")) {

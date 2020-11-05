@@ -1,8 +1,8 @@
 package cherokee.dictionary.verb.conjugation.originalconjugation.rules
 
-import cherokee.conjugation.constants.PrefixTableObject
-import cherokee.conjugation.constants.PrefixTableSubject
 import cherokee.conjugation.constants.Tense
+import cherokee.conjugation.constants.VerbPrefixTableObject
+import cherokee.conjugation.constants.VerbPrefixTableSubject
 import cherokee.conjugation.constants.VerbSet
 
 
@@ -14,8 +14,8 @@ import cherokee.conjugation.constants.VerbSet
  */
 class RuleLaryngealAlteration implements PrefixRule {
     @Override
-    def process(PrefixTableSubject pts,
-                PrefixTableObject pto,
+    def process(VerbPrefixTableSubject pts,
+                VerbPrefixTableObject pto,
                 String prefix,
                 Tense tense,
                 boolean isLiquid,
@@ -31,9 +31,9 @@ class RuleLaryngealAlteration implements PrefixRule {
 
         if (verbStem != null) {
             //M-A pp 209 -- "In Oklahoma Cherokee all of the Set A animate object prefixes trigger the alternation."
-            if (pto == PrefixTableObject.SG3AN && verbStem.startsWith("Ꭿ")) {
+            if (pto == VerbPrefixTableObject.SG3AN && verbStem.startsWith("Ꭿ")) {
 
-                if (pts == PrefixTableSubject.PL3) {
+                if (pts == VerbPrefixTableSubject.PL3) {
                     verbStem = "ᎯᎠ"
                 } else {
                     verbStem = "Ꭲ" + verbStem.substring(1);
@@ -41,9 +41,9 @@ class RuleLaryngealAlteration implements PrefixRule {
                 }
 
                 returnValue = prefix + verbStem
-            } else if ((pto == PrefixTableObject.PL3AN || pto == PrefixTableObject.PL3IN) && verbStem.startsWith("Ꭿ")) {
+            } else if ((pto == VerbPrefixTableObject.PL3AN || pto == VerbPrefixTableObject.PL3IN) && verbStem.startsWith("Ꭿ")) {
 
-                if ((pts == PrefixTableSubject.PL3 || pts == PrefixTableSubject.SG3)) {
+                if ((pts == VerbPrefixTableSubject.PL3 || pts == VerbPrefixTableSubject.SG3)) {
                     verbStem = "ᎯᎠ"
                 } else {
                     verbStem = "Ꭲ" + verbStem.substring(1);
