@@ -27,10 +27,31 @@ class Verb extends Word {
     VerbFinalSuffixHolderObject finalSuffixHolder = new VerbFinalSuffixHolderObject()
 
     String getWholeWord() {
+        def returnValue = wholeWord
         if (!wholeWord) {
-            return pronominalHolder + reflexivePrefixHolder + root + rootEnding + Present.FINALSUFFIX// + nonFinalSuffixHolder + finalSuffixHolder
-        } else {
-            return wholeWord
+            println "inside whole word"
+            returnValue = pronominalHolder + reflexivePrefixHolder + root + rootEnding + Present.FINALSUFFIX// + nonFinalSuffixHolder + finalSuffixHolder
         }
+
+        println "RETURN VALUE IS " + returnValue
+
+        return returnValue
+    }
+
+
+    @Override
+    public String toString() {
+        return "Verb{" +
+                "stemmer=" + stemmer +
+                ", tense=" + tense +
+                ", root='" + root + '\'' +
+                ", rootEnding='" + rootEnding + '\'' +
+                ", wholeWord='" + wholeWord + '\'' +
+                ", initialPrefixHolder=" + initialPrefixHolder +
+                ", pronominalHolder='" + pronominalHolder + '\'' +
+                ", reflexivePrefixHolder='" + reflexivePrefixHolder + '\'' +
+                ", nonFinalSuffixHolder=" + nonFinalSuffixHolder +
+                ", finalSuffixHolder=" + finalSuffixHolder +
+                '}';
     }
 }

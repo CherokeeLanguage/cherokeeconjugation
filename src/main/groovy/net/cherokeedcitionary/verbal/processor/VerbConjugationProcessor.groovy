@@ -25,8 +25,10 @@ class VerbConjugationProcessor {
         }
     }
 
+    static void process()
+
     //returns a String object of the entire verb conjugated with pronoun prefix
-    static void process(Verb word) {
+    static void processNew(Verb word) {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: word.stemmer)
         vth.process()
         def verbTense = word.tense

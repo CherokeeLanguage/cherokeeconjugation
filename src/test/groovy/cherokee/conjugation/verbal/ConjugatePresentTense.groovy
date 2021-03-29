@@ -1,6 +1,7 @@
 package cherokee.conjugation.verbal
 
 import net.cherokeedcitionary.ConjugationEngine
+import net.cherokeedcitionary.core.Verb
 import net.cherokeedcitionary.core.Word
 import net.cherokeedcitionary.util.PartOfSpeech
 import net.cherokeedcitionary.verbal.stemming.Stemmer
@@ -11,16 +12,19 @@ import net.cherokeedcitionary.verbal.stemming.Stemmer
 //import cherokee.dictionary.processors.verb.VerbAffixFactory
 //import cherokee.conjugation.verbal.Verb
 //import cherokee.dictionary.verb.conjugation.originalconjugation.Conjugate
-import net.cherokeedictionary.transliteration.SyllabaryUtil
+//import net.cherokeedictionary.transliteration.SyllabaryUtil
 
 /**
  * Created by torr on 8/21/2015.
  */
 class ConjugatePresentTense extends ConjugateBase {
     private def conj(subject, object, stemmer, tense, partOfSpeech) {
-        String wholeWord = ConjugationEngine.conjugate(PartOfSpeech.getByShortForm(partOfSpeech).toString(), stemmer, subject, object, tense).getWholeWord()
+        String wholeWord = ""
+        Verb vrb = ConjugationEngine.conjugate(PartOfSpeech.getByShortForm(partOfSpeech).toString(), stemmer, subject, object, tense)
 
-        return wholeWord
+        println vrb.toString()
+
+        return vrb.getWholeWord()
     }
 
     //finished and good
