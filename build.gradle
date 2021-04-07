@@ -8,7 +8,7 @@
 */
 apply plugin: 'groovy'
 apply plugin: 'maven'
-apply plugin: 'checkstyle'
+//apply plugin: 'checkstyle'
 apply plugin: 'codenarc'
 apply plugin: 'java'
 
@@ -30,9 +30,17 @@ repositories {
 
 dependencies {
     compile 'junit:junit:4.11'
-    compile 'org.codehaus.groovy:groovy-all:3.0.2'
-    compile 'com.cobradoc:jalagiTranslit:0.1.5'
+    compile 'org.codehaus.groovy:groovy-all:3.0.6'
+    compile group: 'com.cobradoc', name: 'cherokee-conjugation-utilities', version: '0.1.0'
+    compile 'com.cobradoc:jalagiTranslit:0.1.4'
     compile 'org.apache.commons:commons-lang3:3.1'
+<<<<<<< Updated upstream
+=======
+    compile 'commons-io:commons-io:+'
+    compile 'org.apache.commons:commons-text:+'
+//    compile "com.mysql.jdbc:mysql-connector-java:5.1.7-bin"
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+>>>>>>> Stashed changes
 //    localGroovy();
 //    groovy localGroovy()
     testCompile 'junit:junit:4.10'
