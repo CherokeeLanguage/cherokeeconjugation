@@ -11,7 +11,10 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Lemmatizer extends Thread {
 
@@ -867,21 +870,14 @@ public class Lemmatizer extends Thread {
 
 	private void suffixSplits(FactoredForm ff) {
 		String line = ff.getLemma();
-//		line = line.replaceAll(suffix_splitter, "$1@@$2");
-//		if (line.contains("@@")) {
-//			line = StringUtils.replaceEach(line, suffix_matches, suffix_replacements);
-//			if (line.contains(" @ᎥᎾ")) {
-//				line = line.replace(" @ᎥᎾ", "");
-//				ff.setLemma(line);
-//				ff.addSuffix("ᎥᎾ");
-//			}
-//		}
-		SuffixGuesser sg = SuffixGuesser.INSTANCE;
-		List<Affixes.AffixResult> lst = sg.getMatches(line);
-
-		for (Iterator<Affixes.AffixResult> iterator = lst.iterator(); iterator.hasNext(); ) {
-			Affixes.AffixResult next = iterator.next();
-			ff.addSuffix(next.suffix);
+		line = line.replaceAll(suffix_splitter, "$1@@$2");
+		if (line.contains("@@")) {
+			line = StringUtils.replaceEach(line, suffix_matches, suffix_replacements);
+			if (line.contains(" @ᎥᎾ")) {
+				line = line.replace(" @ᎥᎾ", "");
+				ff.setLemma(line);
+				ff.addSuffix("ᎥᎾ");
+			}
 		}
 	}
 

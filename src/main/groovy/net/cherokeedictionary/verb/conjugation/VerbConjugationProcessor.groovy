@@ -27,13 +27,12 @@ class VerbConjugationProcessor {
         final Tense tense = verb.tense
 
         def vs = verbset == VerbSet.A ? "" : "B"
-        def verbPrefix = pref?.object ? "${pref?.subject}${pref?.object}${vs}" as String : "${pref?.subject}${vs}" as String;
+        def verbPrefix = pref?.prefix2 ? "${pref?.prefix1}${pref?.prefix2}${vs}" as String : "${pref?.prefix1}${vs}" as String;
 
         def returnValue
 
         if (it != null && StringUtility.startsWithVowelSyllabary(it)) {
             //get the prefix from the table
-
             def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
 
             if (!tmpReturnPrefix) {
@@ -56,14 +55,14 @@ class VerbConjugationProcessor {
                 def prefixEnd = tmpReturnPrefix.substring(tmpReturnPrefix.size() - backspace)
 //                log prefixEnd
 
-                def fixedPrefix = Morphemes.fixPrefix(prefixEnd, it)
+                def fixedPrefix = Morphemes.fixPrefix(it.substring(0, 1), prefixEnd, it)
 //                log(fixedPrefix)
 
                 returnPrefix = prefixStart + fixedPrefix[0]
                 it = fixedPrefix[1]
             }
 
-            returnValue = new RuleUW().process(pref.subject, pref.object, returnPrefix, tense, false, it, verbset)
+            returnValue = new RuleUW().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
             if (!returnValue) {
                 returnValue = returnPrefix + it
             }
@@ -80,7 +79,7 @@ class VerbConjugationProcessor {
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
             if (verbset != VerbSet.B) {
                 //this will return something if it can - if not then the returnValue will be null and should be checked against
-                returnValue = new RuleLaryngealAlteration().process(pref.subject, pref.object, returnPrefix, tense, false, it, verbset)
+                returnValue = new RuleLaryngealAlteration().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
             }
 
             if (!returnValue && returnPrefix != null && it != null) {

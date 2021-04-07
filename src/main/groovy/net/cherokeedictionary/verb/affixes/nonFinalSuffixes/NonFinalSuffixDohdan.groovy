@@ -8,8 +8,6 @@ class NonFinalSuffixDohdan implements Affix {
 
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
-
-
         return null
     }
 

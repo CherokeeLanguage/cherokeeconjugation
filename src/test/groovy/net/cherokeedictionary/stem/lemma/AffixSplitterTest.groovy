@@ -8,21 +8,19 @@ class AffixSplitterTest extends ConjugateBase  {
         Lemmatizer afs = new Lemmatizer()
 
         def sb = new StringBuilder()
-        sb << afs.processLine("ᏥᎪᏩᏘᎭ")
+        sb << afs.processLine("ᏥᎪᏩᏘᎠ")
+        sb << afs.processLine("ᎤᎾᎳᏍᎦᎵᏗ")
+        sb << "\n\n"
 
-//        sb << afs.processLine("ᎠᎾᎳᏍᎦᎵᏍᎬᎢ")
-        log(sb.toString())
-//        sb << "\n\n"
-        /*
         sb << afs.processLine("ᏳᏟᎢᎶᏝ")
         sb << "\n\n"
         sb << afs.processLine("ᎠᏓᎴᏂᏍᎪ")
         sb << "\n\n"
         sb << afs.processLine("ᎠᎾᎳᏍᎦᎵᏍᎬᎢ")
         sb << "\n\n"
-        sb << afs.processLine("ᏳᏫᏂᎦᏥᎪᏩᏘᎭ")*/
+        sb << afs.processLine("ᏳᏫᏂᎦᏥᎪᏩᏘᎭ")
 
-//        log(sb.toString())
+        log(sb.toString())
 
     }
 }

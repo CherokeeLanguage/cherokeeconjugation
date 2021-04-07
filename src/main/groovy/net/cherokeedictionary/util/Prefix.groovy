@@ -22,10 +22,4 @@ class Prefix {
 
     //this is the third form that's in the dictionary for 3sg to 3sg animate and 3sg to 3sg inanimate
     String other
-
-
-    @Override
-    String toString() {
-        return "prefixes.put(new Prefix(preVowel: '${preVowel}', preConsonant: '${preConsonant}', other: '${other}'))"
-    }
 }

@@ -46,8 +46,7 @@ class Morphemes {
         return W.get(firstChar)
     }
 
-    static def fixPrefix(prefix, it) {
-        def firstChar = it.substring(0,1)
+    public static def fixPrefix(firstChar, prefix, it) {
         //groovy goodness - dynamic method call
         prefix = "process${prefix.toUpperCase()}"(firstChar)
 
