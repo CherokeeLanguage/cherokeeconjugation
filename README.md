@@ -1,2 +1,0 @@
-# cherokeeConjugation
-Conjugate Cherokee Verbs
