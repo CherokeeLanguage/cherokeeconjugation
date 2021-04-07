@@ -1,0 +1,4 @@
+rootProject.name = 'cherokee-conjugation'
+git fetch origin
+sudo git checkout -b rewrite origin/rewrite
+sudo git merge master

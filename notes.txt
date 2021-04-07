@@ -1,0 +1,9 @@
+convert VerbConjugator to syllabary instead of latin - latin can be transliterated at the end
+make conjugation table a popover on the same page instead of a new page
+
+put together some conjugation tables based on TommyLee verb conjugation xls
+put together some conjugation tables based on durbin feeling cherokee verb study ocr pdf
+
+done -- put together the conjugation into a table for display on the site
+
+put together conjugation drop downs that will provide a conjugation - put the verb in a textfield and select tense from one of the 5?

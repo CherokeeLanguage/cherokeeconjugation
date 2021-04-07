@@ -1,0 +1,113 @@
+Whew this has been a crazy month already and there's more to come. This is just an update of where we are. It's probably boring to everyone, but I said I've been horrible at updating the project on what I'm working on and with the site changes out of the way the enhancements can really swing into motion. This is where the exciting stuff happens.
+
+Recent additions to the site that we've talked about:
+Transliteration api
+* type in latin text and get syllabary
+* type in syllabary and get latin text
+
+Grammar Section
+* it’s not enabled for view yet, but all of Mary’s hard work is in production - the next update I push will see this on the site
+
+Mobile Friendly views
+* anything less than 640px wide will show a mobile friendly view of the individual view.
+
+Individual view
+* for desktop - click the syllabary for an entry and you’ll see a popover showing all of the information - it resizes based on your screen
+
+Here are the items that are coming - I think they're mostly in order by when they'll be released
+Source Management
+* done the ability to add new sources, background colors, text colors, bibliographies, etc on the fly
+* so we can add new collections to the dictionary 
+* need to wire this in to the pages 
+* need to wire this behind the admin pages
+* need to merge this in to the trunk
+
+Simplified entry page
+* to go with the source management page
+* so the transliteration alternatives are auto populated in the database and it’s not as confusing to add new entries
+
+History table
+* something I've been meaning to do for a long time
+* we have backups of the dictionary run weekly or when I do a major update to the database
+* however, we don't have a history table to track updates made during the week just in case an accident was made we can know which entries were updated
+
+Conjugations
+* working on prefixes now 
+* will add a page to select available prefixes and then you can form a verb with those prefixes where applicable
+* will start suffixes after that
+* then will add those to the conjugation page and it will form the verb the same way
+* I am writing tests straight from the ced and many other sources then documenting where those tests came from in the code
+
+Conjugation verification
+* take words and conjugations then look through available corpus to find version - if it exists keep sentence it’s in and annotate sentence, bibliography and save in verification table with likespreadsheets_id
+
+Words split to new table for translation searches
+* split words into new table and identify by dialect and more
+* for searches and implementation for additional words by dialect
+* there is already a table with this done - so this will need to be redone after the Conjugations are completed to accommodate all of the prefixes and suffixes not just the basic table A and B verb conjugations.
+
+Translation approximation
+* with all words and possible conjugation variations in a table lookups against a word can be done
+* approximation of a word definition can be given - with several variation checks started
+* variation checks are defined as removal of known affixes to get to a root and try again
+* if no known variations then returned result of nothing found 
+* this is mostly done - there is some lookup massaging that needs to happen with variation checks
+
+User Management
+* to manage users that signup for the site
+* including password resets (auto and manual)
+* individual user profile management
+* granting privileges to users to manage entries and add new entries
+
+Individual view of all words
+* done for mobile
+* done for desktop
+* need to add a marker on the desktop view to let users know that there is more information than that displayed
+* all entries have this available to click on desktop view which will popover and display
+
+Update wordlists
+* mcst wordlist
+* rrd wordlist
+
+New word lists
+* there are several new word lists to be added to the dictionary with bibliographies
+
+Announcements
+* an announcements section on the homepage
+* also a previous announcements page aka functionality/walkthrough page
+
+Functionality videos
+* with a lot of the new functionality I’m going to make some quick videos showing the latest functionality and how it works
+
+Open REST API
+* open the gateway and api for people to send requests across
+* configure the ports and make sure that they are working correctly
+* test regex on the server 
+* test definition, tsalagi, syllabary, conjugation, transliteration to syllabary, transliteration from syllabary
+* test searches by wildcard
+
+Developer API
+* add developer signup
+* add key 
+* add management for this on the backend so developers can get access to the REST API
+
+Sounds
+* recording sounds
+* adding those to the server and accessing them via a player
+
+Dialect additions
+* additional words by dialect
+* add words for each dialect where meaning is the same but are missing - the difference between wado and sgi
+
+User defined study lists
+* Once user management is complete
+* A user will have the ability to add words (entries and specific words, such as verb conjugations) to their study list
+* A user may share entire lists or a word with someone else via email or if they’re a user on the ced site then via the site
+* a user may make their study list public, private, or unlisted.
+
+Mobile Friendly Views
+* still a little work to do for better displays on different sized views
+
+Then more videos to cover more functionality.
+
+That's it! ᏩᏙᏛ!
