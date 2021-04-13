@@ -13,7 +13,7 @@ apply plugin: 'maven'
 apply plugin: 'java'
 
 group = 'net.cherokeedictionary'
-version = '0.1.1'
+version = '0.1.2'
 
 compileJava.options.encoding = 'UTF-8'
 compileGroovy.options.encoding = 'UTF-8'
@@ -40,7 +40,7 @@ dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
 //    localGroovy();
 //    groovy localGroovy()
-    testCompile 'junit:junit:4.11'
+    testCompile 'junit:junit:4.10'
 }
 
 task srcZip(type: Zip) {

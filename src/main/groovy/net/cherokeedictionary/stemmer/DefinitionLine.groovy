@@ -1,4 +1,4 @@
-package net.cherokeedictionary.stem;
+package net.cherokeedictionary.stemmer;
 
 public class DefinitionLine {
     	public String cf;

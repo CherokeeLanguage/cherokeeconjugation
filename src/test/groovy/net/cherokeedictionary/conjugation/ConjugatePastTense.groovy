@@ -1,7 +1,7 @@
 package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.verb.conjugation.Conjugate
-import net.cherokeedictionary.stem.DefinitionLine
+import net.cherokeedictionary.stemmer.DefinitionLine
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.Tense
 

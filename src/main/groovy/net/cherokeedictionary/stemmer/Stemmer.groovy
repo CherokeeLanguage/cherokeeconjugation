@@ -1,6 +1,6 @@
 package net.cherokeedictionary.stemmer
 
-import net.cherokeedictionary.stem.DefinitionLine
+
 import net.cherokeedictionary.stem.NormalizedVerbEntry
 import net.cherokeedictionary.stem.StemEntry
 import net.cherokeedictionary.stem.StemType

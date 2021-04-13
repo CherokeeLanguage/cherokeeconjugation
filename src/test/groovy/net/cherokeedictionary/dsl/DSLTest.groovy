@@ -1,12 +1,11 @@
 package net.cherokeedictionary.dsl
 
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.stem.DefinitionLine
+import net.cherokeedictionary.stemmer.DefinitionLine
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
-import net.cherokeedictionary.verb.conjugation.Conjugate
 
 show = { println it }
 square_root = { Math.sqrt(it) }
