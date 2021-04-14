@@ -19,12 +19,19 @@ class VerbFactory {
         println paramMap
 
         def stemmer = new Stemmer()
-        stemmer.habitual = new DefinitionLine(syllabary: habitual)//"ᎦᏬᏂᏍᎪᎢ")
-        stemmer.imperative = new DefinitionLine(syllabary: imperative)//"ᎯᏬᏂᎯ")
-        stemmer.infinitive = new DefinitionLine(syllabary: infinitive)//"ᎤᏬᏂᎯᏍᏗ")
-        stemmer.present1st = new DefinitionLine(syllabary:  present1st)//"ᏥᏬᏂᎭ")
-        stemmer.present3rd = new DefinitionLine(syllabary: present3rd)//"ᎦᏬᏂᎭ")
-        stemmer.remotepast = new DefinitionLine(syllabary: remotepast)//"ᎤᏬᏂᏒᎢ")
+        def hd = new DefinitionLine(syllabary: habitual)//"ᎦᏬᏂᏍᎪᎢ")
+        def id1 = new DefinitionLine(syllabary: imperative)//"ᎯᏬᏂᎯ")
+        def id2 = new DefinitionLine(syllabary: infinitive)//"ᎤᏬᏂᎯᏍᏗ")
+        def p1 = new DefinitionLine(syllabary:  present1st)//"ᏥᏬᏂᎭ")
+        def p2 = new DefinitionLine(syllabary: present3rd)//"ᎦᏬᏂᎭ")
+        def rp = new DefinitionLine(syllabary: remotepast)//"ᎤᏬᏂᏒᎢ")
+        stemmer.habitual = hd
+        stemmer.imperative = id1
+        stemmer.infinitive = id2
+        stemmer.present1st = p1
+        stemmer.present3rd = p2
+        stemmer.remotepast = rp
+
 //        stemmer.setHabitual(new DefinitionLine(syllabary: habitual))
 //        stemmer.setImperative(new DefinitionLine(syllabary: imperative))
 //        stemmer.setInfinitive(new DefinitionLine(syllabary: infinitive))
