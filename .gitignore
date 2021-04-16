@@ -1,6 +1,5 @@
-build/*
-out/*
-.DS_Store
+# Ignore Gradle project-specific cache directory
 .gradle
-.idea
-classes
+
+# Ignore Gradle build output directory
+build

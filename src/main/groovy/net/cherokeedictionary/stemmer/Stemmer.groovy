@@ -72,10 +72,7 @@ public class Stemmer {
 
     //TODO: may have to revisit this for future tenses and stuff
     boolean compareTypeAndTense(StemType type, Tense tense) {
-        return (type == StemType.PresentContinous && tense == Tense.PRESENT)
-                || (type == StemType.RemotePast && tense == Tense.REMOTE_PAST)
-                || (type == StemType.Immediate && tense == Tense.IMMEDIATE_COMMAND)
-                || (type == StemType.Habitual && tense == Tense.HABITUAL)
+        return (type == StemType.PresentContinous && tense == Tense.PRESENT) || (type == StemType.RemotePast && tense == Tense.REMOTE_PAST) || (type == StemType.Immediate && tense == Tense.IMMEDIATE_COMMAND) || (type == StemType.Habitual && tense == Tense.HABITUAL)
     }
 
     List<StemEntry> getStems() {
