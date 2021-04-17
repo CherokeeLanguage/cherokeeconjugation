@@ -10,7 +10,7 @@ import net.cherokeedictionary.verb.conjugation.Conjugate
 //these tests are only to check the prefix pieces and not the verb conjugation itself
 //pp 252-254 Durbin Feeling Dictionary
 class DanNonFinalSuffixTest extends ConjugateBase {
-    public void testVerbDan() {
+    public void AtestVerbDan() {
         Verb verb = new Verb()
         verb.subject = PrefixTableSubject.SG1
         verb.object = PrefixTableObject.SG2

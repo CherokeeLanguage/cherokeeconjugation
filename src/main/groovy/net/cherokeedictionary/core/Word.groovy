@@ -8,4 +8,6 @@ class Word {
     PartOfSpeech partOfSpeech
     PrefixTableSubject subject
     PrefixTableObject object
+
+
 }

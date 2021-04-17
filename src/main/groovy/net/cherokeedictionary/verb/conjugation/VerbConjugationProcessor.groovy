@@ -108,7 +108,7 @@ class VerbConjugationProcessor {
             verb.object = PrefixTableObject.valueOf("SG3IN")
         }
 
-        def combinedSubjectObject = "${verb.subject}${verb.object == PrefixTableObject.NONE ? "" : verb.object}"//object ? "${subject}${object}" : "${subject}"
+        def combinedSubjectObject = "${verb.subject}${verb.object}"
 
         if (combinedSubjectObject == "SG3SG3AN" && !verb.reflexiveHolderObject.isReflexive()) {
             return verb.stemmer.present3rd.syllabary;

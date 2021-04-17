@@ -29,6 +29,7 @@ version = '0.2.0'
 dependencies {
     // Use the latest Groovy version for building this library
     implementation 'org.codehaus.groovy:groovy-all:2.5.13'
+//    implementation 'org.codehaus.groovy:groovy-all:3.0.7'
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:29.0-jre'
