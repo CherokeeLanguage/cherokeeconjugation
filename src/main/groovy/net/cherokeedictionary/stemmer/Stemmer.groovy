@@ -7,6 +7,9 @@ import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.stem.Syllabary
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.suffixes.Habitual
+import net.cherokeedictionary.verb.suffixes.Imperative
+import net.cherokeedictionary.verb.suffixes.Infinitive
 import net.cherokeedictionary.verb.suffixes.Present
 import net.cherokeedictionary.verb.suffixes.RemotePast
 import org.apache.commons.lang3.StringUtils
@@ -34,25 +37,43 @@ public class Stemmer {
 
         //TODO: finish breaking these apart by the rest of the conjugations and then checking for completeness.
         //      also decide what to do with the split and how to put it into the word
-        if (type == Tense.REMOTE_PAST) {
-            suffix = new RemotePast()
-        } else if (type == Tense.PRESENT) {
-            suffix = new Present()
+        switch (type) {
+            case Tense.REMOTE_PAST:
+                suffix = new RemotePast()
+                break
+
+            case Tense.HABITUAL:
+                suffix = new Habitual()
+                break
+            case Tense.FUTURE_COMMAND:
+                suffix = new Imperative()
+                break
+            case Tense.INFINITIVE:
+                suffix = new Infinitive()
+                break
+            case Tense.PRESENT:
+            default:
+                suffix = new Present()
+                break
         }
 
-        // the word minus the ending
-        root = stem.substring(0, stem.lastIndexOf(suffix.getFinalSuffix()))
+        def lastChar = null
+        if (root.size() > 0) {
+            // the word minus the ending
+            root = stem.substring(0, stem.lastIndexOf(suffix.getFinalSuffix()))
+            // get the last letter to determine which end of the word it is
+            lastChar = String.valueOf(root.charAt(root.size() - 1))
 
-        // get the last letter to determine which end of the word it is
-        def lastChar = String.valueOf(root.charAt(root.size() - 1))
-
-        // see if the last character is in the value list
-        if (suffix.getRootEndings().containsValue(lastChar)) {
-            // if it is then the root is now minus the last character
-            root = root.substring(0, root.size() - 1)
+            // see if the last character is in the value list
+            if (suffix.getRootEndings().containsValue(lastChar)) {
+                // if it is then the root is now minus the last character
+                root = root.substring(0, root.size() - 1)
 
 //            // printing the result so we know what the root plus the final root ending is before we add other parts to the verb
 //            println "what it be " + root + lastChar
+            }
+        } else {
+            root = null
         }
 
         return [root, lastChar]
@@ -72,10 +93,7 @@ public class Stemmer {
 
     //TODO: may have to revisit this for future tenses and stuff
     boolean compareTypeAndTense(StemType type, Tense tense) {
-        return (type == StemType.PresentContinous && tense == Tense.PRESENT)
-                || (type == StemType.RemotePast && tense == Tense.REMOTE_PAST)
-                || (type == StemType.Immediate && tense == Tense.IMMEDIATE_COMMAND)
-                || (type == StemType.Habitual && tense == Tense.HABITUAL)
+        return (type == StemType.PresentContinous && tense == Tense.PRESENT) || (type == StemType.RemotePast && tense == Tense.REMOTE_PAST) || (type == StemType.Immediate && tense == Tense.IMMEDIATE_COMMAND) || (type == StemType.Habitual && tense == Tense.HABITUAL)
     }
 
     List<StemEntry> getStems() {

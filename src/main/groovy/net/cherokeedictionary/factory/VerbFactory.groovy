@@ -16,7 +16,7 @@ class VerbFactory {
         def remotepast = paramMap.remotepast
         def partofspeechc = paramMap.partofspeechc
 
-        println paramMap
+//        println paramMap
 
         def stemmer = new Stemmer()
         stemmer.habitual = new DefinitionLine(syllabary: habitual)//"ᎦᏬᏂᏍᎪᎢ")
@@ -55,7 +55,7 @@ class VerbFactory {
         def displayValue
         try {
             Verb verb = Conjugate.conjugate(paramMap.subject, paramMap.object, stemmer, paramMap.verbTense, partofspeechc, false)
-            println verb
+//            println verb
             displayValue = verb.wholeWord
         } catch (Exception e) {
             displayValue = "there was an error with your request"

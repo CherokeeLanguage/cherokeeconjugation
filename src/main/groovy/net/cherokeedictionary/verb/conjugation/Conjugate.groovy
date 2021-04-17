@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.util.CompoundPrefixes
 import net.cherokeedictionary.util.PartOfSpeech
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
@@ -62,17 +63,28 @@ class Conjugate {
         verb.partOfSpeech = verbType
         verb.reflexiveHolderObject.reflexive = isReflexive
 
-
-        verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb);
-
+        verb = conjugate(verb)
         return verb
     }
 
     static def conjugate(final Verb verb) {
-        verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb);
-        verb.wholeWord = PrefixProcessor.process(verb)
-        verb.wholeWord = NonFinalSuffixProcessor.process(verb)
-        verb.wholeWord = FinalSuffixProcessor.process(verb)
+        def compoundPrefix = null
+
+        try {
+            compoundPrefix = CompoundPrefixes."${verb.subject.toString()}${verb.object.toString()}"
+        } catch (Exception e) {
+        }
+
+        if (compoundPrefix) {
+            verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb);
+            verb.wholeWord = PrefixProcessor.process(verb)
+            verb.wholeWord = NonFinalSuffixProcessor.process(verb)
+            verb.wholeWord = FinalSuffixProcessor.process(verb)
+        } else {
+            verb.pronounReflexiveRoot = "------"
+            verb.wholeWord = "------"
+        }
+
         return verb
     }
 }

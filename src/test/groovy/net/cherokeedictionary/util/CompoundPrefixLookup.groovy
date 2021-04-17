@@ -1,6 +1,5 @@
 package net.cherokeedictionary.util
 
-import groovy.test.GroovyTestCase
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 
 class CompoundPrefixLookup extends GroovyTestCase {

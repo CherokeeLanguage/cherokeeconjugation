@@ -62,7 +62,7 @@ class PrefixProcessor {
 
         //DONE 1 Apr 21
         if (yi) {
-            println "yi"
+//            println "yi"
             baseReturnValue = new PrefixYi().toSyllabary(baseReturnValue, verb);
         }
 

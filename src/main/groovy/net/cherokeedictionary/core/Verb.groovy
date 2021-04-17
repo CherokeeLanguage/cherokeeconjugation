@@ -2,6 +2,7 @@ package net.cherokeedictionary.core
 
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.CompoundPrefix
+import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.util.VerbSet
 import net.cherokeedictionary.verb.containers.VerbFinalSuffixHolderObject
@@ -44,6 +45,15 @@ class Verb extends Word {
         }
 
         return ""
+    }
+
+    @Override
+    void setObject(PrefixTableObject object) {
+        if (object == PrefixTableObject.NONE) {
+            object = PrefixTableObject.SG3AN
+        }
+
+        super.setObject(object)
     }
 
     @Override
