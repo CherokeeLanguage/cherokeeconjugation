@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var verbTense
+        const Tense = {
+            PRESENT: "PRESENT",
+            FUTURE_IMPERATIVE: "FUTURE_IMPERATIVE",
+            INFINITIVE: "INFINITIVE",
+            HABITUAL: "HABITUAL",
+            PLUPERFECT: "PLUPERFECT",
+            FUTURE_PROGRESSIVE: "FUTURE_PROGRESSIVE",
+            REPORTATIVE: "REPORTATIVE",
+            PAST: "PAST",
+            FUTURE: "FUTURE",
+            PRE_INCIPIENT: "PRE_INCIPIENT"
+        }
+
+        var VerbTense = new Map();
+        VerbTense.set("a" , Tense.PRESENT);
+        VerbTense.set("vi" , Tense.FUTURE_IMPERATIVE);
+        VerbTense.set("di" , Tense.INFINITIVE);
+        VerbTense.set("oi" , Tense.HABITUAL);
+        VerbTense.set("oi" , Tense.PLUPERFECT);
+        VerbTense.set("esdi" , Tense.FUTURE_PROGRESSIVE);
+        VerbTense.set("ei" , Tense.REPORTATIVE);
+        VerbTense.set("vi" , Tense.PAST);
+        VerbTense.set("i" , Tense.FUTURE);
+        VerbTense.set("idi" , Tense.PRE_INCIPIENT);
+
+        var FinalEndings = new Map()
+        FinalEndings.set("dv", "focus");
+        FinalEndings.set("dina", "concessiveImperative");
+        FinalEndings.set("isi", "orelse");
+        FinalEndings.set("hv", "but");
+        FinalEndings.set("na", "andWhatIf");
+        FinalEndings.set("ke", "orInterrogative");
+        FinalEndings.set("ju", "interrogative");
+        FinalEndings.set("sgo", "interrogative2");
+        FinalEndings.set("gwu", "onlyJustStill");
+
+        // def progressive = "g";
+        // def comeTo = "ihl";//ihis
+        // def atIntervals = "e";
+        // def around = "idol";
+        // def dativeBenefactive = "el";
+        // def completive = "ohn";
+        // def unintentional = "dohdan";
+        // def instrumentalCausative = "dan";
+        // def repetitive = "ilo";
+
+        verbTense = Tense.PRESENT
+
+        function getFinalSuffixes(wholeWord) {
+            //iterate over final endings to remove each one from top to bottom right to left
+            var finalSuffixesList = []
+            var word = wholeWord.phonetic;
+            for (const finalEnding of FinalEndings.keys()) {
+                if (word.endsWith(finalEnding)) {
+                    finalSuffixesList.push(FinalEndings.get(finalEnding));
+                    word = word.substr(0, word.length - finalEnding.length);
+                }
+            }
+
+            wholeWord.finalSuffixes = finalSuffixesList;
+            wholeWord.tmpParse = word;
+
+            return wholeWord;
+        }
+
+        //TODO: what if there are multiples?  return both?
+        function getVerbTenseSuffixes(wholeWord) {
+            var verbTenseSuffixesList = []
+            var word = wholeWord.phonetic;
+            for (const verbTense of VerbTense.keys()) {
+                if (word.endsWith(verbTense)) {
+                    verbTenseSuffixesList.push(VerbTense.get(verbTense));
+                    word = word.substr(0, word.length - verbTense.length);
+                }
+            }
+
+            wholeWord.verbTenseSuffix = verbTenseSuffixesList;
+            wholeWord.tmpParse = word;
+
+            return wholeWord;
+        }
+
+        function getNonFinalSuffixes(wholeWord) {
+            var word = wholeWord.tmpParse;
+
+            var nonFinalSuffixesList = [];
+            if (word.endsWith("ilo") || word.endsWith("iloj") || word.endsWith("ilos")) {
+                nonFinalSuffixesList.push("reflexive");
+                if (word.endsWith("ilo")) {
+                    wholeWord.tmpParse = wholeWord.tmpParse.substring(0, wholeWord.tmpParse.length - 3);
+                } else {
+                    wholeWord.tmpParse = wholeWord.tmpParse.substring(0, wholeWord.tmpParse.length - 4);
+                }
+
+                wholeWord.nonFinalSuffixes = nonFinalSuffixesList;
+            }
+
+            return wholeWord;
+        }
+
+        function process(word) {
+            var wholeWord = {
+                syllabary: "",
+                phonetic: "",
+                tmpParse: "",
+                initialPrefixes: [],
+                pronounPrefixes: [],
+                reflexivePrefix: false,
+                nonFinalSuffixes: [],
+                verbTenseSuffix: '',
+                verbTenseType: Tense.PRESENT,
+                finalSuffixes: []
+            };
+
+            wholeWord.phonetic = word;
+
+            wholeWord = getFinalSuffixes(wholeWord);
+            wholeWord = getVerbTenseSuffixes(wholeWord);
+
+            for (const tmpElementElement of wholeWord.verbTenseSuffix) {
+                wholeWord.verbTenseType = tmpElementElement;
+                //TODO: also need to get verb tense ending here -- will need another map
+            }
+
+            wholeWord = getNonFinalSuffixes(wholeWord);
+
+            document.getElementById("display").innerText = JSON.stringify(wholeWord);
+        }
+    </script>
+</head>
+<body>
+<a href="#" onclick="javascript:process('uwonisiloei')">uwonisiloei</a><br/>
+<a href="#" onclick="javascript:process('gawonihagwuju')">gawonihagwuju</a><br/>
+<a href="#" onclick="javascript:process('gawonisgvi')">gawonisgvi</a><br/>
+<a href="#" onclick="javascript:process('uwonisei')">uwonisei</a><br/>
+<a href="#" onclick="javascript:process('gawonisgvi')">gawonisgvi</a><br/>
+<a href="#" onclick="javascript:process('gawonisilosgvi')">gawonisilosgvi</a><br/>
+<a href="#" onclick="javascript:process('hiwonihi')">hiwonihi</a><br/>
+<a href="#" onclick="javascript:process('hiwonisiloja')">hiwonisiloja</a><br/>
+<div id="display"></div>
+</body>
+</html>
