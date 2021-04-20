@@ -53,10 +53,20 @@ function getNonFinalSuffixes(wholeWord) {
     while(foundAResult) {
         foundAResult = false;
         for (const nonFinalEnding of NonFinalEndings.keys()) {
-            if (word.endsWith(nonFinalEnding)){//} && (word.split(nonFinalEnding).length - 1) > 1) {
-                foundAResult = true;
-                word = word.substring(0, word.length - nonFinalEnding.length);
-                nonFinalSuffixesList.push(NonFinalEndings.get(nonFinalEnding));
+            if (word.endsWith(nonFinalEnding)){
+                //wonis is ok but doesn't have a nonfinal ending - wonisis does have a nonfinal ending
+                //todo: find examples of this in the wild where it's possible that there are other conflicts - add to test implementations
+                if (nonFinalEnding === "is") {
+                    if (word.split(nonFinalEnding).length -1 > 1) {
+                        foundAResult = true;
+                        word = word.substring(0, word.length - nonFinalEnding.length);
+                        nonFinalSuffixesList.push(NonFinalEndings.get(nonFinalEnding));
+                    }
+                } else {
+                    foundAResult = true;
+                    word = word.substring(0, word.length - nonFinalEnding.length);
+                    nonFinalSuffixesList.push(NonFinalEndings.get(nonFinalEnding));
+                }
             }
         }
     }
