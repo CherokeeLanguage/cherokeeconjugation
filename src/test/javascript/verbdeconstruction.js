@@ -28,7 +28,7 @@ function getFinalSuffixes(wholeWord) {
 //TODO: what if there are multiples?  return both?
 function getVerbTenseSuffixes(wholeWord) {
     var verbTenseSuffixesList = []
-    var word = wholeWord.phonetic;
+    var word = wholeWord.tmpParse;
     for (const verbTense of VerbTense.keys()) {
         if (word.endsWith(verbTense)) {
             var verbTenseItem = VerbTense.get(verbTense);
@@ -53,32 +53,13 @@ function getNonFinalSuffixes(wholeWord) {
     while(foundAResult) {
         foundAResult = false;
         for (const nonFinalEnding of NonFinalEndings.keys()) {
-            if (word.endsWith(nonFinalEnding)) {
+            if (word.endsWith(nonFinalEnding)){//} && (word.split(nonFinalEnding).length - 1) > 1) {
                 foundAResult = true;
                 word = word.substring(0, word.length - nonFinalEnding.length);
                 nonFinalSuffixesList.push(NonFinalEndings.get(nonFinalEnding));
             }
         }
     }
-
-    // word = wholeWord.tmpParse;
-
-    // if (word.endsWith("ilo") || word.endsWith("ilots") || word.endsWith("ilos")) {
-    //     nonFinalSuffixesList.push("reflexive");
-    //     if (word.endsWith("ilots")) {
-    //         wholeWord.tmpParse = wholeWord.tmpParse.substring(0, word.length - 5);
-    //     } else if (word.endsWith("ilos")) {
-    //         wholeWord.tmpParse = wholeWord.tmpParse.substring(0, word.length - 4);
-    //     } else if (word.endsWith("ilo")) {
-    //         wholeWord.tmpParse = wholeWord.tmpParse.substring(0, word.length - 3);
-    //     } else {
-    //         console.log("this is here");
-    //     }
-    //
-    //     //ᎦᏬᏂᏎᎶᏍᎬᎢ
-    //
-    //     wholeWord.nonFinalSuffixes = nonFinalSuffixesList;
-    // }
 
     wholeWord.tmpParse = word;
 
@@ -168,4 +149,14 @@ function process(word, isSyllabary=true) {
     // wholeWord = getReflexivePrefix(wholeWord);
 
     document.getElementById("display").innerText = JSON.stringify(wholeWord);
+    document.getElementById("syllabary").innerText = JSON.stringify(wholeWord.syllabary);
+    document.getElementById("phonetic").innerText = JSON.stringify(wholeWord.phonetic);
+    document.getElementById("initialPrefixes").innerText = JSON.stringify(wholeWord.initialPrefixes);
+    document.getElementById("pronominalPrefixes").innerText = JSON.stringify(wholeWord.pronounPrefixes);
+    document.getElementById("reflexivePrefixes").innerText = JSON.stringify(wholeWord.reflexivePrefix);
+    document.getElementById("root").innerText = JSON.stringify(wholeWord.tmpParse);
+    document.getElementById("nonFinalSuffixes").innerText = JSON.stringify(wholeWord.nonFinalSuffixes);
+    document.getElementById("tenseSuffixes").innerText = JSON.stringify(wholeWord.verbTenseSuffix);
+    document.getElementById("finalSuffixes").innerText = JSON.stringify(wholeWord.finalSuffixes);
+
 }
