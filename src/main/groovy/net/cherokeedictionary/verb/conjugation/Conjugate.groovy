@@ -81,8 +81,8 @@ class Conjugate {
             verb.wholeWord = NonFinalSuffixProcessor.process(verb)
             verb.wholeWord = FinalSuffixProcessor.process(verb)
         } else {
-            verb.pronounReflexiveRoot = "------"
-            verb.wholeWord = "------"
+            verb.pronounReflexiveRoot = "      "
+            verb.wholeWord = "       "
         }
 
         return verb
