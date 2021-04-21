@@ -132,7 +132,7 @@ function getPronominalPrefixes(wholeWord) {
     }
 
     tmp = tmp.substring(pronSize);
-    if (pronSize > 0 ) {
+    if (pronSize === 0 ) {
         for (const vowelPrefix of VowelPrefixes.keys()) {
             if (tmp.startsWith(vowelPrefix)) {
                 if (vowelPrefix.length > pronSize) {
@@ -167,7 +167,7 @@ function process(word, isSyllabary=true) {
         nonFinalSuffixes: [],
         verbTenseSuffix: '',
         verbTenseType: Tense.PRESENT,
-        finalSuffixes: []
+        finalSuffixes: [],
     };
 
     if (isSyllabary) {
@@ -191,6 +191,12 @@ function process(word, isSyllabary=true) {
     wholeWord = getPronominalPrefixes(wholeWord);
     // wholeWord = getReflexivePrefix(wholeWord);
 
+    return wholeWord;
+}
+
+function display(word, isSyllabary=true) {
+    var wholeWord = process(word, isSyllabary);
+
     document.getElementById("display").innerText = JSON.stringify(wholeWord);
     document.getElementById("syllabary").innerText = JSON.stringify(wholeWord.syllabary);
     document.getElementById("phonetic").innerText = JSON.stringify(wholeWord.phonetic);
@@ -201,5 +207,9 @@ function process(word, isSyllabary=true) {
     document.getElementById("nonFinalSuffixes").innerText = JSON.stringify(wholeWord.nonFinalSuffixes);
     document.getElementById("tenseSuffixes").innerText = JSON.stringify(wholeWord.verbTenseSuffix);
     document.getElementById("finalSuffixes").innerText = JSON.stringify(wholeWord.finalSuffixes);
+}
 
+function getBreakdown(word) {
+    var wholeWord = process(word, true);
+    console.log(wholeWord.syllabary);
 }

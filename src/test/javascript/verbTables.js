@@ -218,7 +218,7 @@ InitialPrefixes.set("tsi", "relative");
 InitialPrefixes.set("wi", "away from speaker");
 InitialPrefixes.set("ni", "lateral position, already");
 InitialPrefixes.set("de", "plural object");
-InitialPrefixes.set("da", "future/motion toward speaker/");
+InitialPrefixes.set("da", "future/motion toward speaker");
 InitialPrefixes.set("di", "distant position");
 InitialPrefixes.set("i", "again");
 InitialPrefixes.set("ga", "since");
