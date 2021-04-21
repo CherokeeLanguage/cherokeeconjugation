@@ -8,5 +8,4 @@ class VerbFactoryTest extends ConjugateBase {
         def display = VerbFactory.createVerbFromParameters(paramMap)
         println display
     }
-
 }

@@ -176,8 +176,6 @@ class VerbConjugationProcessor {
 
         def returnValue = ""
 
-        log("verbToConjugate " + verbToConjugate)
-
         verb.compoundPrefix = compoundPrefix
         verb.verbset = verbset
 
@@ -193,8 +191,6 @@ class VerbConjugationProcessor {
         if (verbToConjugate) {
             returnValue = verbToConjugate
         }
-
-        log(verbToConjugate)
 
         return returnValue
     }

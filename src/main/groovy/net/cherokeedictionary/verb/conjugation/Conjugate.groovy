@@ -32,15 +32,6 @@ class Conjugate {
         return conjugate(subject, object, stemmer, tense, verbType, isReflexive);
     }
 
-    //old string based version
-//    static def conjugate(final String subject,
-//                  final String object,
-//                  final Stemmer stemmer,
-//                  final String tense,//verb tense
-//                  final VerbType verbType) { // vi or vt
-//        VerbConjugationProcessor.process(subject, object, stemmer, tense, verbType);
-//    }
-
     static def conjugate(final String subject,
                          final String object,
                          final Stemmer stemmer,
