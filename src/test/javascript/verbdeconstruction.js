@@ -53,7 +53,7 @@ function getNonFinalSuffixes(wholeWord) {
     while(foundAResult) {
         foundAResult = false;
         for (const nonFinalEnding of NonFinalEndings.keys()) {
-            if (word.endsWith(nonFinalEnding)){
+            if (word.endsWith(nonFinalEnding)) {
                 //wonis is ok but doesn't have a nonfinal ending - wonisis does have a nonfinal ending
                 //todo: find examples of this in the wild where it's possible that there are other conflicts - add to test implementations
                 if (nonFinalEnding === "is") {
@@ -79,6 +79,39 @@ function getNonFinalSuffixes(wholeWord) {
 }
 
 function getInitialPrefixes(wholeWord) {
+    var initialPrefixList = [];
+    var tmp = wholeWord.tmpParse;
+    var foundAResult = true;
+    while(foundAResult) {
+        foundAResult = false;
+
+        for (const initialPrefix of InitialPrefixes.keys()) {
+            if (tmp.startsWith(initialPrefix)) {
+                if (initialPrefix === "tsi") {
+                    if (tmp.split(initialPrefix).length - 1 > 1) {
+                        foundAResult = true;
+                        tmp = tmp.substring(initialPrefix.length);
+                        initialPrefixList.push(InitialPrefixes.get(initialPrefix));
+                    }
+                } else if (initialPrefix === "ga") {
+                    if (tmp.split(initialPrefix).length - 1 > 1) {
+                        foundAResult = true;
+                        tmp = tmp.substring(initialPrefix.length);
+                        initialPrefixList.push(InitialPrefixes.get(initialPrefix));
+                    }
+                } else {
+                    foundAResult = true;
+                    tmp = tmp.substring(initialPrefix.length);
+                    initialPrefixList.push(InitialPrefixes.get(initialPrefix));
+                }
+            }
+        }
+    }
+
+    wholeWord.tmpParse = tmp;
+
+    wholeWord.initialPrefixes = initialPrefixList;
+
     return wholeWord;
 }
 
@@ -154,7 +187,7 @@ function process(word, isSyllabary=true) {
 
     wholeWord = getNonFinalSuffixes(wholeWord);
 
-    // wholeWord = getInitialPrefixes(wholeWord);
+    wholeWord = getInitialPrefixes(wholeWord);
     wholeWord = getPronominalPrefixes(wholeWord);
     // wholeWord = getReflexivePrefix(wholeWord);
 
