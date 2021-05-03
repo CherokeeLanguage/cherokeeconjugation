@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Verb Deconstructor</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
     <script src="cherokeeParser.js"></script>
+    <script src="ajaxCall.js"></script>
     <script src="verbTables.js"></script>
+    <script src="wordDisplay.js"></script>
+    <script src="deconstructionMethods.js"></script>
+    <style>
+        .tableRowz {
+            padding-right:10px;
+            text-align: center;
+        }
+
+        .tableCell {
+            padding-right:10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 <div style="display:table-row">
     <div style="display:table-cell;width:300px">
         <div style="display:table-row">
-            <div style="display:table-cell"><input type="text" id="texttoprocess" value="ᎦᏬᏂᏍᎨᏍᏗ"/><br/><button onclick='javascript:processText();'>Process</button><br/><br/></div>
+            <div style="display:table-cell"><input type="text" id="texttoprocess" value="ᎠᎦᏍᎦᏛ"/><br/><button onclick='javascript:processText();'>Process</button><br/><br/></div>
         </div>
         <div style="display:table-row">
             <div style="display:table-cell"><textarea cols="30" rows="6" type="text" id="textareatoprocess">ᎤᏍᏗ ᎠᏓᏪᎳᎩᏍᎬ ᎤᏃᏛ ᏧᎾᏦᎯᏍᏗ, ᏌᎪᏂᎨ ᏃᎴ ᏓᎶᏂᎨ ᏓᏓᏪᎳᎩᏍᎬ ᏩᏁ ᏃᎴ, ᏘᎵ ᏚᏅᏛ. ᎧᎵ ᎠᏂᏅ ᏗᎦᏅᎯᏓ ᏗᎦᏍᎩᎶᎩ, ᏗᏂᏲᏟ ᎡᏓᏍᏘ ᎠᏂᏅ ᎠᎴ ᎠᏂᏅᎬ.</textarea><br/><button onclick='javascript:processTextArea();'>Process</button><br/><br/></div>
@@ -57,73 +73,115 @@
 
         <br/>JSON Representation<br/>
         <div id="display"></div>
+        <div id="resultData"></div> style="display:block; visibility:hidden"
     </div>
+
+    <div id="wordDisplay"></div>
 </div>
+<script src="verbdeconstruction.js"></script>
+<script src="tests.js"></script>
+<script>
 
-    <script src="verbdeconstruction.js"></script>
-    <script src="tests.js"></script>
-    <script>
 
-        function processText() {
-            display(document.getElementById('texttoprocess').value);
-        }
+    function createDisplayWordTest() {
+        var html = "";
+        var ww = newWholeWord("ᏱᎦᏬᏂᏏᎶᏍᎬᎢᏛ", true);
+        //initialprefixes + pronominalprefixes + reflexive + root + root ending + nonfinal suffixes + final suffixes
+        ww.initialPrefixes = ["negative"];// need to add all of the prefix
+        ww.pronounPrefixes = ["SG3SG3IN"];// need to add the pronoun portion
+        ww.finalSuffixes = [{"phonetic":"dv","syllabary":"","meaning":"focus","purpose":"","name":""}];
+        ww.definitions = [{"id":73206,"vsecondimpertone":"hi.2wo1ni23hi","definitionlarge":"","definitiond":"he's speaking","entrytone":"ga.2wo3ni.2ha","vthirdprestone":"ga.2wo3ni2sgo3?i","vthirdprestranslit":"gawonisgoi","notes":"","nounadjpluraltone":"","crossreferencet":"gawonida","sentenceq":"Tsgwisdi <u>gawoniha</u>, asehnv hla gohusdi yadiha.","vsecondimperm":"hiwonihi","partofspeechc":"vi","vfirstprestone":"ji.2wo3ni.2ha","vthirdinfsyllp":"ᎤᏬᏂᎯᏍᏗ","vthirdinfo":"uwonihisdi","source":"ced","sentenceenglishs":"<u>He's</u> <u>talking</u> a lot, but he's not saying anything.","entrytranslit":"gawoniha","vthirdinftranslit":"uwonihisdi","vthirdpasti":"uwonisvi","nounadjpluraltranslit":"","vthirdpressylll":"ᎦᏬᏂᏍᎪᎢ","vthirdpasttone":"u1wo3ni2sv23?i","vsecondimpertranslit":"hiwonihi","vfirstpresg":"jiwoniha","vfirstpresh":"ᏥᏬᏂᎭ","vthirdpastsyllj":"ᎤᏬᏂᏒᎢ","sentencesyllr":"ᏥᏈᏍᏗ <u>ᎦᏬᏂᎭ</u>, ᎠᏎᏅ Ꮭ ᎪᎱᏍᏗ ᏯᏗᎭ.","category":"","vthirdpasttranslit":"uwonisvi","sentencetranslit":"tsiquisdi <u>gawoniha</u>, asenv tla gohusdi yadiha.","nounadjpluralsyllf":"","nounadjplurale":"","entrya":"gawoniha","vthirdinftone":"u2wo1ni23hi.3sdi","vsecondimpersylln":"ᎯᏬᏂᎯ","syllabaryb":"ᎦᏬᏂᎭ","etymology":"","vfirstprestranslit":"tsiwoniha","vthirdpresk":"gawonisgoi"},{"id":100923,"vsecondimpertone":"hịwonhi","definitionlarge":"","definitiond":"He is talking.; He is speaking","entrytone":"gạwoniha","vthirdprestone":"gạwonisgo³ɂi","vthirdprestranslit":"gawonisgoi","notes":"","nounadjpluraltone":"","crossreferencet":"","sentenceq":"[King p40]","vsecondimperm":"hiwonhi","partofspeechc":"vi","vfirstprestone":"tsịwonịɂa","vthirdinfsyllp":"ᎤᏬᏂᎯᏍᏗ","vthirdinfo":"uwonhisdi","source":"rrd","sentenceenglishs":"“<u>I will speak</u> in Cherokee.”","entrytranslit":"gawoniha","vthirdinftranslit":"uwonihisdi","vthirdpasti":"uwonsvi","nounadjpluraltranslit":"","vthirdpressylll":"ᎦᏬᏂᏍᎪᎢ","vthirdpasttone":"uwonsv²³ɂi","vsecondimpertranslit":"hiwonihi","vfirstpresg":"tsiwonia","vfirstpresh":"ᏥᏬᏂᎠ","vthirdpastsyllj":"ᎤᏬᏂᏒᎢ","sentencesyllr":"ᏴᏫᏯ ᎬᏗ <u>ᏓᏥᏬᏂᏏ</u>.","category":"","vthirdpasttranslit":"uwonisvi","sentencetranslit":"yvwiya gvdi <u>datsiwonisi</u>.","nounadjpluralsyllf":"","nounadjplurale":"","entrya":"gawoniha","vthirdinftone":"uwonhisdi","vsecondimpersylln":"ᎯᏬᏂᎯ","syllabaryb":"ᎦᏬᏂᎭ","etymology":"","vfirstprestranslit":"tsiwonia","vthirdpresk":"gawonisgoi"}];
+        ww.verbTenses = [{"phonetic":"vi","syllabary":"","meaning":"PAST","purpose":"","name":""}];
+        ww.root_syllabary = "ᏬᏂ";
+        ww.root_ending = "h";
+        ww.root_phonetic = "woni";
+        console.log("ww " + ww.syllabary);
+        console.log("ww " + ww.phonetic);
+        console.log("root " + ww.root_syllabary);
 
-        function processTextArea() {
-            var processedList = []
+        html += formBase(ww.root_syllabary, ww.definitions)
 
-            var textToParseFromTextArea = document.getElementById('textareatoprocess').value;
+        html += formRootEnding(ww.root_ending);
 
-            var splitSentence = textToParseFromTextArea.split(" ");
+        // todo: verb tense should be in syllabary too
+        html += formVerbTense(ww.verbTenses);
 
-            for (var splitSentenceElement of splitSentence) {
-                //remove punctuation
-                //process each item as a translation
-                //see what happens
+        // todo: non final suffixes should be in syllabary too
+        html += formNonFinalSuffixes(ww.nonFinalSuffixes);
 
-                splitSentenceElement = splitSentenceElement.replaceAll(/[\,\.\?]/g, "");
-                console.log(JSON.stringify(process(splitSentenceElement)));
+        // todo: final suffixes should have syllabary
+        html += formFinalSuffixes(ww.finalSuffixes);
 
-                // processedList.push(JSON.stringify(process(splitSentenceElement)));
+        document.getElementById("wordDisplay").innerHTML = html;
+
+    }
+
+    // createDisplayWordTest();
+
+    function processText() {
+        display(document.getElementById('texttoprocess').value);
+    }
+
+    function processTextArea() {
+        var processedList = [];
+
+        var textToParseFromTextArea = document.getElementById('textareatoprocess').value;
+
+        textToParseFromTextArea = textToParseFromTextArea.trim()
+
+        var splitSentence = textToParseFromTextArea.split(" ")
+
+        for (let i = 0; i < splitSentence.length; i++) {
+            var splitSentenceElement = splitSentence[i];
+            //remove punctuation
+            //process each item as a translation
+            //see what happens
+            splitSentenceElement = splitSentenceElement.trim();
+            splitSentenceElement = splitSentenceElement.replaceAll(/[\,\.\?]/g, "");
+
+            if (splitSentenceElement !== "") {
+                processedList.push(JSON.stringify(process(splitSentenceElement)));
             }
-
-            display(processedList.join(","));
         }
 
-        // runTests();
-    </script>
+        display(processedList.join(","));
+    }
 
-    <script>
-        var testLinks = [];
+    // runTests();
+</script>
 
-        testLinks.push('ᎤᏬᏂᏏᎶᎡᎢ');
+<script>
+    var testLinks = [];
 
-        //https://stackoverflow.com/questions/18500759/createelement-a-href-variable1variable2-a/18500892
-        //https://stackoverflow.com/questions/11017509/add-onclick-event-to-document-createelementth
-        const appendAnchorTag = (text) => {
-            const anchor = document.createElement('a');
-            const list = document.getElementById('testLinks');
-            anchor.href = '#';
-            anchor.innerText = text + " - " + parseSyllabary(text);
-            anchor.setAttribute('onclick', "display('" + text + "');");
+    testLinks.push('ᎠᎦᏍᎦᏛ');
 
-            list.appendChild(anchor);
-            list.appendChild(document.createElement("br"));
-        };
+    //https://stackoverflow.com/questions/18500759/createelement-a-href-variable1variable2-a/18500892
+    //https://stackoverflow.com/questions/11017509/add-onclick-event-to-document-createelementth
+    const appendAnchorTag = (text) => {
+        const anchor = document.createElement('a');
+        const list = document.getElementById('testLinks');
+        anchor.href = '#';
+        anchor.innerText = text + " - " + parseSyllabary(text);
+        anchor.setAttribute('onclick', "display('" + text + "');");
 
-        appendAnchorTag('ᎤᏬᏂᏏᎶᎡᎢ');
-        appendAnchorTag('ᎦᏬᏂᎭᏊᏧ');
-        appendAnchorTag('ᎦᏬᏂᏍᎬᎢ');
-        appendAnchorTag('ᎤᏬᏂᏎᎢ');
-        appendAnchorTag('ᎦᏬᏂᏍᎬᎢ');
-        appendAnchorTag('ᎦᏬᏂᏏᎶᏍᎬᎢ');
-        appendAnchorTag('ᎯᏬᏂᎯ');
-        appendAnchorTag('ᎯᏬᏂᏏᎶᏣ');
-        appendAnchorTag('ᎯᏬᏂᎯ');
-        appendAnchorTag('ᎠᎦᏍᎦᏛ');
-        appendAnchorTag('ᏱᎦᏬᏂᏏᎶᏍᎬᎢᏛ');
-        appendAnchorTag('ᎠᏆᏚᎵᎭ');
-        appendAnchorTag('ᏓᏆᏚᎵᎭ');
-    </script>
+        list.appendChild(anchor);
+        list.appendChild(document.createElement("br"));
+    };
+
+    appendAnchorTag('ᎦᏬᏂᎭ');
+    appendAnchorTag('ᎤᏬᏂᏏᎶᎡᎢ');
+    appendAnchorTag('ᎦᏬᏂᎭᏊᏧ');
+    appendAnchorTag('ᎦᏬᏂᏍᎬᎢ');
+    appendAnchorTag('ᎤᏬᏂᏎᎢ');
+    appendAnchorTag('ᎦᏬᏂᏍᎬᎢ');
+    appendAnchorTag('ᎦᏬᏂᏏᎶᏍᎬᎢ');
+    appendAnchorTag('ᎯᏬᏂᎯ');
+    appendAnchorTag('ᎯᏬᏂᏏᎶᏣ');
+    appendAnchorTag('ᎠᎦᏍᎦᏛ'); // it's raining'
+    appendAnchorTag('ᏱᎦᏬᏂᏏᎶᏍᎬᎢᏛ');
+    appendAnchorTag('ᎠᏆᏚᎵᎭ');
+    appendAnchorTag('ᏓᏆᏚᎵᎭ');
+</script>
 
 </body>
 </html>
