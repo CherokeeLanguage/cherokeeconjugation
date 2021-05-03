@@ -46,7 +46,7 @@ async function deconstruct(wholeWord, word) {
 
     // if there's a result then we are going to put that information into the display object
     if (values.length > 0) {
-        console.log("second value thing found");
+        // console.log("second value thing found");
         wholeWord.syllabary = tmpValSyllabary;
         // TODO: we found an item in the database - we need to create a new display object that we're going to send to the user or the page
         wholeWord = await valueFound(values, wholeWord);
@@ -128,7 +128,7 @@ async function process(word, isSyllabary=true) {
     //     if exists
     //         setup wholeWord and return
     if (values.length > 0) {
-        console.log("first value thing found");
+        // console.log("first value thing found");
         wholeWord = await valueFound(values, wholeWord);
     } else {
         //     else
@@ -149,11 +149,11 @@ async function process(word, isSyllabary=true) {
 
                 //other endings need to be added h, l, s, d, and others
                 if (wholeWord.tmpParse.endsWith("s")) {
-                    wholeWord.tmpParse = wholeWord.tmpParse.substring(0, wholeWord.tmpParse.length -1) + "h";
+                    wholeWord.tmpParse = wholeWord.tmpParse.substring(0, wholeWord.tmpParse.length -1);
                 }
 
                 //once parsed then try another lookup in the database
-                var tmpWord = pronPrefix + wholeWord.tmpParse + VerbTenseLookup.get("PRESENT");
+                var tmpWord = pronPrefix + wholeWord.tmpParse + "h" + VerbTenseLookup.get("PRESENT");
                 // console.log("tmpWord " + tmpWord);
                 tmpWord = tsalagiToSyllabary(tmpWord);
 
@@ -181,7 +181,7 @@ async function process(word, isSyllabary=true) {
 
 async function display(word, isSyllabary=true) {
     var wholeWord = await process(word, isSyllabary);
-    console.log("dictionary entries " + wholeWord.definitions.length);
+    // console.log("dictionary entries " + wholeWord.definitions.length);
     for (const dictionaryEntry of wholeWord.definitions) {
         console.log("dictionary Entry " + dictionaryEntry.definitions);
     }

@@ -14,11 +14,11 @@ class PrefixYi implements Affix {
             baseReturnValue = baseReturnValue ?: data
 
             if (!word.initialPrefixHolder.ji) {
-                def latin = new SyllabaryUtil().parseSyllabary(data)
+                def latin = SyllabaryUtil.parseSyllabary(data)
                 def startsWithH = latin.startsWith('h')
                 if (startsWithH) {
                     latin = latin.substring(1)
-                    baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary(latin)
+                    baseReturnValue = SyllabaryUtil.tsalagiToSyllabary(latin)
                 }
 
                 def charAtZero = baseReturnValue.charAt(0)

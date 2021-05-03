@@ -24,22 +24,22 @@ class GaVerbTest extends ConjugateBase {
 //        verb.finalSuffix.with {vi = true}
 //
 //        verb.pronounPrefixLatin = "gini"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gaginigohvi"))
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gaginigohvi"))
 //
 //        verb.verbRootLatinPhonetic = "go"
 //        verb.pronounPrefixLatin = "ogini"
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gayoginigohvi"))
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gayoginigohvi"))
 //
 //        verb.verbRootLatinPhonetic = "go"
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //        verb.pronounPrefixLatin = "agi"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gvgigohvi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gvgigohvi"))
 //    }
 //
 ////    jagohvi
@@ -57,16 +57,16 @@ class GaVerbTest extends ConjugateBase {
 //        verb.verbRootSuffixLatinPhonetic = "h"
 //        verb.finalSuffix.with {vi = true}
 //
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //        verb.pronounPrefixLatin = "ja"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gejagohvi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gejagohvi"))
 //
 //        verb.verbRootLatinPhonetic = "go"
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //        verb.pronounPrefixLatin = "sdi"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gesdigohvi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gesdigohvi"))
 //    }
 //
 ////    ugohvi
@@ -85,15 +85,15 @@ class GaVerbTest extends ConjugateBase {
 //        verb.finalSuffix.with {vi = true}
 //
 //        //u- after gvw becomes gvwa -- pp255 Durbin Feeling Dictionary
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //        verb.pronounPrefixLatin = "u"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gvwagohvi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gvwagohvi"))
 //
 //        verb.verbRootLatinPhonetic = "go"
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
 //        verb.pronounPrefixLatin = "uni"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("gvwanigohvi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("gvwanigohvi"))
 //    }
 }

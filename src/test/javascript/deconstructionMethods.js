@@ -35,7 +35,7 @@ function getFinalSuffixes(wholeWord) {
             var tmpEnding = FinalEndings.get(finalEnding);
             if (word.endsWith(finalEnding)) {
                 foundAResult = true;
-                finalSuffixesList.push(createExplanation(finalEnding, '', 'suffix', '', tmpEnding, ''));
+                finalSuffixesList.push(createExplanation(finalEnding, newTsalagiToSyllabary(finalEnding), 'suffix', '', tmpEnding, ''));
                 word = word.substr(0, word.length - finalEnding.length);
             }
         }
@@ -55,7 +55,7 @@ function getVerbTenseSuffixes(wholeWord) {
     for (const verbTense of VerbTense.keys()) {
         if (word.endsWith(verbTense)) {
             var verbTenseItem = VerbTense.get(verbTense);
-            var explanation = createExplanation(verbTense, '', 'suffix', '', verbTenseItem, '');
+            var explanation = createExplanation(verbTense, newTsalagiToSyllabary(verbTense), 'suffix', '', verbTenseItem, '');
             verbTenseSuffixesList.push(explanation);
             word = word.substr(0, word.length - verbTense.length);
         }

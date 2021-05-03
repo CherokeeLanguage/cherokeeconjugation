@@ -3,6 +3,9 @@ package net.cherokeedictionary.factory
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stemmer.DefinitionLine
 import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.util.PartOfSpeech
+import net.cherokeedictionary.util.PrefixTableSubject
+import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.conjugation.Conjugate
 
 class VerbFactory {
@@ -51,11 +54,28 @@ class VerbFactory {
 //            ga = params.ga == 'on'
 //            e = params.e == 'on'
 //        }
-//
+
+        if (partofspeechc == 'v.i.' || partofspeechc == 'vi') {
+            partofspeechc = PartOfSpeech.VERB_INTRANSITIVE
+        } else {
+            partofspeechc = PartOfSpeech.VERB_TRANSITIVE
+        }
+
         def displayValue
+
+            Verb verb = Conjugate.createVerbToConjugate(paramMap.subject, paramMap.object, stemmer, paramMap.verbTense, partofspeechc, false)
+            verb.initialPrefixHolder.yi = paramMap.yi
+            verb.initialPrefixHolder.ji = paramMap.ji
+            verb.initialPrefixHolder.wi = paramMap.wi
+            verb.initialPrefixHolder.ni = paramMap.ni
+            verb.initialPrefixHolder.de = paramMap.de
+            verb.initialPrefixHolder.da = paramMap.da
+            verb.initialPrefixHolder.di = paramMap.di
+            verb.initialPrefixHolder.i = paramMap.i
+            verb.initialPrefixHolder.ga = paramMap.ga
+            verb.initialPrefixHolder.e = paramMap.e
         try {
-            Verb verb = Conjugate.conjugate(paramMap.subject, paramMap.object, stemmer, paramMap.verbTense, partofspeechc, false)
-//            println verb
+            verb = Conjugate.conjugate(verb);
             displayValue = verb.wholeWord
         } catch (Exception e) {
             displayValue = "there was an error with your request"
