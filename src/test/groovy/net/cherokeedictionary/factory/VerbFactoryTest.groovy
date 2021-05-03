@@ -57,4 +57,6 @@ class VerbFactoryTest extends ConjugateBase {
         display = Conjugate.conjugate(display)
         println display
     }
+
+
 }
