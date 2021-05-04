@@ -47,11 +47,12 @@ class Conjugate {
         }
 
         Verb verb = new Verb()
+        verb.partOfSpeech = verbType
         verb.subject = PrefixTableSubject.valueOf(subject)
         verb.object = pobj
         verb.stemmer = stemmer
         verb.tense = Tense.valueOf(tense)
-        verb.partOfSpeech = verbType
+
         verb.reflexiveHolderObject.reflexive = isReflexive
 
         return verb;
@@ -71,8 +72,9 @@ class Conjugate {
         def compoundPrefix = null
 
         try {
-            compoundPrefix = CompoundPrefixes."${verb.subject.toString()}${verb.object.toString()}"
+            compoundPrefix = CompoundPrefixes.prefixes["${verb.subject.toString()}${verb.object.toString()}"]
         } catch (Exception e) {
+            e.printStackTrace()
         }
 
         if (compoundPrefix) {
