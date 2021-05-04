@@ -13,11 +13,11 @@ class PrefixWi implements Affix {
             String data = word.pronounReflexiveRoot
             baseReturnValue = baseReturnValue ?: data
 
-            def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
+            def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
             def startsWithH = latin.startsWith('h')
             if (startsWithH) {
                 latin = latin.substring(1)
-                baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary(latin)
+                baseReturnValue = SyllabaryUtil.tsalagiToSyllabary(latin)
             }
             def charAtZero = baseReturnValue.charAt(0)
 

@@ -12,7 +12,7 @@ class PrefixJi implements Affix {
         if (word.initialPrefixHolder.ji) {
             String data = word.pronounReflexiveRoot
             baseReturnValue = baseReturnValue ?: data
-            def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
+            def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
 
             //check for past tense word.tense =
             //j- cannot be used when reportative past tense suffix ei is used

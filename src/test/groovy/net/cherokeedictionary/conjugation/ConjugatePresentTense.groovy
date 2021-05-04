@@ -193,6 +193,4 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᏓᏂᎯᎠ" == conj("PL3", "PL3IN", tokill, verbTense, partofspeechc)
     }
-    
-
 }

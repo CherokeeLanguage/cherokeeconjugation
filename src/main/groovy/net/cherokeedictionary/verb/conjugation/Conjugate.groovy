@@ -32,12 +32,12 @@ class Conjugate {
         return conjugate(subject, object, stemmer, tense, verbType, isReflexive);
     }
 
-    static def conjugate(final String subject,
-                         final String object,
-                         final Stemmer stemmer,
-                         final String tense,//verb tense
-                         final PartOfSpeech verbType,
-                         final boolean isReflexive) { // vi or vt
+    static def createVerbToConjugate(final String subject,
+                                     final String object,
+                                     final Stemmer stemmer,
+                                     final String tense,//verb tense
+                                     final PartOfSpeech verbType,
+                                     final boolean isReflexive) {
         //todo: could this eventually be something that valueOf is overridden so if the value is blank it returns NONE?  Valueof cannot be overridden so idk
         PrefixTableObject pobj
         if (object && object != "") {
@@ -47,23 +47,34 @@ class Conjugate {
         }
 
         Verb verb = new Verb()
+        verb.partOfSpeech = verbType
         verb.subject = PrefixTableSubject.valueOf(subject)
         verb.object = pobj
         verb.stemmer = stemmer
         verb.tense = Tense.valueOf(tense)
-        verb.partOfSpeech = verbType
+
         verb.reflexiveHolderObject.reflexive = isReflexive
 
-        verb = conjugate(verb)
+        return verb;
+    }
+
+    static Verb conjugate(final String subject,
+                         final String object,
+                         final Stemmer stemmer,
+                         final String tense,//verb tense
+                         final PartOfSpeech verbType,
+                         final boolean isReflexive) { // vi or vt
+        Verb verb = conjugate(createVerbToConjugate(subject, object, stemmer, tense, verbType, isReflexive))
         return verb
     }
 
-    static def conjugate(final Verb verb) {
+    static Verb conjugate(final Verb verb) {
         def compoundPrefix = null
 
         try {
-            compoundPrefix = CompoundPrefixes."${verb.subject.toString()}${verb.object.toString()}"
+            compoundPrefix = CompoundPrefixes.prefixes["${verb.subject.toString()}${verb.object.toString()}"]
         } catch (Exception e) {
+            e.printStackTrace()
         }
 
         if (compoundPrefix) {

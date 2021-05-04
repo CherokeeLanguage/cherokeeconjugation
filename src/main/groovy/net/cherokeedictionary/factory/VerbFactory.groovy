@@ -4,7 +4,6 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stemmer.DefinitionLine
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.PartOfSpeech
-import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.conjugation.Conjugate
@@ -46,19 +45,31 @@ class VerbFactory {
             partofspeechc = PartOfSpeech.VERB_TRANSITIVE
         }
 
-        verb.subject = paramMap.subject ?:PrefixTableSubject.valueOf(paramMap.subject)
-        verb.object = paramMap.object ?: PrefixTableObject.valueOf(paramMap.object)
-
-        verb.partOfSpeech = partofspeechc
-        verb.stemmer = stemmer
-        verb.tense = Tense.valueOf(paramMap.verbTense)
-
-        return verb
-    }
-
-    static Verb createVerbFromParametersAndConjugate(paramMap) {
-        Verb verb = createVerbFromParameters(paramMap)
-        verb = Conjugate.conjugate(verb)
+//        verb.subject = paramMap.subject ?:PrefixTableSubject.valueOf(paramMap.subject)
+//        verb.object = paramMap.object ?: PrefixTableObject.valueOf(paramMap.object)
+//
+//        verb.partOfSpeech = partofspeechc
+//        verb.stemmer = stemmer
+//        verb.tense = Tense.valueOf(paramMap.verbTense)
+//
+//        return verb
+//    }
+//
+//    static Verb createVerbFromParametersAndConjugate(paramMap) {
+//        Verb verb = createVerbFromParameters(paramMap)
+//        verb = Conjugate.conjugate(verb)
+//=======
+        Verb verb = Conjugate.createVerbToConjugate(paramMap.subject, paramMap.object, stemmer, paramMap.verbTense, partofspeechc, false)
+//        verb.initialPrefixHolder.yi = paramMap.yi
+//        verb.initialPrefixHolder.ji = paramMap.ji
+//        verb.initialPrefixHolder.wi = paramMap.wi
+//        verb.initialPrefixHolder.ni = paramMap.ni
+//        verb.initialPrefixHolder.de = paramMap.de
+//        verb.initialPrefixHolder.da = paramMap.da
+//        verb.initialPrefixHolder.di = paramMap.di
+//        verb.initialPrefixHolder.i = paramMap.i
+//        verb.initialPrefixHolder.ga = paramMap.ga
+//        verb.initialPrefixHolder.e = paramMap.e
 
         return verb
     }

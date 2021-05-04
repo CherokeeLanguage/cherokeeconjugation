@@ -46,7 +46,7 @@ class FinalSuffixProcessor {
     }
 
     public static void removeFinalSuffix(HolderWord hw) {
-        def su = new SyllabaryUtil()
+        def su = SyllabaryUtil
         String tsalagi = su.parseSyllabary(hw.syllabary)
         boolean endingAlready = false
         lstEndings.each { finals ->
