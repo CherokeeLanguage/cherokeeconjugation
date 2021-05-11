@@ -19,11 +19,13 @@ plugins {
 }
 
 repositories {
-    // Use JCenter for resolving dependencies.
-    jcenter()
+
     maven {url 'file:///' + new File(System.getProperty('user.home'), '/.m2/repository').absolutePath}
 
     mavenCentral();
+
+    // Use JCenter for resolving dependencies.
+    jcenter()
 }
 
 version = '0.2.0'
