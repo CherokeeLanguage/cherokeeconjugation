@@ -145,7 +145,7 @@ async function process(word, isSyllabary=true) {
         if (wholeWord.definition === "" || wholeWord.definition === undefined) {
             // right here put together a generic verb entry and then look it up
             if (wholeWord.pronounPrefixes && wholeWord.pronounPrefixes.length > 0) {
-                var pronPrefix = getPronPrefix();
+                var pronPrefix = getPronPrefix(wholeWord);
 
                 //other endings need to be added h, l, s, d, and others
                 if (wholeWord.tmpParse.endsWith("s")) {
