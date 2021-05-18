@@ -110,11 +110,11 @@ class VerbConjugationProcessor {
 
         def combinedSubjectObject = "${verb.subject}${verb.object}"
 
-        if (combinedSubjectObject == "SG3SG3AN" && !verb.reflexiveHolderObject.isReflexive()) {
-            return verb.stemmer.present3rd.syllabary;
-        }
+//        if (combinedSubjectObject == "SG3SG3AN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
+//            return verb.stemmer.present3rd.syllabary;
+//        }
 
-        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE && combinedSubjectObject == "SG3SG3IN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
+        if (combinedSubjectObject == "SG3SG3AN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
             return verb.stemmer.present3rd.syllabary;
         }
 
