@@ -7,12 +7,12 @@ class VerbNonFinalSuffixHolderObject extends HolderObjectBase {
     boolean el  = false
     boolean g  = false
     boolean idol  = false
-    boolean ihi  = false
+    boolean ihl  = false
     boolean ilo   = false
     boolean ohn = false
 
     public String getTrueValue() {
-        map = ["dan": dan, "dohdan": dohdan, "e": e, "el": el, "g": g, "idol": idol, "ihi": ihi, "ilo": ilo, "ohn": ohn]
+        map = ["dan": dan, "dohdan": dohdan, "e": e, "el": el, "g": g, "idol": idol, "ihl": ihl, "ilo": ilo, "ohn": ohn]
 
         return getTrueValues().get(0)
     }
@@ -26,7 +26,7 @@ class VerbNonFinalSuffixHolderObject extends HolderObjectBase {
                 ", el=" + el +
                 ", g=" + g +
                 ", idol=" + idol +
-                ", ihi=" + ihi +
+                ", ihl=" + ihl +
                 ", ilo=" + ilo +
                 ", ohn=" + ohn +
                 '}';

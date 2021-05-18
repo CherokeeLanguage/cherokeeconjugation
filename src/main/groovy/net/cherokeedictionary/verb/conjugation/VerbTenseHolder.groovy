@@ -26,7 +26,7 @@ class VerbTenseHolder {
      * TODO: do checks to make sure these have values before we start crapping things up -- timo 16Aug15
      */
     public void process() {
-//        def su = new SyllabaryUtil()
+//        def su = SyllabaryUtil
 
 //        infinitive = su.parseSyllabary(stemmer.infinitive.syllabary.substring(1))
 //        println stemmer.infinitive.syllabary.substring(1)

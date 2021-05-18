@@ -33,8 +33,6 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        println verb.toString()
-
         assertTrue "ᏳᏫᎬᎪᏩᏘᎭ" == verb.wholeWord
 
         verb.object = PrefixTableObject.SG3AN

@@ -27,7 +27,7 @@ class PrefixDe implements Affix {
 //        /de = do before di- prefix
 //        Feeling Dictionary
 
-            def latin = new SyllabaryUtil().parseSyllabary(data)
+            def latin = SyllabaryUtil.parseSyllabary(data)
             def startsWithH = latin.startsWith('h')
             baseReturnValue = baseReturnValue ?: data
 

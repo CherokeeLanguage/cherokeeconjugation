@@ -43,25 +43,25 @@ class JiVerbTest extends ConjugateBase {
 //        verb.verbRootSuffixLatinPhonetic = "h"
 //        verb.finalSuffix.with {a = true}
 //        verb.pronounPrefixLatin = "ga"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("jigawoniha"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("jigawoniha"))
 //
 //        verb.verbRootLatinPhonetic = "gowati"
 //        verb.verbRootSuffixLatinPhonetic = "h"
 //        verb.finalSuffix.with {a = true}
 //        verb.pronounPrefixLatin = "ji"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-//        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("jijigowatiha"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+//        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("jijigowatiha"))
 //
 //        verb.initialPrefix.with {ji = true; yi = true}
 //        verb.verbRootLatinPhonetic = "woni"
 //        verb.verbRootSuffixLatinPhonetic = "h"
 //        verb.finalSuffix.with {a = true}
 //        verb.pronounPrefixLatin = "ga"
-//        verb.pronounPrefixSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.pronounPrefixLatin)
-//        verb.verbRootSyllabary = new SyllabaryUtil().tsalagiToSyllabary(verb.verbRootLatinPhonetic)
-////        basicAssertion(verb, new SyllabaryUtil().tsalagiToSyllabary("nigawonisgvna jigi"))
+//        verb.pronounPrefixSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.pronounPrefixLatin)
+//        verb.verbRootSyllabary = SyllabaryUtil.tsalagiToSyllabary(verb.verbRootLatinPhonetic)
+////        basicAssertion(verb, SyllabaryUtil.tsalagiToSyllabary("nigawonisgvna jigi"))
 //    }
 }

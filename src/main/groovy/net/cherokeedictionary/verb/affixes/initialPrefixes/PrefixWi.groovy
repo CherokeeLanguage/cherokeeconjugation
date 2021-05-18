@@ -9,23 +9,21 @@ class PrefixWi implements Affix {
     String wi;
 
     String toSyllabary(String baseReturnValue, Verb word) {
-        if (word.initialPrefixHolder.wi) {
-            String data = word.pronounReflexiveRoot
-            baseReturnValue = baseReturnValue ?: data
+        String data = word.pronounReflexiveRoot
+        baseReturnValue = baseReturnValue ?: data
 
-            def latin = new SyllabaryUtil().parseSyllabary(baseReturnValue)
-            def startsWithH = latin.startsWith('h')
-            if (startsWithH) {
-                latin = latin.substring(1)
-                baseReturnValue = new SyllabaryUtil().tsalagiToSyllabary(latin)
-            }
-            def charAtZero = baseReturnValue.charAt(0)
+        def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
+        def startsWithH = latin.startsWith('h')
+        if (startsWithH) {
+            latin = latin.substring(1)
+            baseReturnValue = SyllabaryUtil.tsalagiToSyllabary(latin)
+        }
+        def charAtZero = baseReturnValue.charAt(0)
 
-            if (StringUtility.startsWithVowelSyllabary(baseReturnValue)) {
-                baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮹ', 'Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ'])
-            } else {
-                baseReturnValue = "Ꮻ" + (baseReturnValue != '' ? baseReturnValue : data);
-            }
+        if (StringUtility.startsWithVowelSyllabary(baseReturnValue)) {
+            baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮹ', 'Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ'])
+        } else {
+            baseReturnValue = "Ꮻ" + (baseReturnValue != '' ? baseReturnValue : data);
         }
 
         return baseReturnValue;
