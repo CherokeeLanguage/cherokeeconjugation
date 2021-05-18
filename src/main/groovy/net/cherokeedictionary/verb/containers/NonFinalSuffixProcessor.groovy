@@ -14,7 +14,7 @@ class NonFinalSuffixProcessor {
         def el = verb.nonFinalSuffixHolder.el
         def g = verb.nonFinalSuffixHolder.g
         def idol = verb.nonFinalSuffixHolder.idol
-        def ihi = verb.nonFinalSuffixHolder.ihi
+        def ihl = verb.nonFinalSuffixHolder.ihl
         def ilo = verb.nonFinalSuffixHolder.ilo
         def ohn = verb.nonFinalSuffixHolder.ohn
 
