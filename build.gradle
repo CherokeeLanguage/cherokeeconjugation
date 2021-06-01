@@ -15,7 +15,7 @@ plugins {
 
     id 'maven-publish'
 
-    id "org.grooscript.conversion" version "1.3.0"
+//    id "org.grooscript.conversion"
 }
 
 repositories {
@@ -69,7 +69,7 @@ publishing {
     }
 }
 
-grooscript {
-    source = ['src/main/groovy/net/cherokeedictionary/']
-    recursive=true
-}
+//grooscript {
+//    source = ['src/main/groovy/net/cherokeedictionary/']
+//    recursive=true
+//}
