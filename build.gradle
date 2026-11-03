@@ -15,14 +15,22 @@ plugins {
 
     id 'maven-publish'
 
-    id "org.grooscript.conversion" version "1.3.0"
+//    id "org.grooscript.conversion" version "1.3.0"
 }
 
 repositories {
 
     maven {url 'file:///' + new File(System.getProperty('user.home'), '/.m2/repository').absolutePath}
 
-    mavenCentral();
+    // releases
+    mavenCentral()
+
+    // snapshots
+//    maven(url = "https://central.sonatype.com/repository/maven-snapshots/")
+
+    // Once you start using pluginManagement, you should explicitly add this,
+    // unless you NEVER want to use this repository
+    gradlePluginPortal()
 
     // Use JCenter for resolving dependencies.
     jcenter()
@@ -31,6 +39,9 @@ repositories {
 version = '0.2.0'
 
 dependencies {
+    compileJava.options.encoding = 'UTF-8'
+    compileTestJava.options.encoding = 'UTF-8'
+
     // Use the latest Groovy version for building this library
     implementation 'org.codehaus.groovy:groovy-all:2.5.13'
 //    implementation 'org.codehaus.groovy:groovy-all:3.0.7'
@@ -69,7 +80,7 @@ publishing {
     }
 }
 
-grooscript {
-    source = ['src/main/groovy/net/cherokeedictionary/']
-    recursive=true
-}
+//grooscript {
+//    source = ['src/main/groovy/net/cherokeedictionary/']
+//    recursive=true
+//}
