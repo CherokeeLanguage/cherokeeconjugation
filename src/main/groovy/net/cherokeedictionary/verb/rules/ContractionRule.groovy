@@ -1,6 +1,4 @@
 package net.cherokeedictionary.verb.rules
-
-import net.cherokeedictionary.core.Verb
 //import net.cherokeedictionary.core.Morpheme
 
 /**
