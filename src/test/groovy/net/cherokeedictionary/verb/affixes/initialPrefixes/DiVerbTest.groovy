@@ -12,6 +12,8 @@ import net.cherokeedictionary.verb.conjugation.Conjugate
 //pp 252-254 Durbin Feeling Dictionary
 class DiVerbTest extends ConjugateBase {
 
+    //todo: refactor in some way that conjugate taking a verb can also run the pieces needed to create a verb
+    //      and add these issues in in this similar way - creating a Verb object that's then manufactured -- timo 03Nov26
     void testVerbDi() {
         Verb verb = new Verb()
         verb.subject = PrefixTableSubject.SG1

@@ -3,12 +3,20 @@ package net.cherokeedictionary.verb.affixes.suffixes
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.verb.affixes.Affix
 
+/**
+ * Suffix: -esdi
+ * Used in specific aspectual or future-oriented constructions.
+ */
 class SuffixEsdi implements Affix {
-    String esdi
+    String esdi = "ᎡᏍᏗ"
 
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
-        return null
+        if (!baseReturnValue.endsWith(esdi)) {
+            return baseReturnValue + esdi
+        }
+
+        return baseReturnValue
     }
 
     @Override

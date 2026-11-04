@@ -17,6 +17,7 @@ class VerbFinalSuffixHolderObject extends HolderObjectBase {
     def oi = false
     def sgo = false
     def vi = false
+    def i = false // <-- Added this missing property
 
     public String getTrueValue() {
         map = ["a":a, "di":di, "dina":dina, "dv":dv, "ei":ei, "esdi":esdi, "gwu":gwu, "hv":hv, "idi":idi, "isi":isi, "ju":ju, "ke":ke, "na":na, "oi":oi, "sgo":sgo, "vi":vi]
@@ -43,6 +44,7 @@ class VerbFinalSuffixHolderObject extends HolderObjectBase {
                 ", oi=" + oi +
                 ", sgo=" + sgo +
                 ", vi=" + vi +
+                ", i=" + i +
                 '}';
     }
 //

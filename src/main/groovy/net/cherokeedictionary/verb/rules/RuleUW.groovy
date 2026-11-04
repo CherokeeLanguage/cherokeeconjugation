@@ -36,11 +36,13 @@ class RuleUW implements PrefixRule {
                 //todo: remember to process the prefixes in order from closest to root and stem out ward
                 processedValue = "Ꭴ$verbStem"
             }
-        } else if (pto != null && pto == PrefixTableObject.PL3IN) {
+        } else if (pto != null && (pto == PrefixTableObject.PL3IN || pto == PrefixTableObject.PL3AN)) {
             if (tmpValue.startsWith("ᎤᏩ")) {
                 processedValue = "Ꭴ$verbStem"
             } else if(tmpValue.startsWith("ᏚᏩ")) {
                 processedValue = "Ꮪ$verbStem"
+            } else if(tmpValue.startsWith("ᏚᏅ") || tmpValue.startsWith("ᏓᏅ")) {
+                return null;
             }
         }
 

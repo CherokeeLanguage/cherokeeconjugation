@@ -3,6 +3,7 @@ package net.cherokeedictionary.verb.conjugation
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.CompoundPrefixes
+import net.cherokeedictionary.util.ConjugationHelper
 import net.cherokeedictionary.util.PartOfSpeech
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
@@ -16,69 +17,39 @@ import net.cherokeedictionary.verb.containers.NonFinalSuffixProcessor
  * Created by torr on 8/20/2015.
  */
 class Conjugate {
-    static def conjugate(final String subject,
-                         final String object,
-                         final Stemmer stemmer,
-                         final String tense,//verb tense
-                         final String tmpVerbType,
-                         boolean isReflexive = false){// vi or vt
-        def verbType
-        if (tmpVerbType == 'v.i.' || tmpVerbType == 'vi') {
-            verbType = PartOfSpeech.VERB_INTRANSITIVE
-        } else {
-            verbType = PartOfSpeech.VERB_TRANSITIVE
-        }
-
-        return conjugate(subject, object, stemmer, tense, verbType, isReflexive);
-    }
-
     static def createVerbToConjugate(final String subject,
                                      final String object,
                                      final Stemmer stemmer,
                                      final String tense,//verb tense
-                                     final PartOfSpeech verbType,
+                                     final String partOfSpeech,
                                      final boolean isReflexive) {
-        //todo: could this eventually be something that valueOf is overridden so if the value is blank it returns NONE?  Valueof cannot be overridden so idk
-        PrefixTableObject pobj
-        if (object && object != "") {
-            pobj = PrefixTableObject.valueOf(object)
-        } else {
-            pobj = PrefixTableObject.NONE
-        }
-
         Verb verb = new Verb()
-        verb.partOfSpeech = verbType
-        verb.subject = PrefixTableSubject.valueOf(subject)
-        verb.object = pobj
         verb.stemmer = stemmer
-        verb.tense = Tense.valueOf(tense)
-
         verb.reflexiveHolderObject.reflexive = isReflexive
 
-        return verb;
+        ConjugationHelper.determinePartOfSpeech(verb, partOfSpeech)
+        ConjugationHelper.determineSubjectObject(verb, subject, object)
+        ConjugationHelper.determineTense(verb, tense)
+
+
+        return verb
     }
 
     static Verb conjugate(final String subject,
                          final String object,
                          final Stemmer stemmer,
-                         final String tense,//verb tense
-                         final PartOfSpeech verbType,
+                         final String tense,
+                         final String partOfSpeech,
                          final boolean isReflexive) { // vi or vt
-        Verb verb = conjugate(createVerbToConjugate(subject, object, stemmer, tense, verbType, isReflexive))
-        return verb
+        return conjugate(createVerbToConjugate(subject, object, stemmer, tense, partOfSpeech, isReflexive))
     }
 
     static Verb conjugate(final Verb verb) {
-        def compoundPrefix = null
+        ConjugationHelper.determineVerbSet(verb)
+        ConjugationHelper.determineCompoundPrefix(verb)
 
-        try {
-            compoundPrefix = CompoundPrefixes.prefixes["${verb.subject.toString()}${verb.object.toString()}"]
-        } catch (Exception e) {
-            e.printStackTrace()
-        }
-
-        if (compoundPrefix) {
-            verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb);
+        if (verb.compoundPrefix) {
+            verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb)
             verb.wholeWord = PrefixProcessor.process(verb)
             verb.wholeWord = NonFinalSuffixProcessor.process(verb)
             verb.wholeWord = FinalSuffixProcessor.process(verb)

@@ -15,7 +15,8 @@ class PrefixETest extends ConjugateBase {
         def partofspeechc = "v.t."
         def verbTense = "PRESENT"
 
-        def verb = Conjugate.conjugate("SG1", "SG2", ConjugateBase.heWantsIt, verbTense, partofspeechc)
+        Verb verb = conj("SG1", "SG2", heWantsIt, verbTense, partofspeechc, false)
+
         verb.initialPrefixHolder.e = true
 
         assertTrue "ᎡᎬᏯᏚᎵᎭ" == new PrefixE().toSyllabary("", verb)

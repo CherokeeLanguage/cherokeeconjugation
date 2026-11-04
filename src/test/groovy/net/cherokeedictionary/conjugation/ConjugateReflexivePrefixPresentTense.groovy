@@ -10,12 +10,12 @@ class ConjugateReflexivePrefixPresentTense extends ConjugateBase {
         def partofspeechc = "v.t."
         def verbTense = "PRESENT"
         //TODO: fix this to match the reflexive examples
-        assertTrue "ᎠᏓᏚᎵᎭ" == conj("SG1", "SG2", heWantsIt, verbTense, partofspeechc, true)
-        assertTrue "ᎦᏬᏂᎭ" == conj("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, false)
-        assertTrue "ᎠᏓᏬᏂᎭ" == conj("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, true)
-        assertTrue "ᎠᏓᏛᏂᎭ" == conj("SG1", "SG2", hitting, verbTense, partofspeechc, true)
+        assertTrue "ᎠᏓᏚᎵᎭ" == conj("SG1", "SG2", heWantsIt, verbTense, partofspeechc, true).pronounReflexiveRoot
+        assertTrue "ᎦᏬᏂᎭ" == conj("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, false).pronounReflexiveRoot
+        assertTrue "ᎠᏓᏬᏂᎭ" == conj("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, true).pronounReflexiveRoot
+        assertTrue "ᎠᏓᏛᏂᎭ" == conj("SG1", "SG2", hitting, verbTense, partofspeechc, true).pronounReflexiveRoot
 
         partofspeechc = "v.i."
-        assertTrue "", "ᎠᏓᏬᏂᎭ" == conj("SG1", "", hiwoniha, verbTense, partofspeechc, true)
+        assertTrue "", "ᎠᏓᏬᏂᎭ" == conj("SG1", "", hiwoniha, verbTense, partofspeechc, true).pronounReflexiveRoot
     }
 }

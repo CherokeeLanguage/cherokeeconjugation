@@ -1,6 +1,7 @@
 package net.cherokeedictionary.verb.affixes
 
 import net.cherokeedictionary.core.Verb
+import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixDa
 import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixDe
 import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixDi
 import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixE
@@ -44,8 +45,12 @@ class PrefixProcessor {
             baseReturnValue = new PrefixDi().toSyllabary(baseReturnValue, verb);
         }
 
+        if (da) {
+            //baseReturnValue = new PrefixDa().toSyllabary(baseReturnValue, verb);
+        }
+
         if (de) {
-//            baseReturnValue = new PrefixDe().toSyllabary(baseReturnValue, verb);
+            //baseReturnValue = new PrefixDe().toSyllabary(baseReturnValue, verb);
         }
 
         if (ni) {

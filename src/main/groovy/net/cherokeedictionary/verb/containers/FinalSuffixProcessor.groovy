@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.containers
 
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.affixes.suffixes.*
 
 class FinalSuffixProcessor {
     public static String processFinalSuffixesRemove(data, VerbFinalSuffixHolderObject sho, Tense verbTense) {
@@ -29,6 +30,56 @@ class FinalSuffixProcessor {
         def baseReturnValue = verb.wholeWord
 
         return baseReturnValue
+
+
+/*        String baseReturnValue = verb.wholeWord
+        def holder = verb.finalSuffixHolder
+
+        if (holder.vi) {
+            baseReturnValue = new SuffixVi("ᎥᎢ").toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.sgo) {
+            baseReturnValue = new SuffixSgo().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.di) {
+            baseReturnValue = new SuffixDi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.dv) {
+            baseReturnValue = new SuffixDv().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.esdi) {
+            baseReturnValue = new SuffixEsdi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.a) {
+            baseReturnValue = new SuffixA().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.i) {
+            baseReturnValue = new SuffixI().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.dina) {
+            baseReturnValue = new SuffixDina().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.ke) {
+            baseReturnValue = new SuffixKe().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.na) {
+            baseReturnValue = new SuffixNa().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.hv) {
+            baseReturnValue = new SuffixHv().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.isi) {
+            baseReturnValue = new SuffixIsi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.idi) {
+            baseReturnValue = new SuffixIdi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.ju) {
+            baseReturnValue = new SuffixJu().toSyllabary(baseReturnValue, verb)
+        }
+
+        return baseReturnValue
+	*/
     }
 
     //review because si and svi are not endings but vi after ni is svi and isi after ni is si

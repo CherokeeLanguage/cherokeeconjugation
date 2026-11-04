@@ -8,6 +8,7 @@ import net.cherokeedictionary.verb.conjugation.Conjugate
 
 class YiWiBleedingTest extends GroovyTestCase {
     static def bleeding = new Stemmer()
+    static def intransitive = PartOfSpeech.VERB_INTRANSITIVE.toString()
     static {
         bleeding.habitual = new DefinitionLine(syllabary: "ᎠᏔᏍᎩᏍᎪᎢ")
         bleeding.imperative = new DefinitionLine(syllabary: "ᎭᏔᏍᎩ")
@@ -18,7 +19,7 @@ class YiWiBleedingTest extends GroovyTestCase {
     }
 
     void testYiWiBleeding() {
-        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", PartOfSpeech.VERB_INTRANSITIVE, false)
+        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", intransitive, false)
 
         verb.initialPrefixHolder.with {yi = true; wi=true}
         verb = Conjugate.conjugate(verb)
@@ -26,7 +27,7 @@ class YiWiBleedingTest extends GroovyTestCase {
     }
 
     void testYiBleeding() {
-        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", PartOfSpeech.VERB_INTRANSITIVE, false)
+        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", intransitive, false)
 
         verb.initialPrefixHolder.with {yi = true; wi=false}
         verb = Conjugate.conjugate(verb)
@@ -34,7 +35,7 @@ class YiWiBleedingTest extends GroovyTestCase {
     }
 
     void testWiBleeding() {
-        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", PartOfSpeech.VERB_INTRANSITIVE, false)
+        Verb verb = Conjugate.createVerbToConjugate("SG2", "", bleeding, "PRESENT", intransitive, false)
 
         verb.initialPrefixHolder.with {yi = false; wi=true}
         verb = Conjugate.conjugate(verb)

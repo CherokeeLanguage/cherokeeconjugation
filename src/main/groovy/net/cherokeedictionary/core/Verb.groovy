@@ -17,7 +17,7 @@ class Verb extends Word {
     Stemmer stemmer
     Tense tense
 
-    VerbSet verbset
+    VerbSet verbset = VerbSet.A
     CompoundPrefix compoundPrefix
 
     String root

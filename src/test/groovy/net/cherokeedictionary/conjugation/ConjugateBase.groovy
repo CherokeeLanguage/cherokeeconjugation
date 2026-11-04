@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.core.Verb
+import net.cherokeedictionary.util.Tense
 
 //import FinalSuffixProcessor
 //import PrefixProcessor
@@ -130,16 +131,20 @@ class ConjugateBase extends GroovyTestCase {
 
     }
 
-    static def conj(PrefixTableSubject subject, PrefixTableObject object, Stemmer stemmer, String verbTense, String partofspeechc){
-        return Conjugate.conjugate(subject.toString(), object.toString(), stemmer, verbTense, partofspeechc)
+    static def conj(PrefixTableSubject subject, PrefixTableObject object, Stemmer stemmer, Tense verbTense, String partofspeech){
+        return conj(subject.toString(), object.toString(), stemmer, verbTense.toString(), partofspeech)
     }
 
-    static def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc){
-        return conj(subject, object, stemmer, verbTense, partofspeechc, false)
+    static Verb conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeech){
+        return conj(subject, object, stemmer, verbTense, partofspeech, false)
     }
 
-    static def conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeechc, boolean isReflexive){
-        return Conjugate.conjugate(subject, object, stemmer, verbTense, partofspeechc, isReflexive).pronounReflexiveRoot
+    static Verb conj(String subject, String object, Stemmer stemmer, String verbTense, String partofspeech, boolean isReflexive){
+        return Conjugate.conjugate(subject, object, stemmer, verbTense, partofspeech, isReflexive)
+    }
+
+    static String conjStr(String subject, String object, Stemmer stemmer, String verbTense, String partofspeech){
+        return conj(subject, object, stemmer, verbTense, partofspeech, false).pronounReflexiveRoot
     }
 
     static void log(Verb verb) {
