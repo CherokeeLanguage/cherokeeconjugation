@@ -70,7 +70,7 @@ class VerbConjugationProcessor {
                 returnValue = returnPrefix + it
             }
         } else {
-// Handle prefixes based on da- and de- flags
+            // Handle prefixes based on da- and de- flags
             // Prioritize da- if explicitly set, otherwise use de-
 //            if (verb.initialPrefixHolder.da) {
 /*
@@ -131,35 +131,6 @@ class VerbConjugationProcessor {
     static def process(Verb verb) {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: verb.stemmer)
         vth.process()
-//        def verbTense = Tense.valueOf(tense);
-        //todo: find prefix for plurals (e.G. d-) -- probably detect if verb starts with /d-/ if it does then add a /d-/
-        // - should wait until other prefixes are put together in whole? timo 22Sep15
-
-        //this column matches - so intransitive specific code was removed in favor of using existing code and keys
-//        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE) {
-//            verb.object = PrefixTableObject.valueOf("SG3IN")
-//        }
-//
-//        def combinedSubjectObject = "${verb.subject}${verb.object}"
-//
-//        if (combinedSubjectObject == "SG3SG3AN" && !verb.reflexiveHolderObject.isReflexive()) {
-//            return verb.stemmer.present3rd.syllabary;
-//        }
-//
-//        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE && combinedSubjectObject == "SG3SG3IN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
-//            return verb.stemmer.present3rd.syllabary;
-//        }
-//
-//        def verbset = VerbSet.A
-//
-//        //if du,nu,u,wu in 3rd sing present then set b rest are a
-//        def tempPresent3rd = verb.stemmer.present3rd.syllabary
-//        if (tempPresent3rd.startsWith("Ꮪ")
-//                || tempPresent3rd.startsWith("Ꮔ")
-//                || tempPresent3rd.startsWith("Ꭴ")
-//                || tempPresent3rd.startsWith("Ꮽ")) {
-//            verbset = VerbSet.B
-//        }
 
         if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
                 && !verb.reflexiveHolderObject.isReflexive()
