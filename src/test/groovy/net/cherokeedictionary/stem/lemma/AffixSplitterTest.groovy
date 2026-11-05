@@ -1,9 +1,6 @@
 package net.cherokeedictionary.stem.lemma
 
-import net.cherokeedictionary.conjugation.ConjugateBase
-import net.cherokeedictionary.splitter.DoAnalysis
-import net.cherokeedictionary.splitter.SuffixGuesser
-import net.cherokeedictionary.stem.lemma.Lemmatizer
+
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.CompoundPrefixes
 

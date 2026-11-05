@@ -34,6 +34,12 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᏕᏣᏚᎵᎭ" == conjStr("SG2", "PL3IN", heWantsIt, verbTense, partofspeechc)
 //	assertTrue "", "ᏚᏣᏚᎵᎭ" == conjStr("SG2", "PL3IN", heWantsIt, verbTense, partofspeechc)
 
+//        assertTrue "", "ᏕᏣᏚᎵᎭ" == conj("SG2", "PL3IN", heWantsIt, verbTense, partofspeechc)
+//        assertTrue "", "ᏚᏚᎵᎭ" == conj("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
+//        assertTrue "", "ᏕᎩᎾᏚᎵᎭ" == conj("DL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
+
+
+
         assertTrue "", "ᏚᏚᎵᎭ" == conjStr("SG3", "PL3IN", heWantsIt, verbTense, partofspeechc)
         assertTrue "", "ᏕᎩᎾᏚᎵᎭ" == conjStr("DL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)
 	//assertTrue "", "ᏚᎩᎾᏚᎵᎭ" == conjStr("DL1INCL", "PL3IN", heWantsIt, verbTense, partofspeechc)

@@ -57,9 +57,22 @@ class VerbTenseHolder {
             }
         }
 
+        // The infinitive must use the normalized Deverbal stem (vowel/consonant
+        // initial like the other stems) so preVowel/preConsonant prefix allomorphy
+        // is selected correctly. Chopping the raw dictionary entry loses the
+        // normalized initial vowel (e.g. ᎤᏓᏙᎵᏍᏙᏗ -> ᏓᏙᎵᏍᏙᏗ instead of ᎠᏓᏙᎵᏍᏙᏗ).
+        //infinitive = deverbal ?: (stemmer?.infinitive?.syllabary ? stemmer.infinitive.syllabary.substring(1) : '')
+	//todo: -- review again -- timo 4Nov26
         if (present != null) {
             completiveFuture = present.substring(0, present.size() - 1)
         }
+        // FUTURE_COMMAND is sourced from the imperative entry (the verb's command form,
+        // e.g. adadolisda -> ᎠᏓᏙᎵᏍᏓ). Stemmer.getRootWithEnding already maps
+        // Tense.FUTURE_COMMAND -> Imperative suffix, so the Immediate stem (built from
+        // stemmer.imperative) is the intended base. Fall back to completiveFuture
+        // (present minus final syllable) when the imperative entry is missing.
+        //futureCommand = immediate ?: completiveFuture
+	//todo: -- review again -- timo 4Nov26
         futureCommand = completiveFuture
         progressivePast = completiveFuture
         progressiveFuture = completiveFuture

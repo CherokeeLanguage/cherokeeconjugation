@@ -144,7 +144,11 @@ class ConjugateBase extends GroovyTestCase {
     }
 
     static String conjStr(String subject, String object, Stemmer stemmer, String verbTense, String partofspeech){
-        return conj(subject, object, stemmer, verbTense, partofspeech, false).pronounReflexiveRoot
+        return conjStr(subject, object, stemmer, verbTense, partofspeech, false)
+    }
+
+    static String conjStr(String subject, String object, Stemmer stemmer, String verbTense, String partofspeech, boolean isReflexive){
+        return conj(subject, object, stemmer, verbTense, partofspeech, isReflexive).pronounReflexiveRoot
     }
 
     static void log(Verb verb) {

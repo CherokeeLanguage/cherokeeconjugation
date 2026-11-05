@@ -2,7 +2,6 @@ package net.cherokeedictionary.verb.affixes.initialPrefixes
 
 import net.cherokeedictionary.conjugation.ConjugateBase
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
