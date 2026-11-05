@@ -1,6 +1,8 @@
 package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.core.Verb
+import net.cherokeedictionary.stem.StemEntry
+import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.util.*
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
@@ -63,10 +65,40 @@ class VerbConjugationProcessor {
             }
 
             returnValue = new RuleUW().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
+
             if (!returnValue) {
                 returnValue = returnPrefix + it
             }
         } else {
+// Handle prefixes based on da- and de- flags
+            // Prioritize da- if explicitly set, otherwise use de-
+//            if (verb.initialPrefixHolder.da) {
+/*
+                // Da- prefix logic: If da- is true, use the actual Da- syllabary from CompoundPrefixes.
+                // This requires looking up the correct Da- prefix based on subject and object.
+                // For now, attempting a generic Da- prefix based on available info.
+                // This part may need significant refinement based on specific Da- rules.
+                // Let's try to find the compound prefix for 'da-' + subject/object
+                def daPrefix = CompoundPrefixes.get("DA" + combinedSubjectObject) // Assuming a lookup for DA prefix combinations
+                if (daPrefix) {
+                    returnPrefix = daPrefix.preConsonant // or preVowel depending on context
+                } else {
+                    // Fallback or default Da- handling if specific combo not found
+                    returnPrefix = "da-" // Placeholder if specific da- prefix not found
+                }
+                */
+                // The 'da-' prefix itself needs to be handled. For now, let's use a placeholder.
+                // A more robust solution would involve a dedicated prefix rule or lookup.
+                returnPrefix = "da-" // Placeholder - actual implementation needs more logic
+
+//            } else if (verb.initialPrefixHolder.de) {
+//                // De- prefix logic
+//                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+//            } else {
+//                // Default consonant prefix lookup
+//                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+//            }
+
             returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
 
             if (!returnPrefix) {
@@ -104,30 +136,74 @@ class VerbConjugationProcessor {
         // - should wait until other prefixes are put together in whole? timo 22Sep15
 
         //this column matches - so intransitive specific code was removed in favor of using existing code and keys
-        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE) {
-            verb.object = PrefixTableObject.valueOf("SG3IN")
-        }
+//        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE) {
+//            verb.object = PrefixTableObject.valueOf("SG3IN")
+//        }
+//
+//        def combinedSubjectObject = "${verb.subject}${verb.object}"
+//
+//        if (combinedSubjectObject == "SG3SG3AN" && !verb.reflexiveHolderObject.isReflexive()) {
+//            return verb.stemmer.present3rd.syllabary;
+//        }
+//
+//        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE && combinedSubjectObject == "SG3SG3IN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
+//            return verb.stemmer.present3rd.syllabary;
+//        }
+//
+//        def verbset = VerbSet.A
+//
+//        //if du,nu,u,wu in 3rd sing present then set b rest are a
+//        def tempPresent3rd = verb.stemmer.present3rd.syllabary
+//        if (tempPresent3rd.startsWith("Ꮪ")
+//                || tempPresent3rd.startsWith("Ꮔ")
+//                || tempPresent3rd.startsWith("Ꭴ")
+//                || tempPresent3rd.startsWith("Ꮽ")) {
+//            verbset = VerbSet.B
+//        }
 
-        def combinedSubjectObject = "${verb.subject}${verb.object}"
-
-        if (combinedSubjectObject == "SG3SG3AN" && !verb.reflexiveHolderObject.isReflexive()) {
+        if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                && !verb.reflexiveHolderObject.isReflexive()
+                && verb.tense == Tense.PRESENT) {
             return verb.stemmer.present3rd.syllabary;
         }
 
-        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE && combinedSubjectObject == "SG3SG3IN" && verb.tense == Tense.PRESENT && !verb.reflexiveHolderObject.isReflexive()) {
+        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE
+                && verb.compoundPrefix == CompoundPrefixes.SG3SG3IN
+                && verb.tense == Tense.PRESENT
+                && !verb.reflexiveHolderObject.isReflexive()) {
             return verb.stemmer.present3rd.syllabary;
         }
 
-        def verbset = VerbSet.A
+        // Rules 70-73 from Grammar Guide: Inherent and Plural Distributive prefixes
+//        if (verb.stemmer?.isDistributive) {
+//            verb.initialPrefixHolder.de = true
+//        }
 
-        //if du,nu,u,wu in 3rd sing present then set b rest are a
-        def tempPresent3rd = verb.stemmer.present3rd.syllabary
-        if (tempPresent3rd.startsWith("Ꮪ")
-                || tempPresent3rd.startsWith("Ꮔ")
-                || tempPresent3rd.startsWith("Ꭴ")
-                || tempPresent3rd.startsWith("Ꮽ")) {
-            verbset = VerbSet.B
-        }
+//        if (verb.stemmer?.isPluralDistributive) {
+//            def s = verb.subject.toString()
+//            if (s.startsWith("PL") || s.startsWith("DL")) {
+//                verb.initialPrefixHolder.de = true
+//            }
+//        }
+
+        // Compositional Object de- trigger:
+        // Any PL3AN/PL3IN object triggers the distributive/plural-object 'de-' prefix.
+/*        if (verb.object == PrefixTableObject.PL3AN
+                || verb.object == PrefixTableObject.PL3IN) {
+            // Plural objects with PL3 subject use the plural distributive prefix 'da-' instead of 'de-'
+            if (verb.subject == PrefixTableSubject.PL3) {
+                verb.initialPrefixHolder.da = true
+                verb.initialPrefixHolder.de = false
+            } else {
+                // For other subjects with PL3AN/PL3IN objects, 'de-' is used.
+                // However, da- also needs to be considered for these cases.
+                verb.initialPrefixHolder.de = true
+                // If 'da-' is also explicitly requested (e.g., from test flags), prioritize it.
+                if (verb.initialPrefixHolder.da) {
+                    verb.initialPrefixHolder.de = false
+                }
+            }
+        }*/
 
         String verbToConjugate = ""
 
@@ -137,47 +213,34 @@ class VerbConjugationProcessor {
                 break;
             case Tense.REMOTE_PAST:
                 verbToConjugate = vth.remotePast
-                //remote past always starts with B - Durbin Feeling book pp21
-                verbset = VerbSet.B
                 break;
             case Tense.FUTURE_COMMAND:
+                // FUTURE_COMMAND is derived from the imperative stem, not completiveFuture
+                // (present stem minus last syllable), as was previously coded.
                 verbToConjugate = vth.futureCommand
                 break;
+//            case Tense.IMMEDIATE_COMMAND:
+//                // IMMEDIATE_COMMAND also uses the imperative stem
+//                verbToConjugate = vth.immediate
+//                break;
             case Tense.HABITUAL:
                 verbToConjugate = vth.habitual
                 break;
             case Tense.INFINITIVE:
+                // For infinitive, if 'de-' prefix is present, use deverbal stem, else use infinitive stem
+                // The Stemmer generates Deverbal stems. We need to access the correct one from the StemEntry list.
+//                List<StemEntry> stems = verb.stemmer.getStems()
+//                StemEntry deverbalStemEntry = stems.find { it.stemtype == StemType.Deverbal }
+//                if (verb.initialPrefixHolder.de && deverbalStemEntry != null) {
+//                    verbToConjugate = deverbalStemEntry.prefix + deverbalStemEntry.syllabary
+//                } else {
+//                    verbToConjugate = vth.infinitive
+//                }
                 verbToConjugate = vth.infinitive
                 break;
         }
 
-        def compoundPrefix
-
-        try {
-            if (verbset == VerbSet.B) {
-                try {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}B"
-                } catch (Exception e) {
-                    compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
-                }
-            } else {
-                compoundPrefix = CompoundPrefixes."${combinedSubjectObject}"
-            }
-        } catch (Exception e) {
-            //todo: need to throw this exception back out if anything goes wrong
-            //todo: create new exception class to be thrown so we get the message back out
-            compoundPrefix = null;
-            throw e;
-        }
-
-        if (!compoundPrefix) {
-            return null;
-        }
-
         def returnValue = ""
-
-        verb.compoundPrefix = compoundPrefix
-        verb.verbset = verbset
 
         verbToConjugate = new ReflexivePrefix().toSyllabary(verbToConjugate, verb)
         if (!verb.reflexiveHolderObject.isReflexive()) {

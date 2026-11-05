@@ -31,7 +31,6 @@ class Conjugate {
         ConjugationHelper.determineSubjectObject(verb, subject, object)
         ConjugationHelper.determineTense(verb, tense)
 
-
         return verb
     }
 

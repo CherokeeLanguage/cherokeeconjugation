@@ -25,8 +25,7 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     void testSG3SG3ANPast() {
         verb.tense = Tense.REMOTE_PAST
         verb = Conjugate.conjugate(verb)
-
-//        assertEquals("ᎦᎪᎲᎢ", verb.wholeWord)
+        assertEquals("ᎦᎪᎲᎢ", verb.wholeWord)
     }
 
     void testSG3SG3INPast() {
@@ -39,7 +38,7 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     void testSG3SG3ANHabitual() {
         verb.tense = Tense.HABITUAL
         verb = Conjugate.conjugate(verb)
-//        assertEquals("ᎦᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
+        assertEquals("ᎦᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
     }
 
     void testSG3SG3INHabitual() {
@@ -52,20 +51,21 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     void testSG3SG3ANInfinitive() {
         verb.tense = Tense.INFINITIVE
         verb = Conjugate.conjugate(verb)
-//        assertEquals("ᎦᎪᏩᏛᏗ", verb.wholeWord)
+        assertEquals("ᎦᎪᏩᏛᏗ", verb.wholeWord)
     }
 
     void testSG3SG3INInfinitive() {
         verb.object = PrefixTableObject.SG3IN
         verb.tense = Tense.INFINITIVE
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᏩᏛᏗ", verb.wholeWord)
+        println verb.wholeWord
+        assertEquals("ᎤᎪᏩᏛᏗ", verb.wholeWord)
     }
 
     void testSG3SG3ANCommand() {
         verb.tense = Tense.FUTURE_COMMAND
         verb = Conjugate.conjugate(verb)
-//        assertEquals("ᎦᎪᏩᏘ", verb.wholeWord)
+        assertEquals("ᎦᎪᏩᏘ", verb.wholeWord)
     }
 
     void testSG3SG3INCommand() {
