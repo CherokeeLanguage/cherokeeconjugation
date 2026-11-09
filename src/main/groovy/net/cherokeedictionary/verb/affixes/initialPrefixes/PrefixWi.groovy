@@ -12,6 +12,12 @@ class PrefixWi implements Affix {
         String data = word.pronounReflexiveRoot
         baseReturnValue = baseReturnValue ?: data
 
+        // Guard: an upstream pipeline gap can leave the base empty;
+        // charAt(0) below would throw StringIndexOutOfBoundsException.
+        if (!baseReturnValue) {
+            return "Ꮻ";
+        }
+
         def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
         def startsWithH = latin.startsWith('h')
         if (startsWithH) {

@@ -13,6 +13,20 @@ import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixWi
 import net.cherokeedictionary.verb.affixes.initialPrefixes.PrefixYi
 
 class PrefixProcessor {
+    static final List<Affix> prefixes = new LinkedList<Affix>()
+    static {
+        prefixes << new PrefixE()
+        prefixes << new PrefixGa()
+        prefixes << new PrefixI()
+        prefixes << new PrefixDi()
+        prefixes << new PrefixDa()
+        prefixes << new PrefixDe()
+        prefixes << new PrefixNi()
+        prefixes << new PrefixWi()
+        prefixes << new PrefixJi()
+        prefixes << new PrefixYi()
+    }
+
     static String process(Verb verb) {
         def baseReturnValue = "";
 
@@ -29,12 +43,20 @@ class PrefixProcessor {
         def ga = pho.ga
         def e = pho.e
 
-        if (ga) {
-            baseReturnValue = new PrefixGa().toSyllabary(baseReturnValue, verb);
-        }
+//        This is the next phase - I didn't fully think this through originally
+//        What I wanted was to iterate over those that are there if they are active
+//        So each of these via Affix will be an abstract class that's run
+//
+//        prefixes.each {
+//            baseReturnValue = it.toSyllabary(baseReturnValue, verb)
+//        }
 
         if (e) {
             baseReturnValue = new PrefixE().toSyllabary(baseReturnValue, verb);
+        }
+
+        if (ga) {
+            baseReturnValue = new PrefixGa().toSyllabary(baseReturnValue, verb);
         }
 
         if (i) {

@@ -68,6 +68,43 @@ dependencies {
     api 'org.apache.commons:commons-math3:3.6.1'
 }
 
+// Reports open KNOWN-GAP(ID) markers across main and test sources.
+// Played into CI via `check`; the list only ever shrinks when a gap is
+// implemented and the corresponding gap-guard test is converted to a real
+// assertion (see WiVerbTest for the KNOWN-GAP pattern).
+task gapAudit {
+    group = 'verification'
+    description = 'Lists open KNOWN-GAP(ID) markers; run in CI so unimplemented gaps stay visible.'
+    doLast {
+        def openGaps = []
+        ['src/main/groovy', 'src/test/groovy'].each { String dir ->
+            fileTree(dir: dir, includes: ['**/*.groovy']).each { File f ->
+                f.eachLine { String line, int lineNo ->
+                    def m = line =~ /KNOWN-GAP\(([A-Z0-9\-]+)\)/
+                    if (m.find()) {
+                        openGaps << "${f.path.replace('\\', '/')}:${lineNo}  ${m[0][1]}"
+                    }
+                }
+            }
+        }
+
+        println ""
+        println "================ OPEN KNOWN GAPS (${openGaps.size()}) ================"
+        openGaps.each { println it }
+        println "===================================================="
+
+        if (project.hasProperty('failOnKnownGaps') && openGaps) {
+            // CI opt-in: `gradle check -PfailOnKnownGaps` once every gap is closed.
+            throw new GradleException("Open KNOWN-GAP markers found: ${openGaps.size()}")
+        }
+    }
+}
+
+// Keep the open-gap list visible on every `check` run (CI-friendly).
+tasks.named('check') {
+    dependsOn gapAudit
+}
+
 publishing {
     publications {
         maven(MavenPublication) {

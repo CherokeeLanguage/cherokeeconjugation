@@ -24,6 +24,7 @@ public class Stemmer {
     public DefinitionLine habitual = null;
     public DefinitionLine imperative = null;
     public DefinitionLine infinitive = null;
+    public String rootValue = ""
 
     String getRoot(Tense type) {
         return getRootWithEnding(type)[0]
