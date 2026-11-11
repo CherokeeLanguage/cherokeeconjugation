@@ -1,0 +1,292 @@
+package net.cherokeedictionary.conjugation.grammarGuide
+
+import spock.lang.Specification
+import spock.lang.Unroll
+
+class GrammarGuideSpec5 extends Specification {
+
+    @Unroll
+    def "Syntax & Discourse Form: #syllabary (#phonetic) -> #translation"() {
+        expect:
+        syllabary != null && !syllabary.trim().isEmpty()
+        phonetic != null && !phonetic.trim().isEmpty()
+        translation != null && !translation.trim().isEmpty()
+
+        where:
+        syllabary                               | phonetic                                              | translation
+        // =========================================================================
+        // Section III-B: Quantifying Adjectives (Pages 336-337)
+        // =========================================================================
+        "ᏂᎦᏓ ᎠᏂᏍᎦᏯ ᎠᏂᏬᏂᎭ."                    | "nị²ga⁴da ạ²ni²sgạ²ya a¹ni²wo³nị²ha."                 | "All the men are speaking."
+        "ᎦᏲᏟ ᏗᎦᏁᏌᎢ ᏓᏆᏚᎵᎭ."                    | "ga¹yo⁴hli dị²gạ²ne¹sạ³ʔi da¹gwạ²du²lị³ha."           | "I want a few boxes."
+        "ᏥᏍᏈᏍᏗ ᎠᏂᏧᏣ ᎦᏥᎪᏩᏘᎭ."                  | "tsgwi⁴sdi ạ²ni²chu⁴ja gạ²ji²gowh¹tị³ha."             | "I see many boys."
+        "ᏂᎦᏓ ᏓᏆᏚᎵᎭ."                           | "nị²ga⁴da da¹gwạ²du²lị³ha."                           | "I want all of them."
+        "ᎦᏲᏟ ᏁᏥᎪᏩᏘᎭ."                          | "ga¹yo⁴hli de²³jị³gowh¹tị³ha."                        | "I see a few."
+        "ᏥᏍᏈᏍᏗ ᎠᏂᏬᏂᎭ."                          | "tsgwi⁴sdi a¹niwo³nị²ha."                             | "Many are speaking."
+
+        // =========================================================================
+        // Section III-B: Adjective Suffixes & Degrees of Comparison (Pages 336-338)
+        // =========================================================================
+        "ᎤᏍᏗᏊ"                                  | "ụ²sdi⁴gwu"                                           | "just little"
+        "ᎤᏔᎾᏍ?"                                 | "u²³tạ²nas³?"                                         | "Is it big?"
+        "ᎣᏍᏓᏧ?"                                 | "o²³sdạ²ju?"                                          | "Well, is it good?"
+        "ᎤᏔᎾᏍ, ᎤᏍᏗᎨ?"                           | "u²³tạ²nas³, u²sdi⁴ke?"                               | "Is it big or little?"
+        "Ꭵ, ᎤᏔᎾᏛ."                              | "v², u²³tạ²nạ²dv."                                    | "Yes, it's big."
+        "ᏧᏃᏚᏨ ᎠᏂᏥᎸᏍᎩ ᏓᏛᎯᏍᏗᏍᎪᎢ."                | "ju²no²du¹jv⁴ a²ni²ji²lv⁴sgi da¹tṿ²hị²sdi²³sgọ³ʔi."   | "He grows very beautiful flowers."
+        "ᎤᏔᎾ"                                   | "u²³tạ²na"                                            | "big"
+        "ᎤᏔᏂ"                                   | "u²tạ²ni⁴"                                            | "too big"
+        "ᎤᏔᏂᏗᎨᎢ"                                | "u²tạ²ni²³dị³ge⁴ʔi"                                   | "bigger"
+        "ᎦᏣᏄᎵ"                                  | "ga²jạ²nu⁴li"                                         | "fast"
+        "ᎦᏣᏄᎵᎨᎢ"                                | "ga²jạ²nu²³lị³ge⁴ʔi"                                  | "faster"
+        "ᎤᏔᏂᏗᎨᎢ ᏥᎩ ᎠᏆᏚᎵᎭ."                    | "ụ²tạ²ni²³dị³ge⁴ʔi ji⁴gi a¹gwạ²du²lị³ha."             | "I want the bigger one."
+        "ᎠᏌᎹᏗ"                                  | "ạ²sạ²ma⁴di"                                          | "smart"
+        "ᎠᏌᎹᏗᏯ"                                 | "a¹sạ²ma²di²³ya"                                      | "smarter"
+        "ᏩᏌᎹᏗᏴᎢ"                                | "wạ²sạ³ma²di²yv⁴ʔi"                                   | "smartest"
+        "ᎤᏍᏗ"                                   | "ụ²sdi⁴"                                              | "small"
+        "ᎤᏍᏗᎧ"                                  | "u¹sdi³ka"                                            | "smaller"
+        "ᏭᏍᏗᎬᎢ"                                 | "wu²³sdi³²kv⁴ʔi"                                      | "smallest"
+        "ᎳᎵ ᎤᎪᏗ ᎠᏌᎹᏗᏯ ᏏᏅ ᏓᎻ ᎨᏒᎢ."              | "wi²³li u¹go³²di a¹sạ²ma²di²³ya si²³hnv da²³mi ge¹sv⁴ʔi." | "Bill is smarter than Tom."
+        "ᎤᏔᎾ"                                   | "u¹tạ²na"                                             | "bigger"
+        "ᏭᏔᏅᎢ"                                  | "wu²³tạ³nv⁴ʔi"                                        | "biggest"
+        "ᏣᎵ ᎤᎪᏗ ᎤᏔᎾ ᏏᏅ ᎠᏴ ᎨᏒᎢ."                 | "ja²³li u¹go³²di u¹tạ²na si²³hnv ạ²yv ge¹sv⁴ʔi."     | "Charles is bigger than I am."
+        "ᏯᏬᏚᎯ"                                  | "ụ²wo²du⁴hi"                                          | "pretty"
+        "ᎤᏬᏚᎭ"                                  | "u¹wo²dụ³ha"                                          | "prettier"
+        "ᏭᏬᏚᏒᎢ"                                 | "wụ²wo³du¹sv⁴ʔi"                                      | "prettiest"
+
+        // =========================================================================
+        // Section III-C: Adverbs (Pages 338-341)
+        // =========================================================================
+        "ᎠᏍᏓᏯ ᏚᎸᏫᏍᏓᏁᎭ."                        | "ạ²sda⁴ya du¹lv²³hwị³sda¹nẹ²ha."                      | "He's working hard."
+        "ᎤᏙᎯᏳ ᎤᏔᎾ Ꮎ ᎠᏍᎦᏯ."                     | "u²do²hị²yu u²³tạ²na na³ ạ²sgạ²ya."                   | "That man is really big."
+        "ᎤᏗᎯᏳ ᎠᏍᏓᏯ ᎦᏬᏂᎭ."                      | "u²do²hị²yu ạ²sda⁴ya gạ²wo³nị²ha."                    | "He's really speaking loud."
+        "Ꮭ ᎣᏍᏓ ᏱᎨᏎᎢ."                          | "hla³ o⁴sda yị²ge³se³ʔi."                             | "It wasn't good."
+        "Ꮭ ᏱᎦᏬᏂᎭ."                             | "hla³ yị²gạ²wo³²nị²ha."                               | "He isn't speaking."
+        "Ꮭ ᎠᏍᏴᏯ ᏱᎯᎸᏫᏍᏓᏁᎭ."                      | "hla³ ạ²sda⁴ya yị²du²³lv³hwị²sda¹nẹ²ha."              | "He isn't working hard."
+        "Ꭵ, ᎦᏬᏂᎭ."                              | "v, gạ²wo³nị²ha."                                     | "Yes, he's speaking."
+        "Ꮭ, Ꮭ ᏱᎦᏬᏂᎭ."                          | "hla, hla³ yị²gạ²wo³²nị²ha."                          | "No, he's not speaking."
+        "ᏑᎾᎴᎢ ᏓᏰᏏ"                              | "sụ²na³le⁴ʔi. dạ²ye³si"                               | "He'll go tomorrow."
+        "ᏃᏊ ᎦᏬᏂᎭ."                             | "no²³gwu gạ²wo³nị²ha."                                | "He's speaking now."
+        "ᏳᏓᎭ ᎦᏬᏂᏍᎪᎢ."                          | "yu³da²ha gạ²wo³ni²sgo³ʔi."                           | "He speaks sometimes."
+        "Ꮭ ᎢᎸᎯᏳ ᏱᏚᎸᏫᏍᏓᏁᎰᎢ."                    | "hla³ ị²lv²³hị³yu yị²du²³lv³hwị²sda¹ne²ho³ʔi."        | "He never works."
+        "ᎦᏳᎳ ᎦᏬᏂᎭ."                            | "ga³yu²la gạ²wo³nị²ha."                               | "He's already speaking."
+        "ᏫᎵ ᎤᎪᏗ ᎤᏔᎾ ᏏᏅ ᏓᎻ ᎨᏒᎢ."                 | "wi²³li u¹go³²di u¹tạ³na si²³hnv da²³mi ge¹sv⁴ʔi."   | "Bill is bigger than Tom."
+        "ᏫᎵ ᏓᏤᏝ ᎦᏬᏂᏍᎪ ᏏᏅ ᏓᎻ ᎨᏒᎢ."              | "wi²³li da¹je²³hla gạ²wo³ni²sgo si²³hnv da²³mi ge¹sv⁴ʔi." | "Bill speaks better than Tom."
+        "ᎠᎭᏂ ᎦᏙᎦ ᎠᏍᎦᏯ"                          | "ạ³hạ²ni gạ²do³²ga ạ²sgạ²ya."                         | "A man is standing here."
+        "ᎠᎨ ᏩᎢ."                                | "a³ge⁴ wa³ʔi."                                        | "He's walking over there."
+        "ᏂᎬᎢ ᏥᎪᏩᏘᎭ."                           | "nị²kv⁴ʔi jị²gowh¹tị³ha."                             | "I see it everywhere."
+        "ᎩᏔᏯ"                                   | "gi¹ta²³ya"                                           | "cherry or cherry tree"
+        "ᎩᏔᏲᎢ"                                  | "gi¹ta²yo⁴ʔi"                                         | "Cherry Tree (lit. cherry place or cherry tree place)"
+        "ᎦᎵᏦᏕ ᎾᎥ ᎦᏙᎦ."                          | "gahl²jo²³de nạ²ʔv gạ²do³²ga."                        | "He's standing next to the house."
+        "ᎠᏓᏁᎸ ᎢᎬᏱᏗᏜ ᎦᏙᎦ."                      | "a¹da²ne²³lv⁴ ị²gv²³yị³di³dla gạ²do³²ga."             | "He's standing in front of the building."
+        "ᎦᎶᎯᏍᏗ ᎤᏟᏗᏜ ᎦᏙᎦ."                      | "gạ²lo²hị²sdi u²dlị³di³dla gạ²do³²ga."                | "He's standing behind the door."
+        "ᎨᎢ ᏭᎶᏒᎢ."                              | "gẹ²ʔi wu¹lo²sv²³ʔi."                                 | "He went downstream."
+        "ᎦᎸᎳᏗ ᏭᏕᎦ."                            | "gạ²lv³lạ²di wu²³de³²ga."                             | "He's throwing it upward."
+        "ᎦᎵᏦᏕ ᏗᏜ ᏩᎢ."                           | "gahl²jo²³de di³dla wa³ʔi."                           | "He's walking toward the house."
+        "ᎢᎬᏱ ᏗᎦᏚᎲ ᏫᏓᎨᏙᎵ."                      | "ị²gv²³yi dị²ga²³du³hv⁴ wị²dạ²ge³do³li."              | "I'm going to town first."
+        "ᎠᎵᏍᏓᏴᏗ ᎤᏩᏒᎢ ᏃᏊᏅ ᎤᏂᎩᏒᎢ."                | "al³sdayh¹di u¹hwạ²sv³ʔi no²³gwu³hnv³ ụ³hnị²gi³²sv²³ʔi." | "He bought food and then he returned."
+        "ᎠᏎ ᎦᏬᏂᎭ."                              | "a²³se gạ²wo³nị²ha."                                  | "Maybe he's speaking."
+        "ᎣᏍᏓ ᎦᏬᏂᎭ."                            | "o⁴sda gạ²wo³nị²ha."                                  | "He is speaking well."
+        "ᎦᏣᏄᎵ ᎠᏟ."                              | "ga²jạ²nu⁴li a¹tli."                                  | "He's running fast."
+        "ᏥᏍᏈᏍᏗ  ᎦᏬᏂᎭ."                         | "tsgwi⁴sdi gạ²wo³nị²ha."                              | "He's speaking a lot."
+        "ᏑᎾᎴ ᏏᏊ ᎣᏍᏓ ᏛᎦᏬᏂᏏ."                    | "sụ²na³le si²³gwu o⁴sda dv²³gạ³wo³ni²si."             | "He will speak well again tomorrow."
+        "Ꮭ ᎠᎭᏂ ᏱᏓᎦᏬᏂᏏ ᏑᎾᎴᎢ."                   | "hla³ ạ³hạ²ni yị²dạ²gạ³wo³ni²si sụ²na³le⁴ʔi."         | "He won't speak here tomorrow."
+        "Ꮭ ᎠᏎ ᎠᎭᏂ ᏱᏓᏥᏬᏂᏏ ᏑᎾᎴᎢ."                | "hla³ a²³se ạ³hạ²ni yị²dạ²gạ³wo³ni²si sụ²na³le⁴ʔi."   | "Maybe he won't speak here tomorrow."
+        "ᏑᎾᎴᎢ ᏓᎻ ᏛᎪᎯ ᏫᎵ."                      | "sụ²na³le⁴ʔi da²³mi dv²³go³hi wi²³li."                | "Tomorrow Bill will see Tom."
+        "ᏓᎻ ᎠᏍᏓᏯ ᏓᎬᏂᎵ ᏫᎵ."                      | "da²³mi ạ²sda⁴ya dạ²gv²³hnị³li wi²³li."               | "Bill will hit Tom hard."
+        "ᏂᎪᎯᎸᎢ ᏓᎻ ᎬᏂᎰᎢ ᏫᎵ."                    | "nị²go²³hi³lv⁴ʔi da²³mi gv²hnị³họ³ʔi wi²³li."         | "Bill always hits Tom."
+        "ᏫᎵ ᏂᎪᎯᎸᎢ ᏓᎻ ᎬᏂᎰᎢ."                    | "wi²³li nị²go²³hi³lv⁴ʔi da²³mi gv²hnị³họ³ʔi."         | "Bill always hits Tom."
+        "Ꮎ ᎣᏍᏓ ᎠᏍᎦᏯ ᎣᎩᎾᎵᎢ."                    | "na³ o⁴sda ạ²sgạ²ya o²gị²na²li⁴ʔi."                   | "The good man is my friend."
+        "ᎣᏍᏓ ᎦᏬᏂᏍᎪᎢ."                          | "o⁴sda gạ²wo³ni²sgo³ʔi."                              | "He speaks well."
+        "ᎩᎦᎨᎢ ᎠᏑᏫᏍᎦ."                           | "gi²³gạ²ge⁴ʔi a¹su²³hwị³sga."                         | "He's painting it red."
+        "ᏥᏍᏈᏍᏗ ᎦᏬᏂᎭ."                          | "tsgwi⁴sdi gạ²wo³nị²ha."                              | "He is speaking a lot."
+        "ᎦᏲᏟ ᎦᏬᏂᏍᎪᎢ."                          | "ga¹yo⁴hli gạ²wo³ni²sgo³ʔi."                          | "He speaks a little."
+
+        // =========================================================================
+        // Section III-D to III-F: Prepositions, Interjections, Conjunctions (Pages 341-344)
+        // =========================================================================
+        "ᎦᏅᏆᏕᏍᏗ ᎬᏗ ᎬᏂᎭ."                       | "gạ²nv²gwạ²lo⁴sdi gvh⁴di gv²hnị³ha."                  | "He's hitting it with a hammer."
+        "ᏲᏁᎦ ᎬᏗ ᎦᏬᏂᎭ."                         | "yo³ne²ga gvh⁴di gạ²wo³nị²ha."                        | "He's speaking in English."
+        "ᎦᎵᏦᏕ ᏗᏜ ᏩᎢ."                           | "gahl²jo²³de di³dla wa³ʔi."                           | "He's walking toward the house."
+        "ᏗᎦᏚᎲ ᏗᏜ ᎡᎦ."                           | "dị²ga²³du³hv⁴ di³dla e³ga."                          | "He's going towards town."
+        "ᎠᎹᏲ ᎭᏫᏂ ᎠᏓᏬᎠ."                         | "ạ²ma²³yi hạ²wi⁴ni a¹dạ²wo³ʔa."                       | "He's swimming under the water."
+        "ᎦᎵᏦᏕ ᎦᎸᎳᏗᏜ ᎦᏃᎯᎵᏙᎭ."                   | "gahl²jo²³de gạ²lv²³lạ³di²dla gạ²no²hi²³li³do¹ha."    | "It's flying around above the house."
+        "ᎦᎵᏦᏕ ᎭᏫᏂᏗᏜ ᎠᎭ."                       | "gahl²jo²³de hạ²wi³nị³di³dla a¹ha."                   | "It's lying underneath the house."
+        "ᎦᎵᏦᏕ ᎤᏟᏗᏜ ᎦᏙᎦ."                       | "gahl²jo²³de ụ²dli³²di³dla gạ²do³²ga."                | "He's standing on the other side of the house."
+        "ᎦᎵᏦᏕ ᎢᎬᏱᏗᏜ ᎦᏙᎦ."                      | "gahl²jo²³de ị²gv³²yị³di³dla gạ²do³²ga."              | "He's standing in front of the house"
+        "ᎦᎵᏦᏕ ᎾᎥ ᎦᏙᎦ."                          | "gahl²jo²³de nạ²ʔv gạ²do³²ga."                        | "He's standing near the house."
+        "ᏙᎾᏓᎪᎲᎢ."                               | "do³nạ²da²go²hv²ʔi."                                  | "Let us (you and I) see each other again later."
+        "ᎢᎬᎪᎥᎢ."                                | "i²³gv³gọ²ʔv²ʔi."                                     | "Let me see you again later."
+        "ᎠᏲ!"                                  | "ayo!"                                                | "Ouch!"
+        "Ᏺ!"                                   | "yo!"                                                 | "Gosh!"
+        "Ꭽ!"                                   | "ha!"                                                 | "Gosh!"
+        "Ꮒ!"                                   | "ni!"                                                 | "Look! or Listen!"
+        "Ꮎ!"                                   | "na!"                                                 | "Here!"
+        "Ꮟ!"                                   | "si!"                                                 | "Wait!"
+        "ᎧᎹ!"                                   | "kam!"                                                | "Now!"
+        "ᏄᎳ!"                                   | "nu⁴la!"                                              | "Hurry!"
+        "ᎠᏍᎦᏯ ᎠᎴ ᎠᎨᏯ ᎠᏂᏬᏂᎭ."                    | "ạ²sgạ²ya ạ²le ạ²ge²³hya a¹ni²wo³nị²ha."              | "A man and a woman are speaking."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ ᎠᎴ ᏕᎧᏃᎩᎠ."                  | "ạ²sgạ²ya gạ²wo³nị²ha ạ²le de²³kạ³no²gi³ʔa."          | "A man is speaking and singing."
+        "ᎠᏧᏣ ᎦᏬᏂᎭ ᎠᎴ ᎠᎨᏯ ᏗᎧᏃᎩᎠ."               | "ạ²chu⁴ja gạ²wo³nị²ha ạ²le ạ²ge²³hya de²³kạ³no²gi³ʔa." | "A boy is speaking and a woman is singing."
+        "ᎠᏍᎦᏯ ᎠᎨᏯᏃ ᎠᏂᏬᏂᎭ."                    | "ạ²sgạ²ya ạ²ge²³hyạ³hno a¹ni²wo³nị²ha."               | "A man and a woman are speaking."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ ᏕᎧᏃᎩᎠᏃ."                    | "ạ²sgạ²ya gạ²wo³nị²ha de²³kạ³no²gi³ʔạ³hno."           | "A man is speaking and man is speaking and singing."
+        "ᎠᏧᏣ ᎪᏬᏂᎭ ᎠᎨᏯᏃ ᏕᎧᏃᎩᎠ."                 | "ạ²chu⁴ja gạ²wo³nị²ha ạ²ge²³hyạ³hno de²³kạ³no²gi³ʔa." | "A boy is speaking and a woman is singing."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ ᎠᎨᏯᎴ ᎭᎩ."                   | "ạ²sgạ²ya gạ²wo³nị²ha ạ²ge²³hyạ³le³ yi⁴gi."           | "A man or a woman is speaking."
+        "ᎠᏍᎦᏯ Ꮭ ᏱᎦᏬᏂᎭ ᎠᎨᏯᏃ ᎥᏍᏊ Ꮭ."            | "ạ²sgạ²ya hla³ yị²gạ²wo³²nị²ha ạ²ge²³hyạ³hno v¹sgwu³ hla²." | "The man is not speaking, and neither is the woman."
+        "ᏓᎻ ᎦᏬᏂᏍᎬ ᎤᏠᏱ ᎦᏬᏂᏍᎪ ᏫᎵ."              | "da²³mi gạ²wo³ni²sgv⁴ u²hlo⁴yi gạ²wo³ni²sgo wi²³li."   | "Bill speaks like Tom."
+        "Ꮎ ᎠᏍᎦᏯ Ꮭ ᏯᎦᏬᏂᎭ, ᎠᏎᏍᎩᏂ ᏕᎧᏃᎩᎠ."        | "na³ ạ²sgạ²ya hla³ yị²gạ²wo³²nị²ha, a²³se³sgị³ni de²³kạ³no²gi³ʔa." | "The man isn't speaking, but he is singing."
+        "ᎠᏍᎦᏯ Ꮭ ᏱᎦᏬᏂᎭ, ᎠᎨᏯᏍᎩᏂ."               | "ạ²sgạ²ya hla³ yị²gạ²wo³²nị²ha, ạ²ge²³hyạ³sgị³ni."    | "The man isn't speaking, but the woman is."
+        "ᎠᏕᎳ ᎤᏂᎬᎦ, ᏍᎩᏂᏳᏍᏗ ᏚᎸᏫᏍᏓᏁᎭ."           | "a²de²³la u¹hni²³gv³²ga, sginh³yusd²³ du¹lv²³hwị³sda¹nẹ²ha." | "He needs money, so he's working."
+        "Ꮭ ᏳᏚᎵ ᏁᎳᎩᏅ ᏧᏂᎬᎦ."                    | "hla³ yu²³du³li² ne²³lạ²gị³hnv ju¹hni²³gv¹ga."        | "He doesn't want it even though he needs it."
+        "ᏫᎵ ᏚᏯᏪᎦ ᏚᎸᏫᏍᏓᏁᎲ ᎢᏳᏍᏗ."              | "wi²³li du¹yạ²we³ga du¹lv²³hwị³sda¹ne²hv⁴ ị²yu⁴sdi."   | "Bill is tired because he is working."
+        "ᏚᏯᏪᎦ ᏚᎸᏫᏍᏓᏁᎭᎮᏃ."                      | "du¹yạ²we³ga du¹lv²³hwị³sda¹ne²hạ³he²³hno."           | "He's tired because he's working."
+        "ᏚᎸᏫᏍᏓᏁᎲᎢᏍ ᎢᏳᏍᏗ ᏚᏯᏪᎦᏉ?"               | "du¹lv²³hwị³sda¹ne²hv⁴ʔis² ị²yu⁴sdi du¹yạ²we³ga?"     | "Is he tired because he's working?"
+
+        // =========================================================================
+        // Section IV-A: Negative Sentences (Pages 344-347)
+        // =========================================================================
+        "ᏓᎻ ᎬᏂᎭ ᏫᎵ."                          | "da²³mi gv²hnị³ha wi²³li."                            | "Bill is hitting Tom."
+        "Ꮭ ᏓᎻ ᏬᎬᏂᎭ ᏫᎵ."                        | "hla³ da²³mi yị²gv²³hnị³ha wi²³li."                   | "Bill isn't hitting Tom."
+        "ᏫᎵ ᎤᏔᎾ."                               | "wi²³li u²³tạ²na."                                    | "Bill is big."
+        "ᏫᎵ Ꮭ ᎤᏔᎾ ᏱᎩ."                          | "wi²³li hla³ u²³tạ²na yị²gi."                         | "Bill isn't big."
+        "ᎣᏍᏓ ᎨᏒᎢ."                              | "o⁴sda ge¹sv²³ʔi."                                    | "It was good."
+        "Ꮭ ᎣᏍᏓ ᏱᎨᏎᎢ."                          | "hla³ o⁴sda yị²ge³se³ʔi."                             | "It wasn't good."
+        "ᏫᎵ ᎠᏍᎦᏯ."                              | "wi²³li ạ²sgạ²ya."                                    | "Bill is a man."
+        "ᎺᎵ Ꮭ ᎠᏍᎦᏯ ᏱᎩ."                        | "me²³li hla³ ạ²sgạ²ya yị²gi."                         | "Mary isn't a man."
+        "Ꮭ ᏫᎵ ᏱᎦ ᏥᎦᏬᏂᎭ."                       | "hla³ wi²³li yị²gi jị²gạ²wo³ni⁴ha."                   | "It isn't Bill who is speaking."
+        "Ꮭ ᏫᎵ ᏱᎩ ᎤᏔᎾ ᏥᎩ."                       | "hla³ wi²³li yị²gi u²³tạ²na ji⁴gi."                   | "It isn't Bill who is big."
+        "Ꮭ ᏫᎵ ᏱᎩ ᎠᏍᎦᏯ ᏥᎩ."                      | "hla³ wi²³li yị²gi ạ²sgạ²ya ji⁴gi."                   | "It isn't Bill who is a man."
+        "Ꮭ ᏓᎻ ᏪᎩ ᏫᎵ ᏥᎬᏂᎭ."                      | "hla³ da²³mi yị²gi wi²³li jị²gv²³hnị²ha."             | "It isn't Tom who Bill is hitting."
+        "Ꮭ ᎩᏟ ᏱᎩ ᏣᎪᏩᏘᎭ."                        | "hla³ gi²hli yị²gi ja¹gowh²ti⁴ha."                    | "It's not a dog he sees."
+        "ᏫᎵ Ꮭ ᏍᏓᏯ ᏱᎬᎭ ᏓᎻ."                      | "wi²³li hla³ sda⁴ya yị²gv²³hnị³ha da²³mi."            | "Bill isn't hitting Tom hard."
+        "ᏫᎵ Ꮭ ᎤᏙᎯᏳ ᎤᏔᎾ ᏱᎩ."                    | "wi²³li hla³ u²do²hị²yu u²³tạ²na yị²gi."              | "Bill isn't very big."
+        "Ꮭ ᏒᎯ ᏱᎨᏍ ᏓᎻ ᏧᏩᏂᎸ ᏫᎵ."                  | "hla³ sv²hi yị²ge³se da²³mi ju¹wa²hnị³lv wi²³li."     | "It wasn't yesterday that Bill hit Tom."
+        "ᏫᎵ ᎦᏬᏂᎭ, ᏙᎧ?"                         | "wi²³li gạ²wo³nị²ha, do⁴ka?"                          | "Bill is speaking, isn't he?"
+        "ᎤᏁᎳᏁᏛ ᏫᎵ ᏙᎧ?"                         | "u¹hne²lạʔ³de³dv³ wi²³li, do⁴ka?"                     | "Bill left, didn't heʔ"
+        "Ꮭ Ꮟ ᏯᏁᎳᏗᎠ ᏫᎵ, ᏝᎧ?"                     | "hla³ si³ ya²³hne³lạ²dị²ʔa wi²³li, hla⁴ka?"           | "Bill hasn't left yet, has he?"
+        "ᏓᏰᏏᏍ, ᏝᎨ?"                             | "dạ²³ye³sis³, hlạ²ke³?"                               | "Will he go or not?"
+        "ᎤᏔᎾᏍ ᏝᎨ?"                              | "u²³tạ²nas³ hla²ke³?"                                 | "Is he big or not?"
+        "ᏣᏂ Ꮭ ᏳᏪᏅᏎᎢ, ᏓᎻᏅ ᎨᏍᏊ Ꮭ."               | "ja²³ni hla³ yụ²we³nv¹se³ʔi, da²³mị³hnv³ v¹sgwu³ hla²." | "John didn't go and neither did Tom."
+        "Ꮭ ᏱᏥᏯᏴᏖᏎ ᎩᏟ Ꮎ ᎠᏍᎦᏯ ᏧᏍᎦᎵᏨᎢ."          | "hla³ yị²ji²³ya³²yvh²te³se gi²hli na³ ạ²sgạ²ya ju¹sgahl²jv⁴ʔi." | "I didn't kick the dog that bit the man."
+        "ᏂᎦᏓ ᎤᏂᎪᎲᎢ."                           | "nị²ga⁴da u¹ni²go²hv²³ʔi."                            | "Everyone saw it."
+        "Ꮭ ᏂᎦᏓ ᏳᏂᎪᎮᎢ."                          | "hla³ nị²ga⁴da yu²³ni³go²he³ʔi."                      | "Not everyone saw it."
+        "ᎪᎱᏍᏗ ᎣᏍᏓ ᎤᏛᎦᏁᎢ."                      | "go²hu⁴sdi o⁴sda u¹tv²ga³²ne³ʔi."                     | "He heard something good."
+        "Ꮭ ᎪᎱᏍᏗ ᎣᏍᏓ ᏳᏛᎦᏁᎢ."                    | "hla³ go²hu⁴sdi o⁴sda yu²³tv³ga¹ne³ʔi."               | "He heard nothing good."
+        "ᎪᎱᏍᏗ ᎤᎸᏉᏗ ᏣᏂ."                        | "go²hu⁴sdi u¹lv²³kwdi ja²³ni."                        | "John likes something."
+        "Ꮭ ᎪᎱᏍᏗ ᏳᎸᏉᏗ ᏣᏂ."                      | "hla³ go²hu⁴sdi yu²³lv³kwdi ja²³ni."                  | "John doesn't like anything."
+        "ᎩᎶ ᎪᎱᏍᏗ ᎤᏬᏎᎴ ᎩᎶ."                      | "kị²lo⁴ go²hu⁴sdi u¹wo¹se²³le³ kị²lo."                | "Someone said something to someone."
+        "Ꮭ ᎩᎶ ᎪᎱᏍᏗ ᏳᏬᏎᎴ ᎩᎶ."                    | "hla³ kị²lo⁴ go²hu⁴sdi yụ²wo³²se²³le³ kị²lo⁴."        | "No one said anything to anyone."
+        "ᎩᎶ ᎪᎱᏍᏗ ᎤᎪᎴᎢ."                        | "kị²lo⁴ go²hu⁴sdi u¹go²he³ʔi."                        | "Someone saw something."
+        "Ꮭ ᎪᎱᏍᏗ ᏳᎪᎮᎢ ᎩᎶ."                      | "hla³ go²hu⁴sdi yu²³go³he³ʔi kị²lo⁴."                 | "Someone didn't see anything."
+        "ᎦᎪ ᎪᎱᏍᏗ ᎤᎪᎮᎢ?"                        | "ga³go² go²hu⁴sdi u¹go²he³ʔi?"                        | "Who saw something?"
+        "ᎦᎪ Ꮭ ᎪᎱᏍᏗ ᏳᎪᎮᎢ?"                      | "ga³go² hla³ go²hu⁴sdi yu²³go³he³ʔi?"                 | "Who didn't see anything?"
+        "ᎣᎨᏅᏒᎢ."                                | "o¹ge²nv³sv²³ʔi."                                     | "They and I went."
+        "Ꮭ ᏲᎨᏅᏎᎢ."                              | "hla³ yo²³ge³nv¹se³ʔi."                               | "They and I didn't go. (i.e., None of us went.)"
+        "ᏂᎦᏓᏊ ᎢᏳᏍᏗ Ꮭ ᏳᏂᎪᎮᎢ."                    | "nị²ga²³dạ²gwu ị²yu⁴sdi hla³ yu²³ni³go²he³ʔi."        | "Just about everyone didn't see it."
+
+        // =========================================================================
+        // Section IV-B: Questions (Pages 347-348)
+        // =========================================================================
+        "ᎭᏜ ᎮᎦ?"                                | "ha²dlv he³ga?"                                       | "Where are you going?"
+        "ᎦᏙᎲ ᏙᏣᏯᏪᎦ?"                           | "gạ²do¹hv⁴ do²³jạ³yạ²we³ga?"                          | "Why are you tired?"
+        "ᎦᏙ ᎬᏁᎭ?"                               | "ga²do¹ gv³nẹ²ha?"                                    | "How is he doing it?"
+        "ᎠᏍᎦᏯ"                                  | "ạ²sgạ²ya"                                            | "a man"
+        "ᎠᏍᎦᏯ?"                                 | "ạ³sgạ³ya³?"                                          | "a man?"
+        "ᏓᎻ ᎤᏛᏛᏅ ᏫᎵ ᎢᏳᏅ ᎺᎵ ᏳᏚᎵ ᏚᏐ ᎤᏪᏅᏍᏗ."   | "da²³mi u¹tv²³dv³hnv³ wi²³li ị²yu³hnv³ me²³li yu²³du³li gu²so ụ²we²nv¹sdi." | "Bill asked Tom if Mary wanted to go to Musgogee."
+        "ᏓᎻ ᎤᏛᏛᏅ ᏫᎵ ᏅᏍᎩᎾ ᎤᏬᏂᏒ ᏒᎯ."            | "da²³mi u¹tv²³dv³hnv³ wi²³li v¹sgị²na u¹wo³ni²sv sv²hi." | "Bill asked Tom who spoke yesterday."
+        "ᏫᎵ ᎤᏛᏛᏅ ᎢᏳᏅ ᎤᎬᏫᏳᎯ ᎬᏩᏬᏂᎯᏍᏗ ᏱᎩ ᏏᎾᎴᎢ."  | "wi²³li u¹tv²³dv³hnv³ ị²yu³hnv³ u²gv²wị²yu²hi gv²wạ²wo¹ni²³hị²sdi yi⁴gi sị²na³le⁴ʔi." | "Bill asked if the chief could speak tomorrow."
+
+        // =========================================================================
+        // Section IV-C: Coordination (Pages 348-350)
+        // =========================================================================
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ ᎠᎴ ᎠᎨᏯ ᏕᎧᏃᎩᎠ."             | "ạ²sgạ²ya gạ²wo³nị²ha ạ²le ạ²ge²³hya de²³kạ³no²gi³ʔa." | "A man is speaking and a woman is singing."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ, ᎠᎨᏯᏃ ᏕᎧᏃᎩᎠ."               | "ạ²sgạ²ya gạ²wo³nị²ha, ạ²ge²³hyạ³hno de²³kạ³no²gi³ʔa." | "A man is speaking and a woman is singing."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ, ᎠᎨᏯᏃ ᏕᎧᏃᎩᎠ, ᎠᏂᏧᏣᏃ ᎠᎾᏟᏃᎮᎭ."| "ạ²sgạ²ya gạ²wo³nị²ha, ạ²ge²³hyạ³hno de²³kạ³no²gi³ʔa, ạ²ni²chu²³jạ²hno a¹nạ²hlị²no²hẹ³ha." | "A man is speaking, a woman is singing, and boys are conversing."
+        "ᎠᏍᎦᏯ ᎠᎴ ᎠᎨᏳᏣ ᎠᎾᏟᏃᎮᎭ."                  | "ạ²sgạ²ya ạ²le ạ²ge²hyu⁴ja a¹nạ²hlị²no²hẹ³ha."        | "A man and a girl are conversing."
+        "ᎠᏍᎦᏯ ᎠᎨᏳᏣᏃ ᎠᎾᏟᏃᎮᎭ."                  | "ạ²sgạ²ya ạ²ge²hyu²³jạ²hno a¹nạ²hlị²no²hẹ³ha."       | "A man and a girl are conversing."
+        "ᏫᎵ ᎤᏍᏗ ᎠᏯᏄᎵᏃ."                        | "wi²³li ụ²sdi a²yạ²nu²³lị²hno."                       | "Bill is small and fast."
+        "ᏫᎵ, ᏓᎻ, ᏌᎻᏃ ᏚᏂᏃᎩᏒᎢ."                  | "wi²³li, da²³mi, sa²³mị³hno du¹ni²hno²gi³sv²³ʔi."     | "Bill, Tom, and Sam sang."
+        "ᎠᏍᎦᏯ ᎦᏬᏂᎭ ᎠᎨᏯᎴ ᏁᎧᏃᎩᎠ ᏱᎩ."            | "ạ²sgạ²ya gạ²wo³nị²ha ạ²ge²³hyạ³le³ de²³kạ³no²gi³ʔa yi⁴gi." | "A man is speaking or a woman is singing."
+        "ᏫᎵ ᏓᎻᎴ ᏱᎩ ᏚᏃᎩᏎᎢ."                      | "wi²³li da²³mị³le³ yi⁴gi du¹hno²gi³se³ʔi."            | "Bill or Tom sang."
+        "ᏫᎵ ᏓᎻᏃ ᏚᏂᏃᎩᏒᎢ."                        | "wi²³li da²³mị³hno du¹ni²hno²gi³sv²³ʔi."              | "Bill and Tom sang."
+        "ᏫᎵ ᏓᎻᎴ ᏱᎦ ᏚᏃᎩᏒᎢ."                      | "wi²³li da²³mị³le³ yi⁴gi du¹hno²gi³sv²³ʔi."           | "Bill or Tom sang."
+        "ᏫᎵ ᎦᏟ ᎠᎪᏩᏘᎭ, ᎠᎨᏯᏃ ᎠᏛᎩᎠ."            | "wi²³li gi²hli a¹gowh²tị³ha, ạ²ge²³hyạ³hno a¹tv²gi³ʔa." | "Bill sees the dog, and the woman hears it."
+        "ᏫᎵ ᎠᎪᏩᏘᎭ, ᎠᎨᏯᏃ ᎠᏛᎩᎠ ᎦᏟ."            | "wi²³li a¹gowh²tị³ha, ạ²ge²³hyạ³hno a¹tv²gi³ʔa gi²hli." | "Bill sees, and the woman hears, the dog."
+        "ᎩᏟ ᎠᎪᏩᏘᎭ ᏫᎵ ᎠᎨᏯᏃ ᎠᏛᎩᎠ."            | "gi²hli a¹gowh²tị³ha wi²³li ạ²ge²³hyạ³hno a¹tv²gi³ʔa." | "Bill sees the dog, and the woman hears it."
+        "ᏫᎵ ᎩᏟ ᎠᎪᏩᏘᎭ ᎠᎨᏯᏃ ᎠᏛᎩᎠ."            | "wi²³li gi²hli a¹gowh²tị³ha ạ²ge²³hyạ³hno a¹tv²gi³ʔa." | "Bill sees, and the woman hears, the dog."
+        "ᏩᎦ ᏚᏩᏍᎪ ᏫᎵ ᏓᎻᏃ ᏕᎦᎾᏕᎪᎢ."                | "wah²ga du¹hwạ³sgo³ wi²³li da²³mị³hno de²³gạ³nạ²de³go³ʔi." | "Bill buys cows and Tom sells them."
+        "ᏫᎵ ᏓᏆᎴᎳ ᏚᏩᏍᎪ ᏕᎦᎾᏕᎪᎢᏃ."                | "wi²³li dạ²gwạ²le³la du¹hwạ²sgo³ de²³gạ³nạ²de³go³ʔị³hno." | "Bill buys and sells cars"
+        "ᏫᎵ ᎠᏴᏃ ᎣᎩᏂᏬᏂᏒᎢ."                      | "wi²³li ạ²yṿ³hno o¹gị²ni²wo³ni²sv²³ʔi."               | "Bill and I spoke."
+        "ᏫᎵ ᎣᎦᏂᏬᏂᏒᎢ,"                          | "wi²³li o¹gị²ni²wo³ni²sv²³ʔi."                        | "Bill and I spoke."
+        "ᏫᏂ ᎤᏓᏬᎥᏒ ᏫᎵᏅ ᏅᏍᏊ."                      | "ja²³ni u¹dạ²wo³ʔv¹sv³ wi²³lị³hnv v¹sgwu."            | "John went swimming and Bill did too."
+        "ᏫᎵ ᏓᎻᏅ ᎢᏧᎳ ᏚᏂᏃᎩᏒᎢ."                  | "wi²³li da²³mị³hnv i²³ju³la du¹ni²hno²gi³sv²³ʔi."     | "Bill and Tom both sang."
+        "ᏫᎵ ᏓᎻᏅ ᎢᏧᎳ ᏚᏂᏃᎩᏒ ᎤᎾᎵᏍᎩᏒᎢᏃ."          | "wi²³li da²³mị³hnv i²³ju³la du¹ni²hno²gi³sv³ u¹nal²sgi³sv²³ʔị³hno." | "Bill and Tom both sang and danced."
+        "ᏫᎵ ᎦᏚ ᎤᏚᎵᎭ, ᏓᎻᏃ ᏄᎾ."                  | "wi²³li ga⁴du u¹du²lị³ha, da²³mị³hno nu²³na."         | "Bill wants bread and Tom a potato."
+        "ᎦᏚ ᎤᏚᎵᎭ ᏫᎵ, ᏓᎻᏃ ᏄᎾ."                  | "ga⁴du u¹du²lị³ha wi²³li, da²³mị³hno nu²³na."         | "Bill wants bread and Tom a potato."
+
+        // =========================================================================
+        // Section IV-D: Subordination (Pages 350-352)
+        // =========================================================================
+        "ᏃᏊ ᏱᎦᏬᏂᎭ, Ꮭ ᏯᏆᏅᎳ."                    | "no²³gwu yị²gạ³wo³²ni⁴ha, hla³ yạ²gwanh³ta."          | "If he is speaking now, I don't know about it."
+        "Ꮭ ᏯᏆᏛᎦᏁ ᏒᎯ ᏳᏬᏂᏌ."                    | "hla³ yạ³kwtv²ga¹ne sv²hi yu²³wo³²ni⁴sa."             | "If he spoke yesterday, I didn't hear about it."
+        "ᏳᏬᏂᏌ, ᏯᏆᏛᏗᏍᏗ."                        | "yu²³wo³²ni⁴sa, yạ³kwtv²da¹sdi."                      | "If he speaks, I'll be listening."
+        "ᎦᏬᏂᏍᎬᎢ ᎤᎪᎭ."                          | "gạ²wo³ni²sgv²³ʔi u¹go⁴ha."                           | "He was speaking when he saw it."
+        "ᏫᎨᏙᎮᏍᏗ ᎦᏬᏂᏒᎢ."                        | "wị²ge²³do³²he³sdi gạ²wo³ni²sv⁴ʔi."                   | "I'll be there when he speaks."
+        "ᎦᏛᎦᏍᎪ ᏳᏬᏂᏌ."                          | "ga¹tv²gi³sgo yu²³wo³²ni⁴sa."                         | "I hear him whenever he speaks."
+        "ᏫᎾᎩᎷᏨᎾᏊ ᎤᏬᏂᏒᎢ."                       | "wị²nạ²giʔ³luh²jv²³nạ²gwu u¹wo³ni²sv²³ʔi."            | "He spoke before I got there."
+        "ᏫᎾᎩᎷᏦᎢ ᎤᏬᏂᏒᎢ."                         | "wị²nạ²gịʔ³luh²jo⁴ʔi u¹wo³ni²sv²³ʔi."                 | "He spoke after I got there."
+        "ᎠᏆᏅᎳ ᎦᏬᏂᏍᎬᎢ."                          | "a¹gwanh²ta gạ²wo³ni²sgv⁴ʔi."                         | "I know he is speaking."
+        "ᎠᏆᏅᎳ ᎤᏬᏂᏒ ᏒᎯ."                         | "a¹gwanh²ta u¹wo³ni²sv sv²hi."                        | "I know he spoke yesterday."
+        "ᎠᏆᏅᎳ ᏗᎦᎣᏂᏏᏒᎢ."                        | "a¹gwanh²ta dị²gạ²wo³²ni²si³sv⁴ʔi."                   | "I know he will speak."
+        "ᎦᏬᏂᎾ ᎨᎵᎠ."                            | "gạ²wo³nị²ha ge²lị³ʔa."                               | "I think he is speaking."
+        "ᏒᎯ ᎤᎣᏂᏎ ᎨᎵᎠ."                          | "sv²hi u¹wo³ni²se³ ge²lị³ʔa."                         | "I think he spoke yesterday."
+        "ᏏᎾᎴ ᏓᎦᏬᏂᏏ ᎨᎵᎠ."                        | "sị²na³le dạ²gạ²wo³²ni²si ge²lị³ʔa."                  | "I think he will speak tomorrow."
+        "Ꮭ ᏯᏆᏅᎳ ᎢᏳᏰᎸᏗ ᎨᏒ ᏥᎦᏬᏂᎭ."               | "hla³ yạ²gwanh³ta ị²yu³yehl⁴di ge¹sv jị²gạ²wo³ni⁴ha." | "I don't know why he is speaking."
+        "Ꮭ ᏯᏆᏅᎳ ᎤᎾ ᎦᏬᏂᏍᎬᎢ."                    | "hla³ yạ²gwanh³ta u¹hna³ gạ²wo³ni²sgv⁴ʔi."            | "I don't know where he is speaking."
+        "Ꮭ ᏯᏆᏅᎳ ᏂᎬᏁᎲᎢ."                        | "hla³ yạ²gwanh³ta nị²gv³ne²hv⁴ʔi."                    | "I don't know how he is doing it."
+
+        // =========================================================================
+        // Section IV-E & IV-F: Possession & Word Order (Pages 352-354)
+        // =========================================================================
+        "ᎠᏉᏰᏂ"                                  | "ạ²gwo¹ye⁴ni"                                         | "my hand"
+        "ᏦᏰᏂ"                                   | "jo¹ye⁴ni"                                            | "your hand"
+        "ᎤᏬᏰᏂ"                                  | "ụ²wo¹ye⁴ni"                                          | "his hand"
+        "ᎠᎩᏙᏓ"                                  | "ạ²gị²do²da"                                          | "my father"
+        "ᏣᏙᏓ"                                   | "jạ²do²da"                                            | "your father"
+        "ᎤᏙᏓ"                                   | "u²do²da"                                             | "his father"
+        "ᎦᏁᏌᎢ ᎠᏆᏤᎵᎢ"                           | "gạ²ne¹sạ³ʔi ạ²gwạ²je²li⁴ʔi"                          | "my box"
+        "ᎩᏟ ᎤᏤᎵᎢ"                              | "gi²hli u²je²li⁴ʔi"                                   | "his dog"
+        "ᎤᏬᏯ ᎠᏆᏤᎵᎢ"                            | "ụ²wo³²ya ạ²gwạ²je²li⁴ʔi"                             | "my (detached) hand"
+        "ᎤᏤᎵᎢ ᏓᏆᎴᎳ"                            | "u²je²li⁴ʔi dạ²gwạ²le³la"                             | "his car"
+        "ᏓᏆᎴᎳ ᎤᏤᎵᎢ"                            | "dạ²gwạ²le³la u²je²li⁴ʔi"                             | "his car"
+        "ᏫᎵ ᎤᏤᎵᎢ ᏓᏆᎴᎳ"                         | "wi²³li u²je²li⁴ʔi dạ²gwạ²le³la"                      | "Bill's car"
+        "ᎠᏇᏥ ᎦᏬᏂᎭ."                            | "ạ²gwe²³ji gạ²wo³nị²ha."                              | "My son is speaking."
+        "ᎠᏇᏥ ᎠᏆᏤᎵᎢ ᎦᏬᏂᎭ."                      | "ạ²gwe²³ji ạ²gwạ²je²li⁴ʔi gạ²wo³nị²ha."               | "My son is speaking."
+        "ᎠᏍᎦᏯ ᏪᏌ ᎠᎪᏩᏘᎭ."                      | "ạ²sgạ²ya we²³sa a¹gowh²tị³ha."                       | "A man sees a cat."
+        "ᏪᏌ ᎠᎪᏩᏘᎭ ᎠᏍᎦᏯ."                      | "we²³sa a¹gowh²tị³ha ạ²sgạ²ya."                       | "A man sees a cat."
+        "ᎤᏍᏗ ᎠᏧᏣ ᎠᏜᏱᎭ."                        | "ụ²sdi ạ²chu⁴ja a¹dlo²hyị³ha."                        | "A little boy is crying."
+        "Ꮎ ᎠᏂᏔᎵ ᎠᏂᏍᎦᏯ ᎠᏂᏬᏂᎭ."                  | "na³ ạ²ni²³tạʔ³li ạ²ni²sgạ²ya a¹ni²wo³nị²ha."         | "The two men are speaking."
+        "ᎯᎠ ᎠᏂᏔᎵ ᎠᏂᏍᎦᏯ ᎠᎭᏂ ᏥᏓᏂᏙᎦ ᎠᏂᏬᏂᎭ."    | "hị²ʔa ạ²ni²³tạʔ³li ạ²ni²sgạ²ya ạ³hạ²ni jị²da¹ni²³do¹ga a¹ni²wo³nị²ha." | "These two men who are standing here are speaking."
+        "ᎯᎠ ᎠᎯᏂ ᏥᏓᏂᏙᎦ ᎠᏂᏔᎵ ᎠᏂᏍᎦᏯ ᎠᏂᏬᏂᎭ."    | "hị²ʔa ạ³hạ²ni jị²da¹ni²³do¹ga ạ²ni²³tạʔ³li ạ²ni²sgạ²ya a¹ni²wo³nị²ha." | "These two men who are standing here are speaking."
+        "ᎠᏍᏓᏯ ᎦᏬᏂᎭ."                          | "ạ²sda⁴ya gạ²wo³nị²ha."                               | "He's speaking loudly."
+        "ᎤᏙᎯᏳ ᎠᏍᏓᏯ ᎦᏬᏂᎭ."                      | "ụ²do²hị²yu⁴ ạ²sda⁴ya gạ²wo³nị²ha."                   | "He's really speaking loudly."
+        "Ꮎ ᎠᏍᎦᏯ ᎠᎩᏙᏓ."                          | "na³ ạ²sgạ²ya ạ²gị²do²da."                            | "That man is my father."
+        "ᎠᎩᏙᏓ ᎤᏔᎾ."                            | "ạ²gị²do²da u²³tạ²na."                                | "My father is big."
+
+        // =========================================================================
+        // Section IV-G: Cherokee Hunting Narrative Breakdown (Pages 354-355)
+        // =========================================================================
+        "ᎠᏂᏔᎵ ᎠᏂᏍᎦᏯ ᎠᏂᏃᎭᎵᏙᎮ,"                 | "ạ²ni²³tạʔ³li ạ²ni²sgạ²ya a¹ni²no²hạ²li²³do³²he,"     | "Two men were hunting,"
+        "ᎠᏫ ᏚᏂᏲᎮ."                             | "ạ²hwi du¹ni²hyọ²he."                                 | "looking for deer."
+        "ᏌᏊᏃ ᎠᏍᎦᏯ ᎦᎶᏇ ᎦᏁᎮ ᏐᎢᏅ Ꮭ."              | "sa¹gwu⁴hno ạ²sgạ²ya gạ²lo¹gwe³ ga²ne²he sọ³ʔị³hnv³ hla²." | "One of the men had a gun and the other one didn't."
+        "ᎠᏅ ᎦᎶᏇ ᎦᏁᎯ ᎤᏢᏈᏌᏘ ᎨᏎ,"                 | "na³hnv³ gạ²lo¹gwe³ ga²ne⁴hi u²dlv²³kwsạ²ti ge¹se³,"  | "The one with the gun was a braggart,"
+        "ᎠᎴ ᎪᎱᏍᏗ ᎤᏛᏁᎳ ᎤᏢᏈᏍᎨ."                  | "ạ²le go²hu⁴sdi yu²³dv³²ne⁴la a¹dlv²³kwsge³."         | "and when he did something he bragged about it."
+        "ᎠᎾᎢᏒᏅ ᎪᎱᏍᏗ ᏭᏂᎪᎮ ᏙᏧᏩᎢᏢ,"              | "a¹na³ʔi²sv⁴hnv go²hu⁴sdi wu²³ni³go²he do²jụ²wạ³ʔị²hlv," | "Walking along, they saw something moving around in the bushes,"
+        "ᎾᏅ ᎦᎶᏇ ᎦᏁᎯ ᎩᎳᏊ ᎢᏴᏓ ᏫᏚᏍᏓᏲᏞ ᎣᏍᏓᏊ ᏄᎦᏎᏍᏔᏅᎾ ᎢᏳᏍᏗ ᏓᏍᏓᏲᎯᎲ" | "na³hnv³ gạ²lo¹gwe³ ga²ne⁴hi kị²lạ²gwu ị²yv⁴da wị²du²³sdạ³yo²hle³ o²³sdạ²gwu nu²³ksẹ²stạ²nv⁴na ị²yu³sdi da¹sdạ²yo²hị²hv⁴." | "and the man with the gun shot at once toward the bushes without paying attention to what he was shooting at."
+        "ᎤᏙᎯᏳᏅ ᏭᏲᏞ ᎠᎴ ᎤᏂᎪᎮ ᎦᏅᎬ."              | "u²do²hị²yu⁴hnv³ wu²³yo³hle³ ạ²le u¹ni²go²he³ gạ²nv³gv⁴." | "And sure enough he shot it and they saw it fall to the ground."
+        "ᎾᏅ ᎦᎶᏇ ᏂᎨᏁᎲᎾ \"ᎠᏫ ᎡᏂᏲᎠ!\" ᎤᏛᏁ."      | "na³hnv³ gạ²lo¹gwe³ nị²ga²³ne³hv⁴na \"ạ²hwi e¹ni²yo³ʔa!\" u¹dv²hne." | "The one without the gun said 'we shot a deer.'"
+        "\"ᏥᏯᎡᎦ\" ᎤᏛᏁ Ꮎ ᎦᎶᏇ ᎦᏁᎯ, ᎠᏢᎦᏍᎬ"      | "\"ji²yo³ʔe³²ga\" u¹dv²hne na³ gạ²lo¹gwe³ ga²ne⁴hi, a¹dlv²³kwsgv³." | "'I shot it,' said the one with the gun, bragging."
+        "ᎤᎾᏁᎷᎩᏎ ᏗᏧᏩᎢᏢ ᏗᏜ ᎾᏅᏂᎨᏅ ᏭᏂᎷᏣ ᎤᏂᎪᎮ ᏐᏈᎵ ᎦᏅ." | "u¹na³ne²lu²³gi³²se do²jụ²wạ³ʔị²hlv³ di³dla, nạ²ʔv²³hnị³ge⁴hnv wu²³ni³luh²ja u¹ni²go²he³ so²³gwị³li gạʔ³nv⁴." | "They raced toward the bushes and when they got closer they saw a horse lying there."
+        "\"ᏐᏈᎵᎴ ᎢᎾᏓᎯᏍ\" ᎤᏛᏁ Ꮎ ᎤᏲᏢ"            | "\"so²³gwị³lị³le³² i¹nạ²da²hị³si\" u¹dv²hne³ na³ u²yo²hlv⁴." | "'We killed someone's horse,' said the one who shot it."
+        "\"ᎭᏓᎯᏎᎦ\" ᎠᎪᏎᎴ."                      | "\"hạ²da²hị³se³²ga³\" a¹go¹se²³le³."                  | "'You killed it,' he was told."
+    }
+}

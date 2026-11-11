@@ -34,11 +34,15 @@ class ConjugationHelper {
     public static void determineVerbSet(Verb verb) {
         def verbset = VerbSet.A
 
-        // Plural objects with distributive prefixes are inherently Set B
-        if (verb.object == PrefixTableObject.PL3AN
-                || verb.object == PrefixTableObject.PL3IN) {
-            verbset = VerbSet.B
-        }
+        // timo 10Nov26: the old "Plural objects with distributive prefixes are
+        // inherently Set B" rule (which forced VerbSet.B for every PL3AN/PL3IN
+        // object) is removed. The guide is clear that a verb's set is a property
+        // of the VERB, not the object: Set A verbs keep Set A prefixes with
+        // plural objects — P1(11) gaji- "I'm tying them (an)", P1(45) deg-
+        // "he's tying them", P1(70) gosd- "he and I are tying them (an)",
+        // P3(24) da- "he sees them", Fig. 3 (deg-/degi- column). Set B verbs
+        // (e.g. "to forget", P4(7) degv-) continue to route to their B entries
+        // through the present3rd check below.
 
         //if du,nu,u,wu in 3rd sing present then Set B rest are Set A
         def tempPresent3rd = verb.stemmer.present3rd.syllabary

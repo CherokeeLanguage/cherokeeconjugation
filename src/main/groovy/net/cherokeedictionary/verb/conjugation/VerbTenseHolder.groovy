@@ -2,6 +2,8 @@ package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.transliteration.SyllabaryUtil
+import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.NonFinalSuffixG
 
 
 /**
@@ -88,8 +90,31 @@ class VerbTenseHolder {
         // once verb-level data is available.
         //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
         futureCommand = remotePast ?: completiveFuture
-        progressivePast = completiveFuture
-        progressiveFuture = completiveFuture
+
+        // C6: the progressive tenses insert the non-final suffix -sg- before the
+        // tense final suffix (grammar guide ex. 89/93):
+        //   past progressive    stem + sg + v'i   -> ...-sgv'i (ᏍᎬᎢ)
+        //   future progressive  stem + sg + esdi  -> ...-sgesdi (ᏍᎨᏍᏗ)
+        // derived from the present stem (Stem I, the same stem both progressive
+        // tenses build on). The present's -sg+a surfaces as -ha (s drops, g -> h),
+        // so the stem-final -h- merges back: h + sg -> sg
+        // (gawonih + sg + v'i -> gawonisgv'i ᎦᏬᏂᏍᎬᎢ). -- timo 10Nov26
+        if (present != null) {
+            def pr = stemmer?.getRootWithEnding(Tense.PRESENT)
+            if (pr && pr[0] != null && pr[1]) {
+                String pBase = NonFinalSuffixG.applyGLatin(pr[0] + pr[1])
+                if (pBase) {
+                    progressivePast = SyllabaryUtil.tsalagiToSyllabary(pBase + "vi")
+                    progressiveFuture = SyllabaryUtil.tsalagiToSyllabary(pBase + "esdi")
+                }
+            }
+        }
+        if (progressivePast == null) {
+            progressivePast = completiveFuture
+        }
+        if (progressiveFuture == null) {
+            progressiveFuture = completiveFuture
+        }
         immediateCommand = completiveFuture
     }
 }

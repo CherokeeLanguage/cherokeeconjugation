@@ -9,5 +9,7 @@ class Word {
     PrefixTableSubject subject
     PrefixTableObject object
 
-
+    // F: presentation surface for the conjugated word (set by the facade /
+    // pipeline after conjugation; equals wholeWord once the engine has run).
+    String display
 }

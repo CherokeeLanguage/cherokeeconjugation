@@ -319,7 +319,15 @@ class CompoundPrefixes {
         prefixes.put("SG3DL2", new Prefix(preVowel: 'Ꮝd', preConsonant: 'ᏍᏗ', other: ''))
         prefixes.put("SG3PL2", new Prefix(preVowel: 'Ꭲj', preConsonant: 'ᎢᏥ', other: ''))
         prefixes.put("SG3PL3AN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᎩ', other: ''))
-//        prefixes.put("SG3PL3AN", new Prefix(preVowel: 'Ꮣg', preConsonant: 'ᏓᎪ', other: ''))
+        // NOTE (refreshed -- timo 10Nov26): guide-attested for the vowel-stem and
+        // consonant-stem cases is deg-/degi-: P1(45) ᏕᎦᏢᎢᎭ "he's tying them (an or
+        // in)" (deg-), Fig. 3 3sg row 3pl-an/3pl-in columns deg-/degi-, and the
+        // user's hear/kill tests (ᏕᎦᏛᎩᎠ, ᏕᎩᎯᎭ pattern). The verb book prints a
+        // da- variant for the same cells — P3(24) ᏓᎪᏩᏘᎭ da¹gowh²tị³ha "he sees
+        // them (an or in)" and p.119 "He/she sees them" dagowtiha — which this
+        // single table cannot express together with degi-; kept commented below.
+        // Vowel-stem allomorph Ꮣg (da-g-...) unattested in the guide excerpts.
+//        prefixes.put("SG3PL3AN", new Prefix(preVowel: 'Ꮣg', preConsonant: 'ᏓᎪ', other: ''))// P3(24) da- variant, verb book pp.118-119 -- timo 10Nov26
         prefixes.put("SG3PL3IN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᎩ', other: ''))
 
 //        prefixes.put("DL1INCLSG1", new Prefix(preVowel: '', preConsonant: '', other: ''))
@@ -401,7 +409,7 @@ class CompoundPrefixes {
         prefixes.put("PL2PL3IN", new Prefix(preVowel: 'Ꮥj', preConsonant: 'ᏕᏥ', other: ''))
 
         prefixes.put("PL3SG1", new Prefix(preVowel: 'Ꭼgw', preConsonant: 'ᎬᎩ', other: ''))// NOTE: not attested in the Feeling guide excerpts; verify against Appendix B -- timo 10Nov26
-        prefixes.put("PL3SG2", new Prefix(preVowel: 'Ꭸj', preConsonant: 'ᎨᏥ', other: ''))// NOTE: not attested in the Feeling guide excerpts; verify against Appendix B -- timo 10Nov26
+        prefixes.put("PL3SG2", new Prefix(preVowel: 'ᎨᏣy', preConsonant: 'ᎨᏣ', other: ''))// verb book p.118 "They see you (singular)" getsagowtiha, p.113 "They remember you (singular)" getsanvdadi'a (getsa-); -y- inserted before stem-initial vowels (cf. SG2PL3AN ᎦᎯy) -- timo 10Nov26
         prefixes.put("PL3SG3AN", new Prefix(preVowel: 'Ꭰn', preConsonant: 'ᎠᏂ', other: ''))
         prefixes.put("PL3SG3IN", new Prefix(preVowel: 'Ꭰn', preConsonant: 'ᎠᏂ', other: ''))
         prefixes.put("PL3DL1INCL", new Prefix(preVowel: 'ᎨᎩn', preConsonant: 'ᎨᎩᏂ', other: ''))
@@ -410,11 +418,11 @@ class CompoundPrefixes {
         prefixes.put("PL3PL1EXCL", new Prefix(preVowel: 'Ꭺg', preConsonant: 'ᎪᎩ', other: ''))
         prefixes.put("PL3DL2", new Prefix(preVowel: 'ᎨᏍd', preConsonant: 'ᎨᏍᏗ', other: ''))
         prefixes.put("PL3PL2", new Prefix(preVowel: 'Ꭸj', preConsonant: 'ᎨᏥ', other: ''))
-        prefixes.put("PL3PL3AN", new Prefix(preVowel: 'Ꭰn', preConsonant: 'Ꭰ', other: ''))// NOTE: preConsonant 'Ꭰ' lacks the -n- (cf. preVowel 'Ꭰn'); not attested in the Feeling guide excerpts (Set A) — verify against Appendix B -- timo 10Nov26
-        prefixes.put("PL3PL3IN", new Prefix(preVowel: 'Ꮣn', preConsonant: 'Ꮣ', other: ''))// NOTE: preConsonant 'Ꮣ' lacks the -n- (cf. preVowel 'Ꮣn'); same check needed -- timo 10Nov26
+        prefixes.put("PL3PL3AN", new Prefix(preVowel: 'Ꮣn', preConsonant: 'ᏓᏂ', other: ''))// verb book p.118 "They see them" danigowtiha ᏓᏂᎪᏩᏘᎭ (dani-); n-stem assimilation gives dana- (p.113 dananvdadi'a). NOTE: Feeling guide Fig. 3's 3pl row prints an-/ani- for these cells instead — verb book preferred as the alignment target -- timo 10Nov26
+        prefixes.put("PL3PL3IN", new Prefix(preVowel: 'Ꮣn', preConsonant: 'ᏓᏂ', other: ''))// verb book p.118 "They see those things" danigowtiha (dani-, same as animate); n-stem assimilation dana-. Same Fig. 3 ani- variance as above -- timo 10Nov26
 
         prefixes.put("SG1SG3INB", new Prefix(preVowel: 'Ꭰgw', preConsonant: 'ᎠᎩ', other: ''))
-        prefixes.put("SG2SG3INB", new Prefix(preVowel: 'j', preConsonant: 'Ꮳ', other: ''))
+        prefixes.put("SG2SG3INB", new Prefix(preVowel: 'j', preConsonant: 'Ꮳ', other: ''))// timo 10Nov26 (vetoable): kept 'Ꮳ' (tsa-), the form the user's tests and vrb data attest for Set B verbs with an sg2 subject + SG3IN object — e.g. tohave ᏣᎭ tsha (testHavePresent), want jaduliha (UdulihaSpec, intransitive). CONFLICT, single table can't express both: Feeling guide P4(3) ᏨᎨᏩᏍᎦ "you're forgetting it" and P8(3) ᏨᏂᎸᎢ "you hit it" print 'Ꮸ' (tsv-), and the user's own vrb data uses jv- for hit/forget (jvhnilvi, jvkewsga). Revisit if hit-class sg2 cells are ever tested.
         prefixes.put("SG3SG3INB", new Prefix(preVowel: 'Ꭴw', preConsonant: 'Ꭴ', other: ''))
         prefixes.put("DL1INCLSG3INB", new Prefix(preVowel: 'Ꭹn', preConsonant: 'ᎩᏂ', other: ''))
         prefixes.put("PL1INCLSG3INB", new Prefix(preVowel: 'Ꭲg', preConsonant: 'ᎢᎩ', other: ''))
@@ -488,14 +496,13 @@ class CompoundPrefixes {
         prefixes.put("DL1EXCLPL3ANB", new Prefix(preVowel: 'ᏙᏍd', preConsonant: 'ᏙᏍᏗ', other: ''))// P4(15) dosd-; App. B p.179 *dosdi-
         //timo 10Nov26: empty B twins (same rationale as the field block above) --
         //every Set A combination lacking an attested Set B form gets a B key with
-        //empty values, so MISSING_ENTRY now signals a true gap in the map rather
-        //than a merely undeclared field, and determineCompoundPrefix can no longer
-        //return a null CompoundPrefix. Runtime note: an empty value is falsy, so in
-        //processPrefixes (VerbConjugationProcessor) an empty preVowel skips the
-        //prefix/marker logic and the word resolves blank, while an empty
-        //preConsonant (consonant-initial stem) trips the MISSING_ENTRY check and
-        //resolves "MISSING_ENTRY"+stem -- i.e. the gap stays visible either way,
-        //per the "at least not return something weird" decision. -- timo 10Nov26
+        //empty values, and determineCompoundPrefix can no longer return a null
+        //CompoundPrefix. Runtime semantics (refreshed -- timo 10Nov26): a DECLARED
+        //EMPTY entry (key present, values blank) resolves to the prefix-less bare
+        //stem in both branches of processPrefixes; MISSING_ENTRY+stem is returned
+        //only when the key is absent from the map entirely (now symmetric for Set
+        //A and Set B). That keeps a true map gap visible without tripping on
+        //declared-empty twins.
         prefixes.put("SG1SG1B", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("SG1DL1INCLB", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("SG1DL1EXCLB", new Prefix(preVowel: '', preConsonant: '', other: ''))

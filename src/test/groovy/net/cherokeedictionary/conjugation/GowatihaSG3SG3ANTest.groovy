@@ -54,9 +54,16 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     }
 
     void testSG3SG3ANInfinitive() {
+        // timo 10Nov26: guide-correct update (vetoable). Set B infinitive for
+        // SG3SG3AN is u-: the verb book lists no infinitive rows for To See, but
+        // every book infinitive table with a 3rd singular prints u- (be somewhere
+        // ᎤᏪᏓᏍᏗ uwedasdi, fall ᎤᏅᎢᏍᏗ unv'isdi, bite ᎤᏍᎦᎶᏍᏗ usgahlsdi); Feeling
+        // guide p.8344 removes "the prefix u-" from dictionary infinitives; and
+        // the user's own vrb data (AgowatihaSpec) has infinitive 'ugowatvhdi'.
+        // Old expectation ᎦᎪᏩᏛᏗ (ga-) is not attested anywhere.
         verb.tense = Tense.INFINITIVE
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᏩᏛᏗ", verb.wholeWord)
+        assertEquals("ᎤᎪᏩᏛᏗ", verb.wholeWord)
     }
 
     void testSG3SG3INInfinitive() {
@@ -68,12 +75,16 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     }
 
     void testSG3SG3ANCommand() {
-        // Verb book (To See, Stem III): Future Imperative/Volative -goh-v'i = the
-        // Remote Past form, so SG3SG3AN is ᎦᎪᎲᎢ (was ᎦᎪᏩᏘ, the old present-derived
-        // command placeholder). -- timo 10Nov26
+        // Verb book (To See, p.119) prints the Future Imperative/Volative section
+        // as four rows: ᎯᎪᎲᎢ / ᏍᏗᎪᎲᎢ / ᎢᏥᎪᎲᎢ / ᎠᎪᎲᎢ "Let him/her see it!" —
+        // the 3rd-person row is a- (ᎠᎪᎲᎢ agohv'i), NOT ga-. Matches the row
+        // transcribed in cherokeeVerbConjugation/ToSeeFutureImperativeVolativeSpec.
+        // timo 10Nov26: this supersedes the earlier reading (ᎦᎪᎲᎢ, carried by the
+        // present-tense ga- preConsonant). RECHECK: if the printed row is actually
+        // ga-, revert processPrefixes' tense-scoped a- override instead. -- timo 10Nov26
         verb.tense = Tense.FUTURE_COMMAND
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᎲᎢ", verb.wholeWord)
+        assertEquals("ᎠᎪᎲᎢ", verb.wholeWord)
     }
 
     void testSG3SG3INCommand() {
@@ -82,7 +93,11 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         verb = Conjugate.conjugate(verb)
 
         println verb.wholeWord
-        assertEquals("ᏓᎦᎪᎲᎢ", verb.wholeWord)
+        // Verb book p.119 (see testSG3SG3ANCommand): the 3rd-person FIV row is
+        // ᎠᎪᎲᎢ agohv'i for both SG3AN and SG3IN object readings — the earlier
+        // da- reading (ᏓᎦᎪᎲᎢ) does not appear in the printed FIV section.
+        // RECHECK: same caveat as the AN test above. -- timo 10Nov26
+        assertEquals("ᎠᎪᎲᎢ", verb.wholeWord)
     }
 
     void testSG1SG3ANFutureCommand() {

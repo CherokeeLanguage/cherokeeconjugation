@@ -32,6 +32,14 @@ public class Stemmer {
     public DefinitionLine infinitive = null;
     public String rootValue = ""
 
+    /**
+     * E: when getStems() finds no normalization method for the dictionary
+     * entry, the failure is recorded here (instead of silently returning an
+     * empty stem list) so callers can surface it. Empty when normalization
+     * succeeded or when the entry has no data at all.
+     */
+    public String normalizationFailure = "";
+
     String getRoot(Tense type) {
         return getRootWithEnding(type)[0]
     }
@@ -106,6 +114,12 @@ public class Stemmer {
         if (stem.size() > 0 && idx >= 0) {
             // the word minus the ending
             root = stem.substring(0, idx)
+            if (!root) {
+                // E: the whole stem matched the final suffix (e.g. ᎠᎢ "he's
+                // walking"); there is no root to extract -- report the failure
+                // instead of crashing on charAt(-1).
+                return [null, null]
+            }
             // get the last letter to determine which end of the word it is
             lastChar = String.valueOf(root.charAt(root.size() - 1))
 
@@ -262,16 +276,19 @@ public class Stemmer {
 
         List<StemEntry> a3rd = a3rd(e);
         if (a3rd) {
+            normalizationFailure = ""
             return a3rd;
         }
 
         List<StemEntry> ga3rd = ga3rd(e);
         if (ga3rd) {
+            normalizationFailure = ""
             return ga3rd;
         }
 
         List<StemEntry> ka3rd = ka3rd(e);
         if (ka3rd) {
+            normalizationFailure = ""
             return ka3rd;
         }
 
@@ -414,6 +431,12 @@ public class Stemmer {
 
 
 //        .info("No normalization method for: " + e.getEntries().toString());
+        // E: surface the failure instead of silently returning an empty list --
+        // callers (VerbConjugationProcessor) route MISSING_STEM to the verb.
+        def parts = [e.pres3, e.pres1, e.past, e.habit, e.imp, e.inf].findAll { it }
+        normalizationFailure = parts
+                ? "no normalization method for entry: " + parts.join(" / ")
+                : "empty stemmer entry (no dictionary lines to normalize)"
         return new ArrayList<StemEntry>();
     }
 
@@ -436,7 +459,10 @@ public class Stemmer {
             yx = Syllabary.chr2lat(yx);
             yx=StringUtils.substring(yx, 1);
             yx = Syllabary.lat2chr("h"+yx);
-            e.imp=yx+StringUtils.substring(e.pres1, 2);
+            //timo 10Nov26: bug fix — this reassembled from e.pres1 instead of
+            //e.imp, so the imperative's remaining syllables were replaced by the
+            //1st-person present's tail whenever the two entries diverged.
+            e.imp=yx+StringUtils.substring(e.imp, 2);
         }
     }
 

@@ -30,6 +30,13 @@ class PrefixProcessor {
     static String process(Verb verb) {
         def baseReturnValue = "";
 
+        // E: MISSING_STEM / MISSING_ENTRY sentinels pass through untouched — no
+        // pronominal or initial prefixes may be glued onto them.
+        if (verb.pronounReflexiveRoot?.startsWith("MISSING_STEM")
+                || verb.pronounReflexiveRoot?.startsWith("MISSING_ENTRY")) {
+            return verb.pronounReflexiveRoot
+        }
+
         def pho = verb.initialPrefixHolder
 
         def yi = pho.yi
@@ -68,11 +75,15 @@ class PrefixProcessor {
         }
 
         if (da) {
-            //baseReturnValue = new PrefixDa().toSyllabary(baseReturnValue, verb);
+            // C8: da- initial prefix (Grammar Guide pp. 247-248 rules 61-62):
+            // Ꮣ- prepend / Ꮨ- before h- / vowel merge via the D-map
+            baseReturnValue = new PrefixDa().toSyllabary(baseReturnValue, verb);
         }
 
         if (de) {
-            //baseReturnValue = new PrefixDe().toSyllabary(baseReturnValue, verb);
+            // C8: de- distributive initial prefix (Feeling rules 59-62):
+            // Ꮥ- / Ꮧ- / Ꮩ- allomorphs; Ꮩ before da-/di-
+            baseReturnValue = new PrefixDe().toSyllabary(baseReturnValue, verb);
         }
 
         if (ni) {

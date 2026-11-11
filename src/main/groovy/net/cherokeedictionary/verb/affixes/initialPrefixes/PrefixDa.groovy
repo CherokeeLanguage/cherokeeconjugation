@@ -19,19 +19,11 @@ class PrefixDa implements Affix {
     }
 
     String toSyllabary(String baseReturnValue, Verb word) {
-//        if (word.initialPrefix.da) {
-//            def data = word.pronounPrefixSyllabary + word.rootSyllabary
-//            baseReturnValue = baseReturnValue ?: data
-//            def charAtZero = baseReturnValue.charAt(0)
-//            def isVowelBeginning = StringUtility.startsWithVowelSyllabary(baseReturnValue)
-//
-//            if (data.startsWith("Ꭰ")) {//da + a = dv
-//                baseReturnValue = "Ꮫ" + baseReturnValue.substring(1);
-//            } else {
-//                return baseReturnValue = "Ꮣ" + baseReturnValue
-//            }
-//        }
-/*
+        // C8: restored from the commented logic (Grammar Guide pp. 247-248, rules 61-62):
+        //  - da- + h-initial base contracts to t- (da + higowhtiha -> ᏘᎪᏩᏘᎭ)
+        //  - da- + vowel-initial base merges with the vowel (da + a -> dv via Ꮫ)
+        //  - da- + consonant-initial base: prepend Ꮣ
+        // PrefixDe runs after this prefix and prepends Ꮩ before da- (rule 62).
         if (word.initialPrefixHolder.da) {
             baseReturnValue = baseReturnValue ?: word.pronounReflexiveRoot
 
@@ -49,7 +41,7 @@ class PrefixDa implements Affix {
                 }
             }
         }
-*/
+
         return baseReturnValue
     }
 

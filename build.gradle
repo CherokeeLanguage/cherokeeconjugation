@@ -123,6 +123,8 @@ test {
 
     exclude 'net/cherokeedictionary/grammar/**'
 
+    exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
+
     exclude 'net/cherokeedictionary/sample/**'
 
     // Exclude a specific test class

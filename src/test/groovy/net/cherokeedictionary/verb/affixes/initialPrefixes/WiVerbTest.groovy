@@ -192,12 +192,15 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current broken state (empty Set-B root => bare Ꮻ).
-        // When WI-29 (Set-B u- pronominal handling) is fixed, this assertion
-        // FAILS -- remove the guard and assert "ᏭᏬᏝ".
-        assertTrue "KNOWN-GAP(WI-29) RESOLVED: the Set-B intransitive root is no longer empty " +
-                    "-- remove this guard and assert 'ᏭᏬᏝ'",
-                "Ꮻ" == verb.wholeWord
+        // GAP GUARD: pins the current broken state. uwohla (ᎤᏬᏝ) fails Stemmer
+        // normalization (the Ꮼ inside the Ꮹ-Ꮾ w-artifact regex), so instead of
+        // the old silent broken state (empty Set-B root => bare Ꮻ) the MISSING_STEM
+        // sentinel is now surfaced per the audit's "missing data must stay visible"
+        // requirement. When WI-29 (Set-B u- pronominal handling / Ꮼ normalization)
+        // is fixed, this assertion FAILS -- remove the guard and assert "ᏭᏬᏝ".
+        assertTrue "KNOWN-GAP(WI-29) RESOLVED: the Set-B intransitive root normalizes " +
+                    "-- remove this guard and assert 'ᏭᏬᏝ' (sentinel was MISSING_STEM_PRESENT)",
+                "MISSING_STEM_PRESENT" == verb.wholeWord || "Ꮻ" == verb.wholeWord
     }
 
     /**

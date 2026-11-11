@@ -7,6 +7,7 @@ import net.cherokeedictionary.util.*
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
 import net.cherokeedictionary.verb.rules.RuleUW
+import net.cherokeedictionary.verb.rules.RuleVtoA
 
 /**
  * Created by torr on 8/23/2015.
@@ -31,24 +32,33 @@ class VerbConjugationProcessor {
         def vs = verbset == VerbSet.A ? "" : "B"
         def verbPrefix = pref?.prefix2 ? "${pref?.prefix1}${pref?.prefix2}${vs}" as String : "${pref?.prefix1}${vs}" as String;
 
+        // B4 (Feeling P4 notes): Set B + 3rd person subject + inanimate object +
+        // v-initial stem: stem-initial Ꭵ surfaces as Ꭰ before the prefix merge
+        // (ᎤᏩᎨᏩᏍᎦ uwakewsga "he's forgetting it", vs ᎬᎨᏩᏍᎦ gv-kewsga "him").
+        // P4(6) notes "-w- is inserted between u- and a following vowel" for these
+        // forms, so the uw+a -> u contraction (RuleUW, e.g. ᎤᏚᎵᎭ for want) does
+        // NOT apply when the a came from the changed -v-. timo 10Nov26
+        def vtoAStem = RuleVtoA.apply(pref?.prefix1, pref?.prefix2, verbset, it)
+        boolean stemWasVtoA = (vtoAStem != null)
+        if (stemWasVtoA) {
+            it = vtoAStem
+        }
+
         def returnValue
 
         if (it != null && StringUtility.startsWithVowelSyllabary(it)) {
             //get the prefix from the table
             def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
 
+            // timo 10Nov26: key-absent vs declared-empty are now distinguished.
+            // A key absent from the map (either set) surfaces as MISSING_ENTRY so
+            // the gap is visible during conjugation; the old Set A
+            // fall-down-to-Set-A fallback is gone (it masked Set B gaps, and the
+            // Set A allomorphs are wrong for Set B in the 3sg/3pl-object columns
+            // — Feeling guide P8). Old fallback, commented out:
+            //tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
             if (!tmpReturnPrefix) {
-                //timo 10Nov26: a missing Set B compound prefix must be seen during
-                //conjugation, not silently patched with the Set A entry. For the
-                //3sg/3pl-inanimate object columns the Set A allomorphs are wrong for
-                //Set B (Feeling guide, P8: past -v'i is non-progressive, so Set B
-                //prefixes apply); for the other columns Set B legitimately reuses the
-                //Set A forms, but a gap in the table must still be visible. Old
-                //fall-down-to-Set-A fallback, commented out for now:
-                //tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
-                if (verbPrefix.endsWith("B")) {
-                    return "MISSING_ENTRY" + it
-                }
+                return "MISSING_ENTRY" + it
             }
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
@@ -88,50 +98,46 @@ class VerbConjugationProcessor {
 
             returnValue = new RuleUW().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)
 
+            // B4: v->a stems keep the inserted -w- (P4(6) ᎤᏩᎨᏩᏍᎦ), so the
+            // uw+a -> u contraction above must not fire for them.
+            if (stemWasVtoA) {
+                returnValue = null
+            }
+
             if (!returnValue) {
                 returnValue = returnPrefix + it
             }
         } else {
             // Handle prefixes based on da- and de- flags
             // Prioritize da- if explicitly set, otherwise use de-
-//            if (verb.initialPrefixHolder.da) {
-/*
-                // Da- prefix logic: If da- is true, use the actual Da- syllabary from CompoundPrefixes.
-                // This requires looking up the correct Da- prefix based on subject and object.
-                // For now, attempting a generic Da- prefix based on available info.
-                // This part may need significant refinement based on specific Da- rules.
-                // Let's try to find the compound prefix for 'da-' + subject/object
-                def daPrefix = CompoundPrefixes.get("DA" + combinedSubjectObject) // Assuming a lookup for DA prefix combinations
-                if (daPrefix) {
-                    returnPrefix = daPrefix.preConsonant // or preVowel depending on context
-                } else {
-                    // Fallback or default Da- handling if specific combo not found
-                    returnPrefix = "da-" // Placeholder if specific da- prefix not found
-                }
-                */
-                // The 'da-' prefix itself needs to be handled. For now, let's use a placeholder.
-                // A more robust solution would involve a dedicated prefix rule or lookup.
-                returnPrefix = "da-" // Placeholder - actual implementation needs more logic
+            // (C8: the da-/de- surface work lives in PrefixProcessor; the
+            // pronominal preConsonant lookup below is unchanged.)
+            // timo 10Nov26: preConsonant twin of the preVowel change above — an
+            // empty preConsonant (declared empty B twin) now yields a prefix-less
+            // bare stem instead of falling into MISSING_ENTRY, and an absent key
+            // (either set) surfaces as MISSING_ENTRY:
+            //returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+            def entry = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+            returnPrefix = entry?.preConsonant
+            if (!entry) {
+                return "MISSING_ENTRY" + (it ?: "")
+            }
 
-//            } else if (verb.initialPrefixHolder.de) {
-//                // De- prefix logic
-//                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
-//            } else {
-//                // Default consonant prefix lookup
-//                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
-//            }
-
-            returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
-
-            if (!returnPrefix) {
-                //timo 10Nov26: same MISSING_ENTRY policy as the preVowel branch above —
-                //a missing Set B entry must be visible, not patched with the Set A
-                //preConsonant form. Old fall-down-to-Set-A fallback, commented out for now:
-                //verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
-                //returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
-                if (verbPrefix.endsWith("B")) {
-                    return "MISSING_ENTRY" + (it ?: "")
-                }
+            // timo 10Nov26: FUTURE_COMMAND (Future Imperative/Volative) with a 3rd
+            // person singular subject takes a- before consonant-initial Stem III
+            // forms (Set A): verb book p.119 "Let him/her see it!" ᎠᎪᎲᎢ agohv'i
+            // (a-, NOT the ga- of the present-tense table), p.29 "let him/her
+            // hear..." ᎠᏛᎦᏅᎢ atvganv'i. Tense-scoped: PRESENT sg3 cells are
+            // short-circuited from raw present3rd upstream, and vowel-initial
+            // stems already surface a- via the stem's own leading vowel (empty
+            // preVowel branch). Known unhandled variance: bite's FIV sg3 is wa-
+            // (ᏩᏍᎦᎶᏨᎢ wasgaltsv'i, p.29), which no single table entry expresses.
+            if (tense == Tense.FUTURE_COMMAND
+                    && verbset == VerbSet.A
+                    && pref?.prefix1 == PrefixTableSubject.SG3
+                    && (pref?.prefix2 == PrefixTableObject.SG3AN
+                        || pref?.prefix2 == PrefixTableObject.SG3IN)) {
+                returnPrefix = 'Ꭰ'
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
@@ -148,7 +154,13 @@ class VerbConjugationProcessor {
         }
 
         if (!returnPrefix) {
-            returnValue = ""
+            // timo 10Nov26: legacy guard. A declared-empty twin (empty preVowel or
+            // preConsonant) now means "no prefix" and the branches above already
+            // computed the prefix-less bare stem — keep it. Only blank the result
+            // when nothing was computed at all.
+            if (!returnValue) {
+                returnValue = ""
+            }
         }
 
         return returnValue
@@ -201,6 +213,13 @@ class VerbConjugationProcessor {
                 }
             }
         }*/
+
+        // C8: REMOVED -- timo 10Nov26. The old auto-apply of the da- initial prefix
+        // for FUTURE_COMMAND + SG3IN/PL3IN objects (claiming the verb book prints
+        // ᏓᎦᎪᎲᎢ for To See) was a misreading: book p.119's Future Imperative/Volative
+        // section for To See prints exactly four rows — ᎯᎪᎲᎢ, ᏍᏗᎪᎲᎢ, ᎢᏥᎪᎲᎢ,
+        // ᎠᎪᎲᎢ "Let him/her see it!" — no da- anywhere. The FUTURE_COMMAND sg3
+        // handling now lives in processPrefixes (tense-scoped a- override).
 
         String verbToConjugate = ""
 
@@ -263,6 +282,14 @@ class VerbConjugationProcessor {
         }
 
         def returnValue = ""
+
+        // E: surface stemmer failures — a tense with no normalized stem must not
+        // silently produce a garbage "null"-concatenation (processPrefixes(null)).
+        // MISSING_STEM_<TENSE> keeps the gap visible at the whole-word level, in
+        // the same spirit as the MISSING_ENTRY prefix-table sentinel.
+        if (!verbToConjugate) {
+            return "MISSING_STEM_" + verb.tense
+        }
 
         verbToConjugate = new ReflexivePrefix().toSyllabary(verbToConjugate, verb)
         if (!verb.reflexiveHolderObject.isReflexive()) {

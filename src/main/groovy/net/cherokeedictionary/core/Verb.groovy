@@ -39,10 +39,43 @@ class Verb extends Word {
     VerbNonFinalSuffixHolderObject nonFinalSuffixHolder = new VerbNonFinalSuffixHolderObject()
     VerbFinalSuffixHolderObject finalSuffixHolder = new VerbFinalSuffixHolderObject()
 
+    /**
+     * C7: the tense final suffix that follows the (non-final) suffix slot, from
+     * the tense stem tables (verb book / grammar guide final-suffix table).
+     * NonFinalSuffixDan uses this to choose its allomorph (dan before vowels,
+     * dis before g, do- before the infinitive -di, d before the imperative -a).
+     */
     String getTenseValue() {
         switch (tense) {
             case Tense.PRESENT:
-                return Present.FINALSUFFIX
+                // present "-a" (with the non-final sg: sg+a -> ha)
+                return new net.cherokeedictionary.verb.suffixes.Present().getFinalSuffix()
+            case Tense.REMOTE_PAST:
+                return new net.cherokeedictionary.verb.suffixes.RemotePast().getFinalSuffix()
+            case Tense.FUTURE_COMMAND:
+                // Future Imperative/Volative = Stem III + -v'i
+                return new net.cherokeedictionary.verb.suffixes.FutureImperativeVolative().getFinalSuffix()
+            case Tense.COMPLETIVE_FUTURE:
+            case Tense.COMPLETED_FUTURE:
+            case Tense.FUTURE_EXPECTED:
+                // declarative future "-i"
+                return new net.cherokeedictionary.verb.suffixes.Future().getFinalSuffix()
+            case Tense.HABITUAL:
+                return new net.cherokeedictionary.verb.suffixes.Habitual().getFinalSuffix()
+            case Tense.PROGRESSIVE_PAST:
+                return new net.cherokeedictionary.verb.suffixes.ProgressivePast().getFinalSuffix()
+            case Tense.PROGRESSIVE_FUTURE:
+                return new net.cherokeedictionary.verb.suffixes.FutureProgressive().getFinalSuffix()
+            case Tense.IMMEDIATE_PAST:
+                // verb book Immediate Past: "-i" as printed (with "-a" variants)
+                return new net.cherokeedictionary.verb.suffixes.ImmediatePast().getFinalSuffix()
+            case Tense.IMMEDIATE_COMMAND:
+            case Tense.RECENT_PAST_IMPERATIVE:
+                // grammar guide: "-a, present/recent past imperative"; the -i
+                // imperative is a variant of -a
+                return new net.cherokeedictionary.verb.suffixes.RecentPastImperative().getFinalSuffix()
+            case Tense.INFINITIVE:
+                return new net.cherokeedictionary.verb.suffixes.Infinitive().getFinalSuffix()
         }
 
         return ""

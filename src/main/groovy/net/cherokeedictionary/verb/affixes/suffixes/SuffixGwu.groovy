@@ -4,11 +4,14 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.verb.affixes.Affix
 
 class SuffixGwu implements Affix {
-    String gwu
+    String gwu = "Ꮚ"
 
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
-        return null
+        if (!baseReturnValue) {
+            return baseReturnValue
+        }
+        return baseReturnValue.endsWith(gwu) ? baseReturnValue : baseReturnValue + gwu
     }
 
     @Override

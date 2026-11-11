@@ -46,7 +46,16 @@ class RuleLaryngealAlteration implements PrefixRule {
                 if ((pts == PrefixTableSubject.PL3 || pts == PrefixTableSubject.SG3)) {
                     verbStem = "ᎯᎠ"
                 } else {
-                    verbStem = "Ꭲ" + verbStem.substring(1);
+                    // timo 10Nov26: do NOT apply the h->glottal alteration for the
+                    // remaining subjects with a plural object. The user's tests
+                    // (ConjugatePresentTense.testKillPresent: SG1PL3AN ᎦᏥᎯᎭ,
+                    // SG2PL3AN ᎦᎯᎯᎭ, DL1INCLPL3AN ᎨᏂᎯᎭ, DL1EXCLPL3AN ᎪᏍᏗᎯᎭ,
+                    // PL1INCLPL3AN ᎨᏗᎯᎭ, PL1EXCLPL3AN ᎪᏥᎯᎭ, PL2PL3AN ᎨᏥᎯᎭ) keep
+                    // the stem-initial Ꭿ — the old determineVerbSet forced-Set-B
+                    // routing masked this branch (Set B skips laryngeal entirely),
+                    // and its forced Ꭲ- rewrite produced ᎦᏥᎢᎭ/ᎪᏍᏗᎢᎭ. Return ""
+                    // so processPrefixes falls through to the plain prefix+stem.
+                    return ""
                 }
 
                 returnValue = prefix + verbStem
