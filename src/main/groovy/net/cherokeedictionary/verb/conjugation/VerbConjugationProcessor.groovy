@@ -38,12 +38,34 @@ class VerbConjugationProcessor {
             def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
 
             if (!tmpReturnPrefix) {
-                tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
+                //timo 10Nov26: a missing Set B compound prefix must be seen during
+                //conjugation, not silently patched with the Set A entry. For the
+                //3sg/3pl-inanimate object columns the Set A allomorphs are wrong for
+                //Set B (Feeling guide, P8: past -v'i is non-progressive, so Set B
+                //prefixes apply); for the other columns Set B legitimately reuses the
+                //Set A forms, but a gap in the table must still be visible. Old
+                //fall-down-to-Set-A fallback, commented out for now:
+                //tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix.substring(0, verbPrefix.size() - 1)))
+                if (verbPrefix.endsWith("B")) {
+                    return "MISSING_ENTRY" + it
+                }
             }
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
 
             if (tmpReturnPrefix) {
+                //timo 10Nov26: Grammar guide (Feeling 1975): -y- is inserted only
+                //between the prefix and a stem-initial vowel — "the insertion of -y-
+                //between the final vowel of the prefix and the initial vowel of the
+                //stem does not take place" before consonant-initial stems (P3 "to see";
+                //same rule in P5 "to like"). The marker rule below (processY etc.) is
+                //applied to the first syllable of the routed form, so it is guide-correct
+                //only when that form is the normalized stem: vowel-initial stems keep a
+                //leading vowel syllable (Stemmer.generateVowelStems) and consonant-initial
+                //stems are prefix-less (Stemmer.generateConsonentStems), so they take the
+                //preConsonant branch with no -y-. Un-normalized forms (e.g. the raw
+                //dictionary entry with its baked 3sg prefix, ᎤᎪᎲᎢ) must never reach this
+                //branch, and Set A entries must never stand in for Set B lookups.
                 //determine if last 1 or 2 characters need to be included in the conversion
                 //if ends with gw then 2 - otherwise only 1
                 def backspace = 1 //this is the count back that we need to get to the latin characters of the prefix
@@ -102,10 +124,14 @@ class VerbConjugationProcessor {
             returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
 
             if (!returnPrefix) {
-                //remove the 'B'? why is this here?
-                verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
-
-                returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+                //timo 10Nov26: same MISSING_ENTRY policy as the preVowel branch above —
+                //a missing Set B entry must be visible, not patched with the Set A
+                //preConsonant form. Old fall-down-to-Set-A fallback, commented out for now:
+                //verbPrefix = verbPrefix.substring(0, verbPrefix.size() - 1)
+                //returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
+                if (verbPrefix.endsWith("B")) {
+                    return "MISSING_ENTRY" + (it ?: "")
+                }
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
@@ -186,14 +212,39 @@ class VerbConjugationProcessor {
                 verbToConjugate = vth.remotePast
                 break;
             case Tense.FUTURE_COMMAND:
-                // FUTURE_COMMAND is derived from the imperative stem, not completiveFuture
-                // (present stem minus last syllable), as was previously coded.
+                // Future Imperative/Volative = Stem III + -v'i (verb book summaries),
+                // usually identical to the Remote Past row; futureCommand is the Remote
+                // Past entry (falls back to completiveFuture when missing)
                 verbToConjugate = vth.futureCommand
                 break;
-//            case Tense.IMMEDIATE_COMMAND:
-//                // IMMEDIATE_COMMAND also uses the imperative stem
-//                verbToConjugate = vth.immediate
-//                break;
+            case Tense.COMPLETIVE_FUTURE:
+            case Tense.COMPLETED_FUTURE:
+                // declarative Future "-i": the verb book derives it from Stem III
+                // ("NB: the Future is usually Stem III") — completiveFuture is the
+                // Remote Past form with -v'i replaced by -i (VerbTenseHolder)
+                verbToConjugate = vth.completiveFuture
+                break;
+            case Tense.FUTURE_EXPECTED:
+                // verb book: To Go only, Future (Expected) = Stem II (-e-s-) + -i with
+                // the de-/da- (es-) initial prefix: dagesi, tesi, dayesi. To Go's
+                // habitual entry is Stem I (-e-g-), so the correct Stem II base is not
+                // available from the dictionary; the Stem III-derived future form is
+                // used as a placeholder until verb-level Stem II data exists. -- timo 10Nov26
+                verbToConjugate = vth.completiveFuture
+                break;
+            case Tense.PROGRESSIVE_PAST:
+                verbToConjugate = vth.progressivePast
+                break;
+            case Tense.PROGRESSIVE_FUTURE:
+                verbToConjugate = vth.progressiveFuture
+                break;
+            case Tense.IMMEDIATE_PAST:
+            case Tense.RECENT_PAST_IMPERATIVE:
+            case Tense.IMMEDIATE_COMMAND:
+                // immediate/recent-past forms build on the imperative entry (Stem IV);
+                // IMMEDIATE_COMMAND also uses the imperative stem
+                verbToConjugate = vth.immediate ?: vth.immediateCommand
+                break;
             case Tense.HABITUAL:
                 verbToConjugate = vth.habitual
                 break;

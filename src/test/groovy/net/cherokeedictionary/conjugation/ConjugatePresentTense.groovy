@@ -128,8 +128,6 @@ class ConjugatePresentTense extends ConjugateBase {
         def partofspeechc = "v.t."
         def verbTense = "PRESENT"
 
-        println conjStr("SG1", "SG3IN", tohave, verbTense, partofspeechc)
-
         assertTrue "", "ᎠᎩᎭ" == conjStr("SG1", "SG3IN", tohave, verbTense, partofspeechc)
         assertTrue "", "ᏣᎭ" == conjStr("SG2", "SG3IN", tohave, verbTense, partofspeechc)
         assertTrue "", "ᎤᎭ" == conjStr("SG3", "SG3IN", tohave, verbTense, partofspeechc)

@@ -7,10 +7,16 @@ import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.stem.Syllabary
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.suffixes.Future
+import net.cherokeedictionary.verb.suffixes.FutureExpected
+import net.cherokeedictionary.verb.suffixes.FutureImperativeVolative
+import net.cherokeedictionary.verb.suffixes.FutureProgressive
 import net.cherokeedictionary.verb.suffixes.Habitual
-import net.cherokeedictionary.verb.suffixes.Imperative
+import net.cherokeedictionary.verb.suffixes.ImmediatePast
 import net.cherokeedictionary.verb.suffixes.Infinitive
 import net.cherokeedictionary.verb.suffixes.Present
+import net.cherokeedictionary.verb.suffixes.ProgressivePast
+import net.cherokeedictionary.verb.suffixes.RecentPastImperative
 import net.cherokeedictionary.verb.suffixes.RemotePast
 import org.apache.commons.lang3.StringUtils
 
@@ -43,11 +49,36 @@ public class Stemmer {
                 suffix = new RemotePast()
                 break
 
+            case Tense.PROGRESSIVE_PAST:
+                // past progressive: non-final -g- (NonFinalSuffixG) + the past suffix -v'i
+                suffix = new ProgressivePast()
+                break
+
             case Tense.HABITUAL:
                 suffix = new Habitual()
                 break
             case Tense.FUTURE_COMMAND:
-                suffix = new Imperative()
+                // Future Imperative/Volative: -v'i, "Speak (later)" (grammar guide ex. 112b)
+                suffix = new FutureImperativeVolative()
+                break
+            case Tense.PROGRESSIVE_FUTURE:
+                // future progressive: -esdi, "will be doing" (grammar guide ex. 93)
+                suffix = new FutureProgressive()
+                break
+            case Tense.COMPLETIVE_FUTURE:
+            case Tense.COMPLETED_FUTURE:
+            case Tense.FUTURE_EXPECTED:
+                // declarative future: -i (FUTURE_EXPECTED additionally takes the de- initial prefix, Stem II)
+                suffix = new Future()
+                break
+            case Tense.IMMEDIATE_PAST:
+                // verb book Immediate Past (Stem IV): recent past, "-i" as printed (with "-a" variants)
+                suffix = new ImmediatePast()
+                break
+            case Tense.IMMEDIATE_COMMAND:
+            case Tense.RECENT_PAST_IMPERATIVE:
+                // grammar guide: "-a, present, recent past imperative"; the "-i" imperative is a variant of "-a"
+                suffix = new RecentPastImperative()
                 break
             case Tense.INFINITIVE:
                 suffix = new Infinitive()
@@ -59,9 +90,22 @@ public class Stemmer {
         }
 
         def lastChar = null
-        if (root.size() > 0) {
+        // Some tense classes print more than one final suffix (the recent past is
+        // printed "-i" or "-a"); prefer the variant that actually terminates the stem.
+        def finalSuffixes = suffix.hasProperty('finalSuffixVariants') ? suffix.finalSuffixVariants : [suffix.finalSuffix]
+        int idx = -1
+        String used = null
+        if (finalSuffixes.size() == 1) {
+            used = finalSuffixes[0]
+            idx = stem.lastIndexOf(used)
+        } else {
+            for (String variant : finalSuffixes) {
+                if (stem.endsWith(variant)) { used = variant; idx = stem.size() - variant.size(); break }
+            }
+        }
+        if (stem.size() > 0 && idx >= 0) {
             // the word minus the ending
-            root = stem.substring(0, stem.lastIndexOf(suffix.getFinalSuffix()))
+            root = stem.substring(0, idx)
             // get the last letter to determine which end of the word it is
             lastChar = String.valueOf(root.charAt(root.size() - 1))
 
@@ -92,9 +136,39 @@ public class Stemmer {
         return returnValue
     }
 
-    //TODO: may have to revisit this for future tenses and stuff
+    // Stem mappings per the verb book's grammatical introduction (printed pp.167–176):
+    //   - Stem I (PresentContinous):  Present; also the base for the progressive tenses
+    //     (grammar guide: non-final -g- + -v'i / -esdi).
+    //   - Stem II (Habitual):         Present Habitual ("the Present Habitual is usually
+    //     Stem II", To Go NB).
+    //   - Stem III (RemotePast):      Remote Past, the declarative Future and Future
+    //     Imperative/Volative — "NB: the Future is usually Stem III" (To Go), and every
+    //     printed Future Imperative/Volative row is Stem III + -v'i (usually identical to
+    //     the Remote Past row) or Stem III + -esdi.
+    //   - Stem IV (Immediate):        Immediate Past, Immediate Imperative/Volative and the
+    //     recent-past imperative (same stem; the book prints them under Stem IV).
+    //   - Stem V (Deverbal):          Infinitive.
+    //   FUTURE_EXPECTED has no dictionary stem: the book prints it only for To Go, built
+    //   from To Go's Stem II (-e-s-), while To Go's habitual entry is Stem I (-e-g-), so
+    //   it cannot be derived from the five dictionary stems (documented limitation;
+    //   VerbTenseHolder routes it to the Stem III-derived future form). -- timo 10Nov26
+
     boolean compareTypeAndTense(StemType type, Tense tense) {
-        return (type == StemType.PresentContinous && tense == Tense.PRESENT) || (type == StemType.RemotePast && tense == Tense.REMOTE_PAST) || (type == StemType.Immediate && tense == Tense.IMMEDIATE_COMMAND) || (type == StemType.Habitual && tense == Tense.HABITUAL)
+        return (type == StemType.PresentContinous
+                && (tense == Tense.PRESENT
+                    || tense == Tense.PROGRESSIVE_PAST
+                    || tense == Tense.PROGRESSIVE_FUTURE)
+                || (type == StemType.RemotePast
+                    && (tense == Tense.REMOTE_PAST
+                        || tense == Tense.COMPLETIVE_FUTURE
+                        || tense == Tense.COMPLETED_FUTURE
+                        || tense == Tense.FUTURE_COMMAND))
+                || (type == StemType.Immediate
+                    && (tense == Tense.IMMEDIATE_COMMAND
+                        || tense == Tense.IMMEDIATE_PAST
+                        || tense == Tense.RECENT_PAST_IMPERATIVE))
+                || (type == StemType.Habitual && tense == Tense.HABITUAL)
+                || (type == StemType.Deverbal && tense == Tense.INFINITIVE))
     }
 
     List<StemEntry> getStems() {

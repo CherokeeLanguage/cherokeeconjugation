@@ -17,7 +17,18 @@ class ConjugatePastTense extends ConjugateBase {
         heSeesIt.present3rd = new DefinitionLine(syllabary: "ᎠᎪᏩᏘᎭ")
         heSeesIt.remotepast = new DefinitionLine(syllabary: "ᎤᎪᎲᎢ")
     }
+
     public void test() {
+        println(heSeesIt.getRootWithEnding(Tense.REMOTE_PAST))
+        heSeesIt.getStems().each {
+            println("${it.stemtype} : ${it.syllabary}")
+        }
+
+//        PresentContinous : ᎪᏩᏘᎭ
+//        RemotePast : ᎪᎲᎢ
+//        Habitual : ᎪᏩᏘᏍᎪᎢ
+//        Immediate : ᎪᏩᏔ
+//        Deverbal : ᎪᏩᏛᏗ
 //        assertEquals(DNM, "ᏥᎪᏩᏘᏍᎬᎢ", conjPast("SG1", "SG3AN"))
     }
 

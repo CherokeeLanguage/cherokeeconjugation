@@ -1,6 +1,7 @@
 package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.stem.StemType
+import net.cherokeedictionary.transliteration.SyllabaryUtil
 
 
 /**
@@ -63,17 +64,30 @@ class VerbTenseHolder {
         // normalized initial vowel (e.g. ᎤᏓᏙᎵᏍᏙᏗ -> ᏓᏙᎵᏍᏙᏗ instead of ᎠᏓᏙᎵᏍᏙᏗ).
         //infinitive = deverbal ?: (stemmer?.infinitive?.syllabary ? stemmer.infinitive.syllabary.substring(1) : '')
 	//todo: -- review again -- timo 4Nov26
-        if (present != null) {
+        // The verb book ("NB: the Future is usually Stem III", To Go): the Future is
+        // Stem III + -i, i.e. the Remote Past form with the final suffix -v'i replaced
+        // by -i (e.g. To Be Thankful Remote Past -alihelitsel-v'i -> Future
+        // -alihelitsel-i). Derive completiveFuture from the Remote Past entry instead
+        // of the present stem. Falls back to the old present-derived placeholder when
+        // no Remote Past entry exists.
+        //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
+        if (remotePast != null) {
+            String rp = SyllabaryUtil.parseSyllabary(remotePast)
+            if (rp.size() > 2 && rp.endsWith("vi")) {
+                completiveFuture = SyllabaryUtil.tsalagiToSyllabary(rp.substring(0, rp.size() - 2) + "i")
+            }
+        }
+        if (completiveFuture == null && present != null) {
             completiveFuture = present.substring(0, present.size() - 1)
         }
-        // FUTURE_COMMAND is sourced from the imperative entry (the verb's command form,
-        // e.g. adadolisda -> ᎠᏓᏙᎵᏍᏓ). Stemmer.getRootWithEnding already maps
-        // Tense.FUTURE_COMMAND -> Imperative suffix, so the Immediate stem (built from
-        // stemmer.imperative) is the intended base. Fall back to completiveFuture
-        // (present minus final syllable) when the imperative entry is missing.
-        //futureCommand = immediate ?: completiveFuture
-	//todo: -- review again -- timo 4Nov26
-        futureCommand = completiveFuture
+        // FUTURE_COMMAND (Future Imperative/Volative) is Stem III + -v'i, per the verb
+        // book's summaries — usually identical to the Remote Past row (e.g. To Bite
+        // Remote Past -sgahlits-v'i = Future Imperative/Volative -sgahlits-v'i). The
+        // minority whose FIV is Stem III + -esdi (e.g. To Be Somewhere edoh-esdi, To
+        // Have (Long and Rigid) -vy-esdi) will need the FutureProgressive (-esdi) form
+        // once verb-level data is available.
+        //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
+        futureCommand = remotePast ?: completiveFuture
         progressivePast = completiveFuture
         progressiveFuture = completiveFuture
         immediateCommand = completiveFuture

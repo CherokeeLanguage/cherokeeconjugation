@@ -117,6 +117,21 @@ publishing {
     }
 }
 
+test {
+    // Exclude an entire package and its subpackages
+    exclude 'net/cherokeedictionary/conjugation/vrb/**'
+
+    exclude 'net/cherokeedictionary/grammar/**'
+
+    exclude 'net/cherokeedictionary/sample/**'
+
+    // Exclude a specific test class
+//    exclude '**/MySpecificTest.class'
+
+    // Exclude tests matching a pattern
+//    exclude '**/*IntegrationTest*'
+}
+
 //grooscript {
 //    source = ['src/main/groovy/net/cherokeedictionary/']
 //    recursive=true

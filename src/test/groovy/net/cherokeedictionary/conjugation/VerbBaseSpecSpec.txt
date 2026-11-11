@@ -1,0 +1,59 @@
+package net.cherokeedictionary.conjugation
+
+import net.cherokeedictionary.stemmer.DefinitionLine
+import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.transliteration.SyllabaryUtil
+import net.cherokeedictionary.verb.conjugation.Conjugate
+import spock.lang.Specification
+
+class VerbBaseSpecSpec extends Specification {
+    def "builds transitive stems from inanimate fixture rows and ignores the expected answer"() {
+        given:
+        def details = [
+            part_of_speech: 'v.t.',
+            conjugations: [
+                [subject: 'SG1', object: 'SG3AN', present: 'jiyadayiha', habitual: 'jiyadayihoi', remote_past: 'jiyadayilvi', imperative: 'jiyadayiga', infinitive: 'jiyadayisdi'],
+                [subject: 'SG1', object: 'SG3IN', present: 'gadayiha', habitual: 'gadayihoi', remote_past: 'agwadahyilvi', imperative: 'gadayhga', infinitive: 'agwadayhsdi'],
+                [subject: 'SG2', object: 'SG3IN', present: 'hadayiha', habitual: 'hadayihoi', remote_past: 'jadahyilvi', imperative: 'hadayhga', infinitive: 'jadayhsdi'],
+                [subject: 'SG3', object: 'SG3IN', present: 'adahyiha', habitual: 'adahyihoi', remote_past: 'udahyilvi', imperative: 'adayhga', infinitive: 'udayhsdi']
+            ]
+        ]
+        def expectedStemmer = new Stemmer(
+            present1st: line('gadayiha'),
+            present3rd: line('adahyiha'),
+            remotepast: line('udahyilvi'),
+            habitual: line('adahyihoi'),
+            imperative: line('adayhga'),
+            infinitive: line('udayhsdi')
+        )
+        def expectedWord = Conjugate.conjugate('SG1', 'SG3IN', expectedStemmer, 'PRESENT', 'v.t.', false).wholeWord
+
+        expect:
+        new VerbBaseSpec().conjugateVerb('deny', details, 'SG1', 'SG3IN', 'PRESENT', 'not the expected answer') == expectedWord
+        new VerbBaseSpec().conjugateVerb('deny', details, 'SG1', 'SG3IN', 'PRESENT', 'a different answer') == expectedWord
+    }
+
+    def "accepts a third-person-only fixture with optional stem forms absent"() {
+        given:
+        def details = [
+            part_of_speech: 'v.i.',
+            conjugations: [[subject: 'SG3', object: '', present: 'adahwahtvhidoha']]
+        ]
+        def expectedStemmer = new Stemmer(
+            present1st: line(''),
+            present3rd: line('adahwahtvhidoha'),
+            remotepast: line(''),
+            habitual: line(''),
+            imperative: line(''),
+            infinitive: line('')
+        )
+        def expectedWord = Conjugate.conjugate('SG3', '', expectedStemmer, 'PRESENT', 'v.i.', false).wholeWord
+
+        expect:
+        new VerbBaseSpec().conjugateVerb('visit', details, 'SG3', '', 'PRESENT', 'ignored') == expectedWord
+    }
+
+    private static DefinitionLine line(String latin) {
+        new DefinitionLine(syllabary: SyllabaryUtil.tsalagiToSyllabary(latin))
+    }
+}
