@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -21,7 +21,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToTellSomethingToSomeoneStemsSpec extends Specification {
+class ToTellSomethingToSomeoneStemsSpec extends VerbBaseSpec {
 
     static final String VERB = "to tell something to someone"
     static final String SOURCE_PAGE = "p.132"

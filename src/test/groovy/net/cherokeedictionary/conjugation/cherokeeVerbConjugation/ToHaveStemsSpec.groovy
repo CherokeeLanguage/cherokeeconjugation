@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -21,7 +21,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToHaveStemsSpec extends Specification {
+class ToHaveStemsSpec extends VerbBaseSpec {
 
     static final String VERB = "to have (a living being)"
     static final String SOURCE_PAGE = "p.42"

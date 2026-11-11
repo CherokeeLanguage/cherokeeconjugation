@@ -319,14 +319,16 @@ class CompoundPrefixes {
         prefixes.put("SG3DL2", new Prefix(preVowel: 'Ꮝd', preConsonant: 'ᏍᏗ', other: ''))
         prefixes.put("SG3PL2", new Prefix(preVowel: 'Ꭲj', preConsonant: 'ᎢᏥ', other: ''))
         prefixes.put("SG3PL3AN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᎩ', other: ''))
-        // NOTE (refreshed -- timo 10Nov26): guide-attested for the vowel-stem and
-        // consonant-stem cases is deg-/degi-: P1(45) ᏕᎦᏢᎢᎭ "he's tying them (an or
-        // in)" (deg-), Fig. 3 3sg row 3pl-an/3pl-in columns deg-/degi-, and the
-        // user's hear/kill tests (ᏕᎦᏛᎩᎠ, ᏕᎩᎯᎭ pattern). The verb book prints a
-        // da- variant for the same cells — P3(24) ᏓᎪᏩᏘᎭ da¹gowh²tị³ha "he sees
-        // them (an or in)" and p.119 "He/she sees them" dagowtiha — which this
-        // single table cannot express together with degi-; kept commented below.
-        // Vowel-stem allomorph Ꮣg (da-g-...) unattested in the guide excerpts.
+        // NOTE (rewritten -- timo 10Nov26): the sg3-subject + plural-object form is
+        // TWO morphemes: the plural-object prefix fused with the verb's OWN sg3
+        // subject allomorph. Guide P3(24) for To See: "da- 'he--them': d-, plural
+        // object; -a-, 3rd person"; P1(45) for To Tie: "deg- 'he--them (an or in)':
+        // de-, plural object; -g-, 3rd person". Fig 3's generic 3sg row (deg-/degi-)
+        // shows the tie g-allomorph, not a universal. Verbs with an a- sg3 allomorph
+        // take da- — book-verified: To See p.118 ᏓᎪᏩᏘᎭ, To Hear ᏓᏛᎩᎠ, To Kill
+        // p.87 ᏓᎯᎭ — and are now handled by the PRESENT short-circuit in
+        // VerbConjugationProcessor.process (present3rd leading Ꭰ → Ꮣ). This table
+        // entry (Ꮥg/ᏕᎩ → dega-/degi-) still serves the g- allomorph verbs.
 //        prefixes.put("SG3PL3AN", new Prefix(preVowel: 'Ꮣg', preConsonant: 'ᏓᎪ', other: ''))// P3(24) da- variant, verb book pp.118-119 -- timo 10Nov26
         prefixes.put("SG3PL3IN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᎩ', other: ''))
 

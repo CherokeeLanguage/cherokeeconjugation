@@ -183,6 +183,45 @@ class VerbConjugationProcessor {
             return verb.stemmer.present3rd.syllabary;
         }
 
+        // timo 10Nov26: HABITUAL sg3 short-circuit, mirroring the PRESENT one above.
+        // The sg3 habitual is lexically allomorphic like the present (see Ꭰ- agowtisgo'i
+        // book p.120, kill Ꭰ- ᎠᎯᎰᎢ, want Ꭴ- ᎤᏚᎵᏍᎪᎢ, wear shoes Ꮪ- ᏚᎳᏑᏠᎢ), so composing
+        // the stem from the table preConsonant (ga- for see) produces the wrong row.
+        // The dictionary's raw habitual DefinitionLine IS the printed sg3 form for
+        // every verb, so return it directly for both SG3AN and SG3IN object readings —
+        // the book prints one sg3 habitual row covering both (p.120 "He/she sees it
+        // (habitually)"). Non-reflexive only, and skipped when the verb has no
+        // habitual row (empty stem) so composition still applies elsewhere.
+        if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
+                && !verb.reflexiveHolderObject.isReflexive()
+                && verb.tense == Tense.HABITUAL
+                && verb.stemmer?.habitual?.syllabary) {
+            return verb.stemmer.habitual.syllabary;
+        }
+
+        // timo 10Nov26: PRESENT sg3-subject + plural-object (PL3AN/PL3IN) cells.
+        // The plural-object prefix fuses with the verb's OWN sg3 subject allomorph —
+        // guide P3(24) for To See: "da- 'he--them': d-, plural object; -a-, 3rd
+        // person"; P1(45) for To Tie: "deg- 'he--them (an or in)': de-, plural
+        // object; -g-, 3rd person". So verbs whose sg3 allomorph is a- (raw
+        // present3rd begins with Ꭰ) take da-, while g- allomorph verbs (tie-type)
+        // take deg- via ordinary composition. Book-verified da- rows: To See p.118
+        // ᏓᎪᏩᏘᎭ dagowtiha "he/she sees them (an or in)"; To Hear ᏓᏛᎩᎠ datvgi'a
+        // "s/he hears them"; To Kill p.87 ᏓᎯᎭ dahiha "he/she is killing them".
+        // Derivation: replace the leading Ꭰ (the a- allomorph) of present3rd with
+        // Ꮣ (da-). Set B verbs are excluded twice over: their compoundPrefix is
+        // SG3PL3ANB/SG3PL3INB and their sg3 row begins with Ꭴ/Ꮪ, never Ꭰ.
+        // RECHECK (vetoable): Fig 3's generic 3sg row prints deg-/degi- for the
+        // 3pl-object columns; that is the tie (g-) allomorph, not a universal.
+        if ((verb.compoundPrefix == CompoundPrefixes.SG3PL3AN
+                || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN)
+                && !verb.reflexiveHolderObject.isReflexive()
+                && verb.tense == Tense.PRESENT
+                && verb.stemmer?.present3rd?.syllabary?.startsWith('Ꭰ')) {
+            return 'Ꮣ' + verb.stemmer.present3rd.syllabary.substring(1);
+        }
+
         // Rules 70-73 from Grammar Guide: Inherent and Plural Distributive prefixes
 //        if (verb.stemmer?.isDistributive) {
 //            verb.initialPrefixHolder.de = true

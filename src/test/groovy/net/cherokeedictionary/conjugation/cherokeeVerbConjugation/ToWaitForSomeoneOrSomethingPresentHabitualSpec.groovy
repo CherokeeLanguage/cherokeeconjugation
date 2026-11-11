@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -19,7 +19,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToWaitForSomeoneOrSomethingPresentHabitualSpec extends Specification {
+class ToWaitForSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     static final String VERB = "to wait for someone or something"
     static final String TENSE = "PRESENT_HABITUAL"

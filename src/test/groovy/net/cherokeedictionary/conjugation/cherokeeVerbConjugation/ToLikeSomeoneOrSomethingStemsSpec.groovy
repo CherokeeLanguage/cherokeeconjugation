@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -18,7 +18,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToLikeSomeoneOrSomethingStemsSpec extends Specification {
+class ToLikeSomeoneOrSomethingStemsSpec extends VerbBaseSpec {
 
     static final String VERB = "to like someone or something"
     static final String SOURCE_PAGE = "p.92"

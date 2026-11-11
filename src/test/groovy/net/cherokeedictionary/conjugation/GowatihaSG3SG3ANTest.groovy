@@ -43,14 +43,29 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     void testSG3SG3ANHabitual() {
         verb.tense = Tense.HABITUAL
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
+        // timo 10Nov26: guide-correct update (vetoable). Book p.120 prints the sg3
+        // habitual as ᎠᎪᏩᏘᏍᎪᎢ agowtisgo'i (a-) — the dictionary's raw habitual row
+        // (ConjugateBase gowatiha.habitual) IS this form. Old expectation ᎦᎪᏩᏘᏍᎪᎢ
+        // (ga-, composed from the present-tense table's SG3SG3AN preConsonant) is
+        // not printed anywhere. Engine now short-circuits HABITUAL sg3 from the raw
+        // habitual row (VerbConjugationProcessor.process, mirroring PRESENT);
+        // RECHECK: sg3 habitual allomorphy is lexical, revert short-circuit if a
+        // counter-example surfaces. -- timo 10Nov26
+        assertEquals("ᎠᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
     }
 
     void testSG3SG3INHabitual() {
         verb.object = PrefixTableObject.SG3IN
         verb.tense = Tense.HABITUAL
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
+        // timo 10Nov26: guide-correct update (vetoable). Same row as the AN test:
+        // book p.120 prints ONE sg3 habitual, ᎠᎪᏩᏘᏍᎪᎢ agowtisgo'i, covering the
+        // "him/her" (AN) and "it" (IN) readings alike. Old expectation ᎦᎪᏩᏘᏍᎪᎢ
+        // (ga-) not attested. NOTE the open asymmetry: for PRESENT the transitive
+        // SG3SG3IN cell still composes ga- (testSG3SG3INPresent ᎦᎪᏩᏘᎭ) while the
+        // book prints ᎠᎪᏩᏘᎭ a- for "He/she sees it" (p.118) — left as-is because
+        // present sg3 handling is user-owned; RECHECK together. -- timo 10Nov26
+        assertEquals("ᎠᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
     }
 
     void testSG3SG3ANInfinitive() {

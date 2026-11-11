@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -19,7 +19,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToTeachSomeoneRemotePastSpec extends Specification {
+class ToTeachSomeoneRemotePastSpec extends VerbBaseSpec {
 
     static final String VERB = "to teach someone"
     static final String TENSE = "REMOTE_PAST"

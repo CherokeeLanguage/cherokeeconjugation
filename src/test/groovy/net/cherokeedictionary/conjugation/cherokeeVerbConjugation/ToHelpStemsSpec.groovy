@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 import net.cherokeedictionary.util.Tense
@@ -20,7 +20,7 @@ import net.cherokeedictionary.util.Tense
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToHelpStemsSpec extends Specification {
+class ToHelpStemsSpec extends VerbBaseSpec {
 
     static final String VERB = "to help"
     static final String SOURCE_PAGE = "p.67"

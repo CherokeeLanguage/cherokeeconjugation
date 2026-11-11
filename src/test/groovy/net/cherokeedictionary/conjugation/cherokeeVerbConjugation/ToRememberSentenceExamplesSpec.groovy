@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -24,7 +24,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToRememberSentenceExamplesSpec extends Specification {
+class ToRememberSentenceExamplesSpec extends VerbBaseSpec {
 
     static final String VERB = "to remember"
     static final String SOURCE_PAGE = "pp.115-116"

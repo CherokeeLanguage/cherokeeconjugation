@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -21,7 +21,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToHideSomeoneOrSomethingFutureImperativeVolativeSpec extends Specification {
+class ToHideSomeoneOrSomethingFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     static final String VERB = "to hide someone or something"
     static final String TENSE = "FUTURE_IMPERATIVE_VOLATIVE"

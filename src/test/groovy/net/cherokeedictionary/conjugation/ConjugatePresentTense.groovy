@@ -75,7 +75,18 @@ class ConjugatePresentTense extends ConjugateBase {
 
         assertTrue "", "ᎦᏥᏯᏛᎩᎠ" == conjStr("SG1", "PL3AN", tohear, verbTense, partofspeechc)//gajiyadvgia
         assertTrue "", "ᎦᎯᏯᏛᎩᎠ" == conjStr("SG2", "PL3AN", tohear, verbTense, partofspeechc)//gahiyadvgia
-        assertTrue "", "ᏕᎦᏛᎩᎠ" == conjStr("SG3", "PL3AN", tohear, verbTense, partofspeechc)//dadvgia
+        // timo 10Nov26: guide-correct update (vetoable). Book prints "S/he hears
+        // them" ᏓᏛᎩᎠ datvgi'a (da-, both AN and IN rows) — the plural-object
+        // prefix de- fused with hear's own a- sg3 allomorph (ᎠᏛᎩᎠ), per guide
+        // P3(24) "da- 'he--them': d-, plural object; -a-, 3rd person". The old
+        // ᏕᎦᏛᎩᎠ expectation (dega-, de + epenthetic g) is the tie-type g-
+        // allomorph pattern (P1(45) deg-), not what the book prints for a- verbs;
+        // the user's own romanization comment below already read this row as
+        // "dadvgia". Engine now derives Ꮣ + present3rd-minus-Ꭰ (present short-
+        // circuit, VerbConjugationProcessor.process); also book-verified for To
+        // See ᏓᎪᏩᏘᎭ (p.118) and To Kill ᏓᎯᎭ (p.87). RECHECK: Fig 3's generic
+        // deg-/degi- is the tie allomorph. -- timo 10Nov26
+        assertTrue "", "ᏓᏛᎩᎠ" == conjStr("SG3", "PL3AN", tohear, verbTense, partofspeechc)//dadvgia = datvgi'a, book "S/he hears them"
         assertTrue "", "ᎨᎾᏛᎩᎠ" == conjStr("DL1INCL", "PL3AN", tohear, verbTense, partofspeechc)//genadvgia
         assertTrue "", "ᎪᏍᏓᏛᎩᎠ" == conjStr("DL1EXCL", "PL3AN", tohear, verbTense, partofspeechc)//gosdadvgia
         assertTrue "", "ᎨᏍᏓᏛᎩᎠ" == conjStr("DL2", "PL3AN", tohear, verbTense, partofspeechc)//gedsadvgia

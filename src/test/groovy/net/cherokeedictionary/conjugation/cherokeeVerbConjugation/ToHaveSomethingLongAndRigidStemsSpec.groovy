@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -21,7 +21,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToHaveSomethingLongAndRigidStemsSpec extends Specification {
+class ToHaveSomethingLongAndRigidStemsSpec extends VerbBaseSpec {
 
     static final String VERB = "to have something long and rigid, like a stick, a shovel, etc."
     static final String SOURCE_PAGE = "p.44"

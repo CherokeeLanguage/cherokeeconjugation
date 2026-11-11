@@ -8,6 +8,19 @@ import net.cherokeedictionary.verb.conjugation.Conjugate
 
 class VerbFactory {
     //todo: this isn't really a verb factory - it's more of a conjugateAndGetDisplayValue kind of thing
+    // Overloaded method supporting the new ConjugationRequest architecture while keeping Map backward compatibility
+    static Verb createVerbFromParameters(net.cherokeedictionary.proposed.ConjugationRequest request) {
+        def facade = new net.cherokeedictionary.proposed.VerbConjugationFacade()
+        def context = new net.cherokeedictionary.proposed.ConjugationContext(request)
+        context.buildBaseVerb()
+        return context.verb
+    }
+
+    static Verb createVerbFromParametersAndConjugate(net.cherokeedictionary.proposed.ConjugationRequest request) {
+        def facade = new net.cherokeedictionary.proposed.VerbConjugationFacade()
+        return facade.conjugate(request)
+    }
+
     static Verb createVerbFromParameters(Map<String, String> paramMap) {
         def habitual = paramMap.habitual
         def imperative = paramMap.imperative

@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -24,7 +24,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToWatchSentenceExamplesSpec extends Specification {
+class ToWatchSentenceExamplesSpec extends VerbBaseSpec {
 
     static final String VERB = "to watch"
     static final String SOURCE_PAGE = "pp.162-164"

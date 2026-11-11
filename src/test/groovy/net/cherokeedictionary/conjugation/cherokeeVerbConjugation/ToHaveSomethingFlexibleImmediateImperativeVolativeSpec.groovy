@@ -1,6 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
-import spock.lang.Specification
+import net.cherokeedictionary.conjugation.VerbBaseSpec
 import spock.lang.Unroll
 
 /**
@@ -17,7 +17,7 @@ import spock.lang.Unroll
  * (U+2019) are normalized to ASCII apostrophes (').
  */
 @Unroll
-class ToHaveSomethingFlexibleImmediateImperativeVolativeSpec extends Specification {
+class ToHaveSomethingFlexibleImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     static final String VERB = "to have something flexible"
     static final String TENSE = "IMMEDIATE_IMPERATIVE_VOLATIVE"
