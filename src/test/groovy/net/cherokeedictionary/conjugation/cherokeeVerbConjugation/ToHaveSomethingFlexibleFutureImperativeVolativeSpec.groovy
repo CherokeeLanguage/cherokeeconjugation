@@ -43,7 +43,7 @@ class ToHaveSomethingFlexibleFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "May we (another and I) have something flexible (singular)!\"/\"May we (another and I) have multiple flexible things!\""],
             [pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "May we (others and I) have something flexible (singular)!\"/\"May we (others and I) have multiple flexible things!\""],
             [pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "May we (you and I and another or others) have something flexible (singular)!\"/\"May we (you and I and another or others) have multiple flexible things!\""],
-            [pronoun: "Third Plural Form", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "May they have something flexible (singular)!\"/\"May they have multiple flexible things!\""],
+            [pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "May they have something flexible (singular)!\"/\"May they have multiple flexible things!\""],
     ]
 
     /**

@@ -42,7 +42,7 @@ class ToBeSomewhereFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "May we (another and I) be somewhere!"],
             [pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "May we (others and I) be somewhere!"],
             [pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "May we (you and I and another or others) be somewhere!"],
-            [pronoun: "Third Plural Form",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "May they be somewhere!"],
+            [pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "May they be somewhere!"],
     ]
 
     /**

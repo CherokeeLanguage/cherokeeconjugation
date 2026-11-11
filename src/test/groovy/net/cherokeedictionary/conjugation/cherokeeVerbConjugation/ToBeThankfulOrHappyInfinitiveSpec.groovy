@@ -38,7 +38,7 @@ class ToBeThankfulOrHappyInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginalihelisdi", syllabary: "ᎣᎩᎾᎵᎮᎵᏍᏗ", english: "For us (another and I) to be thankful/happy"],
             [pronoun: "First Plural Exclusive", romanized: "ogalihelisdi", syllabary: "ᎣᎦᎵᎮᎵᏍᏗ", english: "For us (others and I) to be thankful/happy"],
             [pronoun: "First Plural Inclusive", romanized: "igalihelisdi", syllabary: "ᎢᎦᎵᎮᎵᏍᏗ", english: "For us (you and I and another or others) to be thankful/happy"],
-            [pronoun: "Third Plural Form", romanized: "unalihelisdi", syllabary: "ᎤᎾᎵᎮᎵᏍᏗ", english: "For them to be thankful/happy"],
+            [pronoun: "Third Plural", romanized: "unalihelisdi", syllabary: "ᎤᎾᎵᎮᎵᏍᏗ", english: "For them to be thankful/happy"],
     ]
 
     /**

@@ -38,7 +38,7 @@ class ToGoPresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdego'i", syllabary: "ᎣᏍᏕᏐᎢ", english: "We (another and I) go"],
             [pronoun: "First Plural Exclusive", romanized: "otsego'i", syllabary: "ᎣᏤᏐᎢ", english: "We (others and I) go"],
             [pronoun: "First Plural Inclusive", romanized: "idego'i", syllabary: "ᎢᏕᏐᎢ", english: "We (you and I and another or others) go"],
-            [pronoun: "Third Plural Form", romanized: "anego'i", syllabary: "ᎠᏁᏐᎢ", english: "They go"],
+            [pronoun: "Third Plural", romanized: "anego'i", syllabary: "ᎠᏁᏐᎢ", english: "They go"],
     ]
 
     /**

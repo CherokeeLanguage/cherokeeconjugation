@@ -38,7 +38,7 @@ class ToHaveSomethingLongAndRigidImmediateImperativeVolativeSpec extends VerbBas
             [pronoun: "First Dual Exclusive", romanized: "oginvyesdi/doginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ/ᏙᎩᏅᏰᏍᏗ", english: "May we (another and I) have something long & rigid (singular) right now!\"/\"May we (another and I) have multiple long & rigid things right now!\""],
             [pronoun: "First Plural Exclusive", romanized: "ogvyesdi/dogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ/ᏙᎬᏰᏍᏗ", english: "May we (others and I) have something long & rigid (singular) right now!\"/\"May we (others and I) have multiple long & rigid things right now!\""],
             [pronoun: "First Plural Inclusive", romanized: "May we (you and I and another or others) have multiple long & rigid things right now!\" igvyesdi/degvyesdi", syllabary: "ᎢᎬᏰᏍᏗ/ᏕᎬᏰᏍᏗ", english: "May we (you and I and another or others) have something long & rigid (singular) right now!\"/\""],
-            [pronoun: "Third Plural Form", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "May they have something long & rigid (singular) right now!\"/\"May they have multiple long & rigid things right now!\""],
+            [pronoun: "Third Plural", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "May they have something long & rigid (singular) right now!\"/\"May they have multiple long & rigid things right now!\""],
     ]
 
     /**

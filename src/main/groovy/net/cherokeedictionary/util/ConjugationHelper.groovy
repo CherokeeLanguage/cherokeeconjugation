@@ -44,12 +44,12 @@ class ConjugationHelper {
         // (e.g. "to forget", P4(7) degv-) continue to route to their B entries
         // through the present3rd check below.
 
-        //if du,nu,u,wu in 3rd sing present then Set B rest are Set A
-        def tempPresent3rd = verb.stemmer.present3rd.syllabary
-        if (tempPresent3rd.startsWith("Ꮪ")
+        // if du,nu,u,wu in 3rd sing present then Set B rest are Set A
+        def tempPresent3rd = verb.stemmer?.present3rd?.syllabary
+        if (tempPresent3rd && (tempPresent3rd.startsWith("Ꮪ")
                 || tempPresent3rd.startsWith("Ꮔ")
                 || tempPresent3rd.startsWith("Ꭴ")
-                || tempPresent3rd.startsWith("Ꮽ")) {
+                || tempPresent3rd.startsWith("Ꮽ"))) {
             verbset = VerbSet.B
         }
 

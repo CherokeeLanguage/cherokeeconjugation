@@ -38,7 +38,7 @@ class ToBeThankfulOrHappyFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dayosdalihelitsi", syllabary: "ᏓᏲᏍᏓᎵᎮᎵᏥ", english: "We (another and I) will be thankful/happy"],
             [pronoun: "First Plural Exclusive", romanized: "dayotsalihelitsi", syllabary: "ᏓᏲᏣᎵᎮᎵᏥ", english: "We (others and I) will be thankful/happy"],
             [pronoun: "First Plural Inclusive", romanized: "dadalihelitsi", syllabary: "ᏓᏓᎵᎮᎵᏥ", english: "We (you and I and another or others) will be thankful/happy"],
-            [pronoun: "Third Plural Form", romanized: "dvnalihelitsi", syllabary: "ᏛᎾᎵᎮᎵᏥ", english: "They will be thankful/happy"],
+            [pronoun: "Third Plural", romanized: "dvnalihelitsi", syllabary: "ᏛᎾᎵᎮᎵᏥ", english: "They will be thankful/happy"],
     ]
 
     /**

@@ -22,6 +22,7 @@ class ConjugationContext {
         if (request.present1st) stemmer.present1st = new DefinitionLine(syllabary: request.present1st)
         if (request.present3rd) stemmer.present3rd = new DefinitionLine(syllabary: request.present3rd)
         if (request.remotepast) stemmer.remotepast = new DefinitionLine(syllabary: request.remotepast)
+        if (request.immediatepast) stemmer.immediatepast = new DefinitionLine(syllabary: request.immediatepast)
 
         verb = Conjugate.createVerbToConjugate(
             request.subject, 

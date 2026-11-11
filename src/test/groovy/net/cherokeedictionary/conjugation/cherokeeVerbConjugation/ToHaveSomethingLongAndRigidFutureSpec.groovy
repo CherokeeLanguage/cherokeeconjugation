@@ -38,7 +38,7 @@ class ToHaveSomethingLongAndRigidFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginvyesdi/deginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ/ᏕᎩᏅᏰᏍᏗ", english: "We (another and I) will have something long & rigid (singular)\"/\"We (another and I) will have multiple long & rigid things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogvyesdi/dogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ/ᏙᎬᏰᏍᏗ", english: "We (others and I) will have something long & rigid (singular)\"/\"We (others and I) will have multiple long & rigid things\""],
             [pronoun: "First Plural Inclusive", romanized: "igvyesdi/degvyesdi", syllabary: "ᎢᎬᏰᏍᏗ/ᏕᎬᏰᏍᏗ", english: "We (you and I and another or others) will have something long & rigid (singular)\"/\"We (you and I and another or others) will have multiple long & rigid things\""],
-            [pronoun: "Third Plural Form", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "They will have something long & rigid (singular)\"/\"They will have multiple long & rigid things\""],
+            [pronoun: "Third Plural", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "They will have something long & rigid (singular)\"/\"They will have multiple long & rigid things\""],
     ]
 
     /**

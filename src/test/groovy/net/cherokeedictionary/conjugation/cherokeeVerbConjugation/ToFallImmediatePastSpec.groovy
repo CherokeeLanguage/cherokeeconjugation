@@ -38,7 +38,7 @@ class ToFallImmediatePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dosdinvgi", syllabary: "ᏙᏍᏗᏅᎩ", english: "We (another and I) fell"],
             [pronoun: "First Plural Exclusive", romanized: "dotsinvgi", syllabary: "ᏙᏥᏅᎩ", english: "We (others and I) fell"],
             [pronoun: "First Plural Inclusive", romanized: "dedinvgi", syllabary: "ᏕᏗᏅᎩ", english: "We (you and I and another or others) fell"],
-            [pronoun: "Third Plural Form", romanized: "daninvgi", syllabary: "ᏓᏂᏅᎩ", english: "They fell"],
+            [pronoun: "Third Plural", romanized: "daninvgi", syllabary: "ᏓᏂᏅᎩ", english: "They fell"],
     ]
 
     /**

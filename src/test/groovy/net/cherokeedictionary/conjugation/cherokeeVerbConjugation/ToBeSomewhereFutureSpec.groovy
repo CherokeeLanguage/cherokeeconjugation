@@ -37,7 +37,7 @@ class ToBeSomewhereFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "We (another and I) will be somewhere"],
             [pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "We (others and I) will be somewhere"],
             [pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "We (you and I and another or others) will be somewhere"],
-            [pronoun: "Third Plural Form",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "They will be somewhere"],
+            [pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "They will be somewhere"],
     ]
 
     /**

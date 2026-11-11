@@ -43,7 +43,7 @@ class ToHaveSomethingLiquidInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginaditasdi/tsoginaditasdi", syllabary: "ᎣᎩᎾᏗᏔᏍᏗ/ᏦᎩᎾᏗᏔᏍᏗ", english: "For us (another and I) to drink something liquid (singular)\"/\"For us (another and I) to drink multiple liquid things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogaditasdi/digaditasdi", syllabary: "ᎣᎦᏗᏔᏍᏗ/ᏗᎦᏗᏔᏍᏗ", english: "For us (others and I) to drink something liquid (singular)\"/\"For us (others and I) to drink multiple liquid things\""],
             [pronoun: "First Plural Inclusive", romanized: "igaditasdi/digaditasdi", syllabary: "ᎢᎦᏗᏔᏍᏗ/ᏗᎦᏗᏔᏍᏗ", english: "For us (you and I and another or others) to drink something liquid (singular)\"/\"For us (you and I and another or others) to drink multiple liquid things\""],
-            [pronoun: "Third Plural Form", romanized: "unaditasdi/tsunaditasdi", syllabary: "ᎤᎾᏗᏔᏍᏗ/ᏧᎾᏗᏔᏍᏗ", english: "For them to drink something liquid (singular)\"/\"For them to drink multiple liquid things\""],
+            [pronoun: "Third Plural", romanized: "unaditasdi/tsunaditasdi", syllabary: "ᎤᎾᏗᏔᏍᏗ/ᏧᎾᏗᏔᏍᏗ", english: "For them to drink something liquid (singular)\"/\"For them to drink multiple liquid things\""],
     ]
 
     /**

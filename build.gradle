@@ -121,11 +121,9 @@ test {
     // Exclude an entire package and its subpackages
     exclude 'net/cherokeedictionary/conjugation/vrb/**'
 
-    exclude 'net/cherokeedictionary/grammar/**'
-
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 
-    exclude 'net/cherokeedictionary/sample/**'
+    exclude '**/VerbBookFixtures*'
 
     // Exclude a specific test class
 //    exclude '**/MySpecificTest.class'

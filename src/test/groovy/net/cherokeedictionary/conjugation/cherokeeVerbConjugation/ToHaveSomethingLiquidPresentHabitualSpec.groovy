@@ -38,7 +38,7 @@ class ToHaveSomethingLiquidPresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginineho'i/doginineho'i", syllabary: "ᎣᎩᏂᏁᎰᎢ/ᏙᎩᏂᏁᎰᎢ", english: "We (another and I) have something liquid (singular)\"/\"We (another and I) have multiple liquid things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogineho'i/dogineho'i", syllabary: "ᎣᎩᏁᎰᎢ/ᏙᎩᏁᎰᎢ", english: "We (others and I) have something liquid (singular)\"/\"We (others and I) have multiple liquid things\""],
             [pronoun: "First Plural Inclusive", romanized: "igineho'i/degineho'i", syllabary: "ᎢᎩᏁᎰᎢ/ᏕᎩᏁᎰᎢ", english: "We (you and I and another or others) have something liquid (singular)\"/\"We (you and I and another or others) have multiple liquid things\""],
-            [pronoun: "Third Plural Form", romanized: "They have multiple liquid things\" unineho'i/dunineho'i", syllabary: "ᎤᏂᏁᎰᎢ/ᏚᏂᏁᎰᎢ", english: "They have something liquid (singular)\"/"],
+            [pronoun: "Third Plural", romanized: "They have multiple liquid things\" unineho'i/dunineho'i", syllabary: "ᎤᏂᏁᎰᎢ/ᏚᏂᏁᎰᎢ", english: "They have something liquid (singular)\"/"],
     ]
 
     /**

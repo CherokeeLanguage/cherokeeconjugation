@@ -38,7 +38,7 @@ class ToFallRemotePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dogininvtsv'i", syllabary: "ᏙᎩᏂᏅᏨᎢ", english: "We (another and I) fell"],
             [pronoun: "First Plural Exclusive", romanized: "doginvtsv'i", syllabary: "ᏙᎩᏅᏨᎢ", english: "We (others and I) fell"],
             [pronoun: "First Plural Inclusive", romanized: "deginvtsv'i", syllabary: "ᏕᎩᏅᏨᎢ", english: "We (you and I and another or others) fell"],
-            [pronoun: "Third Plural Form", romanized: "duninvtsv'i", syllabary: "ᏚᏂᏅᏨᎢ", english: "They fell"],
+            [pronoun: "Third Plural", romanized: "duninvtsv'i", syllabary: "ᏚᏂᏅᏨᎢ", english: "They fell"],
     ]
 
     /**

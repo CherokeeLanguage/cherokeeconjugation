@@ -38,7 +38,7 @@ class ToHaveSomethingLongAndRigidRemotePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginvyv'i/doginvyv'i", syllabary: "ᎣᎩᏅᏴᎢ/ᏙᎩᏅᏴᎢ", english: "We (another and I) had something long & rigid (singular)\"/\"We (another and I) had multiple long & rigid things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogvyv'i", syllabary: "ᎣᎬᏴᎢ", english: "We (others and I) had something long & rigid (singular)"],
             [pronoun: "First Plural Inclusive", romanized: "igvyv'i/degvyv'i", syllabary: "ᎢᎬᏴᎢ/ᏕᎬᏴᎢ", english: "We (you and I and another or others) had something long & rigid (singular)\"/\"We (you and I and another or others) had multiple long & rigid things\""],
-            [pronoun: "Third Plural Form", romanized: "unvyv'i/dunvyv'i", syllabary: "ᎤᏅᏴᎢ/ᏚᏅᏴᎢ", english: "They had something long & rigid (singular)\"/\"They had multiple long & rigid things\""],
+            [pronoun: "Third Plural", romanized: "unvyv'i/dunvyv'i", syllabary: "ᎤᏅᏴᎢ/ᏚᏅᏴᎢ", english: "They had something long & rigid (singular)\"/\"They had multiple long & rigid things\""],
     ]
 
     /**

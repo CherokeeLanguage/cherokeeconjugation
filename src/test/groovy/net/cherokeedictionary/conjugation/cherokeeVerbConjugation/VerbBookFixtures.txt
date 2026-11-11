@@ -1,0 +1,241 @@
+package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
+
+class VerbBookFixtures {
+    static final Map<String, Map> OVERRIDES = [
+    ]
+
+    static final Map<String, Map> FIXTURES = [
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", present: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+        $verb: [
+            partOfSpeech: $pos,
+            objectClass: $object_class,
+            conjugations: [
+                [subject: "SG3", habitual: $sg3fields{$_}, imperative: $sg3fields{$_}, infinitive: $sg3fields{$_}, present: $sg3fields{$_}, remote_past: $sg3fields{$_}],
+                [subject: "SG1", present: $conj{present1st}],
+            ],
+        ],
+    ]
+}

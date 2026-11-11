@@ -38,7 +38,7 @@ class ToGoRemotePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginenvsv'i", syllabary: "ᎣᎩᏁᏅᏒᎢ", english: "We (another and I) went"],
             [pronoun: "First Plural Exclusive", romanized: "ogenvsv'i", syllabary: "ᎣᎨᏅᏒᎢ", english: "We (others and I) went"],
             [pronoun: "First Plural Inclusive", romanized: "igenvsv'i", syllabary: "ᎢᎨᏅᏒᎢ", english: "We (you and I and another or others) went"],
-            [pronoun: "Third Plural Form", romanized: "unenvsv'i", syllabary: "ᎤᏁᏅᏒᎢ", english: "They went"],
+            [pronoun: "Third Plural", romanized: "unenvsv'i", syllabary: "ᎤᏁᏅᏒᎢ", english: "They went"],
     ]
 
     /**

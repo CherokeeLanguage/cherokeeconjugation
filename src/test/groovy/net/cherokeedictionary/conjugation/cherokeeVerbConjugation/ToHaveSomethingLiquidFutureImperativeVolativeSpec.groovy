@@ -43,7 +43,7 @@ class ToHaveSomethingLiquidFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "ogininehesdi/dogininehesdi", syllabary: "ᎣᎩᏂᏁᎮᏍᏗ/ᏙᎩᏂᏁᎮᏍᏗ", english: "May we (another and I) have something liquid (singular)!\"/\"May we (another and I) have multiple liquid things!\""],
             [pronoun: "First Plural Exclusive", romanized: "oginehesdi/doginehesdi", syllabary: "ᎣᎩᏁᎮᏍᏗ/ᏙᎩᏁᎮᏍᏗ", english: "May we (others and I) have something liquid (singular)!\"/\"May we (others and I) have multiple liquid things!\""],
             [pronoun: "First Plural Inclusive", romanized: "iginehesdi/deginehesdi", syllabary: "ᎢᎩᏁᎮᏍᏗ/ᏕᎩᏁᎮᏍᏗ", english: "May we (you and I and another or others) have something liquid (singular)!\"/\"May we (you and I and another or others) have multiple liquid things!\""],
-            [pronoun: "Third Plural Form", romanized: "uninehesdi/duninehesdi", syllabary: "ᎤᏂᏁᎮᏍᏗ/ᏚᏂᏁᎮᏍᏗ", english: "May they have something liquid (singular)!\"/\"May they have multiple liquid things!\""],
+            [pronoun: "Third Plural", romanized: "uninehesdi/duninehesdi", syllabary: "ᎤᏂᏁᎮᏍᏗ/ᏚᏂᏁᎮᏍᏗ", english: "May they have something liquid (singular)!\"/\"May they have multiple liquid things!\""],
     ]
 
     /**

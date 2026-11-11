@@ -43,7 +43,7 @@ class ToGoFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "wosdenvsv'i", syllabary: "ᏬᏍᏕᏅᏒᎢ", english: "May we (another and I) go later on!"],
             [pronoun: "First Plural Exclusive", romanized: "wotsenvsv'i", syllabary: "ᏬᏤᏅᏒᎢ", english: "May we (others and I) go later on!"],
             [pronoun: "First Plural Inclusive", romanized: "widenvsv'i", syllabary: "ᏫᏕᏅᏒᎢ", english: "May we (you and I and another or others) go later on!"],
-            [pronoun: "Third Plural Form", romanized: "wanenvsv'i", syllabary: "ᏩᏁᏅᏒᎢ", english: "May they go later on!"],
+            [pronoun: "Third Plural", romanized: "wanenvsv'i", syllabary: "ᏩᏁᏅᏒᎢ", english: "May they go later on!"],
     ]
 
     /**

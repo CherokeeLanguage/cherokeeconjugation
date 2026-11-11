@@ -37,7 +37,7 @@ class ToBeSomewhereInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "oginedasdi", syllabary: "ᎣᎩᏁᏓᏍᏗ", english: "For us (another and I) to be somewhere"],
             [pronoun: "First Plural Exclusive", romanized: "ogedasdi",   syllabary: "ᎣᎨᏓᏍᏗ",  english: "For us (others and I) to be somewhere"],
             [pronoun: "First Plural Inclusive", romanized: "igedasdi",   syllabary: "ᎢᎨᏓᏍᏗ",  english: "For us (you and I and another or others) to be somewhere"],
-            [pronoun: "Third Plural Form",      romanized: "unedasdi",   syllabary: "ᎤᏁᏓᏍᏗ",  english: "For them to be somewhere"],
+            [pronoun: "Third Plural",      romanized: "unedasdi",   syllabary: "ᎤᏁᏓᏍᏗ",  english: "For them to be somewhere"],
     ]
 
     /**

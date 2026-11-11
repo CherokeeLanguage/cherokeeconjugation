@@ -38,7 +38,7 @@ class ToHaveSomethingFlexibleFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "We (another and I) will have something flexible (singular)\"/\"We (another and I) will have multiple flexible things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "We (others and I) will have something flexible (singular)\"/\"We (others and I) will have multiple flexible things\""],
             [pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "We (you and I and another or others) will have something flexible (singular)\"/\"We (you and I and another or others) will have multiple flexible things\""],
-            [pronoun: "Third Plural Form", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "They will have something flexible (singular)\"/\"They will have multiple flexible things\""],
+            [pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "They will have something flexible (singular)\"/\"They will have multiple flexible things\""],
     ]
 
     /**

@@ -38,7 +38,7 @@ class ToBeSomewhereRemotePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "osdedohv'i", syllabary: "ᎣᏍᏕᏙᎲᎢ", english: "We (another and I) were somewhere"],
             [pronoun: "First Plural Exclusive", romanized: "otsedohv'i", syllabary: "ᎣᏤᏙᎲᎢ", english: "We (others and I) were somewhere"],
             [pronoun: "First Plural Inclusive", romanized: "idedohv'i",  syllabary: "ᎢᏕᏙᎲᎢ", english: "We (you and I and another or others) were somewhere"],
-            [pronoun: "Third Plural Form",      romanized: "anedohv'i",  syllabary: "ᎠᏁᏙᎲᎢ", english: "They were somewhere"],
+            [pronoun: "Third Plural",      romanized: "anedohv'i",  syllabary: "ᎠᏁᏙᎲᎢ", english: "They were somewhere"],
     ]
 
     /**

@@ -38,7 +38,7 @@ class ToBeThankfulOrHappyImmediatePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdaliheligi", syllabary: "ᎣᏍᏓᎵᎮᎵᎩ", english: "We (another and I) were thankful/happy"],  // opening quote missing in print
             [pronoun: "First Plural Exclusive", romanized: "otsaliheligi", syllabary: "ᎣᏣᎵᎮᎵᎩ", english: "We (others and I) were thankful/happy"],  // opening quote missing in print
             [pronoun: "First Plural Inclusive", romanized: "idaliheligi", syllabary: "ᎢᏓᎵᎮᎵᎩ", english: "We (you and I and another or others) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "Third Plural Form", romanized: "analiheligi", syllabary: "ᎠᎾᎵᎮᎵᎩ", english: "They were thankful/happy"],
+            [pronoun: "Third Plural", romanized: "analiheligi", syllabary: "ᎠᎾᎵᎮᎵᎩ", english: "They were thankful/happy"],
     ]
 
     /**

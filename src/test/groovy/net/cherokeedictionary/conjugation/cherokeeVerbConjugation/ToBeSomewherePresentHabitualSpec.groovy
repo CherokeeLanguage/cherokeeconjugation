@@ -37,7 +37,7 @@ class ToBeSomewherePresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "osdedoho'i", syllabary: "ᎣᏍᏕᏙᎰᎢ", english: "We (another and I) are somewhere"],
             [pronoun: "First Plural Exclusive", romanized: "otsedoho'i", syllabary: "ᎣᏤᏙᎰᎢ", english: "We (others and I) are somewhere"],
             [pronoun: "First Plural Inclusive", romanized: "idedoho'i",  syllabary: "ᎢᏕᏙᎰᎢ", english: "We (you and I and another or others) are somewhere"],
-            [pronoun: "Third Plural Form",      romanized: "anedoho'i",  syllabary: "ᎠᏁᏙᎰᎢ", english: "They are somewhere"],
+            [pronoun: "Third Plural",      romanized: "anedoho'i",  syllabary: "ᎠᏁᏙᎰᎢ", english: "They are somewhere"],
     ]
 
     /**

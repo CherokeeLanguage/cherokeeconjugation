@@ -44,7 +44,7 @@ class ToBeThankfulOrHappyFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdalihelitsv'i", syllabary: "ᎣᏍᏓᎵᎮᎵᏨᎢ", english: "May we (another and I) be thankful/happy!"],
             [pronoun: "First Plural Exclusive", romanized: "otsalihelitsv'i", syllabary: "ᎣᏣᎵᎮᎵᏨᎢ", english: "May we (others and I) be thankful/happy!"],
             [pronoun: "First Plural Inclusive", romanized: "idalihelitsv'i", syllabary: "ᎢᏓᎵᎮᎵᏨᎢ", english: "May we (you and I and another or others) be thankful/happy!"],
-            [pronoun: "Third Plural Form", romanized: "analihelitsv'i", syllabary: "ᎠᎾᎵᎮᎵᏨᎢ", english: "May they be thankful/happy!"],
+            [pronoun: "Third Plural", romanized: "analihelitsv'i", syllabary: "ᎠᎾᎵᎮᎵᏨᎢ", english: "May they be thankful/happy!"],
     ]
 
     /**

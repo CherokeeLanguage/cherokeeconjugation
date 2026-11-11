@@ -43,7 +43,7 @@ class ToHaveSomethingLongAndRigidInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginvyi iyulisdodi", syllabary: "ᎣᎩᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (another and I) to have something long & rigid (singular)"],
             [pronoun: "First Plural Exclusive", romanized: "ogvyi iyulisdodi", syllabary: "ᎣᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (others and I) to have something long & rigid (singular)"],
             [pronoun: "First Plural Inclusive", romanized: "igvyi iyulisdodi", syllabary: "ᎢᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (you and I and another or others) to have something long & rigid (singular)\""],
-            [pronoun: "Third Plural Form", romanized: "unvyi iyulisdodi", syllabary: "ᎤᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For them to have something long & rigid (singular)"],
+            [pronoun: "Third Plural", romanized: "unvyi iyulisdodi", syllabary: "ᎤᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For them to have something long & rigid (singular)"],
     ]
 
     /**

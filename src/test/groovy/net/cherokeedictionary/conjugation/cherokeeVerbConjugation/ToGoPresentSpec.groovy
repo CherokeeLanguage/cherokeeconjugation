@@ -47,7 +47,7 @@ class ToGoPresentSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdega", syllabary: "ᎣᏍᏕᎦ", english: "We (another and I) are going"],
             [pronoun: "First Plural Exclusive", romanized: "otsega", syllabary: "ᎣᏤᎦ", english: "We (others and I) are going"],
             [pronoun: "First Plural Inclusive", romanized: "idega", syllabary: "ᎢᏕᎦ", english: "We (you and I and another or others) are going"],
-            [pronoun: "Third Plural Form", romanized: "anega", syllabary: "ᎠᏁᎦ", english: "They are going"],
+            [pronoun: "Third Plural", romanized: "anega", syllabary: "ᎠᏁᎦ", english: "They are going"],
     ]
 
     /**

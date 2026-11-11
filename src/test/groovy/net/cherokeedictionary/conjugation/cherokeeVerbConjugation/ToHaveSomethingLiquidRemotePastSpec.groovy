@@ -38,7 +38,7 @@ class ToHaveSomethingLiquidRemotePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "ogininehv'i/dogininehv'i", syllabary: "ᎣᎩᏂᏁᎲᎢ/ᏙᎩᏂᏁᎲᎢ", english: "We (another and I) had something liquid (singular)\"/\"We (another and I) had multiple liquid things\""],
             [pronoun: "First Plural Exclusive", romanized: "oginehv'i/doginehv'i", syllabary: "ᎣᎩᏁᎲᎢ/ᏙᎩᏁᎲᎢ", english: "We (others and I) had something liquid (singular)\"/\"We (others and I) had multiple liquid things\""],
             [pronoun: "First Plural Inclusive", romanized: "iginehv'i/deginehv'i", syllabary: "ᎢᎩᏁᎲᎢ/ᏕᎩᏁᎲᎢ", english: "We (you and I and another or others) had something liquid (singular)\"/\"We (you and I and another or others) had multiple liquid things\""],
-            [pronoun: "Third Plural Form", romanized: "They had multiple liquid things\" uninehv'i/duninehv'i", syllabary: "ᎤᏂᏁᎲᎢ/ᏚᏂᏁᎲᎢ", english: "They had something liquid (singular)\"/"],
+            [pronoun: "Third Plural", romanized: "They had multiple liquid things\" uninehv'i/duninehv'i", syllabary: "ᎤᏂᏁᎲᎢ/ᏚᏂᏁᎲᎢ", english: "They had something liquid (singular)\"/"],
     ]
 
     /**

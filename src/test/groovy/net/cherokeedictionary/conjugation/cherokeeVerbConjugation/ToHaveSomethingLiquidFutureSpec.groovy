@@ -38,7 +38,7 @@ class ToHaveSomethingLiquidFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "ogininehesdi/dogininehesdi", syllabary: "ᎣᎩᏂᏁᎮᏍᏗ/ᏙᎩᏂᏁᎮᏍᏗ", english: "We (another and I) will have something liquid (singular)\"/\"We (another and I) will have multiple liquid things\""],
             [pronoun: "First Plural Exclusive", romanized: "oginehesdi/doginehesdi", syllabary: "ᎣᎩᏁᎮᏍᏗ/ᏙᎩᏁᎮᏍᏗ", english: "We (others and I) will have something liquid (singular)\"/\"We (others and I) will have multiple liquid things\""],
             [pronoun: "First Plural Inclusive", romanized: "iginehesdi/doginehesdi", syllabary: "ᎢᎩᏁᎮᏍᏗ/ᏙᎩᏁᎮᏍᏗ", english: "We (you and I and another or others) will have something liquid (singular)\"/\"We (you and I and another or others) will have multiple liquid things\""],
-            [pronoun: "Third Plural Form", romanized: "uninehesdi/duninehesdi", syllabary: "ᎤᏂᏁᎮᏍᏗ/ᏚᏂᏁᎮᏍᏗ", english: "They will have something liquid (singular)\"/\"They will have multiple liquid things\""],
+            [pronoun: "Third Plural", romanized: "uninehesdi/duninehesdi", syllabary: "ᎤᏂᏁᎮᏍᏗ/ᏚᏂᏁᎮᏍᏗ", english: "They will have something liquid (singular)\"/\"They will have multiple liquid things\""],
     ]
 
     /**

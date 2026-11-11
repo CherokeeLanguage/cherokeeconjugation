@@ -37,7 +37,7 @@ class ToBeSomewhereImmediateImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "wosdeda", syllabary: "ᏬᏍᏕᏓ", english: "May we (another and I) be somewhere right now!"],
             [pronoun: "First Plural Exclusive", romanized: "wotseda", syllabary: "ᏬᏤᏓ", english: "May we (others and I) be somewhere right now!"],
             [pronoun: "First Plural Inclusive", romanized: "ideda",   syllabary: "ᎢᏕᏓ", english: "May we (you and I and another or others) be somewhere right now!"],
-            [pronoun: "Third Plural Form",      romanized: "waneda",  syllabary: "ᏩᏁᏓ", english: "May they be somewhere right now!"],
+            [pronoun: "Third Plural",      romanized: "waneda",  syllabary: "ᏩᏁᏓ", english: "May they be somewhere right now!"],
     ]
 
     /**

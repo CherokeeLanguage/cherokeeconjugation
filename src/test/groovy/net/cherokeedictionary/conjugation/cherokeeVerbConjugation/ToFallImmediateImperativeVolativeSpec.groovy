@@ -38,7 +38,7 @@ class ToFallImmediateImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "widosdinvgi", syllabary: "ᏫᏙᏍᏗᏅᎩ", english: "May we (another and I) fall right now!"],
             [pronoun: "First Plural Exclusive", romanized: "widotsinvgi", syllabary: "ᏫᏙᏥᏅᎩ", english: "May we (others and I) fall right now!"],
             [pronoun: "First Plural Inclusive", romanized: "didinvgi", syllabary: "ᏗᏗᏅᎩ", english: "May we (you and I and another or others) fall right now!"],
-            [pronoun: "Third Plural Form", romanized: "widaninvgi", syllabary: "ᏫᏓᏂᏅᎩ", english: "May they fall right now!"],
+            [pronoun: "Third Plural", romanized: "widaninvgi", syllabary: "ᏫᏓᏂᏅᎩ", english: "May they fall right now!"],
     ]
 
     /**

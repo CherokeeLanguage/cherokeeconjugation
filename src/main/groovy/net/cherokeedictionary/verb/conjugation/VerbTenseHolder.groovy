@@ -73,6 +73,7 @@ class VerbTenseHolder {
         // of the present stem. Falls back to the old present-derived placeholder when
         // no Remote Past entry exists.
         //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
+        immediate = stemmer.getStem(Tense.IMMEDIATE_PAST)
         if (remotePast != null) {
             String rp = SyllabaryUtil.parseSyllabary(remotePast)
             if (rp.size() > 2 && rp.endsWith("vi")) {

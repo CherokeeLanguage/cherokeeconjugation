@@ -43,7 +43,7 @@ class ToFallFutureImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dosdinvtsv'i", syllabary: "ᏙᏍᏗᏅᏨᎢ", english: "May we (another and I) fall!"],
             [pronoun: "First Plural Exclusive", romanized: "dotsinvtsv'i", syllabary: "ᏙᏥᏅᏨᎢ", english: "May we (others and I) fall!"],
             [pronoun: "First Plural Inclusive", romanized: "dedinvtsv'i", syllabary: "ᏕᏗᏅᏨᎢ", english: "May we (you and I and another or others) fall!"],
-            [pronoun: "Third Plural Form", romanized: "daninvtsv'i", syllabary: "ᏓᏂᏅᏨᎢ", english: "May they fall!"],
+            [pronoun: "Third Plural", romanized: "daninvtsv'i", syllabary: "ᏓᏂᏅᏨᎢ", english: "May they fall!"],
     ]
 
     /**

@@ -43,7 +43,7 @@ class ToFallPresentSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dosdinvga", syllabary: "ᏙᏍᏗᏅᎦ", english: "We (another and I) are falling"],
             [pronoun: "First Plural Exclusive", romanized: "dotsinvga", syllabary: "ᏙᏥᏅᎦ", english: "We (others and I) are falling"],
             [pronoun: "First Plural Inclusive", romanized: "are falling\" dedinvga", syllabary: "ᏕᏗᏅᎦ", english: "We (you and I and another or others) "],  // opening quote missing in print
-            [pronoun: "Third Plural Form", romanized: "daninvga", syllabary: "ᏓᏂᏅᎦ", english: "They are falling"],
+            [pronoun: "Third Plural", romanized: "daninvga", syllabary: "ᏓᏂᏅᎦ", english: "They are falling"],
     ]
 
     /**

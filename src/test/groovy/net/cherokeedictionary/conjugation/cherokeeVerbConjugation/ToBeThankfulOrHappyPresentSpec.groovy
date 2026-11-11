@@ -43,7 +43,7 @@ class ToBeThankfulOrHappyPresentSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdaliheliga", syllabary: "ᎣᏍᏓᎵᎮᎵᎦ", english: "We (another and I) are thankful/happy"],
             [pronoun: "First Plural Exclusive", romanized: "otsaliheliga", syllabary: "ᎣᏣᎵᎮᎵᎦ", english: "We (others and I) are thankful/happy"],
             [pronoun: "First Plural Inclusive", romanized: "idaliheliga", syllabary: "ᎢᏓᎵᎮᎵᎦ", english: "We (you and I and another or others) are thankful/happy"],
-            [pronoun: "Third Plural Form", romanized: "analiheliga", syllabary: "ᎠᎾᎵᎮᎵᎦ", english: "They are thankful/happy"],
+            [pronoun: "Third Plural", romanized: "analiheliga", syllabary: "ᎠᎾᎵᎮᎵᎦ", english: "They are thankful/happy"],
     ]
 
     /**

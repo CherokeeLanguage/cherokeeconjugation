@@ -38,7 +38,7 @@ class ToFallFutureSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dodayosdinvtsi", syllabary: "ᏙᏓᏲᏍᏗᏅᏥ", english: "We (another and I) will fall"],
             [pronoun: "First Plural Exclusive", romanized: "dodayotsinvtsi", syllabary: "ᏙᏓᏲᏥᏅᏥ", english: "We (others and I) will fall"],
             [pronoun: "First Plural Inclusive", romanized: "dodadinvtsi", syllabary: "ᏙᏓᏗᏅᏥ", english: "We (you and I and another or others) will fall"],
-            [pronoun: "Third Plural Form", romanized: "dodvninvtsi", syllabary: "ᏙᏛᏂᏅᏥ", english: "They will fall"],
+            [pronoun: "Third Plural", romanized: "dodvninvtsi", syllabary: "ᏙᏛᏂᏅᏥ", english: "They will fall"],
     ]
 
     /**

@@ -10,6 +10,7 @@ public class NormalizedVerbEntry {
 	public String pres3;
 	public String pres1;
 	public String past;
+	public String imm;
 	public String habit;
 	public String imp;
 	public String inf;
@@ -18,13 +19,14 @@ public class NormalizedVerbEntry {
 		list.add(pres3);
 		list.add(pres1);
 		list.add(past);
+		list.add(imm);
 		list.add(habit);
 		list.add(imp);
 		list.add(inf);
 		return list;
 	}
 	public static void removeDirectObject(NormalizedVerbEntry e) {
-		String object = StringUtils.getCommonPrefix(e.pres3, e.past, e.imp);
+		String object = StringUtils.getCommonPrefix(e.pres3, e.past, e.imp, e.imm);
 		if (StringUtils.isBlank(object)) {
 			return;
 		}
@@ -32,6 +34,7 @@ public class NormalizedVerbEntry {
 		e.habit=StringUtils.removeStart(e.habit, object);
 		e.pres1=StringUtils.removeStart(e.pres1, object);
 		e.imp=StringUtils.removeStart(e.imp, object);
+		e.imm=StringUtils.removeStart(e.imm, object);
 		e.pres3=StringUtils.removeStart(e.pres3, object);
 		e.past=StringUtils.removeStart(e.past, object);
 	}
@@ -51,6 +54,9 @@ public class NormalizedVerbEntry {
 		}
 		if (e.imp.startsWith("Ꭲ")){
 			e.imp=chop(e.imp);
+		}
+		if (e.imm != null && e.imm.startsWith("Ꭲ")){
+			e.imm=chop(e.imm);
 		}
 		if (e.inf.startsWith("Ꭵ")){
 			e.inf=chop(e.inf);
@@ -93,6 +99,9 @@ public class NormalizedVerbEntry {
 		}
 		if (e.habit.startsWith("Ꮻ")){
 			e.habit=chop(e.habit);
+		}
+		if (e.imm != null && e.imm.startsWith("Ꮻ")){
+			e.imm=chop(e.imm);
 		}
 
 		if (e.pres1.startsWith("Ꮹ")) {
@@ -163,6 +172,9 @@ public class NormalizedVerbEntry {
 		}
 		if (e.habit.startsWith("Ꮒ")){
 			e.habit=chop(e.habit);
+		}
+		if (e.imm != null && e.imm.startsWith("Ꮒ")){
+			e.imm=chop(e.imm);
 		}
 		if (e.pres1.startsWith("Ꮎ")){
 			e.pres1=newPrefix("Ꭰ", e.pres1);
@@ -258,11 +270,17 @@ public class NormalizedVerbEntry {
 		if (e.habit.startsWith("Ꮪ")){
 			e.habit=newPrefix("Ꭴ", e.habit);
 		}
+		if (e.imm != null && e.imm.startsWith("Ꮪ")){
+			e.imm=newPrefix("Ꭴ", e.imm);
+		}
 		if (e.pres3.startsWith("Ꮥ")){
 			e.pres3=chop(e.pres3);
 		}
 		if (e.habit.startsWith("Ꮥ")){
 			e.habit=chop(e.habit);
+		}
+		if (e.imm != null && e.imm.startsWith("Ꮥ")){
+			e.imm=chop(e.imm);
 		}
 		if (e.pres1.startsWith("Ꮣ")){
 			e.pres1=newPrefix("Ꭰ", e.pres1);

@@ -38,7 +38,7 @@ class ToGoInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginenvsdi", syllabary: "ᎣᎩᏁᏅᏍᏗ", english: "For us (another and I) to go"],
             [pronoun: "First Plural Exclusive", romanized: "ogenvsdi", syllabary: "ᎣᎨᏅᏍᏗ", english: "For us (others and I) to go"],
             [pronoun: "First Plural Inclusive", romanized: "igenvsdi", syllabary: "ᎢᎨᏅᏍᏗ", english: "For us (you and I and another or others) to go"],
-            [pronoun: "Third Plural Form", romanized: "unenvsdi", syllabary: "ᎤᏁᏅᏍᏗ", english: "For them to go"],
+            [pronoun: "Third Plural", romanized: "unenvsdi", syllabary: "ᎤᏁᏅᏍᏗ", english: "For them to go"],
     ]
 
     /**

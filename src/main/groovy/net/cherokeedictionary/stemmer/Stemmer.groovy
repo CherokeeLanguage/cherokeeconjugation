@@ -27,6 +27,7 @@ public class Stemmer {
     public DefinitionLine present3rd = null;
     public DefinitionLine present1st = null;
     public DefinitionLine remotepast = null;
+    public DefinitionLine immediatepast = null;
     public DefinitionLine habitual = null;
     public DefinitionLine imperative = null;
     public DefinitionLine infinitive = null;
@@ -39,6 +40,22 @@ public class Stemmer {
      * succeeded or when the entry has no data at all.
      */
     public String normalizationFailure = "";
+
+    public static final String SG3_ALLOMORPH_A = "A"
+    public static final String SG3_ALLOMORPH_G = "G"
+    public static final String SG3_ALLOMORPH_U = "U"
+    public static final String SG3_ALLOMORPH_OTHER = "OTHER"
+
+    public String sg3Allomorph() {
+        if (present3rd == null || present3rd.syllabary == null || present3rd.syllabary.isEmpty()) {
+            return SG3_ALLOMORPH_OTHER
+        }
+        String s = present3rd.syllabary
+        if (s.startsWith('Ꭰ')) return SG3_ALLOMORPH_A
+        if (s.startsWith('Ꭶ') || s.startsWith('Ꭷ')) return SG3_ALLOMORPH_G
+        if (s.startsWith('Ꭴ') || s.startsWith('Ꮪ')) return SG3_ALLOMORPH_U
+        return SG3_ALLOMORPH_OTHER
+    }
 
     String getRoot(Tense type) {
         return getRootWithEnding(type)[0]
@@ -215,6 +232,16 @@ public class Stemmer {
             }
         } else {
             e.past = ""
+        }
+
+        if (immediatepast && immediatepast.syllabary) {
+            e.imm = StringUtils.strip(immediatepast.syllabary);
+            if (e.imm.contains(",")) {
+                e.imm = StringUtils.substringBefore(e.imm, ",");
+                e.imm = StringUtils.strip(e.imm);
+            }
+        } else {
+            e.imm = ""
         }
 
         if (habitual && habitual.syllabary) {
@@ -546,9 +573,13 @@ public class Stemmer {
         if (e.imp.startsWith("Ꮻ")) {
 			e.imp=discardPrefix(e.imp);
         }
+        if (e.imm != null && e.imm.startsWith("Ꮻ")) {
+			e.imm=discardPrefix(e.imm);
+        }
         List<StemEntry> list = new ArrayList<StemEntry>();
         list.add(new StemEntry(newPrefix(vowel, e.pres3), StemType.PresentContinous));
         list.add(new StemEntry(newPrefix(vowel, e.past), StemType.RemotePast));
+        list.add(new StemEntry(newPrefix(vowel, e.imm), StemType.Immediate));
         list.add(new StemEntry(newPrefix(vowel, e.habit), StemType.Habitual));
         list.add(new StemEntry(newPrefix(vowel, e.imp), StemType.Immediate));
         list.add(new StemEntry(newPrefix(vowel, e.inf), StemType.Deverbal));
@@ -559,9 +590,13 @@ public class Stemmer {
         if (e.imp.startsWith("Ꮻ")) {
 			e.imp=discardPrefix(e.imp);
         }
+        if (e.imm != null && e.imm.startsWith("Ꮻ")) {
+			e.imm=discardPrefix(e.imm);
+        }
         List<StemEntry> list = new ArrayList<StemEntry>();
 		list.add(new StemEntry(discardPrefix(e.pres3), StemType.PresentContinous));
 		list.add(new StemEntry(discardPrefix(e.past), StemType.RemotePast));
+		list.add(new StemEntry(discardPrefix(e.imm), StemType.Immediate));
 		list.add(new StemEntry(discardPrefix(e.habit), StemType.Habitual));
 		list.add(new StemEntry(discardPrefix(e.imp), StemType.Immediate));
 		list.add(new StemEntry(discardPrefix(e.inf), StemType.Deverbal));

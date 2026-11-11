@@ -38,7 +38,7 @@ class ToHaveSomethingFlexiblePresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginina'o'i/doginina'o'i", syllabary: "ᎣᎩᏂᎾᎣᎢ/ᏙᎩᏂᎾᎣᎢ", english: "We (another and I) have something flexible (singular)\"/\"We (another and I) have multiple flexible things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogina'o'i/dogina'o'i", syllabary: "ᎣᎩᎾᎣᎢ/ᏙᎩᎾᎣᎢ", english: "We (others and I) have something flexible (singular)\"/\"We (others and I) have multiple flexible things\""],
             [pronoun: "First Plural Inclusive", romanized: "igina'o'i/degina'o'i", syllabary: "ᎢᎩᎾᎣᎢ/ᏕᎩᎾᎣᎢ", english: "We (you and I and another or others) have something flexible (singular)\"/\"We (you and I and another or others) have multiple flexible things\""],
-            [pronoun: "Third Plural Form", romanized: "They have multiple flexible things\" unina'o'i/dunina'o'i", syllabary: "ᎤᏂᎾᎣᎢ/ᏚᏂᎾᎣᎢ", english: "They have something flexible (singular)\"/"],
+            [pronoun: "Third Plural", romanized: "They have multiple flexible things\" unina'o'i/dunina'o'i", syllabary: "ᎤᏂᎾᎣᎢ/ᏚᏂᎾᎣᎢ", english: "They have something flexible (singular)\"/"],
     ]
 
     /**

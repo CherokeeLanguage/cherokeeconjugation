@@ -38,7 +38,7 @@ class ToHaveSomethingFlexibleInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "ogininvdi/tsogininvdi", syllabary: "ᎣᎩᏂᏅᏗ/ᏦᎩᏂᏅᏗ", english: "For us (another and I) to have something flexible (singular)\"/\"For us (another and I) to have multiple flexible things\""],
             [pronoun: "First Plural Exclusive", romanized: "oginvdi/tsoginvdi", syllabary: "ᎣᎩᏅᏗ/ᏦᎩᏅᏗ", english: "For us (others and I) to have something flexible (singular)\"/\"For us (others and I) to have multiple flexible things\""],
             [pronoun: "First Plural Inclusive", romanized: "iginvdi/diginvdi", syllabary: "ᎢᎩᏅᏗ/ᏗᎩᏅᏗ", english: "For us (you and I and another or others) to have something flexible (singular)\"/\"For us (you and I and another or others) to have multiple flexible things\""],
-            [pronoun: "Third Plural Form", romanized: "uninvdi/tsuninvdi", syllabary: "ᎤᏂᏅᏗ/ᏧᏂᏅᏗ", english: "For them to have something flexible (singular)\"/\"For them to have multiple flexible things\""],
+            [pronoun: "Third Plural", romanized: "uninvdi/tsuninvdi", syllabary: "ᎤᏂᏅᏗ/ᏧᏂᏅᏗ", english: "For them to have something flexible (singular)\"/\"For them to have multiple flexible things\""],
     ]
 
     /**

@@ -3,6 +3,7 @@ package net.cherokeedictionary.verb.conjugation
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stem.StemEntry
 import net.cherokeedictionary.stem.StemType
+import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.*
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
@@ -204,21 +205,15 @@ class VerbConjugationProcessor {
         // The plural-object prefix fuses with the verb's OWN sg3 subject allomorph —
         // guide P3(24) for To See: "da- 'he--them': d-, plural object; -a-, 3rd
         // person"; P1(45) for To Tie: "deg- 'he--them (an or in)': de-, plural
-        // object; -g-, 3rd person". So verbs whose sg3 allomorph is a- (raw
-        // present3rd begins with Ꭰ) take da-, while g- allomorph verbs (tie-type)
-        // take deg- via ordinary composition. Book-verified da- rows: To See p.118
-        // ᏓᎪᏩᏘᎭ dagowtiha "he/she sees them (an or in)"; To Hear ᏓᏛᎩᎠ datvgi'a
-        // "s/he hears them"; To Kill p.87 ᏓᎯᎭ dahiha "he/she is killing them".
-        // Derivation: replace the leading Ꭰ (the a- allomorph) of present3rd with
-        // Ꮣ (da-). Set B verbs are excluded twice over: their compoundPrefix is
-        // SG3PL3ANB/SG3PL3INB and their sg3 row begins with Ꭴ/Ꮪ, never Ꭰ.
-        // RECHECK (vetoable): Fig 3's generic 3sg row prints deg-/degi- for the
-        // 3pl-object columns; that is the tie (g-) allomorph, not a universal.
+        // object; -g-, 3rd person". So verbs whose sg3 allomorph is A-class (present3rd
+        // begins with Ꭰ) take da-, while G-class verbs (tie-type) take deg- via
+        // ordinary composition. Book-verified da- rows: To See p.118 ᏓᎪᏩᏘᎭ,
+        // To Hear ᏓᏛᎩᎠ, To Kill p.87 ᏓᎯᎭ.
         if ((verb.compoundPrefix == CompoundPrefixes.SG3PL3AN
                 || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
                 && verb.tense == Tense.PRESENT
-                && verb.stemmer?.present3rd?.syllabary?.startsWith('Ꭰ')) {
+                && verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A) {
             return 'Ꮣ' + verb.stemmer.present3rd.syllabary.substring(1);
         }
 

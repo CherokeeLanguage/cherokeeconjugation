@@ -1,6 +1,8 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.util.PrefixTableObject
+import net.cherokeedictionary.util.PrefixTableSubject
 import spock.lang.Unroll
 
 /**
@@ -40,7 +42,7 @@ class ToBeSomewhereImmediatePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive",   romanized: "wosdeda",  syllabary: "ᏬᏍᏕᏓ", english: "We (another and I) were somewhere"],
             [pronoun: "First Plural Exclusive", romanized: "wotseda",  syllabary: "ᏬᏤᏓ",  english: "We (others and I) were somewhere"],
             [pronoun: "First Plural Inclusive", romanized: "wideda",   syllabary: "ᏫᏕᏓ",  english: "We (you and I and another or others) were somewhere"],
-            [pronoun: "Third Plural Form",      romanized: "waneda",   syllabary: "ᏩᏁᏓ",  english: "They were somewhere"],
+            [pronoun: "Third Plural",      romanized: "waneda",   syllabary: "ᏩᏁᏓ",  english: "They were somewhere"],
     ]
 
     /**
@@ -48,10 +50,32 @@ class ToBeSomewhereImmediatePastSpec extends VerbBaseSpec {
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
+    static final Map details = [
+        definition: "To be somewhere",
+        part_of_speech: "v.i.",
+        conjugations: [
+            [subject: 'SG3', present: 'edoh-a', remote_past: 'edoh-v\'i', immediate_past: 'ed-a', infinitive: 'edas-di', immediate: 'ed-a']
+        ]
+    ]
+
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call.
-        return [romanized: row.romanized, syllabary: row.syllabary]
+        def subject = PrefixTableSubject.fromReadableName(pronoun)
+        if (subject == null) {
+            // Check if we need to map based on the enum name or another identifier
+            if (pronoun == "Third Plural") {
+                subject = PrefixTableSubject.PL3
+            } else {
+                throw new IllegalStateException("Could not map pronoun: " + pronoun)
+            }
+        }
+
+        // Default to SG3IN for this verb, but this should ideally be in the row
+        def object = PrefixTableObject.SG3IN
+        
+        String expected = row.syllabary
+        String syllabary = conjugateVerb(VERB, details, subject.name(), object.name(), TENSE, expected)
+        return [romanized: row.romanized, syllabary: syllabary]
     }
 
     def "immediate past form matches the verb book (#row.pronoun)"() {

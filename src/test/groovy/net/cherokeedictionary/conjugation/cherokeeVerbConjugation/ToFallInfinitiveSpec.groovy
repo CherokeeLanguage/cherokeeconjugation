@@ -38,7 +38,7 @@ class ToFallInfinitiveSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "tsogininv'isdi", syllabary: "ᏦᎩᏂᏅᎢᏍᏗ", english: "For us (another and I) to fall"],
             [pronoun: "First Plural Exclusive", romanized: "tsoginv'isdi", syllabary: "ᏦᎩᏅᎢᏍᏗ", english: "For us (others and I) to fall"],
             [pronoun: "First Plural Inclusive", romanized: "diginv'isdi", syllabary: "ᏗᎩᏅᎢᏍᏗ", english: "For us (you and I and another or others) to fall"],
-            [pronoun: "Third Plural Form", romanized: "tsuninv'isdi", syllabary: "ᏧᏂᏅᎢᏍᏗ", english: "For them to fall"],
+            [pronoun: "Third Plural", romanized: "tsuninv'isdi", syllabary: "ᏧᏂᏅᎢᏍᏗ", english: "For them to fall"],
     ]
 
     /**

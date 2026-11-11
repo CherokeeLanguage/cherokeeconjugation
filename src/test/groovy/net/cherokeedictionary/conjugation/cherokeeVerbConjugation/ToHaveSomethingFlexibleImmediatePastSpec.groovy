@@ -38,7 +38,7 @@ class ToHaveSomethingFlexibleImmediatePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginina'v'i/doginina'v'i", syllabary: "ᎣᎩᏂᎾᎥᎢ/ᏙᎩᏂᎾᎥᎢ", english: "We (another and I) had something flexible (singular)\"/\"We (another and I) had multiple flexible things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogina'v'i/dogina'v'i", syllabary: "ᎣᎩᎾᎥᎢ/ᏙᎩᎾᎥᎢ", english: "We (others and I) had something flexible (singular)\"/\"We (others and I) had multiple flexible things\""],
             [pronoun: "First Plural Inclusive", romanized: "igina'v'i/degina'v'i", syllabary: "ᎢᎩᎾᎥᎢ/ᏕᎩᎾᎥᎢ", english: "We (you and I and another or others) had something flexible (singular)\"/\"We (you and I and another or others) had multiple flexible things\""],
-            [pronoun: "Third Plural Form", romanized: "They had multiple flexible things\" unina'v'i/dunina'v'i", syllabary: "ᎤᏂᎾᎥᎢ/ᏚᏂᎾᎥᎢ", english: "They had something flexible (singular)\"/"],
+            [pronoun: "Third Plural", romanized: "They had multiple flexible things\" unina'v'i/dunina'v'i", syllabary: "ᎤᏂᎾᎥᎢ/ᏚᏂᎾᎥᎢ", english: "They had something flexible (singular)\"/"],
     ]
 
     /**

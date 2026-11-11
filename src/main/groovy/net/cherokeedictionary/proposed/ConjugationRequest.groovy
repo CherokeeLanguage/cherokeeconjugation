@@ -13,6 +13,7 @@ class ConjugationRequest {
     String present1st
     String present3rd
     String remotepast
+    String immediatepast
 
     // Initial prefixes flags / values
     String yi
@@ -38,6 +39,7 @@ class ConjugationRequest {
             present1st   : present1st,
             present3rd   : present3rd,
             remotepast   : remotepast,
+            immediatepast: immediatepast,
             yi           : yi,
             ji           : ji,
             wi           : wi,

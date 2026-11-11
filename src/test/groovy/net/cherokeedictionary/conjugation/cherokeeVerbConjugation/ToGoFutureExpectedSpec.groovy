@@ -38,7 +38,7 @@ class ToGoFutureExpectedSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dayosdesi", syllabary: "ᏓᏲᏍᏕᏏ", english: "We (another and I) will go"],
             [pronoun: "First Plural Exclusive", romanized: "dayotsesi", syllabary: "ᏓᏲᏤᏏ", english: "We (others and I) will go"],
             [pronoun: "First Plural Inclusive", romanized: "dadesi", syllabary: "ᏓᏕᏏ", english: "We (you and I and another or others) will go"],
-            [pronoun: "Third Plural Form", romanized: "dvnesi", syllabary: "ᏛᏁᏏ", english: "They will go"],
+            [pronoun: "Third Plural", romanized: "dvnesi", syllabary: "ᏛᏁᏏ", english: "They will go"],
     ]
 
     /**

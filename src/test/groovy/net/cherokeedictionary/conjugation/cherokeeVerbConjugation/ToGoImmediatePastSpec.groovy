@@ -38,7 +38,7 @@ class ToGoImmediatePastSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "osdena", syllabary: "ᎣᏍᏕᎾ", english: "We (another and I) went"],
             [pronoun: "First Plural Exclusive", romanized: "otsena", syllabary: "ᎣᏣᎾ", english: "We (others and I) went"],
             [pronoun: "First Plural Inclusive", romanized: "idena", syllabary: "ᎢᏕᎾ", english: "We (you and I and another or others) went"],
-            [pronoun: "Third Plural Form", romanized: "anena", syllabary: "ᎠᏁᎾ", english: "They went"],
+            [pronoun: "Third Plural", romanized: "anena", syllabary: "ᎠᏁᎾ", english: "They went"],
     ]
 
     /**

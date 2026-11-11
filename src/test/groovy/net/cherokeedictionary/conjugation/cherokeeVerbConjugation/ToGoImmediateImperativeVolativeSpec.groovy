@@ -38,7 +38,7 @@ class ToGoImmediateImperativeVolativeSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "wosdena", syllabary: "ᏬᏍᏕᎾ", english: "May we (another and I) go right now!"],
             [pronoun: "First Plural Exclusive", romanized: "wotsena", syllabary: "ᏬᏤᎾ", english: "May we (others and I) go right now!"],
             [pronoun: "First Plural Inclusive", romanized: "idena", syllabary: "ᎢᏕᎾ", english: "May we (you and I and another or others) go right now!"],
-            [pronoun: "Third Plural Form", romanized: "wanena", syllabary: "ᏩᏁᎾ", english: "May they go right now!"],
+            [pronoun: "Third Plural", romanized: "wanena", syllabary: "ᏩᏁᎾ", english: "May they go right now!"],
     ]
 
     /**

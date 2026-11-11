@@ -38,7 +38,7 @@ class ToHaveSomethingLongAndRigidPresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "oginvyo'i/doginvyo'i", syllabary: "ᎣᎩᏅᏲᎢ/ᏙᎩᏅᏲᎢ", english: "We (another and I) have something long & rigid (singular)\"/\"We (another andI) have multiple long & rigid things\""],
             [pronoun: "First Plural Exclusive", romanized: "ogvyo'i/dogvyo'i", syllabary: "ᎣᎬᏲᎢ/ᏙᎬᏲᎢ", english: "We (others and I) have something long & rigid (singular)\"/\"We (others and I) have multiple long & rigid things\""],
             [pronoun: "First Plural Inclusive", romanized: "igvyo'i/degvyo'i", syllabary: "ᎢᎬᏲᎢ/ᏕᎬᏲᎢ", english: "We (you and I and another or others) have something long & rigid (singular)\"/\"We (you and I and another or others) have multiple long & rigid things\""],
-            [pronoun: "Third Plural Form", romanized: "unvyo'i/dunvyo'i", syllabary: "ᎤᏅᏲᎢ/ᏚᏅᏲᎢ", english: "They have something long & rigid (singular)\"/\"They have multiple long & rigid things\""],
+            [pronoun: "Third Plural", romanized: "unvyo'i/dunvyo'i", syllabary: "ᎤᏅᏲᎢ/ᏚᏅᏲᎢ", english: "They have something long & rigid (singular)\"/\"They have multiple long & rigid things\""],
     ]
 
     /**

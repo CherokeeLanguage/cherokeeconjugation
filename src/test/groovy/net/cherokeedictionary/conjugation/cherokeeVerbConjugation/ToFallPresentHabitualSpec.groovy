@@ -38,7 +38,7 @@ class ToFallPresentHabitualSpec extends VerbBaseSpec {
             [pronoun: "First Dual Exclusive", romanized: "dosdinvgo'i", syllabary: "ᏙᏍᏗᏅᎪᎢ", english: "We (another and I) fall"],
             [pronoun: "First Plural Exclusive", romanized: "dotsinvgo'i", syllabary: "ᏙᏥᏅᎪᎢ", english: "We (others and I) fall"],
             [pronoun: "First Plural Inclusive", romanized: "dedinvgo'i", syllabary: "ᏕᏗᏅᎪᎢ", english: "We (you and I and another or others) fall"],
-            [pronoun: "Third Plural Form", romanized: "daninvgo'i", syllabary: "ᏓᏂᏅᎩ", english: "They are falling"],
+            [pronoun: "Third Plural", romanized: "daninvgo'i", syllabary: "ᏓᏂᏅᎩ", english: "They are falling"],
     ]
 
     /**
