@@ -18,6 +18,10 @@ package net.cherokeedictionary.verb.metadata
  * RECHECK: roots are tense-stem-dependent (REMOTE_PAST of To See is "gohv",
  * not "gowati"). Today only PRESENT roots are bridged; cross-tense root
  * variants need seeding when overrides fire on non-present tenses.
+ *
+ * Audit findings for the pending categories: see CATEGORY_AUDIT.md in this
+ * package (classificatory sets are lexical, wi- orientation already global).
+ * -- tio 12Nov26
  */
 class VerbRegistryInitializer {
     static void init() {
