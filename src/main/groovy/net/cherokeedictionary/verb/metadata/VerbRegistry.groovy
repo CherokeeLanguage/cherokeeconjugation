@@ -17,9 +17,22 @@ class VerbRegistry {
     }
     // Map of root to list of categories
     private static final Map<String, List<VerbCategory>> verbCategories = [:]
-    
+
     // Map of root to specific conjugation overrides
     private static final Map<String, Map<String, String>> verbOverrides = [:]
+
+    // tio 12Nov26: the bridge. Categories/overrides are LOOKED UP by Cherokee
+    // root (VerbConjugationProcessor sets verb.root = bare stem minus tense
+    // ending, e.g. "gowati" for To See PRESENT), but the taxonomy seeds read
+    // like the verb book (English names). nameIndex maps the English name to
+    // its engine-verified root(s); registering a name re-keys anything already
+    // filed under that English name onto the root so both views work.
+    private static final Map<String, String> nameIndex = [:]
+
+    // tio 12Nov26: English names seeded without a verified root. Kept visible
+    // (project rule: missing data stays visible) until the category audit
+    // supplies engine-verified roots -- never silently dropped.
+    private static final List<String> unresolvedNames = []
 
     static void addCategory(String root, VerbCategory category) {
         if (!verbCategories.containsKey(root)) {
@@ -28,6 +41,35 @@ class VerbRegistry {
         if (!verbCategories[root].contains(category)) {
             verbCategories[root].add(category)
         }
+    }
+
+    /** Indexes an English verb name to an engine-verified root and re-keys its data. -- tio 12Nov26 */
+    static void registerVerbName(String englishName, String root) {
+        if (!englishName || !root) return
+        nameIndex[englishName.toLowerCase()] = root
+        unresolvedNames.removeAll { it.equalsIgnoreCase(englishName) }
+        // re-key anything seeded under the English name onto the root
+        List<VerbCategory> cats = verbCategories[englishName]
+        cats?.each { addCategory(root, it) }
+        Map<String, String> overrides = verbOverrides[englishName]
+        overrides?.each { tense, form -> registerOverride(root, tense, form) }
+    }
+
+    /** English name → Cherokee root, or null when not bridged. -- tio 12Nov26 */
+    static String resolveRoot(String englishName) {
+        return englishName ? nameIndex[englishName.toLowerCase()] : null
+    }
+
+    /** Flags an English seed whose root is not yet engine-verified. -- tio 12Nov26 */
+    static void markUnresolved(String englishName) {
+        if (englishName && !unresolvedNames.contains(englishName)) {
+            unresolvedNames << englishName
+        }
+    }
+
+    /** Names still lacking a verified root; visible for the category audit. -- tio 12Nov26 */
+    static List<String> getUnresolvedNames() {
+        return new ArrayList(unresolvedNames)
     }
 
     static List<VerbCategory> getCategories(String root) {
