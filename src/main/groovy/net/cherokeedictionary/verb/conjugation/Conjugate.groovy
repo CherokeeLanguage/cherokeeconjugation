@@ -53,6 +53,23 @@ class Conjugate {
 
         if (verb.compoundPrefix) {
             verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb)
+
+            // tio 12Nov26: WI-33 — the stemmer's Ꮪ→Ꭴ normalization means the
+            // dictionary entry fused the da- initial prefix with the Set-B sg3
+            // u- (To Work ᏚᎸᏫᏍᏓᏁᎰᎢ = da + u + lvhwisdaneho'i). Re-declare da so
+            // PrefixDa's D-map re-fuses it (ᎤᎸ... → ᏚᎸ...; Ꮻ + ᏚᎸ... = ᏫᏚᎸ...
+            // with wi-, guide ex. 33b). Gated to SG3 with a single sg3 object:
+            // PL3-object du- forms ("He/she likes them" ᏚᎸᏉᏗ) carry their own
+            // d- in the compound-prefix table and would be doubled. RECHECK:
+            // whether da- extends to other persons of these verbs once more
+            // book rows are attested.
+            if (verb.stemmer?.normalizedDaInitialPrefix
+                    && verb.subject == PrefixTableSubject.SG3
+                    && (verb.object == PrefixTableObject.SG3AN
+                        || verb.object == PrefixTableObject.SG3IN)) {
+                verb.initialPrefixHolder.da = true
+            }
+
             verb.wholeWord = PrefixProcessor.process(verb)
             verb.wholeWord = NonFinalSuffixProcessor.process(verb)
             verb.wholeWord = FinalSuffixProcessor.process(verb)

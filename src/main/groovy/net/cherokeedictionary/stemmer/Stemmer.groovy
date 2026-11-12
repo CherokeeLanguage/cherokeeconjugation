@@ -42,6 +42,18 @@ public class Stemmer {
      */
     public String normalizationFailure = "";
 
+    /**
+     * tio 12Nov26: WI-33 — set by getStems() when the dictionary entry showed
+     * the sg3 da-+u- fusion (present3rd starting with Ꮪ, e.g. To Work
+     * ᏚᎸᏫᏍᏓᏁᎰᎢ dulvhwisdaneho'i): removeᏕprefix rewrites Ꮪ → Ꭴ, and the fused
+     * da- initial prefix must be re-declared at composition time so it
+     * surfaces again (ᎤᎸ... → ᏚᎸ...; ᏫᏚᎸ... with wi-). Read by
+     * Conjugate.conjugate, gated to SG3 single-object conjugations —
+     * PL3-object du- forms carry their own d- in the compound-prefix table
+     * ("He/she likes them" ᏚᎸᏉᏗ), and declaring da there would double it.
+     */
+    public boolean normalizedDaInitialPrefix = false;
+
     public static final String SG3_ALLOMORPH_A = "A"
     public static final String SG3_ALLOMORPH_G = "G"
     public static final String SG3_ALLOMORPH_U = "U"
@@ -344,7 +356,15 @@ public class Stemmer {
         /*
      * String Ꮥ- prefix if easy to identify
      */
+        // tio 12Nov26: WI-33 — when the sg3 entry begins with the da-+u- fusion
+        // glyph Ꮪ (removeᏕprefix rewrites it to Ꭴ), remember the fused da- so
+        // composition can re-declare it. pres3-scoped for now; RECHECK whether
+        // habit/imm-fused entries need the same flag.
+        boolean pres3DaFused = e.pres3.startsWith("Ꮪ")
         NormalizedVerbEntry.removeᏕprefix(e);
+        if (pres3DaFused && e.pres3.startsWith("Ꭴ")) {
+            normalizedDaInitialPrefix = true
+        }
         /*
      * String Ꭲ- (again) prefix if easy to identify
      */

@@ -290,10 +290,12 @@ class WiVerbTest extends ConjugateBase {
      * a. ᏚᎸᏫᏍᏓᏁᎰᎢ.  du¹lv²hwị³sda¹ne²ho³ʔi.    "He works."
      * b. ᏫᏚᎸᏫᏍᏓᏁᎰᎢ. wi²du²lv³hwị²sda¹ne²ho³ʔi. "He works (at a distance)."
      *
-     * KNOWN-GAP(WI-33): the Set-B SG3 du- pronominal handling currently reduces
-     * the du- prefix to u- upstream of PrefixWi (engine result: ᏭᎸᏫᏍᏓᏁᎰᎢ
-     * instead of ᏫᏚᎸᏫᏍᏓᏁᎰᎢ).
-     * ACCEPTANCE: conj(SG3, SG3IN, work, PRESENT, vi, wi) == "ᏫᏚᎸᏫᏍᏓᏁᎰᎢ"
+     * RESOLVED(WI-33) -- tio 12Nov26: the entry's Ꮪ is the da- initial prefix
+     * fused with the Set-B sg3 u- (da + u + lvhwisdaneho'i). The stemmer now
+     * remembers the fusion (normalizedDaInitialPrefix) and Conjugate re-declares
+     * da for SG3 single-object conjugations, so PrefixDa's D-map re-fuses it:
+     * plain sg3 = ᏚᎸᏫᏍᏓᏁᎰᎢ (33a), and wi- prepends before the fused Ꮪ:
+     * ᏫᏚᎸᏫᏍᏓᏁᎰᎢ (33b).
      */
     void testExample33_WiIndicatesDistance() {
         Verb verb = new Verb()
@@ -306,12 +308,27 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current broken state (du- reduced to u- upstream).
-        // When WI-33 (du- pronominal preservation) is fixed, this assertion
-        // FAILS -- remove the guard and assert "ᏫᏚᎸᏫᏍᏓᏁᎰᎢ".
-        assertTrue "KNOWN-GAP(WI-33) RESOLVED: du- is no longer reduced to u- " +
-                    "-- remove this guard and assert 'ᏫᏚᎸᏫᏍᏓᏁᎰᎢ'",
-                "ᏭᎸᏫᏍᏓᏁᎰᎢ" == verb.wholeWord
+        // 33b: wi- + fused da/u — the acceptance form from the guide.
+        assertTrue "WI-33: expected ᏫᏚᎸᏫᏍᏓᏁᎰᎢ (wi- + da + u + lvhwisdaneho'i), got: ${verb.wholeWord}",
+                "ᏫᏚᎸᏫᏍᏓᏁᎰᎢ" == verb.wholeWord
+    }
+
+    /**
+     * (33a) plain sg3 of the same entry — the fused da- must survive without
+     * wi- as well: ᏚᎸᏫᏍᏓᏁᎰᎢ, NOT ᎤᎸᏫᏍᏓᏁᎰᎢ (the old reduced form). -- timo 12Nov26
+     */
+    void testExample33a_PlainSg3KeepsDaFusion() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG3
+        verb.object = PrefixTableObject.SG3IN
+        verb.partOfSpeech = PartOfSpeech.VERB_INTRANSITIVE
+        verb.tense = Tense.PRESENT
+        verb.stemmer = work
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "WI-33a: expected ᏚᎸᏫᏍᏓᏁᎰᎢ (da + u fused), got: ${verb.wholeWord}",
+                "ᏚᎸᏫᏍᏓᏁᎰᎢ" == verb.wholeWord
     }
 
     /**
