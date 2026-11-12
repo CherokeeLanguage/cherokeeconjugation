@@ -47,6 +47,10 @@ class Conjugate {
         ConjugationHelper.determineVerbSet(verb)
         ConjugationHelper.determineCompoundPrefix(verb)
 
+        // tio 12Nov26: reset per-conjugation so a reused Verb never carries a
+        // stale variantWord from an earlier conjugation (WI-28B).
+        verb.variantWord = null
+
         if (verb.compoundPrefix) {
             verb.pronounReflexiveRoot = VerbConjugationProcessor.process(verb)
             verb.wholeWord = PrefixProcessor.process(verb)

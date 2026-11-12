@@ -75,6 +75,28 @@ class VerbRegistryTest extends Specification {
         VerbRegistry.resolveRoot("") == null
     }
 
+    def "describe() reports bridged name, root and categories"() {
+        expect:
+        VerbRegistry.describe("gowati") == "root=gowati name='to see' categories=[NORMAL]"
+        VerbRegistry.describe("aduli") == "root=aduli name='to want' categories=[IRREGULAR]"
+    }
+
+    def "describe() degrades gracefully for unknown and empty roots"() {
+        expect:
+        VerbRegistry.describe("someneverheardstem") == "root=someneverheardstem name=<unbridged> categories=[NORMAL]"
+        VerbRegistry.describe(null) == "root=<empty> name=<unbridged> categories=[NORMAL]"
+        VerbRegistry.describe("") == "root=<empty> name=<unbridged> categories=[NORMAL]"
+    }
+
+    def "isBridged() is root-side, exact-match only"() {
+        expect:
+        VerbRegistry.isBridged("gowati")
+        VerbRegistry.isBridged("aduli")
+        !VerbRegistry.isBridged("agowati")       // sg3-prefixed raw stemmer root
+        !VerbRegistry.isBridged(null)
+        !VerbRegistry.isBridged("")
+    }
+
     def "registerVerbName tolerates null/empty arguments"() {
         when:
         VerbRegistry.registerVerbName(null, "x")

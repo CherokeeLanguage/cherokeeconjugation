@@ -7,6 +7,7 @@ import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.stem.Syllabary
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.suffixes.Future
 import net.cherokeedictionary.verb.suffixes.FutureExpected
 import net.cherokeedictionary.verb.suffixes.FutureImperativeVolative
@@ -59,6 +60,59 @@ public class Stemmer {
 
     String getRoot(Tense type) {
         return getRootWithEnding(type)[0]
+    }
+
+    /**
+     * Read-only deconstruction diagnostic: reports what the VerbRegistry knows
+     * about this stemmer's root (bridged English name, categories). Never
+     * mutates state and never participates in conjugation.
+     *
+     * tio 12Nov26: dictionary present3rd rows carry the sg3 pronominal
+     * (ᎠᎪᏩᏘᎭ = a- + gowatiha → root "agowati") while the registry is keyed
+     * by the engine's composed-and-stripped root ("gowati"). This report tries
+     * the raw root first; only if it is unbridged AND stripping the entry's
+     * own sg3 allomorph (sg3Allomorph()) yields a POSITIVELY bridged root does
+     * it report the stripped variant (visible in the report). Blind stripping
+     * is forbidden -- Ꭰ can be stem-initial (To Fish "asuhvs"). Full
+     * prefix-stripping deconstruction remains the eventual proper fix.
+     * Missing stems degrade to "<empty>".
+     */
+    String getCategoryReport(Tense type) {
+        String root
+        try {
+            root = getRoot(type)
+        } catch (Exception ignored) {
+            // deconstruction diagnostics must never throw into caller code
+            root = null
+        }
+        if (!root) {
+            return VerbRegistry.describe(null)
+        }
+        if (!VerbRegistry.isBridged(root)) {
+            String variant = sg3StrippedRoot(root)
+            if (variant && VerbRegistry.isBridged(variant)) {
+                return VerbRegistry.describe(variant) + " (via sg3-stripped '${root}')"
+            }
+        }
+        return VerbRegistry.describe(root)
+    }
+
+    /** sg3-pronominal candidate variant of a raw stemmer root, or null. -- tio 12Nov26 */
+    String sg3StrippedRoot(String root) {
+        switch (sg3Allomorph()) {
+            case SG3_ALLOMORPH_A:
+                return root.startsWith("a") ? root.substring(1) : null
+            case SG3_ALLOMORPH_G:
+                if (root.startsWith("ga")) return root.substring(2)
+                if (root.startsWith("ka")) return root.substring(2)
+                return null
+            case SG3_ALLOMORPH_U:
+                if (root.startsWith("u")) return root.substring(1)
+                if (root.startsWith("du")) return root.substring(2)
+                return null
+            default:
+                return null
+        }
     }
 
     String[] getRootWithEnding(Tense type) {

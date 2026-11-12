@@ -60,11 +60,35 @@ class VerbRegistry {
         return englishName ? nameIndex[englishName.toLowerCase()] : null
     }
 
+    /**
+     * True when this Cherokee root is bridged (has a verified English name).
+     * Used by the stemmer's category report to accept an sg3-stripped root
+     * variant ONLY on positive match -- never by blind stripping (the sg3
+     * allomorph Ꭰ can be stem-initial, e.g. To Fish "asuhvs"). -- tio 12Nov26
+     */
+    static boolean isBridged(String root) {
+        return root != null && nameIndex.containsValue(root)
+    }
+
     /** Flags an English seed whose root is not yet engine-verified. -- tio 12Nov26 */
     static void markUnresolved(String englishName) {
         if (englishName && !unresolvedNames.contains(englishName)) {
             unresolvedNames << englishName
         }
+    }
+
+    /**
+     * Read-only diagnostics: what the registry knows about a root. Used by the
+     * stemmer's category report (Stemmer.getCategoryReport) so deconstruction
+     * surfaces classification without touching any conjugation path.
+     * -- tio 12Nov26
+     */
+    static String describe(String root) {
+        List<VerbCategory> cats = getCategories(root)
+        String name = nameIndex.find { it.value == root }?.key
+        String shownRoot = root ? root : "<empty>"
+        String shownName = name ? "'${name}'" : "<unbridged>"
+        return "root=${shownRoot} name=${shownName} categories=${cats}"
     }
 
     /** Names still lacking a verified root; visible for the category audit. -- tio 12Nov26 */

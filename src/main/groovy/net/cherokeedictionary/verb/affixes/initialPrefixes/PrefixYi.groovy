@@ -32,6 +32,15 @@ class PrefixYi implements Affix {
                         || charAtZero == 'Ꮽ'
                         || charAtZero == 'Ꮾ') {
                     baseReturnValue = "Ᏻ" + baseReturnValue
+                    // tio 12Nov26: WI-28B — guide ex. 28b: after the negative yu-,
+                    // the wi- element may be DELETED (ᏳᎦᏬᏂᎭ alongside ᏳᏫᎦᏬᏂᎭ).
+                    // Only the plain Ꮻ glyph (wi- before consonants) qualifies, and
+                    // only when wi- was actually applied (a stem-initial ᏫᏬ... must
+                    // never be deleted). Canonical wholeWord stays the full form
+                    // (28a); the optional deletion is recorded as variantWord.
+                    if (word.initialPrefixHolder?.wi && charAtZero == 'Ꮻ') {
+                        word.variantWord = "Ᏻ" + baseReturnValue.substring(2)
+                    }
                 } else {
                     baseReturnValue = "Ᏹ" + baseReturnValue
                 }

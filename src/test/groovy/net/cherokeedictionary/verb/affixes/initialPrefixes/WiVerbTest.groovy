@@ -144,8 +144,11 @@ class WiVerbTest extends ConjugateBase {
      * (28b) the negative y- becomes yu- with w- optionally deleted:
      *       ᏳᎦᏬᏂᎭ. yu²gạ²wo³ni²ha. "He isn't speaking (with his back turned)."
      *
-     * KNOWN-GAP(WI-28B): PrefixYi/PrefixProcessor only generate the full form (28a).
-     * ACCEPTANCE: when implemented, assert the optionally-deleted form "ᏳᎦᏬᏂᎭ"
+     * RESOLVED(WI-28B) -- tio 12Nov26: the guide marks the deletion OPTIONAL,
+     * so the canonical wholeWord stays the full form (28a) and the deleted
+     * form is generated as verb.variantWord (core.Verb.variantWord; reset per
+     * conjugation in Conjugate.conjugate). RECHECK: if a source decides the
+     * deleted form is canonical, swap them in PrefixYi. -- timo 12Nov26
      */
     void testExample28b_WiOptionallyDeletedAfterYiNegative() {
         Verb verb = new Verb()
@@ -159,12 +162,12 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current limitation (only the full form is generated).
-        // When WI-28B (optional w- deletion after y-) is implemented upstream,
-        // this assertion FAILS -- remove the guard and assert "ᏳᎦᏬᏂᎭ".
-        assertTrue "KNOWN-GAP(WI-28B) RESOLVED: the optional w- deletion form is now generated " +
-                    "-- remove this guard and add coverage for 'ᏳᎦᏬᏂᎭ'",
+        // canonical full form (28a) unchanged:
+        assertTrue "expected canonical ᏳᏫᎦᏬᏂᎭ, got: ${verb.wholeWord}",
                 "ᏳᏫᎦᏬᏂᎭ" == verb.wholeWord
+        // optional deletion (28b) generated as the variant:
+        assertTrue "expected variant ᏳᎦᏬᏂᎭ (w- deleted after negative y-), got: ${verb.variantWord}",
+                "ᏳᎦᏬᏂᎭ" == verb.variantWord
     }
 
     /**

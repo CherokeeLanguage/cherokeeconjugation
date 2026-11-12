@@ -34,6 +34,14 @@ class Verb extends Word {
     //this is everything - all of the prefixes, roots, suffixes, everything
     String wholeWord
 
+    /**
+     * tio 12Nov26: optional attested variant of wholeWord, when a rule allows
+     * two printed forms ("w- may be deleted after the negative y-", guide
+     * example 28b). Populated by PrefixYi for the yi-+wi- combination; null
+     * when no variant exists. wholeWord remains the canonical full form.
+     */
+    String variantWord
+
     //this holds the pronoun prefix, reflexive prefix, and root all morphed into one
     String pronounReflexiveRoot
 
