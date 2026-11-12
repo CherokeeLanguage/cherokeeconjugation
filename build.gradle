@@ -118,6 +118,7 @@ publishing {
 }
 
 test {
+    testLogging.showStandardStreams = true
     // Exclude an entire package and its subpackages
     exclude 'net/cherokeedictionary/conjugation/vrb/**'
 

@@ -418,6 +418,18 @@ public class Stemmer {
             return list;
         }
 
+        // tio 12Nov26: WI-29 corner case -- Set-B sg3 intransitive Ꭴ + w-stem entries.
+        // Ꭴ followed by Ꮺ/Ꮻ/Ꮼ/Ꮽ/Ꮾ (we/wi/wo/wu/wv) marks a w-INITIAL consonant stem:
+        // the Ꭴ is the Set-B u- pronominal prefix (u + wohla = ᎤᏬᏝ "he's sitting";
+        // the romanization wụ²wo³hla confirms the wi- form is wu- + -wohla, so the
+        // stem is -ᏬᏝ). Strip the Ꭴ and consonant-stem the remainder; composition
+        // then re-adds u- (or wu- via PrefixWi) without doubling. The ᎤᏩ case (the
+        // uw artifact of an a-vowel stem, RuleUW ᎤᏩ -> Ꭴ) is NOT this and keeps its
+        // dedicated patterns below.
+        if (e.pres3.matches("^Ꭴ[ᏪᏫᏬᏭᏮ].*")) {
+            return generateConsonentStems(e);
+        }
+
         if (e.pres3.startsWith("Ꭴ") && !e.pres3.matches("^Ꭴ[Ꮹ-Ꮾ].*")) {
             return generateConsonentStems(e);
         }
@@ -458,9 +470,21 @@ public class Stemmer {
 
 
 //        .info("No normalization method for: " + e.getEntries().toString());
-        // E: surface the failure instead of silently returning an empty list --
-        // callers (VerbConjugationProcessor) route MISSING_STEM to the verb.
-        def parts = [e.pres3, e.pres1, e.past, e.habit, e.imp, e.inf].findAll { it }
+        // E: Fallback normalization - if no patterns match, treat raw stems as the base.
+        List<StemEntry> list = new ArrayList<StemEntry>();
+        if (!e.pres3.isEmpty()) list.add(new StemEntry(e.pres3, StemType.PresentContinous));
+        if (!e.past.isEmpty()) list.add(new StemEntry(e.past, StemType.RemotePast));
+        if (!e.imm.isEmpty()) list.add(new StemEntry(e.imm, StemType.Immediate));
+        if (!e.habit.isEmpty()) list.add(new StemEntry(e.habit, StemType.Habitual));
+        if (!e.imp.isEmpty()) list.add(new StemEntry(e.imp, StemType.Immediate));
+        if (!e.inf.isEmpty()) list.add(new StemEntry(e.inf, StemType.Deverbal));
+
+        if (!list.isEmpty()) {
+            normalizationFailure = ""
+            return list
+        }
+
+        def parts = [e.pres3, e.pres1, e.past, e.imm, e.habit, e.imp, e.inf].findAll { it }
         normalizationFailure = parts
                 ? "no normalization method for entry: " + parts.join(" / ")
                 : "empty stemmer entry (no dictionary lines to normalize)"

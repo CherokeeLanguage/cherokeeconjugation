@@ -294,7 +294,10 @@ class CompoundPrefixes {
         prefixes.put("SG1PL3AN", new Prefix(preVowel: 'ᎦᏥy', preConsonant: 'ᎦᏥ', other: ''))
         prefixes.put("SG1PL3IN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᏥ', other: ''))
 
-        prefixes.put("SG2SG1", new Prefix(preVowel: 'Ꮝgw', preConsonant: 'ᏍᎩ', other: ''))// NOTE: Feeling P1.14 attests ᏍᏆ sgw- before vowel stems; verify the Ꮝgw backspace-2 handling surfaces ᏍᏆ -- timo 10Nov26
+        // tio 12Nov26: book p.118 "You (singular) see me" sgowtiha ᏍᎪᏩᏘᎭ -- the
+        // consonant-stem allomorph is bare s- (the Ꭹ here is the stem's own g-,
+        // gowatiha); ᏍᎩ doubled it. preVowel Ꮝgw (P1.14 vowel-stem sgw-) kept.
+        prefixes.put("SG2SG1", new Prefix(preVowel: 'Ꮝgw', preConsonant: 'Ꮝ', other: ''))// NOTE: Feeling P1.14 attests ᏍᏆ sgw- before vowel stems; verify the Ꮝgw backspace-2 handling surfaces ᏍᏆ -- timo 10Nov26
 //        prefixes.put("SG2SG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("SG2SG3AN", new Prefix(preVowel: 'Ꭿy', preConsonant: 'Ꭿ', other: ''))
         prefixes.put("SG2SG3IN", new Prefix(preVowel: 'h', preConsonant: 'Ꭿ', other: ''))
@@ -353,8 +356,15 @@ class CompoundPrefixes {
 //        prefixes.put("DL1EXCLDL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1EXCLPL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1EXCLPL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
-        prefixes.put("DL1EXCLDL2", new Prefix(preVowel: 'ᏍᏛy', preConsonant: 'ᏍᏛ', other: ''))
-        prefixes.put("DL1EXCLPL2", new Prefix(preVowel: 'Ꭲj', preConsonant: 'ᎢᏥ', other: ''))
+        // tio 12Nov26: book p.118 "We (another and I) see you two" gotsigowtiha
+        // ᎪᏥᎪᏩᏘᎭ (gotsi-); the old ᏍᏛ was the DL1EXCL+SG2 form. preVowel mirrors
+        // the preConsonant + y-insertion convention (cf. DL2PL1EXCL ᎢᏍᎩy) --
+        // vowel-stem allomorph unattested in the guide excerpts; verify vs Appendix B.
+        prefixes.put("DL1EXCLDL2", new Prefix(preVowel: 'ᎪᏥy', preConsonant: 'ᎪᏥ', other: ''))
+        // tio 12Nov26: book p.118 "We (another and I) see you (more than two)"
+        // itsvgowtiha ᎢᏨᎪᏩᏘᎭ (itsv-), same 2nd-plural-object allomorph as
+        // SG1PL2 ᎢᏨ / PL1EXCLSG2 ᎢᏨ; the old ᎢᏥ was the PL2-subject form.
+        prefixes.put("DL1EXCLPL2", new Prefix(preVowel: 'ᎢᏨy', preConsonant: 'ᎢᏨ', other: ''))
         prefixes.put("DL1EXCLPL3AN", new Prefix(preVowel: 'ᎪᏍd', preConsonant: 'ᎪᏍᏗ', other: ''))
         prefixes.put("DL1EXCLPL3IN", new Prefix(preVowel: 'ᏙᏍd', preConsonant: 'ᏙᏍᏗ', other: ''))
 

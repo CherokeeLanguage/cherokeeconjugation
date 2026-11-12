@@ -174,12 +174,12 @@ class WiVerbTest extends ConjugateBase {
      * a. ᎤᏬᏝ. u¹wo²hla.   "He's sitting."
      * b. ᏳᏬᏝ. wụ²wo³hla.  "He's sitting (with his back to the speaker)."
      *
-     * KNOWN-GAP(WI-29): The Set-B intransitive SG3 pipeline currently produces an
-     * empty pronounReflexiveRoot for this verb configuration, so the wi- affix
-     * has nothing to merge with (the engine emits Ꮻ alone).
-     * ACCEPTANCE: assert "ᏭᏬᏝ" (canonical wu glyph) -- Feeling's grammar prints
-     * ᏳᏬᏝ, but the romanization wụ²wo³hla confirms 'wu'; the Ᏻ glyph is an OCR
-     * artifact of Ꮽ.
+     * RESOLVED(WI-29) -- tio 12Nov26: Stemmer normalization now treats Ꭴ +
+     * Ꮺ/Ꮻ/Ꮼ/Ꮽ/Ꮾ entries as the Set-B u- pronominal + w-initial consonant stem
+     * (-wohla), so the root resolves and the wi- merge surfaces ᏭᏬᏝ (wu-
+     * replaces the u-). ACCEPTANCE asserts "ᏭᏬᏝ" (canonical wu glyph) --
+     * Feeling's grammar prints ᏳᏬᏝ, but the romanization wụ²wo³hla confirms
+     * 'wu'; the Ᏻ glyph is an OCR artifact of Ꮽ.
      */
     void testExample29_WiWithSittingVerb() {
         Verb verb = new Verb()
@@ -192,15 +192,12 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current broken state. uwohla (ᎤᏬᏝ) fails Stemmer
-        // normalization (the Ꮼ inside the Ꮹ-Ꮾ w-artifact regex), so instead of
-        // the old silent broken state (empty Set-B root => bare Ꮻ) the MISSING_STEM
-        // sentinel is now surfaced per the audit's "missing data must stay visible"
-        // requirement. When WI-29 (Set-B u- pronominal handling / Ꮼ normalization)
-        // is fixed, this assertion FAILS -- remove the guard and assert "ᏭᏬᏝ".
-        assertTrue "KNOWN-GAP(WI-29) RESOLVED: the Set-B intransitive root normalizes " +
-                    "-- remove this guard and assert 'ᏭᏬᏝ' (sentinel was MISSING_STEM_PRESENT)",
-                "MISSING_STEM_PRESENT" == verb.wholeWord || "Ꮻ" == verb.wholeWord
+        // tio 12Nov26: WI-29 RESOLVED -- Stemmer normalization now handles the
+        // Set-B Ꭴ + w-stem corner case (ᎤᏬᏝ = u- + -wohla), so the root is no
+        // longer empty and the wi- merge surfaces ᏭᏬᏝ (wu- replaces the sg3 u-).
+        // GAP GUARD removed per the gap-guard protocol; assert the canonical form.
+        assertTrue "WI-29: expected ᏭᏬᏝ (wu- + -wohla), got: ${verb.wholeWord}",
+                "ᏭᏬᏝ" == verb.wholeWord
     }
 
     /**

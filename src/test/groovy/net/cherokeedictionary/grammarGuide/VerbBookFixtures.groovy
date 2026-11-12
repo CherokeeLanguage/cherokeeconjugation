@@ -1,8 +1,10 @@
 package net.cherokeedictionary.grammarGuide
 
 class VerbBookFixtures {
-    static final Map<String, Map> OVERRIDES = [
-    ]
+    // tio 12Nov26: was `[\n]` which Groovy parses as an empty LIST — the Map cast
+    // threw GroovyRuntimeException in <clinit> and every ToSeePresentSpec row died
+    // with NoClassDefFoundError. Empty map literal must be [:].
+    static final Map<String, Map> OVERRIDES = [:]
 
     static final Map<String, Map> FIXTURES = [
         "to be somewhere": [

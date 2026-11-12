@@ -158,7 +158,13 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᏥᏲᎵᎭ" == conjStr("SG1", "SG3AN", togreet, verbTense, partofspeechc)
         assertTrue "", "ᎯᏲᎵᎭ" == conjStr("SG2", "SG3AN", togreet, verbTense, partofspeechc)
         assertTrue "", "ᎠᏲᎵᎭ" == conjStr("SG3", "SG3AN", togreet, verbTense, partofspeechc)
-        assertTrue "", "ᎦᏲᎵᎭ" == conjStr("SG3", "SG3IN", togreet, verbTense, partofspeechc)
+        // timo 12Nov26: guide-correct update (vetoable). sg3 is lexically allomorphic:
+        // book To See p.118 prints ONE sg3 present row (ᎠᎪᏩᏘᎭ) covering "him/her"
+        // AND "it". Old expectation ᎦᏲᎵᎭ (ga-, composed from the present table's
+        // transitive SG3SG3IN allomorph) appears nowhere in the lexicon, fixtures, or
+        // book specs. Engine now returns present3rd (ᎠᏲᎵᎭ) for both sg3 readings.
+        // RECHECK: revert if a printed ga- sg3 row surfaces. -- timo 12Nov26
+        assertTrue "", "ᎠᏲᎵᎭ" == conjStr("SG3", "SG3IN", togreet, verbTense, partofspeechc)
         assertTrue "", "ᎡᏂᏲᎵᎭ" == conjStr("DL1INCL", "SG3AN", togreet, verbTense, partofspeechc)
         assertTrue "", "ᎣᏍᏗᏲᎵᎭ" == conjStr("DL1EXCL", "SG3AN", togreet, verbTense, partofspeechc)
         assertTrue "", "ᎡᏍᏗᏲᎵᎭ" == conjStr("DL2", "SG3AN", togreet, verbTense, partofspeechc)

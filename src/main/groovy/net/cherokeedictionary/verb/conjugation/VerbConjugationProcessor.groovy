@@ -1,10 +1,18 @@
 package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.stem.StemEntry
-import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.stemmer.Stemmer
-import net.cherokeedictionary.util.*
+import net.cherokeedictionary.util.CompoundPrefix
+import net.cherokeedictionary.util.CompoundPrefixes
+import net.cherokeedictionary.util.Morphemes
+import net.cherokeedictionary.util.PartOfSpeech
+import net.cherokeedictionary.util.Prefix
+import net.cherokeedictionary.util.PrefixTableObject
+import net.cherokeedictionary.util.PrefixTableSubject
+import net.cherokeedictionary.util.StringUtility
+import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.util.VerbSet
+import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
 import net.cherokeedictionary.verb.rules.RuleUW
@@ -171,16 +179,19 @@ class VerbConjugationProcessor {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: verb.stemmer)
         vth.process()
 
-        if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+        // timo 12Nov26: merged SG3SG3AN + SG3SG3IN PRESENT short-circuit. The sg3
+        // singular form is lexically allomorphic and the book prints ONE sg3 row
+        // covering both object readings (To See p.118: "He/she sees him/her" AND
+        // "He/she sees it" are both agowtiha), so for both compound prefixes the
+        // printed present3rd IS the form. The old transitive SG3SG3IN path composed
+        // the table's generic Ꭶ- allomorph, producing ga- for A-class verbs.
+        // Non-reflexive only, and skipped when the verb has no present stem
+        // (empty stemmer entry) so composition still applies elsewhere.
+        if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
-                && verb.tense == Tense.PRESENT) {
-            return verb.stemmer.present3rd.syllabary;
-        }
-
-        if (verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE
-                && verb.compoundPrefix == CompoundPrefixes.SG3SG3IN
                 && verb.tense == Tense.PRESENT
-                && !verb.reflexiveHolderObject.isReflexive()) {
+                && verb.stemmer?.present3rd?.syllabary) {
             return verb.stemmer.present3rd.syllabary;
         }
 
@@ -213,7 +224,8 @@ class VerbConjugationProcessor {
                 || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
                 && verb.tense == Tense.PRESENT
-                && verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A) {
+                && verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A
+                && verb.stemmer?.present3rd?.syllabary) {
             return 'Ꮣ' + verb.stemmer.present3rd.syllabary.substring(1);
         }
 
@@ -255,6 +267,13 @@ class VerbConjugationProcessor {
         // ᎠᎪᎲᎢ "Let him/her see it!" — no da- anywhere. The FUTURE_COMMAND sg3
         // handling now lives in processPrefixes (tense-scoped a- override).
 
+        // check for overrides first
+        String override = VerbRegistry.getOverride(verb.root, verb.tense.name())
+        if (override) {
+            return override
+        }
+
+        // proceed with standard logic
         String verbToConjugate = ""
 
         switch (verb.tense) {
@@ -304,13 +323,6 @@ class VerbConjugationProcessor {
             case Tense.INFINITIVE:
                 // For infinitive, if 'de-' prefix is present, use deverbal stem, else use infinitive stem
                 // The Stemmer generates Deverbal stems. We need to access the correct one from the StemEntry list.
-//                List<StemEntry> stems = verb.stemmer.getStems()
-//                StemEntry deverbalStemEntry = stems.find { it.stemtype == StemType.Deverbal }
-//                if (verb.initialPrefixHolder.de && deverbalStemEntry != null) {
-//                    verbToConjugate = deverbalStemEntry.prefix + deverbalStemEntry.syllabary
-//                } else {
-//                    verbToConjugate = vth.infinitive
-//                }
                 verbToConjugate = vth.infinitive
                 break;
         }
@@ -337,6 +349,9 @@ class VerbConjugationProcessor {
         if (verbToConjugate) {
             returnValue = verbToConjugate
         }
+
+        // apply categorical rules (mixin approach) -- tio 11Nov26
+        returnValue = VerbRegistry.applyCategoricalRules(verb, returnValue, verb.tense)
 
         return returnValue
     }

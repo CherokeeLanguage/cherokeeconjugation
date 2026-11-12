@@ -20,7 +20,16 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
     void testSG3SG3INPresent() {
         verb.object = PrefixTableObject.SG3IN
         verb = Conjugate.conjugate(verb)
-        assertEquals("ᎦᎪᏩᏘᎭ", verb.wholeWord)
+        // timo 12Nov26: guide-correct update (vetoable). Book p.118 prints ONE sg3
+        // present row, ᎠᎪᏩᏘᎭ agowtiha, covering "He/she sees him/her" AND "He/she
+        // sees it" alike — the sg3 form is lexically allomorphic, not composed from
+        // the present-tense table's transitive Ꭶ- allomorph. Old expectation
+        // ᎦᎪᏩᏘᎭ (ga-) is not printed anywhere; this resolves the asymmetry flagged
+        // in testSG3SG3INHabitual's comment (that test was already guide-corrected
+        // to ᎠᎪᏩᏘᏍᎪᎢ a- at 10Nov26). Engine: merged SG3SG3AN+SG3SG3IN PRESENT
+        // short-circuit returns present3rd for both. RECHECK: revert if a printed
+        // ga- sg3 row surfaces. -- timo 12Nov26
+        assertEquals("ᎠᎪᏩᏘᎭ", verb.wholeWord)
     }
 
     void testSG3SG3ANPast() {
@@ -61,10 +70,9 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         // timo 10Nov26: guide-correct update (vetoable). Same row as the AN test:
         // book p.120 prints ONE sg3 habitual, ᎠᎪᏩᏘᏍᎪᎢ agowtisgo'i, covering the
         // "him/her" (AN) and "it" (IN) readings alike. Old expectation ᎦᎪᏩᏘᏍᎪᎢ
-        // (ga-) not attested. NOTE the open asymmetry: for PRESENT the transitive
-        // SG3SG3IN cell still composes ga- (testSG3SG3INPresent ᎦᎪᏩᏘᎭ) while the
-        // book prints ᎠᎪᏩᏘᎭ a- for "He/she sees it" (p.118) — left as-is because
-        // present sg3 handling is user-owned; RECHECK together. -- timo 10Nov26
+        // (ga-) not attested. (The PRESENT twin testSG3SG3INPresent carried the
+        // same ga- asymmetry; it was guide-corrected to ᎠᎪᏩᏘᎭ a- at 12Nov26.)
+        // -- timo 10Nov26, updated timo 12Nov26
         assertEquals("ᎠᎪᏩᏘᏍᎪᎢ", verb.wholeWord)
     }
 
