@@ -231,10 +231,12 @@ class WiVerbTest extends ConjugateBase {
      * a. ᏥᏬᏂᎯ.  ji²wo³ni²hi.   "Let me speak."
      * b. ᏫᏥᏬᏂᎯ. wi²ji²wo³ni²hi. "Let me speak."
      *
-     * KNOWN-GAP(WI-31): the hortative "let" ending (-Ꭿ) and the ji- + wi-
-     * ordering (wi- outermost, cf. ᏫᏥ...) are not wired into the
-     * IMMEDIATE_COMMAND / ji- prefix processing pipeline yet.
-     * ACCEPTANCE: conj(SG1, SG3IN, hiwoniha, IMMEDIATE_COMMAND, ji + wi) == "ᏫᏥᏬᏂᎯ"
+     * RESOLVED(WI-31) -- tio 12Nov26: in the imperative tenses the hortative
+     * ji- is carried by the pronominal itself (SG1 = Ꮵ-), so PrefixJi no-ops
+     * there (tense-scoped; the PRESENT "still" ji- keeps stacking per
+     * JiVerbTest). wi- composes OUTSIDE the pronominal Ꮵ (31b) via the normal
+     * wi-first processor order. The printed -Ꭿ final survives now that
+     * fixImperativeSuffix no longer decrements it (Ꭿ hi -> Ꭽ ha).
      */
     void testExample31_WiWithLetMeSpeak() {
         Verb verb = new Verb()
@@ -247,12 +249,27 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current inability to produce the hortative form.
-        // When WI-31 (hortative -Ꭿ + ji/wi ordering) is implemented, this
-        // assertion FAILS -- remove the guard and assert "ᏫᏥᏬᏂᎯ".
-        assertTrue "KNOWN-GAP(WI-31) RESOLVED: the hortative 'let me' form is now generated " +
-                    "-- remove this guard and assert 'ᏫᏥᏬᏂᎯ'",
-                "ᏫᏥᏬᏂᎯ" != verb.wholeWord
+        // 31b: wi- + hortative ji- pronominal (wi outermost).
+        assertTrue "expected ᏫᏥᏬᏂᎯ (wi- + ji- + wonihi), got: ${verb.wholeWord}",
+                "ᏫᏥᏬᏂᎯ" == verb.wholeWord
+    }
+
+    /**
+     * (31a) plain hortative, no wi-: the SG1 pronominal Ꮵ IS the "let me"
+     * marker plus the printed -Ꭿ imperative final. -- timo 12Nov26
+     */
+    void testExample31a_PlainHortative() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG1
+        verb.object = PrefixTableObject.SG3IN
+        verb.tense = Tense.IMMEDIATE_COMMAND
+        verb.stemmer = hiwoniha
+        verb.initialPrefixHolder.with {ji = true}
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "expected ᏥᏬᏂᎯ (ji- + wonihi), got: ${verb.wholeWord}",
+                "ᏥᏬᏂᎯ" == verb.wholeWord
     }
 
     /**
@@ -261,10 +278,11 @@ class WiVerbTest extends ConjugateBase {
      * a. ᎯᏬᏂᎯ. hi²wo¹ni²hi.   "Speak."
      * b. ᏫᏬᏂᎯ. hwi²wo³ni²hi.  "Speak (facing away)."
      *
-     * KNOWN-GAP(WI-32): Tense.IMMEDIATE_COMMAND is not wired into the
-     * conjugation switch in VerbConjugationProcessor yet, so the imperative
-     * stem (ᎯᏬᏂᎯ) cannot be conjugated + prefixed.
-     * ACCEPTANCE: conj(SG2, SG3IN, hiwoniha, IMMEDIATE_COMMAND, wi) == "ᏫᏬᏂᎯ"
+     * RESOLVED(WI-32) -- tio 12Nov26: IMMEDIATE_COMMAND routes to the
+     * imperative-derived stem (StemType.Immediate, vth.immediate) and the
+     * printed -Ꭿ final survives (fixImperativeSuffix no longer decrements
+     * Ꭿ -> Ꭽ), so the SG2 pronominal Ꭿ composes directly with the stem:
+     * ᎯᏬᏂᎯ (32a), and wi- wraps it: ᏫᏬᏂᎯ (32b).
      */
     void testExample32_WiWithSecondPersonImperative() {
         Verb verb = new Verb()
@@ -276,12 +294,25 @@ class WiVerbTest extends ConjugateBase {
 
         verb = Conjugate.conjugate(verb)
 
-        // GAP GUARD: pins the current inability to produce the imperative form.
-        // When WI-32 (IMMEDIATE_COMMAND wiring) is implemented, this assertion
-        // FAILS -- remove the guard and assert "ᏫᏬᏂᎯ".
-        assertTrue "KNOWN-GAP(WI-32) RESOLVED: the SG2 imperative form is now generated " +
-                    "-- remove this guard and assert 'ᏫᏬᏂᎯ'",
-                "ᏫᏬᏂᎯ" != verb.wholeWord
+        // 32b: wi- + SG2 imperative.
+        assertTrue "expected ᏫᏬᏂᎯ (wi- + hi-wonihi), got: ${verb.wholeWord}",
+                "ᏫᏬᏂᎯ" == verb.wholeWord
+    }
+
+    /**
+     * (32a) plain SG2 imperative, no wi-: ᎯᏬᏂᎯ. -- timo 12Nov26
+     */
+    void testExample32a_PlainSecondPersonImperative() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG2
+        verb.object = PrefixTableObject.SG3IN
+        verb.tense = Tense.IMMEDIATE_COMMAND
+        verb.stemmer = hiwoniha
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "expected ᎯᏬᏂᎯ (hi-wonihi), got: ${verb.wholeWord}",
+                "ᎯᏬᏂᎯ" == verb.wholeWord
     }
 
     /**

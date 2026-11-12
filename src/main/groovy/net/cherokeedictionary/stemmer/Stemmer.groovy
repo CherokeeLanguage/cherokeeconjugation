@@ -705,26 +705,17 @@ public class Stemmer {
         if (StringUtils.isBlank(imp)) {
             return "";
         }
-        String suffix = StringUtils.right(imp, 1);
-        /*
-     * matches -Ꭷ !
-     */
-        if (StringUtils.containsAny("ᎠᎦᎧᎭᎳᎹᎾᎿᏆᏌᏓᏔᏜᏝᏣᏩᏯ", suffix)) {
-            return imp;
-        }
-        /*
-     * does not match -Ꭷ !
-     */
-        while (!StringUtils.containsAny("ᎠᎦᎭᎳᎹᎾᎿᏆᏌᏓᏔᏜᏝᏣᏩᏯ", suffix)) {
-            char c = suffix.charAt(0);
-            if (c < 'Ꭰ') {
-                return imp;
-            }
-            c--;
-            suffix = String.valueOf(c);
-        }
-        String recentPastForm = StringUtils.left(imp, imp.length() - 1)+suffix;
-        return recentPastForm;
+        // tio 12Nov26: WI-31/32 — keep the imperative row's printed final. The
+        // old code decremented a non-(-a) final to its -a twin (Ꭿ hi -> Ꭽ ha,
+        // Ꭹ gi -> Ꭶ ga, Ꮧ di -> Ꮣ da), treating the -i imperative as a variant
+        // of -a. But the guide's own examples print the -Ꭿ surface form (ex. 31
+        // ᏥᏬᏂᎯ, ex. 32 ᎯᏬᏂᎯ) and composition prepends the pronominal to the
+        // routed stem as-is, so the printed final must survive: ᎯᏬᏂᎯ = Ꭿ- +
+        // ᏬᏂᎯ, NOT ᎯᏬᏂᎭ. The verb book is ground truth for printed rows; the
+        // -a/-i choice is the book's, not the engine's. RECHECK: if a source
+        // canonicalizes -i imperative rows to -a, do it at the data layer with
+        // a documented rule, never silently here.
+        return imp;
     }
 
 	static String discardPrefix(String text) {

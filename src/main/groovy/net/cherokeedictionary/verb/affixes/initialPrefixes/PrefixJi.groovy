@@ -3,12 +3,24 @@ package net.cherokeedictionary.verb.affixes.initialPrefixes
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.StringUtility
+import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.Affix
 
 class PrefixJi implements Affix {
     String ji;
 
     String toSyllabary(String baseReturnValue, Verb word) {
+        // tio 12Nov26: WI-31 — in the imperative tenses the hortative ji- is
+        // carried by the pronominal itself (SG1 = Ꮵ-): the guide prints a
+        // SINGLE Ꮵ (ex. 31a ᏥᏬᏂᎯ "let me speak") and wi- OUTSIDE it (ex. 31b
+        // ᏫᏥᏬᏂᎯ), so no separate initial ji- is applied there. The PRESENT
+        // ji- ("still", Durbin pp 242-244, pinned by JiVerbTest ᏥᏥᏬᏂᎭ) is a
+        // different morpheme and keeps stacking. RECHECK: if a source attests
+        // an imperative-tense initial ji-, gate this no-op by person, not
+        // tense.
+        if (word.tense == Tense.IMMEDIATE_COMMAND || word.tense == Tense.RECENT_PAST_IMPERATIVE) {
+            return baseReturnValue
+        }
         String data = word.pronounReflexiveRoot
         baseReturnValue = baseReturnValue ?: data
         def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
