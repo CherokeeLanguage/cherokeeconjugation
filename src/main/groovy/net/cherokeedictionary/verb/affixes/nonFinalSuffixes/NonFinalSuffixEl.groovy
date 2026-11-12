@@ -22,6 +22,15 @@ class NonFinalSuffixEl implements Affix {
             return baseReturnValue
         }
 
+        // tio 12Nov26: WI-35 — verbs with a printed dative surface
+        // (Stemmer.dativePresent) get their PRESENT applicative baked in
+        // upstream (M-A Table 14.1: the APL attaches to the Completive stem,
+        // so the -ᏁᎭ tail is stem-final -n + APL, not a generic insertion);
+        // don't re-insert -eh-/-el- into the composed word.
+        if (word.tense == Tense.PRESENT && word.stemmer?.dativePresent?.syllabary) {
+            return baseReturnValue
+        }
+
         String allomorph
         if (word.tense == Tense.INFINITIVE) {
             allomorph = "eh"

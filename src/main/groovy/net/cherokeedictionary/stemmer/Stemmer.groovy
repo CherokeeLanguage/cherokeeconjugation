@@ -54,6 +54,24 @@ public class Stemmer {
      */
     public boolean normalizedDaInitialPrefix = false;
 
+    /**
+     * tio 12Nov26: WI-35 — the printed sg3-subject dative-benefactive present
+     * surface, when the verb has one attested (el flag set). Montgomery-Anderson
+     * Table 14.1 (Cherokee Reference Grammar, p.400): the applicative attaches
+     * to the Completive stem and its Present Continuous form is -eéha, so the
+     * -ᏁᎭ tail is the Completive stem's own final -n plus the APL vowel — not a
+     * freely insertable suffix. Pulte/Feeling's -el- rules (guide pp.286:
+     * -el-/-eh-/-eha) cover -s- stems (speak wonihis-e-ha (41)), but vowel/other
+     * stems surface verb-specific shapes (write -oohweélaan- + -eéha =
+     * ᎪᏪᎳᏁᎭ; cf. give a-hne-ha (42), buy a-hwahis-e-ha (43)). Reading:
+     * ᎪᏪᎳᏁᎭ = g + ohweélaan + eéha → printed gohwela-neha (guide ex. 35a).
+     * Composed: PL3-object cells prepend the plural-object Ꮥ (35a ᏕᎪᏪᎳᏁᎭ);
+     * with wi- the de- surfaces as Ꮧ after w- (Feeling rule: "after w-, de =
+     * di"), giving 35b ᏫᏗᎪᏪᎳᏁᎭ. Null when unattested — verbs without it keep
+     * the generic NonFinalSuffixEl machinery.
+     */
+    public DefinitionLine dativePresent = null;
+
     public static final String SG3_ALLOMORPH_A = "A"
     public static final String SG3_ALLOMORPH_G = "G"
     public static final String SG3_ALLOMORPH_U = "U"

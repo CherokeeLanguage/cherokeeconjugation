@@ -179,6 +179,33 @@ class VerbConjugationProcessor {
         VerbTenseHolder vth = new VerbTenseHolder(stemmer: verb.stemmer)
         vth.process()
 
+        // timo 12Nov26: WI-35 — dative-benefactive PRESENT (el flag). When the
+        // verb carries a printed dative surface (Stemmer.dativePresent), the
+        // applicative morphology is baked into it (M-A Table 14.1: APL attaches
+        // to the Completive stem, Present Continuous -eéha — the -ᏁᎭ is the
+        // Completive stem's final -n plus the APL vowel, not insertable), so the
+        // sg3 present IS that form. PL3-object cells route through holder.de so
+        // PrefixDe glues the plural-object prefix with its own allomorphy
+        // (Ꮥ normally; Ꮧ after w-: guide ex. 35a ᏕᎪᏪᎳᏁᎭ, 35b ᏫᏗᎪᏪᎳᏁᎭ).
+        // Non-reflexive only, and only when the dative surface exists — verbs
+        // without it keep the generic NonFinalSuffixEl machinery. This block
+        // precedes the plain sg3 PRESENT short-circuit below, which would
+        // otherwise shadow the dative form with present3rd.
+        if (verb.nonFinalSuffixHolder?.el
+                && verb.tense == Tense.PRESENT
+                && verb.stemmer?.dativePresent?.syllabary
+                && !verb.reflexiveHolderObject.isReflexive()) {
+            if (verb.compoundPrefix == CompoundPrefixes.SG3PL3AN
+                    || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN) {
+                verb.initialPrefixHolder.de = true
+                return verb.stemmer.dativePresent.syllabary;
+            }
+            if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                    || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN) {
+                return verb.stemmer.dativePresent.syllabary;
+            }
+        }
+
         // timo 12Nov26: merged SG3SG3AN + SG3SG3IN PRESENT short-circuit. The sg3
         // singular form is lexically allomorphic and the book prints ONE sg3 row
         // covering both object readings (To See p.118: "He/she sees him/her" AND
@@ -212,6 +239,23 @@ class VerbConjugationProcessor {
             return verb.stemmer.habitual.syllabary;
         }
 
+        // timo 10Nov26: HABITUAL sg3 short-circuit, mirroring the PRESENT one above.
+        // The sg3 habitual is lexically allomorphic like the present (see Ꭰ- agowtisgo'i
+        // book p.120, kill Ꭰ- ᎠᎯᎰᎢ, want Ꭴ- ᎤᏚᎵᏍᎪᎢ, wear shoes Ꮪ- ᏚᎳᏑᏠᎢ), so composing
+        // the stem from the table preConsonant (ga- for see) produces the wrong row.
+        // The dictionary's raw habitual DefinitionLine IS the printed sg3 form for
+        // every verb, so return it directly for both SG3AN and SG3IN object readings —
+        // the book prints one sg3 habitual row covering both (p.120 "He/she sees it
+        // (habitually)"). Non-reflexive only, and skipped when the verb has no
+        // habitual row (empty stem) so composition still applies elsewhere.
+        if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
+                && !verb.reflexiveHolderObject.isReflexive()
+                && verb.tense == Tense.HABITUAL
+                && verb.stemmer?.habitual?.syllabary) {
+            return verb.stemmer.habitual.syllabary;
+        }
+
         // timo 10Nov26: PRESENT sg3-subject + plural-object (PL3AN/PL3IN) cells.
         // The plural-object prefix fuses with the verb's OWN sg3 subject allomorph —
         // guide P3(24) for To See: "da- 'he--them': d-, plural object; -a-, 3rd
@@ -224,9 +268,20 @@ class VerbConjugationProcessor {
                 || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
                 && verb.tense == Tense.PRESENT
-                && verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A
                 && verb.stemmer?.present3rd?.syllabary) {
-            return 'Ꮣ' + verb.stemmer.present3rd.syllabary.substring(1);
+            if (verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A) {
+                return 'Ꮣ' + verb.stemmer.present3rd.syllabary.substring(1);
+            }
+            // timo 12Nov26: WI-35 — g-initial present3rd (Ꭺ/Ꭶ/Ꭷ) is the verb's
+            // OWN sg3 subject g- (write ᎪᏪᎵᎠ = g + ohweli'a, speak ᎦᏬᏂᎭ = ga +
+            // woniha), so the plural-object prefix glues onto the FULL sg3 form:
+            // guide P1(45) "deg- 'he--them (an or in)': de-, plural object;
+            // -g-, 3rd person". Guide ex. 34 ᏕᎪᏪᎵᎠ = de + gohweli'a. (The old
+            // table's ᏕᎩ- entry double-marked these cells ᏕᎩᎪᏪᎵᎠ.)
+            String s3 = verb.stemmer.present3rd.syllabary
+            if (s3.startsWith('Ꭺ') || s3.startsWith('Ꭶ') || s3.startsWith('Ꭷ')) {
+                return 'Ꮥ' + s3;
+            }
         }
 
         // Rules 70-73 from Grammar Guide: Inherent and Plural Distributive prefixes

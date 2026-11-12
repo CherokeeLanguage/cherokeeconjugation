@@ -26,6 +26,7 @@ class WiVerbTest extends ConjugateBase {
     static def uwohla = new Stemmer()       // "he's sitting" - (29)
     static def walk = new Stemmer()         // "he's walking" - (30)
     static def work = new Stemmer()         // "he works" - (33)
+    static def write = new Stemmer()        // "he's writing them" - (34-35)
 
     static {
         uwohla.present3rd = new DefinitionLine(syllabary: "ᎤᏬᏝ")
@@ -33,6 +34,14 @@ class WiVerbTest extends ConjugateBase {
         walk.present3rd = new DefinitionLine(syllabary: "ᎠᎢ")
 
         work.present3rd = new DefinitionLine(syllabary: "ᏚᎸᏫᏍᏓᏁᎰᎢ")
+
+        // guide ex. 34-35 "to write" (King root o.hwe.l; guide third-passive
+        // section: sg3 present ᎪᏪᎵᎠ go³hwe²lị³ʔa). dativePresent is the printed
+        // sg3 dative-benefactive surface ᎪᏪᎳᏁᎭ (Completive stem -oohweélaan-
+        // + applicative -eéha, M-A Table 14.1) -- see VerbConjugationProcessor
+        // WI-35 block.
+        write.present3rd = new DefinitionLine(syllabary: "ᎪᏪᎵᎠ")
+        write.dativePresent = new DefinitionLine(syllabary: "ᎪᏪᎳᏁᎭ")
     }
 
     /**
@@ -369,15 +378,102 @@ class WiVerbTest extends ConjugateBase {
      * 35a. ᏕᎪᏪᎳᏁᎭ.  de²go³hwe²la³nẹ²ha.    "He's writing them for him."
      * 35b. ᏫᏗᎪᏪᎳᏁᎭ. wi²di²go²hwe³la¹nẹ²ha. "He's writing them to him."
      *
-     * KNOWN-GAP(WI-35): the dative-benefactive suffix (-ᏁᎭ) and associated stem
-     * changes are not implemented in the suffix machinery yet.
-     * ACCEPTANCE: conj(SG3, SG3AN, writeTo, PRESENT, vt, dative suffix) == "ᏫᏗᎪᏪᎳᏁᎭ"
+     * RESOLVED(WI-35) -- timo 12Nov26: the dative-benefactive (applicative)
+     * machinery is wired (Stemmer.dativePresent + the VerbConjugationProcessor
+     * WI-35 block). See testExample34/35a/35b below. The original ACCEPTANCE
+     * line named SG3AN, but the printed Ꮧ- of 35b requires the plural object
+     * (de- → di- after w-).
      */
     void testExample35_WiWithDativeBenefactive() {
-        // AUDIT-ONLY (tracked by the gradle gapAudit task): there is no
-        // runnable conjugation here yet -- a whole suffix mechanism plus a
-        // dative stem would have to exist before any guard could flip.
-        println "KNOWN-GAP(WI-35): dative-benefactive suffix (-ᏁᎭ) pipeling not implemented"
+        // RESOLVED(WI-35) -- timo 12Nov26: split into the runnable tests below
+        // (testExample34_WritePluralObjectPresent, testExample35a_*, 35b_*, 35sg_*).
+        testExample34_WritePluralObjectPresent()
+        testExample35a_WritePluralObjectDative()
+        testExample35b_WriteWiWithDativeBenefactive()
+        testExample35sg_WriteSingularDative()
+    }
+
+    /**
+     * (34) plain plural-object present, no dative: the PL3-object prefix
+     * de- glues onto the verb's OWN sg3 subject g- (guide P1(45) "deg-
+     * 'he--them': de-, plural object; -g-, 3rd person"):
+     * de + gohweli'a = degohweli'a. -- timo 12Nov26
+     */
+    void testExample34_WritePluralObjectPresent() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG3
+        verb.object = PrefixTableObject.PL3IN
+        verb.partOfSpeech = PartOfSpeech.VERB_TRANSITIVE
+        verb.tense = Tense.PRESENT
+        verb.stemmer = write
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "WI-35: expected ᏕᎪᏪᎵᎠ (34: de + gohweli'a), got: ${verb.wholeWord}",
+                "ᏕᎪᏪᎵᎠ" == verb.wholeWord
+    }
+
+    /**
+     * (35a) with the dative-benefactive suffix, plural-object de- + sg3 g-
+     * + Completive stem + APL -eéha: ᏕᎪᏪᎳᏁᎭ
+     * de²go³hwe²la³nẹ²ha "He's writing them for him." -- timo 12Nov26
+     */
+    void testExample35a_WritePluralObjectDative() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG3
+        verb.object = PrefixTableObject.PL3IN
+        verb.partOfSpeech = PartOfSpeech.VERB_TRANSITIVE
+        verb.tense = Tense.PRESENT
+        verb.stemmer = write
+        verb.nonFinalSuffixHolder.el = true
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "WI-35: expected ᏕᎪᏪᎳᏁᎭ (35a), got: ${verb.wholeWord}",
+                "ᏕᎪᏪᎳᏁᎭ" == verb.wholeWord
+    }
+
+    /**
+     * (35b) with wi-, the dative indicates direction TO the recipient and
+     * the plural-object de- surfaces as Ꮧ (di) after w- (Feeling rule:
+     * "after y-, w-, n- de = di"): ᏫᏗᎪᏪᎳᏁᎭ
+     * wi²di²go²hwe³la¹nẹ²ha "He's writing them to him." -- timo 12Nov26
+     */
+    void testExample35b_WriteWiWithDativeBenefactive() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG3
+        verb.object = PrefixTableObject.PL3IN
+        verb.partOfSpeech = PartOfSpeech.VERB_TRANSITIVE
+        verb.tense = Tense.PRESENT
+        verb.stemmer = write
+        verb.nonFinalSuffixHolder.el = true
+        verb.initialPrefixHolder.with { wi = true }
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "WI-35: expected ᏫᏗᎪᏪᎳᏁᎭ (35b), got: ${verb.wholeWord}",
+                "ᏫᏗᎪᏪᎳᏁᎭ" == verb.wholeWord
+    }
+
+    /**
+     * (35, implied) bare sg3 dative present — the PL3-object-free reading of
+     * the same Completive-stem + APL surface ("He's writing it for him").
+     * Guide-implied: the dativePresent IS the sg3 form the 35a/35b cells
+     * pluralize. RECHECK: not separately printed in the guide. -- timo 12Nov26
+     */
+    void testExample35sg_WriteSingularDative() {
+        Verb verb = new Verb()
+        verb.subject = PrefixTableSubject.SG3
+        verb.object = PrefixTableObject.SG3IN
+        verb.partOfSpeech = PartOfSpeech.VERB_TRANSITIVE
+        verb.tense = Tense.PRESENT
+        verb.stemmer = write
+        verb.nonFinalSuffixHolder.el = true
+
+        verb = Conjugate.conjugate(verb)
+
+        assertTrue "WI-35: expected ᎪᏪᎳᏁᎭ (sg3 dative), got: ${verb.wholeWord}",
+                "ᎪᏪᎳᏁᎭ" == verb.wholeWord
     }
 
     /** yi- + wi- combination on a transitive verb (cf. 28) */
