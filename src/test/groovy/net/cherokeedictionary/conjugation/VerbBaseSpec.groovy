@@ -1,5 +1,6 @@
 package net.cherokeedictionary.conjugation
 
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import net.cherokeedictionary.proposed.ConjugationRequest
 import net.cherokeedictionary.proposed.VerbConjugationFacade
 import net.cherokeedictionary.transliteration.SyllabaryUtil
@@ -15,6 +16,22 @@ abstract class VerbBaseSpec extends Specification {
     // in the "to see" stem; sequences like "aws" (phonetic wvs, ᏮᏍ) must not match.
     private static String normalizeBookRomanization(String latin) {
         return latin?.replaceAll("ow(?=[bcdfghjklmnprstz])", "owa")
+                     .replaceAll("hl(?=[bcdfghjklmnprstz'])", "lo")
+    }
+
+    /**
+     * tio 13Nov26: Engine assertions against the book syllabary must be
+     * cleaned of romanization artifacts (apostrophes, non-standard punctuation)
+     * to match the engine's pure Syllabary output.
+     */
+    static String cleanForAssertion(String input) {
+        if (!input) return ""
+        return SyllabaryUtil.cleanTsalagi(input)
+    }
+
+
+    static String getEngineSyllabary(String verbName, String tense, String english, List<Map> conjugations) {
+        return VerbBookEngineHarness.getEngineSyllabary(verbName, tense, english, [conjugations: conjugations])
     }
 
      static def conjugateVerb(String verbName, Map details, String subj, String obj, String tense, String expected) {

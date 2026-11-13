@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -47,15 +48,22 @@ class ToFallPresentSpec extends VerbBaseSpec {
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * Verb-book rows drive the conjugation-engine comparison: each row's
+     * English gloss is parsed by VerbBookEngineHarness (subject/object/tense)
+     * and the engine's surface is asserted against the printed syllabary.
+     * -- tio 12Nov26
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        // tio 12Nov26: harness check — the engine conjugates this same
+        // pronoun/tense/verb; the assertion below compares its output with
+        // the verb-book syllabary.
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "present tense form matches the verb book (#row.pronoun)"() {
@@ -65,6 +73,9 @@ class ToFallPresentSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

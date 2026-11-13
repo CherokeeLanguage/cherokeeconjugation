@@ -36,6 +36,7 @@ class VerbTenseHolder {
         infinitive = stemmer?.infinitive?.syllabary ? stemmer?.infinitive?.syllabary?.substring(1) : ''
 
         stemmer.getStems().each {
+            println "DEBUG: Stem type: ${it.stemtype}, syllabary: ${it.syllabary}"
             switch (it.stemtype) {
                 case StemType.PresentContinous:
 //                    present = su.parseSyllabary(it.syllabary)

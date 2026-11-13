@@ -34,8 +34,24 @@ class PrefixDa implements Affix {
                     // da- + h- contracts to t-: the d and h merge and the a drops
                     baseReturnValue = "Ꮨ" + baseReturnValue.substring(1)
                 } else if (StringUtility.startsWithVowelSyllabary(baseReturnValue)) {
-                    // da- merges with a vowel-initial base (da + a -> dv, da + i -> di, ...)
-                    baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮧ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
+                    // tio 12Nov26: future da- allomorphy, book-verified:
+                    //  - da + a- -> dv (Ꮫ): guide ex. 63a ᏛᏟ dvtli "he/it's
+                    //    coming this way", To Hear p.64 SG3 future ᏛᏛᎦᏂ
+                    //    dvtvgani, To Fall p.33 PL3 ᏙᏛᏂᏅᏥ (do+dv+ni), To Hit
+                    //    p.81 ex.7 ᏙᏛᏅᏂᎵ. Was Ꮣ (a-drop) — wrong for these.
+                    //  - da + i- -> the i deletes (Ꮣ): To Fall p.33 PL2
+                    //    ᏙᏓᏥᏅᏥ (da+tsi), DL1INCL ᏙᏓᏂᏅᏥ (da+ni), PL1INCL
+                    //    ᏙᏓᏗᏅᏥ (da+di). Was Ꮧ (di-merge).
+                    //  - da + o- -> dayo- (y-epenthesis): To Fall p.33
+                    //    DL1EXCL ᏙᏓᏲᏍᏗᏅᏥ (da+yo+sdi), PL1EXCL ᏙᏓᏲᏥᏅᏥ. Two
+                    //    glyphs, so handled outside the single-glyph map.
+                    //  - u keeps du (Ꮪ — the du-verb path re-fuses ᎤᎸ... to
+                    //    ᏚᎸ...) and e keeps de (Ꮥ): no book counter-evidence.
+                    if (charAtZero == 'Ꭳ') {
+                        baseReturnValue = "ᏓᏲ" + baseReturnValue.substring(1)
+                    } else {
+                        baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮫ', 'Ꮥ', 'Ꮣ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
+                    }
                 } else {
                     baseReturnValue = "Ꮣ" + baseReturnValue
                 }

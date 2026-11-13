@@ -1,5 +1,7 @@
 package net.cherokeedictionary.proposed
 
+import net.cherokeedictionary.verb.conjugation.Conjugate
+
 class StubInitialPrefixStep implements ConjugationStep {
     @Override
     void apply(ConjugationContext context) {
@@ -17,7 +19,7 @@ class StubRuleApplicationStep implements ConjugationStep {
     void apply(ConjugationContext context) {
         context.log("Applied core conjugation and morphological rules (delegated)")
         if (context.verb) {
-            net.cherokeedictionary.verb.conjugation.Conjugate.conjugate(context.verb)
+            Conjugate.conjugate(context.verb)
         }
     }
 

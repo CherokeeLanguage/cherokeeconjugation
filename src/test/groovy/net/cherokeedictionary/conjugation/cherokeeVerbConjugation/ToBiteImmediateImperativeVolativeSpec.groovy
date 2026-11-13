@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -45,9 +46,13 @@ class ToBiteImmediateImperativeVolativeSpec extends VerbBaseSpec {
     Map conjugate(String pronoun, String english, int occurrence) {
         def matches = VERB_BOOK.findAll { it.pronoun == pronoun && it.english == english }
         def row = matches[Math.min(occurrence, matches.size()) - 1]
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.t.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+        
+        // Harness check: retrieve engine output for this same pronoun/tense/verb
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+        
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "immediate imperative/volative form matches the verb book (#row.pronoun: #row.english)"() {
@@ -57,6 +62,9 @@ class ToBiteImmediateImperativeVolativeSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

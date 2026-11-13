@@ -21,6 +21,29 @@ class VerbRegistry {
     // Map of root to specific conjugation overrides
     private static final Map<String, Map<String, String>> verbOverrides = [:]
 
+    // tio 12Nov26: per-verb compound-prefix overrides. Key = "<verbPrefix>|<routed
+    // stem syllabary>" (e.g. "SG3DL1INCL|ᏍᎦᎶᎦ"), value = the preConsonant cell
+    // to use instead of CompoundPrefixes. Needed because the verb book prints
+    // verb-specific prefix cells for some person combos: the To Bite tables
+    // (p.29) exercise the dA-/dE-/dO- DISTRIBUTIVE variant the guide paradigms
+    // omit ("forms in which de- indicates plurality of the action of the verb
+    // are not given in this paradigm nor in subsequent paradigms", guide Notes
+    // on Paradigm Two), plus a few outright cell differences (SG2->SG1 ᏍᎩ vs
+    // see's Ꮝ, PL2->SG3AN ᎡᏍᏗ vs ᎡᏥ). The routed stem in the key makes the
+    // override tense-precise and verb-specific (stems are lexeme-unique), so
+    // To See's guide-cited cells are untouched.
+    private static final Map<String, String> compoundPrefixOverrides = [:]
+
+    // tio 12Nov26: verbs whose -its/-is-class Stem III syncopates its i before
+    // the ts+v'i / ts+i tail in composed past/future forms. Keyed by the routed
+    // stem PREFIX (e.g. "ᏍᎦᎵ" for To Bite: stems ᏍᎦᎵᏨᎢ / ᏍᎦᎵᏥ), since roots are
+    // tense-stem-dependent (RECHECK note above) but the Stem III is shared by
+    // remote/future/FIV. Lexeme-level, NOT a global rule: "to be happy"
+    // keeps its stem-final li before the identical tail (guide preface
+    // disclaims the vowel-dropping rule). The sg3 + sg3-object REMOTE_PAST
+    // citation row is excluded at the call site — it keeps the i for every verb.
+    private static final Set<String> stemIIISyncopeStems = []
+
     // tio 12Nov26: the bridge. Categories/overrides are LOOKED UP by Cherokee
     // root (VerbConjugationProcessor sets verb.root = bare stem minus tense
     // ending, e.g. "gowati" for To See PRESENT), but the taxonomy seeds read
@@ -110,6 +133,31 @@ class VerbRegistry {
     static String getOverride(String root, String tense) {
         if (root == null) return null
         return verbOverrides.get(root)?.get(tense)
+    }
+
+    /** Registers a per-verb compound-prefix cell override. -- tio 12Nov26 */
+    static void registerCompoundOverride(String verbPrefix, String stem, String preConsonant) {
+        compoundPrefixOverrides.put("${verbPrefix}|${stem}" as String, preConsonant)
+    }
+
+    /**
+     * Per-verb compound-prefix cell override for this person combo + routed stem,
+     * or null when the shared CompoundPrefixes cell applies. -- tio 12Nov26
+     */
+    static String getCompoundOverride(String verbPrefix, String stem) {
+        if (!verbPrefix || !stem) return null
+        return compoundPrefixOverrides.get("${verbPrefix}|${stem}" as String)
+    }
+
+    /** Registers a routed-stem prefix whose i syncopates in past/future forms. -- tio 12Nov26 */
+    static void registerStemIIISyncope(String stemPrefix) {
+        stemIIISyncopeStems.add(stemPrefix)
+    }
+
+    /** True when this routed stem belongs to an -its/-is-class Stem III. -- tio 12Nov26 */
+    static boolean isStemIIISyncopeStem(String stem) {
+        if (!stem) return false
+        return stemIIISyncopeStems.find { stem.startsWith(it) } != null
     }
 
     // Iterates through categories and applies rules

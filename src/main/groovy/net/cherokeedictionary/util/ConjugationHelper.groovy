@@ -9,6 +9,17 @@ class ConjugationHelper {
                                 : PartOfSpeech.VERB_TRANSITIVE
     }
 
+//    public static void determineSubjectObject(Verb verb, String subject, String object) {
+//        verb.subject = PrefixTableSubject.valueOf(subject.trim())
+//        verb.object = object ? PrefixTableObject.valueOf(object.trim()) : PrefixTableObject.NONE
+//
+//        if (verb.object == PrefixTableObject.NONE
+//                || verb.partOfSpeech == PartOfSpeech.VERB_INTRANSITIVE
+//                || verb.tense == Tense.INFINITIVE) {
+//            verb.object = PrefixTableObject.SG3IN
+//        }
+//    }
+
     public static void determineSubjectObject(Verb verb, String subject, String object) {
         //todo: could this eventually be something that valueOf is overridden so if the value is blank it returns NONE?  Valueof cannot be overridden so idk
         PrefixTableObject pobj = object ? PrefixTableObject.valueOf(object) : PrefixTableObject.NONE

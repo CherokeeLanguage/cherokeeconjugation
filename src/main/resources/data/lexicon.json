@@ -313,61 +313,61 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gedoho'i",
+                "romanized": "gedohoi",
                 "syllabary": "\u13a8\u13d9\u13b0\u13a2",
                 "english": "I am somewhere"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hedoho'i",
+                "romanized": "hedohoi",
                 "syllabary": "\u13ae\u13d9\u13b0\u13a2",
                 "english": "You are somewhere"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "edoho'i",
+                "romanized": "edohoi",
                 "syllabary": "\u13a1\u13d9\u13b0\u13a2",
                 "english": "He/she/it is somewhere"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdedoho'i",
+                "romanized": "sdedohoi",
                 "syllabary": "\u13cd\u13d5\u13d9\u13b0\u13a2",
                 "english": "You (two) are somewhere"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsedoho'i",
+                "romanized": "itsedohoi",
                 "syllabary": "\u13a2\u13e4\u13d9\u13b0\u13a2",
                 "english": "You (more than two) are somewhere"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inedoho'i",
+                "romanized": "inedohoi",
                 "syllabary": "\u13a2\u13c1\u13d9\u13b0\u13a2",
                 "english": "We (you and I) are somewhere"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdedoho'i",
+                "romanized": "osdedohoi",
                 "syllabary": "\u13a3\u13cd\u13d5\u13d9\u13b0\u13a2",
                 "english": "We (another and I) are somewhere"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsedoho'i",
+                "romanized": "otsedohoi",
                 "syllabary": "\u13a3\u13e4\u13d9\u13b0\u13a2",
                 "english": "We (others and I) are somewhere"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idedoho'i",
+                "romanized": "idedohoi",
                 "syllabary": "\u13a2\u13d5\u13d9\u13b0\u13a2",
                 "english": "We (you and I and another or others) are somewhere"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anedoho'i",
+                "romanized": "anedohoi",
                 "syllabary": "\u13a0\u13c1\u13d9\u13b0\u13a2",
                 "english": "They are somewhere"
             }
@@ -437,61 +437,61 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gedohv'i",
+                "romanized": "gedohvi",
                 "syllabary": "\u13a8\u13d9\u13b2\u13a2",
                 "english": "I was somewhere"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hedohv'i",
+                "romanized": "hedohvi",
                 "syllabary": "\u13ae\u13d9\u13b2\u13a2",
                 "english": "You were somewhere"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "edohv'i",
+                "romanized": "edohvi",
                 "syllabary": "\u13a1\u13d9\u13b2\u13a2",
                 "english": "He/she/it was somewhere"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdedohv'i",
+                "romanized": "sdedohvi",
                 "syllabary": "\u13cd\u13d5\u13d9\u13b2\u13a2",
                 "english": "You (two) were somewhere"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsedohv'i",
+                "romanized": "itsedohvi",
                 "syllabary": "\u13a2\u13e4\u13d9\u13b2\u13a2",
                 "english": "You (more than two) were somewhere"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inedohv'i",
+                "romanized": "inedohvi",
                 "syllabary": "\u13a2\u13c1\u13d9\u13b2\u13a2",
                 "english": "We (you and I) were somewhere"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdedohv'i",
+                "romanized": "osdedohvi",
                 "syllabary": "\u13a3\u13cd\u13d5\u13d9\u13b2\u13a2",
                 "english": "We (another and I) were somewhere"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsedohv'i",
+                "romanized": "otsedohvi",
                 "syllabary": "\u13a3\u13e4\u13d9\u13b2\u13a2",
                 "english": "We (others and I) were somewhere"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idedohv'i",
+                "romanized": "idedohvi",
                 "syllabary": "\u13a2\u13d5\u13d9\u13b2\u13a2",
                 "english": "We (you and I and another or others) were somewhere"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anedohv'i",
+                "romanized": "anedohvi",
                 "syllabary": "\u13a0\u13c1\u13d9\u13b2\u13a2",
                 "english": "They were somewhere"
             }
@@ -501,61 +501,61 @@
         "FUTURE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gali'elitsv'i",
+                "romanized": "galielitsvi",
                 "syllabary": "\u13a6\u13b5\u13a1\u13b5\u13e8\u13a2",
                 "english": "May I be thankful/happy!"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "halihelitsv'i",
+                "romanized": "halihelitsvi",
                 "syllabary": "\u13ad\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May you be thankful/happy!"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "alihelitsv'i",
+                "romanized": "alihelitsvi",
                 "syllabary": "\u13a0\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May he/she/it be thankful/happy!"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdalihelitsv'i",
+                "romanized": "sdalihelitsvi",
                 "syllabary": "\u13cd\u13d3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May you (two) be thankful/happy!"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsalihelitsv'i",
+                "romanized": "itsalihelitsvi",
                 "syllabary": "\u13a2\u13e3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May you (more than two) be thankful/happy!"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inalihelitsv'i",
+                "romanized": "inalihelitsvi",
                 "syllabary": "\u13a2\u13be\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May we (you and I) be thankful/happy!"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdalihelitsv'i",
+                "romanized": "osdalihelitsvi",
                 "syllabary": "\u13a3\u13cd\u13d3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May we (another and I) be thankful/happy!"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsalihelitsv'i",
+                "romanized": "otsalihelitsvi",
                 "syllabary": "\u13a3\u13e3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May we (others and I) be thankful/happy!"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idalihelitsv'i",
+                "romanized": "idalihelitsvi",
                 "syllabary": "\u13a2\u13d3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May we (you and I and another or others) be thankful/happy!"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "analihelitsv'i",
+                "romanized": "analihelitsvi",
                 "syllabary": "\u13a0\u13be\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "May they be thankful/happy!"
             }
@@ -563,7 +563,7 @@
         "FUTURE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "dagali'elitsi",
+                "romanized": "dagalielitsi",
                 "syllabary": "\u13d3\u13a6\u13b5\u13a1\u13b5\u13e5",
                 "english": "I will be thankful/happy"
             },
@@ -625,7 +625,7 @@
         "IMMEDIATE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gali'eligi",
+                "romanized": "galieligi",
                 "syllabary": "\u13a6\u13b5\u13a1\u13b5\u13a9",
                 "english": "May I be thankful/happy right now!"
             },
@@ -687,7 +687,7 @@
         "IMMEDIATE_PAST": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gali'eligi",
+                "romanized": "galieligi",
                 "syllabary": "\u13a6\u13b5\u13a1\u13b5\u13a9",
                 "english": "I was thankful/happy"
             },
@@ -811,61 +811,61 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gali'eligo'i",
+                "romanized": "galieligoi",
                 "syllabary": "\u13a6\u13b5\u13a1\u13b5\u13aa\u13a2",
                 "english": "I am thankful/happy"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "haliheligo'i",
+                "romanized": "haliheligoi",
                 "syllabary": "\u13ad\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "You are thankful/happy"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "aliheligo'i",
+                "romanized": "aliheligoi",
                 "syllabary": "\u13a0\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "He/she/it is thankful/happy"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdaliheligo'i",
+                "romanized": "sdaliheligoi",
                 "syllabary": "\u13cd\u13d3\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "You (two) are thankful/happy"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsaliheligo'i",
+                "romanized": "itsaliheligoi",
                 "syllabary": "\u13a2\u13e3\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "You (more than two) are thankful/happy"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inaliheligo'i",
+                "romanized": "inaliheligoi",
                 "syllabary": "\u13a2\u13be\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "We (you and I) are thankful/happy"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdaliheligo'i",
+                "romanized": "osdaliheligoi",
                 "syllabary": "\u13a3\u13cd\u13d3\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "We (another and I) are thankful/happy"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsaliheligo'i",
+                "romanized": "otsaliheligoi",
                 "syllabary": "\u13a3\u13e3\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "We (others and I) are thankful/happy"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idaliheligo'i",
+                "romanized": "idaliheligoi",
                 "syllabary": "\u13a2\u13d3\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "We (you and I and another or others) are thankful/happy"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "analiheligo'i",
+                "romanized": "analiheligoi",
                 "syllabary": "\u13a0\u13be\u13b5\u13ae\u13b5\u13aa\u13a2",
                 "english": "They are thankful/happy"
             }
@@ -873,7 +873,7 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gali'eliga",
+                "romanized": "galieliga",
                 "syllabary": "\u13a6\u13b5\u13a1\u13b5\u13a6",
                 "english": "I am thankful/happy"
             },
@@ -935,61 +935,61 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "First Singular",
-                "romanized": "agwalihelitsv'i",
+                "romanized": "agwalihelitsvi",
                 "syllabary": "\u13a0\u13c6\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "I was thankful/happy"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsalihelitsv'i",
+                "romanized": "tsalihelitsvi",
                 "syllabary": "\u13e3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "You were thankful/happy"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ulihelitsv'i",
+                "romanized": "ulihelitsvi",
                 "syllabary": "\u13a4\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "He/she/it was thankful/happy"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdalihelitsv'i",
+                "romanized": "sdalihelitsvi",
                 "syllabary": "\u13cd\u13d3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "You (two) were thankful/happy"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsalihelitsv'i",
+                "romanized": "itsalihelitsvi",
                 "syllabary": "\u13a2\u13e3\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "You (more than two) were thankful/happy"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginalihelitsv'i",
+                "romanized": "ginalihelitsvi",
                 "syllabary": "\u13a9\u13be\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "We (you and I) were thankful/happy"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginalihelitsv'i",
+                "romanized": "oginalihelitsvi",
                 "syllabary": "\u13a3\u13a9\u13be\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "We (another and I) were thankful/happy"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogalihelitsv'i",
+                "romanized": "ogalihelitsvi",
                 "syllabary": "\u13a3\u13a6\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "We (others and I) were thankful/happy"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igalihelitsv'i",
+                "romanized": "igalihelitsvi",
                 "syllabary": "\u13a2\u13a6\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "We (you and I and another or others) were thankful/happy"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unalihelitsv'i",
+                "romanized": "unalihelitsvi",
                 "syllabary": "\u13a4\u13be\u13b5\u13ae\u13b5\u13e8\u13a2",
                 "english": "They were thankful/happy"
             }
@@ -1444,61 +1444,61 @@
         "FUTURE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "tsinvtsv'i",
+                "romanized": "tsinvtsvi",
                 "syllabary": "\u13e5\u13c5\u13e8\u13a2",
                 "english": "May I fall!"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hinvtsv'i",
+                "romanized": "hinvtsvi",
                 "syllabary": "\u13af\u13c5\u13e8\u13a2",
                 "english": "May you fall!"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ganvtsv'i",
+                "romanized": "ganvtsvi",
                 "syllabary": "\u13a6\u13c5\u13e8\u13a2",
                 "english": "May s/he fall!"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdinvtsv'i",
+                "romanized": "desdinvtsvi",
                 "syllabary": "\u13d5\u13cd\u13d7\u13c5\u13e8\u13a2",
                 "english": "May you (two) fall!"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsinvtsv'i",
+                "romanized": "detsinvtsvi",
                 "syllabary": "\u13d5\u13e5\u13c5\u13e8\u13a2",
                 "english": "May you (more than two) fall!"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "deninvtsv'i",
+                "romanized": "deninvtsvi",
                 "syllabary": "\u13d5\u13c2\u13c5\u13e8\u13a2",
                 "english": "May we (you and I) fall!"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dosdinvtsv'i",
+                "romanized": "dosdinvtsvi",
                 "syllabary": "\u13d9\u13cd\u13d7\u13c5\u13e8\u13a2",
                 "english": "May we (another and I) fall!"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsinvtsv'i",
+                "romanized": "dotsinvtsvi",
                 "syllabary": "\u13d9\u13e5\u13c5\u13e8\u13a2",
                 "english": "May we (others and I) fall!"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "dedinvtsv'i",
+                "romanized": "dedinvtsvi",
                 "syllabary": "\u13d5\u13d7\u13c5\u13e8\u13a2",
                 "english": "May we (you and I and another or others) fall!"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "daninvtsv'i",
+                "romanized": "daninvtsvi",
                 "syllabary": "\u13d3\u13c2\u13c5\u13e8\u13a2",
                 "english": "May they fall!"
             }
@@ -1680,61 +1680,61 @@
         "INFINITIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "aginv'isdi",
+                "romanized": "aginvisdi",
                 "syllabary": "\u13a0\u13a9\u13c5\u13a2\u13cd\u13d7",
                 "english": "For me to fall"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsanv'isdi",
+                "romanized": "tsanvisdi",
                 "syllabary": "\u13e3\u13c5\u13a2\u13cd\u13d7",
                 "english": "For you to fall"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "unv'isdi",
+                "romanized": "unvisdi",
                 "syllabary": "\u13a4\u13c5\u13a2\u13cd\u13d7",
                 "english": "For him/her/it to fall"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "disdinv'isdi",
+                "romanized": "disdinvisdi",
                 "syllabary": "\u13d7\u13cd\u13d7\u13c5\u13a2\u13cd\u13d7",
                 "english": "For you (two) to fall"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "ditsinv'isdi",
+                "romanized": "ditsinvisdi",
                 "syllabary": "\u13d7\u13e5\u13c5\u13a2\u13cd\u13d7",
                 "english": "For you (more than two) to fall"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "digininv'isdi",
+                "romanized": "digininvisdi",
                 "syllabary": "\u13d7\u13a9\u13c2\u13c5\u13a2\u13cd\u13d7",
                 "english": "For us (you and I) to fall"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "tsogininv'isdi",
+                "romanized": "tsogininvisdi",
                 "syllabary": "\u13e6\u13a9\u13c2\u13c5\u13a2\u13cd\u13d7",
                 "english": "For us (another and I) to fall"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "tsoginv'isdi",
+                "romanized": "tsoginvisdi",
                 "syllabary": "\u13e6\u13a9\u13c5\u13a2\u13cd\u13d7",
                 "english": "For us (others and I) to fall"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "diginv'isdi",
+                "romanized": "diginvisdi",
                 "syllabary": "\u13d7\u13a9\u13c5\u13a2\u13cd\u13d7",
                 "english": "For us (you and I and another or others) to fall"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "tsuninv'isdi",
+                "romanized": "tsuninvisdi",
                 "syllabary": "\u13e7\u13c2\u13c5\u13a2\u13cd\u13d7",
                 "english": "For them to fall"
             }
@@ -1742,61 +1742,61 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "First Singular",
-                "romanized": "tsinvgo'i",
+                "romanized": "tsinvgoi",
                 "syllabary": "\u13e5\u13c5\u13aa\u13a2",
                 "english": "I fall"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hinvgo'i",
+                "romanized": "hinvgoi",
                 "syllabary": "\u13af\u13c5\u13aa\u13a2",
                 "english": "You fall"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ganvgo'i",
+                "romanized": "ganvgoi",
                 "syllabary": "\u13a6\u13c5\u13aa\u13a2",
                 "english": "S/he falls"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdinvgo'i",
+                "romanized": "desdinvgoi",
                 "syllabary": "\u13d5\u13cd\u13d7\u13c5\u13aa\u13a2",
                 "english": "You (two) fall"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsinvgo'i",
+                "romanized": "detsinvgoi",
                 "syllabary": "\u13d5\u13e5\u13c5\u13aa\u13a2",
                 "english": "You (more than two) fall"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "deninvgo'i",
+                "romanized": "deninvgoi",
                 "syllabary": "\u13d9\u13cd\u13d7\u13c5\u13aa\u13a2",
                 "english": "We (you and I) fall"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dosdinvgo'i",
+                "romanized": "dosdinvgoi",
                 "syllabary": "\u13d9\u13cd\u13d7\u13c5\u13aa\u13a2",
                 "english": "We (another and I) fall"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsinvgo'i",
+                "romanized": "dotsinvgoi",
                 "syllabary": "\u13d9\u13e5\u13c5\u13aa\u13a2",
                 "english": "We (others and I) fall"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "dedinvgo'i",
+                "romanized": "dedinvgoi",
                 "syllabary": "\u13d5\u13d7\u13c5\u13aa\u13a2",
                 "english": "We (you and I and another or others) fall"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "daninvgo'i",
+                "romanized": "daninvgoi",
                 "syllabary": "\u13d3\u13c2\u13c5\u13a9",
                 "english": "They are falling"
             }
@@ -1860,61 +1860,61 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "First Singular",
-                "romanized": "aginvtsv'i",
+                "romanized": "aginvtsvi",
                 "syllabary": "\u13a0\u13a9\u13c5\u13e8\u13a2",
                 "english": "I fell"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsanvtsv'i",
+                "romanized": "tsanvtsvi",
                 "syllabary": "\u13e3\u13c5\u13e8\u13a2",
                 "english": "You fell"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "unvtsv'i",
+                "romanized": "unvtsvi",
                 "syllabary": "\u13a4\u13c5\u13e8\u13a2",
                 "english": "S/he fell"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdinvtsv'i",
+                "romanized": "desdinvtsvi",
                 "syllabary": "\u13d5\u13cd\u13d7\u13c5\u13e8\u13a2",
                 "english": "You (two) fell"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsinvtsv'i",
+                "romanized": "detsinvtsvi",
                 "syllabary": "\u13d5\u13e5\u13c5\u13e8\u13a2",
                 "english": "You (more than two) fell"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "degininvtsv'i",
+                "romanized": "degininvtsvi",
                 "syllabary": "\u13d5\u13a9\u13c2\u13c5\u13e8\u13a2",
                 "english": "We (you and I) fell"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dogininvtsv'i",
+                "romanized": "dogininvtsvi",
                 "syllabary": "\u13d9\u13a9\u13c2\u13c5\u13e8\u13a2",
                 "english": "We (another and I) fell"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "doginvtsv'i",
+                "romanized": "doginvtsvi",
                 "syllabary": "\u13d9\u13a9\u13c5\u13e8\u13a2",
                 "english": "We (others and I) fell"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "deginvtsv'i",
+                "romanized": "deginvtsvi",
                 "syllabary": "\u13d5\u13a9\u13c5\u13e8\u13a2",
                 "english": "We (you and I and another or others) fell"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "duninvtsv'i",
+                "romanized": "duninvtsvi",
                 "syllabary": "\u13da\u13c2\u13c5\u13e8\u13a2",
                 "english": "They fell"
             }
@@ -1986,61 +1986,61 @@
         "FUTURE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "eligwus yigenvsv'i",
+                "romanized": "eligwus yigenvsvi",
                 "syllabary": "\u13a1\u13b5\u13ca\u13cd \u13f1\u13a8\u13c5\u13d2\u13a2",
                 "english": "May I go later on?"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hwenvsv'i",
+                "romanized": "hwenvsvi",
                 "syllabary": "\u13ea\u13c5\u13d2\u13a2",
                 "english": "May you go later on!"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "wenvsv'i",
+                "romanized": "wenvsvi",
                 "syllabary": "\u13ea\u13c5\u13d2\u13a2",
                 "english": "May he/she/it go later on!"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "wisdenvsv'i",
+                "romanized": "wisdenvsvi",
                 "syllabary": "\u13eb\u13cd\u13d5\u13c5\u13d2\u13a2",
                 "english": "May you (two) go later on!"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "witsenvsv'i",
+                "romanized": "witsenvsvi",
                 "syllabary": "\u13eb\u13e4\u13c5\u13d2\u13a2",
                 "english": "May you (more than two) go later on!"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "winenvsv'i",
+                "romanized": "winenvsvi",
                 "syllabary": "\u13eb\u13c1\u13c5\u13d2\u13a2",
                 "english": "May we (you and I) go later on!"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "wosdenvsv'i",
+                "romanized": "wosdenvsvi",
                 "syllabary": "\u13ec\u13cd\u13d5\u13c5\u13d2\u13a2",
                 "english": "May we (another and I) go later on!"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "wotsenvsv'i",
+                "romanized": "wotsenvsvi",
                 "syllabary": "\u13ec\u13e4\u13c5\u13d2\u13a2",
                 "english": "May we (others and I) go later on!"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "widenvsv'i",
+                "romanized": "widenvsvi",
                 "syllabary": "\u13eb\u13d5\u13c5\u13d2\u13a2",
                 "english": "May we (you and I and another or others) go later on!"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "wanenvsv'i",
+                "romanized": "wanenvsvi",
                 "syllabary": "\u13e9\u13c1\u13c5\u13d2\u13a2",
                 "english": "May they go later on!"
             }
@@ -2234,61 +2234,61 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gego'i",
+                "romanized": "gegoi",
                 "syllabary": "\u13a8\u13aa\u13a2",
                 "english": "I go"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hego'i",
+                "romanized": "hegoi",
                 "syllabary": "\u13ae\u13aa\u13a2",
                 "english": "You go"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "anego'i",
+                "romanized": "anegoi",
                 "syllabary": "\u13a0\u13c1\u13aa\u13a2",
                 "english": "He/she/it goes"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdego'i",
+                "romanized": "sdegoi",
                 "syllabary": "\u13cd\u13d5\u13d0\u13a2",
                 "english": "You (two) go"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsego'i",
+                "romanized": "itsegoi",
                 "syllabary": "\u13a2\u13e4\u13d0\u13a2",
                 "english": "You (more than two) go"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inego'i",
+                "romanized": "inegoi",
                 "syllabary": "\u13a2\u13c1\u13d0\u13a2",
                 "english": "We (you and I) go"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdego'i",
+                "romanized": "osdegoi",
                 "syllabary": "\u13a3\u13cd\u13d5\u13d0\u13a2",
                 "english": "We (another and I) go"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsego'i",
+                "romanized": "otsegoi",
                 "syllabary": "\u13a3\u13e4\u13d0\u13a2",
                 "english": "We (others and I) go"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idego'i",
+                "romanized": "idegoi",
                 "syllabary": "\u13a2\u13d5\u13d0\u13a2",
                 "english": "We (you and I and another or others) go"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anego'i",
+                "romanized": "anegoi",
                 "syllabary": "\u13a0\u13c1\u13d0\u13a2",
                 "english": "They go"
             }
@@ -2358,61 +2358,61 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "First Singular",
-                "romanized": "agwenvsv'i",
+                "romanized": "agwenvsvi",
                 "syllabary": "\u13a0\u13c7\u13c5\u13d2\u13a2",
                 "english": "I went"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsenvsv'i",
+                "romanized": "tsenvsvi",
                 "syllabary": "\u13e4\u13c5\u13d2\u13a2",
                 "english": "You went"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "uwenvsv'i",
+                "romanized": "uwenvsvi",
                 "syllabary": "\u13a4\u13ea\u13c5\u13d2\u13a2",
                 "english": "He/she/it went"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdenvsv'i",
+                "romanized": "sdenvsvi",
                 "syllabary": "\u13cd\u13d5\u13c5\u13d2\u13a2",
                 "english": "You (two) went"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsenvsv'i",
+                "romanized": "itsenvsvi",
                 "syllabary": "\u13a2\u13e4\u13c5\u13d2\u13a2",
                 "english": "You (more than two) went"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginenvsv'i",
+                "romanized": "ginenvsvi",
                 "syllabary": "\u13a9\u13c1\u13c5\u13d2\u13a2",
                 "english": "We (you and I) went"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginenvsv'i",
+                "romanized": "oginenvsvi",
                 "syllabary": "\u13a3\u13a9\u13c1\u13c5\u13d2\u13a2",
                 "english": "We (another and I) went"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogenvsv'i",
+                "romanized": "ogenvsvi",
                 "syllabary": "\u13a3\u13a8\u13c5\u13d2\u13a2",
                 "english": "We (others and I) went"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igenvsv'i",
+                "romanized": "igenvsvi",
                 "syllabary": "\u13a2\u13a8\u13c5\u13d2\u13a2",
                 "english": "We (you and I and another or others) went"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unenvsv'i",
+                "romanized": "unenvsvi",
                 "syllabary": "\u13a4\u13c1\u13c5\u13d2\u13a2",
                 "english": "They went"
             }
@@ -2570,55 +2570,55 @@
         "FUTURE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsana'esdi/detsana'esdi",
+                "romanized": "tsanaesdi/detsanaesdi",
                 "syllabary": "\u13e3\u13be\u13a1\u13cd\u13d7/\u13d5\u13e3\u13be\u13a1\u13cd\u13d7",
                 "english": "May you have something flexible (singular)!\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'esdi/duna'esdi",
+                "romanized": "unaesdi/dunaesdi",
                 "syllabary": "\u13a4\u13be\u13a1\u13cd\u13d7/\u13da\u13be\u13a1\u13cd\u13d7",
                 "english": "May he/she/it have something flexible (singular)!\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdina'esdi/desdina'esdi",
+                "romanized": "sdinaesdi/desdinaesdi",
                 "syllabary": "\u13cd\u13d7\u13be\u13a1\u13cd\u13d7/\u13d5\u13cd\u13d7\u13be\u13a1\u13cd\u13d7",
                 "english": "May you (two) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'esdi/detsina'esdi",
+                "romanized": "itsinaesdi/detsinaesdi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a1\u13cd\u13d7/\u13d5\u13e5\u13be\u13a1\u13cd\u13d7",
                 "english": "May you (more than two) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'esdi/deginina'esdi",
+                "romanized": "gininaesdi/degininaesdi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (you and I) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'esdi/doginina'esdi",
+                "romanized": "ogininaesdi/dogininaesdi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (another and I) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'esdi/dogina'esdi",
+                "romanized": "oginaesdi/doginaesdi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (others and I) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'esdi/degina'esdi",
+                "romanized": "iginaesdi/deginaesdi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (you and I and another or others) have something flexible (singular)!\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unina'esdi/dunina'esdi",
+                "romanized": "uninaesdi/duninaesdi",
                 "syllabary": "\u13a4\u13c2\u13be\u13a1\u13cd\u13d7/\u13da\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "May they have something flexible (singular)!\\"
             }
@@ -2626,55 +2626,55 @@
         "FUTURE": [
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsana'esdi/detsana'esdi",
+                "romanized": "tsanaesdi/detsanaesdi",
                 "syllabary": "\u13e3\u13be\u13a1\u13cd\u13d7/\u13d5\u13e3\u13be\u13a1\u13cd\u13d7",
                 "english": "You will have something flexible (singular)\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'esdi/duna'esdi",
+                "romanized": "unaesdi/dunaesdi",
                 "syllabary": "\u13a4\u13be\u13a1\u13cd\u13d7/\u13da\u13be\u13a1\u13cd\u13d7",
                 "english": "He/she/it will have something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdina'esdi/desdina'esdi",
+                "romanized": "sdinaesdi/desdinaesdi",
                 "syllabary": "\u13cd\u13d7\u13be\u13a1\u13cd\u13d7/\u13d5\u13cd\u13d7\u13be\u13a1\u13cd\u13d7",
                 "english": "You (two) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'esdi/detsina'esdi",
+                "romanized": "itsinaesdi/detsinaesdi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a1\u13cd\u13d7/\u13d5\u13e5\u13be\u13a1\u13cd\u13d7",
                 "english": "You (more than two) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'esdi/deginina'esdi",
+                "romanized": "gininaesdi/degininaesdi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "We (you and I) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'esdi/doginina'esdi",
+                "romanized": "ogininaesdi/dogininaesdi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "We (another and I) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'esdi/dogina'esdi",
+                "romanized": "oginaesdi/doginaesdi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "We (others and I) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'esdi/degina'esdi",
+                "romanized": "iginaesdi/deginaesdi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "We (you and I and another or others) will have something flexible (singular)\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unina'esdi/dunina'esdi",
+                "romanized": "uninaesdi/duninaesdi",
                 "syllabary": "\u13a4\u13c2\u13be\u13a1\u13cd\u13d7/\u13da\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "They will have something flexible (singular)\\"
             }
@@ -2682,61 +2682,61 @@
         "IMMEDIATE_IMPERATIVE_VOLATIVE": [
             {
                 "pronoun": "First Singular",
-                "romanized": "agina'esdi/dagina'esdi",
+                "romanized": "aginaesdi/daginaesdi",
                 "syllabary": "\u13a0\u13a9\u13be\u13a1\u13cd\u13d7/\u13d3\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May I have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsana'esdi/detsana'esdi",
+                "romanized": "tsanaesdi/detsanaesdi",
                 "syllabary": "\u13e3\u13be\u13a1\u13cd\u13d7/\u13d5\u13e3\u13be\u13a1\u13cd\u13d7",
                 "english": "May you have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'esdi/duna'esdi",
+                "romanized": "unaesdi/dunaesdi",
                 "syllabary": "\u13a4\u13be\u13a1\u13cd\u13d7/\u13da\u13be\u13a1\u13cd\u13d7",
                 "english": "May he/she/it have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdina'esdi/desdina'esdi",
+                "romanized": "sdinaesdi/desdinaesdi",
                 "syllabary": "\u13cd\u13d7\u13be\u13a1\u13cd\u13d7/\u13d5\u13cd\u13d7\u13be\u13a1\u13cd\u13d7",
                 "english": "May you (two) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'esdi/detsina'esdi",
+                "romanized": "itsinaesdi/detsinaesdi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a1\u13cd\u13d7/\u13d5\u13e5\u13be\u13a1\u13cd\u13d7",
                 "english": "May you (more than two) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'esdi/deginina'esdi",
+                "romanized": "gininaesdi/degininaesdi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (you and I) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "ogina'esdi/dogina'esdi",
+                "romanized": "oginaesdi/doginaesdi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (another and I) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'esdi/dogina'esdi",
+                "romanized": "oginaesdi/doginaesdi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a1\u13cd\u13d7/\u13d9\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (others and I) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'esdi/degina'esdi",
+                "romanized": "iginaesdi/deginaesdi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a1\u13cd\u13d7/\u13d5\u13a9\u13be\u13a1\u13cd\u13d7",
                 "english": "May we (you and I and another or others) have something flexible (singular) right now!\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unina'esdi/dunina'esdi",
+                "romanized": "uninaesdi/duninaesdi",
                 "syllabary": "\u13a4\u13c2\u13be\u13a1\u13cd\u13d7/\u13da\u13c2\u13be\u13a1\u13cd\u13d7",
                 "english": "May they have something flexible (singular) right now!\\"
             }
@@ -2744,37 +2744,37 @@
         "IMMEDIATE_PAST": [
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'v'i/duna'v'i",
+                "romanized": "unavi/dunavi",
                 "syllabary": "\u13a4\u13be\u13a5\u13a2/\u13da\u13be\u13a5\u13a2",
                 "english": "He/she/it had something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'v'i/detsina'v'i",
+                "romanized": "itsinavi/detsinavi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a5\u13a2/\u13d5\u13e5\u13be\u13a5\u13a2",
                 "english": "You (more than two) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'v'i/deginina'v'i",
+                "romanized": "gininavi/degininavi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a5\u13a2/\u13d5\u13a9\u13c2\u13be\u13a5\u13a2",
                 "english": "We (you and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'v'i/doginina'v'i",
+                "romanized": "ogininavi/dogininavi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a5\u13a2/\u13d9\u13a9\u13c2\u13be\u13a5\u13a2",
                 "english": "We (another and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'v'i/dogina'v'i",
+                "romanized": "oginavi/doginavi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a5\u13a2/\u13d9\u13a9\u13be\u13a5\u13a2",
                 "english": "We (others and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'v'i/degina'v'i",
+                "romanized": "iginavi/deginavi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a5\u13a2/\u13d5\u13a9\u13be\u13a5\u13a2",
                 "english": "We (you and I and another or others) had something flexible (singular)\\"
             }
@@ -2844,31 +2844,31 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'o'i/detsina'o'i",
+                "romanized": "itsinaoi/detsinaoi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a3\u13a2/\u13d5\u13e5\u13be\u13a3\u13a2",
                 "english": "You (more than two) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'o'i/deginina'o'i",
+                "romanized": "gininaoi/degininaoi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a3\u13a2/\u13d5\u13a9\u13c2\u13be\u13a3\u13a2",
                 "english": "We (you and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'o'i/doginina'o'i",
+                "romanized": "ogininaoi/dogininaoi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a3\u13a2/\u13d9\u13a9\u13c2\u13be\u13a3\u13a2",
                 "english": "We (another and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'o'i/dogina'o'i",
+                "romanized": "oginaoi/doginaoi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a3\u13a2/\u13d9\u13a9\u13be\u13a3\u13a2",
                 "english": "We (others and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'o'i/degina'o'i",
+                "romanized": "iginaoi/deginaoi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a3\u13a2/\u13d5\u13a9\u13be\u13a3\u13a2",
                 "english": "We (you and I and another or others) have something flexible (singular)\\"
             }
@@ -2876,43 +2876,43 @@
         "PRESENT": [
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'a/duna'a",
+                "romanized": "unaa/dunaa",
                 "syllabary": "\u13a4\u13be\u13a0/\u13da\u13be\u13a0",
                 "english": "He/she/it has something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdina'a/desdina'a",
+                "romanized": "sdinaa/desdinaa",
                 "syllabary": "\u13cd\u13d7\u13be\u13a0/\u13d5\u13cd\u13d7\u13be\u13a0",
                 "english": "You (two) have something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'a/detsina'a",
+                "romanized": "itsinaa/detsinaa",
                 "syllabary": "\u13a2\u13e5\u13be\u13a0/\u13d5\u13e5\u13be\u13a0",
                 "english": "You (more than two) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'a/deginina'a",
+                "romanized": "gininaa/degininaa",
                 "syllabary": "\u13a9\u13c2\u13be\u13a0/\u13d5\u13a9\u13c2\u13be\u13a0",
                 "english": "We (you and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'a/doginina'a",
+                "romanized": "ogininaa/dogininaa",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a0/\u13d9\u13a9\u13c2\u13be\u13a0",
                 "english": "We (another and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'a/dogina'a",
+                "romanized": "oginaa/doginaa",
                 "syllabary": "\u13a3\u13a9\u13be\u13a0/\u13d9\u13a9\u13be\u13a0",
                 "english": "We (others and I) have something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'a/degina'a",
+                "romanized": "iginaa/deginaa",
                 "syllabary": "\u13a2\u13a9\u13be\u13a0/\u13d5\u13a9\u13be\u13a0",
                 "english": "We (you and I and another or others) have something flexible (singular)\\"
             }
@@ -2920,37 +2920,37 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "Third Singular",
-                "romanized": "una'v'i/duna'v'i",
+                "romanized": "unavi/dunavi",
                 "syllabary": "\u13a4\u13be\u13a5\u13a2/\u13da\u13be\u13a5\u13a2",
                 "english": "He/she/it had something flexible (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsina'v'i/detsina'v'i",
+                "romanized": "itsinavi/detsinavi",
                 "syllabary": "\u13a2\u13e5\u13be\u13a5\u13a2/\u13d5\u13e5\u13be\u13a5\u13a2",
                 "english": "You (more than two) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginina'v'i/deginina'v'i",
+                "romanized": "gininavi/degininavi",
                 "syllabary": "\u13a9\u13c2\u13be\u13a5\u13a2/\u13d5\u13a9\u13c2\u13be\u13a5\u13a2",
                 "english": "We (you and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginina'v'i/doginina'v'i",
+                "romanized": "ogininavi/dogininavi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13be\u13a5\u13a2/\u13d9\u13a9\u13c2\u13be\u13a5\u13a2",
                 "english": "We (another and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogina'v'i/dogina'v'i",
+                "romanized": "oginavi/doginavi",
                 "syllabary": "\u13a3\u13a9\u13be\u13a5\u13a2/\u13d9\u13a9\u13be\u13a5\u13a2",
                 "english": "We (others and I) had something flexible (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igina'v'i/degina'v'i",
+                "romanized": "iginavi/deginavi",
                 "syllabary": "\u13a2\u13a9\u13be\u13a5\u13a2/\u13d5\u13a9\u13be\u13a5\u13a2",
                 "english": "We (you and I and another or others) had something flexible (singular)\\"
             }
@@ -3128,31 +3128,31 @@
         "IMMEDIATE_PAST": [
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsinehv'i/detsinehv'i",
+                "romanized": "itsinehvi/detsinehvi",
                 "syllabary": "\u13a2\u13e5\u13c1\u13b2\u13a2/\u13d5\u13e5\u13c1\u13b2\u13a2",
                 "english": "You (more than two) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "gininehv'i/degininehv'i",
+                "romanized": "gininehvi/degininehvi",
                 "syllabary": "\u13a9\u13c2\u13c1\u13b2\u13a2/\u13d5\u13a9\u13c2\u13c1\u13b2\u13a2",
                 "english": "We (you and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "ogininehv'i/dogininehv'i",
+                "romanized": "ogininehvi/dogininehvi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13c1\u13b2\u13a2/\u13d9\u13a9\u13c2\u13c1\u13b2\u13a2",
                 "english": "We (another and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "oginehv'i/doginehv'i",
+                "romanized": "oginehvi/doginehvi",
                 "syllabary": "\u13a3\u13a9\u13c1\u13b2\u13a2/\u13d9\u13a9\u13c1\u13b2\u13a2",
                 "english": "We (others and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "iginehv'i/deginehv'i",
+                "romanized": "iginehvi/deginehvi",
                 "syllabary": "\u13a2\u13a9\u13c1\u13b2\u13a2/\u13d5\u13a9\u13c1\u13b2\u13a2",
                 "english": "We (you and I and another or others) had something liquid (singular)\\"
             }
@@ -3222,31 +3222,31 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsineho'i/detsineho'i",
+                "romanized": "itsinehoi/detsinehoi",
                 "syllabary": "\u13a2\u13e5\u13c1\u13b0\u13a2/\u13d5\u13e5\u13c1\u13b0\u13a2",
                 "english": "You (more than two) have something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginineho'i/deginineho'i",
+                "romanized": "gininehoi/degininehoi",
                 "syllabary": "\u13a9\u13c2\u13c1\u13b0\u13a2/\u13d5\u13a9\u13c2\u13c1\u13b0\u13a2",
                 "english": "We (you and I) have something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginineho'i/doginineho'i",
+                "romanized": "ogininehoi/dogininehoi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13c1\u13b0\u13a2/\u13d9\u13a9\u13c2\u13c1\u13b0\u13a2",
                 "english": "We (another and I) have something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogineho'i/dogineho'i",
+                "romanized": "oginehoi/doginehoi",
                 "syllabary": "\u13a3\u13a9\u13c1\u13b0\u13a2/\u13d9\u13a9\u13c1\u13b0\u13a2",
                 "english": "We (others and I) have something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igineho'i/degineho'i",
+                "romanized": "iginehoi/deginehoi",
                 "syllabary": "\u13a2\u13a9\u13c1\u13b0\u13a2/\u13d5\u13a9\u13c1\u13b0\u13a2",
                 "english": "We (you and I and another or others) have something liquid (singular)\\"
             }
@@ -3286,31 +3286,31 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsinehv'i/detsinehv'i",
+                "romanized": "itsinehvi/detsinehvi",
                 "syllabary": "\u13a2\u13e5\u13c1\u13b2\u13a2/\u13d5\u13e5\u13c1\u13b2\u13a2",
                 "english": "You (more than two) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "gininehv'i/degininehv'i",
+                "romanized": "gininehvi/degininehvi",
                 "syllabary": "\u13a9\u13c2\u13c1\u13b2\u13a2/\u13d5\u13a9\u13c2\u13c1\u13b2\u13a2",
                 "english": "We (you and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "ogininehv'i/dogininehv'i",
+                "romanized": "ogininehvi/dogininehvi",
                 "syllabary": "\u13a3\u13a9\u13c2\u13c1\u13b2\u13a2/\u13d9\u13a9\u13c2\u13c1\u13b2\u13a2",
                 "english": "We (another and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "oginehv'i/doginehv'i",
+                "romanized": "oginehvi/doginehvi",
                 "syllabary": "\u13a3\u13a9\u13c1\u13b2\u13a2/\u13d9\u13a9\u13c1\u13b2\u13a2",
                 "english": "We (others and I) had something liquid (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "iginehv'i/deginehv'i",
+                "romanized": "iginehvi/deginehvi",
                 "syllabary": "\u13a2\u13a9\u13c1\u13b2\u13a2/\u13d5\u13a9\u13c1\u13b2\u13a2",
                 "english": "We (you and I and another or others) had something liquid (singular)\\"
             }
@@ -3500,55 +3500,55 @@
         "IMMEDIATE_PAST": [
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsvyv'i/detsvyv'i",
+                "romanized": "tsvyvi/detsvyvi",
                 "syllabary": "\u13e8\u13f4\u13a2/\u13d5\u13e8\u13f4\u13a2",
                 "english": "You had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "uwayv'i/duwayv'i",
+                "romanized": "uwayvi/duwayvi",
                 "syllabary": "\u13a4\u13e9\u13f4\u13a2/\u13da\u13e9\u13f4\u13a2",
                 "english": "He/she/it had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdvyv'i/desdvyv'i",
+                "romanized": "sdvyvi/desdvyvi",
                 "syllabary": "\u13cd\u13db\u13f4\u13a2/\u13d5\u13cd\u13db\u13f4\u13a2",
                 "english": "You (two) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsvyv'i/detsvyv'i",
+                "romanized": "itsvyvi/detsvyvi",
                 "syllabary": "\u13a2\u13e8\u13f4\u13a2/\u13d5\u13e8\u13f4\u13a2",
                 "english": "You (more than two) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginvyv'i/deginvyv'i",
+                "romanized": "ginvyvi/deginvyvi",
                 "syllabary": "\u13a9\u13c5\u13f4\u13a2/\u13d5\u13a9\u13c5\u13f4\u13a2",
                 "english": "We (you and I) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginvyv'i/doginvyv'i",
+                "romanized": "oginvyvi/doginvyvi",
                 "syllabary": "\u13a3\u13a9\u13c5\u13f4\u13a2/\u13d9\u13a9\u13c5\u13f4\u13a2",
                 "english": "We (another and I) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogvyv'i/dogvyv'i",
+                "romanized": "ogvyvi/dogvyvi",
                 "syllabary": "\u13a3\u13ac\u13f4\u13a2/\u13d9\u13ac\u13f4\u13a2",
                 "english": "We (others and I) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igvyv'i/degvyv'i",
+                "romanized": "igvyvi/degvyvi",
                 "syllabary": "\u13a2\u13ac\u13f4\u13a2/\u13d5\u13ac\u13f4\u13a2",
                 "english": "We (you and I and another or others) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unvyv'i/dunvyv'i",
+                "romanized": "unvyvi/dunvyvi",
                 "syllabary": "\u13a4\u13c5\u13f4\u13a2/\u13da\u13c5\u13f4\u13a2",
                 "english": "They had something long & rigid (singular)\\"
             }
@@ -3618,55 +3618,55 @@
         "PRESENT_HABITUAL": [
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsvyo'i/detsvyo'i",
+                "romanized": "tsvyoi/detsvyoi",
                 "syllabary": "\u13e8\u13f2\u13a2/\u13d5\u13e8\u13f2\u13a2",
                 "english": "You have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "uwayo'i/duwayo'i",
+                "romanized": "uwayoi/duwayoi",
                 "syllabary": "\u13a4\u13e9\u13f2\u13a2/\u13da\u13e9\u13f2\u13a2",
                 "english": "He/she/it has something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdvyo'i/desdvyo'i",
+                "romanized": "sdvyoi/desdvyoi",
                 "syllabary": "\u13cd\u13db\u13f2\u13a2/\u13d5\u13cd\u13db\u13f2\u13a2",
                 "english": "You (two) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsvyo'i/detsvyo'i",
+                "romanized": "itsvyoi/detsvyoi",
                 "syllabary": "\u13a2\u13e8\u13f2\u13a2/\u13d5\u13e8\u13f2\u13a2",
                 "english": "You (more than two) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginvyo'i/diginvyo'i",
+                "romanized": "ginvyoi/diginvyoi",
                 "syllabary": "\u13a9\u13c5\u13f2\u13a2/\u13d7\u13a9\u13c5\u13f2\u13a2",
                 "english": "We (you and I) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginvyo'i/doginvyo'i",
+                "romanized": "oginvyoi/doginvyoi",
                 "syllabary": "\u13a3\u13a9\u13c5\u13f2\u13a2/\u13d9\u13a9\u13c5\u13f2\u13a2",
                 "english": "We (another and I) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogvyo'i/dogvyo'i",
+                "romanized": "ogvyoi/dogvyoi",
                 "syllabary": "\u13a3\u13ac\u13f2\u13a2/\u13d9\u13ac\u13f2\u13a2",
                 "english": "We (others and I) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igvyo'i/degvyo'i",
+                "romanized": "igvyoi/degvyoi",
                 "syllabary": "\u13a2\u13ac\u13f2\u13a2/\u13d5\u13ac\u13f2\u13a2",
                 "english": "We (you and I and another or others) have something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unvyo'i/dunvyo'i",
+                "romanized": "unvyoi/dunvyoi",
                 "syllabary": "\u13a4\u13c5\u13f2\u13a2/\u13da\u13c5\u13f2\u13a2",
                 "english": "They have something long & rigid (singular)\\"
             }
@@ -3730,55 +3730,55 @@
         "REMOTE_PAST": [
             {
                 "pronoun": "Second Singular",
-                "romanized": "tsvyv'i/detsvyv'i",
+                "romanized": "tsvyvi/detsvyvi",
                 "syllabary": "\u13e8\u13f4\u13a2/\u13d5\u13e8\u13f4\u13a2",
                 "english": "You had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "uwayv'i/duwayv'i",
+                "romanized": "uwayvi/duwayvi",
                 "syllabary": "\u13a4\u13e9\u13f4\u13a2/\u13da\u13e9\u13f4\u13a2",
                 "english": "He/she/it had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdvyv'i/desdvyv'i",
+                "romanized": "sdvyvi/desdvyvi",
                 "syllabary": "\u13cd\u13db\u13f4\u13a2/\u13d5\u13cd\u13db\u13f4\u13a2",
                 "english": "You (two) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsvyv'i/detsvyv'i",
+                "romanized": "itsvyvi/detsvyvi",
                 "syllabary": "\u13a2\u13e8\u13f4\u13a2/\u13d5\u13e8\u13f4\u13a2",
                 "english": "You (more than two) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "ginvyv'i/deginvyv'i",
+                "romanized": "ginvyvi/deginvyvi",
                 "syllabary": "\u13a9\u13c5\u13f4\u13a2/\u13d5\u13a9\u13c5\u13f4\u13a2",
                 "english": "We (you and I) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "oginvyv'i/doginvyv'i",
+                "romanized": "oginvyvi/doginvyvi",
                 "syllabary": "\u13a3\u13a9\u13c5\u13f4\u13a2/\u13d9\u13a9\u13c5\u13f4\u13a2",
                 "english": "We (another and I) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "ogvyv'i",
+                "romanized": "ogvyvi",
                 "syllabary": "\u13a3\u13ac\u13f4\u13a2",
                 "english": "We (others and I) had something long & rigid (singular)"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "igvyv'i/degvyv'i",
+                "romanized": "igvyvi/degvyvi",
                 "syllabary": "\u13a2\u13ac\u13f4\u13a2/\u13d5\u13ac\u13f4\u13a2",
                 "english": "We (you and I and another or others) had something long & rigid (singular)\\"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "unvyv'i/dunvyv'i",
+                "romanized": "unvyvi/dunvyvi",
                 "syllabary": "\u13a4\u13c5\u13f4\u13a2/\u13da\u13c5\u13f4\u13a2",
                 "english": "They had something long & rigid (singular)\\"
             }
@@ -3806,427 +3806,427 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvyatvgi'a",
+                "romanized": "gvyatvgia",
                 "syllabary": "\u13ac\u13ef\u13db\u13a9\u13a0",
                 "english": "I hear you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyatvgi'a",
+                "romanized": "tsiyatvgia",
                 "syllabary": "\u13e5\u13ef\u13db\u13a9\u13a0",
                 "english": "I hear him/her"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatvgi'a",
+                "romanized": "gatvgia",
                 "syllabary": "\u13a6\u13db\u13a9\u13a0",
                 "english": "I hear it"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvyatvgi'a",
+                "romanized": "sdvyatvgia",
                 "syllabary": "\u13cd\u13db\u13ef\u13db\u13a9\u13a0",
                 "english": "I hear you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvyatvgi'a",
+                "romanized": "itsvyatvgia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13db\u13a9\u13a0",
                 "english": "I hear you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsiyatvgi'a",
+                "romanized": "gatsiyatvgia",
                 "syllabary": "\u13a6\u13e5\u13ef\u13db\u13a9\u13a0",
                 "english": "I hear them"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "degatvgi'a",
+                "romanized": "degatvgia",
                 "syllabary": "\u13d5\u13a6\u13db\u13a9\u13a0",
                 "english": "I hear those things"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgwatvgi'a",
+                "romanized": "sgwatvgia",
                 "syllabary": "\u13cd\u13c6\u13db\u13a9\u13a0",
                 "english": "You (singular) hear me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyatvgi'a",
+                "romanized": "hiyatvgia",
                 "syllabary": "\u13af\u13ef\u13db\u13a9\u13a0",
                 "english": "You (singular) hear him/her"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hatvgi'a",
+                "romanized": "hatvgia",
                 "syllabary": "\u13ad\u13db\u13a9\u13a0",
                 "english": "You (singular) hear it"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sginatvgi'a",
+                "romanized": "sginatvgia",
                 "syllabary": "\u13cd\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "You (singular) hear someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "isgiyatvgi'a",
+                "romanized": "isgiyatvgia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13db\u13a9\u13a0",
                 "english": "You (singular) hear others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahiyatvgi'a",
+                "romanized": "gahiyatvgia",
                 "syllabary": "\u13a6\u13af\u13ef\u13db\u13a9\u13a0",
                 "english": "You (singular) hear them"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "dehatvgi'a",
+                "romanized": "dehatvgia",
                 "syllabary": "\u13d5\u13ad\u13db\u13a9\u13a0",
                 "english": "You (singular) hear those (things)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "agwatvgi'a",
+                "romanized": "agwatvgia",
                 "syllabary": "\u13a0\u13c6\u13db\u13a9\u13a0",
                 "english": "S/he hears me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "tsatvgi'a",
+                "romanized": "tsatvgia",
                 "syllabary": "\u13e3\u13db\u13a9\u13a0",
                 "english": "S/he hears you (singular)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "agatvgi'a",
+                "romanized": "agatvgia",
                 "syllabary": "\u13a0\u13a6\u13db\u13a9\u13a0",
                 "english": "S/he hears him/her"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "atvgi'a",
+                "romanized": "atvgia",
                 "syllabary": "\u13a0\u13db\u13a9\u13a0",
                 "english": "S/he hears it"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ginatvgi'a",
+                "romanized": "ginatvgia",
                 "syllabary": "\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "S/he hears you and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "oginatvgi'a",
+                "romanized": "oginatvgia",
                 "syllabary": "\u13a3\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "S/he hears someone else and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "igatvgi'a",
+                "romanized": "igatvgia",
                 "syllabary": "\u13a2\u13a6\u13db\u13a9\u13a0",
                 "english": "S/he hears another (or others), me and you"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ogatvgi'a",
+                "romanized": "ogatvgia",
                 "syllabary": "\u13a3\u13a6\u13db\u13a9\u13a0",
                 "english": "S/he hears others and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "sdatvgi'a",
+                "romanized": "sdatvgia",
                 "syllabary": "\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "S/he hears you (two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "itsatvgi'a",
+                "romanized": "itsatvgia",
                 "syllabary": "\u13a2\u13e3\u13db\u13a9\u13a0",
                 "english": "S/he hears you (more than two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "datvgi'a",
+                "romanized": "datvgia",
                 "syllabary": "\u13d3\u13db\u13a9\u13a0",
                 "english": "S/he hears them"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "datvgi'a",
+                "romanized": "datvgia",
                 "syllabary": "\u13d3\u13db\u13a9\u13a0",
                 "english": "S/he hears those things"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginatvgi'a",
+                "romanized": "sginatvgia",
                 "syllabary": "\u13cd\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "You (two) hear me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdatvgi'a",
+                "romanized": "esdatvgia",
                 "syllabary": "\u13a1\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "You (two) hear him/her"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdatvgi'a",
+                "romanized": "sdatvgia",
                 "syllabary": "\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "You (two) hear it"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desginatvgi'a",
+                "romanized": "desginatvgia",
                 "syllabary": "\u13d5\u13cd\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "You (two) hear someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desgiyatvgi'a",
+                "romanized": "desgiyatvgia",
                 "syllabary": "\u13d5\u13cd\u13a9\u13ef\u13db\u13a9\u13a0",
                 "english": "You (two) hear others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "gesdatvgi'a",
+                "romanized": "gesdatvgia",
                 "syllabary": "\u13a8\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "You (two) hear them"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdatvgi'a",
+                "romanized": "desdatvgia",
                 "syllabary": "\u13d5\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "You (two) hear those (things)"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgiyatvgi'a",
+                "romanized": "isgiyatvgia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsatvgi'a",
+                "romanized": "etsatvgia",
                 "syllabary": "\u13a1\u13e3\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear him/her"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsatvgi'a",
+                "romanized": "itsatvgia",
                 "syllabary": "\u13a2\u13e3\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear it"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "desginatvgi'a",
+                "romanized": "desginatvgia",
                 "syllabary": "\u13d5\u13cd\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear someone else and me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "getsatvgi'a",
+                "romanized": "getsatvgia",
                 "syllabary": "\u13a8\u13e3\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear them"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsatvgi'a",
+                "romanized": "detsatvgia",
                 "syllabary": "\u13d5\u13e3\u13db\u13a9\u13a0",
                 "english": "You (more than two) hear those things"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "enatvgi'a",
+                "romanized": "enatvgia",
                 "syllabary": "\u13a1\u13be\u13db\u13a9\u13a0",
                 "english": "We (you and I) hear him/her"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inatvgi'a",
+                "romanized": "inatvgia",
                 "syllabary": "\u13a2\u13be\u13db\u13a9\u13a0",
                 "english": "We (you and I) hear it"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "genatvgi'a",
+                "romanized": "genatvgia",
                 "syllabary": "\u13a8\u13be\u13db\u13a9\u13a0",
                 "english": "We (you and I) hear them"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "denatvgi'a",
+                "romanized": "denatvgia",
                 "syllabary": "\u13d5\u13be\u13db\u13a9\u13a0",
                 "english": "We (you and I) hear those things"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyatvgi'a",
+                "romanized": "sdvyatvgia",
                 "syllabary": "\u13cd\u13db\u13ef\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdatvgi'a",
+                "romanized": "osdatvgia",
                 "syllabary": "\u13a3\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear him/her"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdatvgi'a",
+                "romanized": "osdatvgia",
                 "syllabary": "\u13a3\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear it"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyatvgi'a",
+                "romanized": "sdvyatvgia",
                 "syllabary": "\u13cd\u13db\u13ef\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear you (two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "itsvyatvgi'a",
+                "romanized": "itsvyatvgia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear you (more than two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "gosdatvgi'a",
+                "romanized": "gosdatvgia",
                 "syllabary": "\u13aa\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear them"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dotsatvgi'a",
+                "romanized": "dotsatvgia",
                 "syllabary": "\u13d9\u13e3\u13db\u13a9\u13a0",
                 "english": "We (another and I) hear those (things)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvyatvgi'a",
+                "romanized": "itsvyatvgia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13db\u13a9\u13a0",
                 "english": "We (others and I) hear you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsatvgi'a",
+                "romanized": "otsatvgia",
                 "syllabary": "\u13a3\u13e3\u13db\u13a9\u13a0",
                 "english": "We (others and I) hear him/her"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsatvgi'a",
+                "romanized": "otsatvgia",
                 "syllabary": "\u13a3\u13e3\u13db\u13a9\u13a0",
                 "english": "We (others and I) hear it"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "gotsatvgi'a",
+                "romanized": "gotsatvgia",
                 "syllabary": "\u13aa\u13e3\u13db\u13a9\u13a0",
                 "english": "We (others and I) hear them"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsatvgi'a",
+                "romanized": "dotsatvgia",
                 "syllabary": "\u13d9\u13e3\u13db\u13a9\u13a0",
                 "english": "We (others and I) hear those (things)"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "otsatvgi'a",
+                "romanized": "otsatvgia",
                 "syllabary": "\u13a3\u13e3\u13db\u13a9\u13a0",
                 "english": "We (you and I and another or others) hear him/her"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "otsatvgi'a",
+                "romanized": "otsatvgia",
                 "syllabary": "\u13a3\u13e3\u13db\u13a9\u13a0",
                 "english": "We (you and I and another or others) hear it"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "gedatvgi'a",
+                "romanized": "gedatvgia",
                 "syllabary": "\u13a8\u13d3\u13db\u13a9\u13a0",
                 "english": "We (you and I and another or others) hear them"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "dedatvgi'a",
+                "romanized": "dedatvgia",
                 "syllabary": "\u13d5\u13d3\u13db\u13a9\u13a0",
                 "english": "We (you and I and another or others) hear those (things)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gvgwatvgi'a",
+                "romanized": "gvgwatvgia",
                 "syllabary": "\u13ac\u13c6\u13db\u13a9\u13a0",
                 "english": "They hear me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsatvgi'a",
+                "romanized": "getsatvgia",
                 "syllabary": "\u13a8\u13e3\u13db\u13a9\u13a0",
                 "english": "They hear you (singular)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anatvgi'a",
+                "romanized": "anatvgia",
                 "syllabary": "\u13a0\u13be\u13db\u13a9\u13a0",
                 "english": "They hear him/her"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anatvgi'a",
+                "romanized": "anatvgia",
                 "syllabary": "\u13a0\u13be\u13db\u13a9\u13a0",
                 "english": "They hear it"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "geginatvgi'a",
+                "romanized": "geginatvgia",
                 "syllabary": "\u13a8\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "They hear you and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "goginatvgi'a",
+                "romanized": "goginatvgia",
                 "syllabary": "\u13aa\u13a9\u13be\u13db\u13a9\u13a0",
                 "english": "They hear someone else and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gegatvgi'a",
+                "romanized": "gegatvgia",
                 "syllabary": "\u13a8\u13a6\u13db\u13a9\u13a0",
                 "english": "They hear you and me and another or others"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gogatvgi'a",
+                "romanized": "gogatvgia",
                 "syllabary": "\u13aa\u13a6\u13db\u13a9\u13a0",
                 "english": "They hear others and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gesdatvgi'a",
+                "romanized": "gesdatvgia",
                 "syllabary": "\u13a8\u13cd\u13d3\u13db\u13a9\u13a0",
                 "english": "They hear you (two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsatvgi'a",
+                "romanized": "getsatvgia",
                 "syllabary": "\u13a8\u13e3\u13db\u13a9\u13a0",
                 "english": "They hear you (more than two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "danatvgi'a",
+                "romanized": "danatvgia",
                 "syllabary": "\u13d3\u13be\u13db\u13a9\u13a0",
                 "english": "They hear them"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "danatvgi'a",
+                "romanized": "danatvgia",
                 "syllabary": "\u13d3\u13be\u13db\u13a9\u13a0",
                 "english": "They hear those things"
             }
@@ -4708,13 +4708,13 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvyvsgalv'vsga",
+                "romanized": "gvyvsgalvvsga",
                 "syllabary": "\u13ac\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "I am hiding you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyvsgalv'vsga",
+                "romanized": "tsiyvsgalvvsga",
                 "syllabary": "\u13e5\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "I am hiding him/her"
             },
@@ -4726,19 +4726,19 @@
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvyvsgalv'vsga",
+                "romanized": "sdvyvsgalvvsga",
                 "syllabary": "\u13cd\u13db\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "I am hiding you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvyvsgalv'vsga",
+                "romanized": "itsvyvsgalvvsga",
                 "syllabary": "\u13a2\u13e8\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "I am hiding you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsiyvsgalv'vsga",
+                "romanized": "gatsiyvsgalvvsga",
                 "syllabary": "\u13a6\u13e5\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "I am hiding them"
             },
@@ -4750,13 +4750,13 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgwvsgalv'vsga",
+                "romanized": "sgwvsgalvvsga",
                 "syllabary": "\u13cd\u13cb\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (singular) are hiding me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyvsgalv'vsga",
+                "romanized": "hiyvsgalvvsga",
                 "syllabary": "\u13af\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (singular) are hiding him/her"
             },
@@ -4768,19 +4768,19 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sginvsgalv'vsga",
+                "romanized": "sginvsgalvvsga",
                 "syllabary": "\u13cd\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (singular) are hiding someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgiyvsgalv'vsga",
+                "romanized": "sgiyvsgalvvsga",
                 "syllabary": "\u13cd\u13a9\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (singular) are hiding others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahiyvsgalv'vsga",
+                "romanized": "gahiyvsgalvvsga",
                 "syllabary": "\u13a6\u13af\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (singular) are hiding them"
             },
@@ -4792,19 +4792,19 @@
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "agwvsgalv'vsga",
+                "romanized": "agwvsgalvvsga",
                 "syllabary": "\u13a0\u13cb\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "tsvsgalv'vsga",
+                "romanized": "tsvsgalvvsga",
                 "syllabary": "\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding you (singular)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "gvsgalv'vsga",
+                "romanized": "gvsgalvvsga",
                 "syllabary": "\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding him/her"
             },
@@ -4816,43 +4816,43 @@
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ginvsgalv'vsga",
+                "romanized": "ginvsgalvvsga",
                 "syllabary": "\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding you and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "oginvsgalv'vsga",
+                "romanized": "oginvsgalvvsga",
                 "syllabary": "\u13a3\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding someone else and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "igvsgalv'vsga",
+                "romanized": "igvsgalvvsga",
                 "syllabary": "\u13a2\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding another (or others), me and you"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ogvsgalv'vsga",
+                "romanized": "ogvsgalvvsga",
                 "syllabary": "\u13a3\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding others and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "sdvsgalv'vsga",
+                "romanized": "sdvsgalvvsga",
                 "syllabary": "\u13cd\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding you (two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "itsvsgalv'vsga",
+                "romanized": "itsvsgalvvsga",
                 "syllabary": "\u13a2\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding you (more than two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "degvsgalv'vsga",
+                "romanized": "degvsgalvvsga",
                 "syllabary": "\u13d5\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "S/he is hiding them"
             },
@@ -4864,13 +4864,13 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginvsgalv'vsga",
+                "romanized": "sginvsgalvvsga",
                 "syllabary": "\u13cd\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (two) are hiding me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdvsgalv'vsga",
+                "romanized": "esdvsgalvvsga",
                 "syllabary": "\u13a1\u13cd\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (two) are hiding him/her"
             },
@@ -4882,19 +4882,19 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginv'vsgalv'vsga",
+                "romanized": "sginvvsgalvvsga",
                 "syllabary": "\u13cd\u13a9\u13c5\u13a5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (two) are hiding someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desginvsgalv'vsga",
+                "romanized": "desginvsgalvvsga",
                 "syllabary": "\u13d5\u13cd\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (two) are hiding others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdvsgalv'vsga",
+                "romanized": "desdvsgalvvsga",
                 "syllabary": "\u13d5\u13cd\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (two) are hiding them"
             },
@@ -4906,13 +4906,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "sgiyvsgalv'vsga",
+                "romanized": "sgiyvsgalvvsga",
                 "syllabary": "\u13cd\u13a9\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (more than two) are hiding me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsvsgalv'vsga",
+                "romanized": "etsvsgalvvsga",
                 "syllabary": "\u13a1\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (more than two) are hiding him/her"
             },
@@ -4924,13 +4924,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "desgiyvsgalv'vsga",
+                "romanized": "desgiyvsgalvvsga",
                 "syllabary": "\u13d5\u13cd\u13a9\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (more than two) are hiding someone else and me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsvsgalv'vsga",
+                "romanized": "detsvsgalvvsga",
                 "syllabary": "\u13d5\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "You (more than two) are hiding them"
             },
@@ -4942,7 +4942,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "envsgalv'vsga",
+                "romanized": "envsgalvvsga",
                 "syllabary": "\u13a1\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (you and I) are hiding him/her"
             },
@@ -4954,7 +4954,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "genvsgalv'vsga",
+                "romanized": "genvsgalvvsga",
                 "syllabary": "\u13a8\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (you and I) are hiding them"
             },
@@ -4966,13 +4966,13 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyvsgalv'vsga",
+                "romanized": "sdvyvsgalvvsga",
                 "syllabary": "\u13cd\u13db\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (another and I) are hiding you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdvsgalv'vsga",
+                "romanized": "osdvsgalvvsga",
                 "syllabary": "\u13a3\u13cd\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (another and I) are hiding him/her"
             },
@@ -4984,19 +4984,19 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "desdvyvsgalv'vsga",
+                "romanized": "desdvyvsgalvvsga",
                 "syllabary": "\u13d5\u13cd\u13db\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (another and I) are hiding you (two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "detsvyvsgalv'vsga",
+                "romanized": "detsvyvsgalvvsga",
                 "syllabary": "\u13d5\u13e8\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (another and I) are hiding you (more than two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dotsvsgalv'vsga",
+                "romanized": "dotsvsgalvvsga",
                 "syllabary": "\u13d9\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (another and I) are hiding them"
             },
@@ -5008,13 +5008,13 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvyvsgalv'vsga",
+                "romanized": "itsvyvsgalvvsga",
                 "syllabary": "\u13a2\u13e8\u13f4\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (others and I) are hiding you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsvsgalv'vsga",
+                "romanized": "otsvsgalvvsga",
                 "syllabary": "\u13a3\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (others and I) are hiding him/her"
             },
@@ -5026,7 +5026,7 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsvsgalv'vsga",
+                "romanized": "dotsvsgalvvsga",
                 "syllabary": "\u13d9\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (others and I) are hiding them"
             },
@@ -5038,7 +5038,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "edvsgalv'vsga",
+                "romanized": "edvsgalvvsga",
                 "syllabary": "\u13a1\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (you and I and another or others) are hiding him/her"
             },
@@ -5050,7 +5050,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "dedvsgalv'vsga",
+                "romanized": "dedvsgalvvsga",
                 "syllabary": "\u13d5\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "We (you and I and another or others) are hiding them"
             },
@@ -5062,19 +5062,19 @@
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gvgwvsgalv'vsga",
+                "romanized": "gvgwvsgalvvsga",
                 "syllabary": "\u13ac\u13cb\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsvsgalv'vsga",
+                "romanized": "getsvsgalvvsga",
                 "syllabary": "\u13a8\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding you (singular)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "anvsgalv'vsga",
+                "romanized": "anvsgalvvsga",
                 "syllabary": "\u13a0\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding him/her"
             },
@@ -5086,43 +5086,43 @@
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "geginvsgalv'vsga",
+                "romanized": "geginvsgalvvsga",
                 "syllabary": "\u13a8\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding you and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "goginvsgalv'vsga",
+                "romanized": "goginvsgalvvsga",
                 "syllabary": "\u13aa\u13a9\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding someone else and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gegvsgalv'vsga",
+                "romanized": "gegvsgalvvsga",
                 "syllabary": "\u13a8\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding you and me and another or others"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gogvsgalv'vsga",
+                "romanized": "gogvsgalvvsga",
                 "syllabary": "\u13aa\u13ac\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding others and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gesdvsgalv'vsga",
+                "romanized": "gesdvsgalvvsga",
                 "syllabary": "\u13a8\u13cd\u13db\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding you (two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsvsgalv'vsga",
+                "romanized": "getsvsgalvvsga",
                 "syllabary": "\u13a8\u13e8\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding you (more than two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "danvsgalv'vsga",
+                "romanized": "danvsgalvvsga",
                 "syllabary": "\u13d3\u13c5\u13cd\u13a6\u13b8\u13a5\u13cd\u13a6",
                 "english": "They are hiding them"
             },
@@ -6061,37 +6061,37 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "tsi'iha",
+                "romanized": "tsiiha",
                 "syllabary": "\u13e5\u13a2\u13ad",
                 "english": "I am killing him/her"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsi'iha",
+                "romanized": "tsiiha",
                 "syllabary": "\u13e5\u13a2\u13ad",
                 "english": "I am killing it"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "desdv'iha",
+                "romanized": "desdviha",
                 "syllabary": "\u13d5\u13cd\u13db\u13a2\u13ad",
                 "english": "I am killing you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "detsv'iha",
+                "romanized": "detsviha",
                 "syllabary": "\u13d5\u13e8\u13a2\u13ad",
                 "english": "I am killing you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "degatsi'iha",
+                "romanized": "degatsiiha",
                 "syllabary": "\u13d5\u13a6\u13e5\u13a2\u13ad",
                 "english": "I am killing them"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "detsi'iha",
+                "romanized": "detsiiha",
                 "syllabary": "\u13d5\u13e5\u13a2\u13ad",
                 "english": "I am killing those things"
             },
@@ -6103,7 +6103,7 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hi'iha",
+                "romanized": "hiiha",
                 "syllabary": "\u13af\u13a2\u13ad",
                 "english": "You (singular) are killing him/her"
             },
@@ -6115,25 +6115,25 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "desgini'iha",
+                "romanized": "desginiiha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13c2\u13a2\u13ad",
                 "english": "You (singular) are killing someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "desgi'iha",
+                "romanized": "desgiiha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13a2\u13ad",
                 "english": "You (singular) are killing others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "degahi'iha",
+                "romanized": "degahiiha",
                 "syllabary": "\u13d5\u13a6\u13af\u13a2\u13ad",
                 "english": "You (singular) are killing them"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "dehi'hiha",
+                "romanized": "dehihiha",
                 "syllabary": "\u13d5\u13af\u13af\u13ad",
                 "english": "You (singular) are killing those things"
             },
@@ -6211,13 +6211,13 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sgini'iha",
+                "romanized": "sginiiha",
                 "syllabary": "\u13cd\u13a9\u13c2\u13a2\u13ad",
                 "english": "You two are killing me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdi'iha",
+                "romanized": "esdiiha",
                 "syllabary": "\u13a1\u13cd\u13d7\u13a2\u13ad",
                 "english": "You two are killing him/her"
             },
@@ -6229,19 +6229,19 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desgini'iha",
+                "romanized": "desginiiha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13c2\u13a2\u13ad",
                 "english": "You two are killing someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desgi'iha",
+                "romanized": "desgiiha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13a2\u13ad",
                 "english": "You two are killing others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "degesdi'iha",
+                "romanized": "degesdiiha",
                 "syllabary": "\u13d5\u13a8\u13cd\u13d7\u13a2\u13ad",
                 "english": "You two are killing them"
             },
@@ -6253,13 +6253,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgi'iha",
+                "romanized": "isgiiha",
                 "syllabary": "\u13a2\u13cd\u13a9\u13a2\u13ad",
                 "english": "You (more than two) are killing me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsi'iha",
+                "romanized": "etsiiha",
                 "syllabary": "\u13a1\u13e5\u13a2\u13ad",
                 "english": "You (more than two) are killing him/her"
             },
@@ -6271,7 +6271,7 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "desgi'iha",
+                "romanized": "desgiiha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13a2\u13ad",
                 "english": "You (more than two) are killing someone else and me"
             },
@@ -6289,7 +6289,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "eni'iha",
+                "romanized": "eniiha",
                 "syllabary": "\u13a1\u13c2\u13a2\u13ad",
                 "english": "We (you and I) are killing him/her"
             },
@@ -6301,7 +6301,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "degeni'iha",
+                "romanized": "degeniiha",
                 "syllabary": "\u13d5\u13a8\u13c2\u13a2\u13ad",
                 "english": "We (you and I) are killing them"
             },
@@ -6313,37 +6313,37 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdv'iha",
+                "romanized": "sdviha",
                 "syllabary": "\u13cd\u13db\u13a2\u13ad",
                 "english": "We (another and I) are killing you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdi'iha",
+                "romanized": "osdiiha",
                 "syllabary": "\u13a3\u13cd\u13d7\u13a2\u13ad",
                 "english": "We (another and I) are killing him/her"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdi'iha",
+                "romanized": "osdiiha",
                 "syllabary": "\u13a3\u13cd\u13d7\u13a2\u13ad",
                 "english": "We (another and I) are killing it"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "desdv'iha",
+                "romanized": "desdviha",
                 "syllabary": "\u13d5\u13cd\u13db\u13a2\u13ad",
                 "english": "We (another and I) are killing you two"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "detsv'iha",
+                "romanized": "detsviha",
                 "syllabary": "\u13d5\u13e8\u13a2\u13ad",
                 "english": "We (another and I) are killing you (more than two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "degosdi'iha",
+                "romanized": "degosdiiha",
                 "syllabary": "\u13d5\u13aa\u13cd\u13d7\u13a2\u13ad",
                 "english": "We (another and I) are killing them"
             },
@@ -6355,13 +6355,13 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsv'iha",
+                "romanized": "itsviha",
                 "syllabary": "\u13a2\u13e8\u13a2\u13ad",
                 "english": "We (others and I) are killing you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsi'iha",
+                "romanized": "otsiiha",
                 "syllabary": "\u13a3\u13e5\u13a2\u13ad",
                 "english": "We (others and I) are killing him/her"
             },
@@ -6373,7 +6373,7 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "degotsi'iha",
+                "romanized": "degotsiiha",
                 "syllabary": "\u13d5\u13aa\u13e5\u13a2\u13ad",
                 "english": "We (others and I) are killing them"
             },
@@ -6385,7 +6385,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "otsi'iha",
+                "romanized": "otsiiha",
                 "syllabary": "\u13a3\u13e5\u13a2\u13ad",
                 "english": "We (you and I and another or others) are killing him/her"
             },
@@ -6397,7 +6397,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "degedi'iha",
+                "romanized": "degediiha",
                 "syllabary": "\u13d5\u13a8\u13d7\u13a2\u13ad",
                 "english": "We (you and I and another or others) are killing them"
             },
@@ -7408,13 +7408,13 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvgeyu'a",
+                "romanized": "gvgeyua",
                 "syllabary": "\u13ac\u13a8\u13f3\u13a0",
                 "english": "I love you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsigeyu'a",
+                "romanized": "tsigeyua",
                 "syllabary": "\u13e5\u13a8\u13f3\u13a0",
                 "english": "I love him/her"
             },
@@ -7426,19 +7426,19 @@
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvgeyu'a",
+                "romanized": "sdvgeyua",
                 "syllabary": "\u13cd\u13db\u13a8\u13f3\u13a0",
                 "english": "I love you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvgeyu'a",
+                "romanized": "itsvgeyua",
                 "syllabary": "\u13a2\u13e8\u13a8\u13f3\u13a0",
                 "english": "I love you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsigeyu'a",
+                "romanized": "gatsigeyua",
                 "syllabary": "\u13a6\u13e5\u13a8\u13f3\u13a0",
                 "english": "I love them"
             },
@@ -7456,7 +7456,7 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "higeyu'a",
+                "romanized": "higeyua",
                 "syllabary": "\u13af\u13a8\u13f3\u13a0",
                 "english": "You love him/her"
             },
@@ -7468,19 +7468,19 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sginigeyu'a",
+                "romanized": "sginigeyua",
                 "syllabary": "\u13cd\u13a9\u13c2\u13a8\u13f3\u13a0",
                 "english": "You love someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "isgigeyu'a",
+                "romanized": "isgigeyua",
                 "syllabary": "\u13a2\u13cd\u13a9\u13a8\u13f3\u13a0",
                 "english": "You love others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahigeyu'a",
+                "romanized": "gahigeyua",
                 "syllabary": "\u13a6\u13af\u13a8\u13f3\u13a0",
                 "english": "You love them"
             },
@@ -7570,7 +7570,7 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdigeyu'a",
+                "romanized": "esdigeyua",
                 "syllabary": "\u13a1\u13cd\u13d7\u13a8\u13f3\u13a0",
                 "english": "You two love him/her"
             },
@@ -7582,19 +7582,19 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginigeyu'a",
+                "romanized": "sginigeyua",
                 "syllabary": "\u13cd\u13a9\u13c2\u13a8\u13f3\u13a0",
                 "english": "You two love someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sgigeyu'a",
+                "romanized": "sgigeyua",
                 "syllabary": "\u13cd\u13a9\u13a8\u13f3\u13a0",
                 "english": "You two love others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "gesdigeyu'a",
+                "romanized": "gesdigeyua",
                 "syllabary": "\u13a8\u13cd\u13d7\u13a8\u13f3\u13a0",
                 "english": "You two love them"
             },
@@ -7606,13 +7606,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgigeyu'a",
+                "romanized": "isgigeyua",
                 "syllabary": "\u13a2\u13cd\u13a9\u13a8\u13f3\u13a0",
                 "english": "You (more than two) love me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsigeyu'a",
+                "romanized": "etsigeyua",
                 "syllabary": "\u13a1\u13e5\u13a8\u13f3\u13a0",
                 "english": "You (more than two) love him/her"
             },
@@ -7624,7 +7624,7 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgigeyu'a",
+                "romanized": "isgigeyua",
                 "syllabary": "\u13a2\u13cd\u13a9\u13a8\u13f3\u13a0",
                 "english": "You (more than two) love someone else and me"
             },
@@ -7642,7 +7642,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "enigeyu'a",
+                "romanized": "enigeyua",
                 "syllabary": "\u13a1\u13c2\u13a8\u13f3\u13a0",
                 "english": "We (you and I) love him/her"
             },
@@ -7660,13 +7660,13 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvgeyu'a",
+                "romanized": "sdvgeyua",
                 "syllabary": "\u13cd\u13db\u13a8\u13f3\u13a0",
                 "english": "We (another and I) love you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdigeyu'a",
+                "romanized": "osdigeyua",
                 "syllabary": "\u13a3\u13cd\u13d7\u13a8\u13f3\u13a0",
                 "english": "We (another and I) love him/her"
             },
@@ -7678,13 +7678,13 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "isdvgeyu'a",
+                "romanized": "isdvgeyua",
                 "syllabary": "\u13a2\u13cd\u13db\u13a8\u13f3\u13a0",
                 "english": "We (another and I) love you two"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "itsvgeyu'a",
+                "romanized": "itsvgeyua",
                 "syllabary": "\u13a2\u13e8\u13a8\u13f3\u13a0",
                 "english": "We (another and I) love you (more than two)"
             },
@@ -7702,13 +7702,13 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvgeyu'a",
+                "romanized": "itsvgeyua",
                 "syllabary": "\u13a2\u13e8\u13a8\u13f3\u13a0",
                 "english": "We (others and I) love you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsigeyu'a",
+                "romanized": "otsigeyua",
                 "syllabary": "\u13a3\u13e5\u13a8\u13f3\u13a0",
                 "english": "We (others and I) love him/her"
             },
@@ -7732,7 +7732,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "edigeyu'a",
+                "romanized": "edigeyua",
                 "syllabary": "\u13a1\u13d7\u13a8\u13f3\u13a0",
                 "english": "We (you and I and another or others) love him/her"
             },
@@ -7756,7 +7756,7 @@
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gvgigeyu'a",
+                "romanized": "gvgigeyua",
                 "syllabary": "\u13ac\u13a9\u13a8\u13f3\u13a0",
                 "english": "They love me"
             },
@@ -8268,427 +8268,427 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvyanvdadi'a",
+                "romanized": "gvyanvdadia",
                 "syllabary": "\u13ac\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyanvdadi'a",
+                "romanized": "tsiyanvdadia",
                 "syllabary": "\u13e5\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember him/her"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "ganvdadi'a",
+                "romanized": "ganvdadia",
                 "syllabary": "\u13a6\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember it"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvyanvdadi'a",
+                "romanized": "sdvyanvdadia",
                 "syllabary": "\u13cd\u13db\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvyanvdadi'a",
+                "romanized": "itsvyanvdadia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsiyanvdadi'a",
+                "romanized": "gatsiyanvdadia",
                 "syllabary": "\u13a6\u13e5\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember them"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "deganvdadi'a",
+                "romanized": "deganvdadia",
                 "syllabary": "\u13d5\u13a6\u13c5\u13d3\u13d7\u13a0",
                 "english": "I remember those things"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgwanvdadi'a",
+                "romanized": "sgwanvdadia",
                 "syllabary": "\u13cd\u13c6\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyanvdadi'a",
+                "romanized": "hiyanvdadia",
                 "syllabary": "\u13af\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember him/her"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hanvdadi'a",
+                "romanized": "hanvdadia",
                 "syllabary": "\u13ad\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember it"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sginanvdadi'a",
+                "romanized": "sginanvdadia",
                 "syllabary": "\u13cd\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "isgiyanvdadi'a",
+                "romanized": "isgiyanvdadia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahiyanvdadi'a",
+                "romanized": "gahiyanvdadia",
                 "syllabary": "\u13a6\u13af\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember them"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "dehanvdadi'a",
+                "romanized": "dehanvdadia",
                 "syllabary": "\u13d5\u13ad\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (singular) remember those (things)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "agwanvdadi'a",
+                "romanized": "agwanvdadia",
                 "syllabary": "\u13a0\u13c6\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "tsanvdadi'a",
+                "romanized": "tsanvdadia",
                 "syllabary": "\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers you (singular)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "aganvdadi'a",
+                "romanized": "aganvdadia",
                 "syllabary": "\u13a0\u13a6\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers him/her"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "anhdadi'a",
+                "romanized": "anhdadia",
                 "syllabary": "\u13a0\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers it"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "ginanvdadi'a",
+                "romanized": "ginanvdadia",
                 "syllabary": "\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers you and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "oginanvdadi'a",
+                "romanized": "oginanvdadia",
                 "syllabary": "\u13a3\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers someone else and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "iganvdadi'a",
+                "romanized": "iganvdadia",
                 "syllabary": "\u13a2\u13a6\u13c5\u13d3\u13d7\u13cd\u13aa\u13a0",
                 "english": "S/he remembers another (or others), me and you"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "oganvdadi'a",
+                "romanized": "oganvdadia",
                 "syllabary": "\u13a3\u13a6\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers others and me"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "sdanvdadi'a",
+                "romanized": "sdanvdadia",
                 "syllabary": "\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers you (two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "itsanvdadi'a",
+                "romanized": "itsanvdadia",
                 "syllabary": "\u13a2\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers you (more than two)"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "danvdadi'a",
+                "romanized": "danvdadia",
                 "syllabary": "\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers them"
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "danvdadi'a",
+                "romanized": "danvdadia",
                 "syllabary": "\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "S/he remembers those things"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginanvdadi'a",
+                "romanized": "sginanvdadia",
                 "syllabary": "\u13cd\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdanvdadi'a",
+                "romanized": "esdanvdadia",
                 "syllabary": "\u13a1\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember him/her"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sdanvdadi'a",
+                "romanized": "sdanvdadia",
                 "syllabary": "\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember it"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sgiyanvdadi'a",
+                "romanized": "sgiyanvdadia",
                 "syllabary": "\u13cd\u13a9\u13a4\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginanvdadi'a",
+                "romanized": "sginanvdadia",
                 "syllabary": "\u13cd\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "gesdanvdadi'a",
+                "romanized": "gesdanvdadia",
                 "syllabary": "\u13a8\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember them"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desdanvdadi'a",
+                "romanized": "desdanvdadia",
                 "syllabary": "\u13d5\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (two) remember those (things)"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgiyanvdadi'a",
+                "romanized": "isgiyanvdadia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsanvdadi'a",
+                "romanized": "etsanvdadia",
                 "syllabary": "\u13a1\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember him/her"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "itsanvdadi'a",
+                "romanized": "itsanvdadia",
                 "syllabary": "\u13a2\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember it"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "sgiyanvdadi'a",
+                "romanized": "sgiyanvdadia",
                 "syllabary": "\u13cd\u13a9\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember someone else and me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsanvdadi'a",
+                "romanized": "detsanvdadia",
                 "syllabary": "\u13d5\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember them"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "detsanvdadi'a",
+                "romanized": "detsanvdadia",
                 "syllabary": "\u13d5\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "You (more than two) remember those things"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "enanvdadi'a",
+                "romanized": "enanvdadia",
                 "syllabary": "\u13a1\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I) remember him/her"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "inanvdadi'a",
+                "romanized": "inanvdadia",
                 "syllabary": "\u13a2\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I) remember it"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "genanvdadi'a",
+                "romanized": "genanvdadia",
                 "syllabary": "\u13a8\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I) remember them"
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "denanvdadi'a",
+                "romanized": "denanvdadia",
                 "syllabary": "\u13d5\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I) remember those things"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyanvdadi'a",
+                "romanized": "sdvyanvdadia",
                 "syllabary": "\u13cd\u13db\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdanvdadi'a",
+                "romanized": "osdanvdadia",
                 "syllabary": "\u13a3\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember him/her"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdanvdadi'a",
+                "romanized": "osdanvdadia",
                 "syllabary": "\u13a3\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember it"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyanvdadi'a",
+                "romanized": "sdvyanvdadia",
                 "syllabary": "\u13cd\u13db\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember you (two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "itsvyanvdadi'a",
+                "romanized": "itsvyanvdadia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember you (more than two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "gotsanvdadi'a",
+                "romanized": "gotsanvdadia",
                 "syllabary": "\u13aa\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember them"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "dotsanvdadi'a",
+                "romanized": "dotsanvdadia",
                 "syllabary": "\u13d9\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (another and I) remember those (things)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvyanvdadi'a",
+                "romanized": "itsvyanvdadia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (others and I) remember you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsanvdadi'a",
+                "romanized": "otsanvdadia",
                 "syllabary": "\u13a3\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (others and I) remember him/her"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsanvdadi'a",
+                "romanized": "otsanvdadia",
                 "syllabary": "\u13a3\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (others and I) remember it"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "gotsanvdadi'a",
+                "romanized": "gotsanvdadia",
                 "syllabary": "\u13aa\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (others and I) remember them"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsanvdadi'a",
+                "romanized": "dotsanvdadia",
                 "syllabary": "\u13d9\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (others and I) remember those (things)"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "edanvdadi'a",
+                "romanized": "edanvdadia",
                 "syllabary": "\u13a1\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I and another or others) remember him/her"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "idanvdadi'a",
+                "romanized": "idanvdadia",
                 "syllabary": "\u13a2\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I and another or others) remember it"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "gedanvdadi'a",
+                "romanized": "gedanvdadia",
                 "syllabary": "\u13a8\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I and another or others) remember them"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "dedanvdadi'a",
+                "romanized": "dedanvdadia",
                 "syllabary": "\u13d5\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "We (you and I and another or others) remember those (things)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gvgwanvdadi'a",
+                "romanized": "gvgwanvdadia",
                 "syllabary": "\u13ac\u13c6\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsanvdadi'a",
+                "romanized": "getsanvdadia",
                 "syllabary": "\u13a8\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember you (singular)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "ananvdadi'a",
+                "romanized": "ananvdadia",
                 "syllabary": "\u13a0\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember him/her"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "ananvdadi'a",
+                "romanized": "ananvdadia",
                 "syllabary": "\u13a0\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember it"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "geginanvdadi'a",
+                "romanized": "geginanvdadia",
                 "syllabary": "\u13a8\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember you and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "goginanvdadi'a",
+                "romanized": "goginanvdadia",
                 "syllabary": "\u13aa\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember someone else and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "goganvdadi'a",
+                "romanized": "goganvdadia",
                 "syllabary": "\u13aa\u13a6\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember you and me and another or others"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "goginanvdadi'a",
+                "romanized": "goginanvdadia",
                 "syllabary": "\u13aa\u13a9\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember others and me"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "gesdanvdadi'a",
+                "romanized": "gesdanvdadia",
                 "syllabary": "\u13a8\u13cd\u13d3\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember you (two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "getsanvdadi'a",
+                "romanized": "getsanvdadia",
                 "syllabary": "\u13a8\u13e3\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember you (more than two)"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "dananvdadi'a",
+                "romanized": "dananvdadia",
                 "syllabary": "\u13d3\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember them"
             },
             {
                 "pronoun": "Third Plural",
-                "romanized": "dananvdadi'a",
+                "romanized": "dananvdadia",
                 "syllabary": "\u13d3\u13be\u13c5\u13d3\u13d7\u13a0",
                 "english": "They remember those things"
             }
@@ -10962,43 +10962,43 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvyali'elitseha",
+                "romanized": "gvyalielitseha",
                 "syllabary": "\u13ac\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyali'elitseha",
+                "romanized": "tsiyalielitseha",
                 "syllabary": "\u13e5\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank him/her"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyali'elitseha",
+                "romanized": "tsiyalielitseha",
                 "syllabary": "\u13e5\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank it"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvyali'elitseha",
+                "romanized": "sdvyalielitseha",
                 "syllabary": "\u13cd\u13db\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank you two"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvyali'elitseha",
+                "romanized": "itsvyalielitseha",
                 "syllabary": "\u13a2\u13e8\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsiyali'elitseha",
+                "romanized": "gatsiyalielitseha",
                 "syllabary": "\u13a6\u13e5\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank them"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "degali'elitseha",
+                "romanized": "degalielitseha",
                 "syllabary": "\u13d5\u13a6\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "I thank those things"
             },
@@ -11010,13 +11010,13 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyali'elitseha",
+                "romanized": "hiyalielitseha",
                 "syllabary": "\u13af\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (singular) thank him/her"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyali'elitseha",
+                "romanized": "hiyalielitseha",
                 "syllabary": "\u13af\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (singular) thank it"
             },
@@ -11028,13 +11028,13 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgiyali'elitseha",
+                "romanized": "sgiyalielitseha",
                 "syllabary": "\u13cd\u13a9\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (singular) thank others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahiyali'elitseha",
+                "romanized": "gahiyalielitseha",
                 "syllabary": "\u13a6\u13af\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (singular) thank them"
             },
@@ -11118,31 +11118,31 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginali'elitseha",
+                "romanized": "sginalielitseha",
                 "syllabary": "\u13cd\u13a9\u13be\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (two) are thanking me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdali'elitseha",
+                "romanized": "esdalielitseha",
                 "syllabary": "\u13a1\u13cd\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (two) are thanking him/her"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdali'elitseha",
+                "romanized": "esdalielitseha",
                 "syllabary": "\u13a1\u13cd\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (two) are thanking it"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desginali'elitseha",
+                "romanized": "desginalielitseha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13be\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (two) are thanking someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desgiyali'elitseha",
+                "romanized": "desgiyalielitseha",
                 "syllabary": "\u13d5\u13cd\u13a9\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (two) are thanking others and me"
             },
@@ -11160,13 +11160,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "sgiyali'elitseha",
+                "romanized": "sgiyalielitseha",
                 "syllabary": "\u13cd\u13a9\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (more than two) are thanking me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsali'elitseha",
+                "romanized": "etsalielitseha",
                 "syllabary": "\u13a1\u13e3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (more than two) are thanking him/her"
             },
@@ -11178,7 +11178,7 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "sgiyali'elitseha",
+                "romanized": "sgiyalielitseha",
                 "syllabary": "\u13cd\u13a9\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "You (more than two) are thanking someone else and me"
             },
@@ -11196,7 +11196,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "enali'elitseha",
+                "romanized": "enalielitseha",
                 "syllabary": "\u13a1\u13be\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (you and I) are thanking him/her"
             },
@@ -11208,7 +11208,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "genali'elitseha",
+                "romanized": "genalielitseha",
                 "syllabary": "\u13a8\u13be\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (you and I) are thanking them"
             },
@@ -11220,13 +11220,13 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyali'elitseha",
+                "romanized": "sdvyalielitseha",
                 "syllabary": "\u13cd\u13db\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (another and I) are thanking you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdali'elitseha",
+                "romanized": "osdalielitseha",
                 "syllabary": "\u13a3\u13cd\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (another and I) are thanking him/her"
             },
@@ -11238,19 +11238,19 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyali'elitseha",
+                "romanized": "sdvyalielitseha",
                 "syllabary": "\u13cd\u13db\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (another and I) are thanking you two"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "itsvyali'elitseha",
+                "romanized": "itsvyalielitseha",
                 "syllabary": "\u13a2\u13e8\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (another and I) are thanking you (more than two)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "gosdali'elitseha",
+                "romanized": "gosdalielitseha",
                 "syllabary": "\u13aa\u13cd\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (another and I) are thanking them"
             },
@@ -11262,25 +11262,25 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvyali'elitseha",
+                "romanized": "itsvyalielitseha",
                 "syllabary": "\u13a2\u13e8\u13ef\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (others and I) are thanking you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsali'elitseha",
+                "romanized": "otsalielitseha",
                 "syllabary": "\u13a3\u13e3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (others and I) are thanking him/her"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsali'elitseha",
+                "romanized": "otsalielitseha",
                 "syllabary": "\u13a3\u13e3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (others) and I are thanking it"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "gotsali'elitseha",
+                "romanized": "gotsalielitseha",
                 "syllabary": "\u13aa\u13e3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (others and I) are thanking them"
             },
@@ -11292,19 +11292,19 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "edali'elitseha",
+                "romanized": "edalielitseha",
                 "syllabary": "\u13a1\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (you and I and another or others) are thanking him/her"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "edali'elitseha",
+                "romanized": "edalielitseha",
                 "syllabary": "\u13a1\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (you and I and another or others) are thanking it"
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "gedali'elitseha",
+                "romanized": "gedalielitseha",
                 "syllabary": "\u13a8\u13d3\u13b5\u13a1\u13b5\u13e4\u13ad",
                 "english": "We (others and I) are thanking them"
             },
@@ -11864,13 +11864,13 @@
         "PRESENT": [
             {
                 "pronoun": "First Singular",
-                "romanized": "gvyaduli'a",
+                "romanized": "gvyadulia",
                 "syllabary": "\u13ac\u13ef\u13da\u13b5\u13a0",
                 "english": "I want you (singular)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "tsiyaduli'a",
+                "romanized": "tsiyadulia",
                 "syllabary": "\u13e5\u13ef\u13da\u13b5\u13a0",
                 "english": "I want him/her"
             },
@@ -11882,19 +11882,19 @@
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "sdvyaduli'a",
+                "romanized": "sdvyadulia",
                 "syllabary": "\u13cd\u13db\u13ef\u13da\u13b5\u13a0",
                 "english": "I want you (two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "itsvyaduli'a",
+                "romanized": "itsvyadulia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13da\u13b5\u13a0",
                 "english": "I want you (more than two)"
             },
             {
                 "pronoun": "First Singular",
-                "romanized": "gatsiyaduli'a",
+                "romanized": "gatsiyadulia",
                 "syllabary": "\u13a6\u13e5\u13ef\u13da\u13b5\u13a0",
                 "english": "I want them"
             },
@@ -11912,7 +11912,7 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "hiyaduli'a",
+                "romanized": "hiyadulia",
                 "syllabary": "\u13af\u13ef\u13da\u13b5\u13a0",
                 "english": "You (singular) want him/her"
             },
@@ -11924,19 +11924,19 @@
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sginaduli'a",
+                "romanized": "sginadulia",
                 "syllabary": "\u13cd\u13a9\u13be\u13da\u13b5\u13a0",
                 "english": "You (singular) want someone else and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "sgiyaduli'a",
+                "romanized": "sgiyadulia",
                 "syllabary": "\u13cd\u13a9\u13ef\u13da\u13b5\u13a0",
                 "english": "You (singular) want others and me"
             },
             {
                 "pronoun": "Second Singular",
-                "romanized": "gahiyaduli'a",
+                "romanized": "gahiyadulia",
                 "syllabary": "\u13a6\u13af\u13ef\u13da\u13b5\u13a0",
                 "english": "You (singular) want them"
             },
@@ -11960,7 +11960,7 @@
             },
             {
                 "pronoun": "Third Singular",
-                "romanized": "agaduli'a",
+                "romanized": "agadulia",
                 "syllabary": "\u13a0\u13a6\u13da\u13b5\u13a0",
                 "english": "S/he wants him/her"
             },
@@ -12020,13 +12020,13 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "sginaduli'a",
+                "romanized": "sginadulia",
                 "syllabary": "\u13cd\u13a9\u13be\u13da\u13b5\u13a0",
                 "english": "You (two) want me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "esdaduli'a",
+                "romanized": "esdadulia",
                 "syllabary": "\u13a1\u13cd\u13d3\u13da\u13b5\u13a0",
                 "english": "You (two) want him/her"
             },
@@ -12038,19 +12038,19 @@
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "desginaduli'a",
+                "romanized": "desginadulia",
                 "syllabary": "\u13d5\u13cd\u13a9\u13be\u13da\u13b5\u13a0",
                 "english": "You (two) want someone else and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "isgiyaduli'a",
+                "romanized": "isgiyadulia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13da\u13b5\u13a0",
                 "english": "You (two) want others and me"
             },
             {
                 "pronoun": "Second Dual",
-                "romanized": "gahiyaduli'a",
+                "romanized": "gahiyadulia",
                 "syllabary": "\u13a6\u13af\u13ef\u13da\u13b5\u13a0",
                 "english": "You (two) want them"
             },
@@ -12062,13 +12062,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "isgiyaduli'a",
+                "romanized": "isgiyadulia",
                 "syllabary": "\u13a2\u13cd\u13a9\u13ef\u13da\u13b5\u13a0",
                 "english": "You (more than two) want me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "etsaduli'a",
+                "romanized": "etsadulia",
                 "syllabary": "\u13a1\u13e3\u13da\u13b5\u13a0",
                 "english": "You (more than two) want him/her"
             },
@@ -12080,13 +12080,13 @@
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "desgiyaduli'a",
+                "romanized": "desgiyadulia",
                 "syllabary": "\u13d5\u13cd\u13a9\u13ef\u13da\u13b5\u13a0",
                 "english": "You (more than two) want someone else and me"
             },
             {
                 "pronoun": "Second Plural",
-                "romanized": "gahiyaduli'a",
+                "romanized": "gahiyadulia",
                 "syllabary": "\u13a6\u13af\u13ef\u13da\u13b5\u13a0",
                 "english": "You (more than two) want them (animate)"
             },
@@ -12098,7 +12098,7 @@
             },
             {
                 "pronoun": "First Dual Inclusive",
-                "romanized": "enaduli'a",
+                "romanized": "enadulia",
                 "syllabary": "\u13a1\u13be\u13da\u13b5\u13a0",
                 "english": "We (you and I) want him/her"
             },
@@ -12122,13 +12122,13 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyaduli'a",
+                "romanized": "sdvyadulia",
                 "syllabary": "\u13cd\u13db\u13ef\u13da\u13b5\u13a0",
                 "english": "We (another and I) want you (singular)"
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "osdaduli'a",
+                "romanized": "osdadulia",
                 "syllabary": "\u13a3\u13cd\u13d3\u13da\u13b5\u13a0",
                 "english": "We (another and I) want him/her"
             },
@@ -12140,7 +12140,7 @@
             },
             {
                 "pronoun": "First Dual Exclusive",
-                "romanized": "sdvyaduli'a",
+                "romanized": "sdvyadulia",
                 "syllabary": "\u13cd\u13db\u13ef\u13da\u13b5\u13a0",
                 "english": "We (another and I) want you (two)"
             },
@@ -12158,13 +12158,13 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "itsvyaduli'a",
+                "romanized": "itsvyadulia",
                 "syllabary": "\u13a2\u13e8\u13ef\u13da\u13b5\u13a0",
                 "english": "We (others and I) want you (singular)"
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "otsaduli'a",
+                "romanized": "otsadulia",
                 "syllabary": "\u13a3\u13e3\u13da\u13b5\u13a0",
                 "english": "We (others and I) want him/her"
             },
@@ -12176,7 +12176,7 @@
             },
             {
                 "pronoun": "First Plural Exclusive",
-                "romanized": "dotsaduli'a",
+                "romanized": "dotsadulia",
                 "syllabary": "\u13d9\u13e3\u13da\u13b5\u13a0",
                 "english": "We (others and I) want them"
             },
@@ -12188,7 +12188,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "otsaduli'a",
+                "romanized": "otsadulia",
                 "syllabary": "\u13a3\u13e3\u13da\u13b5\u13a0",
                 "english": "We (you and I and other or others) want him/her"
             },
@@ -12200,7 +12200,7 @@
             },
             {
                 "pronoun": "First Plural Inclusive",
-                "romanized": "gedaduli'a",
+                "romanized": "gedadulia",
                 "syllabary": "\u13a8\u13d3\u13da\u13b5\u13a0",
                 "english": "We (you and I and other or others) want them"
             },

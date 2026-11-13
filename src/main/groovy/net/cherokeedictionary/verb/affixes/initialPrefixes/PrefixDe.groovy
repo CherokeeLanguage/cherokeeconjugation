@@ -38,9 +38,25 @@ class PrefixDe implements Affix {
                 boolean isVowelBeginning = StringUtility.startsWithVowelSyllabary(baseReturnValue)
 
                 if (isVowelBeginning) {
-                    if (verbTense == Tense.INFINITIVE
-                            || verbTense == Tense.FUTURE_COMMAND) {
-                        baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮧ', 'Ꮴ', 'Ꮵ', 'Ꮶ', 'Ꮷ', 'Ꮸ'])
+                    if (verbTense == Tense.INFINITIVE) {
+                        // tio 12Nov26: infinitive j-series (guide: "de- becomes j-
+                        // in infinitive and imperative forms when followed by a
+                        // vowel other than a-. When followed by a-, de- becomes
+                        // di-"), index 2 FIXED a->Ꮧ is unchanged and index 2
+                        // i->Ꮧ verified against To Fall p.32 "For you (more than
+                        // two) to fall" ᏗᏥᏅᎢᏍᏗ ditsinv'isdi (the base's i- glyph
+                        // is dropped by getOptionsByVowel, leaving di+tsi; the
+                        // old Ꮵ gave *jitsi).
+                        baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮧ', 'Ꮴ', 'Ꮧ', 'Ꮶ', 'Ꮷ', 'Ꮸ'])
+                    } else if (verbTense == Tense.IMMEDIATE_COMMAND) {
+                        // tio 12Nov26: immediate imperative/volative — generic
+                        // D-map (ᏙᏓ do/da before o/a: To Fall "May we (another
+                        // and I) fall right now!" ᏫᏙᏍᏗᏅᎩ, "May they fall right
+                        // now!" ᏫᏓᏂᏅᎩ) except i-bases surface di (ᏗᏥᏅᎩ
+                        // ditsinvgi, ᏗᏂᏅᎩ, ᏗᏗᏅᎩ — "de- becomes di- in
+                        // imperative forms when followed by a consonant" after
+                        // the i-glyph drop).
+                        baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮧ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                     } else {
                         baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮥ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                     }
@@ -49,7 +65,7 @@ class PrefixDe implements Affix {
                             || word.initialPrefixHolder.wi
                             || word.initialPrefixHolder.ni
                             || verbTense == Tense.INFINITIVE
-                            || verbTense == Tense.FUTURE_COMMAND) {
+                            || verbTense == Tense.IMMEDIATE_COMMAND) {
                         if (isVowelBeginning) {
                             baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮣ', 'Ꮥ', 'Ꮥ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                         } else {
