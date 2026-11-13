@@ -23,7 +23,7 @@ import net.cherokeedictionary.verb.rules.RuleVtoA
  */
 class VerbConjugationProcessor {
     static void log(prints) {
-        boolean isDebug = true;
+        boolean isDebug = false;
         if (isDebug) {
             println prints
         }
