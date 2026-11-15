@@ -34,8 +34,8 @@ class ToStopSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "galehwisdodisgo'i", syllabary: "ᎦᎴᏫᏍᏙᏗᏍᎪᎢ", english: "I am stopping it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "alehwisdodisgo'i", syllabary: "ᎠᎴᏫᏍᏙᏗᏍᎪᎢ", english: "S/he is stopping it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "galehwisdodisgo'i", syllabary: "ᎦᎴᏫᏍᏙᏗᏍᎪᎢ", english: "I am stopping it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "alehwisdodisgo'i", syllabary: "ᎠᎴᏫᏍᏙᏗᏍᎪᎢ", english: "S/he is stopping it (habitually)", occurrence: 1],
     ]
 
     /**

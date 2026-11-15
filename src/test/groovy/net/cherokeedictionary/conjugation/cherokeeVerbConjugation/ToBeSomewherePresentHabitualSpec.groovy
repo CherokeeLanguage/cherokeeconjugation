@@ -28,16 +28,16 @@ class ToBeSomewherePresentHabitualSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "gedoho'i",   syllabary: "ᎨᏙᎰᎢ",  english: "I am somewhere"],
-            [pronoun: "Second Singular",        romanized: "hedoho'i",   syllabary: "ᎮᏙᎰᎢ",  english: "You are somewhere"],
-            [pronoun: "Third Singular",         romanized: "edoho'i",    syllabary: "ᎡᏙᎰᎢ",  english: "He/she/it is somewhere"],
-            [pronoun: "Second Dual",            romanized: "sdedoho'i",  syllabary: "ᏍᏕᏙᎰᎢ", english: "You (two) are somewhere"],
-            [pronoun: "Second Plural",          romanized: "itsedoho'i", syllabary: "ᎢᏤᏙᎰᎢ", english: "You (more than two) are somewhere"],
-            [pronoun: "First Dual Inclusive",   romanized: "inedoho'i",  syllabary: "ᎢᏁᏙᎰᎢ", english: "We (you and I) are somewhere"],
-            [pronoun: "First Dual Exclusive",   romanized: "osdedoho'i", syllabary: "ᎣᏍᏕᏙᎰᎢ", english: "We (another and I) are somewhere"],
-            [pronoun: "First Plural Exclusive", romanized: "otsedoho'i", syllabary: "ᎣᏤᏙᎰᎢ", english: "We (others and I) are somewhere"],
-            [pronoun: "First Plural Inclusive", romanized: "idedoho'i",  syllabary: "ᎢᏕᏙᎰᎢ", english: "We (you and I and another or others) are somewhere"],
-            [pronoun: "Third Plural",      romanized: "anedoho'i",  syllabary: "ᎠᏁᏙᎰᎢ", english: "They are somewhere"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "gedoho'i",   syllabary: "ᎨᏙᎰᎢ",  english: "I am somewhere"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "hedoho'i",   syllabary: "ᎮᏙᎰᎢ",  english: "You are somewhere"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "edoho'i",    syllabary: "ᎡᏙᎰᎢ",  english: "He/she/it is somewhere"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdedoho'i",  syllabary: "ᏍᏕᏙᎰᎢ", english: "You (two) are somewhere"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itsedoho'i", syllabary: "ᎢᏤᏙᎰᎢ", english: "You (more than two) are somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "inedoho'i",  syllabary: "ᎢᏁᏙᎰᎢ", english: "We (you and I) are somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "osdedoho'i", syllabary: "ᎣᏍᏕᏙᎰᎢ", english: "We (another and I) are somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsedoho'i", syllabary: "ᎣᏤᏙᎰᎢ", english: "We (others and I) are somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idedoho'i",  syllabary: "ᎢᏕᏙᎰᎢ", english: "We (you and I and another or others) are somewhere"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "anedoho'i",  syllabary: "ᎠᏁᏙᎰᎢ", english: "They are somewhere"],
     ]
 
     /**

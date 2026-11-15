@@ -29,16 +29,16 @@ class ToBeThankfulOrHappyFutureSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "dagali'elitsi", syllabary: "ᏓᎦᎵᎡᎵᏥ", english: "I will be thankful/happy"],
-            [pronoun: "Second Singular", romanized: "talihelitsi (exp. dahalihelitsi)", syllabary: "ᏔᎵᎮᎵᏥ", english: "You will be thankful/happy"],
-            [pronoun: "Third Singular", romanized: "dvlihelitsi", syllabary: "ᏛᎵᎮᎵᏥ", english: "He/she/it will be thankful/happy"],
-            [pronoun: "Second Dual", romanized: "dasdalihelitsi", syllabary: "ᏓᏍᏓᎵᎮᎵᏥ", english: "You (two) will be thankful/happy"],
-            [pronoun: "Second Plural", romanized: "datsalihelitsi", syllabary: "ᏓᏣᎵᎮᎵᏥ", english: "You (more than two) will be thankful/happy"],
-            [pronoun: "First Dual Inclusive", romanized: "danalihelitsi", syllabary: "ᏓᎾᎵᎮᎵᏥ", english: "We (you and I) will be thankful/happy"],
-            [pronoun: "First Dual Exclusive", romanized: "dayosdalihelitsi", syllabary: "ᏓᏲᏍᏓᎵᎮᎵᏥ", english: "We (another and I) will be thankful/happy"],
-            [pronoun: "First Plural Exclusive", romanized: "dayotsalihelitsi", syllabary: "ᏓᏲᏣᎵᎮᎵᏥ", english: "We (others and I) will be thankful/happy"],
-            [pronoun: "First Plural Inclusive", romanized: "dadalihelitsi", syllabary: "ᏓᏓᎵᎮᎵᏥ", english: "We (you and I and another or others) will be thankful/happy"],
-            [pronoun: "Third Plural", romanized: "dvnalihelitsi", syllabary: "ᏛᎾᎵᎮᎵᏥ", english: "They will be thankful/happy"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagali'elitsi", syllabary: "ᏓᎦᎵᎡᎵᏥ", english: "I will be thankful/happy"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "talihelitsi (exp. dahalihelitsi)", syllabary: "ᏔᎵᎮᎵᏥ", english: "You will be thankful/happy"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "dvlihelitsi", syllabary: "ᏛᎵᎮᎵᏥ", english: "He/she/it will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "dasdalihelitsi", syllabary: "ᏓᏍᏓᎵᎮᎵᏥ", english: "You (two) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "datsalihelitsi", syllabary: "ᏓᏣᎵᎮᎵᏥ", english: "You (more than two) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "danalihelitsi", syllabary: "ᏓᎾᎵᎮᎵᏥ", english: "We (you and I) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dayosdalihelitsi", syllabary: "ᏓᏲᏍᏓᎵᎮᎵᏥ", english: "We (another and I) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dayotsalihelitsi", syllabary: "ᏓᏲᏣᎵᎮᎵᏥ", english: "We (others and I) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dadalihelitsi", syllabary: "ᏓᏓᎵᎮᎵᏥ", english: "We (you and I and another or others) will be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "dvnalihelitsi", syllabary: "ᏛᎾᎵᎮᎵᏥ", english: "They will be thankful/happy"],
     ]
 
     /**

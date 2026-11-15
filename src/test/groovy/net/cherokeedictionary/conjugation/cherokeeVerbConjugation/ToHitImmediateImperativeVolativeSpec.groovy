@@ -29,10 +29,10 @@ class ToHitImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hvhnga", syllabary: "ᎲᏂᎦ", english: "You (singular) must hit it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdvhnga", syllabary: "ᏍᏛᏂᎦ", english: "You (two) must hit it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsvhnga", syllabary: "ᎢᏨᏂᎦ", english: "You (more than two) must hit it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wigvhnga", syllabary: "ᏫᎬᏂᎦ", english: "Let him/her hit it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hvhnga", syllabary: "ᎲᏂᎦ", english: "You (singular) must hit it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdvhnga", syllabary: "ᏍᏛᏂᎦ", english: "You (two) must hit it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsvhnga", syllabary: "ᎢᏨᏂᎦ", english: "You (more than two) must hit it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigvhnga", syllabary: "ᏫᎬᏂᎦ", english: "Let him/her hit it right now!", occurrence: 1],
     ]
 
     /**

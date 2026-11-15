@@ -33,16 +33,16 @@ class ToBeSomewhereFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "gedohesdi",   syllabary: "ᎨᏙᎮᏍᏗ",  english: "May I be somewhere!"],
-            [pronoun: "Second Singular",        romanized: "hedohesdi",   syllabary: "ᎮᏙᎮᏍᏗ",  english: "May you be somewhere!"],
-            [pronoun: "Third Singular",         romanized: "edohesdi",    syllabary: "ᎡᏙᎮᏍᏗ",  english: "May he/she/it be somewhere!"],
-            [pronoun: "Second Dual",            romanized: "sdedohesdi",  syllabary: "ᏍᏕᏙᎮᏍᏗ", english: "May you (two) be somewhere!"],
-            [pronoun: "Second Plural",          romanized: "itsedohesdi", syllabary: "ᎢᏤᏙᎮᏍᏗ", english: "May you (more than two) be somewhere!"],
-            [pronoun: "First Dual Inclusive",   romanized: "inedohesdi",  syllabary: "ᎢᏁᏙᎮᏍᏗ", english: "May we (you and I) be somewhere!"],
-            [pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "May we (another and I) be somewhere!"],
-            [pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "May we (others and I) be somewhere!"],
-            [pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "May we (you and I and another or others) be somewhere!"],
-            [pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "May they be somewhere!"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "gedohesdi",   syllabary: "ᎨᏙᎮᏍᏗ",  english: "May I be somewhere!"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "hedohesdi",   syllabary: "ᎮᏙᎮᏍᏗ",  english: "May you be somewhere!"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "edohesdi",    syllabary: "ᎡᏙᎮᏍᏗ",  english: "May he/she/it be somewhere!"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdedohesdi",  syllabary: "ᏍᏕᏙᎮᏍᏗ", english: "May you (two) be somewhere!"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itsedohesdi", syllabary: "ᎢᏤᏙᎮᏍᏗ", english: "May you (more than two) be somewhere!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "inedohesdi",  syllabary: "ᎢᏁᏙᎮᏍᏗ", english: "May we (you and I) be somewhere!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "May we (another and I) be somewhere!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "May we (others and I) be somewhere!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "May we (you and I and another or others) be somewhere!"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "May they be somewhere!"],
     ]
 
     /**

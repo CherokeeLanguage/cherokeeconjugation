@@ -29,10 +29,10 @@ class ToHideSomeoneOrSomethingImmediateImperativeVolativeSpec extends VerbBaseSp
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hvsgatlvga", syllabary: "ᎲᏍᎦᏢᎦ", english: "You (singular) hide it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdvsgatlvga", syllabary: "ᏍᏛᏍᎦᏢᎦ", english: "You (two) hide it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsvsgatlvga", syllabary: "ᎢᏨᏍᎦᏢᎦ", english: "You (more than two) hide it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wigvsgatlvga", syllabary: "ᏫᎬᏍᎦᏢᎦ", english: "Let him/her hide it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hvsgatlvga", syllabary: "ᎲᏍᎦᏢᎦ", english: "You (singular) hide it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdvsgatlvga", syllabary: "ᏍᏛᏍᎦᏢᎦ", english: "You (two) hide it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsvsgatlvga", syllabary: "ᎢᏨᏍᎦᏢᎦ", english: "You (more than two) hide it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigvsgatlvga", syllabary: "ᏫᎬᏍᎦᏢᎦ", english: "Let him/her hide it right now!", occurrence: 1],
     ]
 
     /**

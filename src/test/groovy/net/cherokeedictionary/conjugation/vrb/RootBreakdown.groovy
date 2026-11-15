@@ -26,12 +26,12 @@ class RootBreakdown extends ConjugateBase {
 
         Verb display = VerbFactory.createVerbFromParameters(paramMap)
 
-        println "HABITUAL: " + paramMap.habitual + " stem: " + display.stemmer.getStem(Tense.HABITUAL)
-        println "IMMEDIATE_COMMAND: " + paramMap.imperative + " stem: " + display.stemmer.getStem(Tense.IMMEDIATE_COMMAND)
-        println "INFINITIVE: " + paramMap.infinitive + " stem: " + display.stemmer.getStem(Tense.INFINITIVE)
-        println "REMOTE PAST: " + paramMap.remotepast + " stem: " + display.stemmer.getStem(Tense.REMOTE_PAST)
-        println "PRESENT TENSE: " + paramMap.present1st + " stem: " + display.stemmer.getStem(Tense.PRESENT)
-        println display
+        //println "HABITUAL: " + paramMap.habitual + " stem: " + display.stemmer.getStem(Tense.HABITUAL)
+        //println "IMMEDIATE_COMMAND: " + paramMap.imperative + " stem: " + display.stemmer.getStem(Tense.IMMEDIATE_COMMAND)
+        //println "INFINITIVE: " + paramMap.infinitive + " stem: " + display.stemmer.getStem(Tense.INFINITIVE)
+        //println "REMOTE PAST: " + paramMap.remotepast + " stem: " + display.stemmer.getStem(Tense.REMOTE_PAST)
+        //println "PRESENT TENSE: " + paramMap.present1st + " stem: " + display.stemmer.getStem(Tense.PRESENT)
+        //println display
     }
 
 
@@ -50,7 +50,7 @@ class RootBreakdown extends ConjugateBase {
         def paramMap = [habitual:"ᎠᎪᏩᏘᏍᎪᎢ", imperative:"ᎯᎪᏩᏔ", infinitive:"ᎤᎪᏩᏛᏗ", present1st:"ᏥᎪᏩᏘᎭ", present3rd:"ᎠᎪᏩᏘᎭ", remotepast:"ᎤᎪᎲᎢ", partofspeechc:"vt", verbTense:"PRESENT", subject:"SG1", object:"", yi:false, ji:false, wi:false, ni:false, de:false, da:false, di:false, i:false, ga:false, e:false]
         def verb = VerbFactory.createVerbFromParameters(paramMap)
 
-        println verb
+        //println verb
     }
 
     void testVerbFactoryYiGowatiha() {
@@ -77,6 +77,6 @@ class RootBreakdown extends ConjugateBase {
 //        paramMap.e = params.e == 'on'
         Verb display = VerbFactory.createVerbFromParameters(paramMap)
         display = Conjugate.conjugate(display)
-        println display
+        //println display
     }*/
 }

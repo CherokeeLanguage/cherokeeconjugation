@@ -29,8 +29,8 @@ class ToThankSomeoneImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyali'elitsisi", syllabary: "ᏥᏯᎵᎡᎵᏥᏏ", english: "I thanked it, just now", occurrence: 1],
-            [pronoun: "", romanized: "alihelitsisi", syllabary: "ᎠᎵᎮᎵᏥᏏ", english: "He/she thanked it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyali'elitsisi", syllabary: "ᏥᏯᎵᎡᎵᏥᏏ", english: "I thanked it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "alihelitsisi", syllabary: "ᎠᎵᎮᎵᏥᏏ", english: "He/she thanked it, just now", occurrence: 1],
     ]
 
     /**

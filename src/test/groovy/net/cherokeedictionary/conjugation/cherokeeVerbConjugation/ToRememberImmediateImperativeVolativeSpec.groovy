@@ -29,10 +29,10 @@ class ToRememberImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hanvdada", syllabary: "ᎭᏅᏓᏓ", english: "You (singular) remember it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdanvdada", syllabary: "ᏍᏓᏅᏓᏓ", english: "You (two) remember it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsanvdada", syllabary: "ᎢᏣᏅᏓᏓ", english: "You (more than two) remember it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wanvdada", syllabary: "ᏩᏅᏓᏓ", english: "Let him/her remember it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hanvdada", syllabary: "ᎭᏅᏓᏓ", english: "You (singular) remember it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdanvdada", syllabary: "ᏍᏓᏅᏓᏓ", english: "You (two) remember it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsanvdada", syllabary: "ᎢᏣᏅᏓᏓ", english: "You (more than two) remember it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wanvdada", syllabary: "ᏩᏅᏓᏓ", english: "Let him/her remember it right now!", occurrence: 1],
     ]
 
     /**

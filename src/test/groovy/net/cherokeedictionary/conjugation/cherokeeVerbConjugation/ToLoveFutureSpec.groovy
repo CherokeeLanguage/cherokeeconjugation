@@ -29,8 +29,8 @@ class ToLoveFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agigeyusesdi", syllabary: "ᎠᎩᎨᏳᏎᏍᏗ", english: "I will love it", occurrence: 1],
-            [pronoun: "", romanized: "unigeyusesdi", syllabary: "ᎤᏂᎨᏳᏎᏍᏗ", english: "He/she will love it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agigeyusesdi", syllabary: "ᎠᎩᎨᏳᏎᏍᏗ", english: "I will love it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "unigeyusesdi", syllabary: "ᎤᏂᎨᏳᏎᏍᏗ", english: "He/she will love it", occurrence: 1],
     ]
 
     /**

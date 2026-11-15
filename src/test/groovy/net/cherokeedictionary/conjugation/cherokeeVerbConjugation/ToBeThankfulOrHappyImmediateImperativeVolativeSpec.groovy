@@ -29,16 +29,16 @@ class ToBeThankfulOrHappyImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gali'eligi", syllabary: "ᎦᎵᎡᎵᎩ", english: "May I be thankful/happy right now!"],
-            [pronoun: "Second Singular", romanized: "haliheligi", syllabary: "ᎭᎵᎮᎵᎩ", english: "May you be thankful/happy right now!"],
-            [pronoun: "Third Singular", romanized: "waliheligi", syllabary: "ᏩᎵᎮᎵᎩ", english: "May he/she/it be thankful/happy right now!"],
-            [pronoun: "Second Dual", romanized: "sdaliheligi", syllabary: "ᏍᏓᎵᎮᎵᎩ", english: "May you (two) be thankful/happy right now!"],
-            [pronoun: "Second Plural", romanized: "itsaliheligi", syllabary: "ᎢᏣᎵᎮᎵᎩ", english: "May you (more than two) be thankful/happy right now!"],
-            [pronoun: "First Dual Inclusive", romanized: "inaliheligi", syllabary: "ᎢᎾᎵᎮᎵᎩ", english: "May we (you and I) be thankful/happy right now!"],
-            [pronoun: "First Dual Exclusive", romanized: "wosdaliheligi", syllabary: "ᏬᏍᏓᎵᎮᎵᎩ", english: "May we (another and I) be thankful/happy right now!"],
-            [pronoun: "First Plural Exclusive", romanized: "wotsaliheligi", syllabary: "ᏬᏣᎵᎮᎵᎩ", english: "May we (others and I) be thankful/happy right now!"],
-            [pronoun: "First Plural Inclusive", romanized: "idaliheligi", syllabary: "ᎢᏓᎵᎮᎵᎩ", english: "May we (you and I and another or others) be thankful/happy right now!"],
-            [pronoun: "Third Plural", romanized: "wanaliheligi", syllabary: "ᏩᎾᎵᎮᎵᎩ", english: "May they be thankful/happy right now!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gali'eligi", syllabary: "ᎦᎵᎡᎵᎩ", english: "May I be thankful/happy right now!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "haliheligi", syllabary: "ᎭᎵᎮᎵᎩ", english: "May you be thankful/happy right now!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "waliheligi", syllabary: "ᏩᎵᎮᎵᎩ", english: "May he/she/it be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdaliheligi", syllabary: "ᏍᏓᎵᎮᎵᎩ", english: "May you (two) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsaliheligi", syllabary: "ᎢᏣᎵᎮᎵᎩ", english: "May you (more than two) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inaliheligi", syllabary: "ᎢᎾᎵᎮᎵᎩ", english: "May we (you and I) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "wosdaliheligi", syllabary: "ᏬᏍᏓᎵᎮᎵᎩ", english: "May we (another and I) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "wotsaliheligi", syllabary: "ᏬᏣᎵᎮᎵᎩ", english: "May we (others and I) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idaliheligi", syllabary: "ᎢᏓᎵᎮᎵᎩ", english: "May we (you and I and another or others) be thankful/happy right now!"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "wanaliheligi", syllabary: "ᏩᎾᎵᎮᎵᎩ", english: "May they be thankful/happy right now!"],
     ]
 
     /**

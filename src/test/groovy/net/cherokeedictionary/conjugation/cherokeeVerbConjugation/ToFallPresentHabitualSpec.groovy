@@ -30,11 +30,11 @@ class ToFallPresentHabitualSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "tsinvgo'i", syllabary: "ᏥᏅᎪᎢ", english: "I fall"],
-            [pronoun: "Second Singular", romanized: "hinvgo'i", syllabary: "ᎯᏅᎪᎢ", english: "You fall"],
-            [pronoun: "Third Singular", romanized: "ganvgo'i", syllabary: "ᎦᏅᎪᎢ", english: "S/he falls"],
-            [pronoun: "Second Dual", romanized: "desdinvgo'i", syllabary: "ᏕᏍᏗᏅᎪᎢ", english: "You (two) fall"],
-            [pronoun: "Second Plural", romanized: "detsinvgo'i", syllabary: "ᏕᏥᏅᎪᎢ", english: "You (more than two) fall"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "tsinvgo'i", syllabary: "ᏥᏅᎪᎢ", english: "I fall"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hinvgo'i", syllabary: "ᎯᏅᎪᎢ", english: "You fall"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ganvgo'i", syllabary: "ᎦᏅᎪᎢ", english: "S/he falls"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "desdinvgo'i", syllabary: "ᏕᏍᏗᏅᎪᎢ", english: "You (two) fall"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "detsinvgo'i", syllabary: "ᏕᏥᏅᎪᎢ", english: "You (more than two) fall"],
             // tio 12Nov26: the book's syllabary cell for this row (ᏙᏍᏗᏅᎪᎢ,
             // p.33) duplicates the First Dual Exclusive row directly below it
             // while its own romanization prints "deninvgo'i" (de-ni-...). Every
@@ -43,16 +43,16 @@ class ToFallPresentHabitualSpec extends VerbBaseSpec {
             // ᏕᎩᏂᏅᏨᎢ, IIV ᏗᏂᏅᎩ, FIV ᏕᏂᏅᏨᎢ) — the habitual syllabary cell
             // is a book misprint; corrected to the romanization-consistent
             // ᏕᏂᏅᎪᎢ.
-            [pronoun: "First Dual Inclusive", romanized: "deninvgo'i", syllabary: "ᏕᏂᏅᎪᎢ", english: "We (you and I) fall"],
-            [pronoun: "First Dual Exclusive", romanized: "dosdinvgo'i", syllabary: "ᏙᏍᏗᏅᎪᎢ", english: "We (another and I) fall"],
-            [pronoun: "First Plural Exclusive", romanized: "dotsinvgo'i", syllabary: "ᏙᏥᏅᎪᎢ", english: "We (others and I) fall"],
-            [pronoun: "First Plural Inclusive", romanized: "dedinvgo'i", syllabary: "ᏕᏗᏅᎪᎢ", english: "We (you and I and another or others) fall"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "deninvgo'i", syllabary: "ᏕᏂᏅᎪᎢ", english: "We (you and I) fall"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dosdinvgo'i", syllabary: "ᏙᏍᏗᏅᎪᎢ", english: "We (another and I) fall"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dotsinvgo'i", syllabary: "ᏙᏥᏅᎪᎢ", english: "We (others and I) fall"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dedinvgo'i", syllabary: "ᏕᏗᏅᎪᎢ", english: "We (you and I and another or others) fall"],
             // tio 12Nov26: the book's syllabary cell for this row (ᏓᏂᏅᎩ,
             // p.33) lacks the habitual suffix ᎪᎢ that its own romanization
             // "daninvgo'i" carries (ᏓᏂᏅᎩ is the Immediate Past form, printed
             // again on p.34). Corrected to ᏓᏂᏅᎪᎢ per the romanization and
             // the -nvg-o'i habitual pattern of all other rows.
-            [pronoun: "Third Plural", romanized: "daninvgo'i", syllabary: "ᏓᏂᏅᎪᎢ", english: "They are falling"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "daninvgo'i", syllabary: "ᏓᏂᏅᎪᎢ", english: "They are falling"],
     ]
 
     /**

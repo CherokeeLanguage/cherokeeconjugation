@@ -26,8 +26,8 @@ class ImmediatePastDebugSpec extends Specification {
         Conjugate.conjugate(verb)
 
         then: "we check the output"
-        println "Output: " + verb.wholeWord
-        println "Root: " + verb.root
+//        //println "Output: " + verb.wholeWord
+//        //println "Root: " + verb.root
         
         expect:
         verb.wholeWord != null

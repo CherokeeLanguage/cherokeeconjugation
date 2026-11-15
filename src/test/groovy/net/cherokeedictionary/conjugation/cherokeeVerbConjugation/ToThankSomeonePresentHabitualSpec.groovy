@@ -29,8 +29,8 @@ class ToThankSomeonePresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyali'elitseho'i", syllabary: "ᏥᏯᎵᎡᎵᏤᎰᎢ", english: "I thank it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "alihelitseho'i", syllabary: "ᎠᎵᎮᎵᏤᎰᎢ", english: "He/she gives thanks (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyali'elitseho'i", syllabary: "ᏥᏯᎵᎡᎵᏤᎰᎢ", english: "I thank it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "alihelitseho'i", syllabary: "ᎠᎵᎮᎵᏤᎰᎢ", english: "He/she gives thanks (habitually)", occurrence: 1],
     ]
 
     /**

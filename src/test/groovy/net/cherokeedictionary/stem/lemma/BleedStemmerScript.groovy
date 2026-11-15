@@ -19,6 +19,6 @@ verbName.remotepast = new DefinitionLine(syllabary: "ᎤᏔᏍᎩᏒᎢ")
 PrefixTableSubject.values().each {pts ->
     PrefixTableObject.values().each {pto ->
         def conjugated = Conjugate.conjugate(pts.toString(), pto.toString(), verbName, Tense.INFINITIVE.toString(), "vi")
-        println conjugated.pronounReflexiveRoot
+        //println conjugated.pronounReflexiveRoot
     }
 }

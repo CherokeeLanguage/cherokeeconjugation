@@ -162,15 +162,30 @@ class VerbRegistry {
 
     // Iterates through categories and applies rules
     static String applyCategoricalRules(Verb verb, String conjugation, Tense tense) {
-        if (verb == null || verb.root == null) {
+        if (verb == null) {
             return conjugation
         }
         
         String result = conjugation
-        for (VerbCategory category : getCategories(verb.root)) {
-            CategoricalRule rule = RuleFactory.getRule(category)
-            if (rule) {
-                result = rule.apply(verb, result, tense)
+        def rootsToTry = [verb.root]
+        if (verb.root == null && verb.verbset == net.cherokeedictionary.util.VerbSet.A) {
+            // fallback for MotionRule and others that might be hardcoded to English name
+            // until all roots are properly indexed.
+            if (verb.stemmer?.present3rd?.syllabary?.startsWith("Ꭱ")) {
+                rootsToTry << "e"
+            }
+        }
+        if (verb.stemmer?.present3rd?.syllabary == "ᎡᎦ") {
+             rootsToTry << "e"
+        }
+
+        for (String root : rootsToTry) {
+            if (root == null) continue
+            for (VerbCategory category : getCategories(root)) {
+                CategoricalRule rule = RuleFactory.getRule(category)
+                if (rule) {
+                    result = rule.apply(verb, result, tense)
+                }
             }
         }
         return result

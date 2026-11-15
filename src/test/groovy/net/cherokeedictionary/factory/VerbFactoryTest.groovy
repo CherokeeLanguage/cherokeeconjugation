@@ -28,14 +28,14 @@ class VerbFactoryTest extends ConjugateBase {
 //        paramMap.ga = params.ga == 'on'
 //        paramMap.e = params.e == 'on'
         Verb display = VerbFactory.createVerbFromParameters(paramMap)
-        println display
+        //println display
     }
 
     void testVerbFactory2() {
         def paramMap = [habitual:"ᎠᎪᏩᏘᏍᎪᎢ", imperative:"ᎯᎪᏩᏔ", infinitive:"ᎤᎪᏩᏛᏗ", present1st:"ᏥᎪᏩᏘᎭ", present3rd:"ᎠᎪᏩᏘᎭ", remotepast:"ᎤᎪᎲᎢ", partofspeechc:"vt", verbTense:"PRESENT", subject:"SG1", object:"", yi:false, ji:false, wi:false, ni:false, de:false, da:false, di:false, i:false, ga:false, e:false]
         def verb = VerbFactory.createVerbFromParameters(paramMap)
 
-        println verb
+        //println verb
     }
 
     void testVerbFactoryYiGowatiha() {
@@ -62,6 +62,6 @@ class VerbFactoryTest extends ConjugateBase {
 //        paramMap.e = params.e == 'on'
         Verb display = VerbFactory.createVerbFromParameters(paramMap)
         display = Conjugate.conjugate(display)
-        println display
+        //println display
     }
 }

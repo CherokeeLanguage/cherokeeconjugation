@@ -29,10 +29,10 @@ class ToKillSomeoneOrSomethingImmediateImperativeVolativeSpec extends VerbBaseSp
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hiluga", syllabary: "ᎯᎷᎦ", english: "You (singular) kill it right now!", occurrence: 1],
-            [pronoun: "", romanized: "esdiluga", syllabary: "ᎡᏍᏗᎷᎦ", english: "You two kill it right now!", occurrence: 1],
-            [pronoun: "", romanized: "etsiluga", syllabary: "ᎡᏥᎷᎦ", english: "You (more than two) kill it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wigaluga", syllabary: "ᏫᎦᎷᎦ", english: "Let him/her kill it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hiluga", syllabary: "ᎯᎷᎦ", english: "You (singular) kill it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdiluga", syllabary: "ᎡᏍᏗᎷᎦ", english: "You two kill it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsiluga", syllabary: "ᎡᏥᎷᎦ", english: "You (more than two) kill it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigaluga", syllabary: "ᏫᎦᎷᎦ", english: "Let him/her kill it right now!", occurrence: 1],
     ]
 
     /**

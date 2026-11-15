@@ -16,9 +16,9 @@ CompoundPrefixes.prefixes.each {key, val ->
         consonants.put(SyllabaryUtil.parseSyllabaryWithPunctuationAndLatin(val.preConsonant), key);
     } else {
         if (val.preVowel && !val.preConsonant) {
-            println key + " vowel is not empty but consonant is"
+            //println key + " vowel is not empty but consonant is"
         } else if (val.preConsonant && !val.preVowel) {
-            println key + " consonant is not empty but vowel is"
+            //println key + " consonant is not empty but vowel is"
         }
     }
 }
@@ -42,12 +42,12 @@ Map<String, Integer> treeMap = new TreeMap<String, Integer>(
 treeMap.putAll(vowels)
 
 treeMap.each {
-    println "VowelPrefixes.set(\"${it.key.toLowerCase()}\", \"${it.value}\");"
+    //println "VowelPrefixes.set(\"${it.key.toLowerCase()}\", \"${it.value}\");"
 }
 
 treeMap.clear();
 treeMap.putAll(consonants);
 
 treeMap.each {
-    println "ConsonantPrefixes.set(\"${it.key.toLowerCase()}\", \"${it.value}\");"
+    //println "ConsonantPrefixes.set(\"${it.key.toLowerCase()}\", \"${it.value}\");"
 }

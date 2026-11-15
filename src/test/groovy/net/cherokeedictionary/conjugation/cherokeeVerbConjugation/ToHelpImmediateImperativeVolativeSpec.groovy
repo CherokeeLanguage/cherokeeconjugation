@@ -29,10 +29,10 @@ class ToHelpImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hisdela", syllabary: "ᎯᏍᏕᎳ", english: "You (singular) help it right now!", occurrence: 1],
-            [pronoun: "", romanized: "esdisdela", syllabary: "ᎡᏍᏗᏍᏕᎳ", english: "You (two) help it right now!", occurrence: 1],
-            [pronoun: "", romanized: "etsisdela", syllabary: "ᎡᏥᏍᏕᎳ", english: "You (more than two) help it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wasdela", syllabary: "ᏩᏍᏕᎳ", english: "Let him/her help it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hisdela", syllabary: "ᎯᏍᏕᎳ", english: "You (singular) help it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdisdela", syllabary: "ᎡᏍᏗᏍᏕᎳ", english: "You (two) help it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsisdela", syllabary: "ᎡᏥᏍᏕᎳ", english: "You (more than two) help it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wasdela", syllabary: "ᏩᏍᏕᎳ", english: "Let him/her help it right now!", occurrence: 1],
     ]
 
     /**

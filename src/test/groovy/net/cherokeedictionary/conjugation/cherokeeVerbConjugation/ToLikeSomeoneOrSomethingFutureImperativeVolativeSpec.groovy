@@ -34,10 +34,10 @@ class ToLikeSomeoneOrSomethingFutureImperativeVolativeSpec extends VerbBaseSpec 
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hilvkwda", syllabary: "ᎯᎸᏉᏓ", english: "You (singular) like it!", occurrence: 1],
-            [pronoun: "", romanized: "sdilvkwda", syllabary: "ᏍᏗᎸᏉᏓ", english: "You (two) like it!", occurrence: 1],
-            [pronoun: "", romanized: "itsilvkwda", syllabary: "ᎢᏥᎸᏉᏓ", english: "You (more than two) like it!", occurrence: 1],
-            [pronoun: "", romanized: "wigalvkwda", syllabary: "ᏫᎦᎸᏉᏓ", english: "Let him/her like it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hilvkwda", syllabary: "ᎯᎸᏉᏓ", english: "You (singular) like it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdilvkwda", syllabary: "ᏍᏗᎸᏉᏓ", english: "You (two) like it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsilvkwda", syllabary: "ᎢᏥᎸᏉᏓ", english: "You (more than two) like it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigalvkwda", syllabary: "ᏫᎦᎸᏉᏓ", english: "Let him/her like it!", occurrence: 1],
     ]
 
     /**

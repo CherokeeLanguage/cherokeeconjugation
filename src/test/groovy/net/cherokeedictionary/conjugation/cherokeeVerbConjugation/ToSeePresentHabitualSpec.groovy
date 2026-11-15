@@ -29,9 +29,9 @@ class ToSeePresentHabitualSpec extends VerbBaseSpec {
 
     /** The three conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsigowtisgo'i", syllabary: "ᏥᎪᏩᏘᏍᎪᎢ", english: "I see it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "tsigowtisgo'i", syllabary: "ᏥᎪᏩᏘᏍᎪᎢ", english: "I see him/her (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "agowtisgo'i", syllabary: "ᎠᎪᏩᏘᏍᎪᎢ", english: "He/she sees it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsigowtisgo'i", syllabary: "ᏥᎪᏩᏘᏍᎪᎢ", english: "I see it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsigowtisgo'i", syllabary: "ᏥᎪᏩᏘᏍᎪᎢ", english: "I see him/her (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agowtisgo'i", syllabary: "ᎠᎪᏩᏘᏍᎪᎢ", english: "He/she sees it (habitually)", occurrence: 1],
     ]
 
     /**

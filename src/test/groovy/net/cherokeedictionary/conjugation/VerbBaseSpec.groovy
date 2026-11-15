@@ -45,6 +45,14 @@ abstract class VerbBaseSpec extends Specification {
         // the same surface. Only wi- is mapped until another prefix is needed.
         def initialPrefixes = details.initialPrefixes ?: [:]
 
+        // tio 13Nov26: distributive verbs ("to fall" — the book prints de- on
+        // every non-singular-subject row of every tense table) drive the de-
+        // initial prefix lexically: fixtures declare distributive: true and the
+        // engine's PrefixDe supplies the Ꮥ/Ꮧ/Ꮩ allomorphy. Singular-subject rows
+        // never take de-.
+        def pluralSubject = subj in ["DL1INCL", "DL1EXCL", "PL1INCL", "PL1EXCL", "DL2", "PL2", "PL3"]
+        def wantsDe = initialPrefixes.de || (details.distributive && pluralSubject)
+
         // tio 12Nov26: VerbBookFixtures entries use the camelCase key
         // "partOfSpeech" while lexicon-style details use "part_of_speech".
         // Defaulting to "v.i." made ConjugationHelper force object=SG3IN for
@@ -58,6 +66,7 @@ abstract class VerbBaseSpec extends Specification {
             verbTense: tense,
             partOfSpeech: partOfSpeech,
             wi: initialPrefixes.wi ? "true" : null,
+            de: wantsDe ? "true" : null,
             habitual: thirdPersonRow?.habitual ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.habitual)) : null,
             imperative: thirdPersonRow?.imperative ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.imperative)) : null,
             infinitive: thirdPersonRow?.infinitive ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.infinitive)) : null,

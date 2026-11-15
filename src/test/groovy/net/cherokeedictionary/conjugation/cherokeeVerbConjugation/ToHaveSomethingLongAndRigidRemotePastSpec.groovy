@@ -29,16 +29,16 @@ class ToHaveSomethingLongAndRigidRemotePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I had multiple long & rigid things\" agwvyv'i/dagwvyv'i", syllabary: "ᎠᏋᏴᎢ/ᏓᏋᏴᎢ", english: "I had something long & rigid (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "tsvyv'i/detsvyv'i", syllabary: "ᏨᏴᎢ/ᏕᏨᏴᎢ", english: "You had something long & rigid (singular)\"/\"You had multiple long & rigid things\""],
-            [pronoun: "Third Singular", romanized: "uwayv'i/duwayv'i", syllabary: "ᎤᏩᏴᎢ/ᏚᏩᏴᎢ", english: "He/she/it had something long & rigid (singular)\"/\"He/she/it had multiple long & rigid things\""],
-            [pronoun: "Second Dual", romanized: "sdvyv'i/desdvyv'i", syllabary: "ᏍᏛᏴᎢ/ᏕᏍᏛᏴᎢ", english: "You (two) had something long & rigid (singular)\"/\"You (two) had multiple long & rigid things\""],
-            [pronoun: "Second Plural", romanized: "itsvyv'i/detsvyv'i", syllabary: "ᎢᏨᏴᎢ/ᏕᏨᏴᎢ", english: "You (more than two) had something long & rigid (singular)\"/\"You (more than two) had multiple long & rigid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginvyv'i/deginvyv'i", syllabary: "ᎩᏅᏴᎢ/ᏕᎩᏅᏴᎢ", english: "We (you and I) had something long & rigid (singular)\"/\"We (you and I) had multiple long & rigid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginvyv'i/doginvyv'i", syllabary: "ᎣᎩᏅᏴᎢ/ᏙᎩᏅᏴᎢ", english: "We (another and I) had something long & rigid (singular)\"/\"We (another and I) had multiple long & rigid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogvyv'i", syllabary: "ᎣᎬᏴᎢ", english: "We (others and I) had something long & rigid (singular)"],
-            [pronoun: "First Plural Inclusive", romanized: "igvyv'i/degvyv'i", syllabary: "ᎢᎬᏴᎢ/ᏕᎬᏴᎢ", english: "We (you and I and another or others) had something long & rigid (singular)\"/\"We (you and I and another or others) had multiple long & rigid things\""],
-            [pronoun: "Third Plural", romanized: "unvyv'i/dunvyv'i", syllabary: "ᎤᏅᏴᎢ/ᏚᏅᏴᎢ", english: "They had something long & rigid (singular)\"/\"They had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "I had multiple long & rigid things\" agwvyv'i/dagwvyv'i", syllabary: "ᎠᏋᏴᎢ/ᏓᏋᏴᎢ", english: "I had something long & rigid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsvyv'i/detsvyv'i", syllabary: "ᏨᏴᎢ/ᏕᏨᏴᎢ", english: "You had something long & rigid (singular)\"/\"You had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwayv'i/duwayv'i", syllabary: "ᎤᏩᏴᎢ/ᏚᏩᏴᎢ", english: "He/she/it had something long & rigid (singular)\"/\"He/she/it had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdvyv'i/desdvyv'i", syllabary: "ᏍᏛᏴᎢ/ᏕᏍᏛᏴᎢ", english: "You (two) had something long & rigid (singular)\"/\"You (two) had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsvyv'i/detsvyv'i", syllabary: "ᎢᏨᏴᎢ/ᏕᏨᏴᎢ", english: "You (more than two) had something long & rigid (singular)\"/\"You (more than two) had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginvyv'i/deginvyv'i", syllabary: "ᎩᏅᏴᎢ/ᏕᎩᏅᏴᎢ", english: "We (you and I) had something long & rigid (singular)\"/\"We (you and I) had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginvyv'i/doginvyv'i", syllabary: "ᎣᎩᏅᏴᎢ/ᏙᎩᏅᏴᎢ", english: "We (another and I) had something long & rigid (singular)\"/\"We (another and I) had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogvyv'i", syllabary: "ᎣᎬᏴᎢ", english: "We (others and I) had something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igvyv'i/degvyv'i", syllabary: "ᎢᎬᏴᎢ/ᏕᎬᏴᎢ", english: "We (you and I and another or others) had something long & rigid (singular)\"/\"We (you and I and another or others) had multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unvyv'i/dunvyv'i", syllabary: "ᎤᏅᏴᎢ/ᏚᏅᏴᎢ", english: "They had something long & rigid (singular)\"/\"They had multiple long & rigid things\""],
     ]
 
     /**

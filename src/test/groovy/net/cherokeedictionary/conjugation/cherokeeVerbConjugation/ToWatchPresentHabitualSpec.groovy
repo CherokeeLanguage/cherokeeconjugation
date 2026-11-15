@@ -29,8 +29,8 @@ class ToWatchPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "gagasesdisgo'i", syllabary: "ᎦᎦᏎᏍᏗᏍᎪᎢ", english: "I watch it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "agasesdisgo'i", syllabary: "ᎠᎦᏎᏍᏗᏍᎪᎢ", english: "He/she watchs it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gagasesdisgo'i", syllabary: "ᎦᎦᏎᏍᏗᏍᎪᎢ", english: "I watch it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agasesdisgo'i", syllabary: "ᎠᎦᏎᏍᏗᏍᎪᎢ", english: "He/she watchs it (habitually)", occurrence: 1],
     ]
 
     /**

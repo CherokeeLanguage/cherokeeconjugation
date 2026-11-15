@@ -29,8 +29,8 @@ class ToHonorSomeoneOrSomethingRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agilvkwtanv'i", syllabary: "ᎠᎩᎸᏉᏔᏅᎢ", english: "I honored it", occurrence: 1],
-            [pronoun: "", romanized: "ulvkwtanv'i", syllabary: "ᎤᎸᏉᏔᏅᎢ", english: "He/she honored it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agilvkwtanv'i", syllabary: "ᎠᎩᎸᏉᏔᏅᎢ", english: "I honored it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ulvkwtanv'i", syllabary: "ᎤᎸᏉᏔᏅᎢ", english: "He/she honored it", occurrence: 1],
     ]
 
     /**

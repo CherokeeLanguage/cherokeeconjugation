@@ -29,8 +29,8 @@ class ToRememberFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "daganvdadi", syllabary: "ᏓᎦᏅᏓᏗ", english: "I will remember him/her", occurrence: 1],
-            [pronoun: "", romanized: "dvnvdadi", syllabary: "ᏛᏅᏓᏗ", english: "S/he will remember him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "daganvdadi", syllabary: "ᏓᎦᏅᏓᏗ", english: "I will remember him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvnvdadi", syllabary: "ᏛᏅᏓᏗ", english: "S/he will remember him/her", occurrence: 1],
     ]
 
     /**

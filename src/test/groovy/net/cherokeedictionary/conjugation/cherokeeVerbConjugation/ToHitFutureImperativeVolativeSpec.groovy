@@ -34,10 +34,10 @@ class ToHitFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hvhnilv'i", syllabary: "ᎲᏂᎸᎢ", english: "You (singular) hit it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "sdvhnilv'i", syllabary: "ᏍᏛᏂᎸᎢ", english: "You (two) hit it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "itsvhnilv'i", syllabary: "ᎢᏨᏂᎸᎢ", english: "You (more than two) hit it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "wigvhnilv'i", syllabary: "ᏫᎬᏂᎸᎢ", english: "Let him/her hit it (later)!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hvhnilv'i", syllabary: "ᎲᏂᎸᎢ", english: "You (singular) hit it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdvhnilv'i", syllabary: "ᏍᏛᏂᎸᎢ", english: "You (two) hit it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsvhnilv'i", syllabary: "ᎢᏨᏂᎸᎢ", english: "You (more than two) hit it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigvhnilv'i", syllabary: "ᏫᎬᏂᎸᎢ", english: "Let him/her hit it (later)!", occurrence: 1],
     ]
 
     /**

@@ -14,7 +14,8 @@ class FinalSuffixProcessor {
     // final Ꭲ drops (e.g. remote past -v'i + ke -> -vke).
     private static boolean isPastFamily(Tense tense) {
         return tense in [Tense.REMOTE_PAST, Tense.COMPLETIVE_FUTURE, Tense.COMPLETED_FUTURE,
-                         Tense.FUTURE_EXPECTED, Tense.FUTURE_COMMAND, Tense.PROGRESSIVE_PAST,
+                         Tense.FUTURE_EXPECTED, Tense.FUTURE_COMMAND,
+                         Tense.FUTURE_IMPERATIVE_VOLATIVE, Tense.PROGRESSIVE_PAST,
                          Tense.IMMEDIATE_PAST]
     }
 

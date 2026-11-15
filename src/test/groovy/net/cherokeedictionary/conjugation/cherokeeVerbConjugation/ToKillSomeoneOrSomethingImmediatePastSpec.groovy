@@ -29,8 +29,8 @@ class ToKillSomeoneOrSomethingImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiluga", syllabary: "ᏥᎷᎦ", english: "I killed it just now", occurrence: 1],
-            [pronoun: "", romanized: "galuga", syllabary: "ᎦᎷᎦ", english: "He/she killed it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiluga", syllabary: "ᏥᎷᎦ", english: "I killed it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "galuga", syllabary: "ᎦᎷᎦ", english: "He/she killed it just now", occurrence: 1],
     ]
 
     /**

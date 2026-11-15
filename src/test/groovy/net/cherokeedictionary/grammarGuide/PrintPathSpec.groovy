@@ -4,6 +4,6 @@ class PrintPathSpec extends Specification {
     def "print"() {
         expect:
         def path = VerbBookEngineHarness.protectionDomain.codeSource.location.path
-        println "PATH: ${path}"
+        //println "PATH: ${path}"
     }
 }

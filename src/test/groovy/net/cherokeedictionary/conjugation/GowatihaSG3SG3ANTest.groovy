@@ -93,7 +93,7 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         verb.object = PrefixTableObject.SG3IN
         verb.tense = Tense.INFINITIVE
         verb = Conjugate.conjugate(verb)
-        println verb.wholeWord
+        //println verb.wholeWord
         assertEquals("ᎤᎪᏩᏛᏗ", verb.wholeWord)
     }
 
@@ -115,7 +115,7 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         verb.tense = Tense.FUTURE_COMMAND
         verb = Conjugate.conjugate(verb)
 
-        println verb.wholeWord
+        //println verb.wholeWord
         // Verb book p.119 (see testSG3SG3ANCommand): the 3rd-person FIV row is
         // ᎠᎪᎲᎢ agohv'i for both SG3AN and SG3IN object readings — the earlier
         // da- reading (ᏓᎦᎪᎲᎢ) does not appear in the printed FIV section.
@@ -129,7 +129,7 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         verb.tense = Tense.FUTURE_COMMAND
         verb = Conjugate.conjugate(verb)
 
-        println verb.wholeWord
+        //println verb.wholeWord
         //timo 10Nov26: guide-correct update — FUTURE_COMMAND (Future
         //Imperative/Volative) routes through the Set A table (determineVerbSet keeps
         //it Set A, matching the vrb/* specs), and Set A SG1SG3AN is ji- (Ꮵ): "I'm
@@ -168,13 +168,13 @@ class GowatihaSG3SG3ANTest extends ConjugateBase {
         verb.tense = Tense.REMOTE_PAST
         verb = Conjugate.conjugate(verb)
 
-        println verb.wholeWord
+        //println verb.wholeWord
         assertEquals("ᏥᎪᎲᎢ", verb.wholeWord)
 
         verb.subject = PrefixTableSubject.SG3
         verb = Conjugate.conjugate(verb)
 
-        println verb.wholeWord
+        //println verb.wholeWord
         //timo 10Nov26: guide-correct update — P8(5) prints one Set B form (uw-) for
         //"he hit him, it"; SG3SG3ANB == SG3SG3INB, so this is ᎤᎪᎲᎢ (ugohv'i), the
         //verb book p.119 "He/she saw it" — not ᎦᎪᎲᎢ (the Set A present form).

@@ -29,8 +29,8 @@ class ToWantInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwadulvdi", syllabary: "ᎠᏆᏚᎸᏗ", english: "(For me to) want it", occurrence: 1],
-            [pronoun: "", romanized: "udulvdi", syllabary: "ᎤᏚᎸᏗ", english: "(For him/her to) want it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwadulvdi", syllabary: "ᎠᏆᏚᎸᏗ", english: "(For me to) want it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "udulvdi", syllabary: "ᎤᏚᎸᏗ", english: "(For him/her to) want it", occurrence: 1],
     ]
 
     /**

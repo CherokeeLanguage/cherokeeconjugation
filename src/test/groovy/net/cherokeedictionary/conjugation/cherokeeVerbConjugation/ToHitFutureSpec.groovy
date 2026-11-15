@@ -29,8 +29,8 @@ class ToHitFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "dagvnili", syllabary: "ᏓᎬᏂᎵ", english: "I will hit it", occurrence: 1],
-            [pronoun: "", romanized: "dagvhnili", syllabary: "ᏓᎬᏂᎵ", english: "S/he will hit it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dagvnili", syllabary: "ᏓᎬᏂᎵ", english: "I will hit it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dagvhnili", syllabary: "ᏓᎬᏂᎵ", english: "S/he will hit it", occurrence: 1],
     ]
 
     /**

@@ -29,8 +29,8 @@ class ToTeachSomeoneInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "digwadeyodi", syllabary: "ᏗᏥᏰᏲᏗ", english: "For me to teach it", occurrence: 1],
-            [pronoun: "", romanized: "tsudeyodi", syllabary: "ᏧᏪᏲᏗ", english: "For him/her to teach it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "digwadeyodi", syllabary: "ᏗᏥᏰᏲᏗ", english: "For me to teach it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsudeyodi", syllabary: "ᏧᏪᏲᏗ", english: "For him/her to teach it", occurrence: 1],
     ]
 
     /**

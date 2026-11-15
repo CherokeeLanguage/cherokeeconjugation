@@ -28,16 +28,16 @@ class ToBeSomewhereImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "geda",    syllabary: "ᎨᏓ",  english: "May I be somewhere right now!"],
-            [pronoun: "Second Singular",        romanized: "heda",    syllabary: "ᎮᏓ",  english: "May you be somewhere right now!"],
-            [pronoun: "Third Singular",         romanized: "weda",    syllabary: "ᏪᏓ",  english: "May he/she/it be somewhere right now!"],
-            [pronoun: "Second Dual",            romanized: "sdeda",   syllabary: "ᏍᏕᏓ", english: "May you (two) be somewhere right now!"],
-            [pronoun: "Second Plural",          romanized: "itseda",  syllabary: "ᎢᏤᏓ", english: "May you (more than two) be somewhere right now!"],
-            [pronoun: "First Dual Inclusive",   romanized: "ineda",   syllabary: "ᎢᏁᏓ", english: "May we (you and I) be somewhere right now!"],
-            [pronoun: "First Dual Exclusive",   romanized: "wosdeda", syllabary: "ᏬᏍᏕᏓ", english: "May we (another and I) be somewhere right now!"],
-            [pronoun: "First Plural Exclusive", romanized: "wotseda", syllabary: "ᏬᏤᏓ", english: "May we (others and I) be somewhere right now!"],
-            [pronoun: "First Plural Inclusive", romanized: "ideda",   syllabary: "ᎢᏕᏓ", english: "May we (you and I and another or others) be somewhere right now!"],
-            [pronoun: "Third Plural",      romanized: "waneda",  syllabary: "ᏩᏁᏓ", english: "May they be somewhere right now!"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "geda",    syllabary: "ᎨᏓ",  english: "May I be somewhere right now!"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "heda",    syllabary: "ᎮᏓ",  english: "May you be somewhere right now!"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "weda",    syllabary: "ᏪᏓ",  english: "May he/she/it be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdeda",   syllabary: "ᏍᏕᏓ", english: "May you (two) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itseda",  syllabary: "ᎢᏤᏓ", english: "May you (more than two) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "ineda",   syllabary: "ᎢᏁᏓ", english: "May we (you and I) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "wosdeda", syllabary: "ᏬᏍᏕᏓ", english: "May we (another and I) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "wotseda", syllabary: "ᏬᏤᏓ", english: "May we (others and I) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "ideda",   syllabary: "ᎢᏕᏓ", english: "May we (you and I and another or others) be somewhere right now!"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "waneda",  syllabary: "ᏩᏁᏓ", english: "May they be somewhere right now!"],
     ]
 
     /**

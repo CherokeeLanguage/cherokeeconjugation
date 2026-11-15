@@ -38,10 +38,10 @@ class ToKillSomeoneOrSomethingFutureImperativeVolativeSpec extends VerbBaseSpec 
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hilv'i", syllabary: "ᎯᎸᎢ", english: "You (singular) kill it!", occurrence: 1],
-            [pronoun: "", romanized: "esdilv'i", syllabary: "ᎡᏍᏗᎸᎢ", english: "You (two) kill it!", occurrence: 1],
-            [pronoun: "", romanized: "etsilv'i", syllabary: "ᎡᏥᎸᎢ", english: "You (more than two) kill it!", occurrence: 1],
-            [pronoun: "", romanized: "atlv'i", syllabary: "ᎠᏢᎢ", english: "Let him/her kill it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hilv'i", syllabary: "ᎯᎸᎢ", english: "You (singular) kill it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdilv'i", syllabary: "ᎡᏍᏗᎸᎢ", english: "You (two) kill it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsilv'i", syllabary: "ᎡᏥᎸᎢ", english: "You (more than two) kill it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "atlv'i", syllabary: "ᎠᏢᎢ", english: "Let him/her kill it!", occurrence: 1],
     ]
 
     /**

@@ -29,8 +29,8 @@ class ToHitRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwvhnilv'i", syllabary: "ᎠᏋᏂᎸᎢ", english: "I hit it", occurrence: 1],
-            [pronoun: "", romanized: "uwahnilv'i", syllabary: "ᎤᏩᏂᎸᎢ", english: "S/he hit it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwvhnilv'i", syllabary: "ᎠᏋᏂᎸᎢ", english: "I hit it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uwahnilv'i", syllabary: "ᎤᏩᏂᎸᎢ", english: "S/he hit it", occurrence: 1],
     ]
 
     /**

@@ -75,31 +75,31 @@ class MorphemeTest extends GroovyTestCase {
     /*
     void testMorphemes() {
         Morphemes.D.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processD(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processD(\"${it.key}\"))"
         }
 
         Morphemes.Y.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processY(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processY(\"${it.key}\"))"
         }
 
         Morphemes.N.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processN(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processN(\"${it.key}\"))"
         }
 
         Morphemes.GW.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processGW(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processGW(\"${it.key}\"))"
         }
 
         Morphemes.H.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processH(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processH(\"${it.key}\"))"
         }
 
         Morphemes.J.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processJ(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processJ(\"${it.key}\"))"
         }
 
         Morphemes.W.each {
-            println "assertEquals(\"${it.value}\", Morphemes.processW(\"${it.key}\"))"
+            //println "assertEquals(\"${it.value}\", Morphemes.processW(\"${it.key}\"))"
         }
     }*/
 }

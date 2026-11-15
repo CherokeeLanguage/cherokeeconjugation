@@ -83,7 +83,7 @@ class YiVerbTest extends ConjugateBase {
 
 
         verb = Conjugate.conjugate(verb)
-        println verb.wholeWord
+        //println verb.wholeWord
 
 //        assertTrue "ᏯᎪᏩᏘᎭ" == verb.wholeWord
     }

@@ -29,8 +29,8 @@ class ToHonorSomeoneOrSomethingInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agilvkwdodi", syllabary: "ᎠᎩᎸᏉᏙᏗ", english: "(For me to) honor it", occurrence: 1],
-            [pronoun: "", romanized: "ulvkwdodi", syllabary: "ᎤᎸᏉᏙᏗ", english: "(For him/her to) honor it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agilvkwdodi", syllabary: "ᎠᎩᎸᏉᏙᏗ", english: "(For me to) honor it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ulvkwdodi", syllabary: "ᎤᎸᏉᏙᏗ", english: "(For him/her to) honor it", occurrence: 1],
     ]
 
     /**

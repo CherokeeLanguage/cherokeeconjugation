@@ -64,8 +64,8 @@ def testWord6 = "hiwonisiloja"
 //    if (returnValue.endsWith(it)) {
 //        returnValue = returnValue.substring(0, returnValue.size() - it.size())
 //    } else {
-//        println it
+//        //println it
 //    }
 //}
 //
-//println returnValue
+////println returnValue

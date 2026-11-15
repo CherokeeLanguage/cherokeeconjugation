@@ -34,16 +34,16 @@ class ToBeThankfulOrHappyPresentSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gali'eliga", syllabary: "ᎦᎵᎡᎵᎦ", english: "I am thankful/happy"],
-            [pronoun: "Second Singular", romanized: "haliheliga", syllabary: "ᎭᎵᎮᎵᎦ", english: "You are thankful/happy"],
-            [pronoun: "Third Singular", romanized: "aliheliga", syllabary: "ᎠᎵᎮᎵᎦ", english: "He/she/it is thankful/happy"],
-            [pronoun: "Second Dual", romanized: "sdaliheliga", syllabary: "ᏍᏓᎵᎮᎵᎦ", english: "You (two) are thankful/happy"],
-            [pronoun: "Second Plural", romanized: "itsaliheliga", syllabary: "ᎢᏣᎵᎮᎵᎦ", english: "You (more than two) are thankful/happy"],
-            [pronoun: "First Dual Inclusive", romanized: "inaliheliga", syllabary: "ᎢᎾᎵᎮᎵᎦ", english: "We (you and I) are thankful/happy"],
-            [pronoun: "First Dual Exclusive", romanized: "osdaliheliga", syllabary: "ᎣᏍᏓᎵᎮᎵᎦ", english: "We (another and I) are thankful/happy"],
-            [pronoun: "First Plural Exclusive", romanized: "otsaliheliga", syllabary: "ᎣᏣᎵᎮᎵᎦ", english: "We (others and I) are thankful/happy"],
-            [pronoun: "First Plural Inclusive", romanized: "idaliheliga", syllabary: "ᎢᏓᎵᎮᎵᎦ", english: "We (you and I and another or others) are thankful/happy"],
-            [pronoun: "Third Plural", romanized: "analiheliga", syllabary: "ᎠᎾᎵᎮᎵᎦ", english: "They are thankful/happy"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "galieliga", syllabary: "ᎦᎵᎡᎵᎦ", english: "I am thankful/happy"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "haliheliga", syllabary: "ᎭᎵᎮᎵᎦ", english: "You are thankful/happy"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "aliheliga", syllabary: "ᎠᎵᎮᎵᎦ", english: "He/she/it is thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdaliheliga", syllabary: "ᏍᏓᎵᎮᎵᎦ", english: "You (two) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsaliheliga", syllabary: "ᎢᏣᎵᎮᎵᎦ", english: "You (more than two) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inaliheliga", syllabary: "ᎢᎾᎵᎮᎵᎦ", english: "We (you and I) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "osdaliheliga", syllabary: "ᎣᏍᏓᎵᎮᎵᎦ", english: "We (another and I) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsaliheliga", syllabary: "ᎣᏣᎵᎮᎵᎦ", english: "We (others and I) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idaliheliga", syllabary: "ᎢᏓᎵᎮᎵᎦ", english: "We (you and I and another or others) are thankful/happy"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "analiheliga", syllabary: "ᎠᎾᎵᎮᎵᎦ", english: "They are thankful/happy"],
     ]
 
     /**

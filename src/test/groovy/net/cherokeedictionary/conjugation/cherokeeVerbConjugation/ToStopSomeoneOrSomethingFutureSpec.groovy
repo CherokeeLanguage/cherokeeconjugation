@@ -29,8 +29,8 @@ class ToStopSomeoneOrSomethingFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "dagalehwisdotani", syllabary: "ᏓᎦᎴᏫᏍᏙᏔᏂ", english: "I will stop it", occurrence: 1],
-            [pronoun: "", romanized: "dvlehwisdotani", syllabary: "ᏛᎴᏫᏍᏙᏔᏂ", english: "He/she will stop it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dagalehwisdotani", syllabary: "ᏓᎦᎴᏫᏍᏙᏔᏂ", english: "I will stop it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvlehwisdotani", syllabary: "ᏛᎴᏫᏍᏙᏔᏂ", english: "He/she will stop it", occurrence: 1],
     ]
 
     /**

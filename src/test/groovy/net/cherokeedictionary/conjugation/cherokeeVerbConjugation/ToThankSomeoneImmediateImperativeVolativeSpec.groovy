@@ -29,10 +29,10 @@ class ToThankSomeoneImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hiyali'elitsisi", syllabary: "ᎯᏯᎵᎡᎵᏥᏏ", english: "You (singular) thank it right now!", occurrence: 1],
-            [pronoun: "", romanized: "esdali'elitsisi", syllabary: "ᎡᏍᏓᎵᎡᎵᏥᏏ", english: "You two thank it right now!", occurrence: 1],
-            [pronoun: "", romanized: "etsali'elitsisi", syllabary: "ᎡᏣᎵᎡᎵᏥᏏ", english: "You (more than two) thank it right now!", occurrence: 1],
-            [pronoun: "", romanized: "walihelitsisi", syllabary: "ᏩᎵᎮᎵᏥᏏ", english: "Let him/her thank it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hiyali'elitsisi", syllabary: "ᎯᏯᎵᎡᎵᏥᏏ", english: "You (singular) thank it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdali'elitsisi", syllabary: "ᎡᏍᏓᎵᎡᎵᏥᏏ", english: "You two thank it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsali'elitsisi", syllabary: "ᎡᏣᎵᎡᎵᏥᏏ", english: "You (more than two) thank it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "walihelitsisi", syllabary: "ᏩᎵᎮᎵᏥᏏ", english: "Let him/her thank it right now!", occurrence: 1],
     ]
 
     /**

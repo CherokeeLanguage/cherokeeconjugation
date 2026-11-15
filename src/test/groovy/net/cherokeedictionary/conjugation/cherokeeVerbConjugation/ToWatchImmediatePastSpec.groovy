@@ -29,8 +29,8 @@ class ToWatchImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "gagasesda", syllabary: "ᎦᎦᏎᏍᏓ", english: "I watched it, just now", occurrence: 1],
-            [pronoun: "", romanized: "agasesda", syllabary: "ᎠᎦᏎᏍᏓ", english: "He/she watched it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gagasesda", syllabary: "ᎦᎦᏎᏍᏓ", english: "I watched it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agasesda", syllabary: "ᎠᎦᏎᏍᏓ", english: "He/she watched it, just now", occurrence: 1],
     ]
 
     /**

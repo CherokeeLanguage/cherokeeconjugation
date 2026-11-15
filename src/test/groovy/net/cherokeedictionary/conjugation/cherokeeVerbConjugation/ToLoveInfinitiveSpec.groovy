@@ -29,8 +29,8 @@ class ToLoveInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agigeyhdi", syllabary: "ᎠᎩᎨᏳᏗ", english: "(For me to) love it", occurrence: 1],
-            [pronoun: "", romanized: "ugeyhdi", syllabary: "ᎤᎨᏳᏗ", english: "(For him/her) to love it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agigeyhdi", syllabary: "ᎠᎩᎨᏳᏗ", english: "(For me to) love it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ugeyhdi", syllabary: "ᎤᎨᏳᏗ", english: "(For him/her) to love it", occurrence: 1],
     ]
 
     /**

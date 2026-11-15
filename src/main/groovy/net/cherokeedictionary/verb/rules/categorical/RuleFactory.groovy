@@ -7,7 +7,8 @@ import net.cherokeedictionary.verb.metadata.VerbCategory
  */
 class RuleFactory {
     private static final Map<VerbCategory, CategoricalRule> rules = [
-        (VerbCategory.LIQUID_HANDLING): new LiquidHandlingRule()
+        (VerbCategory.LIQUID_HANDLING): new LiquidHandlingRule(),
+        (VerbCategory.MOTION): new MotionRule()
         // Add other category rules here as implemented
     ]
 

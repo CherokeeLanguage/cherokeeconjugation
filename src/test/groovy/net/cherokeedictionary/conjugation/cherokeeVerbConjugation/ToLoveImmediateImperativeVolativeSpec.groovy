@@ -29,10 +29,10 @@ class ToLoveImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsageyuhvga", syllabary: "ᏣᎨᏳᎲᎦ", english: "You (singular) love it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdigeyuhvga", syllabary: "ᏍᏗᎨᏳᎲᎦ", english: "You two love it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsigeyuhvga", syllabary: "ᎢᏥᎨᏳᎲᎦ", english: "You (more than two) love it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wvgeyuhvga", syllabary: "ᏮᎨᏳᎲᎦ", english: "You let him/her love it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "tsageyuhvga", syllabary: "ᏣᎨᏳᎲᎦ", english: "You (singular) love it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdigeyuhvga", syllabary: "ᏍᏗᎨᏳᎲᎦ", english: "You two love it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsigeyuhvga", syllabary: "ᎢᏥᎨᏳᎲᎦ", english: "You (more than two) love it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wvgeyuhvga", syllabary: "ᏮᎨᏳᎲᎦ", english: "You let him/her love it right now!", occurrence: 1],
     ]
 
     /**

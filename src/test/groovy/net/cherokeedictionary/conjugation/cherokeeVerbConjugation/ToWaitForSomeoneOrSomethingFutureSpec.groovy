@@ -29,8 +29,8 @@ class ToWaitForSomeoneOrSomethingFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsiktidi", syllabary: "ᏓᏥᎦᏘᏗ", english: "I will wait for it", occurrence: 1],
-            [pronoun: "", romanized: "dvktidi", syllabary: "ᏛᎦᏘᏗ", english: "He/she will wait for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "datsiktidi", syllabary: "ᏓᏥᎦᏘᏗ", english: "I will wait for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvktidi", syllabary: "ᏛᎦᏘᏗ", english: "He/she will wait for it", occurrence: 1],
     ]
 
     /**

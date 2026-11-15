@@ -35,10 +35,10 @@ class ToBiteFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hisgaltsv'i", syllabary: "ᎯᏍᎦᎶᏨᎢ", english: "You (singular) bite it!", occurrence: 1],
-            [pronoun: "", romanized: "sdisgaltsv'i", syllabary: "ᏍᏗᏍᎦᎶᏨᎢ", english: "You (two) bite it!", occurrence: 1],
-            [pronoun: "", romanized: "itsisgaltsv'i", syllabary: "ᎢᏥᏍᎦᎶᏨᎢ", english: "You (more than two) bite it", occurrence: 1],
-            [pronoun: "", romanized: "wasgaltsv'i", syllabary: "ᏩᏍᎦᎶᏨᎢ", english: "Let him/her bite it", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hisgaltsv'i", syllabary: "ᎯᏍᎦᎶᏨᎢ", english: "You (singular) bite it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdisgaltsv'i", syllabary: "ᏍᏗᏍᎦᎶᏨᎢ", english: "You (two) bite it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsisgaltsv'i", syllabary: "ᎢᏥᏍᎦᎶᏨᎢ", english: "You (more than two) bite it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wasgaltsv'i", syllabary: "ᏩᏍᎦᎶᏨᎢ", english: "Let him/her bite it", occurrence: 1],
     ]
 
     /**
@@ -70,6 +70,8 @@ class ToBiteFutureImperativeVolativeSpec extends VerbBaseSpec {
         form.syllabary == row.syllabary
 
         and: "the engine output matches the verb book syllabary"
+        println form.engineSyllabary
+        println row.syllabary
         form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"

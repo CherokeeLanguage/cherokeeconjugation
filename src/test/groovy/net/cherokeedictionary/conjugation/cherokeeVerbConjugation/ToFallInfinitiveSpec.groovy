@@ -30,16 +30,16 @@ class ToFallInfinitiveSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "aginv'isdi", syllabary: "ᎠᎩᏅᎢᏍᏗ", english: "For me to fall"],
-            [pronoun: "Second Singular", romanized: "tsanv'isdi", syllabary: "ᏣᏅᎢᏍᏗ", english: "For you to fall"],
-            [pronoun: "Third Singular", romanized: "unv'isdi", syllabary: "ᎤᏅᎢᏍᏗ", english: "For him/her/it to fall"],
-            [pronoun: "Second Dual", romanized: "disdinv'isdi", syllabary: "ᏗᏍᏗᏅᎢᏍᏗ", english: "For you (two) to fall"],
-            [pronoun: "Second Plural", romanized: "ditsinv'isdi", syllabary: "ᏗᏥᏅᎢᏍᏗ", english: "For you (more than two) to fall"],
-            [pronoun: "First Dual Inclusive", romanized: "digininv'isdi", syllabary: "ᏗᎩᏂᏅᎢᏍᏗ", english: "For us (you and I) to fall"],
-            [pronoun: "First Dual Exclusive", romanized: "tsogininv'isdi", syllabary: "ᏦᎩᏂᏅᎢᏍᏗ", english: "For us (another and I) to fall"],
-            [pronoun: "First Plural Exclusive", romanized: "tsoginv'isdi", syllabary: "ᏦᎩᏅᎢᏍᏗ", english: "For us (others and I) to fall"],
-            [pronoun: "First Plural Inclusive", romanized: "diginv'isdi", syllabary: "ᏗᎩᏅᎢᏍᏗ", english: "For us (you and I and another or others) to fall"],
-            [pronoun: "Third Plural", romanized: "tsuninv'isdi", syllabary: "ᏧᏂᏅᎢᏍᏗ", english: "For them to fall"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "aginv'isdi", syllabary: "ᎠᎩᏅᎢᏍᏗ", english: "For me to fall"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsanv'isdi", syllabary: "ᏣᏅᎢᏍᏗ", english: "For you to fall"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "unv'isdi", syllabary: "ᎤᏅᎢᏍᏗ", english: "For him/her/it to fall"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "disdinv'isdi", syllabary: "ᏗᏍᏗᏅᎢᏍᏗ", english: "For you (two) to fall"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "ditsinv'isdi", syllabary: "ᏗᏥᏅᎢᏍᏗ", english: "For you (more than two) to fall"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "digininv'isdi", syllabary: "ᏗᎩᏂᏅᎢᏍᏗ", english: "For us (you and I) to fall"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "tsogininv'isdi", syllabary: "ᏦᎩᏂᏅᎢᏍᏗ", english: "For us (another and I) to fall"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "tsoginv'isdi", syllabary: "ᏦᎩᏅᎢᏍᏗ", english: "For us (others and I) to fall"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "diginv'isdi", syllabary: "ᏗᎩᏅᎢᏍᏗ", english: "For us (you and I and another or others) to fall"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "tsuninv'isdi", syllabary: "ᏧᏂᏅᎢᏍᏗ", english: "For them to fall"],
     ]
 
     /**

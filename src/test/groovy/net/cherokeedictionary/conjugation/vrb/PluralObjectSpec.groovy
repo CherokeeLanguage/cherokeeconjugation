@@ -40,10 +40,10 @@ class PluralObjectSpec extends Specification {
         def expectedSyllabary = SyllabaryUtil.tsalagiToSyllabary(expectedLatin)
 
         then: "Print trace for debugging"
-        println "--- TRACE for ${subj}/${obj}/${tense} ---"
-        println "Actual Syllabary: ${actualSyllabary}"
-        println "Trace:\n${verb.getTraceReport()}"
-        println "-----------------------"
+        //println "--- TRACE for ${subj}/${obj}/${tense} ---"
+        //println "Actual Syllabary: ${actualSyllabary}"
+        //println "Trace:\n${verb.getTraceReport()}"
+        //println "-----------------------"
 
         actualSyllabary == expectedSyllabary
 

@@ -30,8 +30,8 @@ class ToBiteImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsisgala", syllabary: "ᏥᏍᎦᎳ", english: "I bit it, just now", occurrence: 1],
-            [pronoun: "", romanized: "asgala", syllabary: "ᎠᏍᎦᎳ", english: "S/he bit it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsisgala", syllabary: "ᏥᏍᎦᎳ", english: "I bit it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "asgala", syllabary: "ᎠᏍᎦᎳ", english: "S/he bit it, just now", occurrence: 1],
     ]
 
     /**

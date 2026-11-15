@@ -29,16 +29,16 @@ class ToHaveSomethingLiquidRemotePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I had multiple liquid things\" aginehv'i/daginehv'i", syllabary: "ᎠᎩᏁᎲᎢ/ᏓᎩᏁᎲᎢ", english: "I had something liquid (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "You had multiple liquid things\" tsanehv'i/detsanehv'i", syllabary: "ᏣᏁᎲᎢ/ᏕᏣᏁᎲᎢ", english: "You had something liquid (singular)\"/"],
-            [pronoun: "Third Singular", romanized: "He/she/it had multiple liquid things\" unehv'i/dunehv'i", syllabary: "ᎤᏁᎲᎢ/ᏚᏁᎲᎢ", english: "He/she/it had something liquid (singular)\"/"],
-            [pronoun: "Second Dual", romanized: "You (two) had multiple liquid things\" sdinehv'i/desdinehv'i", syllabary: "ᏍᏗᏁᎲᎢ/ᏕᏍᏗᏁᎲᎢ", english: "You (two) had something liquid (singular)\"/"],
-            [pronoun: "Second Plural", romanized: "itsinehv'i/detsinehv'i", syllabary: "ᎢᏥᏁᎲᎢ/ᏕᏥᏁᎲᎢ", english: "You (more than two) had something liquid (singular)\"/\"You (more than two) had multiple liquid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "gininehv'i/degininehv'i", syllabary: "ᎩᏂᏁᎲᎢ/ᏕᎩᏂᏁᎲᎢ", english: "We (you and I) had something liquid (singular)\"/\"We (you and I) had multiple liquid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "ogininehv'i/dogininehv'i", syllabary: "ᎣᎩᏂᏁᎲᎢ/ᏙᎩᏂᏁᎲᎢ", english: "We (another and I) had something liquid (singular)\"/\"We (another and I) had multiple liquid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "oginehv'i/doginehv'i", syllabary: "ᎣᎩᏁᎲᎢ/ᏙᎩᏁᎲᎢ", english: "We (others and I) had something liquid (singular)\"/\"We (others and I) had multiple liquid things\""],
-            [pronoun: "First Plural Inclusive", romanized: "iginehv'i/deginehv'i", syllabary: "ᎢᎩᏁᎲᎢ/ᏕᎩᏁᎲᎢ", english: "We (you and I and another or others) had something liquid (singular)\"/\"We (you and I and another or others) had multiple liquid things\""],
-            [pronoun: "Third Plural", romanized: "They had multiple liquid things\" uninehv'i/duninehv'i", syllabary: "ᎤᏂᏁᎲᎢ/ᏚᏂᏁᎲᎢ", english: "They had something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "I had multiple liquid things\" aginehv'i/daginehv'i", syllabary: "ᎠᎩᏁᎲᎢ/ᏓᎩᏁᎲᎢ", english: "I had something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "You had multiple liquid things\" tsanehv'i/detsanehv'i", syllabary: "ᏣᏁᎲᎢ/ᏕᏣᏁᎲᎢ", english: "You had something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "He/she/it had multiple liquid things\" unehv'i/dunehv'i", syllabary: "ᎤᏁᎲᎢ/ᏚᏁᎲᎢ", english: "He/she/it had something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "You (two) had multiple liquid things\" sdinehv'i/desdinehv'i", syllabary: "ᏍᏗᏁᎲᎢ/ᏕᏍᏗᏁᎲᎢ", english: "You (two) had something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsinehv'i/detsinehv'i", syllabary: "ᎢᏥᏁᎲᎢ/ᏕᏥᏁᎲᎢ", english: "You (more than two) had something liquid (singular)\"/\"You (more than two) had multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "gininehv'i/degininehv'i", syllabary: "ᎩᏂᏁᎲᎢ/ᏕᎩᏂᏁᎲᎢ", english: "We (you and I) had something liquid (singular)\"/\"We (you and I) had multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "ogininehv'i/dogininehv'i", syllabary: "ᎣᎩᏂᏁᎲᎢ/ᏙᎩᏂᏁᎲᎢ", english: "We (another and I) had something liquid (singular)\"/\"We (another and I) had multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "oginehv'i/doginehv'i", syllabary: "ᎣᎩᏁᎲᎢ/ᏙᎩᏁᎲᎢ", english: "We (others and I) had something liquid (singular)\"/\"We (others and I) had multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "iginehv'i/deginehv'i", syllabary: "ᎢᎩᏁᎲᎢ/ᏕᎩᏁᎲᎢ", english: "We (you and I and another or others) had something liquid (singular)\"/\"We (you and I and another or others) had multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "They had multiple liquid things\" uninehv'i/duninehv'i", syllabary: "ᎤᏂᏁᎲᎢ/ᏚᏂᏁᎲᎢ", english: "They had something liquid (singular)\"/"],
     ]
 
     /**

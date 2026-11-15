@@ -29,8 +29,8 @@ class ToRememberPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "ganvdadisgo'i", syllabary: "ᎦᏅᏓᏗᏍᎪᎢ", english: "I remember it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "anvdadisgo'i", syllabary: "ᎠᏅᏓᏗᏍᎪᎢ", english: "S/he remembers it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ganvdadisgo'i", syllabary: "ᎦᏅᏓᏗᏍᎪᎢ", english: "I remember it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "anvdadisgo'i", syllabary: "ᎠᏅᏓᏗᏍᎪᎢ", english: "S/he remembers it (habitually)", occurrence: 1],
     ]
 
     /**

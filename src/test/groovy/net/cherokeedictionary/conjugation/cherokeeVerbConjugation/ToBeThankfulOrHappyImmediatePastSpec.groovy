@@ -29,16 +29,16 @@ class ToBeThankfulOrHappyImmediatePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gali'eligi", syllabary: "ᎦᎵᎡᎵᎩ", english: "I was thankful/happy"],  // opening quote missing in print
-            [pronoun: "Second Singular", romanized: "haliheligi", syllabary: "ᎭᎵᎮᎵᎩ", english: "You were thankful/happy"],  // opening quote missing in print
-            [pronoun: "Third Singular", romanized: "aliheligi", syllabary: "ᎠᎵᎮᎵᎩ", english: "He/she/it was thankful/happy"],  // opening quote missing in print
-            [pronoun: "Second Dual", romanized: "sdaliheligi", syllabary: "ᏍᏓᎵᎮᎵᎩ", english: "You (two) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "Second Plural", romanized: "itsaliheligi", syllabary: "ᎢᏣᎵᎮᎵᎩ", english: "You (more than two) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "First Dual Inclusive", romanized: "inaliheligi", syllabary: "ᎢᎾᎵᎮᎵᎩ", english: "We (you and I) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "First Dual Exclusive", romanized: "osdaliheligi", syllabary: "ᎣᏍᏓᎵᎮᎵᎩ", english: "We (another and I) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "First Plural Exclusive", romanized: "otsaliheligi", syllabary: "ᎣᏣᎵᎮᎵᎩ", english: "We (others and I) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "First Plural Inclusive", romanized: "idaliheligi", syllabary: "ᎢᏓᎵᎮᎵᎩ", english: "We (you and I and another or others) were thankful/happy"],  // opening quote missing in print
-            [pronoun: "Third Plural", romanized: "analiheligi", syllabary: "ᎠᎾᎵᎮᎵᎩ", english: "They were thankful/happy"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gali'eligi", syllabary: "ᎦᎵᎡᎵᎩ", english: "I was thankful/happy"],  // opening quote missing in print
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "haliheligi", syllabary: "ᎭᎵᎮᎵᎩ", english: "You were thankful/happy"],  // opening quote missing in print
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "aliheligi", syllabary: "ᎠᎵᎮᎵᎩ", english: "He/she/it was thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdaliheligi", syllabary: "ᏍᏓᎵᎮᎵᎩ", english: "You (two) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsaliheligi", syllabary: "ᎢᏣᎵᎮᎵᎩ", english: "You (more than two) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inaliheligi", syllabary: "ᎢᎾᎵᎮᎵᎩ", english: "We (you and I) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "osdaliheligi", syllabary: "ᎣᏍᏓᎵᎮᎵᎩ", english: "We (another and I) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsaliheligi", syllabary: "ᎣᏣᎵᎮᎵᎩ", english: "We (others and I) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idaliheligi", syllabary: "ᎢᏓᎵᎮᎵᎩ", english: "We (you and I and another or others) were thankful/happy"],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "analiheligi", syllabary: "ᎠᎾᎵᎮᎵᎩ", english: "They were thankful/happy"],
     ]
 
     /**

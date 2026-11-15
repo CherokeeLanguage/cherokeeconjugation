@@ -29,8 +29,8 @@ class ToHearInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwatvgodi", syllabary: "ᎠᏆᏛᎪᏗ", english: "For me to hear it", occurrence: 1],
-            [pronoun: "", romanized: "utvgodi", syllabary: "ᎤᏛᎪᏗ", english: "For him/her to hear it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwatvgodi", syllabary: "ᎠᏆᏛᎪᏗ", english: "For me to hear it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "utvgodi", syllabary: "ᎤᏛᎪᏗ", english: "For him/her to hear it", occurrence: 1],
     ]
 
     /**

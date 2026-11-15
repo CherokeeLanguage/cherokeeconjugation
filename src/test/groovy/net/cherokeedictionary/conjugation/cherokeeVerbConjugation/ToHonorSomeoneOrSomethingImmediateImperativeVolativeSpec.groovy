@@ -29,10 +29,10 @@ class ToHonorSomeoneOrSomethingImmediateImperativeVolativeSpec extends VerbBaseS
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hilvkwda", syllabary: "ᎯᎸᏉᏓ", english: "May You (singular) honor it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdilvkwda", syllabary: "ᏍᏗᎸᏉᏓ", english: "May you two honor it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsilvkwda", syllabary: "ᎢᏥᎸᏉᏓ", english: "May you (more than two) honor it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wigalvkwda", syllabary: "ᏫᎦᎸᏉᏓ", english: "Let him/her honor it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hilvkwda", syllabary: "ᎯᎸᏉᏓ", english: "May You (singular) honor it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdilvkwda", syllabary: "ᏍᏗᎸᏉᏓ", english: "May you two honor it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsilvkwda", syllabary: "ᎢᏥᎸᏉᏓ", english: "May you (more than two) honor it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wigalvkwda", syllabary: "ᏫᎦᎸᏉᏓ", english: "Let him/her honor it right now!", occurrence: 1],
     ]
 
     /**

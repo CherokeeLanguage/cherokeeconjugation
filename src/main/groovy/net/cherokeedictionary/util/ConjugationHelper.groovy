@@ -36,9 +36,26 @@ class ConjugationHelper {
         }
     }
 
+    /**
+     * Verb-book tense names -> engine Tense names. The verb-book specs pass the
+     * printed tense labels verbatim (To Bite p.29 etc.); the engine enum uses
+     * the grammar-guide stand-in names for the same forms:
+     *   FUTURE                        "I will bite it" -i, Stem III ("NB: the
+     *                                 Future is usually Stem III") -> COMPLETIVE_FUTURE
+     *   PRESENT_HABITUAL              "I bite it (habitually)" -o'i (Stem II) -> HABITUAL
+     *   IMMEDIATE_IMPERATIVE_VOLATIVE "bite it right now!" -a/-i (Stem IV) -> IMMEDIATE_COMMAND
+     * tio 13Nov26
+     */
+    static final Map<String, String> VERB_BOOK_TENSE_ALIASES = [
+        "FUTURE"                        : "COMPLETIVE_FUTURE",
+        "PRESENT_HABITUAL"              : "HABITUAL",
+        "IMMEDIATE_IMPERATIVE_VOLATIVE" : "IMMEDIATE_COMMAND",
+    ]
+
     public static void determineTense(Verb verb, tense) {
         // Default tense to PRESENT when missing/blank
         def effectiveTense = (tense && tense.trim()) ? tense.trim() : "PRESENT"
+        effectiveTense = VERB_BOOK_TENSE_ALIASES.getOrDefault(effectiveTense, effectiveTense)
         verb.tense = Tense.valueOf(effectiveTense)
     }
 

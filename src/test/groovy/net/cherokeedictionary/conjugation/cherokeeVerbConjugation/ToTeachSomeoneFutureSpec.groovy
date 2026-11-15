@@ -29,8 +29,8 @@ class ToTeachSomeoneFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "dodagadeyohni", syllabary: "ᏙᏓᏥᏰᏲᏂ", english: "I will teach it", occurrence: 1],
-            [pronoun: "", romanized: "dodvdeyohni", syllabary: "ᏙᏓᎨᏲᏂ", english: "S/he will teach it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dodagadeyohni", syllabary: "ᏙᏓᏥᏰᏲᏂ", english: "I will teach it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dodvdeyohni", syllabary: "ᏙᏓᎨᏲᏂ", english: "S/he will teach it", occurrence: 1],
     ]
 
     /**

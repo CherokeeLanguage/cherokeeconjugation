@@ -35,16 +35,16 @@ class ToBeThankfulOrHappyFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gali'elitsv'i", syllabary: "ᎦᎵᎡᎵᏨᎢ", english: "May I be thankful/happy!"],
-            [pronoun: "Second Singular", romanized: "halihelitsv'i", syllabary: "ᎭᎵᎮᎵᏨᎢ", english: "May you be thankful/happy!"],
-            [pronoun: "Third Singular", romanized: "alihelitsv'i", syllabary: "ᎠᎵᎮᎵᏨᎢ", english: "May he/she/it be thankful/happy!"],
-            [pronoun: "Second Dual", romanized: "sdalihelitsv'i", syllabary: "ᏍᏓᎵᎮᎵᏨᎢ", english: "May you (two) be thankful/happy!"],
-            [pronoun: "Second Plural", romanized: "itsalihelitsv'i", syllabary: "ᎢᏣᎵᎮᎵᏨᎢ", english: "May you (more than two) be thankful/happy!"],
-            [pronoun: "First Dual Inclusive", romanized: "inalihelitsv'i", syllabary: "ᎢᎾᎵᎮᎵᏨᎢ", english: "May we (you and I) be thankful/happy!"],
-            [pronoun: "First Dual Exclusive", romanized: "osdalihelitsv'i", syllabary: "ᎣᏍᏓᎵᎮᎵᏨᎢ", english: "May we (another and I) be thankful/happy!"],
-            [pronoun: "First Plural Exclusive", romanized: "otsalihelitsv'i", syllabary: "ᎣᏣᎵᎮᎵᏨᎢ", english: "May we (others and I) be thankful/happy!"],
-            [pronoun: "First Plural Inclusive", romanized: "idalihelitsv'i", syllabary: "ᎢᏓᎵᎮᎵᏨᎢ", english: "May we (you and I and another or others) be thankful/happy!"],
-            [pronoun: "Third Plural", romanized: "analihelitsv'i", syllabary: "ᎠᎾᎵᎮᎵᏨᎢ", english: "May they be thankful/happy!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gali'elitsv'i", syllabary: "ᎦᎵᎡᎵᏨᎢ", english: "May I be thankful/happy!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "halihelitsv'i", syllabary: "ᎭᎵᎮᎵᏨᎢ", english: "May you be thankful/happy!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "alihelitsv'i", syllabary: "ᎠᎵᎮᎵᏨᎢ", english: "May he/she/it be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdalihelitsv'i", syllabary: "ᏍᏓᎵᎮᎵᏨᎢ", english: "May you (two) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsalihelitsv'i", syllabary: "ᎢᏣᎵᎮᎵᏨᎢ", english: "May you (more than two) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inalihelitsv'i", syllabary: "ᎢᎾᎵᎮᎵᏨᎢ", english: "May we (you and I) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "osdalihelitsv'i", syllabary: "ᎣᏍᏓᎵᎮᎵᏨᎢ", english: "May we (another and I) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsalihelitsv'i", syllabary: "ᎣᏣᎵᎮᎵᏨᎢ", english: "May we (others and I) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idalihelitsv'i", syllabary: "ᎢᏓᎵᎮᎵᏨᎢ", english: "May we (you and I and another or others) be thankful/happy!"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "analihelitsv'i", syllabary: "ᎠᎾᎵᎮᎵᏨᎢ", english: "May they be thankful/happy!"],
     ]
 
     /**

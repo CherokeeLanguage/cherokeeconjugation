@@ -27,18 +27,28 @@ class ToHaveSomethingFlexiblePresentHabitualSpec extends VerbBaseSpec {
     static final String STEM = "-na-'-"        // Stem II
     static final String TENSE_FORM = "-na'-o'i"  // Present Habitual (Stem II)
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I have multiple flexible things\" agina'o'i/dunina'o'i", syllabary: "ᎠᎩᎾᎣᎢ/ᏚᏂᎾᎣᎢ", english: "I have something flexible (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "You have multiple flexible things\" tsana'o'i/detsana'o'i", syllabary: "ᏣᎾᎣᎢ/ᏕᏣᎾᎣᎢ", english: "You have something flexible (singular)\"/"],
-            [pronoun: "Third Singular", romanized: "He/she/it has multiple flexible things\" una'o'i/duna'o'i", syllabary: "ᎤᎾᎣᎢ/ᏚᎾᎣᎢ", english: "He/she/it has something flexible (singular)\"/"],
-            [pronoun: "Second Dual", romanized: "You (two) have multiple flexible things\" sdina'o'i/desdina'o'i", syllabary: "ᏍᏗᎾᎣᎢ/ᏕᏍᏗᎾᎣᎢ", english: "You (two) have something flexible (singular)\"/"],
-            [pronoun: "Second Plural", romanized: "itsina'o'i/detsina'o'i", syllabary: "ᎢᏥᎾᎣᎢ/ᏕᏥᎾᎣᎢ", english: "You (more than two) have something flexible (singular)\"/\"You (more than two) have multiple flexible things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginina'o'i/deginina'o'i", syllabary: "ᎩᏂᎾᎣᎢ/ᏕᎩᏂᎾᎣᎢ", english: "We (you and I) have something flexible (singular)\"/\"We (you and I) have multiple flexible things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginina'o'i/doginina'o'i", syllabary: "ᎣᎩᏂᎾᎣᎢ/ᏙᎩᏂᎾᎣᎢ", english: "We (another and I) have something flexible (singular)\"/\"We (another and I) have multiple flexible things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogina'o'i/dogina'o'i", syllabary: "ᎣᎩᎾᎣᎢ/ᏙᎩᎾᎣᎢ", english: "We (others and I) have something flexible (singular)\"/\"We (others and I) have multiple flexible things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igina'o'i/degina'o'i", syllabary: "ᎢᎩᎾᎣᎢ/ᏕᎩᎾᎣᎢ", english: "We (you and I and another or others) have something flexible (singular)\"/\"We (you and I and another or others) have multiple flexible things\""],
-            [pronoun: "Third Plural", romanized: "They have multiple flexible things\" unina'o'i/dunina'o'i", syllabary: "ᎤᏂᎾᎣᎢ/ᏚᏂᎾᎣᎢ", english: "They have something flexible (singular)\"/"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "aginaoi", syllabary: "ᎠᎩᎾᎣᎢ", english: "I have something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "duninaoi", syllabary: "ᏚᏂᎾᎣᎢ", english: "I have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsanaoi", syllabary: "ᏣᎾᎣᎢ", english: "You have something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "detsanaoi", syllabary: "ᏕᏣᎾᎣᎢ", english: "You have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "unaoi", syllabary: "ᎤᎾᎣᎢ", english: "He/she/it has something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "dunaoi", syllabary: "ᏚᎾᎣᎢ", english: "He/she/it has multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdinaoi", syllabary: "ᏍᏗᎾᎣᎢ", english: "You (two) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "desdinaoi", syllabary: "ᏕᏍᏗᎾᎣᎢ", english: "You (two) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsinaoi", syllabary: "ᎢᏥᎾᎣᎢ", english: "You (more than two) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "detsinaoi", syllabary: "ᏕᏥᎾᎣᎢ", english: "You (more than two) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "gininaoi", syllabary: "ᎩᏂᎾᎣᎢ", english: "We (you and I) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "degininaoi", syllabary: "ᏕᎩᏂᎾᎣᎢ", english: "We (you and I) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "ogininaoi", syllabary: "ᎣᎩᏂᎾᎣᎢ", english: "We (another and I) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "dogininaoi", syllabary: "ᏙᎩᏂᎾᎣᎢ", english: "We (another and I) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "oginaoi", syllabary: "ᎣᎩᎾᎣᎢ", english: "We (others and I) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "doginaoi", syllabary: "ᏙᎩᎾᎣᎢ", english: "We (others and I) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "iginaoi", syllabary: "ᎢᎩᎾᎣᎢ", english: "We (you and I and another or others) have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "deginaoi", syllabary: "ᏕᎩᎾᎣᎢ", english: "We (you and I and another or others) have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "uninaoi", syllabary: "ᎤᏂᎾᎣᎢ", english: "They have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "duninaoi", syllabary: "ᏚᏂᎾᎣᎢ", english: "They have multiple flexible things"],
     ]
 
     /**
@@ -46,16 +56,16 @@ class ToHaveSomethingFlexiblePresentHabitualSpec extends VerbBaseSpec {
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         // TODO(engine-comparison): replace this echo with a conjugation-engine call,
         // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "present habitual form matches the verb book (#row.pronoun)"() {
+    def "present habitual form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -64,12 +74,12 @@ class ToHaveSomethingFlexiblePresentHabitualSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

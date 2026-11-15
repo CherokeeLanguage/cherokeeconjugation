@@ -18,8 +18,22 @@ class PrefixWi implements Affix {
             return "Ꮻ";
         }
 
+        // tio 13Nov26: guide (31b) ᏫᏥᏬᏂᎯ wi²ji²wo³ni²hi and (32b) ᏫᏬᏂᎯ
+        // wi²hi²wo³ni²hi attest that wi SURFACES before ji-/hi- bases — there
+        // is no elision rule for Ꮵ/Ꭿ/Ꮧ in the guide. The To Fall IIV mixed
+        // paradigm (Ꮻ only on some rows) is per-row book data, handled in the
+        // verb-book specs, not a phonological rule here.
+
+        // tio 14Nov26: To Go IIV/FIV (vowel-initial e-stem) bakes the wi- onto
+        // the stem vowel (wi + ena = wena ᏪᎾ, wi + ena = wenvs'i ᏪᏅᏒᎢ). The
+        // generic vowel branch below handles this via getOptionsByVowel. To Go
+        // SG1 and SG2 forms (gena/hena) carry pronominals, but the book
+        // REQUIRES w-insertion (wgena/whena) which the h-stripping logic below
+        // was eating. Scoped h-stripping: only strip h when it is followed by
+        // a VOWEL (hi- -> wi-, he- -> we-), never when followed by a consonant
+        // (whena ᏪᎿ vs ᎮᎿ).
         def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
-        def startsWithH = latin.startsWith('h')
+        def startsWithH = latin.matches("^h[aeiouv].*")
         if (startsWithH) {
             latin = latin.substring(1)
             baseReturnValue = SyllabaryUtil.tsalagiToSyllabary(latin)

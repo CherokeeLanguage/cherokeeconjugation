@@ -29,8 +29,8 @@ class ToTalkToSomeonePresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsilinohedisgo'i", syllabary: "ᏥᎵᏃᎮᏗᏍᎪᎢ", english: "I talk to, or with, him/her (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "ahlinohedisgo'i", syllabary: "ᎠᎵᏃᎮᏗᏍᎪᎢ", english: "He/she talks to, or with, him/her (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsilinohedisgo'i", syllabary: "ᏥᎵᏃᎮᏗᏍᎪᎢ", english: "I talk to, or with, him/her (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ahlinohedisgo'i", syllabary: "ᎠᎵᏃᎮᏗᏍᎪᎢ", english: "He/she talks to, or with, him/her (habitually)", occurrence: 1],
     ]
 
     /**

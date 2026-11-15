@@ -30,8 +30,8 @@ class ToBiteInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "ag(i)sgahl(o)sdi", syllabary: "ᎠᎩᏍᎦᎶᏍᏗ", english: "For me to bite it", occurrence: 1],
-            [pronoun: "", romanized: "usgahlsdi", syllabary: "ᎤᏍᎦᎶᏍᏗ", english: "For him/her to bite it", occurrence: 1],
+            [object: 'SG3IN', pronoun: "SG1", romanized: "agisgalosdi", syllabary: "ᎠᎩᏍᎦᎶᏍᏗ", english: "For me to bite it", occurrence: 1],
+            [object: 'SG3IN', pronoun: "SG3AN", romanized: "usgalisdi", syllabary: "ᎤᏍᎦᎶᏍᏗ", english: "For him/her to bite it", occurrence: 1],
     ]
 
     /**

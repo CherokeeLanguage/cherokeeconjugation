@@ -29,8 +29,8 @@ class ToHideSomeoneOrSomethingInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwvsgalvdi", syllabary: "ᎠᏋᏍᎦᎸᏗ", english: "(For) me to hide it", occurrence: 1],
-            [pronoun: "", romanized: "uwasgalvdi", syllabary: "ᎤᏩᏍᎦᎸᏗ", english: "(For) him/her to hide it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwvsgalvdi", syllabary: "ᎠᏋᏍᎦᎸᏗ", english: "(For) me to hide it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uwasgalvdi", syllabary: "ᎤᏩᏍᎦᎸᏗ", english: "(For) him/her to hide it", occurrence: 1],
     ]
 
     /**

@@ -29,16 +29,16 @@ class ToHaveSomethingFlexiblePresentSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I have multiple flexible things\" agina'a/dagina'a", syllabary: "ᎠᎩᎾᎠ/ᏓᎩᎾᎠ", english: "I have something flexible (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "You have multiple flexible things\" tsana'a/detsana'a", syllabary: "ᏣᎾᎠ/ᏕᏣᎾᎠ", english: "You have something flexible (singular)\"/"],
-            [pronoun: "Third Singular", romanized: "una'a/duna'a", syllabary: "ᎤᎾᎠ/ᏚᎾᎠ", english: "He/she/it has something flexible (singular)\"/\"He/she/it has multiple flexible things\""],
-            [pronoun: "Second Dual", romanized: "sdina'a/desdina'a", syllabary: "ᏍᏗᎾᎠ/ᏕᏍᏗᎾᎠ", english: "You (two) have something flexible (singular)\"/\"You (two) have multiple flexible things\""],
-            [pronoun: "Second Plural", romanized: "itsina'a/detsina'a", syllabary: "ᎢᏥᎾᎠ/ᏕᏥᎾᎠ", english: "You (more than two) have something flexible (singular)\"/\"You (more than two) have multiple flexible things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginina'a/deginina'a", syllabary: "ᎩᏂᎾᎠ/ᏕᎩᏂᎾᎠ", english: "We (you and I) have something flexible (singular)\"/\"We (you and I) have multiple flexible things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginina'a/doginina'a", syllabary: "ᎣᎩᏂᎾᎠ/ᏙᎩᏂᎾᎠ", english: "We (another and I) have something flexible (singular)\"/\"We (another and I) have multiple flexible things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogina'a/dogina'a", syllabary: "ᎣᎩᎾᎠ/ᏙᎩᎾᎠ", english: "We (others and I) have something flexible (singular)\"/\"We (others and I) have multiple flexible things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igina'a/degina'a", syllabary: "ᎢᎩᎾᎠ/ᏕᎩᎾᎠ", english: "We (you and I and another or others) have something flexible (singular)\"/\"We (you and I and another or others) have multiple flexible things\""],
-            [pronoun: "Third Plural", romanized: "They have multiple flexible things\" unina'a/dunina'a", syllabary: "ᎤᏂᎾᎠ/ᏚᏂᎾᎠ", english: "They have something flexible (singular)\"/"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "I have multiple flexible things\" agina'a/dagina'a", syllabary: "ᎠᎩᎾᎠ/ᏓᎩᎾᎠ", english: "I have something flexible (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "You have multiple flexible things\" tsana'a/detsana'a", syllabary: "ᏣᎾᎠ/ᏕᏣᎾᎠ", english: "You have something flexible (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "una'a/duna'a", syllabary: "ᎤᎾᎠ/ᏚᎾᎠ", english: "He/she/it has something flexible (singular)\"/\"He/she/it has multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdina'a/desdina'a", syllabary: "ᏍᏗᎾᎠ/ᏕᏍᏗᎾᎠ", english: "You (two) have something flexible (singular)\"/\"You (two) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsina'a/detsina'a", syllabary: "ᎢᏥᎾᎠ/ᏕᏥᎾᎠ", english: "You (more than two) have something flexible (singular)\"/\"You (more than two) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginina'a/deginina'a", syllabary: "ᎩᏂᎾᎠ/ᏕᎩᏂᎾᎠ", english: "We (you and I) have something flexible (singular)\"/\"We (you and I) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginina'a/doginina'a", syllabary: "ᎣᎩᏂᎾᎠ/ᏙᎩᏂᎾᎠ", english: "We (another and I) have something flexible (singular)\"/\"We (another and I) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogina'a/dogina'a", syllabary: "ᎣᎩᎾᎠ/ᏙᎩᎾᎠ", english: "We (others and I) have something flexible (singular)\"/\"We (others and I) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igina'a/degina'a", syllabary: "ᎢᎩᎾᎠ/ᏕᎩᎾᎠ", english: "We (you and I and another or others) have something flexible (singular)\"/\"We (you and I and another or others) have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "They have multiple flexible things\" unina'a/dunina'a", syllabary: "ᎤᏂᎾᎠ/ᏚᏂᎾᎠ", english: "They have something flexible (singular)\"/"],
     ]
 
     /**

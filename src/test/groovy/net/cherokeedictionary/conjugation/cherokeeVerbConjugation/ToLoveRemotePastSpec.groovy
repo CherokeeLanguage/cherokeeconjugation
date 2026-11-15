@@ -29,8 +29,8 @@ class ToLoveRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agigeyusv'i", syllabary: "ᎠᎩᎨᏳᏒᎢ", english: "I loved it", occurrence: 1],
-            [pronoun: "", romanized: "ugeyusv'i", syllabary: "ᎤᎨᏳᏒᎢ", english: "He/she loved it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agigeyusv'i", syllabary: "ᎠᎩᎨᏳᏒᎢ", english: "I loved it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ugeyusv'i", syllabary: "ᎤᎨᏳᏒᎢ", english: "He/she loved it", occurrence: 1],
     ]
 
     /**

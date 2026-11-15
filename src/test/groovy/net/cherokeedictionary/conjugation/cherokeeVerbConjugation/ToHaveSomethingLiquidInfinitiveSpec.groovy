@@ -32,35 +32,38 @@ class ToHaveSomethingLiquidInfinitiveSpec extends VerbBaseSpec {
     static final String VERB_BOOK_NOTE =
         "Infinitive must include \"to drink\""
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwaditasdi/digwaditasdi", syllabary: "ᎠᏆᏗᏔᏍᏗ/ᏗᏆᏗᏔᏍᏗ", english: "For me to drink something liquid (singular)\"/\"For me to drink multiple liquid things\""],
-            [pronoun: "Second Singular", romanized: "tsaditasdi/ditsaditasdi", syllabary: "ᏣᏗᏔᏍᏗ/ᏗᏣᏗᏔᏍᏗ", english: "For you to drink something liquid (singular)\"/\"For you to drink multiple liquid things\""],
-            [pronoun: "Third Singular", romanized: "uditasdi/tsuditasdi", syllabary: "ᎤᏗᏔᏍᏗ/ᏧᏗᏔᏍᏗ", english: "For him/her/it to drink something liquid (singular)\"/\"For him/her/it to drink multiple liquid things\""],
-            [pronoun: "Second Dual", romanized: "sdaditasdi/distaditasdi", syllabary: "ᏍᏓᏗᏔᏍᏗ/ᏗᏍᏔᏗᏔᏍᏗ", english: "For you (two) to drink something liquid (singular)\"/\"For you (two) to drink multiple liquid things\""],
-            [pronoun: "Second Plural", romanized: "itsiditasdi/ditsaditasdi", syllabary: "ᎢᏥᏗᏔᏍᏗ/ᏗᏣᏗᏔᏍᏗ", english: "For you (more than two) to drink something liquid (singular)\"/\"For you (more than two) to drink multiple liquid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginaditasdi/diginaditasdi", syllabary: "ᎩᎾᏗᏔᏍᏗ/ᏗᎩᎾᏗᏔᏍᏗ", english: "For us (you and I) to drink something liquid (singular)\"/\"For us (you and I) to drink multiple liquid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginaditasdi/tsoginaditasdi", syllabary: "ᎣᎩᎾᏗᏔᏍᏗ/ᏦᎩᎾᏗᏔᏍᏗ", english: "For us (another and I) to drink something liquid (singular)\"/\"For us (another and I) to drink multiple liquid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogaditasdi/digaditasdi", syllabary: "ᎣᎦᏗᏔᏍᏗ/ᏗᎦᏗᏔᏍᏗ", english: "For us (others and I) to drink something liquid (singular)\"/\"For us (others and I) to drink multiple liquid things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igaditasdi/digaditasdi", syllabary: "ᎢᎦᏗᏔᏍᏗ/ᏗᎦᏗᏔᏍᏗ", english: "For us (you and I and another or others) to drink something liquid (singular)\"/\"For us (you and I and another or others) to drink multiple liquid things\""],
-            [pronoun: "Third Plural", romanized: "unaditasdi/tsunaditasdi", syllabary: "ᎤᎾᏗᏔᏍᏗ/ᏧᎾᏗᏔᏍᏗ", english: "For them to drink something liquid (singular)\"/\"For them to drink multiple liquid things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwaditasdi", syllabary: "ᎠᏆᏗᏔᏍᏗ", english: "For me to drink something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "digwaditasdi", syllabary: "ᏗᏆᏗᏔᏍᏗ", english: "For me to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsaditasdi", syllabary: "ᏣᏗᏔᏍᏗ", english: "For you to drink something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "ditsaditasdi", syllabary: "ᏗᏣᏗᏔᏍᏗ", english: "For you to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uditasdi", syllabary: "ᎤᏗᏔᏍᏗ", english: "For him/her/it to drink something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "tsuditasdi", syllabary: "ᏧᏗᏔᏍᏗ", english: "For him/her/it to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdaditasdi", syllabary: "ᏍᏓᏗᏔᏍᏗ", english: "For you (two) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "distaditasdi", syllabary: "ᏗᏍᏔᏗᏔᏍᏗ", english: "For you (two) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsiditasdi", syllabary: "ᎢᏥᏗᏔᏍᏗ", english: "For you (more than two) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "ditsaditasdi", syllabary: "ᏗᏣᏗᏔᏍᏗ", english: "For you (more than two) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginaditasdi", syllabary: "ᎩᎾᏗᏔᏍᏗ", english: "For us (you and I) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "diginaditasdi", syllabary: "ᏗᎩᎾᏗᏔᏍᏗ", english: "For us (you and I) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginaditasdi", syllabary: "ᎣᎩᎾᏗᏔᏍᏗ", english: "For us (another and I) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "tsoginaditasdi", syllabary: "ᏦᎩᎾᏗᏔᏍᏗ", english: "For us (another and I) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogaditasdi", syllabary: "ᎣᎦᏗᏔᏍᏗ", english: "For us (others and I) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "digaditasdi", syllabary: "ᏗᎦᏗᏔᏍᏗ", english: "For us (others and I) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igaditasdi", syllabary: "ᎢᎦᏗᏔᏍᏗ", english: "For us (you and I and another or others) to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "digaditasdi", syllabary: "ᏗᎦᏗᏔᏍᏗ", english: "For us (you and I and another or others) to drink multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unaditasdi", syllabary: "ᎤᎾᏗᏔᏍᏗ", english: "For them to drink something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "tsunaditasdi", syllabary: "ᏧᎾᏗᏔᏍᏗ", english: "For them to drink multiple liquid things"],
     ]
 
-    /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
-     */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "infinitive form matches the verb book (#row.pronoun)"() {
+    def "infinitive form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -69,12 +72,12 @@ class ToHaveSomethingLiquidInfinitiveSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

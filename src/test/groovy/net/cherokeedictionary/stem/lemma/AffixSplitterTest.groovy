@@ -66,7 +66,7 @@ import net.cherokeedictionary.util.CompoundPrefixes
 ////        def sg = SuffixGuesser.INSTANCE
 ////        def lst = sg.getMatches(SyllabaryUtil.tsalagiToSyllabary("yijigowatiha") as String)
 //        lst.each {
-//            println it
+//            //println it
 //        }
 //    }
 
@@ -94,14 +94,14 @@ def getPronounPrefix(value) {
             def preConsonant = SyllabaryUtil.parseSyllabaryWithPunctuationAndLatin(val.preConsonant)
             if (preConsonant != "") {
                 if (value.startsWith(preConsonant)) {
-//                println "found before consonant"
-//                println preConsonant
+//                //println "found before consonant"
+//                //println preConsonant
                     prefixSize = preConsonant.size()
                     pronounPrefixOptions << key
                     continueParsing = false
                 } else if (value.startsWith(preVowel)) {
-//                println preVowel
-//                println "found before vowel"
+//                //println preVowel
+//                //println "found before vowel"
                     pronounPrefixOptions << key
                     prefixSize = preVowel.size()
                     continueParsing = false
@@ -110,7 +110,7 @@ def getPronounPrefix(value) {
         }
     }
     returnValue = returnValue.substring(prefixSize)
-    println returnValue
+    //println returnValue
 
     return [returnValue, pronounPrefixOptions]
 }
@@ -123,7 +123,7 @@ def splitAffix(verbToSplit) {
     aafix.syllabary = verbToSplit
     aafix.transliteratedValue = transliterated
 
-    println transliterated
+    //println transliterated
 
     //split hla
 
@@ -184,13 +184,13 @@ def splitAffix(verbToSplit) {
     //split e
 
     prefixList.each {
-        println it
+        //println it
     }
 
     aafix.prefixList = prefixList
     def pronPref = getPronounPrefix(tornDownValue)
-    println pronPref[0]
-    println pronPref[1]
+    //println pronPref[0]
+    //println pronPref[1]
 }
 //}
 
@@ -201,11 +201,11 @@ splitAffix(SyllabaryUtil.tsalagiToSyllabary("nagowatisgva"))
 splitAffix(SyllabaryUtil.tsalagiToSyllabary("nagowatisgvna"))
 
 //def pv = getPronounPrefix("tsigowatiha")
-//println pv[0]
-//println pv[1]
+////println pv[0]
+////println pv[1]
 
 //need to check that the reflexive isn't next
 //def pv2 = getPronounPrefix("tsadagowatiha")
-//println pv2[0]
-//println pv2[1]
+////println pv2[0]
+////println pv2[1]
 

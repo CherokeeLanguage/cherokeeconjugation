@@ -35,16 +35,16 @@ class ToFallFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "tsinvtsv'i", syllabary: "ᏥᏅᏨᎢ", english: "May I fall!"],
-            [pronoun: "Second Singular", romanized: "hinvtsv'i", syllabary: "ᎯᏅᏨᎢ", english: "May you fall!"],
-            [pronoun: "Third Singular", romanized: "ganvtsv'i", syllabary: "ᎦᏅᏨᎢ", english: "May s/he fall!"],
-            [pronoun: "Second Dual", romanized: "desdinvtsv'i", syllabary: "ᏕᏍᏗᏅᏨᎢ", english: "May you (two) fall!"],
-            [pronoun: "Second Plural", romanized: "detsinvtsv'i", syllabary: "ᏕᏥᏅᏨᎢ", english: "May you (more than two) fall!"],
-            [pronoun: "First Dual Inclusive", romanized: "deninvtsv'i", syllabary: "ᏕᏂᏅᏨᎢ", english: "May we (you and I) fall!"],
-            [pronoun: "First Dual Exclusive", romanized: "dosdinvtsv'i", syllabary: "ᏙᏍᏗᏅᏨᎢ", english: "May we (another and I) fall!"],
-            [pronoun: "First Plural Exclusive", romanized: "dotsinvtsv'i", syllabary: "ᏙᏥᏅᏨᎢ", english: "May we (others and I) fall!"],
-            [pronoun: "First Plural Inclusive", romanized: "dedinvtsv'i", syllabary: "ᏕᏗᏅᏨᎢ", english: "May we (you and I and another or others) fall!"],
-            [pronoun: "Third Plural", romanized: "daninvtsv'i", syllabary: "ᏓᏂᏅᏨᎢ", english: "May they fall!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "tsinvtsv'i", syllabary: "ᏥᏅᏨᎢ", english: "May I fall!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hinvtsv'i", syllabary: "ᎯᏅᏨᎢ", english: "May you fall!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ganvtsv'i", syllabary: "ᎦᏅᏨᎢ", english: "May s/he fall!"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "desdinvtsv'i", syllabary: "ᏕᏍᏗᏅᏨᎢ", english: "May you (two) fall!"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "detsinvtsv'i", syllabary: "ᏕᏥᏅᏨᎢ", english: "May you (more than two) fall!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "deninvtsv'i", syllabary: "ᏕᏂᏅᏨᎢ", english: "May we (you and I) fall!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dosdinvtsv'i", syllabary: "ᏙᏍᏗᏅᏨᎢ", english: "May we (another and I) fall!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dotsinvtsv'i", syllabary: "ᏙᏥᏅᏨᎢ", english: "May we (others and I) fall!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dedinvtsv'i", syllabary: "ᏕᏗᏅᏨᎢ", english: "May we (you and I and another or others) fall!"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "daninvtsv'i", syllabary: "ᏓᏂᏅᏨᎢ", english: "May they fall!"],
     ]
 
     /**

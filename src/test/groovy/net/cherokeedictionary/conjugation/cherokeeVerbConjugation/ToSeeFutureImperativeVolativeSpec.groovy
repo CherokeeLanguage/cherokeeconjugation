@@ -38,10 +38,10 @@ class ToSeeFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "higohv'i", syllabary: "ᎯᎪᎲᎢ", english: "You (singular) see it!", occurrence: 1],
-            [pronoun: "", romanized: "sdigohv'i", syllabary: "ᏍᏗᎪᎲᎢ", english: "You two see it!", occurrence: 1],
-            [pronoun: "", romanized: "itsigohv'i", syllabary: "ᎢᏥᎪᎲᎢ", english: "You (more than two) see it!", occurrence: 1],
-            [pronoun: "", romanized: "agohv'i", syllabary: "ᎠᎪᎲᎢ", english: "Let him/her see it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "higohv'i", syllabary: "ᎯᎪᎲᎢ", english: "You (singular) see it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdigohv'i", syllabary: "ᏍᏗᎪᎲᎢ", english: "You two see it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsigohv'i", syllabary: "ᎢᏥᎪᎲᎢ", english: "You (more than two) see it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agohv'i", syllabary: "ᎠᎪᎲᎢ", english: "Let him/her see it!", occurrence: 1],
     ]
 
     /**

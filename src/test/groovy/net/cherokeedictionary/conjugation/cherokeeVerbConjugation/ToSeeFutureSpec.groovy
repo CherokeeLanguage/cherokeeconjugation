@@ -29,8 +29,8 @@ class ToSeeFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsigo'i", syllabary: "ᏓᏥᎪᎢ", english: "I will see it", occurrence: 1],
-            [pronoun: "", romanized: "dvgohi", syllabary: "ᏛᎪᎯ", english: "He/she will see it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "datsigo'i", syllabary: "ᏓᏥᎪᎢ", english: "I will see it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvgohi", syllabary: "ᏛᎪᎯ", english: "He/she will see it", occurrence: 1],
     ]
 
     /**

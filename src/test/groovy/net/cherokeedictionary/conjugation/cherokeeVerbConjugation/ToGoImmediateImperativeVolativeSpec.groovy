@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -29,28 +30,31 @@ class ToGoImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gena", syllabary: "ᎨᎾ", english: "May I go right now!"],
-            [pronoun: "Second Singular", romanized: "hena", syllabary: "ᎮᎾ", english: "May you go right now!"],
-            [pronoun: "Third Singular", romanized: "wena", syllabary: "ᏪᎾ", english: "May he/she/it go right now!"],
-            [pronoun: "Second Dual", romanized: "sdena", syllabary: "ᏍᏕᎾ", english: "May you (two) go right now!"],
-            [pronoun: "Second Plural", romanized: "itsena", syllabary: "ᎢᏤᎾ", english: "May you (more than two) go right now!"],
-            [pronoun: "First Dual Inclusive", romanized: "inena", syllabary: "ᎢᏁᎾ", english: "May we (you and I) go right now!"],
-            [pronoun: "First Dual Exclusive", romanized: "wosdena", syllabary: "ᏬᏍᏕᎾ", english: "May we (another and I) go right now!"],
-            [pronoun: "First Plural Exclusive", romanized: "wotsena", syllabary: "ᏬᏤᎾ", english: "May we (others and I) go right now!"],
-            [pronoun: "First Plural Inclusive", romanized: "idena", syllabary: "ᎢᏕᎾ", english: "May we (you and I and another or others) go right now!"],
-            [pronoun: "Third Plural", romanized: "wanena", syllabary: "ᏩᏁᎾ", english: "May they go right now!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gena", syllabary: "ᎨᎾ", english: "May I go right now!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hena", syllabary: "ᎮᎾ", english: "May you go right now!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "wena", syllabary: "ᏪᎾ", english: "May he/she/it go right now!"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdena", syllabary: "ᏍᏕᎾ", english: "May you (two) go right now!"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsena", syllabary: "ᎢᏤᎾ", english: "May you (more than two) go right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inena", syllabary: "ᎢᏁᎾ", english: "May we (you and I) go right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "wosdena", syllabary: "ᏬᏍᏕᎾ", english: "May we (another and I) go right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "wotsena", syllabary: "ᏬᏤᎾ", english: "May we (others and I) go right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idena", syllabary: "ᎢᏕᎾ", english: "May we (you and I and another or others) go right now!"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "wanena", syllabary: "ᏩᏁᎾ", english: "May they go right now!"],
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * tio 14Nov26: harness check — the engine conjugates this same
+     * pronoun/tense/verb; the assertion below compares its output with
+     * the verb-book syllabary.
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "immediate imperative/volative form matches the verb book (#row.pronoun)"() {
@@ -60,6 +64,9 @@ class ToGoImmediateImperativeVolativeSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

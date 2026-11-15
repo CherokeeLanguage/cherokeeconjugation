@@ -34,8 +34,8 @@ class ToHearRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwatvganv'i", syllabary: "ᎠᏆᏛᎦᏅᎢ", english: "I heard it", occurrence: 1],
-            [pronoun: "", romanized: "utvganv'i", syllabary: "ᎤᏛᎦᏅᎢ", english: "S/he heard it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwatvganv'i", syllabary: "ᎠᏆᏛᎦᏅᎢ", english: "I heard it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "utvganv'i", syllabary: "ᎤᏛᎦᏅᎢ", english: "S/he heard it", occurrence: 1],
     ]
 
     /**

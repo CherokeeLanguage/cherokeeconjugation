@@ -36,18 +36,28 @@ class ToHaveSomethingLongAndRigidFutureImperativeVolativeSpec extends VerbBaseSp
         "These are the same forms as the future tense.",
     ]
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwvyesdi/dagwvyesdi", syllabary: "ᎠᏋᏰᏍᏗ/ᏓᏋᏰᏍᏗ", english: "May I have something long & rigid (singular)!\"/\"May I have multiple long & rigid things!\""],
-            [pronoun: "Second Singular", romanized: "tsvyesdi/detsvyesdi", syllabary: "ᏨᏰᏍᏗ/ᏕᏨᏰᏍᏗ", english: "May you have something long & rigid (singular)!\"/\"May you have multiple long & rigid things!\""],
-            [pronoun: "Third Singular", romanized: "uwayesdi/duwayesdi", syllabary: "ᎤᏩᏰᏍᏗ/ᏚᏩᏰᏍᏗ", english: "May he/she/it have something long & rigid (singular)!\"/\"May he/she/it have multiple long & rigid things!\""],
-            [pronoun: "Second Dual", romanized: "tsvyesdi/detsvyesdi", syllabary: "ᏨᏰᏍᏗ/ᏕᏨᏰᏍᏗ", english: "May you (two) have something long & rigid (singular)!\"/\"May you (two) have multiple long & rigid things!\""],
-            [pronoun: "Second Plural", romanized: "itsvyesdi/detsvyesdi", syllabary: "ᎢᏨᏰᏍᏗ/ᏕᏨᏰᏍᏗ", english: "May you (more than two) have something long & rigid (singular)!\"/\"May you (more than two) have multiple long & rigid things!\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginvyesdi/deginvyesdi", syllabary: "ᎩᏅᏰᏍᏗ/ᏕᎩᏅᏰᏍᏗ", english: "May we (you and I) have something long & rigid (singular)!\"/\"May we (you and I) have multiple long & rigid things!\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginvyesdi/doginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ/ᏙᎩᏅᏰᏍᏗ", english: "May we (another and I) have something long & rigid (singular)!\"/\"May we (another and I) have multiple long & rigid things!\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogvyesdi/dogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ/ᏙᎬᏰᏍᏗ", english: "May we (others and I) have something long & rigid (singular)!\"/\"May we (others and I) have multiple long & rigid things!\""],
-            [pronoun: "First Plural Inclusive", romanized: "igvyesdi/degvyesdi", syllabary: "ᎢᎬᏰᏍᏗ/ᏕᎬᏰᏍᏗ", english: "May we (you and I and another or others) have something long & rigid (singular)!\"/\"May we (you and I and another or others) have multiple long & rigid things!\""],
-            [pronoun: "Third Plural", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "May they have something long & rigid (singular)!\"/\"May they have multiple long & rigid things!\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwvyesdi", syllabary: "ᎠᏋᏰᏍᏗ", english: "May I have something long & rigid (singular)!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagwvyesdi", syllabary: "ᏓᏋᏰᏍᏗ", english: "May I have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsvyesdi", syllabary: "ᏨᏰᏍᏗ", english: "May you have something long & rigid (singular)!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "detsvyesdi", syllabary: "ᏕᏨᏰᏍᏗ", english: "May you have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwayesdi", syllabary: "ᎤᏩᏰᏍᏗ", english: "May he/she/it have something long & rigid (singular)!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "duwayesdi", syllabary: "ᏚᏩᏰᏍᏗ", english: "May he/she/it have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdvyesdi", syllabary: "ᏍᏛᏰᏍᏗ", english: "May you (two) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "desdvyesdi", syllabary: "ᏕᏍᏛᏰᏍᏗ", english: "May you (two) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsvyesdi", syllabary: "ᎢᏨᏰᏍᏗ", english: "May you (more than two) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "detsvyesdi", syllabary: "ᏕᏨᏰᏍᏗ", english: "May you (more than two) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginvyesdi", syllabary: "ᎩᏅᏰᏍᏗ", english: "May we (you and I) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "deginvyesdi", syllabary: "ᏕᎩᏅᏰᏍᏗ", english: "May we (you and I) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ", english: "May we (another and I) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "doginvyesdi", syllabary: "ᏙᎩᏅᏰᏍᏗ", english: "May we (another and I) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ", english: "May we (others and I) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "dogvyesdi", syllabary: "ᏙᎬᏰᏍᏗ", english: "May we (others and I) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igvyesdi", syllabary: "ᎢᎬᏰᏍᏗ", english: "May we (you and I and another or others) have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "degvyesdi", syllabary: "ᏕᎬᏰᏍᏗ", english: "May we (you and I and another or others) have multiple long & rigid things!"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unvyesdi", syllabary: "ᎤᏅᏰᏍᏗ", english: "May they have something long & rigid (singular)!"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "dunvyesdi", syllabary: "ᏚᏅᏰᏍᏗ", english: "May they have multiple long & rigid things!"],
     ]
 
     /**
@@ -55,16 +65,16 @@ class ToHaveSomethingLongAndRigidFutureImperativeVolativeSpec extends VerbBaseSp
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         // TODO(engine-comparison): replace this echo with a conjugation-engine call,
         // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "future imperative/volative form matches the verb book (#row.pronoun)"() {
+    def "future imperative/volative form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -73,12 +83,12 @@ class ToHaveSomethingLongAndRigidFutureImperativeVolativeSpec extends VerbBaseSp
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

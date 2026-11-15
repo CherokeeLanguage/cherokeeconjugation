@@ -27,18 +27,28 @@ class ToHaveSomethingLongAndRigidFutureSpec extends VerbBaseSpec {
     static final String STEM = "-vy-Ø-"        // Stem III
     static final String TENSE_FORM = "-vy-esdi"  // Future Tense (Stem III)
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwvyesdi/dagwvyesdi", syllabary: "ᎠᏋᏰᏍᏗ/ᏓᏋᏰᏍᏗ", english: "I will have something long & rigid (singular)\"/\"I will have multiple long & rigid things\""],
-            [pronoun: "Second Singular", romanized: "tsvyesdi/detsvyesdi", syllabary: "ᏨᏰᏍᏗ/ᏕᏨᏰᏍᏗ", english: "You will have something long & rigid (singular)\"/\"You will have multiple long & rigid things\""],
-            [pronoun: "Third Singular", romanized: "uwayesdi/duwayesdi", syllabary: "ᎤᏩᏰᏍᏗ/ᏚᏩᏰᏍᏗ", english: "He/she/it will have something long & rigid (singular)\"/\"He/she/it will have multiple long & rigid things\""],
-            [pronoun: "Second Dual", romanized: "sdvyesdi/desdvyesdi", syllabary: "ᏍᏛᏰᏍᏗ/ᏕᏍᏛᏰᏍᏗ", english: "You (two) will have something long & rigid (singular)\"/\"You (two) will have multiple long & rigid things\""],
-            [pronoun: "Second Plural", romanized: "itsvyesdi/detsvyesdi", syllabary: "ᎢᏨᏰᏍᏗ/ᏕᏨᏰᏍᏗ", english: "You (more than two) will have something long & rigid (singular)\"/\"You (more than two) will have multiple long & rigid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginvyesdi/deginvyesdi", syllabary: "ᎩᏅᏰᏍᏗ/ᏕᎩᏅᏰᏍᏗ", english: "We (you and I) will have something long & rigid (singular)\"/\"We (you and I) will have multiple long & rigid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginvyesdi/deginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ/ᏕᎩᏅᏰᏍᏗ", english: "We (another and I) will have something long & rigid (singular)\"/\"We (another and I) will have multiple long & rigid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogvyesdi/dogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ/ᏙᎬᏰᏍᏗ", english: "We (others and I) will have something long & rigid (singular)\"/\"We (others and I) will have multiple long & rigid things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igvyesdi/degvyesdi", syllabary: "ᎢᎬᏰᏍᏗ/ᏕᎬᏰᏍᏗ", english: "We (you and I and another or others) will have something long & rigid (singular)\"/\"We (you and I and another or others) will have multiple long & rigid things\""],
-            [pronoun: "Third Plural", romanized: "unvyesdi/dunvyesdi", syllabary: "ᎤᏅᏰᏍᏗ/ᏚᏅᏰᏍᏗ", english: "They will have something long & rigid (singular)\"/\"They will have multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwvyesdi", syllabary: "ᎠᏋᏰᏍᏗ", english: "I will have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagwvyesdi", syllabary: "ᏓᏋᏰᏍᏗ", english: "I will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsvyesdi", syllabary: "ᏨᏰᏍᏗ", english: "You will have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "detsvyesdi", syllabary: "ᏕᏨᏰᏍᏗ", english: "You will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwayesdi", syllabary: "ᎤᏩᏰᏍᏗ", english: "He/she/it will have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "duwayesdi", syllabary: "ᏚᏩᏰᏍᏗ", english: "He/she/it will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdvyesdi", syllabary: "ᏍᏛᏰᏍᏗ", english: "You (two) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "desdvyesdi", syllabary: "ᏕᏍᏛᏰᏍᏗ", english: "You (two) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsvyesdi", syllabary: "ᎢᏨᏰᏍᏗ", english: "You (more than two) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "detsvyesdi", syllabary: "ᏕᏨᏰᏍᏗ", english: "You (more than two) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginvyesdi", syllabary: "ᎩᏅᏰᏍᏗ", english: "We (you and I) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "deginvyesdi", syllabary: "ᏕᎩᏅᏰᏍᏗ", english: "We (you and I) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginvyesdi", syllabary: "ᎣᎩᏅᏰᏍᏗ", english: "We (another and I) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "doginvyesdi", syllabary: "ᏙᎩᏅᏰᏍᏗ", english: "We (another and I) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogvyesdi", syllabary: "ᎣᎬᏰᏍᏗ", english: "We (others and I) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "dogvyesdi", syllabary: "ᏙᎬᏰᏍᏗ", english: "We (others and I) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igvyesdi", syllabary: "ᎢᎬᏰᏍᏗ", english: "We (you and I and another or others) will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "degvyesdi", syllabary: "ᏕᎬᏰᏍᏗ", english: "We (you and I and another or others) will have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unvyesdi", syllabary: "ᎤᏅᏰᏍᏗ", english: "They will have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "dunvyesdi", syllabary: "ᏚᏅᏰᏍᏗ", english: "They will have multiple long & rigid things"],
     ]
 
     /**
@@ -46,16 +56,16 @@ class ToHaveSomethingLongAndRigidFutureSpec extends VerbBaseSpec {
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         // TODO(engine-comparison): replace this echo with a conjugation-engine call,
         // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "future tense form matches the verb book (#row.pronoun)"() {
+    def "future tense form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -64,12 +74,12 @@ class ToHaveSomethingLongAndRigidFutureSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

@@ -36,18 +36,28 @@ class ToHaveSomethingLongAndRigidPresentSpec extends VerbBaseSpec {
         "uwv- becomes uwa- in the Third Singular Form, in a regular phonetic change.",
     ]
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I have multiple long & rigid things\" agwvya/dagwvya", syllabary: "ᎠᏋᏯ/ᏓᏋᏯ", english: "I have something long & rigid (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "tsvya/detsvya", syllabary: "ᏨᏯ/ᏕᏨᏯ", english: "You have something long & rigid (singular)\"/\"You have multiple long & rigid things\""],
-            [pronoun: "Third Singular", romanized: "uwaya/duwaya", syllabary: "ᎤᏩᏯ/ᏚᏩᏯ", english: "He/she/it has something long & rigid (singular)\"/\"He/she/it has multiple long & rigid things\""],
-            [pronoun: "Second Dual", romanized: "sdvya/desdvya", syllabary: "ᏍᏛᏯ/ᏕᏍᏛᏯ", english: "You (two) have something long & rigid (singular)\"/\"You (two) have multiple long & rigid things\""],
-            [pronoun: "Second Plural", romanized: "itsvya/detsvya", syllabary: "ᎢᏨᏯ/ᏕᏨᏯ", english: "You (more than two) have something long & rigid (singular)\"/\"You (more than two) have multiple long & rigid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginvya/deginvya", syllabary: "ᎩᏅᏯ/ᏕᎩᏅᏯ", english: "We (you and I) have something long & rigid (singular)\"/\"We (you and I) have multiple long & rigid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginvya/doginvya", syllabary: "ᎣᎩᏅᏯ/ᏙᎩᏅᏯ", english: "We (another and I) have something long & rigid (singular)\"/\"We (another and I) have multiple long & rigid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogvya/dogvya", syllabary: "ᎣᎬᏯ/ᏙᎬᏯ", english: "We (others and I) have something long & rigid (singular)\"/\"We (others and I) have multiple long & rigid things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igvya/degvya", syllabary: "ᎢᎬᏯ/ᏕᎬᏯ", english: "We (you and I and another or others) have something long & rigid (singular)\"/\"We (you and I and another or others) have multiple long & rigid things\""],
-            [pronoun: "Third Plural", romanized: "unvya/dunvya", syllabary: "ᎤᏅᏯ/ᏚᏅᏯ", english: "They have something long & rigid (singular)\"/\"They have multiple long & rigid things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwvya", syllabary: "ᎠᏋᏯ", english: "I have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagwvya", syllabary: "ᏓᏋᏯ", english: "I have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsvya", syllabary: "ᏨᏯ", english: "You have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "detsvya", syllabary: "ᏕᏨᏯ", english: "You have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwaya", syllabary: "ᎤᏩᏯ", english: "He/she/it has something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "duwaya", syllabary: "ᏚᏩᏯ", english: "He/she/it has multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdvya", syllabary: "ᏍᏛᏯ", english: "You (two) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "desdvya", syllabary: "ᏕᏍᏛᏯ", english: "You (two) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsvya", syllabary: "ᎢᏨᏯ", english: "You (more than two) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "detsvya", syllabary: "ᏕᏨᏯ", english: "You (more than two) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginvya", syllabary: "ᎩᏅᏯ", english: "We (you and I) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "deginvya", syllabary: "ᏕᎩᏅᏯ", english: "We (you and I) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginvya", syllabary: "ᎣᎩᏅᏯ", english: "We (another and I) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "doginvya", syllabary: "ᏙᎩᏅᏯ", english: "We (another and I) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogvya", syllabary: "ᎣᎬᏯ", english: "We (others and I) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "dogvya", syllabary: "ᏙᎬᏯ", english: "We (others and I) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igvya", syllabary: "ᎢᎬᏯ", english: "We (you and I and another or others) have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "degvya", syllabary: "ᏕᎬᏯ", english: "We (you and I and another or others) have multiple long & rigid things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unvya", syllabary: "ᎤᏅᏯ", english: "They have something long & rigid (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "dunvya", syllabary: "ᏚᏅᏯ", english: "They have multiple long & rigid things"],
     ]
 
     /**
@@ -55,16 +65,16 @@ class ToHaveSomethingLongAndRigidPresentSpec extends VerbBaseSpec {
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         // TODO(engine-comparison): replace this echo with a conjugation-engine call,
         // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "present tense form matches the verb book (#row.pronoun)"() {
+    def "present tense form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -73,12 +83,12 @@ class ToHaveSomethingLongAndRigidPresentSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

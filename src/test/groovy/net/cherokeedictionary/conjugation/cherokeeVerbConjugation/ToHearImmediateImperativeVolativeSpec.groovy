@@ -29,10 +29,10 @@ class ToHearImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hatvgvga", syllabary: "ᎭᏛᎬᎦ", english: "You (singular) hear it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdatvgvga", syllabary: "ᏍᏓᏛᎬᎦ", english: "You (two) hear it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsatvgvga", syllabary: "ᎢᏣᏛᎬᎦ", english: "You (more than two) hear it right now!", occurrence: 1],
-            [pronoun: "", romanized: "watvgvga", syllabary: "ᏩᏛᎬᎦ", english: "Let him/her hear it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hatvgvga", syllabary: "ᎭᏛᎬᎦ", english: "You (singular) hear it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdatvgvga", syllabary: "ᏍᏓᏛᎬᎦ", english: "You (two) hear it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsatvgvga", syllabary: "ᎢᏣᏛᎬᎦ", english: "You (more than two) hear it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "watvgvga", syllabary: "ᏩᏛᎬᎦ", english: "Let him/her hear it right now!", occurrence: 1],
     ]
 
     /**

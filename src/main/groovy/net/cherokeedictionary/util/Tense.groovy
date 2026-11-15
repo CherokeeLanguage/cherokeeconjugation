@@ -13,7 +13,8 @@ public enum Tense {
     IMMEDIATE_PAST("Immediate Past"),
     FUTURE_EXPECTED("Future Expected"),
     INFINITIVE("Infinitive"),
-    RECENT_PAST_IMPERATIVE("Recent Past Imperative");
+    RECENT_PAST_IMPERATIVE("Recent Past Imperative"),
+    FUTURE_IMPERATIVE_VOLATIVE("Future Imperative Volative");
 
     private final String readableName;
 

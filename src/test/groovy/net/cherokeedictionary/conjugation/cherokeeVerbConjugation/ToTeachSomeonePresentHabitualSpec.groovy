@@ -29,8 +29,8 @@ class ToTeachSomeonePresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyeyohvsgo'i", syllabary: "ᏥᏰᏲᎲᏍᎪᎢ", english: "I teach it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "degeyohvsgo'i", syllabary: "ᏕᎨᏲᎲᏍᎪᎢ", english: "S/he teaches it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyeyohvsgo'i", syllabary: "ᏥᏰᏲᎲᏍᎪᎢ", english: "I teach it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "degeyohvsgo'i", syllabary: "ᏕᎨᏲᎲᏍᎪᎢ", english: "S/he teaches it (habitually)", occurrence: 1],
     ]
 
     /**

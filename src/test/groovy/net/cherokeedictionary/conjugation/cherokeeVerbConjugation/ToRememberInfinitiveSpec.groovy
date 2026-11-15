@@ -29,8 +29,8 @@ class ToRememberInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwanvdadisdi", syllabary: "ᎠᏆᏅᏓᏗᏍᏗ", english: "For me to remember it", occurrence: 1],
-            [pronoun: "", romanized: "unvdadisdi", syllabary: "ᎤᏅᏓᏗᏍᏗ", english: "For him/her to remember it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwanvdadisdi", syllabary: "ᎠᏆᏅᏓᏗᏍᏗ", english: "For me to remember it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "unvdadisdi", syllabary: "ᎤᏅᏓᏗᏍᏗ", english: "For him/her to remember it", occurrence: 1],
     ]
 
     /**

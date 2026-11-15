@@ -34,8 +34,8 @@ class ToTeachSomeoneRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "dagwadeyohnv'i", syllabary: "ᏓᏆᏕᏲᏅᎢ", english: "I taught it", occurrence: 1],
-            [pronoun: "", romanized: "dudeyohnv'i", syllabary: "ᏚᏕᏲᏅᎢ", english: "S/he taught it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dagwadeyohnv'i", syllabary: "ᏓᏆᏕᏲᏅᎢ", english: "I taught it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dudeyohnv'i", syllabary: "ᏚᏕᏲᏅᎢ", english: "S/he taught it", occurrence: 1],
     ]
 
     /**

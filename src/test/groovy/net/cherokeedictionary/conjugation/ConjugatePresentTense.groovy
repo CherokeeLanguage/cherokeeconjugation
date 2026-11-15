@@ -14,7 +14,7 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "ᎬᏯᏚᎵᎭ" == conjStr("SG1", "SG2", heWantsIt, verbTense, partofspeechc)
 
         //fix this -- timo 3Nov26
-//        println conjStr("SG1", "SG3AN", heWantsIt, verbTense, partofspeechc)
+//        //println conjStr("SG1", "SG3AN", heWantsIt, verbTense, partofspeechc)
 //        assertTrue "ᏥᏯᏚᎵᎭ" == conjStr("SG1", "SG3AN", heWantsIt, verbTense, partofspeechc)
 
         assertTrue "ᎠᏆᏚᎵᎭ" == conjStr("SG1", "SG3IN", heWantsIt, verbTense, partofspeechc)
@@ -179,26 +179,26 @@ class ConjugatePresentTense extends ConjugateBase {
         def partofspeechc = "v.t."
         def verbTense = "PRESENT"
 
-//        println conjStr("SG1", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("SG2", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("SG3", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL2", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL2", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL3", "SG3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("SG1", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("SG2", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("SG3", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("DL2", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL2", "PL3AN", tokill, verbTense, partofspeechc)
-//        println conjStr("PL3", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG1", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG2", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG3", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL2", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL1INCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL1EXCL", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL2", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL3", "SG3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG1", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG2", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("SG3", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("DL2", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL2", "PL3AN", tokill, verbTense, partofspeechc)
+//        //println conjStr("PL3", "PL3AN", tokill, verbTense, partofspeechc)
 
 //        sn3 and pl3 - pl3in & pl3an should be the same but they aren't. They have different /h/ /?/ substituions
 
@@ -225,7 +225,7 @@ class ConjugatePresentTense extends ConjugateBase {
 //        assertTrue "", "ᏕᎩᎯᎠ" == conjStr("SG3", "PL3IN", tokill, verbTense, partofspeechc)
 //        assertTrue "", "ᏕᎩᎯᎠ" == conjStr("SG3", "PL3IN", tokill, verbTense, partofspeechc)
 
-        println conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
+        //println conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
 //        assertTrue "", "ᎨᏂᎢᎭ" == conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏂᎯᎭ" == conjStr("DL1INCL", "PL3AN", tokill, verbTense, partofspeechc)
 //        assertTrue "", "ᎪᏍᏗᎢᎭ" == conjStr("DL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
@@ -259,7 +259,7 @@ class ConjugatePresentTense extends ConjugateBase {
         assertTrue "", "ᎪᏥᎯᎭ" == conjStr("PL1EXCL", "PL3AN", tokill, verbTense, partofspeechc)
         assertTrue "", "ᎨᏥᎯᎭ" == conjStr("PL2", "PL3AN", tokill, verbTense, partofspeechc)
 
-        println conjStr("PL3", "PL3AN", tokill, verbTense, partofspeechc)
-        println conjStr("PL3", "PL3IN", tokill, verbTense, partofspeechc)*/
+        //println conjStr("PL3", "PL3AN", tokill, verbTense, partofspeechc)
+        //println conjStr("PL3", "PL3IN", tokill, verbTense, partofspeechc)*/
     }
 }

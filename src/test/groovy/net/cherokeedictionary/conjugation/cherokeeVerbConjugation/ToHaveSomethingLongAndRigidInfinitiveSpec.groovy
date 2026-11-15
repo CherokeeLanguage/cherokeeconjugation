@@ -34,16 +34,16 @@ class ToHaveSomethingLongAndRigidInfinitiveSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwvyi iyulisdodi", syllabary: "ᎠᏋᏱ ᎢᏳᎵᏍᏙᏗ", english: "For me to have something long & rigid (singular)"],
-            [pronoun: "Second Singular", romanized: "tsvyi iyulisdodi", syllabary: "ᏨᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you to have something long & rigid (singular)"],
-            [pronoun: "Third Singular", romanized: "uwayi iyulisdodi", syllabary: "ᎤᏩᏱ ᎢᏳᎵᏍᏙᏗ", english: "For him/her/it to have something long & rigid (singular)"],
-            [pronoun: "Second Dual", romanized: "sdvyi iyulisdodi", syllabary: "ᏍᏛᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you (two) to have something long & rigid (singular)"],
-            [pronoun: "Second Plural", romanized: "itsvyi iyulisdodi", syllabary: "ᎢᏨᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you (more than two) to have something long & rigid (singular)"],
-            [pronoun: "First Dual Inclusive", romanized: "ginvyi iyulisdodi", syllabary: "ᎩᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (you and I) to have something long & rigid (singular)"],
-            [pronoun: "First Dual Exclusive", romanized: "oginvyi iyulisdodi", syllabary: "ᎣᎩᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (another and I) to have something long & rigid (singular)"],
-            [pronoun: "First Plural Exclusive", romanized: "ogvyi iyulisdodi", syllabary: "ᎣᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (others and I) to have something long & rigid (singular)"],
-            [pronoun: "First Plural Inclusive", romanized: "igvyi iyulisdodi", syllabary: "ᎢᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (you and I and another or others) to have something long & rigid (singular)\""],
-            [pronoun: "Third Plural", romanized: "unvyi iyulisdodi", syllabary: "ᎤᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For them to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwvyi iyulisdodi", syllabary: "ᎠᏋᏱ ᎢᏳᎵᏍᏙᏗ", english: "For me to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsvyi iyulisdodi", syllabary: "ᏨᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwayi iyulisdodi", syllabary: "ᎤᏩᏱ ᎢᏳᎵᏍᏙᏗ", english: "For him/her/it to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdvyi iyulisdodi", syllabary: "ᏍᏛᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you (two) to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsvyi iyulisdodi", syllabary: "ᎢᏨᏱ ᎢᏳᎵᏍᏙᏗ", english: "For you (more than two) to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginvyi iyulisdodi", syllabary: "ᎩᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (you and I) to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginvyi iyulisdodi", syllabary: "ᎣᎩᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (another and I) to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogvyi iyulisdodi", syllabary: "ᎣᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (others and I) to have something long & rigid (singular)"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igvyi iyulisdodi", syllabary: "ᎢᎬᏱ ᎢᏳᎵᏍᏙᏗ", english: "For us (you and I and another or others) to have something long & rigid (singular)\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unvyi iyulisdodi", syllabary: "ᎤᏅᏱ ᎢᏳᎵᏍᏙᏗ", english: "For them to have something long & rigid (singular)"],
     ]
 
     /**

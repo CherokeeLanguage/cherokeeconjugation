@@ -19,11 +19,14 @@ class VerbTenseHolder {
 
     def completiveFuture
     def futureCommand
+    def futureExpected
     def progressivePast
     def progressiveFuture
     def immediateCommand
 
     def stemmer
+
+    private boolean isDebug = false
 
     /**
      * TODO: do checks to make sure these have values before we start crapping things up -- timo 16Aug15
@@ -36,7 +39,7 @@ class VerbTenseHolder {
         infinitive = stemmer?.infinitive?.syllabary ? stemmer?.infinitive?.syllabary?.substring(1) : ''
 
         stemmer.getStems().each {
-            println "DEBUG: Stem type: ${it.stemtype}, syllabary: ${it.syllabary}"
+            if (isDebug) println "DEBUG: Stem type: ${it.stemtype}, syllabary: ${it.syllabary}"
             switch (it.stemtype) {
                 case StemType.PresentContinous:
 //                    present = su.parseSyllabary(it.syllabary)
@@ -92,6 +95,7 @@ class VerbTenseHolder {
         // once verb-level data is available.
         //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
         futureCommand = remotePast ?: completiveFuture
+        futureExpected = habitual ?: completiveFuture
 
         // C6: the progressive tenses insert the non-final suffix -sg- before the
         // tense final suffix (grammar guide ex. 89/93):

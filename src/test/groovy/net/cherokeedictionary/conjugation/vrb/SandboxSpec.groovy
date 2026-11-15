@@ -23,9 +23,9 @@ class SandboxSpec extends Specification {
         def verb = Conjugate.conjugate("SG3", "SG3IN", stemmer, Tense.PRESENT.toString(), "v.i.", false)
         
         then: "Print the trace"
-        println "--- SANDBOX TRACE ---"
-        println verb.getTraceReport()
-        println "Result: ${verb.wholeWord}"
+        //println "--- SANDBOX TRACE ---"
+        //println verb.getTraceReport()
+        //println "Result: ${verb.wholeWord}"
         true
     }
 }

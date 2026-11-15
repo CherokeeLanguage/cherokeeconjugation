@@ -167,6 +167,7 @@ public class Stemmer {
                 suffix = new Habitual()
                 break
             case Tense.FUTURE_COMMAND:
+            case Tense.FUTURE_IMPERATIVE_VOLATIVE:
                 // Future Imperative/Volative: -v'i, "Speak (later)" (grammar guide ex. 112b)
                 suffix = new FutureImperativeVolative()
                 break
@@ -277,7 +278,8 @@ public class Stemmer {
                     && (tense == Tense.REMOTE_PAST
                         || tense == Tense.COMPLETIVE_FUTURE
                         || tense == Tense.COMPLETED_FUTURE
-                        || tense == Tense.FUTURE_COMMAND))
+                        || tense == Tense.FUTURE_COMMAND
+                        || tense == Tense.FUTURE_IMPERATIVE_VOLATIVE))
                 || (type == StemType.Immediate
                     && (tense == Tense.IMMEDIATE_COMMAND
                         || tense == Tense.IMMEDIATE_PAST
@@ -491,6 +493,24 @@ public class Stemmer {
         if (e.pres3.startsWith("Ꭱ") && e.imp.startsWith("Ꭾ")) {
 			e.past=discardPrefix(e.past);
 			e.inf=discardPrefix(e.inf);
+            return generateVowelStems("Ꭱ", e);
+        }
+
+        // tio 14Nov26: e-stem verbs whose SG3 remote past bakes the Set-B u-
+        // pronominal onto a w-allomorph (to go: present "ega" ᎡᎦ, past
+        // "uwenvsvi" ᎤᏪᏅᏒᎢ = Ꭴ + Ꮺ(Ꭱ+w) + ᏅᏒᎢ). getStems() had no branch for
+        // this shape, so "to go" fell to the raw-stem fallback below with the
+        // SG3 prefixes baked in, doubling every composed form (engine remote
+        // SG3 ᎤᏭᏪᏅᏒᎢ vs book ᎤᏪᏅᏒᎢ). Route it to generateVowelStems("Ꭱ"):
+        // strip one glyph from past/inf (Ꭴ) and habitual (Ꭰ), then re-prefix
+        // every stem with the bare vowel — past → envsv'i, inf → envsdi,
+        // habit ᎠᏁᎪᎢ → ᏁᎪᎢ → ego'i, imp ᎨᎾ → ena, pres3 → ega. The past gate
+        // keeps "to be somewhere" (present edoha, past edohvi — Ꭱ-initial
+        // but NO baked u-) out of this branch.
+        if (e.pres3.startsWith("Ꭱ") && e.past.startsWith("ᎤᏪ")) {
+			e.past=discardPrefix(e.past);
+			e.inf=discardPrefix(e.inf);
+			e.habit=discardPrefix(e.habit);
             return generateVowelStems("Ꭱ", e);
         }
         /*

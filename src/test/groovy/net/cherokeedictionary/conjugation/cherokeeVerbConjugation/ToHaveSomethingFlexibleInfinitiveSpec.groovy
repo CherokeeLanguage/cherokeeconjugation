@@ -27,35 +27,38 @@ class ToHaveSomethingFlexibleInfinitiveSpec extends VerbBaseSpec {
     static final String STEM = "-nv-Ø-"        // Stem V
     static final String TENSE_FORM = "-nv-di"  // Infinitive (Stem V)
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "aginvdi/diginvdi", syllabary: "ᎠᎩᏅᏗ/ᏗᎩᏅᏗ", english: "For me to have something flexible (singular)\"/\"For me to have multiple flexible things\""],
-            [pronoun: "Second Singular", romanized: "tsanvdi/ditsanvdi", syllabary: "ᏣᏅᏗ/ᏗᏣᏅᏗ", english: "For you to have something flexible (singular)\"/\"For you to have multiple flexible things\""],
-            [pronoun: "Third Singular", romanized: "unvdi/tsunvdi", syllabary: "ᎤᏅᏗ/ᏧᏅᏗ", english: "For him/her/it to have something flexible (singular)\"/\"For him/her/it to have multiple flexible things\""],
-            [pronoun: "Second Dual", romanized: "sdinvdi/disdinvdi", syllabary: "ᏍᏗᏅᏗ/ᏗᏍᏗᏅᏗ", english: "For you (two) to have something flexible (singular)\"/\"For you (two) to have multiple flexible things\""],
-            [pronoun: "Second Plural", romanized: "itsinvdi/ditsinvdi", syllabary: "ᎢᏥᏅᏗ/ᏗᏥᏅᏗ", english: "For you (more than two) to have something flexible (singular)\"/\"For you (more than two) to have multiple flexible things\""],
-            [pronoun: "First Dual Inclusive", romanized: "gininvdi/digininvdi", syllabary: "ᎩᏂᏅᏗ/ᏗᎩᏂᏅᏗ", english: "For us (you and I) to have something flexible (singular)\"/\"For us (you and I) to have multiple flexible things\""],
-            [pronoun: "First Dual Exclusive", romanized: "ogininvdi/tsogininvdi", syllabary: "ᎣᎩᏂᏅᏗ/ᏦᎩᏂᏅᏗ", english: "For us (another and I) to have something flexible (singular)\"/\"For us (another and I) to have multiple flexible things\""],
-            [pronoun: "First Plural Exclusive", romanized: "oginvdi/tsoginvdi", syllabary: "ᎣᎩᏅᏗ/ᏦᎩᏅᏗ", english: "For us (others and I) to have something flexible (singular)\"/\"For us (others and I) to have multiple flexible things\""],
-            [pronoun: "First Plural Inclusive", romanized: "iginvdi/diginvdi", syllabary: "ᎢᎩᏅᏗ/ᏗᎩᏅᏗ", english: "For us (you and I and another or others) to have something flexible (singular)\"/\"For us (you and I and another or others) to have multiple flexible things\""],
-            [pronoun: "Third Plural", romanized: "uninvdi/tsuninvdi", syllabary: "ᎤᏂᏅᏗ/ᏧᏂᏅᏗ", english: "For them to have something flexible (singular)\"/\"For them to have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "aginvdi", syllabary: "ᎠᎩᏅᏗ", english: "For me to have something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "diginvdi", syllabary: "ᏗᎩᏅᏗ", english: "For me to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsanvdi", syllabary: "ᏣᏅᏗ", english: "For you to have something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "ditsanvdi", syllabary: "ᏗᏣᏅᏗ", english: "For you to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "unvdi", syllabary: "ᎤᏅᏗ", english: "For him/her/it to have something flexible (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "tsunvdi", syllabary: "ᏧᏅᏗ", english: "For him/her/it to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdinvdi", syllabary: "ᏍᏗᏅᏗ", english: "For you (two) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "disdinvdi", syllabary: "ᏗᏍᏗᏅᏗ", english: "For you (two) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsinvdi", syllabary: "ᎢᏥᏅᏗ", english: "For you (more than two) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "ditsinvdi", syllabary: "ᏗᏥᏅᏗ", english: "For you (more than two) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "gininvdi", syllabary: "ᎩᏂᏅᏗ", english: "For us (you and I) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "digininvdi", syllabary: "ᏗᎩᏂᏅᏗ", english: "For us (you and I) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "ogininvdi", syllabary: "ᎣᎩᏂᏅᏗ", english: "For us (another and I) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "tsogininvdi", syllabary: "ᏦᎩᏂᏅᏗ", english: "For us (another and I) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "oginvdi", syllabary: "ᎣᎩᏅᏗ", english: "For us (others and I) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "tsoginvdi", syllabary: "ᏦᎩᏅᏗ", english: "For us (others and I) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "iginvdi", syllabary: "ᎢᎩᏅᏗ", english: "For us (you and I and another or others) to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "diginvdi", syllabary: "ᏗᎩᏅᏗ", english: "For us (you and I and another or others) to have multiple flexible things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "uninvdi", syllabary: "ᎤᏂᏅᏗ", english: "For them to have something flexible (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "tsuninvdi", syllabary: "ᏧᏂᏅᏗ", english: "For them to have multiple flexible things"],
     ]
 
-    /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
-     */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "infinitive form matches the verb book (#row.pronoun)"() {
+    def "infinitive form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -64,12 +67,12 @@ class ToHaveSomethingFlexibleInfinitiveSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

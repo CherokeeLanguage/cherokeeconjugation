@@ -29,8 +29,8 @@ class ToTalkToSomeoneInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsilinohedodi", syllabary: "ᏥᏯᎵᏃᎮᏙᏗ", english: "(For) me to talk to, or with, him/her", occurrence: 1],
-            [pronoun: "", romanized: "utlinohedodi", syllabary: "ᎤᎵᏃᎮᏙᏗ", english: "(For) him/her to talk to, or with, him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsilinohedodi", syllabary: "ᏥᏯᎵᏃᎮᏙᏗ", english: "(For) me to talk to, or with, him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "utlinohedodi", syllabary: "ᎤᎵᏃᎮᏙᏗ", english: "(For) him/her to talk to, or with, him/her", occurrence: 1],
     ]
 
     /**

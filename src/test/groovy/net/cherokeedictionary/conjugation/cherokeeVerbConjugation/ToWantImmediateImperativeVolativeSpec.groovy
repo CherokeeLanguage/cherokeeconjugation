@@ -29,10 +29,10 @@ class ToWantImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "witsadula", syllabary: "ᏫᏣᏚᎳ", english: "You (singular) want it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wisdadula", syllabary: "ᏫᏍᏓᏚᎳ", english: "You (two) want it right now!", occurrence: 1],
-            [pronoun: "", romanized: "witsadula", syllabary: "ᏫᏣᏚᎳ", english: "You (more than two) want it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wudula", syllabary: "ᏭᏚᎳ", english: "Let him/her want it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "witsadula", syllabary: "ᏫᏣᏚᎳ", english: "You (singular) want it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wisdadula", syllabary: "ᏫᏍᏓᏚᎳ", english: "You (two) want it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "witsadula", syllabary: "ᏫᏣᏚᎳ", english: "You (more than two) want it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wudula", syllabary: "ᏭᏚᎳ", english: "Let him/her want it right now!", occurrence: 1],
     ]
 
     /**

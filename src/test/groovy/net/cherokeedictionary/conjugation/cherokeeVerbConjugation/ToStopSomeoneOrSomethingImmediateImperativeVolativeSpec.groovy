@@ -29,10 +29,10 @@ class ToStopSomeoneOrSomethingImmediateImperativeVolativeSpec extends VerbBaseSp
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "halehwisdoda", syllabary: "ᎭᎴᏫᏍᏙᏓ", english: "You (singular) stop it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdalehwisdoda", syllabary: "ᏍᏓᎴᏫᏍᏙᏓ", english: "You two stop it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsalehwisdoda", syllabary: "ᎢᏣᎴᏫᏍᏙᏓ", english: "You (more than two) stop it right now!", occurrence: 1],
-            [pronoun: "", romanized: "walehwisdoda", syllabary: "ᏩᎴᏫᏍᏙᏓ", english: "Let him/her stop it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "halehwisdoda", syllabary: "ᎭᎴᏫᏍᏙᏓ", english: "You (singular) stop it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdalehwisdoda", syllabary: "ᏍᏓᎴᏫᏍᏙᏓ", english: "You two stop it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsalehwisdoda", syllabary: "ᎢᏣᎴᏫᏍᏙᏓ", english: "You (more than two) stop it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "walehwisdoda", syllabary: "ᏩᎴᏫᏍᏙᏓ", english: "Let him/her stop it right now!", occurrence: 1],
     ]
 
     /**

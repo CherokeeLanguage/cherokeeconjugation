@@ -29,8 +29,8 @@ class ToThankSomeoneInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyali'elitsedi", syllabary: "ᏥᏯᎵᎡᎵᏤᏗ", english: "(For me to) thank it", occurrence: 1],
-            [pronoun: "", romanized: "ulihelitsedi", syllabary: "ᎤᎵᎮᎵᏤᏗ", english: "(For him/her to) thank it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyali'elitsedi", syllabary: "ᏥᏯᎵᎡᎵᏤᏗ", english: "(For me to) thank it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ulihelitsedi", syllabary: "ᎤᎵᎮᎵᏤᏗ", english: "(For him/her to) thank it", occurrence: 1],
     ]
 
     /**

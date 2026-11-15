@@ -29,8 +29,8 @@ class ToHonorSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsilvkwdisgo'i", syllabary: "ᏥᎸᏉᏗᏍᎪᎢ", english: "I honor it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "galvkwdisgo'i", syllabary: "ᎦᎸᏉᏗᏍᎪᎢ", english: "He/she honors it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsilvkwdisgo'i", syllabary: "ᏥᎸᏉᏗᏍᎪᎢ", english: "I honor it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "galvkwdisgo'i", syllabary: "ᎦᎸᏉᏗᏍᎪᎢ", english: "He/she honors it (habitually)", occurrence: 1],
     ]
 
     /**

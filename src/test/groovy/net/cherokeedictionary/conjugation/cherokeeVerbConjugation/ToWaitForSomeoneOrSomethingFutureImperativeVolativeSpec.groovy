@@ -35,10 +35,10 @@ class ToWaitForSomeoneOrSomethingFutureImperativeVolativeSpec extends VerbBaseSp
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hiktidv'i", syllabary: "ᎯᎦᏘᏛᎢ", english: "You (singular) wait for it!", occurrence: 1],
-            [pronoun: "", romanized: "esdiktidv'i", syllabary: "ᎡᏍᏗᎦᏘᏛᎢ", english: "You two wait for it!", occurrence: 1],
-            [pronoun: "", romanized: "itsiktidv'i", syllabary: "ᎢᏥᎦᏘᏛᎢ", english: "You (more than two) wait for it!", occurrence: 1],
-            [pronoun: "", romanized: "waktidv'i", syllabary: "ᏩᎦᏘᏛᎢ", english: "Let him/her wait for it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hiktidv'i", syllabary: "ᎯᎦᏘᏛᎢ", english: "You (singular) wait for it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdiktidv'i", syllabary: "ᎡᏍᏗᎦᏘᏛᎢ", english: "You two wait for it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsiktidv'i", syllabary: "ᎢᏥᎦᏘᏛᎢ", english: "You (more than two) wait for it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "waktidv'i", syllabary: "ᏩᎦᏘᏛᎢ", english: "Let him/her wait for it!", occurrence: 1],
     ]
 
     /**

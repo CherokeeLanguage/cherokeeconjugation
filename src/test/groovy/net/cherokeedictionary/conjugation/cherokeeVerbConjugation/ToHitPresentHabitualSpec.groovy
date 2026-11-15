@@ -29,8 +29,8 @@ class ToHitPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "gvniho'i", syllabary: "ᎬᏂᎰᎢ", english: "I hit it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "gvhniho'i", syllabary: "ᎬᏂᎰᎢ", english: "S/he hits it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gvniho'i", syllabary: "ᎬᏂᎰᎢ", english: "I hit it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gvhniho'i", syllabary: "ᎬᏂᎰᎢ", english: "S/he hits it (habitually)", occurrence: 1],
     ]
 
     /**

@@ -29,10 +29,10 @@ class ToLookForImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsayoga", syllabary: "ᏣᏲᎦ", english: "You (singular) look for it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdiyoga", syllabary: "ᏍᏗᏲᎦ", english: "You (two) look for it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsiyoga", syllabary: "ᎢᏥᏲᎦ", english: "You (more than two) look for it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wuyoga", syllabary: "ᏭᏲᎦ", english: "Let him/her look for it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "tsayoga", syllabary: "ᏣᏲᎦ", english: "You (singular) look for it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdiyoga", syllabary: "ᏍᏗᏲᎦ", english: "You (two) look for it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsiyoga", syllabary: "ᎢᏥᏲᎦ", english: "You (more than two) look for it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wuyoga", syllabary: "ᏭᏲᎦ", english: "Let him/her look for it right now!", occurrence: 1],
     ]
 
     /**

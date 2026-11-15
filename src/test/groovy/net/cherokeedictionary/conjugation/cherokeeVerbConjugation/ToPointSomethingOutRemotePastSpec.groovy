@@ -29,8 +29,8 @@ class ToPointSomethingOutRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyasehelv'i", syllabary: "ᏥᏯᏎᎮᎸᎢ", english: "I showed it to it", occurrence: 1],
-            [pronoun: "", romanized: "usehelv'i", syllabary: "ᎤᏎᎮᎸᎢ", english: "He/she showed it to it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyasehelv'i", syllabary: "ᏥᏯᏎᎮᎸᎢ", english: "I showed it to it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "usehelv'i", syllabary: "ᎤᏎᎮᎸᎢ", english: "He/she showed it to it", occurrence: 1],
     ]
 
     /**

@@ -29,16 +29,16 @@ class ToBeSomewhereRemotePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "gedohv'i",   syllabary: "ᎨᏙᎲᎢ",  english: "I was somewhere"],
-            [pronoun: "Second Singular",        romanized: "hedohv'i",   syllabary: "ᎮᏙᎲᎢ",  english: "You were somewhere"],
-            [pronoun: "Third Singular",         romanized: "edohv'i",    syllabary: "ᎡᏙᎲᎢ",  english: "He/she/it was somewhere"],
-            [pronoun: "Second Dual",            romanized: "sdedohv'i",  syllabary: "ᏍᏕᏙᎲᎢ", english: "You (two) were somewhere"],
-            [pronoun: "Second Plural",          romanized: "itsedohv'i", syllabary: "ᎢᏤᏙᎲᎢ", english: "You (more than two) were somewhere"],
-            [pronoun: "First Dual Inclusive",   romanized: "inedohv'i",  syllabary: "ᎢᏁᏙᎲᎢ", english: "We (you and I) were somewhere"],
-            [pronoun: "First Dual Exclusive",   romanized: "osdedohv'i", syllabary: "ᎣᏍᏕᏙᎲᎢ", english: "We (another and I) were somewhere"],
-            [pronoun: "First Plural Exclusive", romanized: "otsedohv'i", syllabary: "ᎣᏤᏙᎲᎢ", english: "We (others and I) were somewhere"],
-            [pronoun: "First Plural Inclusive", romanized: "idedohv'i",  syllabary: "ᎢᏕᏙᎲᎢ", english: "We (you and I and another or others) were somewhere"],
-            [pronoun: "Third Plural",      romanized: "anedohv'i",  syllabary: "ᎠᏁᏙᎲᎢ", english: "They were somewhere"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "gedojvi",   syllabary: "ᎨᏙᎲᎢ",  english: "I was somewhere"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "hedojvi",   syllabary: "ᎮᏙᎲᎢ",  english: "You were somewhere"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "edojvi",    syllabary: "ᎡᏙᎲᎢ",  english: "He/she/it was somewhere"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdedojvi",  syllabary: "ᏍᏕᏙᎲᎢ", english: "You (two) were somewhere"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itsedojvi", syllabary: "ᎢᏤᏙᎲᎢ", english: "You (more than two) were somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "inedojvi",  syllabary: "ᎢᏁᏙᎲᎢ", english: "We (you and I) were somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "osdedojvi", syllabary: "ᎣᏍᏕᏙᎲᎢ", english: "We (another and I) were somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsedojvi", syllabary: "ᎣᏤᏙᎲᎢ", english: "We (others and I) were somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idedojvi",  syllabary: "ᎢᏕᏙᎲᎢ", english: "We (you and I and another or others) were somewhere"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "anedojvi",  syllabary: "ᎠᏁᏙᎲᎢ", english: "They were somewhere"],
     ]
 
     /**

@@ -32,18 +32,28 @@ class ToHaveSomethingLiquidPresentSpec extends VerbBaseSpec {
     static final String VERB_BOOK_NOTE =
         "This verb means the action is actually going on at the present time."
 
-    /** The ten conjugated forms exactly as printed in the verb book. */
+    /** The conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I have multiple liquid things\" agineha/dagineha", syllabary: "ᎠᎩᏁᎭ/ᏓᎩᏁᎭ", english: "I have something liquid (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "You have multiple liquid things\" tsaneha/detsaneha", syllabary: "ᏣᏁᎭ/ᏕᏣᏁᎭ", english: "You have something liquid (singular)\"/"],
-            [pronoun: "Third Singular", romanized: "He/she/it has multiple liquid things\" uneha/duneha", syllabary: "ᎤᏁᎭ/ᏚᏁᎭ", english: "He/she/it has something liquid (singular)\"/"],
-            [pronoun: "Second Dual", romanized: "You (two) have multiple liquid things\" sdineha/desdineha", syllabary: "ᏍᏗᏁᎭ/ᏕᏍᏗᏁᎭ", english: "You (two) have something liquid (singular)\"/"],
-            [pronoun: "Second Plural", romanized: "itsineha/detsineha", syllabary: "ᎢᏥᏁᎭ/ᏕᏥᏁᎭ", english: "You (more than two) have something liquid (singular)\"/\"You (more than two) have multiple liquid things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginineha/deginineha", syllabary: "ᎩᏂᏁᎭ/ᏕᎩᏂᏁᎭ", english: "We (you and I) have something liquid (singular)\"/\"We (you and I) have multiple liquid things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginineha/doginineha", syllabary: "ᎣᎩᏂᏁᎭ/ᏙᎩᏂᏁᎭ", english: "We (another and I) have something liquid (singular)\"/\"We (another and I) have multiple liquid things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogineha/dogineha", syllabary: "ᎣᎩᏁᎭ/ᏙᎩᏁᎭ", english: "We (others and I) have something liquid (singular)\"/\"We (others and I) have multiple liquid things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igineha/degineha", syllabary: "ᎢᎩᏁᎭ/ᏕᎩᏁᎭ", english: "We (you and I and another or others) have something liquid (singular)\"/\"We (you and I and another or others) have multiple liquid things\""],
-            [pronoun: "Third Plural", romanized: "They have multiple liquid things\" unineha/dunineha", syllabary: "ᎤᏂᏁᎭ/ᏚᏂᏁᎭ", english: "They have something liquid (singular)\"/"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agineha", syllabary: "ᎠᎩᏁᎭ", english: "I have something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagineha", syllabary: "ᏓᎩᏁᎭ", english: "I have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsaneha", syllabary: "ᏣᏁᎭ", english: "You have something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "detsaneha", syllabary: "ᏕᏣᏁᎭ", english: "You have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uneha", syllabary: "ᎤᏁᎭ", english: "He/she/it has something liquid (singular)"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "duneha", syllabary: "ᏚᏁᎭ", english: "He/she/it has multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdineha", syllabary: "ᏍᏗᏁᎭ", english: "You (two) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Dual", romanized: "desdineha", syllabary: "ᏕᏍᏗᏁᎭ", english: "You (two) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsineha", syllabary: "ᎢᏥᏁᎭ", english: "You (more than two) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Second Plural", romanized: "detsineha", syllabary: "ᏕᏥᏁᎭ", english: "You (more than two) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginineha", syllabary: "ᎩᏂᏁᎭ", english: "We (you and I) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Inclusive", romanized: "deginineha", syllabary: "ᏕᎩᏂᏁᎭ", english: "We (you and I) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginineha", syllabary: "ᎣᎩᏂᏁᎭ", english: "We (another and I) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Dual Exclusive", romanized: "doginineha", syllabary: "ᏙᎩᏂᏁᎭ", english: "We (another and I) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogineha", syllabary: "ᎣᎩᏁᎭ", english: "We (others and I) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Exclusive", romanized: "dogineha", syllabary: "ᏙᎩᏁᎭ", english: "We (others and I) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igineha", syllabary: "ᎢᎩᏁᎭ", english: "We (you and I and another or others) have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "First Plural Inclusive", romanized: "degineha", syllabary: "ᏕᎩᏁᎭ", english: "We (you and I and another or others) have multiple liquid things"],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unineha", syllabary: "ᎤᏂᏁᎭ", english: "They have something liquid (singular)"],
+            [object: 'PL3IN', pronoun: "Third Plural", romanized: "dunineha", syllabary: "ᏚᏂᏁᎭ", english: "They have multiple liquid things"],
     ]
 
     /**
@@ -51,16 +61,16 @@ class ToHaveSomethingLiquidPresentSpec extends VerbBaseSpec {
      * Today it echoes the verb-book form; replace the body with a call into
      * the conjugation engine when the engine-vs-verb-book refinement begins.
      */
-    Map conjugate(String pronoun) {
-        def row = VERB_BOOK.find { it.pronoun == pronoun }
+    Map conjugate(String pronoun, String romanized) {
+        def row = VERB_BOOK.find { it.pronoun == pronoun && it.romanized == romanized }
         // TODO(engine-comparison): replace this echo with a conjugation-engine call,
         // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
         return [romanized: row.romanized, syllabary: row.syllabary]
     }
 
-    def "present tense form matches the verb book (#row.pronoun)"() {
+    def "present tense form matches the verb book (#row.pronoun #row.romanized)"() {
         when: "the form is conjugated"
-        def form = conjugate(row.pronoun)
+        def form = conjugate(row.pronoun, row.romanized)
 
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
@@ -69,12 +79,12 @@ class ToHaveSomethingLiquidPresentSpec extends VerbBaseSpec {
         and: "the English translation is preserved for later deconstruction"
         row.english
 
-        where: "each of the ten verb-book rows"
+        where: "each of the twenty verb-book rows"
         row << VERB_BOOK
     }
 
-    def "the verb book table is complete (ten rows)"() {
+    def "the verb book table is complete (twenty rows)"() {
         expect:
-        VERB_BOOK.size() == 10
+        VERB_BOOK.size() == 20
     }
 }

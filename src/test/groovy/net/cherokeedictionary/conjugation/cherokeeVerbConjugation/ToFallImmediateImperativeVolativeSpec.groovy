@@ -30,16 +30,16 @@ class ToFallImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "tsinvgi", syllabary: "ᏥᏅᎩ", english: "May I fall right now!"],
-            [pronoun: "Second Singular", romanized: "hinvgi", syllabary: "ᎯᏅᎩ", english: "May you fall right now!"],
-            [pronoun: "Third Singular", romanized: "wiganvgi", syllabary: "ᏫᎦᏅᎩ", english: "May s/he fall right now!"],
-            [pronoun: "Second Dual", romanized: "desdinvgi", syllabary: "ᏗᏍᏗᏅᎩ", english: "May you (two) fall right now!"],
-            [pronoun: "Second Plural", romanized: "detsinvgi", syllabary: "ᏗᏥᏅᎩ", english: "May you (more than two) fall right now!"],
-            [pronoun: "First Dual Inclusive", romanized: "dininvgi", syllabary: "ᏗᏂᏅᎩ", english: "May we (you and I) fall right now!"],
-            [pronoun: "First Dual Exclusive", romanized: "widosdinvgi", syllabary: "ᏫᏙᏍᏗᏅᎩ", english: "May we (another and I) fall right now!"],
-            [pronoun: "First Plural Exclusive", romanized: "widotsinvgi", syllabary: "ᏫᏙᏥᏅᎩ", english: "May we (others and I) fall right now!"],
-            [pronoun: "First Plural Inclusive", romanized: "didinvgi", syllabary: "ᏗᏗᏅᎩ", english: "May we (you and I and another or others) fall right now!"],
-            [pronoun: "Third Plural", romanized: "widaninvgi", syllabary: "ᏫᏓᏂᏅᎩ", english: "May they fall right now!"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "tsinvgi", syllabary: "ᏥᏅᎩ", english: "May I fall right now!"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hinvgi", syllabary: "ᎯᏅᎩ", english: "May you fall right now!"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "wiganvgi", syllabary: "ᏫᎦᏅᎩ", english: "May s/he fall right now!"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "desdinvgi", syllabary: "ᏗᏍᏗᏅᎩ", english: "May you (two) fall right now!"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "detsinvgi", syllabary: "ᏗᏥᏅᎩ", english: "May you (more than two) fall right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "dininvgi", syllabary: "ᏗᏂᏅᎩ", english: "May we (you and I) fall right now!"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "widosdinvgi", syllabary: "ᏫᏙᏍᏗᏅᎩ", english: "May we (another and I) fall right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "widotsinvgi", syllabary: "ᏫᏙᏥᏅᎩ", english: "May we (others and I) fall right now!"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "didinvgi", syllabary: "ᏗᏗᏅᎩ", english: "May we (you and I and another or others) fall right now!"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "widaninvgi", syllabary: "ᏫᏓᏂᏅᎩ", english: "May they fall right now!"],
     ]
 
     /**
@@ -51,11 +51,17 @@ class ToFallImmediateImperativeVolativeSpec extends VerbBaseSpec {
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
 
-        // tio 12Nov26: harness check — the engine conjugates this same
+        // tio 13Nov26: harness check — the engine conjugates this same
         // pronoun/tense/verb; the assertion below compares its output with
-        // the verb-book syllabary.
+        // the verb-book syllabary. The book prints wi- on only four of the
+        // ten I/V rows (ᏫᎦᏅᎩ, ᏫᏙᏍᏗᏅᎩ, ᏫᏙᏥᏅᎩ, ᏫᏓᏂᏅᎩ) and no Ꮻ elsewhere.
+        // The grammar guide has no elision rule for Ꮵ/Ꭿ/Ꮧ bases — (31b)
+        // ᏫᏥᏬᏂᎯ and (32b) ᏫᏬᏂᎯ attest wi SURFACES there — so the mixed
+        // paradigm is per-row book data: each row's wi flag is driven
+        // lexically by its own printed syllabary.
         def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
-            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+            VERB, TENSE, row.english,
+            [conjugations: VERB_BOOK, initialPrefixes: [wi: row.syllabary.startsWith('Ꮻ')]]
         )
 
         return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]

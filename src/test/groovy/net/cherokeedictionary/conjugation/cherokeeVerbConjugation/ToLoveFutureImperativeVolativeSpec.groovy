@@ -34,10 +34,10 @@ class ToLoveFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "higeyusv'i", syllabary: "ᎯᎨᏳᏒᎢ", english: "You (singular) love it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "sdigeyusv'i", syllabary: "ᏍᏗᎨᏳᏒᎢ", english: "You two love it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "itsigeyusv'i", syllabary: "ᎢᏥᎨᏳᏒᎢ", english: "You (more than two) love it (later)!", occurrence: 1],
-            [pronoun: "", romanized: "wageyusv'i", syllabary: "ᏩᎨᏳᏒᎢ", english: "Let him/her love it (later)!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "higeyusv'i", syllabary: "ᎯᎨᏳᏒᎢ", english: "You (singular) love it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdigeyusv'i", syllabary: "ᏍᏗᎨᏳᏒᎢ", english: "You two love it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsigeyusv'i", syllabary: "ᎢᏥᎨᏳᏒᎢ", english: "You (more than two) love it (later)!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wageyusv'i", syllabary: "ᏩᎨᏳᏒᎢ", english: "Let him/her love it (later)!", occurrence: 1],
     ]
 
     /**

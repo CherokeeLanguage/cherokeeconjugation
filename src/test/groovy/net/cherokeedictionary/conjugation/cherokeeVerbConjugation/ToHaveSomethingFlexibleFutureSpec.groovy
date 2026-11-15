@@ -29,16 +29,16 @@ class ToHaveSomethingFlexibleFutureSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "I will have multiple flexible things\" agina'esdi/dagina'esdi", syllabary: "ᎠᎩᎾᎡᏍᏗ/ᏓᎩᎾᎡᏍᏗ", english: "I will have something flexible (singular)\"/"],
-            [pronoun: "Second Singular", romanized: "tsana'esdi/detsana'esdi", syllabary: "ᏣᎾᎡᏍᏗ/ᏕᏣᎾᎡᏍᏗ", english: "You will have something flexible (singular)\"/\"You will have multiple flexible things\""],
-            [pronoun: "Third Singular", romanized: "una'esdi/duna'esdi", syllabary: "ᎤᎾᎡᏍᏗ/ᏚᎾᎡᏍᏗ", english: "He/she/it will have something flexible (singular)\"/\"He/she/it will have multiple flexible things\""],
-            [pronoun: "Second Dual", romanized: "sdina'esdi/desdina'esdi", syllabary: "ᏍᏗᎾᎡᏍᏗ/ᏕᏍᏗᎾᎡᏍᏗ", english: "You (two) will have something flexible (singular)\"/\"You (two) will have multiple flexible things\""],
-            [pronoun: "Second Plural", romanized: "itsina'esdi/detsina'esdi", syllabary: "ᎢᏥᎾᎡᏍᏗ/ᏕᏥᎾᎡᏍᏗ", english: "You (more than two) will have something flexible (singular)\"/\"You (more than two) will have multiple flexible things\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginina'esdi/deginina'esdi", syllabary: "ᎩᏂᎾᎡᏍᏗ/ᏕᎩᏂᎾᎡᏍᏗ", english: "We (you and I) will have something flexible (singular)\"/\"We (you and I) will have multiple flexible things\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "We (another and I) will have something flexible (singular)\"/\"We (another and I) will have multiple flexible things\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "We (others and I) will have something flexible (singular)\"/\"We (others and I) will have multiple flexible things\""],
-            [pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "We (you and I and another or others) will have something flexible (singular)\"/\"We (you and I and another or others) will have multiple flexible things\""],
-            [pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "They will have something flexible (singular)\"/\"They will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "I will have multiple flexible things\" agina'esdi/dagina'esdi", syllabary: "ᎠᎩᎾᎡᏍᏗ/ᏓᎩᎾᎡᏍᏗ", english: "I will have something flexible (singular)\"/"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsana'esdi/detsana'esdi", syllabary: "ᏣᎾᎡᏍᏗ/ᏕᏣᎾᎡᏍᏗ", english: "You will have something flexible (singular)\"/\"You will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "una'esdi/duna'esdi", syllabary: "ᎤᎾᎡᏍᏗ/ᏚᎾᎡᏍᏗ", english: "He/she/it will have something flexible (singular)\"/\"He/she/it will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdina'esdi/desdina'esdi", syllabary: "ᏍᏗᎾᎡᏍᏗ/ᏕᏍᏗᎾᎡᏍᏗ", english: "You (two) will have something flexible (singular)\"/\"You (two) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsina'esdi/detsina'esdi", syllabary: "ᎢᏥᎾᎡᏍᏗ/ᏕᏥᎾᎡᏍᏗ", english: "You (more than two) will have something flexible (singular)\"/\"You (more than two) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginina'esdi/deginina'esdi", syllabary: "ᎩᏂᎾᎡᏍᏗ/ᏕᎩᏂᎾᎡᏍᏗ", english: "We (you and I) will have something flexible (singular)\"/\"We (you and I) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "We (another and I) will have something flexible (singular)\"/\"We (another and I) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "We (others and I) will have something flexible (singular)\"/\"We (others and I) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "We (you and I and another or others) will have something flexible (singular)\"/\"We (you and I and another or others) will have multiple flexible things\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "They will have something flexible (singular)\"/\"They will have multiple flexible things\""],
     ]
 
     /**

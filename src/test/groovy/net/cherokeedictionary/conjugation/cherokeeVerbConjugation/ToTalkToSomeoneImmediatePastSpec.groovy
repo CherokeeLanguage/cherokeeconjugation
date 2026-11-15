@@ -29,8 +29,8 @@ class ToTalkToSomeoneImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsilinoheda", syllabary: "ᏥᏯᎵᏃᎮᏓ", english: "I talked to, or with, him/her just now", occurrence: 1],
-            [pronoun: "", romanized: "ahlinoheda", syllabary: "ᎠᎵᏃᎮᏓ", english: "He/she talked to, or with, him/her just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsilinoheda", syllabary: "ᏥᏯᎵᏃᎮᏓ", english: "I talked to, or with, him/her just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ahlinoheda", syllabary: "ᎠᎵᏃᎮᏓ", english: "He/she talked to, or with, him/her just now", occurrence: 1],
     ]
 
     /**

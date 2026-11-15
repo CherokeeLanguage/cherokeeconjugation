@@ -29,8 +29,8 @@ class ToWaitForSomeoneOrSomethingInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agigatidisdi", syllabary: "ᎠᎩᎦᏘᏗᏍᏗ", english: "(For) me to wait for it", occurrence: 1],
-            [pronoun: "", romanized: "ugatidisdi", syllabary: "ᎤᎦᏘᏗᏍᏗ", english: "(For) him/her to wait for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agigatidisdi", syllabary: "ᎠᎩᎦᏘᏗᏍᏗ", english: "(For) me to wait for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ugatidisdi", syllabary: "ᎤᎦᏘᏗᏍᏗ", english: "(For) him/her to wait for it", occurrence: 1],
     ]
 
     /**

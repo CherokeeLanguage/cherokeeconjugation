@@ -29,8 +29,8 @@ class ToPointSomethingOutPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsiyaseheho'i", syllabary: "ᏥᏯᏎᎮᎰᎢ", english: "I point it out to it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "aseheho'i", syllabary: "ᎠᏎᎮᎰᎢ", english: "He/she shows it to it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsiyaseheho'i", syllabary: "ᏥᏯᏎᎮᎰᎢ", english: "I point it out to it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "aseheho'i", syllabary: "ᎠᏎᎮᎰᎢ", english: "He/she shows it to it (habitually)", occurrence: 1],
     ]
 
     /**

@@ -29,8 +29,8 @@ class ToTalkToSomeoneFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsilinohetani", syllabary: "ᏓᏥᎵᏃᎮᏔᏂ", english: "I will talk to, or with, him/her", occurrence: 1],
-            [pronoun: "", romanized: "dvtlinohetani", syllabary: "ᏛᎵᏃᎮᏔᏂ", english: "He/she will talk to, or with, him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "datsilinohetani", syllabary: "ᏓᏥᎵᏃᎮᏔᏂ", english: "I will talk to, or with, him/her", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvtlinohetani", syllabary: "ᏛᎵᏃᎮᏔᏂ", english: "He/she will talk to, or with, him/her", occurrence: 1],
     ]
 
     /**

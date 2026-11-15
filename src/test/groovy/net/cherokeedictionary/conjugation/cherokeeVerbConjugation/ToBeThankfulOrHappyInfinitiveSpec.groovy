@@ -29,16 +29,16 @@ class ToBeThankfulOrHappyInfinitiveSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwalihelisdi", syllabary: "ᎠᏆᎵᎮᎵᏍᏗ", english: "For me to be thankful/happy"],
-            [pronoun: "Second Singular", romanized: "tsalihelisdi", syllabary: "ᏣᎵᎮᎵᏍᏗ", english: "For you to be thankful/happy"],
-            [pronoun: "Third Singular", romanized: "ulihelisdi", syllabary: "ᎤᎵᎮᎵᏍᏗ", english: "For him/her/it to be thankful/happy"],
-            [pronoun: "Second Dual", romanized: "sdalihelisdi", syllabary: "ᏍᏓᎵᎮᎵᏍᏗ", english: "For you (two) to be thankful/happy"],
-            [pronoun: "Second Plural", romanized: "itsalihelisdi", syllabary: "ᎢᏣᎵᎮᎵᏍᏗ", english: "For you (more than two) to be thankful/happy"],
-            [pronoun: "First Dual Inclusive", romanized: "ginalihelisdi", syllabary: "ᎩᎾᎵᎮᎵᏍᏗ", english: "For us (you and I) to be thankful/happy"],
-            [pronoun: "First Dual Exclusive", romanized: "oginalihelisdi", syllabary: "ᎣᎩᎾᎵᎮᎵᏍᏗ", english: "For us (another and I) to be thankful/happy"],
-            [pronoun: "First Plural Exclusive", romanized: "ogalihelisdi", syllabary: "ᎣᎦᎵᎮᎵᏍᏗ", english: "For us (others and I) to be thankful/happy"],
-            [pronoun: "First Plural Inclusive", romanized: "igalihelisdi", syllabary: "ᎢᎦᎵᎮᎵᏍᏗ", english: "For us (you and I and another or others) to be thankful/happy"],
-            [pronoun: "Third Plural", romanized: "unalihelisdi", syllabary: "ᎤᎾᎵᎮᎵᏍᏗ", english: "For them to be thankful/happy"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwalihelisdi", syllabary: "ᎠᏆᎵᎮᎵᏍᏗ", english: "For me to be thankful/happy"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsalihelisdi", syllabary: "ᏣᎵᎮᎵᏍᏗ", english: "For you to be thankful/happy"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ulihelisdi", syllabary: "ᎤᎵᎮᎵᏍᏗ", english: "For him/her/it to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdalihelisdi", syllabary: "ᏍᏓᎵᎮᎵᏍᏗ", english: "For you (two) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsalihelisdi", syllabary: "ᎢᏣᎵᎮᎵᏍᏗ", english: "For you (more than two) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "ginalihelisdi", syllabary: "ᎩᎾᎵᎮᎵᏍᏗ", english: "For us (you and I) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "oginalihelisdi", syllabary: "ᎣᎩᎾᎵᎮᎵᏍᏗ", english: "For us (another and I) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "ogalihelisdi", syllabary: "ᎣᎦᎵᎮᎵᏍᏗ", english: "For us (others and I) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "igalihelisdi", syllabary: "ᎢᎦᎵᎮᎵᏍᏗ", english: "For us (you and I and another or others) to be thankful/happy"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "unalihelisdi", syllabary: "ᎤᎾᎵᎮᎵᏍᏗ", english: "For them to be thankful/happy"],
     ]
 
     /**

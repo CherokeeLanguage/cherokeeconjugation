@@ -30,8 +30,8 @@ class ToBiteFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsisgaltsi", syllabary: "ᏓᏥᏍᎦᎶᏥ", english: "I will bite it", occurrence: 1],
-            [pronoun: "", romanized: "dasgaltsi", syllabary: "ᏓᏍᎦᎶᏥ", english: "S/he will bite it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "SG1", romanized: "datsisgalitsi", syllabary: "ᏓᏥᏍᎦᎶᏥ", english: "I will bite it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "SG1", romanized: "dasgalitsi", syllabary: "ᏓᏍᎦᎶᏥ", english: "S/he will bite it", occurrence: 1],
     ]
 
     /**

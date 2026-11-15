@@ -34,10 +34,10 @@ class ToTalkToSomeoneFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hilinohetanv'i", syllabary: "ᎯᎵᏃᎮᏔᏅᎢ", english: "You (singular) talk to, or with, him/her!", occurrence: 1],
-            [pronoun: "", romanized: "esdahlinohetanv'i", syllabary: "ᎡᏍᏓᎵᏃᎮᏔᏅᎢ", english: "You two talk to, or with, him/her!", occurrence: 1],
-            [pronoun: "", romanized: "etsahlinohetanv'i", syllabary: "ᎡᏣᎵᏃᎮᏔᏅᎢ", english: "You (more than two) talk to, or with, him/her!", occurrence: 1],
-            [pronoun: "", romanized: "wahlinohetanv'i", syllabary: "ᏩᎵᏃᎮᏔᏅᎢ", english: "Let him/her talk to, or with, him/her!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hilinohetanv'i", syllabary: "ᎯᎵᏃᎮᏔᏅᎢ", english: "You (singular) talk to, or with, him/her!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdahlinohetanv'i", syllabary: "ᎡᏍᏓᎵᏃᎮᏔᏅᎢ", english: "You two talk to, or with, him/her!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsahlinohetanv'i", syllabary: "ᎡᏣᎵᏃᎮᏔᏅᎢ", english: "You (more than two) talk to, or with, him/her!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wahlinohetanv'i", syllabary: "ᏩᎵᏃᎮᏔᏅᎢ", english: "Let him/her talk to, or with, him/her!", occurrence: 1],
     ]
 
     /**

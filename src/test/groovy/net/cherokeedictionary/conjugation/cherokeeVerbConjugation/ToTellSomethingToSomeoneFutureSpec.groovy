@@ -29,8 +29,8 @@ class ToTellSomethingToSomeoneFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsinohiseli", syllabary: "ᏓᏥᏃᎯᏎᎵ", english: "I will tell it", occurrence: 1],
-            [pronoun: "", romanized: "dakanohiseli", syllabary: "ᏓᎧᏃᎯᏎᎵ", english: "S/he will tell it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "datsinohiseli", syllabary: "ᏓᏥᏃᎯᏎᎵ", english: "I will tell it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dakanohiseli", syllabary: "ᏓᎧᏃᎯᏎᎵ", english: "S/he will tell it", occurrence: 1],
     ]
 
     /**

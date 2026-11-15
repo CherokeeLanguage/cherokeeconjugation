@@ -35,16 +35,16 @@ class ToFallPresentSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "tsinvga", syllabary: "ᏥᏅᎦ", english: "I am falling"],
-            [pronoun: "Second Singular", romanized: "hinvga", syllabary: "ᎯᏅᎦ", english: "You are falling"],
-            [pronoun: "Third Singular", romanized: "ganvga", syllabary: "ᎦᏅᎦ", english: "S/he is falling"],
-            [pronoun: "Second Dual", romanized: "desdinvga", syllabary: "ᏕᏍᏗᏅᎦ", english: "You (two) are falling"],
-            [pronoun: "Second Plural", romanized: "detsinvga", syllabary: "ᏕᏥᏅᎦ", english: "You (more than two) are falling"],
-            [pronoun: "First Dual Inclusive", romanized: "deninvga", syllabary: "ᏕᏂᏅᎦ", english: "We (you and I) are falling"],
-            [pronoun: "First Dual Exclusive", romanized: "dosdinvga", syllabary: "ᏙᏍᏗᏅᎦ", english: "We (another and I) are falling"],
-            [pronoun: "First Plural Exclusive", romanized: "dotsinvga", syllabary: "ᏙᏥᏅᎦ", english: "We (others and I) are falling"],
-            [pronoun: "First Plural Inclusive", romanized: "are falling\" dedinvga", syllabary: "ᏕᏗᏅᎦ", english: "We (you and I and another or others) "],  // opening quote missing in print
-            [pronoun: "Third Plural", romanized: "daninvga", syllabary: "ᏓᏂᏅᎦ", english: "They are falling"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "tsinvga", syllabary: "ᏥᏅᎦ", english: "I am falling"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hinvga", syllabary: "ᎯᏅᎦ", english: "You are falling"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ganvga", syllabary: "ᎦᏅᎦ", english: "S/he is falling"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "desdinvga", syllabary: "ᏕᏍᏗᏅᎦ", english: "You (two) are falling"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "detsinvga", syllabary: "ᏕᏥᏅᎦ", english: "You (more than two) are falling"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "deninvga", syllabary: "ᏕᏂᏅᎦ", english: "We (you and I) are falling"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dosdinvga", syllabary: "ᏙᏍᏗᏅᎦ", english: "We (another and I) are falling"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dotsinvga", syllabary: "ᏙᏥᏅᎦ", english: "We (others and I) are falling"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "are falling\" dedinvga", syllabary: "ᏕᏗᏅᎦ", english: "We (you and I and another or others) "],  // opening quote missing in print
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "daninvga", syllabary: "ᏓᏂᏅᎦ", english: "They are falling"],
     ]
 
     /**

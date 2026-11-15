@@ -29,8 +29,8 @@ class ToLikeSomeoneOrSomethingRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agilvkwdv'i", syllabary: "ᎠᎩᎸᏉᏛᎢ", english: "I liked it", occurrence: 1],
-            [pronoun: "", romanized: "ulvkwdv'i", syllabary: "ᎤᎸᏉᏛᎢ", english: "He/she liked it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agilvkwdv'i", syllabary: "ᎠᎩᎸᏉᏛᎢ", english: "I liked it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ulvkwdv'i", syllabary: "ᎤᎸᏉᏛᎢ", english: "He/she liked it", occurrence: 1],
     ]
 
     /**

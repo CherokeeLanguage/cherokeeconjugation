@@ -19,9 +19,9 @@ class ConjugatePastTense extends ConjugateBase {
     }
 
     public void test() {
-        println(heSeesIt.getRootWithEnding(Tense.REMOTE_PAST))
+        //println(heSeesIt.getRootWithEnding(Tense.REMOTE_PAST))
         heSeesIt.getStems().each {
-            println("${it.stemtype} : ${it.syllabary}")
+            //println("${it.stemtype} : ${it.syllabary}")
         }
 
 //        PresentContinous : ᎪᏩᏘᎭ

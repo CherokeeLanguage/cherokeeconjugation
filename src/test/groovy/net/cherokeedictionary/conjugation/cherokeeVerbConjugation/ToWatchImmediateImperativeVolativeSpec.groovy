@@ -29,10 +29,10 @@ class ToWatchImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hagasesda", syllabary: "ᎭᎦᏎᏍᏓ", english: "You (singular), watch it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdagasesda", syllabary: "ᏍᏓᎦᏎᏍᏓ", english: "You two, watch it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsagasesda", syllabary: "ᎢᏣᎦᏎᏍᏓ", english: "You (more than two), watch it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wagasesda", syllabary: "ᏩᎦᏎᏍᏓ", english: "Let him/her watch it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hagasesda", syllabary: "ᎭᎦᏎᏍᏓ", english: "You (singular), watch it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdagasesda", syllabary: "ᏍᏓᎦᏎᏍᏓ", english: "You two, watch it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsagasesda", syllabary: "ᎢᏣᎦᏎᏍᏓ", english: "You (more than two), watch it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wagasesda", syllabary: "ᏩᎦᏎᏍᏓ", english: "Let him/her watch it right now!", occurrence: 1],
     ]
 
     /**

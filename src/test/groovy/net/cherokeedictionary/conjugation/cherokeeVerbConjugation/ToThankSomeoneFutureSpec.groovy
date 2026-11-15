@@ -29,8 +29,8 @@ class ToThankSomeoneFutureSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "datsiyali'elitseli", syllabary: "ᏓᏥᏯᎵᎡᎵᏤᎢ", english: "I will thank it", occurrence: 1],
-            [pronoun: "", romanized: "dvlihelitseli", syllabary: "ᏛᎵᎮᎵᏤᎵ", english: "He/she will thank it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "datsiyali'elitseli", syllabary: "ᏓᏥᏯᎵᎡᎵᏤᎢ", english: "I will thank it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "dvlihelitseli", syllabary: "ᏛᎵᎮᎵᏤᎵ", english: "He/she will thank it", occurrence: 1],
     ]
 
     /**

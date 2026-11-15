@@ -29,8 +29,8 @@ class ToRememberImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "ganvdada", syllabary: "ᎦᏅᏓᏓ", english: "I remembered it, just now", occurrence: 1],
-            [pronoun: "", romanized: "anvdada", syllabary: "ᎠᏅᏓᏓ", english: "S/he remembered it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ganvdada", syllabary: "ᎦᏅᏓᏓ", english: "I remembered it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "anvdada", syllabary: "ᎠᏅᏓᏓ", english: "S/he remembered it, just now", occurrence: 1],
     ]
 
     /**

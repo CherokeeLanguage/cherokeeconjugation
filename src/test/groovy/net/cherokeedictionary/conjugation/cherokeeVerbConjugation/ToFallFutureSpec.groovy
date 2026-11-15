@@ -30,16 +30,16 @@ class ToFallFutureSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "datsinvtsi \"", syllabary: "ᏓᏥᏅᏥ", english: "I will fall"],  // opening quote missing in print; stray quote glyph as printed
-            [pronoun: "Second Singular", romanized: "tinvtsi \"", syllabary: "ᏘᏅᏥ", english: "You will fall"],  // opening quote missing in print; stray quote glyph as printed
-            [pronoun: "Third Singular", romanized: "daganvtsi", syllabary: "ᏓᎦᏅᏥ", english: "S/he will fall"],
-            [pronoun: "Second Dual", romanized: "dodasdinvtsi", syllabary: "ᏙᏓᏍᏗᏅᏥ", english: "You (two) will fall"],
-            [pronoun: "Second Plural", romanized: "dodatsinvtsi", syllabary: "ᏙᏓᏥᏅᏥ", english: "You (more than two) will fall"],
-            [pronoun: "First Dual Inclusive", romanized: "dodaninvtsi", syllabary: "ᏙᏓᏂᏅᏥ", english: "We (you and I) will fall"],
-            [pronoun: "First Dual Exclusive", romanized: "dodayosdinvtsi", syllabary: "ᏙᏓᏲᏍᏗᏅᏥ", english: "We (another and I) will fall"],
-            [pronoun: "First Plural Exclusive", romanized: "dodayotsinvtsi", syllabary: "ᏙᏓᏲᏥᏅᏥ", english: "We (others and I) will fall"],
-            [pronoun: "First Plural Inclusive", romanized: "dodadinvtsi", syllabary: "ᏙᏓᏗᏅᏥ", english: "We (you and I and another or others) will fall"],
-            [pronoun: "Third Plural", romanized: "dodvninvtsi", syllabary: "ᏙᏛᏂᏅᏥ", english: "They will fall"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "datsinvtsi \"", syllabary: "ᏓᏥᏅᏥ", english: "I will fall"],  // opening quote missing in print; stray quote glyph as printed
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tinvtsi \"", syllabary: "ᏘᏅᏥ", english: "You will fall"],  // opening quote missing in print; stray quote glyph as printed
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "daganvtsi", syllabary: "ᏓᎦᏅᏥ", english: "S/he will fall"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "dodasdinvtsi", syllabary: "ᏙᏓᏍᏗᏅᏥ", english: "You (two) will fall"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "dodatsinvtsi", syllabary: "ᏙᏓᏥᏅᏥ", english: "You (more than two) will fall"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "dodaninvtsi", syllabary: "ᏙᏓᏂᏅᏥ", english: "We (you and I) will fall"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dodayosdinvtsi", syllabary: "ᏙᏓᏲᏍᏗᏅᏥ", english: "We (another and I) will fall"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dodayotsinvtsi", syllabary: "ᏙᏓᏲᏥᏅᏥ", english: "We (others and I) will fall"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dodadinvtsi", syllabary: "ᏙᏓᏗᏅᏥ", english: "We (you and I and another or others) will fall"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "dodvninvtsi", syllabary: "ᏙᏛᏂᏅᏥ", english: "They will fall"],
     ]
 
     /**

@@ -3,7 +3,7 @@ import spock.lang.Specification
 class PrintSpec extends Specification {
     def "print"() {
         expect:
-        println "HELLO WORLD"
+        //println "HELLO WORLD"
         true
     }
 }

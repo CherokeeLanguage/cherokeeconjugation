@@ -30,16 +30,16 @@ class ToFallRemotePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "aginvtsv'i", syllabary: "ᎠᎩᏅᏨᎢ", english: "I fell"],
-            [pronoun: "Second Singular", romanized: "tsanvtsv'i", syllabary: "ᏣᏅᏨᎢ", english: "You fell"],
-            [pronoun: "Third Singular", romanized: "unvtsv'i", syllabary: "ᎤᏅᏨᎢ", english: "S/he fell"],
-            [pronoun: "Second Dual", romanized: "desdinvtsv'i", syllabary: "ᏕᏍᏗᏅᏨᎢ", english: "You (two) fell"],
-            [pronoun: "Second Plural", romanized: "detsinvtsv'i", syllabary: "ᏕᏥᏅᏨᎢ", english: "You (more than two) fell"],
-            [pronoun: "First Dual Inclusive", romanized: "degininvtsv'i", syllabary: "ᏕᎩᏂᏅᏨᎢ", english: "We (you and I) fell"],
-            [pronoun: "First Dual Exclusive", romanized: "dogininvtsv'i", syllabary: "ᏙᎩᏂᏅᏨᎢ", english: "We (another and I) fell"],
-            [pronoun: "First Plural Exclusive", romanized: "doginvtsv'i", syllabary: "ᏙᎩᏅᏨᎢ", english: "We (others and I) fell"],
-            [pronoun: "First Plural Inclusive", romanized: "deginvtsv'i", syllabary: "ᏕᎩᏅᏨᎢ", english: "We (you and I and another or others) fell"],
-            [pronoun: "Third Plural", romanized: "duninvtsv'i", syllabary: "ᏚᏂᏅᏨᎢ", english: "They fell"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "aginvtsv'i", syllabary: "ᎠᎩᏅᏨᎢ", english: "I fell"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsanvtsv'i", syllabary: "ᏣᏅᏨᎢ", english: "You fell"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "unvtsv'i", syllabary: "ᎤᏅᏨᎢ", english: "S/he fell"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "desdinvtsv'i", syllabary: "ᏕᏍᏗᏅᏨᎢ", english: "You (two) fell"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "detsinvtsv'i", syllabary: "ᏕᏥᏅᏨᎢ", english: "You (more than two) fell"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "degininvtsv'i", syllabary: "ᏕᎩᏂᏅᏨᎢ", english: "We (you and I) fell"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dogininvtsv'i", syllabary: "ᏙᎩᏂᏅᏨᎢ", english: "We (another and I) fell"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "doginvtsv'i", syllabary: "ᏙᎩᏅᏨᎢ", english: "We (others and I) fell"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "deginvtsv'i", syllabary: "ᏕᎩᏅᏨᎢ", english: "We (you and I and another or others) fell"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "duninvtsv'i", syllabary: "ᏚᏂᏅᏨᎢ", english: "They fell"],
     ]
 
     /**

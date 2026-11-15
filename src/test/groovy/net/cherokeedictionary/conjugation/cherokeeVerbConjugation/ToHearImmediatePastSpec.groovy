@@ -29,8 +29,8 @@ class ToHearImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "gatvgvga", syllabary: "ᎦᏛᎬᎦ", english: "I heard it, just now", occurrence: 1],
-            [pronoun: "", romanized: "atvgvga", syllabary: "ᎠᏛᎬᎦ", english: "S/he heard it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gatvgvga", syllabary: "ᎦᏛᎬᎦ", english: "I heard it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "atvgvga", syllabary: "ᎠᏛᎬᎦ", english: "S/he heard it, just now", occurrence: 1],
     ]
 
     /**

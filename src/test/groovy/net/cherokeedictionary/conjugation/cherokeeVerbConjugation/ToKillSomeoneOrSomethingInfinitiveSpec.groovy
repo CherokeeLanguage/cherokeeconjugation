@@ -29,8 +29,8 @@ class ToKillSomeoneOrSomethingInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsi'isdi", syllabary: "ᏥᎢᏍᏗ", english: "(For) me to kill it", occurrence: 1],
-            [pronoun: "", romanized: "uhisdi", syllabary: "ᎤᎯᏍᏗ", english: "(For) him/her to kill it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsi'isdi", syllabary: "ᏥᎢᏍᏗ", english: "(For) me to kill it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uhisdi", syllabary: "ᎤᎯᏍᏗ", english: "(For) him/her to kill it", occurrence: 1],
     ]
 
     /**

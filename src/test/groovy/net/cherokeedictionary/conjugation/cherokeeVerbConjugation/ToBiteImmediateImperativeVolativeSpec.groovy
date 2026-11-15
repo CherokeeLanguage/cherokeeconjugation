@@ -2,6 +2,7 @@ package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
 import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
+import net.cherokeedictionary.util.PrefixTableSubject
 import spock.lang.Unroll
 
 /**
@@ -30,9 +31,9 @@ class ToBiteImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The three conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hisgala", syllabary: "ᎯᏍᎦᎳ", english: "You (singular) bite it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdisgala", syllabary: "ᏍᏗᏍᎦᎳ", english: "You (two) bite it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsisgala", syllabary: "ᎢᏥᏍᎦᎳ", english: "You (more than two) bite it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "SG2", romanized: "hisgala", syllabary: "ᎯᏍᎦᎳ", english: "You (singular) bite it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "DL2", romanized: "sdisgala", syllabary: "ᏍᏗᏍᎦᎳ", english: "You (two) bite it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "PL2", romanized: "itsisgala", syllabary: "ᎢᏥᏍᎦᎳ", english: "You (more than two) bite it right now!", occurrence: 1],
     ]
 
     /**

@@ -69,6 +69,7 @@ class Verb extends Word {
             case Tense.REMOTE_PAST:
                 return new RemotePast().getFinalSuffix()
             case Tense.FUTURE_COMMAND:
+            case Tense.FUTURE_IMPERATIVE_VOLATIVE:
                 // Future Imperative/Volative = Stem III + -v'i
                 return new FutureImperativeVolative().getFinalSuffix()
             case Tense.COMPLETIVE_FUTURE:

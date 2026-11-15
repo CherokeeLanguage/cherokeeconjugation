@@ -29,10 +29,10 @@ class ToSeeImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "higohwahta", syllabary: "ᎯᎪᏩᏔ", english: "You (singular) see it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdigohwahta", syllabary: "ᏍᏗᎪᏩᏔ", english: "You two see it right now!", occurrence: 1],
-            [pronoun: "", romanized: "itsigohwahta", syllabary: "ᎢᏥᎪᏩᏔ", english: "You (more than two) see it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wagohwahta", syllabary: "ᏩᎪᏩᏔ", english: "Let him/her see it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "higohwahta", syllabary: "ᎯᎪᏩᏔ", english: "You (singular) see it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdigohwahta", syllabary: "ᏍᏗᎪᏩᏔ", english: "You two see it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsigohwahta", syllabary: "ᎢᏥᎪᏩᏔ", english: "You (more than two) see it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wagohwahta", syllabary: "ᏩᎪᏩᏔ", english: "Let him/her see it right now!", occurrence: 1],
     ]
 
     /**

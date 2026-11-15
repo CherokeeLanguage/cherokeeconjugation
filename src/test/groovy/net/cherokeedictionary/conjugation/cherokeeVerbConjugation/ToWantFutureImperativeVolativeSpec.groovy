@@ -34,10 +34,10 @@ class ToWantFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsadulvhv'i", syllabary: "ᏣᏚᎸᎲᎢ", english: "You (singular) want it!", occurrence: 1],
-            [pronoun: "", romanized: "sdadulvhv'i", syllabary: "ᏍᏓᏚᎸᎲᎢ", english: "You (two) want it!", occurrence: 1],
-            [pronoun: "", romanized: "itsadulvhv'i", syllabary: "ᎢᏣᏚᎸᎲᎢ", english: "You (more than two) want it!", occurrence: 1],
-            [pronoun: "", romanized: "udulvhv'i", syllabary: "ᎤᏚᎸᎲᎢ", english: "Let him/her want it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "tsadulvhv'i", syllabary: "ᏣᏚᎸᎲᎢ", english: "You (singular) want it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdadulvhv'i", syllabary: "ᏍᏓᏚᎸᎲᎢ", english: "You (two) want it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsadulvhv'i", syllabary: "ᎢᏣᏚᎸᎲᎢ", english: "You (more than two) want it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "udulvhv'i", syllabary: "ᎤᏚᎸᎲᎢ", english: "Let him/her want it!", occurrence: 1],
     ]
 
     /**

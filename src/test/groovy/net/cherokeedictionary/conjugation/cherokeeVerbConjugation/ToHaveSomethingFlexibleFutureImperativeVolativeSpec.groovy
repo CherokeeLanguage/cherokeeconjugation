@@ -34,16 +34,16 @@ class ToHaveSomethingFlexibleFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "May I have multiple flexible things!\" agina'esdi/dagina'esdi", syllabary: "ᎠᎩᎾᎡᏍᏗ/ᏓᎩᎾᎡᏍᏗ", english: "May I have something flexible (singular)!\"/"],
-            [pronoun: "Second Singular", romanized: "tsana'esdi/detsana'esdi", syllabary: "ᏣᎾᎡᏍᏗ/ᏕᏣᎾᎡᏍᏗ", english: "May you have something flexible (singular)!\"/\"May you have multiple flexible things!\""],
-            [pronoun: "Third Singular", romanized: "una'esdi/duna'esdi", syllabary: "ᎤᎾᎡᏍᏗ/ᏚᎾᎡᏍᏗ", english: "May he/she/it have something flexible (singular)!\"/\"May he/she/it have multiple flexible things!\""],
-            [pronoun: "Second Dual", romanized: "sdina'esdi/desdina'esdi", syllabary: "ᏍᏗᎾᎡᏍᏗ/ᏕᏍᏗᎾᎡᏍᏗ", english: "May you (two) have something flexible (singular)!\"/\"May you (two) have multiple flexible things!\""],
-            [pronoun: "Second Plural", romanized: "itsina'esdi/detsina'esdi", syllabary: "ᎢᏥᎾᎡᏍᏗ/ᏕᏥᎾᎡᏍᏗ", english: "May you (more than two) have something flexible (singular)!\"/\"May you (more than two) have multiple flexible things!\""],
-            [pronoun: "First Dual Inclusive", romanized: "ginina'esdi/deginina'esdi", syllabary: "ᎩᏂᎾᎡᏍᏗ/ᏕᎩᏂᎾᎡᏍᏗ", english: "May we (you and I) have something flexible (singular)!\"/\"May we (you and I) have multiple flexible things!\""],
-            [pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "May we (another and I) have something flexible (singular)!\"/\"May we (another and I) have multiple flexible things!\""],
-            [pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "May we (others and I) have something flexible (singular)!\"/\"May we (others and I) have multiple flexible things!\""],
-            [pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "May we (you and I and another or others) have something flexible (singular)!\"/\"May we (you and I and another or others) have multiple flexible things!\""],
-            [pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "May they have something flexible (singular)!\"/\"May they have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "May I have multiple flexible things!\" agina'esdi/dagina'esdi", syllabary: "ᎠᎩᎾᎡᏍᏗ/ᏓᎩᎾᎡᏍᏗ", english: "May I have something flexible (singular)!\"/"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsana'esdi/detsana'esdi", syllabary: "ᏣᎾᎡᏍᏗ/ᏕᏣᎾᎡᏍᏗ", english: "May you have something flexible (singular)!\"/\"May you have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "una'esdi/duna'esdi", syllabary: "ᎤᎾᎡᏍᏗ/ᏚᎾᎡᏍᏗ", english: "May he/she/it have something flexible (singular)!\"/\"May he/she/it have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "Second Dual", romanized: "sdina'esdi/desdina'esdi", syllabary: "ᏍᏗᎾᎡᏍᏗ/ᏕᏍᏗᎾᎡᏍᏗ", english: "May you (two) have something flexible (singular)!\"/\"May you (two) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "Second Plural", romanized: "itsina'esdi/detsina'esdi", syllabary: "ᎢᏥᎾᎡᏍᏗ/ᏕᏥᎾᎡᏍᏗ", english: "May you (more than two) have something flexible (singular)!\"/\"May you (more than two) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "First Dual Inclusive", romanized: "ginina'esdi/deginina'esdi", syllabary: "ᎩᏂᎾᎡᏍᏗ/ᏕᎩᏂᎾᎡᏍᏗ", english: "May we (you and I) have something flexible (singular)!\"/\"May we (you and I) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "First Dual Exclusive", romanized: "oginina'esdi/doginina'esdi", syllabary: "ᎣᎩᏂᎾᎡᏍᏗ/ᏙᎩᏂᎾᎡᏍᏗ", english: "May we (another and I) have something flexible (singular)!\"/\"May we (another and I) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "First Plural Exclusive", romanized: "ogina'esdi/dogina'esdi", syllabary: "ᎣᎩᎾᎡᏍᏗ/ᏙᎩᎾᎡᏍᏗ", english: "May we (others and I) have something flexible (singular)!\"/\"May we (others and I) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "First Plural Inclusive", romanized: "igina'esdi/degina'esdi", syllabary: "ᎢᎩᎾᎡᏍᏗ/ᏕᎩᎾᎡᏍᏗ", english: "May we (you and I and another or others) have something flexible (singular)!\"/\"May we (you and I and another or others) have multiple flexible things!\""],
+            [object: 'SG3IN', pronoun: "Third Plural", romanized: "unina'esdi/dunina'esdi", syllabary: "ᎤᏂᎾᎡᏍᏗ/ᏚᏂᎾᎡᏍᏗ", english: "May they have something flexible (singular)!\"/\"May they have multiple flexible things!\""],
     ]
 
     /**

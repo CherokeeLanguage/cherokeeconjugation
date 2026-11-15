@@ -29,8 +29,8 @@ class ToWantImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agwadula", syllabary: "ᎠᏆᏚᎳ", english: "I wanted it, just now", occurrence: 1],
-            [pronoun: "", romanized: "udula", syllabary: "ᎤᏚᎳ", english: "S/he wanted it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agwadula", syllabary: "ᎠᏆᏚᎳ", english: "I wanted it, just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "udula", syllabary: "ᎤᏚᎳ", english: "S/he wanted it, just now", occurrence: 1],
     ]
 
     /**

@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -29,28 +30,31 @@ class ToGoFutureExpectedSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "dagesi", syllabary: "ᏓᎨᏏ", english: "I will go"],
-            [pronoun: "Second Singular", romanized: "tesi (dahesi)", syllabary: "ᏖᏏ", english: "You will go"],  // as printed: (ᏓᎮᏏ)
-            [pronoun: "Third Singular", romanized: "dayesi", syllabary: "ᏓᏰᏏ", english: "He/she/it will go"],
-            [pronoun: "Second Dual", romanized: "dasdesi", syllabary: "ᏓᏍᏕᏏ", english: "You (two) will go"],
-            [pronoun: "Second Plural", romanized: "datsesi", syllabary: "ᏓᏤᏏ", english: "You (more than two) will go"],
-            [pronoun: "First Dual Inclusive", romanized: "danesi", syllabary: "ᏓᏁᏏ", english: "We (you and I) will go"],
-            [pronoun: "First Dual Exclusive", romanized: "dayosdesi", syllabary: "ᏓᏲᏍᏕᏏ", english: "We (another and I) will go"],
-            [pronoun: "First Plural Exclusive", romanized: "dayotsesi", syllabary: "ᏓᏲᏤᏏ", english: "We (others and I) will go"],
-            [pronoun: "First Plural Inclusive", romanized: "dadesi", syllabary: "ᏓᏕᏏ", english: "We (you and I and another or others) will go"],
-            [pronoun: "Third Plural", romanized: "dvnesi", syllabary: "ᏛᏁᏏ", english: "They will go"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "dagesi", syllabary: "ᏓᎨᏏ", english: "I will go"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tesi (dahesi)", syllabary: "ᏖᏏ", english: "You will go"],  // as printed: (ᏓᎮᏏ)
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "dayesi", syllabary: "ᏓᏰᏏ", english: "He/she/it will go"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "dasdesi", syllabary: "ᏓᏍᏕᏏ", english: "You (two) will go"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "datsesi", syllabary: "ᏓᏤᏏ", english: "You (more than two) will go"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "danesi", syllabary: "ᏓᏁᏏ", english: "We (you and I) will go"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "dayosdesi", syllabary: "ᏓᏲᏍᏕᏏ", english: "We (another and I) will go"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dayotsesi", syllabary: "ᏓᏲᏤᏏ", english: "We (others and I) will go"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dadesi", syllabary: "ᏓᏕᏏ", english: "We (you and I and another or others) will go"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "dvnesi", syllabary: "ᏛᏁᏏ", english: "They will go"],
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * tio 14Nov26: harness check — the engine conjugates this same
+     * pronoun/tense/verb; the assertion below compares its output with
+     * the verb-book syllabary.
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "future (expected) tense form matches the verb book (#row.pronoun)"() {
@@ -60,6 +64,12 @@ class ToGoFutureExpectedSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        println form.engineSyllabary
+        println row.syllabary
+
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

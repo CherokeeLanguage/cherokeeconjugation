@@ -29,16 +29,16 @@ class ToBeThankfulOrHappyRemotePastSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwalihelitsv'i", syllabary: "ᎠᏆᎵᎮᎵᏨᎢ", english: "I was thankful/happy"],
-            [pronoun: "Second Singular", romanized: "tsalihelitsv'i", syllabary: "ᏣᎵᎮᎵᏨᎢ", english: "You were thankful/happy"],
-            [pronoun: "Third Singular", romanized: "ulihelitsv'i", syllabary: "ᎤᎵᎮᎵᏨᎢ", english: "He/she/it was thankful/happy"],
-            [pronoun: "Second Dual", romanized: "sdalihelitsv'i", syllabary: "ᏍᏓᎵᎮᎵᏨᎢ", english: "You (two) were thankful/happy"],
-            [pronoun: "Second Plural", romanized: "itsalihelitsv'i", syllabary: "ᎢᏣᎵᎮᎵᏨᎢ", english: "You (more than two) were thankful/happy"],
-            [pronoun: "First Dual Inclusive", romanized: "ginalihelitsv'i", syllabary: "ᎩᎾᎵᎮᎵᏨᎢ", english: "We (you and I) were thankful/happy"],
-            [pronoun: "First Dual Exclusive", romanized: "oginalihelitsv'i", syllabary: "ᎣᎩᎾᎵᎮᎵᏨᎢ", english: "We (another and I) were thankful/happy"],
-            [pronoun: "First Plural Exclusive", romanized: "ogalihelitsv'i", syllabary: "ᎣᎦᎵᎮᎵᏨᎢ", english: "We (others and I) were thankful/happy"],
-            [pronoun: "First Plural Inclusive", romanized: "igalihelitsv'i", syllabary: "ᎢᎦᎵᎮᎵᏨᎢ", english: "We (you and I and another or others) were thankful/happy"],
-            [pronoun: "Third Plural", romanized: "unalihelitsv'i", syllabary: "ᎤᎾᎵᎮᎵᏨᎢ", english: "They were thankful/happy"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwalihelitsv'i", syllabary: "ᎠᏆᎵᎮᎵᏨᎢ", english: "I was thankful/happy"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsalihelitsv'i", syllabary: "ᏣᎵᎮᎵᏨᎢ", english: "You were thankful/happy"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ulihelitsv'i", syllabary: "ᎤᎵᎮᎵᏨᎢ", english: "He/she/it was thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdalihelitsv'i", syllabary: "ᏍᏓᎵᎮᎵᏨᎢ", english: "You (two) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsalihelitsv'i", syllabary: "ᎢᏣᎵᎮᎵᏨᎢ", english: "You (more than two) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "ginalihelitsv'i", syllabary: "ᎩᎾᎵᎮᎵᏨᎢ", english: "We (you and I) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "oginalihelitsv'i", syllabary: "ᎣᎩᎾᎵᎮᎵᏨᎢ", english: "We (another and I) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "ogalihelitsv'i", syllabary: "ᎣᎦᎵᎮᎵᏨᎢ", english: "We (others and I) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "igalihelitsv'i", syllabary: "ᎢᎦᎵᎮᎵᏨᎢ", english: "We (you and I and another or others) were thankful/happy"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "unalihelitsv'i", syllabary: "ᎤᎾᎵᎮᎵᏨᎢ", english: "They were thankful/happy"],
     ]
 
     /**

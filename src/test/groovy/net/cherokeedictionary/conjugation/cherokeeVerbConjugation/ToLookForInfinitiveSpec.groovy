@@ -29,8 +29,8 @@ class ToLookForInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agiyosdi (agiysdi)", syllabary: "ᎠᎩᏲᏍᏗ", english: "For me to look for it", occurrence: 1],
-            [pronoun: "", romanized: "uyosdi (uysdi)", syllabary: "ᎤᏲᏍᏗ", english: "For him/her to look for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agiyosdi (agiysdi)", syllabary: "ᎠᎩᏲᏍᏗ", english: "For me to look for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uyosdi (uysdi)", syllabary: "ᎤᏲᏍᏗ", english: "For him/her to look for it", occurrence: 1],
     ]
 
     /**

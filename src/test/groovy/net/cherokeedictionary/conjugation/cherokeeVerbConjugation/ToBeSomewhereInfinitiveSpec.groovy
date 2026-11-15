@@ -28,16 +28,16 @@ class ToBeSomewhereInfinitiveSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "agwedasdi",  syllabary: "ᎠᏇᏓᏍᏗ",  english: "For me to be somewhere"],
-            [pronoun: "Second Singular",        romanized: "tsedasdi",   syllabary: "ᏤᏓᏍᏗ",   english: "For you to be somewhere"],
-            [pronoun: "Third Singular",         romanized: "uwedasdi",   syllabary: "ᎤᏪᏓᏍᏗ",  english: "For him/her/it to be somewhere"],
-            [pronoun: "Second Dual",            romanized: "sdedasdi",   syllabary: "ᏍᏕᏓᏍᏗ",  english: "For you (two) to be somewhere"],
-            [pronoun: "Second Plural",          romanized: "itsedasdi",  syllabary: "ᎢᏤᏓᏍᏗ",  english: "For you (more than two) to be somewhere"],
-            [pronoun: "First Dual Inclusive",   romanized: "ginedasdi",  syllabary: "ᎩᏁᏓᏍᏗ",  english: "For us (you and I) to be somewhere"],
-            [pronoun: "First Dual Exclusive",   romanized: "oginedasdi", syllabary: "ᎣᎩᏁᏓᏍᏗ", english: "For us (another and I) to be somewhere"],
-            [pronoun: "First Plural Exclusive", romanized: "ogedasdi",   syllabary: "ᎣᎨᏓᏍᏗ",  english: "For us (others and I) to be somewhere"],
-            [pronoun: "First Plural Inclusive", romanized: "igedasdi",   syllabary: "ᎢᎨᏓᏍᏗ",  english: "For us (you and I and another or others) to be somewhere"],
-            [pronoun: "Third Plural",      romanized: "unedasdi",   syllabary: "ᎤᏁᏓᏍᏗ",  english: "For them to be somewhere"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "agwedasdi",  syllabary: "ᎠᏇᏓᏍᏗ",  english: "For me to be somewhere"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "tsedasdi",   syllabary: "ᏤᏓᏍᏗ",   english: "For you to be somewhere"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "uwedasdi",   syllabary: "ᎤᏪᏓᏍᏗ",  english: "For him/her/it to be somewhere"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdedasdi",   syllabary: "ᏍᏕᏓᏍᏗ",  english: "For you (two) to be somewhere"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itsedasdi",  syllabary: "ᎢᏤᏓᏍᏗ",  english: "For you (more than two) to be somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "ginedasdi",  syllabary: "ᎩᏁᏓᏍᏗ",  english: "For us (you and I) to be somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "oginedasdi", syllabary: "ᎣᎩᏁᏓᏍᏗ", english: "For us (another and I) to be somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "ogedasdi",   syllabary: "ᎣᎨᏓᏍᏗ",  english: "For us (others and I) to be somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "igedasdi",   syllabary: "ᎢᎨᏓᏍᏗ",  english: "For us (you and I and another or others) to be somewhere"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "unedasdi",   syllabary: "ᎤᏁᏓᏍᏗ",  english: "For them to be somewhere"],
     ]
 
     /**

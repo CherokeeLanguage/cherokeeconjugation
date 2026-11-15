@@ -38,10 +38,10 @@ class ToLookForFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsayolv'i", syllabary: "ᏣᏲᎸᎢ", english: "You (singular) look for it later!", occurrence: 1],
-            [pronoun: "", romanized: "sdiyolv'i", syllabary: "ᏍᏗᏲᎸᎢ", english: "You (two) look for it later!", occurrence: 1],
-            [pronoun: "", romanized: "itsiyolv'i", syllabary: "ᎢᏥᏲᎸᎢ", english: "You (more than two) look for it later!", occurrence: 1],
-            [pronoun: "", romanized: "uyolv'i", syllabary: "ᎤᏲᎸᎢ", english: "Let him/her look for it later!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "tsayolv'i", syllabary: "ᏣᏲᎸᎢ", english: "You (singular) look for it later!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdiyolv'i", syllabary: "ᏍᏗᏲᎸᎢ", english: "You (two) look for it later!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsiyolv'i", syllabary: "ᎢᏥᏲᎸᎢ", english: "You (more than two) look for it later!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uyolv'i", syllabary: "ᎤᏲᎸᎢ", english: "Let him/her look for it later!", occurrence: 1],
     ]
 
     /**

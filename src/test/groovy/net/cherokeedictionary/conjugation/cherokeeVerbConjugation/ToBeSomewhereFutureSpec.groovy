@@ -28,16 +28,16 @@ class ToBeSomewhereFutureSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular",         romanized: "gedohesdi",   syllabary: "ᎨᏙᎮᏍᏗ",  english: "I will be somewhere"],
-            [pronoun: "Second Singular",        romanized: "hedohesdi",   syllabary: "ᎮᏙᎮᏍᏗ",  english: "You will be somewhere"],
-            [pronoun: "Third Singular",         romanized: "edohesdi",    syllabary: "ᎡᏙᎮᏍᏗ",  english: "He/she/it will be somewhere"],
-            [pronoun: "Second Dual",            romanized: "sdedohesdi",  syllabary: "ᏍᏕᏙᎮᏍᏗ", english: "You (two) will be somewhere"],
-            [pronoun: "Second Plural",          romanized: "itsedohesdi", syllabary: "ᎢᏤᏙᎮᏍᏗ", english: "You (more than two) will be somewhere"],
-            [pronoun: "First Dual Inclusive",   romanized: "inedohesdi",  syllabary: "ᎢᏁᏙᎮᏍᏗ", english: "We (you and I) will be somewhere"],
-            [pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "We (another and I) will be somewhere"],
-            [pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "We (others and I) will be somewhere"],
-            [pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "We (you and I and another or others) will be somewhere"],
-            [pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "They will be somewhere"],
+            [object: 'SG3IN', pronoun: "First Singular",         romanized: "gedohesdi",   syllabary: "ᎨᏙᎮᏍᏗ",  english: "I will be somewhere"],
+            [object: 'SG3IN', pronoun: "Second Singular",        romanized: "hedohesdi",   syllabary: "ᎮᏙᎮᏍᏗ",  english: "You will be somewhere"],
+            [object: 'SG3IN', pronoun: "Third Singular",         romanized: "edohesdi",    syllabary: "ᎡᏙᎮᏍᏗ",  english: "He/she/it will be somewhere"],
+            [object: 'PL3AN', pronoun: "Second Dual",            romanized: "sdedohesdi",  syllabary: "ᏍᏕᏙᎮᏍᏗ", english: "You (two) will be somewhere"],
+            [object: 'PL3AN', pronoun: "Second Plural",          romanized: "itsedohesdi", syllabary: "ᎢᏤᏙᎮᏍᏗ", english: "You (more than two) will be somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive",   romanized: "inedohesdi",  syllabary: "ᎢᏁᏙᎮᏍᏗ", english: "We (you and I) will be somewhere"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive",   romanized: "osdedohesdi", syllabary: "ᎣᏍᏕᏙᎮᏍᏗ", english: "We (another and I) will be somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsedohesdi", syllabary: "ᎣᏤᏙᎮᏍᏗ", english: "We (others and I) will be somewhere"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idedohesdi",  syllabary: "ᎢᏕᏙᎮᏍᏗ", english: "We (you and I and another or others) will be somewhere"],
+            [object: 'PL3AN', pronoun: "Third Plural",      romanized: "anedohesdi",  syllabary: "ᎠᏁᏙᎮᏍᏗ", english: "They will be somewhere"],
     ]
 
     /**

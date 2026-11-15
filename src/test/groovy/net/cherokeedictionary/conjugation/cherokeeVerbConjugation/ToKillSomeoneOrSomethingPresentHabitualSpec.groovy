@@ -29,8 +29,8 @@ class ToKillSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsi'iho'i", syllabary: "ᏥᎢᎰᎢ", english: "I am killing it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "ahiho'i", syllabary: "ᎠᎯᎰᎢ", english: "He/she is killing it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsi'iho'i", syllabary: "ᏥᎢᎰᎢ", english: "I am killing it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ahiho'i", syllabary: "ᎠᎯᎰᎢ", english: "He/she is killing it (habitually)", occurrence: 1],
     ]
 
     /**

@@ -27,6 +27,9 @@ class VerbRegistryInitializer {
     static void init() {
         // --- Bridged verbs: root verified from the engine -- tio 12Nov26 ---
         bridge("to see", "gowati", [VerbCategory.NORMAL])
+        bridge("to go", "e", [VerbCategory.MOTION])
+        // tio 14Nov26: To Go Future Imperative/Volative SG1 override
+        VerbRegistry.registerOverride("e", "FUTURE_IMPERATIVE_VOLATIVE", "ᎡᎵᏊᏍ ᏱᎨᏅᏒᎢ")
         bridge("to speak", "woni", [VerbCategory.NORMAL])
         bridge("to greet", "yoli", [VerbCategory.NORMAL])
         bridge("to hear", "advgi", [VerbCategory.NORMAL])
@@ -77,6 +80,9 @@ class VerbRegistryInitializer {
             ["DL1EXCLSG3IN", "ᏙᏍᏗ"], ["DL1EXCLDL2", "ᏕᏍᏛ"],
             ["DL1EXCLPL2", "ᏕᏨ"], ["DL1EXCLPL3AN", "ᏙᏍᏗ"],
             ["PL1EXCLPL3AN", "ᏙᏥ"],
+            // (PL1INCL needs no override: the book's "them" row ᎨᏗᏍᎦᎶᎦ gedisgahlga
+            // matches the shared table's PL1INCLPL3AN cell, and its "those
+            // (things)" row ᏕᏗ is the table's PL1INCLPL3IN cell. -- tio 13Nov26)
             ["PL3SG1", "ᏕᎬᎩ"], ["PL3SG2", "ᏕᎨᏣ"], ["PL3SG3AN", "ᏓᏂ"],
             ["PL3DL1INCL", "ᏕᎨᎩᏂ"], ["PL3DL1EXCL", "ᏕᎪᎩᏂ"],
             ["PL3PL1INCL", "ᏕᎨᎩ"], ["PL3PL1EXCL", "ᏕᎪᎩ"],
@@ -128,6 +134,9 @@ class VerbRegistryInitializer {
         ["have", "be"].each { pending(it, VerbCategory.IRREGULAR) }
         // ("go" and "want" were double-seeded IRREGULAR here; "want" is bridged
         //  above, "go" is pending as MOTION from the motion list -- tio 12Nov26)
+
+        // tio 14Nov26: To Go Future Expected stem -es- (book p.37)
+        VerbRegistry.registerOverride("e", "FUTURE_EXPECTED", "es")
     }
 
     /** Seed under the English name, then re-key onto the verified root. -- tio 12Nov26 */

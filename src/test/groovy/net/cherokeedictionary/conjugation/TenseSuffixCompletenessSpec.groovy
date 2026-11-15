@@ -36,6 +36,8 @@ import spock.lang.Unroll
  *   REMOTE_PAST            -v'i               (Stem III)
  *   FUTURE_COMMAND         -v'i / -esdi       Future Imperative/Volative (Stem III + -v'i,
  *                                             usually identical to the Remote Past row)
+ *   FUTURE_IMPERATIVE_VOLATIVE -v'i / -esdi   the verb-book tense name for the same form
+ *                                             (spec harness passes it verbatim)
  *   COMPLETIVE_FUTURE      -i                 declarative Future (Stem III; "NB: the Future
  *                                             is usually Stem III", To Go)
  *   COMPLETED_FUTURE       -i                 (same printed form; see Tense comment)
@@ -67,6 +69,11 @@ class TenseSuffixCompletenessSpec extends Specification {
             (Tense.FUTURE_EXPECTED)        : [FutureExpected, ['i']],
             (Tense.INFINITIVE)             : [Infinitive, ['di']],
             (Tense.RECENT_PAST_IMPERATIVE) : [RecentPastImperative, ['i', 'a']],
+            // tio 13Nov26: FUTURE_IMPERATIVE_VOLATIVE is the verb-book tense name
+            // for the FUTURE_COMMAND form (specs pass it verbatim); listed last
+            // to match the enum's declaration order — the coverage assertion
+            // compares key order with Tense.values().
+            (Tense.FUTURE_IMPERATIVE_VOLATIVE) : [FutureImperativeVolative, ['vi']],
     ]
 
     /** Tenses backed by a dictionary-derived stem, -> the StemType that supplies it. */
@@ -83,6 +90,7 @@ class TenseSuffixCompletenessSpec extends Specification {
             (Tense.IMMEDIATE_PAST)         : StemType.Immediate,
             (Tense.RECENT_PAST_IMPERATIVE) : StemType.Immediate,
             (Tense.INFINITIVE)             : StemType.Deverbal,
+            (Tense.FUTURE_IMPERATIVE_VOLATIVE) : StemType.RemotePast,     // tio 13Nov26: verb-book tense name for the FUTURE_COMMAND form
     ]
 
     /** The tenses whose stem is derived, not read from the dictionary. */

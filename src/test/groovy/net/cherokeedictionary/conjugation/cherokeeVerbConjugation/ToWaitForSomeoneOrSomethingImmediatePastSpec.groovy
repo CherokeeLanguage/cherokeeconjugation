@@ -29,8 +29,8 @@ class ToWaitForSomeoneOrSomethingImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsigatida", syllabary: "ᏥᎦᏘᏓ", english: "I waited for it just now", occurrence: 1],
-            [pronoun: "", romanized: "agatida", syllabary: "ᎠᎦᏘᏓ", english: "He/she waited for it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsigatida", syllabary: "ᏥᎦᏘᏓ", english: "I waited for it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agatida", syllabary: "ᎠᎦᏘᏓ", english: "He/she waited for it just now", occurrence: 1],
     ]
 
     /**

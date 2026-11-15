@@ -29,10 +29,10 @@ class ToTeachSomeoneImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tiyeyohvga", syllabary: "ᏘᏰᏲᎲᎦ", english: "You (singular) teach it right now!", occurrence: 1],
-            [pronoun: "", romanized: "disdeyohvga", syllabary: "ᏗᏍᏕᏲᎲᎦ", english: "You (two) teach it right now!", occurrence: 1],
-            [pronoun: "", romanized: "ditseyohvga", syllabary: "ᏗᏤᏲᎲᎦ", english: "You (more than two) teach it right now!", occurrence: 1],
-            [pronoun: "", romanized: "widadeyohvga", syllabary: "ᏫᏗᎨᏲᎲᎦ", english: "Let him/her teach it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "tiyeyohvga", syllabary: "ᏘᏰᏲᎲᎦ", english: "You (singular) teach it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "disdeyohvga", syllabary: "ᏗᏍᏕᏲᎲᎦ", english: "You (two) teach it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ditseyohvga", syllabary: "ᏗᏤᏲᎲᎦ", english: "You (more than two) teach it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "widadeyohvga", syllabary: "ᏫᏗᎨᏲᎲᎦ", english: "Let him/her teach it right now!", occurrence: 1],
     ]
 
     /**

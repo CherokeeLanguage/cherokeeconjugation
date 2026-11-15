@@ -34,8 +34,8 @@ class ToWaitForSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsigatidisgo'i", syllabary: "ᏥᎦᏘᏗᏍᎪᎢ", english: "I wait for it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "agatidisgo'i", syllabary: "ᎠᎦᏘᏗᏍᎪᎢ", english: "He/she waits for it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsigatidisgo'i", syllabary: "ᏥᎦᏘᏗᏍᎪᎢ", english: "I wait for it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agatidisgo'i", syllabary: "ᎠᎦᏘᏗᏍᎪᎢ", english: "He/she waits for it (habitually)", occurrence: 1],
     ]
 
     /**

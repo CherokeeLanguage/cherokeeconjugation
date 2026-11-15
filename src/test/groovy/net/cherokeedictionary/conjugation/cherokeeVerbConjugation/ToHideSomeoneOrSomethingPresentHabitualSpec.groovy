@@ -29,8 +29,8 @@ class ToHideSomeoneOrSomethingPresentHabitualSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "gvsgahlvsgo'i", syllabary: "ᎬᏍᎦᏢᏍᎪᎢ", english: "I hide it (habitually)", occurrence: 1],
-            [pronoun: "", romanized: "gvsgahlvsgo'i", syllabary: "ᎬᏍᎦᏢᏍᎪᎢ", english: "He/she hides it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gvsgahlvsgo'i", syllabary: "ᎬᏍᎦᏢᏍᎪᎢ", english: "I hide it (habitually)", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "gvsgahlvsgo'i", syllabary: "ᎬᏍᎦᏢᏍᎪᎢ", english: "He/she hides it (habitually)", occurrence: 1],
     ]
 
     /**

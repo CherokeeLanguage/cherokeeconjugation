@@ -34,8 +34,8 @@ class ToLookForRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agiyolv'i", syllabary: "ᎠᎩᏲᎸᎢ", english: "I looked for it", occurrence: 1],
-            [pronoun: "", romanized: "uyolv'i", syllabary: "ᎤᏲᎸᎢ", english: "S/he looked for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agiyolv'i", syllabary: "ᎠᎩᏲᎸᎢ", english: "I looked for it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "uyolv'i", syllabary: "ᎤᏲᎸᎢ", english: "S/he looked for it", occurrence: 1],
     ]
 
     /**

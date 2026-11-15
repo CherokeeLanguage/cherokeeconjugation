@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -38,28 +39,31 @@ class ToGoPresentSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gega", syllabary: "ᎨᎦ", english: "I am going"],
-            [pronoun: "Second Singular", romanized: "hega", syllabary: "ᎮᎦ", english: "You are going"],
-            [pronoun: "Third Singular", romanized: "ega", syllabary: "ᎡᎦ", english: "He/she/it is going"],
-            [pronoun: "Second Dual", romanized: "sdega", syllabary: "ᏍᏕᎦ", english: "You (two) are going"],
-            [pronoun: "Second Plural", romanized: "itsega", syllabary: "ᎢᏤᎦ", english: "You (more than two) are going"],
-            [pronoun: "First Dual Inclusive", romanized: "inega", syllabary: "ᎢᏁᎦ", english: "We (you and I) are going"],
-            [pronoun: "First Dual Exclusive", romanized: "osdega", syllabary: "ᎣᏍᏕᎦ", english: "We (another and I) are going"],
-            [pronoun: "First Plural Exclusive", romanized: "otsega", syllabary: "ᎣᏤᎦ", english: "We (others and I) are going"],
-            [pronoun: "First Plural Inclusive", romanized: "idega", syllabary: "ᎢᏕᎦ", english: "We (you and I and another or others) are going"],
-            [pronoun: "Third Plural", romanized: "anega", syllabary: "ᎠᏁᎦ", english: "They are going"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gega", syllabary: "ᎨᎦ", english: "I am going"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hega", syllabary: "ᎮᎦ", english: "You are going"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "ega", syllabary: "ᎡᎦ", english: "He/she/it is going"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdega", syllabary: "ᏍᏕᎦ", english: "You (two) are going"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsega", syllabary: "ᎢᏤᎦ", english: "You (more than two) are going"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inega", syllabary: "ᎢᏁᎦ", english: "We (you and I) are going"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "osdega", syllabary: "ᎣᏍᏕᎦ", english: "We (another and I) are going"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsega", syllabary: "ᎣᏤᎦ", english: "We (others and I) are going"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idega", syllabary: "ᎢᏕᎦ", english: "We (you and I and another or others) are going"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "anega", syllabary: "ᎠᏁᎦ", english: "They are going"],
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * tio 14Nov26: harness check — the engine conjugates this same
+     * pronoun/tense/verb; the assertion below compares its output with
+     * the verb-book syllabary.
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "present tense form matches the verb book (#row.pronoun)"() {
@@ -69,6 +73,9 @@ class ToGoPresentSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

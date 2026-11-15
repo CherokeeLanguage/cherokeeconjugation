@@ -29,10 +29,10 @@ class ToTellSomethingToSomeoneImmediateImperativeVolativeSpec extends VerbBaseSp
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hinohisi", syllabary: "ᎯᏃᎯᏏ", english: "You (singular) tell it right now!", occurrence: 1],
-            [pronoun: "", romanized: "sdinohisi", syllabary: "ᏍᏗᏃᎯᏏ", english: "You (two) tell it right now!", occurrence: 1],
-            [pronoun: "", romanized: "etsinohisi", syllabary: "ᎡᏥᏃᎯᏏ", english: "You (more than two) tell it to him/her right now!", occurrence: 1],
-            [pronoun: "", romanized: "wikanohisi", syllabary: "ᏫᎧᏃᎯᏏ", english: "Let him/her tell it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hinohisi", syllabary: "ᎯᏃᎯᏏ", english: "You (singular) tell it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdinohisi", syllabary: "ᏍᏗᏃᎯᏏ", english: "You (two) tell it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsinohisi", syllabary: "ᎡᏥᏃᎯᏏ", english: "You (more than two) tell it to him/her right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wikanohisi", syllabary: "ᏫᎧᏃᎯᏏ", english: "Let him/her tell it right now!", occurrence: 1],
     ]
 
     /**

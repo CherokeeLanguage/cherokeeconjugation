@@ -29,10 +29,10 @@ class ToPointSomethingOutImmediateImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hiyasehisi", syllabary: "ᎯᏯᏎᎯᏏ", english: "You (singular) point it out to it right now!", occurrence: 1],
-            [pronoun: "", romanized: "esdasehisi", syllabary: "ᎡᏍᏓᏎᎯᏏ", english: "You two point it out to it right now!", occurrence: 1],
-            [pronoun: "", romanized: "etsasehisi", syllabary: "ᎡᏣᏎᎯᏏ", english: "You (more than two) point it out to it right now!", occurrence: 1],
-            [pronoun: "", romanized: "wasehisi", syllabary: "ᏩᏎᎯᏏ", english: "Let him/her point it out to it right now!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hiyasehisi", syllabary: "ᎯᏯᏎᎯᏏ", english: "You (singular) point it out to it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "esdasehisi", syllabary: "ᎡᏍᏓᏎᎯᏏ", english: "You two point it out to it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "etsasehisi", syllabary: "ᎡᏣᏎᎯᏏ", english: "You (more than two) point it out to it right now!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wasehisi", syllabary: "ᏩᏎᎯᏏ", english: "Let him/her point it out to it right now!", occurrence: 1],
     ]
 
     /**

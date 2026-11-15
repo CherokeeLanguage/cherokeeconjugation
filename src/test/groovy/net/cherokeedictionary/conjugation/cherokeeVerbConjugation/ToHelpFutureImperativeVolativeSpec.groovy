@@ -34,10 +34,10 @@ class ToHelpFutureImperativeVolativeSpec extends VerbBaseSpec {
 
     /** The four conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "hisdelvhv'i", syllabary: "ᎯᏍᏕᎸᎲᎢ", english: "You (singular) help it!", occurrence: 1],
-            [pronoun: "", romanized: "sdisdelvhv'i", syllabary: "ᏍᏗᏍᏕᎸᎲᎢ", english: "You (two) help it!", occurrence: 1],
-            [pronoun: "", romanized: "itsisdelvhv'i", syllabary: "ᎢᏥᏍᏕᎸᎲᎢ", english: "You (more than two) help it!", occurrence: 1],
-            [pronoun: "", romanized: "wasdelvhv'i", syllabary: "ᏩᏍᏕᎸᎲᎢ", english: "Let him/her help it!", occurrence: 1],
+            [object: 'SG3IN', pronoun: "", romanized: "hisdelvhv'i", syllabary: "ᎯᏍᏕᎸᎲᎢ", english: "You (singular) help it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "sdisdelvhv'i", syllabary: "ᏍᏗᏍᏕᎸᎲᎢ", english: "You (two) help it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "itsisdelvhv'i", syllabary: "ᎢᏥᏍᏕᎸᎲᎢ", english: "You (more than two) help it!", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "wasdelvhv'i", syllabary: "ᏩᏍᏕᎸᎲᎢ", english: "Let him/her help it!", occurrence: 1],
     ]
 
     /**

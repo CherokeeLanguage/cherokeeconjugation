@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -29,28 +30,31 @@ class ToGoInfinitiveSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "agwenvsdi", syllabary: "ᎠᏇᏅᏍᏗ", english: "For me to go"],
-            [pronoun: "Second Singular", romanized: "tsenvsdi", syllabary: "ᏤᏅᏍᏗ", english: "For you to go"],
-            [pronoun: "Third Singular", romanized: "uwenvsdi", syllabary: "ᎤᏪᏅᏍᏗ", english: "For him/her/it to go"],
-            [pronoun: "Second Dual", romanized: "sdenvsdi", syllabary: "ᏍᏕᏅᏍᏗ", english: "For you (two) to go"],
-            [pronoun: "Second Plural", romanized: "itsenvsdi", syllabary: "ᎢᏤᏅᏍᏗ", english: "For you (more than two) to go"],
-            [pronoun: "First Dual Inclusive", romanized: "ginenvsdi", syllabary: "ᎩᏁᏅᏍᏗ", english: "For us (you and I) to go"],
-            [pronoun: "First Dual Exclusive", romanized: "oginenvsdi", syllabary: "ᎣᎩᏁᏅᏍᏗ", english: "For us (another and I) to go"],
-            [pronoun: "First Plural Exclusive", romanized: "ogenvsdi", syllabary: "ᎣᎨᏅᏍᏗ", english: "For us (others and I) to go"],
-            [pronoun: "First Plural Inclusive", romanized: "igenvsdi", syllabary: "ᎢᎨᏅᏍᏗ", english: "For us (you and I and another or others) to go"],
-            [pronoun: "Third Plural", romanized: "unenvsdi", syllabary: "ᎤᏁᏅᏍᏗ", english: "For them to go"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "agwenvsdi", syllabary: "ᎠᏇᏅᏍᏗ", english: "For me to go"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "tsenvsdi", syllabary: "ᏤᏅᏍᏗ", english: "For you to go"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "uwenvsdi", syllabary: "ᎤᏪᏅᏍᏗ", english: "For him/her/it to go"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdenvsdi", syllabary: "ᏍᏕᏅᏍᏗ", english: "For you (two) to go"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsenvsdi", syllabary: "ᎢᏤᏅᏍᏗ", english: "For you (more than two) to go"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "ginenvsdi", syllabary: "ᎩᏁᏅᏍᏗ", english: "For us (you and I) to go"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "oginenvsdi", syllabary: "ᎣᎩᏁᏅᏍᏗ", english: "For us (another and I) to go"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "ogenvsdi", syllabary: "ᎣᎨᏅᏍᏗ", english: "For us (others and I) to go"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "igenvsdi", syllabary: "ᎢᎨᏅᏍᏗ", english: "For us (you and I and another or others) to go"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "unenvsdi", syllabary: "ᎤᏁᏅᏍᏗ", english: "For them to go"],
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * tio 14Nov26: harness check — the engine conjugates this same
+     * pronoun/tense/verb; the assertion below compares its output with
+     * the verb-book syllabary.
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "infinitive form matches the verb book (#row.pronoun)"() {
@@ -60,6 +64,9 @@ class ToGoInfinitiveSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english

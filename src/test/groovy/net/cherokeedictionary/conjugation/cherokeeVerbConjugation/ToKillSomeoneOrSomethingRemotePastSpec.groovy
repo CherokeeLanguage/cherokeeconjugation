@@ -34,8 +34,8 @@ class ToKillSomeoneOrSomethingRemotePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "tsilv'i", syllabary: "ᏥᎸᎢ", english: "I killed it", occurrence: 1],
-            [pronoun: "", romanized: "utlv'i", syllabary: "ᎤᏢᎢ", english: "He/she killed it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "tsilv'i", syllabary: "ᏥᎸᎢ", english: "I killed it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "utlv'i", syllabary: "ᎤᏢᎢ", english: "He/she killed it", occurrence: 1],
     ]
 
     /**

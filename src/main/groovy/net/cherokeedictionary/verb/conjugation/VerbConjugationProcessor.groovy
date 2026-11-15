@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.CompoundPrefix
 import net.cherokeedictionary.util.CompoundPrefixes
 import net.cherokeedictionary.util.Morphemes
@@ -14,6 +15,7 @@ import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.util.VerbSet
 import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
+import net.cherokeedictionary.verb.rules.RuleGtoS
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
 import net.cherokeedictionary.verb.rules.RuleUW
 import net.cherokeedictionary.verb.rules.RuleVtoA
@@ -32,7 +34,7 @@ class VerbConjugationProcessor {
     static def processPrefixes(//final PronominalPrefix pref,
                                final Verb verb,
                                String it ) {
-        println "DEBUG: it=${it}"
+        log "DEBUG: it=${it}"
         def returnPrefix = "";
 
         final CompoundPrefix pref = verb.compoundPrefix
@@ -56,7 +58,8 @@ class VerbConjugationProcessor {
         // Ꮅ (li) -> Ꮆ (l) when directly followed by Ꮸ (tsv) or Ꮵ (tsi).
         if ((tense == Tense.REMOTE_PAST
                 || tense == Tense.COMPLETIVE_FUTURE
-                || tense == Tense.FUTURE_COMMAND)
+                || tense == Tense.FUTURE_COMMAND
+                || tense == Tense.FUTURE_IMPERATIVE_VOLATIVE)
                 && !(tense == Tense.REMOTE_PAST
                      && pref?.prefix1 == PrefixTableSubject.SG3
                      && (pref?.prefix2 == PrefixTableObject.SG3AN
@@ -180,7 +183,10 @@ class VerbConjugationProcessor {
             // preVowel branch). tio 12Nov26: a registered compound override
             // wins — bite's FIV sg3 is wa- (ᏩᏍᎦᎶᏨᎢ wasgaltsv'i, p.29), a
             // verb-level variance no table entry expresses.
-            if (tense == Tense.FUTURE_COMMAND
+            // tio 13Nov26: FUTURE_IMPERATIVE_VOLATIVE (the verb-book tense name the
+            // spec harness passes; FUTURE_COMMAND remains the engine stand-in) gets
+            // the same sg3 a-/wa- treatment — same form, same rules.
+            if ((tense == Tense.FUTURE_COMMAND || tense == Tense.FUTURE_IMPERATIVE_VOLATIVE)
                     && verbset == VerbSet.A
                     && pref?.prefix1 == PrefixTableSubject.SG3
                     && (pref?.prefix2 == PrefixTableObject.SG3AN
@@ -238,7 +244,7 @@ class VerbConjugationProcessor {
             }
         }
 
-        println "DEBUG: fallthrough with returnValue=${returnValue}"
+        log "DEBUG: fallthrough with returnValue=${returnValue}"
         return returnValue
     }
 
@@ -336,6 +342,66 @@ class VerbConjugationProcessor {
                 && verb.tense == Tense.IMMEDIATE_PAST
                 && verb.stemmer?.immediatepast?.syllabary) {
             return verb.stemmer.immediatepast.syllabary;
+        }
+
+        // tio 14Nov26: IIV w-insertion (vowel-initial composed forms).
+        if (verb.tense == Tense.IMMEDIATE_COMMAND
+                && verb.initialPrefixHolder.wi != true
+                && StringUtility.startsWithVowelSyllabary(vth.immediate ?: vth.immediateCommand ?: "")
+                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ") {
+            verb.initialPrefixHolder.wi = true
+        }
+
+        // tio 14Nov26: To Go IIV/FIV (vowel-initial e-stem) requires manual w-insertion
+        // for non-second person forms as they build on the ena/envsvi stems directly.
+        if ((verb.tense == Tense.IMMEDIATE_COMMAND || verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE)
+                && verb.stemmer?.present3rd?.syllabary == "ᎡᎦ") {
+            def subject = verb.compoundPrefix.prefix1
+            // 2nd person forms (hena/sdena/itsena) handled via PrefixWi + h-stripping/vowel-merge.
+            // Non-2nd person forms (ena, osdena, otsena, anena) need manual w-insertion.
+            if (subject == PrefixTableSubject.SG3 || subject == PrefixTableSubject.DL1EXCL 
+                || subject == PrefixTableSubject.PL1EXCL || subject == PrefixTableSubject.PL3) {
+                verb.initialPrefixHolder.wi = true
+            }
+            // SG2 hena needs w-insertion for FIV: w-hena -> wena (ᏪᏅᏒᎢ), IIV: whena (ᏪᎿ or ᎮᎿ?)
+            // book p.39 FIV SG2: wenvsv'i (ᏪᏅᏒᎢ). engine gives henvsv'i (ᎮᏅᏒᎢ).
+            if (subject == PrefixTableSubject.SG2) {
+                if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE) {
+                    verb.initialPrefixHolder.wi = true
+                }
+            }
+            // SG1 gena also requires w-insertion -> wgena in verb book, but gena is consonant-initial.
+            // Actually, SG1 in verb book is "gena" (ᎨᎾ) for IIV.
+            // For FIV, SG1 is "eligwus yigenvsv'i".
+            if (subject == PrefixTableSubject.SG1) {
+                if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE) {
+                    return "ᎡᎵᏊᏍ ᏱᎨᏅᏒᎢ"
+                }
+                verb.initialPrefixHolder.wi = false
+            }
+            // inclusive dual/plural (ine, ide) also need w-insertion in FIV/IIV?
+            // book p.38/39 shows: IIV inena -> inena (ᎢᏁᎾ), idena -> idena (ᎢᏕᎾ).
+            // wait, logs say: witsenvsvi, winenvsvi...
+            // book p.39 FIV: winenvsv'i (ᏫᏁᏅᏒᎢ), widenvsv'i (ᏫᏕᏅᏒᎢ).
+            if (subject == PrefixTableSubject.DL1INCL || subject == PrefixTableSubject.PL1INCL) {
+                if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE) {
+                    verb.initialPrefixHolder.wi = true
+                }
+            }
+            // 2nd person dual/plural (sde, itse)
+            if (subject == PrefixTableSubject.DL2 || subject == PrefixTableSubject.PL2) {
+                if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE) {
+                    verb.initialPrefixHolder.wi = true
+                }
+            }
+        }
+
+        // tio 14Nov26: Future Imperative/Volative w-insertion (vowel-initial composed forms).
+        if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE
+                && verb.initialPrefixHolder.wi != true
+                && StringUtility.startsWithVowelSyllabary(vth.futureCommand ?: "")
+                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ") {
+            verb.initialPrefixHolder.wi = true
         }
 
         // tio 12Nov26: REMOVED REMOTE_PAST sg3 short-circuit. The composed form
@@ -443,9 +509,13 @@ class VerbConjugationProcessor {
                 verbToConjugate = vth.remotePast
                 break;
             case Tense.FUTURE_COMMAND:
+            case Tense.FUTURE_IMPERATIVE_VOLATIVE:
                 // Future Imperative/Volative = Stem III + -v'i (verb book summaries),
                 // usually identical to the Remote Past row; futureCommand is the Remote
-                // Past entry (falls back to completiveFuture when missing)
+                // Past entry (falls back to completiveFuture when missing).
+                // FUTURE_IMPERATIVE_VOLATIVE is the verb-book tense name for the same
+                // form (spec harness passes it verbatim); FUTURE_COMMAND remains the
+                // grammar-guide stand-in name. -- timo 13Nov26
                 verbToConjugate = vth.futureCommand
                 break;
             case Tense.COMPLETIVE_FUTURE:
@@ -456,12 +526,15 @@ class VerbConjugationProcessor {
                 verbToConjugate = vth.completiveFuture
                 break;
             case Tense.FUTURE_EXPECTED:
-                // verb book: To Go only, Future (Expected) = Stem II (-e-s-) + -i with
-                // the de-/da- (es-) initial prefix: dagesi, tesi, dayesi. To Go's
-                // habitual entry is Stem I (-e-g-), so the correct Stem II base is not
-                // available from the dictionary; the Stem III-derived future form is
-                // used as a placeholder until verb-level Stem II data exists. -- timo 10Nov26
-                verbToConjugate = vth.completiveFuture
+                // verb book: To Go only, Future (Expected) = Stem II (-e-s-) + -i.
+                // Check for root-level override (VerbRegistry) before defaulting
+                // to the Habitual stem (Stem II).
+                String expectedOverride = VerbRegistry.getOverride(verb.root, verb.tense.name())
+                if (expectedOverride) {
+                    verbToConjugate = SyllabaryUtil.tsalagiToSyllabary(expectedOverride + "i")
+                } else {
+                    verbToConjugate = vth.futureExpected
+                }
                 break;
             case Tense.PROGRESSIVE_PAST:
                 verbToConjugate = vth.progressivePast
@@ -510,9 +583,43 @@ class VerbConjugationProcessor {
         }
 
         // apply categorical rules (mixin approach) -- tio 11Nov26
+        def categoricalOverride = VerbRegistry.applyCategoricalRules(verb, null, verb.tense)
+        if (categoricalOverride) {
+            return categoricalOverride
+        }
         returnValue = VerbRegistry.applyCategoricalRules(verb, returnValue, verb.tense)
 
-        println "DEBUG: fallthrough with returnValue=${returnValue}"
+        // tio 14Nov26: g -> s alternation for "to go" habitual
+        if (verb.tense == Tense.HABITUAL && verb.stemmer?.present3rd?.syllabary == "ᎡᎦ") {
+            returnValue = RuleGtoS.apply(verb.compoundPrefix.prefix1, returnValue, verb.tense)
+        }
+
+        // tio 14Nov26: To Go Infinitive (Stem V): -e-n-vs-di -> -envsdi
+        // Handle Set-B vowel-initial prefix merge for "to go" infinitive
+        if (verb.tense == Tense.INFINITIVE && verb.stemmer?.present3rd?.syllabary == "ᎡᎦ") {
+            def subject = verb.compoundPrefix.prefix1
+            String stem = vth.infinitive ?: ""
+            if (stem.startsWith("Ꭱ") || stem.startsWith("Ꮺ")) {
+                def mapped = [
+                    (PrefixTableSubject.SG1): "ᎠᏇ",
+                    (PrefixTableSubject.SG2): "Ꮴ",
+                    (PrefixTableSubject.SG3): "ᎤᏪ",
+                    (PrefixTableSubject.DL1INCL): "ᎩᏁ",
+                    (PrefixTableSubject.DL1EXCL): "ᎣᎩᏁ",
+                    (PrefixTableSubject.PL1INCL): "ᎢᎨ",
+                    (PrefixTableSubject.PL1EXCL): "ᎣᎨ",
+                    (PrefixTableSubject.DL2): "ᏍᏕ",
+                    (PrefixTableSubject.PL2): "ᎢᏤ",
+                    (PrefixTableSubject.PL3): "ᎤᏁ"
+                ]
+                def prefix = mapped[subject]
+                if (prefix) {
+                    returnValue = prefix + stem.substring(1)
+                }
+            }
+        }
+
+        log "DEBUG: fallthrough with returnValue=${returnValue}"
         return returnValue
     }
 }

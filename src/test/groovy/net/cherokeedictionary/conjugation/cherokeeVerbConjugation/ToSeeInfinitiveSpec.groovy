@@ -29,8 +29,8 @@ class ToSeeInfinitiveSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "agigowtvhdi", syllabary: "ᎠᎩᎪᏩᏛᏗ", english: "(For) me to see it", occurrence: 1],
-            [pronoun: "", romanized: "ugowtvhdi", syllabary: "ᎤᎪᏩᏛᏗ", english: "(For) him/her to see it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "agigowtvhdi", syllabary: "ᎠᎩᎪᏩᏛᏗ", english: "(For) me to see it", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "ugowtvhdi", syllabary: "ᎤᎪᏩᏛᏗ", english: "(For) him/her to see it", occurrence: 1],
     ]
 
     /**

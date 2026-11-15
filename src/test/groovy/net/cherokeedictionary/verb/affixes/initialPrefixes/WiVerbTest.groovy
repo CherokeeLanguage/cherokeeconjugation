@@ -254,13 +254,11 @@ class WiVerbTest extends ConjugateBase {
         verb.tense = Tense.IMMEDIATE_COMMAND
         verb.stemmer = hiwoniha
         verb.initialPrefixHolder.with {wi = true}
-        verb.initialPrefixHolder.with {ji = true}
 
         verb = Conjugate.conjugate(verb)
 
         // 31b: wi- + hortative ji- pronominal (wi outermost).
-        assertTrue "expected ᏫᏥᏬᏂᎯ (wi- + ji- + wonihi), got: ${verb.wholeWord}",
-                "ᏫᏥᏬᏂᎯ" == verb.wholeWord
+        assertTrue "expected ᏫᏥᏬᏂᎯ (wi- + ji- + wonihi), got: ${verb.wholeWord}", "ᏫᏥᏬᏂᎯ" == verb.wholeWord
     }
 
     /**

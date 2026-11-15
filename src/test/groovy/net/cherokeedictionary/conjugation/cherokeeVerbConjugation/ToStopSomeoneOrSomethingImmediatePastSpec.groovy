@@ -29,8 +29,8 @@ class ToStopSomeoneOrSomethingImmediatePastSpec extends VerbBaseSpec {
 
     /** The two conjugated forms exactly as printed in the verb book (pronoun: the object-form group label, empty when the row is not grouped in print). */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "", romanized: "galehwisdoda", syllabary: "ᎦᎴᏫᏍᏙᏓ", english: "I stopped it just now", occurrence: 1],
-            [pronoun: "", romanized: "alehwisdoda", syllabary: "ᎠᎴᏫᏍᏙᏓ", english: "He/she stopped it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "galehwisdoda", syllabary: "ᎦᎴᏫᏍᏙᏓ", english: "I stopped it just now", occurrence: 1],
+            [object: 'PL3AN', pronoun: "", romanized: "alehwisdoda", syllabary: "ᎠᎴᏫᏍᏙᏓ", english: "He/she stopped it just now", occurrence: 1],
     ]
 
     /**

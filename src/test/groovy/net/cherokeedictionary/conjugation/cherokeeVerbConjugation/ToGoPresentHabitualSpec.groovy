@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -29,28 +30,31 @@ class ToGoPresentHabitualSpec extends VerbBaseSpec {
 
     /** The ten conjugated forms exactly as printed in the verb book. */
     static final List<Map> VERB_BOOK = [
-            [pronoun: "First Singular", romanized: "gego'i", syllabary: "ᎨᎪᎢ", english: "I go"],
-            [pronoun: "Second Singular", romanized: "hego'i", syllabary: "ᎮᎪᎢ", english: "You go"],
-            [pronoun: "Third Singular", romanized: "anego'i", syllabary: "ᎠᏁᎪᎢ", english: "He/she/it goes"],
-            [pronoun: "Second Dual", romanized: "sdego'i", syllabary: "ᏍᏕᏐᎢ", english: "You (two) go"],
-            [pronoun: "Second Plural", romanized: "itsego'i", syllabary: "ᎢᏤᏐᎢ", english: "You (more than two) go"],
-            [pronoun: "First Dual Inclusive", romanized: "inego'i", syllabary: "ᎢᏁᏐᎢ", english: "We (you and I) go"],
-            [pronoun: "First Dual Exclusive", romanized: "osdego'i", syllabary: "ᎣᏍᏕᏐᎢ", english: "We (another and I) go"],
-            [pronoun: "First Plural Exclusive", romanized: "otsego'i", syllabary: "ᎣᏤᏐᎢ", english: "We (others and I) go"],
-            [pronoun: "First Plural Inclusive", romanized: "idego'i", syllabary: "ᎢᏕᏐᎢ", english: "We (you and I and another or others) go"],
-            [pronoun: "Third Plural", romanized: "anego'i", syllabary: "ᎠᏁᏐᎢ", english: "They go"],
+            [object: 'SG3IN', pronoun: "First Singular", romanized: "gego'i", syllabary: "ᎨᎪᎢ", english: "I go"],
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "hego'i", syllabary: "ᎮᎪᎢ", english: "You go"],
+            [object: 'SG3IN', pronoun: "Third Singular", romanized: "anego'i", syllabary: "ᎠᏁᎪᎢ", english: "He/she/it goes"],
+            [object: 'PL3AN', pronoun: "Second Dual", romanized: "sdego'i", syllabary: "ᏍᏕᏐᎢ", english: "You (two) go"],
+            [object: 'PL3AN', pronoun: "Second Plural", romanized: "itsego'i", syllabary: "ᎢᏤᏐᎢ", english: "You (more than two) go"],
+            [object: 'PL3AN', pronoun: "First Dual Inclusive", romanized: "inego'i", syllabary: "ᎢᏁᏐᎢ", english: "We (you and I) go"],
+            [object: 'PL3AN', pronoun: "First Dual Exclusive", romanized: "osdego'i", syllabary: "ᎣᏍᏕᏐᎢ", english: "We (another and I) go"],
+            [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "otsego'i", syllabary: "ᎣᏤᏐᎢ", english: "We (others and I) go"],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idego'i", syllabary: "ᎢᏕᏐᎢ", english: "We (you and I and another or others) go"],
+            [object: 'PL3AN', pronoun: "Third Plural", romanized: "anego'i", syllabary: "ᎠᏁᏐᎢ", english: "They go"],
     ]
 
     /**
-     * Hook for the conjugation-engine comparison (to be wired in later).
-     * Today it echoes the verb-book form; replace the body with a call into
-     * the conjugation engine when the engine-vs-verb-book refinement begins.
+     * tio 14Nov26: harness check — the engine conjugates this same
+     * pronoun/tense/verb; the assertion below compares its output with
+     * the verb-book syllabary.
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "present habitual form matches the verb book (#row.pronoun)"() {
@@ -60,6 +64,9 @@ class ToGoPresentHabitualSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
 
         and: "the English translation is preserved for later deconstruction"
         row.english
