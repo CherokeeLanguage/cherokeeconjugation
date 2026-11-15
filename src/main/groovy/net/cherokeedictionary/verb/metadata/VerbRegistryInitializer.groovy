@@ -25,7 +25,8 @@ package net.cherokeedictionary.verb.metadata
  */
 class VerbRegistryInitializer {
     static void init() {
-        // --- Bridged verbs: root verified from the engine -- tio 12Nov26 ---
+        println "DEBUG: VerbRegistryInitializer init()"
+        VerbRegistry.clearOverrides() // Reset on init to avoid stale registrations
         bridge("to see", "gowati", [VerbCategory.NORMAL])
         bridge("to go", "e", [VerbCategory.MOTION])
         // tio 14Nov26: To Go Future Imperative/Volative SG1 override
@@ -143,8 +144,20 @@ class VerbRegistryInitializer {
         // tio 15Nov26: To Hear IMMEDIATE imperative/volative sg3 row takes wa-
         // (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ watvgvga), while
         // its FUTURE imperative/volative sg3 row takes a- (ᎠᏛᎦᏅᎢ atvganv'i).
-        // Keyed on the present3rd citation shape ᎠᏛᎩᎠ, contained-in matched.
-        VerbRegistry.registerIivSg3W("ᎠᏛᎩ")
+        // tio 15Nov26: To Be Somewhere IMMEDIATE imperative/volative (book p.21).
+        // The table prints verb-specific positional allomorphs for the stems:
+        // SG1 geda, SG2 heda, SG3 weda (ᏪᏓ).
+        // These are registered against the PRESENT stem "edoha" for lookup.
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "SG1", "ᎨᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "SG2", "ᎮᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "SG3", "ᏪᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "DL2", "ᏍᏕᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "PL2", "ᎢᏤᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "DL1INCL", "ᎢᏁᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "DL1EXCL", "ᏬᏍᏕᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "PL1EXCL", "ᏬᏤᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "PL1INCL", "ᎢᏕᏓ")
+        VerbRegistry.registerSubjectSurface("edoha", "IMMEDIATE_COMMAND", "PL3", "ᏩᏁᏓ")
 
         // tio 15Nov26: To Hear PRESENT compound-prefix overrides (book p.64).
         // The a-branch normalization bakes the sg3 Ꭰ- into the routed present

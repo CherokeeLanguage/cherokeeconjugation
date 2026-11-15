@@ -603,6 +603,7 @@ class VerbConjugationProcessor {
                 verb.tense.name(),
                 verb.compoundPrefix?.prefix1?.name())
         if (subjectSurface) {
+            log "DEBUG: subject surface found: ${subjectSurface}"
             // The registered surface is book-final (it already carries da-
             // where the book prints it). The da- initial-prefix flag set above
             // must be cleared, or PrefixProcessor glues a second Ꮣ onto the
@@ -612,6 +613,7 @@ class VerbConjugationProcessor {
             }
             return subjectSurface
         }
+        log "DEBUG: no subject surface found for present3rd=${verb.stemmer?.present3rd?.syllabary} tense=${verb.tense.name()} subj=${verb.compoundPrefix?.prefix1?.name()} keys=${VerbRegistry.getSubjectSurfacesDebug()}"
 
         // proceed with standard logic
         String verbToConjugate = ""

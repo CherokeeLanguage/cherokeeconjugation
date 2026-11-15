@@ -11,7 +11,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "edohoi", imperative: "geda", infinitive: "uwedasdi", present: "edoha", remote_past: "edohvi"],
+                [subject: "SG3", habitual: "edohoi", imperative: "geda", infinitive: "uwedasdi", present: "edoha", remote_past: "edohvi", immediate_imperative: "geda", immediate_past: "edoha"],
                 [subject: "SG1", present: "gedoha"],
             ],
         ],
