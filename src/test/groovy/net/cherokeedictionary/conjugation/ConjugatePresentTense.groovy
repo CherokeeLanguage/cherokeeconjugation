@@ -64,11 +64,23 @@ class ConjugatePresentTense extends ConjugateBase {
 
         assertTrue "", "ᏥᏯᏛᎩᎠ" == conjStr("SG1", "SG3AN", tohear, verbTense, partofspeechc)//jiyadvgia
         assertTrue "", "ᎯᏯᏛᎩᎠ" == conjStr("SG2", "SG3AN", tohear, verbTense, partofspeechc)//hiyadvgia
-        assertTrue "", "ᎠᏛᎩᎠ" == conjStr("SG3", "SG3AN", tohear, verbTense, partofspeechc)//advgia
+        // timo 15Nov26: book-correct update (vetoable). Verb book p.64 prints
+        // "S/he hears him/her" ᎠᎦᏛᎩᎠ agatvgi'a — the sg3 subject Ꭰ- plus the
+        // table's Ꭶ- compound — distinct from the sg3IN citation ᎠᏛᎩᎠ ("S/he
+        // hears it"). To Hear composes the transitive sg3 row (unlike see/bite/
+        // greet/kill, whose single citation covers both readings —
+        // VerbRegistry.unifiedSg3PresentStems). Old expectation ᎠᏛᎩᎠ was the
+        // bare sg3IN citation.
+        assertTrue "", "ᎠᎦᏛᎩᎠ" == conjStr("SG3", "SG3AN", tohear, verbTense, partofspeechc)//agatvgia, book p.64
         assertTrue "", "ᎡᎾᏛᎩᎠ" == conjStr("DL1INCL", "SG3AN", tohear, verbTense, partofspeechc)//enadvgia
         assertTrue "", "ᎣᏍᏓᏛᎩᎠ" == conjStr("DL1EXCL", "SG3AN", tohear, verbTense, partofspeechc)//osdadvgia
         assertTrue "", "ᎡᏍᏓᏛᎩᎠ" == conjStr("DL2", "SG3AN", tohear, verbTense, partofspeechc)//esdadvgia
-        assertTrue "", "ᎡᏓᏛᎩᎠ" == conjStr("PL1INCL", "SG3AN", tohear, verbTense, partofspeechc)//edadvgia
+        // timo 15Nov26: book-correct update (vetoable). Verb book p.64 prints
+        // "We (you and I and another or others) hear him/her" ᎣᏣᏛᎩᎠ
+        // otsatvgi'a — o- + ts- plural-object marking. Old expectation ᎡᏓᏛᎩᎠ
+        // edadvgia was the shared-table composition (ᎡᏗ-), which no book row
+        // prints for this verb.
+        assertTrue "", "ᎣᏣᏛᎩᎠ" == conjStr("PL1INCL", "SG3AN", tohear, verbTense, partofspeechc)//otsatvgia, book p.64
         assertTrue "", "ᎣᏣᏛᎩᎠ" == conjStr("PL1EXCL", "SG3AN", tohear, verbTense, partofspeechc)//ojadvgia
         assertTrue "", "ᎡᏣᏛᎩᎠ" == conjStr("PL2", "SG3AN", tohear, verbTense, partofspeechc)//ejadvgia
         assertTrue "", "ᎠᎾᏛᎩᎠ" == conjStr("PL3", "SG3AN", tohear, verbTense, partofspeechc)//anadvgia

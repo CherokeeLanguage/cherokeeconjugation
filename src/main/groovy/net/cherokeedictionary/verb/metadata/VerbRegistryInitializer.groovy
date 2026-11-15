@@ -120,12 +120,73 @@ class VerbRegistryInitializer {
         // present3rd citation row ᎠᎪᏩᏘᎭ. See VerbRegistry.iivSg3WStems for
         // the wi-/wa- lexeme variance vs To Fall.
         VerbRegistry.registerIivSg3W("ᎪᏩᏘ")
+        // tio 15Nov26: see and bite print ONE sg3 present row covering both
+        // object readings (see ᎠᎪᏩᏘᎭ, bite ᎠᏍᎦᎶᎦ) — the PRESENT sg3AN
+        // short-circuit returns the citation for them. To Hear composes ga-
+        // instead (ᎠᎦᏛᎩᎠ) and is deliberately NOT registered.
+        VerbRegistry.registerUnifiedSg3PresentRow("ᎪᏩᏘ")
+        VerbRegistry.registerUnifiedSg3PresentRow(BITE_STEM)
+        // tio 15Nov26: greet and kill likewise print ONE sg3 present row —
+        // their sg3 citations ᎠᏲᎵᎭ / ᎠᎯᎭ ARE the sg3AN rows (ConjugatePresent-
+        // Tense legacy assertions, "finished and good"); their vowel-initial
+        // stems route the preVowel branch where the new non-unified composition
+        // must not fire for them.
+        VerbRegistry.registerUnifiedSg3PresentRow("ᎠᏲᎵᎭ")
+        VerbRegistry.registerUnifiedSg3PresentRow("ᎠᎯᎭ")
 
         // tio 15Nov26: To See declarative Future (book p.119) — the two rows
         // are lexeme-specific surfaces (see VerbRegistry.subjectSurfaceOverrides).
         // SG1 "I will see it" ᏓᏥᎪᎢ datsigo'i; SG3 "He/she will see it" ᏛᎪᎯ dvgohi.
         VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG1", "ᏓᏥᎪᎢ")
         VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG3", "ᏛᎪᎯ")
+
+        // tio 15Nov26: To Hear IMMEDIATE imperative/volative sg3 row takes wa-
+        // (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ watvgvga), while
+        // its FUTURE imperative/volative sg3 row takes a- (ᎠᏛᎦᏅᎢ atvganv'i).
+        // Keyed on the present3rd citation shape ᎠᏛᎩᎠ, contained-in matched.
+        VerbRegistry.registerIivSg3W("ᎠᏛᎩ")
+
+        // tio 15Nov26: To Hear PRESENT compound-prefix overrides (book p.64).
+        // The a-branch normalization bakes the sg3 Ꭰ- into the routed present
+        // stem ᎠᏛᎩᎠ, so these cells compose on the preVowel branch — the
+        // override values use the preVowel encoding (syllabary head + single
+        // Latin fusion letter) and Morphemes.fixPrefix consumes the stem's
+        // leading Ꭰ while fusing: n+Ꭰ→Ꮎ, y+Ꭰ→Ꮿ, j+Ꭰ→Ꮳ.
+        //   DL2+DL1EXCL "You (two) hear someone else and me" ᏕᏍᎩᎾᏛᎩᎠ
+        //     desginatvgi'a — de- plural-object marking on the ᏍᎩ- cell
+        //   DL2+PL1EXCL "You (two) hear others and me" ᏕᏍᎩᏯᏛᎩᎠ desgiyatvgi'a
+        //   PL2+DL1EXCL "You (more than two) hear someone else and me"
+        //     ᏕᏍᎩᎾᏛᎩᎠ desginatvgi'a (same cell shape as DL2+DL1EXCL)
+        //   DL1EXCL+DL2 "We (another and I) hear you (two)" ᏍᏛᏯᏛᎩᎠ
+        //     sdvyatvgi'a — the s- portmanteau before a 2nd-person object
+        //   DL1EXCL+PL3IN "We (another and I) hear those (things)" ᏙᏣᏛᎩᎠ
+        //     dotsatvgi'a — do- + ts- plural object
+        //   PL1INCL+SG3AN "We (you and I and another or others) hear him/her"
+        //     ᎣᏣᏛᎩᎠ otsatvgi'a
+        //   PL1INCL+SG3IN "We (you and I and another or others) hear it"
+        //     ᎣᏣᏛᎩᎠ otsatvgi'a (book prints the same cell for both readings)
+        //   PL3+SG2 "They hear you (singular)" ᎨᏣᏛᎩᎠ getsatvgi'a
+        // All keyed on the routed present stem ᎠᏛᎩᎠ so other verbs' cells
+        // and hear's other tenses are untouched.
+        def HEAR_PRESENT_STEM = "ᎠᏛᎩᎠ"
+        VerbRegistry.registerCompoundOverride("DL2DL1EXCL", HEAR_PRESENT_STEM, "ᏕᏍᎩn")
+        VerbRegistry.registerCompoundOverride("DL2PL1EXCL", HEAR_PRESENT_STEM, "ᏕᏍᎩy")
+        VerbRegistry.registerCompoundOverride("PL2DL1EXCL", HEAR_PRESENT_STEM, "ᏕᏍᎩn")
+        VerbRegistry.registerCompoundOverride("DL1EXCLDL2", HEAR_PRESENT_STEM, "ᏍᏛy")
+        VerbRegistry.registerCompoundOverride("DL1EXCLPL3IN", HEAR_PRESENT_STEM, "Ꮩj")
+        VerbRegistry.registerCompoundOverride("PL1INCLSG3AN", HEAR_PRESENT_STEM, "Ꭳj")
+        VerbRegistry.registerCompoundOverride("PL1INCLSG3IN", HEAR_PRESENT_STEM, "Ꭳj")
+        VerbRegistry.registerCompoundOverride("PL3SG2", HEAR_PRESENT_STEM, "Ꭸj")
+
+        // tio 15Nov26: To Hear INFINITIVE SG1 "For me to hear it" ᎠᏆᏛᎪᏗ
+        // agwatvgodi (book p.64) — Set B sg1 takes the w-form agw- before the
+        // tv- initial stem (P7: "before v/h-initial stems Feeling prints the
+        // w-forms"). The shared SG1SG3INB cell only carries the plain ᎠᎩ-
+        // preConsonant, and the routed infinitive stem ᏛᎪᏗ is consonant-
+        // initial so the preVowel Ꭰgw- twin never applies. Keyed on the routed
+        // infinitive stem (ᏛᎪᏗ occurs only in the infinitive; the remote past
+        // composes its agw- correctly through RuleUW on its own stem).
+        VerbRegistry.registerCompoundOverride("SG1SG3INB", "ᏛᎪᏗ", "ᎠᏆ")
 
         // --- Categorization based on verb taxonomy audit -- tio 11Nov26 ---
         // pending: root not yet captured from the engine -- tio 12Nov26

@@ -101,10 +101,17 @@ class VerbBookFixtures {
             ],
         ],
         "to hear": [
+            // tio 15Nov26: citations corrected to the book's THIRD SINGULAR forms
+            // (the old "gatvgisgoi"/"agwatvganvi" were the SG1 rows — the sg3
+            // habitual short-circuit prints the citation verbatim, so an sg1-
+            // baked citation produced ᎦᏛᎩᏍᎪᎢ for "S/he hears it (habitually)",
+            // and the sg1 agw- baked into the remote past doubled into
+            // ᎠᏆᏆᏛᎦᏅᎢ when the engine composed the sg1 agw- again). Immediate
+            // past ᎠᏛᎬᎦ atvgvga added (book p.64 "S/he heard it, just now").
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "gatvgisgoi", imperative: "hatvgvga", infinitive: "utvgodi", present: "atvgia", remote_past: "agwatvganvi"],
+                [subject: "SG3", habitual: "atvgisgoi", imperative: "hatvgvga", infinitive: "utvgodi", present: "atvgia", remote_past: "utvganvi", immediate_past: "atvgvga"],
                 [subject: "SG1", present: "gatvgia"],
             ],
         ],

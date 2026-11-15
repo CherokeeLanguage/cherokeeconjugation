@@ -239,6 +239,46 @@ class VerbRegistry {
         }?.value
     }
 
+    // tio 15Nov26: verbs whose book prints ONE sg3 PRESENT row covering both
+    // object readings (To See p.118 "He/she sees him/her" AND "He/she sees it"
+    // are both ᎠᎪᏩᏘᎭ; To Bite "S/he is biting him/her"/"it" both ᎠᏍᎦᎶᎦ). For
+    // these the present3rd citation IS the sg3AN row too, so the PRESENT sg3
+    // short-circuit returns it for SG3SG3AN. Verbs NOT registered here (To
+    // Hear p.64: "S/he hears him/her" ᎠᎦᏛᎩᎠ vs "it" ᎠᏛᎩᎠ) compose the ga-
+    // compound instead — keyed on the present3rd stem, contained-in matched.
+    private static final Set<String> unifiedSg3PresentStems = []
+
+    /** Registers a verb whose single sg3 present row covers both object readings. -- tio 15Nov26 */
+    static void registerUnifiedSg3PresentRow(String present3rd) {
+        if (present3rd) unifiedSg3PresentStems.add(present3rd)
+    }
+
+    /** True when the sg3 present citation covers the SG3AN object reading too. -- tio 15Nov26 */
+    static boolean hasUnifiedSg3PresentRow(String present3rd) {
+        if (!present3rd) return false
+        return unifiedSg3PresentStems.find { present3rd.contains(it) } != null
+    }
+
+    // tio 15Nov26: the generic IIV/FIV w-insertion triggers (vowel-initial
+    // composed imperative forms) are lexeme-gated. The a-branch normalization
+    // bakes a leading Ꭰ into hear-like stems, and the triggers then fired for
+    // EVERY such row, mangling the book's h-/w- cells (To Hear IIV sg2
+    // ᎭᏛᎬᎦ came out ᏩᏛᎬᎦ). Empirically no wired verb needs them (fall, bite,
+    // see, go, somewhere, hear all compose correctly without), so the registry
+    // is empty and both triggers stay inert until a future verb registers.
+    private static final Set<String> wiInsertionStems = []
+
+    /** Registers a verb whose composed vowel-initial imperative rows take wi-. -- tio 15Nov26 */
+    static void registerWiInsertionTrigger(String present3rd) {
+        if (present3rd) wiInsertionStems.add(present3rd)
+    }
+
+    /** True when this verb's composed imperative forms take the wi- initial prefix. -- tio 15Nov26 */
+    static boolean hasWiInsertionTrigger(String present3rd) {
+        if (!present3rd) return false
+        return wiInsertionStems.find { present3rd.contains(it) } != null
+    }
+
     // Iterates through categories and applies rules
     static String applyCategoricalRules(Verb verb, String conjugation, Tense tense) {
         if (verb == null) {

@@ -25,7 +25,8 @@ import net.cherokeedictionary.verb.rules.RuleVtoA
  */
 class VerbConjugationProcessor {
     static void log(prints) {
-        boolean isDebug = false;
+        // tio 15Nov26: TEMP debug (ToHear wiring) — revert to false after use.
+        boolean isDebug = Boolean.getBoolean("cherokee.conj.debug");
         if (isDebug) {
             println prints
         }
@@ -102,6 +103,21 @@ class VerbConjugationProcessor {
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
 
+            // tio 15Nov26: per-verb compound-prefix override also applies on the
+            // preVowel branch (vowel-initial routed stems — the a-branch
+            // normalization bakes the sg3 Ꭰ- into the stem, so hear-like verbs
+            // route here). The override value uses the same preVowel encoding
+            // (syllabary head + single Latin fusion letter) so fixPrefix below
+            // fuses it with the stem's leading vowel: To Hear p.64
+            // DL2+DL1EXCL ᏕᏍᎩᎾᏛᎩᎠ ("ᏕᏍᎩn"), DL1EXCL+DL2 ᏍᏛᏯᏛᎩᎠ ("ᏍᏛy"),
+            // PL1INCL ᎣᏣᏛᎩᎠ ("Ꭳj" — J-map gives Ꮳ), PL3+SG2 ᎨᏣᏛᎩᎠ ("Ꭸj").
+            // Consonant-branch overrides (bite p.29) stay full-syllabary forms
+            // because their stems carry no leading vowel to fuse.
+            def compoundOverrideVowel = VerbRegistry.getCompoundOverride(verbPrefix, it)
+            if (compoundOverrideVowel != null) {
+                tmpReturnPrefix = compoundOverrideVowel
+            }
+
             if (tmpReturnPrefix) {
                 //timo 10Nov26: Grammar guide (Feeling 1975): -y- is inserted only
                 //between the prefix and a stem-initial vowel — "the insertion of -y-
@@ -141,6 +157,44 @@ class VerbConjugationProcessor {
             // uw+a -> u contraction above must not fire for them.
             if (stemWasVtoA) {
                 returnValue = null
+            }
+
+            // tio 15Nov26: non-unified SG3SG3AN PRESENT composition for
+            // vowel-initial routed stems. Verbs whose a-branch normalization
+            // bakes the sg3 Ꭰ- into the stem (To Hear atvgi'a) never reach the
+            // preConsonant branch where the unified-row short-circuit and its
+            // siblings live, so the book's composed sg3AN row — subject Ꭰ-
+            // marker + the table's Ꭶ- compound + the stem body (book p.64
+            // "S/he hears him/her" ᎠᎦᏛᎩᎠ = Ꭰ + Ꭶ + ᏛᎩᎠ vs the sg3IN citation
+            // ᎠᏛᎩᎠ) — must be composed here. Registered unified verbs (see,
+            // bite) return the citation upstream and never get here.
+            if (verb.tense == Tense.PRESENT
+                    && pref?.prefix1 == PrefixTableSubject.SG3
+                    && pref?.prefix2 == PrefixTableObject.SG3AN
+                    && !verb.reflexiveHolderObject.isReflexive()
+                    && verb.stemmer?.present3rd?.syllabary
+                    && !VerbRegistry.hasUnifiedSg3PresentRow(verb.stemmer.present3rd.syllabary)
+                    && it?.startsWith("Ꭰ")) {
+                def sg3anEntry = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+                if (sg3anEntry?.preConsonant) {
+                    returnValue = it[0] + sg3anEntry.preConsonant + it.substring(1)
+                }
+            }
+
+            // tio 15Nov26: IMMEDIATE imperative/volative sg3 wa- twin for
+            // vowel-initial routed stems (preConsonant-branch sibling above).
+            // To Hear's normalized imperative stem is vowel-initial (the
+            // a-branch's newPrefix eats the citation's h-), and its sg3 row
+            // takes wa- (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ
+            // watvgvga): the stem's leading sg3 Ꭰ is replaced by Ꮹ.
+            if (tense == Tense.IMMEDIATE_COMMAND
+                    && verbset == VerbSet.A
+                    && pref?.prefix1 == PrefixTableSubject.SG3
+                    && (pref?.prefix2 == PrefixTableObject.SG3AN
+                        || pref?.prefix2 == PrefixTableObject.SG3IN)
+                    && VerbRegistry.hasIivSg3W(verb.stemmer?.present3rd?.syllabary)
+                    && it?.startsWith("Ꭰ")) {
+                returnValue = 'Ꮹ' + it.substring(1)
             }
 
             if (!returnValue) {
@@ -305,13 +359,23 @@ class VerbConjugationProcessor {
         // "He/she sees it" are both agowtiha), so for both compound prefixes the
         // printed present3rd IS the form. The old transitive SG3SG3IN path composed
         // the table's generic Ꭶ- allomorph, producing ga- for A-class verbs.
-        // Non-reflexive only, and skipped when the verb has no present stem
-        // (empty stemmer entry) so composition still applies elsewhere.
-        if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
-                || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
+        // tio 15Nov26: the unified-row return is now registry-gated for the SG3AN
+        // reading (VerbRegistry.unifiedSg3PresentStems — see and bite); To Hear
+        // composes the sg3AN row instead (book ᎠᎦᏛᎩᎠ = a + ga + tvgi'a where the
+        // citation ᎠᏛᎩᎠ is the sg3IN-only form). Non-reflexive only, and skipped
+        // when the verb has no present stem (empty stemmer entry) so composition
+        // still applies elsewhere.
+        if (verb.compoundPrefix == CompoundPrefixes.SG3SG3IN
                 && !verb.reflexiveHolderObject.isReflexive()
                 && verb.tense == Tense.PRESENT
                 && verb.stemmer?.present3rd?.syllabary) {
+            return verb.stemmer.present3rd.syllabary;
+        }
+        if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
+                && !verb.reflexiveHolderObject.isReflexive()
+                && verb.tense == Tense.PRESENT
+                && verb.stemmer?.present3rd?.syllabary
+                && VerbRegistry.hasUnifiedSg3PresentRow(verb.stemmer.present3rd.syllabary)) {
             return verb.stemmer.present3rd.syllabary;
         }
 
@@ -365,10 +429,16 @@ class VerbConjugationProcessor {
         }
 
         // tio 14Nov26: IIV w-insertion (vowel-initial composed forms).
+        // tio 15Nov26: lexeme-gated (VerbRegistry.wiInsertionStems). The
+        // a-branch normalization bakes a leading Ꭰ into hear-like stems, and
+        // the global rule fired for every such row — PrefixWi then mangled the
+        // book's h-/w- cells (IIV sg2 ᎭᏛᎬᎦ became ᏩᏛᎬᎦ). No wired verb needs
+        // the trigger; it stays available for future verbs via registration.
         if (verb.tense == Tense.IMMEDIATE_COMMAND
                 && verb.initialPrefixHolder.wi != true
                 && StringUtility.startsWithVowelSyllabary(vth.immediate ?: vth.immediateCommand ?: "")
-                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ") {
+                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ"
+                && VerbRegistry.hasWiInsertionTrigger(verb.stemmer?.present3rd?.syllabary)) {
             verb.initialPrefixHolder.wi = true
         }
 
@@ -417,10 +487,15 @@ class VerbConjugationProcessor {
         }
 
         // tio 14Nov26: Future Imperative/Volative w-insertion (vowel-initial composed forms).
+        // tio 15Nov26: lexeme-gated, same rationale as the IIV trigger above —
+        // the hear futureCommand is vowel-initial after a-branch normalization,
+        // and the global rule mangled the book's h-/w- cells. No wired verb
+        // needs it; available for future verbs via registration.
         if (verb.tense == Tense.FUTURE_IMPERATIVE_VOLATIVE
                 && verb.initialPrefixHolder.wi != true
                 && StringUtility.startsWithVowelSyllabary(vth.futureCommand ?: "")
-                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ") {
+                && verb.stemmer?.present3rd?.syllabary != "ᎡᎦ"
+                && VerbRegistry.hasWiInsertionTrigger(verb.stemmer?.present3rd?.syllabary)) {
             verb.initialPrefixHolder.wi = true
         }
 
