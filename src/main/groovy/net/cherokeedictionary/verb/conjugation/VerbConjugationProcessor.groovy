@@ -181,23 +181,29 @@ class VerbConjugationProcessor {
             // short-circuited from raw present3rd upstream, and vowel-initial
             // stems already surface a- via the stem's own leading vowel (empty
             // preVowel branch). tio 12Nov26: a registered compound override
-            // wins — bite's FIV sg3 is wa- (ᏩᏍᎦᎶᏨᎢ wasgaltsv'i, p.29), a
-            // verb-level variance no table entry expresses.
-            // tio 13Nov26: FUTURE_IMPERATIVE_VOLATIVE (the verb-book tense name the
+            // wins — some verbs print wa- here instead (see below). tio 13Nov26:
+            // FUTURE_IMPERATIVE_VOLATIVE (the verb-book tense name the
             // spec harness passes; FUTURE_COMMAND remains the engine stand-in) gets
             // the same sg3 a-/wa- treatment — same form, same rules.
+            // tio 15Nov26: wa- is a verb-level registry flag keyed on
+            // present3rd (VerbRegistry.hasFivSg3W, e.g. bite ᏩᏍᎦᎶᏨᎢ
+            // wasgaltsv'i, p.29) — a lexeme-level variance no table entry
+            // expresses, and no longer dependent on a post-syncope stem key.
             if ((tense == Tense.FUTURE_COMMAND || tense == Tense.FUTURE_IMPERATIVE_VOLATIVE)
                     && verbset == VerbSet.A
                     && pref?.prefix1 == PrefixTableSubject.SG3
                     && (pref?.prefix2 == PrefixTableObject.SG3AN
-                        || pref?.prefix2 == PrefixTableObject.SG3IN)
-                    && compoundOverride == null
+                        || pref?.prefix2 == PrefixTableObject.SG3IN)) {
+                if (VerbRegistry.hasFivSg3W(verb.stemmer?.present3rd?.syllabary)) {
+                    returnPrefix = 'Ꮹ'
+                } else if (compoundOverride == null
                     // tio 12Nov26: scoped to A-allomorph verbs — To Fall
                     // (G-allomorph, present3rd ᎦᏅᎦ) composes its FIV sg3
                     // from the table's G-allomorph ga- (ᎦᏅᏨᎢ ganvtsv'i,
                     // p.32), not a-; only A-allomorph verbs print Ꭰ here.
                     && verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A) {
-                returnPrefix = 'Ꭰ'
+                    returnPrefix = 'Ꭰ'
+                }
             }
 
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].

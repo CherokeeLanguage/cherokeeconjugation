@@ -160,6 +160,31 @@ class VerbRegistry {
         return stemIIISyncopeStems.find { stem.startsWith(it) } != null
     }
 
+    // tio 15Nov26: verbs whose FUTURE_IMPERATIVE_VOLATIVE sg3 "let him/her" row
+    // takes wa- instead of the default a-. Lexeme-level allomorphy: the guide's
+    // w- section mandates w- for non-second-person "let" forms, but the book is
+    // inconsistent — To See FIV sg3 prints a- (ᎠᎪᎲᎢ agohv'i, p.119) while To
+    // Bite prints wa- (ᏩᏍᎦᎶᏨᎢ wasgaltsv'i, p.29). Keyed on the bare present
+    // stem (e.g. To Bite ᏍᎦᎶᎦ, matched as a suffix of the present3rd citation
+    // row ᎠᏍᎦᎶᎦ — see hasFivSg3W) so the flag survives Stem III surface
+    // changes (syncope runs before this lookup — see processPrefixes) and
+    // covers both SG3AN and SG3IN objects with one registration.
+    private static final Set<String> fivSg3WStems = []
+
+    /** Registers a verb (by present3rd stem) whose FIV sg3 row prints wa-. -- tio 15Nov26 */
+    static void registerFivSg3W(String present3rd) {
+        if (present3rd) fivSg3WStems.add(present3rd)
+    }
+
+    /** True when this verb's FUTURE_IMPERATIVE_VOLATIVE sg3 row prints wa-. -- tio 15Nov26 */
+    static boolean hasFivSg3W(String present3rd) {
+        if (!present3rd) return false
+        // Consonant-stem verbs carry a baked sg3 Ꭰ- in their present3rd citation
+        // row (To Bite "asgahlga" ᎠᏍᎦᎶᎦ), vowel-stem verbs don't (To Go ᎡᎦ),
+        // so the registered BARE stem is matched as a suffix of the citation.
+        return fivSg3WStems.find { present3rd.endsWith(it) } != null
+    }
+
     // Iterates through categories and applies rules
     static String applyCategoricalRules(Verb verb, String conjugation, Tense tense) {
         if (verb == null) {

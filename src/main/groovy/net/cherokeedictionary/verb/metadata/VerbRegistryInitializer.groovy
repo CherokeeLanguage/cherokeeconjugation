@@ -100,16 +100,17 @@ class VerbRegistryInitializer {
         // future stems start ᏍᎦᎵ (sgal-). See VerbRegistry.stemIIISyncopeStems.
         VerbRegistry.registerStemIIISyncope("ᏍᎦᎵ")
 
-        // tio 12Nov26: To Bite FUTURE_IMPERATIVE_VOLATIVE sg3 row takes wa-
+        // tio 12Nov26/15Nov26: To Bite FUTURE_IMPERATIVE_VOLATIVE sg3 row takes wa-
         // (book p.29 "Let him/her bite it" ᏩᏍᎦᎶᏨᎢ wasgaltsv'i). The guide's
         // w- section mandates w- for non-second-person "let" forms, but the
         // book itself is inconsistent: To See FIV sg3 prints a- ("Let him/her
         // see it" ᎠᎪᎲᎢ agohv'i, p.119) while its IMMEDIATE imperative sg3
         // prints wa- (ᏩᎪᏩᏔ). So wa- is verb-level here, registered per-verb
-        // like the other bite cells. Keyed on the POST-syncope Stem III
-        // (syncope runs before the compound lookup): ᏍᎦᎶᏨᎢ sgalts-v'i.
-        VerbRegistry.registerCompoundOverride("SG3SG3IN", "ᏍᎦᎶᏨᎢ", "Ꮹ")
-        VerbRegistry.registerCompoundOverride("SG3SG3AN", "ᏍᎦᎶᏨᎢ", "Ꮹ")
+        // like the other bite cells. tio 15Nov26: previously two compound
+        // overrides keyed on the POST-syncope Stem III (ᏍᎦᎶᏨᎢ sgalts-v'i);
+        // now a verb-level registry flag keyed on present3rd (ᏍᎦᎶᎦ), which
+        // survives syncope/stem-routing changes and covers SG3AN + SG3IN.
+        VerbRegistry.registerFivSg3W(BITE_STEM)
 
         // --- Categorization based on verb taxonomy audit -- tio 11Nov26 ---
         // pending: root not yet captured from the engine -- tio 12Nov26
