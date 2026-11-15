@@ -54,6 +54,7 @@ class ToBeSomewherePresentSpec extends VerbBaseSpec {
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
         // Harness check: retrieve engine output for this same pronoun/tense/verb
+        println "DEBUG: calling getEngineSyllabary for ${VERB} ${TENSE}"
         def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
             VERB, TENSE, row.english, [conjugations: VERB_BOOK]
         )

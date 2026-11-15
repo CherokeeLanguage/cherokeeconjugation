@@ -47,6 +47,8 @@ class Conjugate {
         ConjugationHelper.determineVerbSet(verb)
         ConjugationHelper.determineCompoundPrefix(verb)
 
+        println "DEBUG: conjugating verb=${verb.root} tense=${verb.tense} set=${verb.verbset} prefix=${verb.compoundPrefix}"
+
         // tio 12Nov26: reset per-conjugation so a reused Verb never carries a
         // stale variantWord from an earlier conjugation (WI-28B).
         verb.variantWord = null
