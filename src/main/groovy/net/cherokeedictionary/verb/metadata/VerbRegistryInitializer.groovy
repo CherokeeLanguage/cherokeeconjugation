@@ -112,6 +112,21 @@ class VerbRegistryInitializer {
         // survives syncope/stem-routing changes and covers SG3AN + SG3IN.
         VerbRegistry.registerFivSg3W(BITE_STEM)
 
+        // tio 15Nov26: To See IMMEDIATE imperative/volative sg3 row takes wa-
+        // (book p.119 "Let him/her see it right now!" ᏩᎪᏩᏔ wagohwahta), while
+        // its FUTURE imperative/volative sg3 row takes a- (ᎠᎪᎲᎢ agohv'i) —
+        // verb-level allomorphy the shared table cannot express. Keyed on the
+        // bare present stem ᎪᏩᏘ (gowati), matched as a suffix of the
+        // present3rd citation row ᎠᎪᏩᏘᎭ. See VerbRegistry.iivSg3WStems for
+        // the wi-/wa- lexeme variance vs To Fall.
+        VerbRegistry.registerIivSg3W("ᎪᏩᏘ")
+
+        // tio 15Nov26: To See declarative Future (book p.119) — the two rows
+        // are lexeme-specific surfaces (see VerbRegistry.subjectSurfaceOverrides).
+        // SG1 "I will see it" ᏓᏥᎪᎢ datsigo'i; SG3 "He/she will see it" ᏛᎪᎯ dvgohi.
+        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG1", "ᏓᏥᎪᎢ")
+        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG3", "ᏛᎪᎯ")
+
         // --- Categorization based on verb taxonomy audit -- tio 11Nov26 ---
         // pending: root not yet captured from the engine -- tio 12Nov26
 

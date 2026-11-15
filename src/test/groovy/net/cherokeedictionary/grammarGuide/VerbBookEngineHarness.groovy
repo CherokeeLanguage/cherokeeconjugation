@@ -98,6 +98,11 @@ class VerbBookEngineHarness {
         // subject + SG3IN object). Without this the person lands in the
         // object slot, which determineSubjectObject then forces to SG3IN and
         // every row prints the bare sg3 citation (ᎤᏅᎢᏍᏗ).
+        // tio 15Nov26: some tables print the infinitive label parenthesized
+        // ("(For) me to see it", To See p.119) — strip the parens so the
+        // regex still matches; otherwise the subject falls through to the
+        // SG3 default and the SG1 row prints the bare sg3 citation.
+        matchText = matchText.replaceFirst("(?i)^\\(?For\\)?\\s+", "For ")
         def infMatcher = (matchText =~ /(?i)^for\s+(.*?)\s+\bto\b(.*)$/)
         if (infMatcher.matches()) {
             def personLower = infMatcher.group(1).toLowerCase()

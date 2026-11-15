@@ -252,6 +252,31 @@ public class Stemmer {
         return returnValue
     }
 
+    /**
+     * Stem for the IMMEDIATE_PAST tense only. Both the immediate-past citation
+     * (e.imm) and the imperative citation (e.imp) land in StemType.Immediate,
+     * and getStem's last-match scan always yields the imperative stem. The
+     * recent past is a different stem for some lexemes (To See composes
+     * ᏥᎪᏩᏘᎭ tsigowatiha from the PRESENT stem, book p.118, where the
+     * imperative is ᎯᎪᏩᏔ higohwahta), so when the entry carries an
+     * immediate-past citation the first Immediate entry (the e.imm-derived
+     * one — every normalization path adds imm before imp) wins; otherwise the
+     * imperative stem is returned (the pre-existing behavior for verbs like
+     * To Bite, whose two citations are identical). -- tio 15Nov26
+     */
+    String getImmediatePastStem() {
+        if (immediatepast?.syllabary) {
+            def first = null
+            getStems().each {
+                if (it.stemtype == StemType.Immediate && first == null) {
+                    first = it.syllabary
+                }
+            }
+            return first ?: getStem(Tense.IMMEDIATE_PAST)
+        }
+        return getStem(Tense.IMMEDIATE_PAST)
+    }
+
     // Stem mappings per the verb book's grammatical introduction (printed pp.167–176):
     //   - Stem I (PresentContinous):  Present; also the base for the progressive tenses
     //     (grammar guide: non-final -g- + -v'i / -esdi).

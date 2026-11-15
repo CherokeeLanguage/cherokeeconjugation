@@ -23,6 +23,13 @@ class VerbTenseHolder {
     def progressivePast
     def progressiveFuture
     def immediateCommand
+    // tio 15Nov26: IMMEDIATE_PAST's own stem. Some verbs compose the recent
+    // past from a DIFFERENT stem than the imperative (To See: present-stem
+    // ᏥᎪᏩᏘᎭ tsigowatiha vs imperative Stem IV ᎯᎪᏩᏔ higohwahta, book p.118),
+    // while IMMEDIATE_COMMAND/RECENT_PAST_IMPERATIVE always build on the
+    // imperative entry. Both citation rows land in StemType.Immediate, so
+    // vth.immediate (last entry = imperative) cannot serve both tenses.
+    def immediatePast
 
     def stemmer
 
@@ -78,6 +85,10 @@ class VerbTenseHolder {
         // no Remote Past entry exists.
         //todo: -- review again -- timo 4Nov26 -- timo 10Nov26
         immediate = stemmer.getStem(Tense.IMMEDIATE_PAST)
+        // tio 15Nov26: the IMMEDIATE_PAST-specific stem — the dictionary's
+        // immediate-past citation (first StemType.Immediate entry) when the
+        // entry carries one, else the imperative stem (same as vth.immediate).
+        immediatePast = stemmer.getImmediatePastStem()
         if (remotePast != null) {
             String rp = SyllabaryUtil.parseSyllabary(remotePast)
             if (rp.size() > 2 && rp.endsWith("vi")) {

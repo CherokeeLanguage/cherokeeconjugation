@@ -206,6 +206,20 @@ class VerbConjugationProcessor {
                 }
             }
 
+            // tio 15Nov26: IMMEDIATE imperative/volative sg3 wa- override,
+            // sibling of the FIV flag above. The table's sg3 cell composes ga-
+            // (ᎦᎪᏩᏔ) but the book prints wa- for registered verbs (To See
+            // ᏩᎪᏩᏔ wagohwahta, p.119). Vowel-initial stems (To Go wena) are
+            // handled by the Stemmer's wi- routing and the to-go branch below.
+            if (tense == Tense.IMMEDIATE_COMMAND
+                    && verbset == VerbSet.A
+                    && pref?.prefix1 == PrefixTableSubject.SG3
+                    && (pref?.prefix2 == PrefixTableObject.SG3AN
+                        || pref?.prefix2 == PrefixTableObject.SG3IN)
+                    && VerbRegistry.hasIivSg3W(verb.stemmer?.present3rd?.syllabary)) {
+                returnPrefix = 'Ꮹ'
+            }
+
             //Montgomery-Anderson pp 208 -- 'No Set B prefixes trigger it [Laryngeal alternation].
             if (verbset != VerbSet.B) {
                 //this will return something if it can - if not then the returnValue will be null and should be checked against
@@ -504,6 +518,26 @@ class VerbConjugationProcessor {
             return override
         }
 
+        // tio 15Nov26: per-(verb, tense, subject) whole-form surface override
+        // (VerbRegistry.subjectSurfaceOverrides) — book surfaces no composition
+        // derives (To See future ᏓᏥᎪᎢ / ᏛᎪᎯ). Checked before stem selection
+        // so the override short-circuits the whole composition; keyed on
+        // present3rd because verb.root is not assigned until further below.
+        String subjectSurface = VerbRegistry.getSubjectSurface(
+                verb.stemmer?.present3rd?.syllabary,
+                verb.tense.name(),
+                verb.compoundPrefix?.prefix1?.name())
+        if (subjectSurface) {
+            // The registered surface is book-final (it already carries da-
+            // where the book prints it). The da- initial-prefix flag set above
+            // must be cleared, or PrefixProcessor glues a second Ꮣ onto the
+            // returned root (ᏓᏓᏥᎪᎢ). -- tio 15Nov26
+            if (verb.tense == Tense.COMPLETIVE_FUTURE) {
+                verb.initialPrefixHolder.da = false
+            }
+            return subjectSurface
+        }
+
         // proceed with standard logic
         String verbToConjugate = ""
 
@@ -549,6 +583,13 @@ class VerbConjugationProcessor {
                 verbToConjugate = vth.progressiveFuture
                 break;
             case Tense.IMMEDIATE_PAST:
+                // tio 15Nov26: the recent past prefers the dictionary's
+                // immediate-past citation stem when the entry carries one
+                // (Stemmer.getImmediatePastStem) — some lexemes compose it from
+                // a different stem than the imperative (To See: ᏥᎪᏩᏘᎭ from
+                // the present stem, vs imperative Stem IV ᎯᎪᏩᏔ).
+                verbToConjugate = vth.immediatePast ?: vth.immediate
+                break;
             case Tense.RECENT_PAST_IMPERATIVE:
             case Tense.IMMEDIATE_COMMAND:
                 // immediate/recent-past forms build on the imperative entry (Stem IV);

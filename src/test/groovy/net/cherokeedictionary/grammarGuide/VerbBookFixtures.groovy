@@ -189,10 +189,18 @@ class VerbBookFixtures {
             ],
         ],
         "to see": [
+            // tio 15Nov26: immediate_past added (book p.118 "I saw it just now"
+            // ᏥᎪᏩᏘᎭ tsigowatiha / "He/she saw it just now" ᎠᎪᏩᏘᎭ agowatiha).
+            // The book's printed SYLLABARY for this verb's immediate past is the
+            // present-stem composition (identical glyphs to the present rows);
+            // its romanized column prints "tsigohwahta" (Stem IV), but the
+            // engine-vs-book comparison targets the printed syllabary. Without
+            // this stem the IMMEDIATE_PAST sg3 short-circuit is skipped and
+            // composition falls back to the imperative stem (ᏥᎪᏩᏔ).
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "agowtisgoi", imperative: "higohwahta", infinitive: "ugowtvhdi", present: "agowtiha", remote_past: "ugohvi"],
+                [subject: "SG3", habitual: "agowtisgoi", imperative: "higohwahta", infinitive: "ugowtvhdi", present: "agowtiha", remote_past: "ugohvi", immediate_past: "agowtiha"],
                 [subject: "SG1", present: "tsigowtiha"],
             ],
         ],

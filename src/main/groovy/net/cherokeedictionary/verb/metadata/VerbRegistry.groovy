@@ -179,10 +179,64 @@ class VerbRegistry {
     /** True when this verb's FUTURE_IMPERATIVE_VOLATIVE sg3 row prints wa-. -- tio 15Nov26 */
     static boolean hasFivSg3W(String present3rd) {
         if (!present3rd) return false
-        // Consonant-stem verbs carry a baked sg3 Ꭰ- in their present3rd citation
-        // row (To Bite "asgahlga" ᎠᏍᎦᎶᎦ), vowel-stem verbs don't (To Go ᎡᎦ),
-        // so the registered BARE stem is matched as a suffix of the citation.
-        return fivSg3WStems.find { present3rd.endsWith(it) } != null
+        // The bare present stem is matched INSIDE the present3rd citation row:
+        // consonant stems may carry a baked sg3 Ꭰ- prefix (To Bite "asgahlga"
+        // ᎠᏍᎦᎶᎦ) AND/OR a tense suffix after the stem (To See "agowtiha"
+        // ᎠᎪᏩᏘᎭ = Ꭰ + ᎪᏩᏘ + -Ꭽ), so neither a whole-citation nor a
+        // suffix match survives both shapes.
+        return fivSg3WStems.find { present3rd.contains(it) } != null
+    }
+
+    // tio 15Nov26: IMMEDIATE imperative/volative sibling of the FIV flag. The
+    // guide mandates w- for ALL non-second-person "let ... right now!" forms,
+    // and the book confirms per verb — To See IIV sg3 "Let him/her see it
+    // right now!" ᏩᎪᏩᏔ wagohwahta (p.119) — but the composed surface varies
+    // lexeme-level: To Fall takes wi- (ᏫᎦᏅᎩ wiganvgi, from its sg3 citation
+    // row) where To See takes wa-. Only verbs needing an explicit wa- override
+    // are registered here; wi- from the citation needs no flag. See needs it
+    // because its FIV sg3 is a- (ᎠᎪᎲᎢ) while its IIV sg3 is wa- — the two
+    // volative tenses disagree, so one flag cannot cover both.
+    private static final Set<String> iivSg3WStems = []
+
+    /** Registers a verb (by present3rd stem) whose IIV sg3 row prints wa-. -- tio 15Nov26 */
+    static void registerIivSg3W(String present3rd) {
+        if (present3rd) iivSg3WStems.add(present3rd)
+    }
+
+    /** True when this verb's IMMEDIATE imperative/volative sg3 row prints wa-. -- tio 15Nov26 */
+    static boolean hasIivSg3W(String present3rd) {
+        if (!present3rd) return false
+        // contained-in match, same rationale as hasFivSg3W above
+        return iivSg3WStems.find { present3rd.contains(it) } != null
+    }
+
+    // tio 15Nov26: per-(verb, tense, subject) whole-form surface overrides.
+    // The book prints lexeme-specific composed surfaces that no prefix/stem
+    // composition derives AND that conflict between verbs: To See's future
+    // SG1 is ᏓᏥᎪᎢ datsigo'i (Stem III -h- lenites to glottal ' before the
+    // future -i) while its SG3 is ᏛᎪᎯ dvgohi (h kept; da + the sg3 a-
+    // pronominal merges to dv-) — and bite's sg3 future composes BARE
+    // (ᏓᏍᎦᎶᏥ, no a-), so no allomorph-scoped rule fits both. Keyed on the
+    // present3rd stem (verb.root is not yet assigned when the processor
+    // consults this), the engine Tense name, and the PrefixTableSubject name.
+    private static final Map<String, String> subjectSurfaceOverrides = [:]
+
+    /** Registers a whole-form surface for (present3rd stem, tense, subject). -- tio 15Nov26 */
+    static void registerSubjectSurface(String present3rdStem, String tense, String subject, String form) {
+        if (present3rdStem && tense && subject && form) {
+            subjectSurfaceOverrides.put("${present3rdStem}|${tense}|${subject}" as String, form)
+        }
+    }
+
+    /** Whole-form surface for this verb/tense/subject, or null to compose normally. -- tio 15Nov26 */
+    static String getSubjectSurface(String present3rd, String tense, String subject) {
+        if (!present3rd || !tense || !subject) return null
+        // contained-in stem match, same rationale as hasFivSg3W above (the
+        // citation row may carry a baked sg3 prefix and/or a tense suffix).
+        return subjectSurfaceOverrides.find { key, val ->
+            def parts = key.split("\\|")
+            present3rd.contains(parts[0]) && parts[1] == tense && parts[2] == subject
+        }?.value
     }
 
     // Iterates through categories and applies rules
