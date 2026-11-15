@@ -163,17 +163,14 @@ class VerbRegistryInitializer {
         // tio 15Nov26: To Be Somewhere Future/Remote Past (pp.19-21).
         // The table prints verb-specific positional allomorphs for the stems:
         // Future/Remote past rows take the positional allomorphs (e.g. ᎨᏙᎮᏍᏗ, ᎨᏙᎲᎢ,
-        // ᎮᏙᎮᏍᏗ, ᎮᏙᎲᎢ...). Registered against the PRESENT stem "edoha".
-        // Engine Tense aliases: FUTURE -> COMPLETIVE_FUTURE, REMOTE_PAST -> REMOTE_PAST.
-        // Note: Future Progressive (future/future imperative) rows take -esdi,
-        // matches "ToBeSomewhereFutureSpec" (FUTURE_PROGRESSIVE).
-        def STEM = "edoha"
+        // ᎮᏙᎮᏍᏗ, ᎮᏙᎲᎢ...). Registered against the PRESENT stem "ᎡᏙᎭ".
+        def STEM = "ᎡᏙᎭ"
         [
-            ["FUTURE_PROGRESSIVE", "SG1", "ᎨᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "SG2", "ᎮᏙᎮᏍᏗ"],
-            ["FUTURE_PROGRESSIVE", "SG3", "ᎡᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "DL2", "ᏍᏕᏙᎮᏍᏗ"],
-            ["FUTURE_PROGRESSIVE", "PL2", "ᎢᏤᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "DL1INCL", "ᎢᏁᏙᎮᏍᏗ"],
-            ["FUTURE_PROGRESSIVE", "DL1EXCL", "ᎣᏍᏕᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "PL1EXCL", "ᎣᏤᏙᎮᏍᏗ"],
-            ["FUTURE_PROGRESSIVE", "PL1INCL", "ᎢᏕᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "PL3", "ᎠᏁᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "SG1", "ᎨᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "SG2", "ᎮᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "SG3", "ᎡᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL2", "ᏍᏕᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL2", "ᎢᏤᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL1INCL", "ᎢᏁᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "DL1EXCL", "ᎣᏍᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL1EXCL", "ᎣᏤᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL1INCL", "ᎢᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL3", "ᎠᏁᏙᎮᏍᏗ"],
             ["REMOTE_PAST", "SG1", "ᎨᏙᎲᎢ"], ["REMOTE_PAST", "SG2", "ᎮᏙᎲᎢ"],
             ["REMOTE_PAST", "SG3", "ᎡᏙᎲᎢ"], ["REMOTE_PAST", "DL2", "ᏍᏕᏙᎲᎢ"],
             ["REMOTE_PAST", "PL2", "ᎢᏤᏙᎲᎢ"], ["REMOTE_PAST", "DL1INCL", "ᎢᏁᏙᎲᎢ"],

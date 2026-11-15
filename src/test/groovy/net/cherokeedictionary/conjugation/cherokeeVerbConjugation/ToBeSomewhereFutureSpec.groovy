@@ -20,7 +20,7 @@ import spock.lang.Unroll
 class ToBeSomewhereFutureSpec extends VerbBaseSpec {
 
     static final String VERB = "to be somewhere"
-    static final String TENSE = "FUTURE_PROGRESSIVE"
+    static final String TENSE = "FUTURE"
     static final String SOURCE_PAGE = "p.20"
 
     // Affix composition as printed:
