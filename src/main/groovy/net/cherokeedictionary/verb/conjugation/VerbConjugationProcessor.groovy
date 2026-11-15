@@ -15,7 +15,7 @@ import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.util.VerbSet
 import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.affixes.ReflexivePrefix
-import net.cherokeedictionary.verb.rules.RuleGtoS
+// tio 15Nov26: RuleGtoS moved to MotionRule (MOTION category)
 import net.cherokeedictionary.verb.rules.RuleLaryngealAlteration
 import net.cherokeedictionary.verb.rules.RuleUW
 import net.cherokeedictionary.verb.rules.RuleVtoA
@@ -596,9 +596,10 @@ class VerbConjugationProcessor {
         returnValue = VerbRegistry.applyCategoricalRules(verb, returnValue, verb.tense)
 
         // tio 14Nov26: g -> s alternation for "to go" habitual
-        if (verb.tense == Tense.HABITUAL && verb.stemmer?.present3rd?.syllabary == "ᎡᎦ") {
-            returnValue = RuleGtoS.apply(verb.compoundPrefix.prefix1, returnValue, verb.tense)
-        }
+        // tio 15Nov26: MOVED into MotionRule (MOTION category) — the guide
+        // presents the alternation as category-level, and the old call site
+        // was hardcoded to present3rd "ᎡᎦ", so any other bridged motion verb
+        // would have silently skipped it.
 
         // tio 14Nov26: To Go Infinitive (Stem V): -e-n-vs-di -> -envsdi
         // Handle Set-B vowel-initial prefix merge for "to go" infinitive
