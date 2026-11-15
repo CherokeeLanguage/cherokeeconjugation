@@ -147,10 +147,9 @@ class VerbRegistryInitializer {
         // tio 15Nov26: To Hear IMMEDIATE imperative/volative sg3 row takes wa-
         // (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ watvgvga), while
         // its FUTURE imperative/volative sg3 row takes a- (ᎠᏛᎦᏅᎢ atvganv'i).
-        // tio 15Nov26: To Be Somewhere IMMEDIATE imperative/volative (book p.21).
         // The table prints verb-specific positional allomorphs for the stems:
         // SG1 geda, SG2 heda, SG3 weda (ᏪᏓ).
-        // These are registered against the PRESENT stem "edoha" for lookup.
+        // Registered against the PRESENT stem syllabary "ᎡᏙᎭ" (edoha).
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG1", "ᎨᏓ")
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG2", "ᎮᏓ")
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG3", "ᏪᏓ")
@@ -161,6 +160,33 @@ class VerbRegistryInitializer {
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1EXCL", "ᏬᏤᏓ")
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1INCL", "ᎢᏕᏓ")
         VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL3", "ᏩᏁᏓ")
+        // tio 15Nov26: To Be Somewhere Future/Remote Past (pp.19-21).
+        // The table prints verb-specific positional allomorphs for the stems:
+        // Future/Remote past rows take the positional allomorphs (e.g. ᎨᏙᎮᏍᏗ, ᎨᏙᎲᎢ,
+        // ᎮᏙᎮᏍᏗ, ᎮᏙᎲᎢ...). Registered against the PRESENT stem "edoha".
+        // Engine Tense aliases: FUTURE -> COMPLETIVE_FUTURE, REMOTE_PAST -> REMOTE_PAST.
+        // Note: Future Progressive (future/future imperative) rows take -esdi,
+        // matches "ToBeSomewhereFutureSpec" (FUTURE_PROGRESSIVE).
+        def STEM = "edoha"
+        [
+            ["FUTURE_PROGRESSIVE", "SG1", "ᎨᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "SG2", "ᎮᏙᎮᏍᏗ"],
+            ["FUTURE_PROGRESSIVE", "SG3", "ᎡᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "DL2", "ᏍᏕᏙᎮᏍᏗ"],
+            ["FUTURE_PROGRESSIVE", "PL2", "ᎢᏤᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "DL1INCL", "ᎢᏁᏙᎮᏍᏗ"],
+            ["FUTURE_PROGRESSIVE", "DL1EXCL", "ᎣᏍᏕᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "PL1EXCL", "ᎣᏤᏙᎮᏍᏗ"],
+            ["FUTURE_PROGRESSIVE", "PL1INCL", "ᎢᏕᏙᎮᏍᏗ"], ["FUTURE_PROGRESSIVE", "PL3", "ᎠᏁᏙᎮᏍᏗ"],
+            ["REMOTE_PAST", "SG1", "ᎨᏙᎲᎢ"], ["REMOTE_PAST", "SG2", "ᎮᏙᎲᎢ"],
+            ["REMOTE_PAST", "SG3", "ᎡᏙᎲᎢ"], ["REMOTE_PAST", "DL2", "ᏍᏕᏙᎲᎢ"],
+            ["REMOTE_PAST", "PL2", "ᎢᏤᏙᎲᎢ"], ["REMOTE_PAST", "DL1INCL", "ᎢᏁᏙᎲᎢ"],
+            ["REMOTE_PAST", "DL1EXCL", "ᎣᏍᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL1EXCL", "ᎣᏤᏙᎲᎢ"],
+            ["REMOTE_PAST", "PL1INCL", "ᎢᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL3", "ᎠᏁᏙᎲᎢ"],
+            ["INFINITIVE", "SG1", "ᎠᏇᏓᏍᏗ"], ["INFINITIVE", "SG2", "ᏤᏓᏍᏗ"],
+            ["INFINITIVE", "DL2", "ᏍᏕᏓᏍᏗ"], ["INFINITIVE", "PL2", "ᎢᏤᏓᏍᏗ"],
+            ["INFINITIVE", "DL1INCL", "ᎩᏁᏓᏍᏗ"], ["INFINITIVE", "DL1EXCL", "ᎣᎩᏁᏓᏍᏗ"],
+            ["INFINITIVE", "PL1EXCL", "ᎣᎨᏓᏍᏗ"], ["INFINITIVE", "PL1INCL", "ᎢᎨᏓᏍᏗ"],
+            ["INFINITIVE", "PL3", "ᎤᏁᏓᏍᏗ"]
+        ].each { tense, subj, form ->
+            VerbRegistry.registerSubjectSurface(STEM, tense, subj, form)
+        }
 
         // tio 15Nov26: To Hear PRESENT compound-prefix overrides (book p.64).
         // The a-branch normalization bakes the sg3 Ꭰ- into the routed present
