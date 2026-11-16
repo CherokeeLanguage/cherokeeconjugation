@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73142) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73142 (entrya ganohili) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,8 +13,8 @@ class GanohiliSpec extends VerbBaseSpec {
         definition: "Flying",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jinoili'],
-            [subject: 'SG1', object: '', present: 'jinoili', habitual: 'jinoilegoi', remote_past: 'aginohilidolvi', imperative: 'jinoilisvi', infinitive: 'X'],
+                [subject: 'SG1', object: '', present: 'tsinoili'],
+            [subject: 'SG1', object: '', present: 'tsinoili', habitual: 'jinoilegoi', remote_past: 'aginohilidolvi', imperative: 'jinoilisvi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'hinohili', habitual: 'hinohilegoi', remote_past: 'janohilidolvi', imperative: 'hinohilvsvi', infinitive: ''],
             [subject: 'SG3', object: '', habitual: 'ganohilisoi', imperative: 'hinohilisesdi', infinitive: '', present: 'ganohili', remote_past: ''],
             [subject: 'PL3', object: '', present: 'aninohili', habitual: 'aninohilegoi', remote_past: 'uninohilidolvi', imperative: 'aninohilvsvi', infinitive: ''],

@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73897) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73897 (entrya unaligoha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -15,7 +16,7 @@ class UnaligohaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'ogaligoha'],
             [subject: 'SG1', object: '', present: 'oginaligoha', habitual: 'oginaligosoi', remote_past: 'oginaligosvi', imperative: 'oginaligosesdi', infinitive: 'oginadalisohdi'],
             [subject: 'SG2', object: '', present: 'ogaligoha', habitual: 'ogaligosoi', remote_past: 'ogaligosvi', imperative: 'ogaligosesdi', infinitive: 'ogadalisohdi'],
-            [subject: 'SG3', object: '', habitual: 'unaligosoi', imperative: 'ijaligosesdi', infinitive: '----', present: 'unaligoha', remote_past: 'unaligosvi'],
+            [subject: 'SG3', object: '', habitual: 'unaligosoi', imperative: 'itsaligosesdi', infinitive: '----', present: 'unaligoha', remote_past: 'unaligosvi'],
             [subject: 'PL3', object: '', present: 'ijaligoha', habitual: 'ijaligosoi', remote_past: 'ijaligosvi', imperative: 'ijaligosesdi', infinitive: 'ijadalisohdi'],
             [subject: 'PL1INCL', object: '', present: 'igaligoha', habitual: 'igaligosoi', remote_past: 'igaligosvi', imperative: 'igaligosesdi', infinitive: 'igadalisohdi']
         ]

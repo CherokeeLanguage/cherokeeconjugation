@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72483) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72483 (entrya akwiyiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AkwiyihaSpec extends VerbBaseSpec {
         definition: "Paying (It)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'gagwiyiha'],
-            [subject: 'SG1', object: '', present: 'gagwiyiha', habitual: 'gagwiyisgoi', remote_past: 'akikwiyvhvi', imperative: 'gagwiya', infinitive: 'akikwiyhdi'],
+                [subject: 'SG1', object: '', present: 'gaquiyiha'],
+            [subject: 'SG1', object: '', present: 'gaquiyiha', habitual: 'gagwiyisgoi', remote_past: 'akikwiyvhvi', imperative: 'gagwiya', infinitive: 'akikwiyhdi'],
             [subject: 'SG2', object: '', present: 'hakwiyiha', habitual: 'hakwiyisgoi', remote_past: 'jakwiyvhvi', imperative: 'hakwiya', infinitive: 'jakwiyhdi'],
-            [subject: 'SG3', object: '', habitual: 'akwiyisgoi', imperative: 'hakwiya', infinitive: 'ukwiyhdi', present: 'akwiyiha', remote_past: 'ukwiyvhvi'],
+            [subject: 'SG3', object: '', habitual: 'aquiyisgoi', imperative: 'haquiya', infinitive: 'uquiyvdi', present: 'aquiyiha', remote_past: 'uquiyvhvi'],
             [subject: 'PL3', object: '', present: 'anakwiyiha', habitual: 'anakwiyisgoi', remote_past: 'unikwiyvhvi', imperative: 'anakwiya', infinitive: 'unakwiyhdi'],
             [subject: 'PL1INCL', object: '', present: 'idakwiyiha', habitual: 'idakwiyisgoi', remote_past: 'igikwiyvhvi', imperative: 'idakwiya', infinitive: 'igakwiyhdi']
         ]
@@ -31,26 +32,26 @@ class AkwiyihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "gaquiyisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquaquiyvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gaquiyvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "akikwiyhdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquaquiyvdi"
         "SG2" | "" | Tense.PRESENT         | "haquiyiha"
         "SG2" | "" | Tense.HABITUAL        | "haquiyisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsaquiyvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "haquiyvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jakwiyhdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsaquiyvdi"
         "SG3" | "" | Tense.PRESENT         | "aquiyiha"
         "SG3" | "" | Tense.HABITUAL        | "aquiyisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uquiyvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aquiyvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ukwiyhdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uquiyvdi"
         "PL3" | "" | Tense.PRESENT         | "anaquiyiha"
         "PL3" | "" | Tense.HABITUAL        | "anaquiyisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unaquiyvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anaquiyvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unakwiyhdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unaquiyvdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idaquiyiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idaquiyisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaquiyvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaquiyvhvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igakwiyhdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igaquiyvdi"
     }
 }

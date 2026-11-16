@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72558) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72558 (entrya anina) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class AninaSpec extends VerbBaseSpec {
         definition: "Sitting, They Are (Congregation)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'ojina'],
+                [subject: 'SG1', object: '', present: 'otsina'],
             [subject: 'SG3', object: '', habitual: 'aninoi', imperative: '', infinitive: '', present: 'anina', remote_past: 'aninvi']
         ]
     ]

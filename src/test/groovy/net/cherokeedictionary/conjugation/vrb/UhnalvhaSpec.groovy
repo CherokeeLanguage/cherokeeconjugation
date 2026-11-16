@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73809) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73809 (entrya uhnalvha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class UhnalvhaSpec extends VerbBaseSpec {
         definition: "Angry",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'akinalvha'],
-            [subject: 'SG1', object: '', present: 'akinalvha', habitual: 'akinalvsoi', remote_past: 'akinalvsvi', imperative: 'akinalvsesdi', infinitive: 'X'],
+                [subject: 'SG1', object: '', present: 'aginalvha'],
+            [subject: 'SG1', object: '', present: 'aginalvha', habitual: 'akinalvsoi', remote_past: 'akinalvsvi', imperative: 'akinalvsesdi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'jahnalvha', habitual: 'jahnalvsoi', remote_past: 'jahnalvsvi', imperative: 'chanalvsesdi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'uhnalvsoi', imperative: 'chanalvsesdi', infinitive: '', present: 'uhnalvha', remote_past: 'uhnalvsvi'],
+            [subject: 'SG3', object: '', habitual: 'uhnalvsoi', imperative: 'tsanalvsesdi', infinitive: '', present: 'uhnalvha', remote_past: 'uhnalvsvi'],
             [subject: 'PL3', object: '', present: 'unihnalvha', habitual: 'unihnalvsoi', remote_past: 'unihnalvsvi', imperative: 'uninalvsesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igihnalvha', habitual: 'igihnalvsoi', remote_past: 'igihnalvsvi', imperative: 'iginalvsesdi', infinitive: '']
         ]

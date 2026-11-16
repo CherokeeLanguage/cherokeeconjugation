@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73039) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73039 (entrya gahyea) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class GahyeaSpec extends VerbBaseSpec {
         definition: "Eat It (flexible)",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyayea, jiyea'],
+                [subject: 'SG1', object: '', present: 'tsiyayea, tsiyea'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyea', habitual: '/', remote_past: 'jiyayea', imperative: 'jiyesgoi', infinitive: '/'],
             [subject: 'SG2', object: '', present: 'hihyea', habitual: '/', remote_past: 'hiyayea', imperative: 'hihyesgoi', infinitive: '/'],
-            [subject: 'SG3', object: '', habitual: 'gahyesgoi', imperative: 'hiyayaga, hihyaga', infinitive: 'uwahyesdi', present: 'gahyea', remote_past: 'uwahyavi'],
+            [subject: 'SG3', object: '', habitual: 'gayesgoi', imperative: 'hiyayaga, hiyaga', infinitive: 'uwayesdi', present: 'gayea', remote_past: 'uwayavi'],
             [subject: 'PL3', object: '', present: 'anihyea', habitual: 'anihyesgoi', remote_past: 'unahyavi', imperative: 'anihyaga', infinitive: 'unahyesdi']
         ]
     ]

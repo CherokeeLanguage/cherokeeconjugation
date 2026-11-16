@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73794) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73794 (entrya uha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -15,7 +16,7 @@ class UhaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'agiha'],
             [subject: 'SG1', object: '', present: 'agiha', habitual: 'agihoi', remote_past: 'agihvi', imperative: 'agihesdi', infinitive: 'agihdi'],
             [subject: 'SG2', object: '', present: 'jaha', habitual: 'jahoi', remote_past: 'jahvi', imperative: 'jahesdi', infinitive: 'jahdi'],
-            [subject: 'SG3', object: '', habitual: 'uhoi', imperative: 'jahesdi', infinitive: '', present: 'uha', remote_past: 'uhvi'],
+            [subject: 'SG3', object: '', habitual: 'uhoi', imperative: 'tsahesdi', infinitive: '', present: 'uha', remote_past: 'uhvi'],
             [subject: 'PL3', object: '', present: 'uniha', habitual: 'unihoi', remote_past: 'unihvi', imperative: 'unihesdi', infinitive: 'unihdi']
         ]
     ]

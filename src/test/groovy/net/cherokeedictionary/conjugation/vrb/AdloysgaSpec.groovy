@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72284) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72284 (entrya adloysga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AdloysgaSpec extends VerbBaseSpec {
         definition: "Getting Off",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'gadloysga'],
-            [subject: 'SG1', object: '', present: 'gadloysga', habitual: 'gadloysgoi', remote_past: 'akdloysvi', imperative: 'gadlohi', infinitive: 'akdlohisdi'],
+                [subject: 'SG1', object: '', present: 'gatloisga'],
+            [subject: 'SG1', object: '', present: 'gatloisga', habitual: 'gadloysgoi', remote_past: 'akdloysvi', imperative: 'gadlohi', infinitive: 'akdlohisdi'],
             [subject: 'SG2', object: '', present: 'hadloysga', habitual: 'hadloysgoi', remote_past: 'tsdloysvi', imperative: 'hadlohi', infinitive: 'tsdlohisdi'],
-            [subject: 'SG3', object: '', habitual: 'adloysgoi', imperative: 'hadlohi', infinitive: 'udlohisdi', present: 'adloysga', remote_past: 'udloysvi'],
+            [subject: 'SG3', object: '', habitual: 'atloisgoi', imperative: 'hatlohi', infinitive: 'utlohisdi', present: 'atloisga', remote_past: 'utloisvi'],
             [subject: 'PL1INCL', object: '', present: 'idadloysga', habitual: 'idadloysgoi', remote_past: 'igadloysvi', imperative: 'idadlohi', infinitive: 'igadlohisdi']
         ]
     ]
@@ -26,25 +27,25 @@ class AdloysgaSpec extends VerbBaseSpec {
         conjugateVerb("Adloysga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadloysga"
-        "SG1" | "" | Tense.HABITUAL        | "gadloysgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "akdloysvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "akdloysvi"
+        "SG1" | "" | Tense.PRESENT         | "gatloisga"
+        "SG1" | "" | Tense.HABITUAL        | "gatloisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquatloisvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gatloisvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquatlohisdi"
-        "SG2" | "" | Tense.PRESENT         | "hadloysga"
-        "SG2" | "" | Tense.HABITUAL        | "hadloysgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsdloysvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsdloysvi"
+        "SG2" | "" | Tense.PRESENT         | "hatloisga"
+        "SG2" | "" | Tense.HABITUAL        | "hatloisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatloisvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hatloisvi"
         "SG2" | "" | Tense.INFINITIVE      | "tsatlohisdi"
-        "SG3" | "" | Tense.PRESENT         | "adloysga"
-        "SG3" | "" | Tense.HABITUAL        | "adloysgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udloysvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "udloysvi"
+        "SG3" | "" | Tense.PRESENT         | "atloisga"
+        "SG3" | "" | Tense.HABITUAL        | "atloisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utloisvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "atloisvi"
         "SG3" | "" | Tense.INFINITIVE      | "utlohisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadloysga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idadloysgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadloysvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadloysvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idatloisga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idatloisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatloisvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatloisvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igatlohisdi"
     }
 }

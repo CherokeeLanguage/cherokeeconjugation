@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73833) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73833 (entrya uhyvdla) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -14,7 +15,7 @@ class UhyvdlaSpec extends VerbBaseSpec {
         conjugations: [
             [subject: 'SG1', object: '', present: 'uhyvdla', habitual: 'aginiyiha', remote_past: 'uhyvdla', imperative: 'aginiyisgoi', infinitive: 'uhyvdla'],
             [subject: 'SG2', object: '', present: 'uhyvdla', habitual: 'janiyiha', remote_past: 'uhyvdla', imperative: 'janiyisgoi', infinitive: 'uhyvdla'],
-            [subject: 'SG3', object: '', habitual: 'uhyvdloi', imperative: '', infinitive: '', present: 'uhyvdla', remote_past: 'uhyvdlvi'],
+            [subject: 'SG3', object: '', habitual: 'uyvtloi', imperative: '', infinitive: '', present: 'uyvdla', remote_past: 'uyvtlvi'],
             [subject: 'PL3', object: '', present: 'uhyvdla', habitual: 'uniniyiha', remote_past: 'uhyvdla', imperative: 'uniniyisgoi', infinitive: 'uhyvdla'],
             [subject: 'PL1INCL', object: '', present: 'uhyvdla', habitual: 'iginiyiha', remote_past: 'uhyvdla', imperative: 'iginiyisgoi', infinitive: 'uhyvdla']
         ]

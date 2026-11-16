@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73818) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73818 (entrya uhniha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class UhnihaSpec extends VerbBaseSpec {
         definition: "S/he is in Bed",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agwahniha'],
-            [subject: 'SG1', object: '', present: 'agwahniha', habitual: 'agwahnihoi', remote_past: 'agwahnihvi', imperative: 'agwahnihesdi', infinitive: 'x'],
+                [subject: 'SG1', object: '', present: 'aquaniha'],
+            [subject: 'SG1', object: '', present: 'aquaniha', habitual: 'agwahnihoi', remote_past: 'agwahnihvi', imperative: 'agwahnihesdi', infinitive: 'x'],
             [subject: 'SG2', object: '', present: 'jahniha', habitual: 'jahnihoi', remote_past: 'jahnihvi', imperative: 'jahnihesdi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'uhnihoi', imperative: 'jahnihesdi', infinitive: '', present: 'uhniha', remote_past: 'uhnihvi'],
+            [subject: 'SG3', object: '', habitual: 'unihoi', imperative: 'tsanihesdi', infinitive: '', present: 'uniha', remote_past: 'unihvi'],
             [subject: 'PL3', object: '', present: 'unahniha', habitual: 'unahnihoi', remote_past: 'unahnihhvi', imperative: 'unahnihesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igahniha', habitual: 'igahnihoi', remote_past: 'igahnihvi', imperative: 'igahnihesdi', infinitive: '']
         ]

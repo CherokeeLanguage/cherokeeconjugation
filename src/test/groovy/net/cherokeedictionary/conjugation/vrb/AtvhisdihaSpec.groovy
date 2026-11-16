@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72692) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72692 (entrya atvhisdiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,12 +13,12 @@ class AtvhisdihaSpec extends VerbBaseSpec {
         definition: "S/hes Raising/Growing Him/It",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyadvhisdiha, gadvhisdiha'],
+                [subject: 'SG1', object: '', present: 'tsiyadvhisdiha, gadvhisdiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyadvhisdiha', habitual: 'jiyadvhisdisgoi', remote_past: 'jiyatvhistanvi', imperative: 'jiyadvhisda', infinitive: 'jiyatvhisdohdi'],
             [subject: 'SG1', object: 'SG3IN', present: 'gadvhisdiha', habitual: 'gadvhisdisgoi', remote_past: 'aktvhistanvi', imperative: 'gadvhisda', infinitive: 'aktvhisdohdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyadvhisdiha', habitual: 'hiyadvhisdisgoi', remote_past: 'hiyatvhistanvi', imperative: 'hiyadvhisda', infinitive: 'hiyatvhisdohdi'],
             [subject: 'SG2', object: 'SG3IN', present: 'hatvhisdiha', habitual: 'hatvhisdisgoi', remote_past: 'tstvhistanvi', imperative: 'hatvhisda', infinitive: 'tstvhisdohdi'],
-            [subject: 'SG3', object: '', habitual: 'atvhisdisgoi', imperative: 'hiyadvhisda, hatvhisda', infinitive: 'utvhisdohdi', present: 'atvhisdiha', remote_past: 'utvhistanvi'],
+            [subject: 'SG3', object: '', habitual: 'advhisdisgoi', imperative: 'hiyadvhisda, hadvhisda', infinitive: 'udvhisdodi', present: 'advhisdiha', remote_past: 'udvhistanvi'],
             [subject: 'PL3', object: 'SG3IN', present: 'anatvhisdiha', habitual: 'anatvhisdisgoi', remote_past: 'unatvhistanvi', imperative: 'anatvhisda', infinitive: 'unatvhisdohdi'],
             [subject: 'PL1INCL', object: 'SG3IN', present: 'edatvhisdiha', habitual: 'edatvhisdisgoi', remote_past: 'edatvhistanvi', imperative: 'edatvhisda', infinitive: '/']
         ]

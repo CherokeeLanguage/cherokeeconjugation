@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73109) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73109 (entrya ganeha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class GanehaSpec extends VerbBaseSpec {
         definition: "Have With / Hold in Hand (long)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jineha'],
+                [subject: 'SG1', object: '', present: 'tsineha'],
             [subject: 'SG1', object: '', present: 'jinea', habitual: 'jineoi', remote_past: 'jinevi', imperative: 'jineesdi', infinitive: 'jinei'],
             [subject: 'SG2', object: '', present: 'hineha', habitual: 'hinehoi', remote_past: 'hinehvi', imperative: 'hinehesdi', infinitive: 'hinehi'],
             [subject: 'SG3', object: '', habitual: 'ganehoi', imperative: 'hinehesdi', infinitive: '', present: 'ganeha', remote_past: ''],

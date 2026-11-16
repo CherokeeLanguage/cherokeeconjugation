@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73503) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73503 (entrya kanvwia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class KanvwiaSpec extends VerbBaseSpec {
         definition: "Curing, Doctoring / Soldering, Welding",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jinvwia'],
-            [subject: 'SG1', object: '', present: 'jinvwia', habitual: 'jinvwisgoi', remote_past: 'akinvwanvi', imperative: 'jinvwvga', infinitive: 'akinvwodi'],
+                [subject: 'SG1', object: '', present: 'tsinvwia'],
+            [subject: 'SG1', object: '', present: 'tsinvwia', habitual: 'jinvwisgoi', remote_past: 'akinvwanvi', imperative: 'jinvwvga', infinitive: 'akinvwodi'],
             [subject: 'SG2', object: '', present: 'hinvwia', habitual: 'hinvwisgoi', remote_past: 'jahnvwanvi', imperative: 'hinvwvga', infinitive: '/'],
-            [subject: 'SG3', object: '', habitual: 'kanvwisgoi', imperative: 'hinvwvga, hihnvwvga', infinitive: 'uhnvwodi', present: 'kanvwia', remote_past: 'uhnvwanvi'],
+            [subject: 'SG3', object: '', habitual: 'kanvwisgoi', imperative: 'hinvwvga, hinvwvga', infinitive: 'unvwodi', present: 'kanvwia', remote_past: 'unvwanvi'],
             [subject: 'PL3', object: '', present: 'aninvwia', habitual: 'aninvwisgoi', remote_past: 'unihnvwanvi', imperative: 'anihnvwvga', infinitive: 'unihnvwodi'],
             [subject: 'PL1INCL', object: '', present: 'idinvwia', habitual: 'idinvwisgoi', remote_past: 'igihnvwanvi', imperative: 'idihnvwvga', infinitive: 'igihnvwodi']
         ]

@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72349) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72349 (entrya ahileha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class AhilehaSpec extends VerbBaseSpec {
         definition: "S/he Has a Vehicle",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiileha'],
+                [subject: 'SG1', object: '', present: 'tsiileha'],
             // tio 16Nov26: the yaml extraction cited only the SG1 row and
             // carried junk 'x' remote/imperative cells. SG1 'jiileha' restored
             // as the first-person row and the SG3 citation added from CED
@@ -20,7 +21,7 @@ class AhilehaSpec extends VerbBaseSpec {
             // possession of a vehicle"; infinitive 'uhilvsdi'; remote/imperative
             // are '-----' in CED, i.e. unattested, so not cited here).
             [subject: 'SG3', object: '', habitual: 'ahilehoi', imperative: '', infinitive: 'uhilvsdi', present: 'ahileha', remote_past: ''],
-            [subject: 'SG1', object: '', present: 'jiileha', habitual: 'jiilehoi', infinitive: 'agihilvsdi'],
+            [subject: 'SG1', object: '', present: 'tsiileha', habitual: 'jiilehoi', infinitive: 'agihilvsdi'],
         ]
     ]
 

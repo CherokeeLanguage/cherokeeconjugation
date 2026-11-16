@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73976) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73976 (entrya uwaya) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,9 +13,9 @@ class UwayaSpec extends VerbBaseSpec {
         definition: "Have (long)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agwvya'],
-            [subject: 'SG1', object: '', present: 'agwvya', habitual: 'agwvyoi', remote_past: 'agwvyvi', imperative: 'agwvyesdi', infinitive: 'agwvdisdi'],
-            [subject: 'SG3', object: '', habitual: 'uwayoi', imperative: 'jvyesdi', infinitive: '', present: 'uwaya', remote_past: 'uwayvi'],
+                [subject: 'SG1', object: '', present: 'aquvya'],
+            [subject: 'SG1', object: '', present: 'aquvya', habitual: 'agwvyoi', remote_past: 'agwvyvi', imperative: 'agwvyesdi', infinitive: 'agwvdisdi'],
+            [subject: 'SG3', object: '', habitual: 'uwayoi', imperative: 'tsvyesdi', infinitive: '', present: 'uwaya', remote_past: 'uwayvi'],
             [subject: 'SG3', object: '', present: 'uwaya', habitual: 'uwayoi', remote_past: 'uwayvi', imperative: 'uwayesdi', infinitive: 'udisdi'],
             [subject: 'SG3', object: '', present: 'unvya', habitual: 'unvyoi', remote_past: 'unvyvi', imperative: 'unvyesdi', infinitive: 'unvdisdi']
         ]

@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73115) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73115 (entrya ganela) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class GanelaSpec extends VerbBaseSpec {
         definition: "Living At",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jinela'],
+                [subject: 'SG1', object: '', present: 'tsinela'],
             [subject: 'SG3', object: '', habitual: 'ganeloi', imperative: 'hinelesdi', infinitive: '', present: 'ganela', remote_past: '']
         ]
     ]

@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73888) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73888 (entrya ulsihga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class UlsihgaSpec extends VerbBaseSpec {
         definition: "Dark (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', habitual: 'ulsihgoi', imperative: 'jalsihgesdi', infinitive: '', present: 'ulsihga', remote_past: 'ulsihgvi']
+            [subject: 'SG3', object: '', habitual: 'ulisigoi', imperative: 'tsalisigesdi', infinitive: '', present: 'ulisiga', remote_past: 'ulisigvi']
         ]
     ]
 

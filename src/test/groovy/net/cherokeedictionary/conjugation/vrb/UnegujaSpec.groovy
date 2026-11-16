@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73905) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73905 (entrya uneguja) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class UnegujaSpec extends VerbBaseSpec {
         definition: "Mean",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agineguja'],
-            [subject: 'SG1', object: '', present: 'agineguja', habitual: 'aginegujoi', remote_past: 'aginegujvi', imperative: 'aginegujesdi', infinitive: 'x'],
+                [subject: 'SG1', object: '', present: 'aginegutsa'],
+            [subject: 'SG1', object: '', present: 'aginegutsa', habitual: 'aginegujoi', remote_past: 'aginegujvi', imperative: 'aginegujesdi', infinitive: 'x'],
             [subject: 'SG2', object: '', present: 'janeguja', habitual: 'janegujoi', remote_past: 'janegujvi', imperative: 'janegujesdi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'unegujoi', imperative: 'janegujesdi', infinitive: '----', present: 'uneguja', remote_past: 'unegujvi'],
+            [subject: 'SG3', object: '', habitual: 'unegutsoi', imperative: 'tsanegutsesdi', infinitive: '----', present: 'unegutsa', remote_past: 'unegutsvi'],
             [subject: 'PL3', object: '', present: 'unineguja', habitual: 'uninegujoi', remote_past: 'uninegujvi', imperative: 'uninegujesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igineguja', habitual: 'iginegujoi', remote_past: 'iginegujvi', imperative: 'iginegujesdi', infinitive: '']
         ]

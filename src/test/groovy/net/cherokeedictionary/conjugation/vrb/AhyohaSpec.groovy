@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72410) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72410 (entrya ahyoha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AhyohaSpec extends VerbBaseSpec {
         definition: "Looking for Him",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyoha'],
+                [subject: 'SG1', object: '', present: 'tsiyoha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyoha', habitual: 'jiyohoi', remote_past: 'jiyalvi', imperative: 'jiyga', infinitive: 'jiysdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hihyoha', habitual: 'hihyohoi', remote_past: 'hiyalvi', imperative: 'hiyhga', infinitive: 'hiysdi'],
-            [subject: 'SG3', object: '', habitual: 'ahyohoi', imperative: 'hiyhga', infinitive: 'uysdi', present: 'ahyoha', remote_past: 'uhyalvi'],
+            [subject: 'SG3', object: '', habitual: 'ayohoi', imperative: 'hiyoga', infinitive: 'uyasdi', present: 'ayoha', remote_past: 'uyalvi'],
             [subject: 'PL3', object: 'SG3AN', present: 'anihyoha', habitual: 'anihyohoi', remote_past: 'unihyalvi', imperative: 'aniyhga', infinitive: 'uniysdi'],
             [subject: 'PL1INCL', object: 'SG3AN', present: 'edihyoha', habitual: 'edihyohoi', remote_past: 'edihyalvi', imperative: 'ediyhga', infinitive: 'ediysdi']
         ]
@@ -31,26 +32,26 @@ class AhyohaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyohoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyalvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyalvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiysdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyasdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyoha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyohoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "yalvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyalvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiysdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "yasdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "gayoha"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "ayohoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uyalvi"
         "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "ayalvi"
-        "SG3" | "SG3AN" | Tense.INFINITIVE      | "uysdi"
+        "SG3" | "SG3AN" | Tense.INFINITIVE      | "uyasdi"
         "PL3" | "SG3AN" | Tense.PRESENT         | "aniyoha"
         "PL3" | "SG3AN" | Tense.HABITUAL        | "aniyohoi"
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "aniyalvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "aniyalvi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniysdi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "aniyasdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "ediyoha"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "ediyohoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "yalvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "ediyalvi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediysdi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "yasdi"
     }
 }

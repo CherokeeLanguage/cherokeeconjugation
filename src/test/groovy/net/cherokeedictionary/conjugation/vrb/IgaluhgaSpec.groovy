@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73358) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73358 (entrya igaluhga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,8 +13,8 @@ class IgaluhgaSpec extends VerbBaseSpec {
         definition: "Returning (131)*",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'ijiluga'],
-            [subject: 'SG3', object: '', habitual: 'igaluhgoi', imperative: 'jihiluhgi', infinitive: 'vuluhisdi, uluhisdi', present: 'igaluhga', remote_past: 'vuluhjvi, uluhjvi'],
+                [subject: 'SG1', object: '', present: 'itsiluga'],
+            [subject: 'SG3', object: '', habitual: 'igalugoi', imperative: 'tsihilugi', infinitive: 'vuluhisdi, uluhisdi', present: 'igaluga', remote_past: 'vulutsvi, ulutsvi'],
             [subject: 'SG3', object: '', present: 'ihiluhga', habitual: 'ihiluhgoi', remote_past: 'vjaluhjvi', imperative: 'jihiluhgi', infinitive: 'vjaluhisdi'],
             [subject: 'SG3', object: '', present: 'ianiluhga', habitual: 'ianiluhgoi', remote_past: 'vuniluhjvi', imperative: 'jianiluhgi', infinitive: 'vuniluhisdi'],
             [subject: 'SG3', object: '', present: 'iidiluhga', habitual: 'iidiluhgoi', remote_past: 'vigiluhjvi', imperative: 'jiidiluhgi', infinitive: 'vigiluhisdi']

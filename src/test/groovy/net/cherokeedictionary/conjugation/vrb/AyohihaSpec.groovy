@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72711) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72711 (entrya ayohiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AyohihaSpec extends VerbBaseSpec {
         definition: "Shooting",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyoiha, jiyoiha'],
+                [subject: 'SG1', object: '', present: 'tsiyoiha, tsiyoiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyoiha', habitual: 'jiyoihoi', remote_past: 'agiyohlvi', imperative: 'jiyoa', infinitive: 'agiyosdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyohiha', habitual: 'hiyohihoi', remote_past: 'jayohlvi', imperative: 'hiyoa', infinitive: '/'],
-            [subject: 'SG3', object: '', habitual: 'ayohihoi', imperative: 'hiyoa, hiyoha', infinitive: 'uyosdi', present: 'ayohiha', remote_past: 'uyohlvi'],
+            [subject: 'SG3', object: '', habitual: 'ayohihoi', imperative: 'hiyoa, hiyoha', infinitive: 'uyosdi', present: 'ayohiha', remote_past: 'uyotlvi'],
             [subject: 'PL3', object: 'SG3AN', present: 'aniyohiha', habitual: 'aniyohihoi', remote_past: 'uniyohlvi', imperative: 'aniyoha', infinitive: 'uniyosdi'],
             [subject: 'PL1INCL', object: 'SG3AN', present: 'idiyohiha', habitual: 'idiyohihoi', remote_past: 'igiyohlvi', imperative: 'idiyoha', infinitive: 'igiyosdi']
         ]

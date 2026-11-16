@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72405) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72405 (entrya ahyeha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AhyehaSpec extends VerbBaseSpec {
         definition: "Have With / Hold in Hand (neutral)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyeha'],
-            [subject: 'SG1', object: '', present: 'jiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
+                [subject: 'SG1', object: '', present: 'tsiyeha'],
+            [subject: 'SG1', object: '', present: 'tsiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
             [subject: 'SG2', object: '', present: 'hihyeha', habitual: 'hihyehoi', remote_past: 'hihyehvi', imperative: 'hihyehesdi', infinitive: 'hihyehi'],
-            [subject: 'SG3', object: '', habitual: 'ahyehoi', imperative: '', infinitive: '', present: 'ahyeha', remote_past: 'ahyehvi'],
+            [subject: 'SG3', object: '', habitual: 'ayehoi', imperative: '', infinitive: '', present: 'ayeha', remote_past: 'ayehvi'],
             [subject: 'PL3', object: '', present: 'anihyeha', habitual: 'anihyehoi', remote_past: 'anihyehvi', imperative: 'anihyehesdi', infinitive: 'anihyehi']
         ]
     ]

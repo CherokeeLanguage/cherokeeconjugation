@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73840) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73840 (entrya ujaa) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class UjaaSpec extends VerbBaseSpec {
         definition: "Inside",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agwajaa'],
-            [subject: 'SG1', object: '', present: 'agwajaa', habitual: 'agwajaoi', remote_past: 'agwajavi', imperative: 'agwajaesdi', infinitive: 'X'],
+                [subject: 'SG1', object: '', present: 'aquatsaa'],
+            [subject: 'SG1', object: '', present: 'aquatsaa', habitual: 'agwajaoi', remote_past: 'agwajavi', imperative: 'agwajaesdi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'jajaa', habitual: 'jajaoi', remote_past: 'jajavi', imperative: 'jajaesdi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'ujaoi', imperative: 'jajaesdi', infinitive: '', present: 'ujaa', remote_past: 'ujavi'],
+            [subject: 'SG3', object: '', habitual: 'utsaoi', imperative: 'tsatsaesdi', infinitive: '', present: 'utsaa', remote_past: 'utsavi'],
             [subject: 'PL3', object: '', present: 'unajaa', habitual: 'unajaoi', remote_past: 'unajavi', imperative: 'unajaesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igajaa', habitual: 'igajaoi', remote_past: 'igajavi', imperative: 'igajaesdi', infinitive: '']
         ]

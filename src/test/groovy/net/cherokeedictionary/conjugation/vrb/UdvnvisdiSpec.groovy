@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73772) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73772 (entrya udvnvisdi) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class UdvnvisdiSpec extends VerbBaseSpec {
         definition: "Willing",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agwadvnvisdi'],
-            [subject: 'SG1', object: '', present: 'agwadvnvisdi', habitual: 'agwadvnvisdoi', remote_past: 'agwadvnvisdvi', imperative: 'agwadvnvisdesdi', infinitive: 'X'],
+                [subject: 'SG1', object: '', present: 'aquadvnvisdi'],
+            [subject: 'SG1', object: '', present: 'aquadvnvisdi', habitual: 'agwadvnvisdoi', remote_past: 'agwadvnvisdvi', imperative: 'agwadvnvisdesdi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'jadvnvisdi', habitual: 'jadvnvisdoi', remote_past: 'jadvnvisdvi', imperative: 'jadvnvisdesdi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'udvnvisdoi', imperative: 'jadvnvisdesdi', infinitive: '', present: 'udvnvisdi', remote_past: 'udvnvisdvi'],
+            [subject: 'SG3', object: '', habitual: 'udvnvisdoi', imperative: 'tsadvnvisdesdi', infinitive: '', present: 'udvnvisdi', remote_past: 'udvnvisdvi'],
             [subject: 'PL3', object: '', present: 'unadvnvisdi', habitual: 'unadvnvisdoi', remote_past: 'unadvnvisdvi', imperative: 'unadvnvisdesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igadvnvisdi', habitual: 'igadvnisdoi', remote_past: 'igadvnvisdvi', imperative: 'igadvnvisdesdi', infinitive: '']
         ]

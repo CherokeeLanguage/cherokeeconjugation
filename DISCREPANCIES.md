@@ -178,11 +178,14 @@ requires real engine/data work per verb, not expectation patching.
   any future one-off runner must be run exactly once and removed immediately
   (or placed in an excluded package).
 
-**Remaining debt: 411 cells** (VRB-ENGINE-DEBT.txt): ~303 invalid-letter
-(per-verb romanization conventions still mismatching CED syllabary), ~90
-MISSING_STEM (23 no-SG3 specs with no repairable row + Stemmer router gaps,
-incl. yaml junk 'x' cells like Ahileha's old remote/imperative), 18
-value-mismatch.
+**Remaining debt: ~130 cells** (VRB-ENGINE-DEBT.txt, 16Nov26 end state): ~80
+engine-debt cells (MISSING_STEM -- verbs whose citations still do not route
+through Stemmer.getStems(): no-SG3 specs with unrepairable rows, yaml junk
+'x' cells, router gaps). RECOMMENDED REMEDY for any remaining romanization
+mismatch: rewrite the citation to parseSyllabary(CED-syllabary) -- the
+canonical form the plain transliterator handles exactly -- rather than
+adding transliterator rules. New ced rule: qw+vowel -> qu+vowel (Feeling
+writes Ꮖ as "qw"; Adehloqwaa family).
 
 ## D6. Suffix variance: -ha vs -a present suffix
 

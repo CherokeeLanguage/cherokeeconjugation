@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 72591) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72591 (entrya asgaga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class AsgagaSpec extends VerbBaseSpec {
         definition: "S/hes Reprimanding Him",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jisgaga'],
-            [subject: 'SG1', object: '', present: 'jisgaga', habitual: 'jisgagoi', remote_past: 'jisgajvi', imperative: 'jisgagi', infinitive: 'jisgaysdi'],
+                [subject: 'SG1', object: '', present: 'tsisgaga'],
+            [subject: 'SG1', object: '', present: 'tsisgaga', habitual: 'jisgagoi', remote_past: 'jisgajvi', imperative: 'jisgagi', infinitive: 'jisgaysdi'],
             [subject: 'SG2', object: '', present: 'hisgaga', habitual: 'hisgagoi', remote_past: 'hisgajvi', imperative: 'hisgagi', infinitive: '/'],
-            [subject: 'SG3', object: '', habitual: 'asgagoi', imperative: 'hisgagi, hisgagi', infinitive: 'usgasdi', present: 'asgaga', remote_past: 'usgajvi'],
+            [subject: 'SG3', object: '', habitual: 'asgagoi', imperative: 'hisgagi, hisgagi', infinitive: 'usgasdi', present: 'asgaga', remote_past: 'usgatsvi'],
             [subject: 'PL3', object: '', present: 'anisgaga', habitual: 'anisgagoi', remote_past: 'unisgajvi', imperative: 'anisgagi', infinitive: 'unisgaysdi'],
             [subject: 'PL1INCL', object: '', present: 'edisgaga', habitual: 'edisgagoi', remote_past: 'edisgajvi', imperative: 'edisgagi', infinitive: 'edisgaysdi']
         ]

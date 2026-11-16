@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73552) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73552 (entrya nania) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,10 +13,10 @@ class NaniaSpec extends VerbBaseSpec {
         definition: "There Are (#)",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'nojia'],
+                [subject: 'SG1', object: '', present: 'notsia'],
             [subject: 'SG1', object: '', present: 'nosdia', habitual: 'nosdioi', remote_past: 'X', imperative: 'nosdiesdi', infinitive: 'There'],
             [subject: 'SG2', object: '', present: 'nojia', habitual: 'nojioi', remote_past: 'nojiesdi', imperative: 'There', infinitive: 'Are'],
-            [subject: 'SG3', object: '', habitual: 'nanioi', imperative: 'nijiesdi', infinitive: '----', present: 'nania', remote_past: '----'],
+            [subject: 'SG3', object: '', habitual: 'nanioi', imperative: 'nitsiesdi', infinitive: '----', present: 'nania', remote_past: '----'],
             [subject: 'PL3', object: '', present: 'nijia', habitual: 'nijioi', remote_past: 'nijiesdi', imperative: 'There', infinitive: 'Are'],
             [subject: 'PL1INCL', object: '', present: 'nania', habitual: 'nanioi', remote_past: 'naniesdi', imperative: 'There', infinitive: 'Are']
         ]

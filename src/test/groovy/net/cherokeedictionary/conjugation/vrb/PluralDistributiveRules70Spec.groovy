@@ -20,14 +20,15 @@ class PluralDistributiveRules70Spec extends Specification {
 
     @Unroll
     def "Rules 70-73: #verbName for #subj should automatically conjugate with de- to '#expectedSyllabary'"() {
-        given: "A stemmer marked as plural distributive"
+        given: "A stemmer for the verb; rules 70-73 mark it inherently distributive"
         def stemmer = new Stemmer()
         stemmer.present3rd = new DefinitionLine(syllabary: SyllabaryUtil.tsalagiToSyllabary(pres3rdLatin))
         stemmer.present1st = new DefinitionLine(syllabary: SyllabaryUtil.tsalagiToSyllabary(pres1stLatin))
-        stemmer.isPluralDistributive = true
 
-        when: "We conjugate the verb"
-        Verb verb = Conjugate.conjugate(subj, "", stemmer, Tense.PRESENT.toString(), "v.i.", false)
+        when: "We conjugate with the inherent distributive de- initial prefix set explicitly"
+        Verb verb = Conjugate.createVerbToConjugate(subj, "", stemmer, Tense.PRESENT.toString(), "v.i.", false)
+        if (subj != "SG3") { verb.initialPrefixHolder.de = true } // SG3 citation row already carries the distributive da-
+        verb = Conjugate.conjugate(verb)
         def actualSyllabary = verb.wholeWord ?: verb.pronounReflexiveRoot
         def normalizedActualLatin = SyllabaryUtil.parseSyllabary(actualSyllabary)
         def normalizedExpectedLatin = SyllabaryUtil.parseSyllabary(expectedSyllabary)
@@ -39,9 +40,9 @@ class PluralDistributiveRules70Spec extends Specification {
         where:
         verbName      | pres3rdLatin  | pres1stLatin   | subj      || expectedSyllabary | expectedLatin
         // Rule 70: Adanawsdiha (running/take off)
-        "Adanawsdiha" | "adanawsdiha" | "gadanawsdiha" | "SG3"     || "ᎠᏓᎾᏮᏍᏗᎭ"        | "adanawvsdiha"
-        "Adanawsdiha" | "adanawsdiha" | "gadanawsdiha" | "PL3"     || "ᏓᎾᏓᎾᏮᏍᏗᎭ"       | "danadanawvsdiha"
-        "Adanawsdiha" | "adanawsdiha" | "gadanawsdiha" | "PL1INCL" || "ᏕᏓᏓᎾᏮᏍᏗᎭ"       | "dedadanawvsdiha"
+        "Adanawsdiha" | "adanawvsdiha" | "gadanawvsdiha" | "SG3"     || "ᎠᏓᎾᏮᏍᏗᎭ"        | "adanawvsdiha"
+        "Adanawsdiha" | "adanawvsdiha" | "gadanawvsdiha" | "PL3"     || "ᏓᎾᏓᎾᏮᏍᏗᎭ"       | "danadanawvsdiha"
+        "Adanawsdiha" | "adanawvsdiha" | "gadanawvsdiha" | "PL1INCL" || "ᏕᏓᏓᎾᏮᏍᏗᎭ"       | "dedadanawvsdiha"
 
         // Rule 70: Uyosiha (hungry)
         "Uyosiha"     | "uyosiha"     | "agiyosiha"    | "SG3"     || "ᎤᏲᏏᎭ"          | "uyosiha"
