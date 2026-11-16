@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73894 (entrya unaa) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UnaaSpec extends VerbBaseSpec {
         definition: "Have (flexible)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'aginaa'],
             [subject: 'SG1', object: '', present: 'aginaa', habitual: 'aginaoi', remote_past: 'aginavi', imperative: 'aginaesdi', infinitive: 'aginvdi'],
             [subject: 'SG2', object: '', present: 'janaa', habitual: 'janaoi', remote_past: 'janavi', imperative: 'janaesdi', infinitive: 'janvdi'],
-            [subject: 'SG3', object: '', present: 'unaa', habitual: 'unaoi', remote_past: 'unavi', imperative: 'unaesdi', infinitive: 'unvdi'],
+            [subject: 'SG3', object: '', habitual: 'unaoi', imperative: 'janaesdi', infinitive: '----', present: 'unaa', remote_past: 'unavi'],
             [subject: 'PL3', object: '', present: 'uninaa', habitual: 'uninaoi', remote_past: 'uninavi', imperative: 'uninaesdi', infinitive: 'uninvdi']
         ]
     ]
@@ -27,22 +29,22 @@ class UnaaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "aginaa"
         "SG1" | "" | Tense.HABITUAL        | "aginaoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginavi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "aginaesdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "aginavi"
         "SG1" | "" | Tense.INFINITIVE      | "aginvdi"
-        "SG2" | "" | Tense.PRESENT         | "janaa"
-        "SG2" | "" | Tense.HABITUAL        | "janaoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janavi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "janaesdi"
-        "SG2" | "" | Tense.INFINITIVE      | "janvdi"
+        "SG2" | "" | Tense.PRESENT         | "tsanaa"
+        "SG2" | "" | Tense.HABITUAL        | "tsanaoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanavi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanavi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanvdi"
         "SG3" | "" | Tense.PRESENT         | "unaa"
         "SG3" | "" | Tense.HABITUAL        | "unaoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unavi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "unaesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "unavi"
         "SG3" | "" | Tense.INFINITIVE      | "unvdi"
         "PL3" | "" | Tense.PRESENT         | "uninaa"
         "PL3" | "" | Tense.HABITUAL        | "uninaoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninavi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "uninaesdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "uninavi"
         "PL3" | "" | Tense.INFINITIVE      | "uninvdi"
     }
 }

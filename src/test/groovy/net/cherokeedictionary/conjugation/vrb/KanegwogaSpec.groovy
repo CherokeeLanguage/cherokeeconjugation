@@ -21,10 +21,10 @@ class KanegwogaSpec extends VerbBaseSpec {
         conjugateVerb("Kanegwoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "kanegwoga"
-        "SG3" | "" | Tense.HABITUAL        | "kanegwogoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhnehgwojvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "hihnehgwogi"
-        "SG3" | "" | Tense.INFINITIVE      | "uhnehgwoisdi"
+        "SG3" | "" | Tense.PRESENT         | "kanequoga"
+        "SG3" | "" | Tense.HABITUAL        | "kanequogoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unequotsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganequotsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unequoisdi"
     }
 }

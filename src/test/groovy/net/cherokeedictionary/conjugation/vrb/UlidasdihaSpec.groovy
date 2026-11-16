@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73869 (entrya ulidasdiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UlidasdihaSpec extends VerbBaseSpec {
         definition: "S/hes Making a Mistake",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agilidasdiha'],
             [subject: 'SG1', object: '', present: 'agilidasdiha', habitual: 'agilidasdisgoi', remote_past: 'agilidastanvi', imperative: 'agilidasda', infinitive: 'agilidasdohdi'],
             [subject: 'SG2', object: '', present: 'jalidasdiha', habitual: 'jalidasdisgoi', remote_past: 'jalidastanvi', imperative: 'jalidasda', infinitive: 'jalidasdohdi'],
-            [subject: 'SG3', object: '', present: 'ulidasdiha', habitual: 'ulidasdisgoi', remote_past: 'ulidastanvi', imperative: 'ulidasda', infinitive: 'ulidasdohdi'],
+            [subject: 'SG3', object: '', habitual: 'ulidasdisgoi', imperative: 'jalidasda', infinitive: 'ulidasdohdi', present: 'ulidasdiha', remote_past: 'ulidastanvi'],
             [subject: 'PL3', object: '', present: 'uniladasdiha', habitual: 'unilidasdisgoi', remote_past: 'unilidastanvi', imperative: 'unilidasda', infinitive: 'unilidasdohdi'],
             [subject: 'PL1INCL', object: '', present: 'igiladasdiha', habitual: 'igilidasdisgoi', remote_past: 'igilidastanvi', imperative: 'igilidasda', infinitive: 'igilidasdohdi']
         ]
@@ -28,27 +30,27 @@ class UlidasdihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "agilidasdiha"
         "SG1" | "" | Tense.HABITUAL        | "agilidasdisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agilidastanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "agilidasda"
-        "SG1" | "" | Tense.INFINITIVE      | "agilidasdohdi"
-        "SG2" | "" | Tense.PRESENT         | "jalidasdiha"
-        "SG2" | "" | Tense.HABITUAL        | "jalidasdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jalidastanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "jalidasda"
-        "SG2" | "" | Tense.INFINITIVE      | "jalidasdohdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "agilidastanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agilidasdodi"
+        "SG2" | "" | Tense.PRESENT         | "tsalidasdiha"
+        "SG2" | "" | Tense.HABITUAL        | "tsalidasdisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalidastanvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsalidastanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalidasdodi"
         "SG3" | "" | Tense.PRESENT         | "ulidasdiha"
         "SG3" | "" | Tense.HABITUAL        | "ulidasdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulidastanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulidasda"
-        "SG3" | "" | Tense.INFINITIVE      | "ulidasdohdi"
-        "PL3" | "" | Tense.PRESENT         | "uniladasdiha"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulidastanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulidasdodi"
+        "PL3" | "" | Tense.PRESENT         | "unilidasdiha"
         "PL3" | "" | Tense.HABITUAL        | "unilidasdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unilidastanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unilidasda"
-        "PL3" | "" | Tense.INFINITIVE      | "unilidasdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igiladasdiha"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unilidastanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unilidasdodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igilidasdiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igilidasdisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igilidastanvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igilidasda"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igilidasdohdi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igilidastanvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igilidasdodi"
     }
 }

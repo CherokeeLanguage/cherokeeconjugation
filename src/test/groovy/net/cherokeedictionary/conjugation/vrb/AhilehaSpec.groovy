@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72349 (entrya ahileha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,15 @@ class AhilehaSpec extends VerbBaseSpec {
         definition: "S/he Has a Vehicle",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'jiileha', habitual: 'jiilehoi', remote_past: 'x', imperative: 'x', infinitive: 'agihilvsdi']
+                [subject: 'SG1', object: '', present: 'jiileha'],
+            // tio 16Nov26: the yaml extraction cited only the SG1 row and
+            // carried junk 'x' remote/imperative cells. SG1 'jiileha' restored
+            // as the first-person row and the SG3 citation added from CED
+            // cedEntries.csv id 72349 (3sg present 'ahileha' ᎠᎯᎴᎭ "he has
+            // possession of a vehicle"; infinitive 'uhilvsdi'; remote/imperative
+            // are '-----' in CED, i.e. unattested, so not cited here).
+            [subject: 'SG3', object: '', habitual: 'ahilehoi', imperative: '', infinitive: 'uhilvsdi', present: 'ahileha', remote_past: ''],
+            [subject: 'SG1', object: '', present: 'jiileha', habitual: 'jiilehoi', infinitive: 'agihilvsdi'],
         ]
     ]
 
@@ -21,10 +30,10 @@ class AhilehaSpec extends VerbBaseSpec {
         conjugateVerb("Ahileha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiileha"
-        "SG1" | "" | Tense.HABITUAL        | "jiilehoi"
+        "SG1" | "" | Tense.PRESENT         | "tsihileha"
+        "SG1" | "" | Tense.HABITUAL        | "tsihilehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "x"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "x"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihile"
         "SG1" | "" | Tense.INFINITIVE      | "agihilvsdi"
     }
 }

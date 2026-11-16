@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73152 (entrya gansanea) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,8 +12,9 @@ class GansaneaSpec extends VerbBaseSpec {
         definition: "Pulling",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinasanea, jinasanea'],
             [subject: 'SG1', object: '', present: 'jinasanea', habitual: 'jinasanesgoi', remote_past: 'aginsanesvi', imperative: 'jinasanagi', infinitive: 'aginsanesdi'],
-            [subject: 'SG1', object: '', present: 'gansanea', habitual: 'gansanesgoi', remote_past: 'unsanesvi', imperative: 'gansanagi', infinitive: 'unsanesdi'],
+            [subject: 'SG3', object: '', habitual: 'gansanesgoi', imperative: 'hinasanagi, hinsanagi', infinitive: 'unsanesdi', present: 'gansanea', remote_past: 'unsanesvi'],
             [subject: 'PL3', object: '', present: 'aninsanea', habitual: 'aninsanesgoi', remote_past: 'uninsanesvi', imperative: 'aninsanagi', infinitive: 'uninsanesdi'],
             [subject: 'PL1INCL', object: '', present: 'idinsanea', habitual: 'idinsanesgoi', remote_past: 'iginsanesvi', imperative: 'idinsanagi', infinitive: 'iginsanesdi']
         ]
@@ -24,25 +26,25 @@ class GansaneaSpec extends VerbBaseSpec {
         conjugateVerb("Gansanea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinasanea"
-        "SG1" | "" | Tense.HABITUAL        | "jinasanesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginsanesvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinasanagi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginsanesdi"
-        "SG1" | "" | Tense.PRESENT         | "gansanea"
-        "SG1" | "" | Tense.HABITUAL        | "gansanesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unsanesvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gansanagi"
-        "SG1" | "" | Tense.INFINITIVE      | "unsanesdi"
-        "PL3" | "" | Tense.PRESENT         | "aninsanea"
-        "PL3" | "" | Tense.HABITUAL        | "aninsanesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninsanesvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninsanagi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninsanesdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idinsanea"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idinsanesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginsanesvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinsanagi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginsanesdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinasanea"
+        "SG1" | "" | Tense.HABITUAL        | "tsinasanesgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginasanesvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinasanesvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginasanesdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinasanea"
+        "SG1" | "" | Tense.HABITUAL        | "tsinasanesgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginasanesvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinasanesvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginasanesdi"
+        "PL3" | "" | Tense.PRESENT         | "aninasanea"
+        "PL3" | "" | Tense.HABITUAL        | "aninasanesgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninasanesvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninasanesvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninasanesdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idinasanea"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idinasanesgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginasanesvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinasanesvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginasanesdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73033 (entrya gahlvsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GahlvsgaSpec extends VerbBaseSpec {
         definition: "Put in Container (neutral)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jilvsga'],
             [subject: 'SG1', object: '', present: 'jilvsga', habitual: 'jilvsgoi', remote_past: 'agihlvanvi', imperative: 'jilvga', infinitive: 'agihldi'],
             [subject: 'SG2', object: '', present: 'hihlvsga', habitual: 'hihlvsgoi', remote_past: 'jahlanvi', imperative: 'hihlvga', infinitive: 'jahldi'],
-            [subject: 'SG1', object: '', present: 'gahlvsga', habitual: 'gahlvsgoi', remote_past: 'uhlanvi', imperative: 'wigahlvga', infinitive: 'uhldi'],
+            [subject: 'SG3', object: '', habitual: 'gahlvsgoi', imperative: 'hihlvna', infinitive: 'uhlvnhdi', present: 'gahlvsga', remote_past: 'uhlvhnvi'],
             [subject: 'PL3', object: '', present: 'anihlvsga', habitual: 'anihlvsgoi', remote_past: 'unihlanvi', imperative: 'wanihlvga', infinitive: 'unihldi']
         ]
     ]
@@ -24,25 +26,25 @@ class GahlvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Gahlvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jilvsga"
-        "SG1" | "" | Tense.HABITUAL        | "jilvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agihlvanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jilvga"
-        "SG1" | "" | Tense.INFINITIVE      | "agihldi"
-        "SG2" | "" | Tense.PRESENT         | "hihlvsga"
-        "SG2" | "" | Tense.HABITUAL        | "hihlvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jahlanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hihlvga"
-        "SG2" | "" | Tense.INFINITIVE      | "jahldi"
-        "SG1" | "" | Tense.PRESENT         | "gahlvsga"
-        "SG1" | "" | Tense.HABITUAL        | "gahlvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uhlanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigahlvga"
-        "SG1" | "" | Tense.INFINITIVE      | "uhldi"
-        "PL3" | "" | Tense.PRESENT         | "anihlvsga"
-        "PL3" | "" | Tense.HABITUAL        | "anihlvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unihlanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "wanihlvga"
-        "PL3" | "" | Tense.INFINITIVE      | "unihldi"
+        "SG1" | "" | Tense.PRESENT         | "tsitlvsga"
+        "SG1" | "" | Tense.HABITUAL        | "tsitlvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitlvnvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlvnvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agitlvnidi"
+        "SG2" | "" | Tense.PRESENT         | "hitlvsga"
+        "SG2" | "" | Tense.HABITUAL        | "hitlvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlvnvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hitlvnvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatlvnidi"
+        "SG1" | "" | Tense.PRESENT         | "tsitlvsga"
+        "SG1" | "" | Tense.HABITUAL        | "tsitlvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitlvnvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlvnvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agitlvnidi"
+        "PL3" | "" | Tense.PRESENT         | "anitlvsga"
+        "PL3" | "" | Tense.HABITUAL        | "anitlvsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unitlvnvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anitlvnvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unitlvnidi"
     }
 }

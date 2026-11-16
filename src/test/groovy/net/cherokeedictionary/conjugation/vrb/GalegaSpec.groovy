@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73055 (entrya galega) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GalegaSpec extends VerbBaseSpec {
         definition: "Climbing",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jilega'],
             [subject: 'SG1', object: '', present: 'jilega', habitual: 'jilegoi', remote_past: 'agilvsvi', imperative: 'jiluga', infinitive: 'agilvsdi'],
             [subject: 'SG2', object: '', present: 'hilega', habitual: 'hilegoi', remote_past: 'jalvsvi', imperative: 'hiluga', infinitive: 'jalvsdi'],
-            [subject: 'SG3', object: '', present: 'galega', habitual: 'galegoi', remote_past: 'ulvsvi', imperative: 'galuga', infinitive: 'ulvsdi'],
+            [subject: 'SG3', object: '', habitual: 'galegoi', imperative: 'hiluga', infinitive: 'ulvsdi', present: 'galega', remote_past: 'ulvsvi'],
             [subject: 'PL3', object: '', present: 'anilega', habitual: 'anilegoi', remote_past: 'unilvsvi', imperative: 'aniluga', infinitive: 'unilvsdi'],
             [subject: 'PL1INCL', object: '', present: 'idilega', habitual: 'idilegoi', remote_past: 'igilvsvi', imperative: 'idiluga', infinitive: 'igilvsdi']
         ]
@@ -25,30 +27,30 @@ class GalegaSpec extends VerbBaseSpec {
         conjugateVerb("Galega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jilega"
-        "SG1" | "" | Tense.HABITUAL        | "jilegoi"
+        "SG1" | "" | Tense.PRESENT         | "tsilega"
+        "SG1" | "" | Tense.HABITUAL        | "tsilegoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agilvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jiluga"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsilvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "agilvsdi"
         "SG2" | "" | Tense.PRESENT         | "hilega"
         "SG2" | "" | Tense.HABITUAL        | "hilegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jalvsvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hiluga"
-        "SG2" | "" | Tense.INFINITIVE      | "jalvsdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalvsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hilvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalvsdi"
         "SG3" | "" | Tense.PRESENT         | "galega"
         "SG3" | "" | Tense.HABITUAL        | "galegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulvsvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "galuga"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "galvsvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulvsdi"
         "PL3" | "" | Tense.PRESENT         | "anilega"
         "PL3" | "" | Tense.HABITUAL        | "anilegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unilvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aniluga"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anilvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unilvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idilega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idilegoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igilvsvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiluga"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idilvsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igilvsdi"
     }
 }

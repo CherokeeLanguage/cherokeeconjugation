@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72466 (entrya aktahva) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AktahvaSpec extends VerbBaseSpec {
         definition: "S/hes Turning Back / S/hes Turning",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'gagatahva'],
             [subject: 'SG1', object: '', present: 'gagatahva', habitual: 'gagatahvsgoi', remote_past: 'agwaktahvsvi', imperative: 'gagatahvna', infinitive: 'agwaktahvsdi'],
             [subject: 'SG2', object: '', present: 'haktahva', habitual: 'haktahvsgoi', remote_past: 'jaktahvsvi', imperative: 'haktahvna', infinitive: 'jaktahvsdi'],
-            [subject: 'SG3', object: '', present: 'aktahva', habitual: 'aktahvsgoi', remote_past: 'uktahvsvi', imperative: 'aktahvna', infinitive: 'uktahvsdi'],
+            [subject: 'SG3', object: '', habitual: 'aktahvsgoi', imperative: 'haktahvna', infinitive: 'uktahvsdi', present: 'aktahva', remote_past: 'uktahvsvi'],
             [subject: 'PL3', object: '', present: 'anaktahva', habitual: 'anaktahvsgoi', remote_past: 'unaktahvsvi', imperative: 'anaktahvna', infinitive: 'unaktahvsdi'],
             [subject: 'PL1INCL', object: '', present: 'idaktahva', habitual: 'idaktahvsgoi', remote_past: 'igaktahvsvi', imperative: 'idaktahvna', infinitive: 'igaktahvsdi']
         ]
@@ -25,30 +27,30 @@ class AktahvaSpec extends VerbBaseSpec {
         conjugateVerb("Aktahva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gagatahva"
-        "SG1" | "" | Tense.HABITUAL        | "gagatahvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwaktahvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gagatahvna"
-        "SG1" | "" | Tense.INFINITIVE      | "agwaktahvsdi"
-        "SG2" | "" | Tense.PRESENT         | "haktahva"
-        "SG2" | "" | Tense.HABITUAL        | "haktahvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jaktahvsvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "haktahvna"
-        "SG2" | "" | Tense.INFINITIVE      | "jaktahvsdi"
-        "SG3" | "" | Tense.PRESENT         | "aktahva"
-        "SG3" | "" | Tense.HABITUAL        | "aktahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uktahvsvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "aktahvna"
-        "SG3" | "" | Tense.INFINITIVE      | "uktahvsdi"
-        "PL3" | "" | Tense.PRESENT         | "anaktahva"
-        "PL3" | "" | Tense.HABITUAL        | "anaktahvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unaktahvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anaktahvna"
-        "PL3" | "" | Tense.INFINITIVE      | "unaktahvsdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idaktahva"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idaktahvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaktahvsvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaktahvna"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igaktahvsdi"
+        "SG1" | "" | Tense.PRESENT         | "gagitahva"
+        "SG1" | "" | Tense.HABITUAL        | "gagitahvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquagitahvsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gagitahvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquagitahvsdi"
+        "SG2" | "" | Tense.PRESENT         | "hagitahva"
+        "SG2" | "" | Tense.HABITUAL        | "hagitahvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsagitahvsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hagitahvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsagitahvsdi"
+        "SG3" | "" | Tense.PRESENT         | "agitahva"
+        "SG3" | "" | Tense.HABITUAL        | "agitahvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugitahvsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "agitahvsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugitahvsdi"
+        "PL3" | "" | Tense.PRESENT         | "anagitahva"
+        "PL3" | "" | Tense.HABITUAL        | "anagitahvsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unagitahvsvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anagitahvsvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unagitahvsdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idagitahva"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idagitahvsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igagitahvsvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idagitahvsvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igagitahvsdi"
     }
 }

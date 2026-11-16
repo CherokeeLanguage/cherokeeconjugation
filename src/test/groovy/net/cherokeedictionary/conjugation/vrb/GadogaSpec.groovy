@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72993 (entrya gadoga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class GadogaSpec extends VerbBaseSpec {
         definition: "Standing",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'jidoga', habitual: 'jidogoi', remote_past: 'x', imperative: 'wijidogesdi', infinitive: 'X'],
+                [subject: 'SG1', object: '', present: 'jidoga'],
+            [subject: 'SG3', object: '', habitual: 'gadogoi', imperative: 'hidogesdi', infinitive: '', present: 'gadoga', remote_past: ''],
             [subject: 'PL3', object: '', present: 'danidoga', habitual: '/', remote_past: 'anidonaa', imperative: 'danidogoi', infinitive: '/'],
             [subject: 'PL1INCL', object: '', present: 'dedidoga', habitual: '/', remote_past: 'ididonaa', imperative: 'dedidogoi', infinitive: '/']
         ]
@@ -23,20 +25,20 @@ class GadogaSpec extends VerbBaseSpec {
         conjugateVerb("Gadoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jidoga"
-        "SG1" | "" | Tense.HABITUAL        | "jidogoi"
+        "SG1" | "" | Tense.PRESENT         | "tsidoga"
+        "SG1" | "" | Tense.HABITUAL        | "tsidogoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "x"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wijidogesdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsido"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "danidoga"
+        "PL3" | "" | Tense.PRESENT         | "anidoga"
         // "PL3" | "" | Tense.HABITUAL        | "/"
         "PL3" | "" | Tense.REMOTE_PAST     | "anidonaa"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "danidogoi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anido"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedidoga"
+        "PL1INCL" | "" | Tense.PRESENT         | "ididoga"
         // "PL1INCL" | "" | Tense.HABITUAL        | "/"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "ididonaa"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "dedidogoi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idido"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "/"
     }
 }

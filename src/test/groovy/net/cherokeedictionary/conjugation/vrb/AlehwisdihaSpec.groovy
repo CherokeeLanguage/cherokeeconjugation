@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72497 (entrya alehwisdiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AlehwisdihaSpec extends VerbBaseSpec {
         definition: "Stopping (He/It Is)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'galewisdiha'],
             [subject: 'SG1', object: '', present: 'galewisdiha', habitual: 'galewisdisgoi', remote_past: 'agwalehwistanvi', imperative: 'galewisda', infinitive: 'agwalehwisdohdi'],
             [subject: 'SG2', object: '', present: 'halehwisdiha', habitual: 'halehwisdisgoi', remote_past: 'jalehwistanvi', imperative: 'halehwisda', infinitive: 'jalehwisdohdi'],
-            [subject: 'SG3', object: '', present: 'alehwisdiha', habitual: 'alehwisdisgoi', remote_past: 'ulehwistanvi', imperative: 'alehwisda', infinitive: 'ulehwisdohdi'],
+            [subject: 'SG3', object: '', habitual: 'alehwisdisgoi', imperative: 'halehwisda', infinitive: 'ulehwisdohdi', present: 'alehwisdiha', remote_past: 'ulehwistanvi'],
             [subject: 'PL3', object: '', present: 'analehwisdiha', habitual: 'analehwisdisgoi', remote_past: 'unalehwistanvi', imperative: 'analehwisda', infinitive: 'unalehwisdohdi'],
             [subject: 'PL1INCL', object: '', present: 'idalehwisdiha', habitual: 'idalehwisdisgoi', remote_past: 'igalehwistanvi', imperative: 'idalehwisda', infinitive: 'igalehwisdohdi']
         ]
@@ -27,28 +29,28 @@ class AlehwisdihaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "galewisdiha"
         "SG1" | "" | Tense.HABITUAL        | "galewisdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwalehwistanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "galewisda"
-        "SG1" | "" | Tense.INFINITIVE      | "agwalehwisdohdi"
-        "SG2" | "" | Tense.PRESENT         | "halehwisdiha"
-        "SG2" | "" | Tense.HABITUAL        | "halehwisdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jalehwistanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "halehwisda"
-        "SG2" | "" | Tense.INFINITIVE      | "jalehwisdohdi"
-        "SG3" | "" | Tense.PRESENT         | "alehwisdiha"
-        "SG3" | "" | Tense.HABITUAL        | "alehwisdisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulehwistanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "alehwisda"
-        "SG3" | "" | Tense.INFINITIVE      | "ulehwisdohdi"
-        "PL3" | "" | Tense.PRESENT         | "analehwisdiha"
-        "PL3" | "" | Tense.HABITUAL        | "analehwisdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unalehwistanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "analehwisda"
-        "PL3" | "" | Tense.INFINITIVE      | "unalehwisdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idalehwisdiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idalehwisdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalehwistanvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalehwisda"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igalehwisdohdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aqualewistanvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "galewistanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aqualewisdodi"
+        "SG2" | "" | Tense.PRESENT         | "halewisdiha"
+        "SG2" | "" | Tense.HABITUAL        | "halewisdisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalewistanvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "halewistanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalewisdodi"
+        "SG3" | "" | Tense.PRESENT         | "alewisdiha"
+        "SG3" | "" | Tense.HABITUAL        | "alewisdisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulewistanvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "alewistanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulewisdodi"
+        "PL3" | "" | Tense.PRESENT         | "analewisdiha"
+        "PL3" | "" | Tense.HABITUAL        | "analewisdisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unalewistanvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "analewistanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unalewisdodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idalewisdiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idalewisdisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalewistanvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalewistanvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igalewisdodi"
     }
 }

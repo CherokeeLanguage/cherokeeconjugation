@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72611 (entrya asgwadia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AsgwadiaSpec extends VerbBaseSpec {
         definition: "Finishing",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jisgwadia'],
             [subject: 'SG1', object: '', present: 'jisgwadia', habitual: 'jisgwadisgoi', remote_past: 'aksgwadvi', imperative: 'jisgwada', infinitive: 'aksgwadisdi'],
             [subject: 'SG2', object: '', present: 'hisgwadia', habitual: 'hisgwadisgoi', remote_past: 'tsgwadvi', imperative: 'hisgwada', infinitive: 'tsgwadisdi'],
-            [subject: 'SG3', object: '', present: 'asgwadia', habitual: 'asgwadisgoi', remote_past: 'usgwadvi', imperative: 'asgwada', infinitive: 'usgwadisdi'],
+            [subject: 'SG3', object: '', habitual: 'asgwadisgoi', imperative: 'hisgwada', infinitive: 'usgwadisdi', present: 'asgwadia', remote_past: 'usgwadvi'],
             [subject: 'PL3', object: '', present: 'anisgwadia', habitual: 'anisgwadisgoi', remote_past: 'unsgwadvi', imperative: 'anisgwada', infinitive: 'unsgwadisdi'],
             [subject: 'PL1INCL', object: '', present: 'idisgwadia', habitual: 'idisgwadisgoi', remote_past: 'iksgwadvi', imperative: 'idisgwada', infinitive: 'iksgwadisdi']
         ]
@@ -25,30 +27,30 @@ class AsgwadiaSpec extends VerbBaseSpec {
         conjugateVerb("Asgwadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jisgwadia"
-        "SG1" | "" | Tense.HABITUAL        | "jisgwadisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aksgwadvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jisgwada"
-        "SG1" | "" | Tense.INFINITIVE      | "aksgwadisdi"
-        "SG2" | "" | Tense.PRESENT         | "hisgwadia"
-        "SG2" | "" | Tense.HABITUAL        | "hisgwadisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsgwadvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisgwada"
-        "SG2" | "" | Tense.INFINITIVE      | "tsgwadisdi"
-        "SG3" | "" | Tense.PRESENT         | "asgwadia"
-        "SG3" | "" | Tense.HABITUAL        | "asgwadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usgwadvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "asgwada"
-        "SG3" | "" | Tense.INFINITIVE      | "usgwadisdi"
-        "PL3" | "" | Tense.PRESENT         | "anisgwadia"
-        "PL3" | "" | Tense.HABITUAL        | "anisgwadisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unsgwadvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisgwada"
-        "PL3" | "" | Tense.INFINITIVE      | "unsgwadisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idisgwadia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idisgwadisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksgwadvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisgwada"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksgwadisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsisquadia"
+        "SG1" | "" | Tense.HABITUAL        | "tsisquadisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agisquadvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisquadvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agisquadisdi"
+        "SG2" | "" | Tense.PRESENT         | "hisquadia"
+        "SG2" | "" | Tense.HABITUAL        | "hisquadisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasquadvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisquadvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasquadisdi"
+        "SG3" | "" | Tense.PRESENT         | "asquadia"
+        "SG3" | "" | Tense.HABITUAL        | "asquadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usquadvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "asquadvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usquadisdi"
+        "PL3" | "" | Tense.PRESENT         | "anisquadia"
+        "PL3" | "" | Tense.HABITUAL        | "anisquadisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisquadvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisquadvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unisquadisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idisquadia"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idisquadisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisquadvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisquadvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igisquadisdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72213 (entrya adaleniha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AdalenihaSpec extends VerbBaseSpec {
         definition: "It Is Beginning/Starting",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'adaleniha', habitual: 'adalenisgoi', remote_past: 'udalenvhvi', imperative: 'dvdalenvhi', infinitive: 'udalenhdi']
+            [subject: 'SG3', object: '', habitual: 'adalenisgoi', imperative: '', infinitive: 'udalenhdi', present: 'adaleniha', remote_past: 'udalenvhvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class AdalenihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "adaleniha"
         "SG3" | "" | Tense.HABITUAL        | "adalenisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udalenvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvdalenvhi"
-        "SG3" | "" | Tense.INFINITIVE      | "udalenhdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "adalenvhvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udalenidi"
     }
 }

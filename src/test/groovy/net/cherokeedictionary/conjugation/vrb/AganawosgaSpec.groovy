@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72303 (entrya aganawosga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AganawosgaSpec extends VerbBaseSpec {
         definition: "Getting Warm (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'aganawosga', habitual: 'aganawosgoi', remote_past: 'aganawosgvi', imperative: 'dvganawosi', infinitive: 'uganawosdi']
+            [subject: 'SG3', object: '', habitual: 'aganawosgoi', imperative: '', infinitive: 'uganawohisdi', present: 'aganawosga', remote_past: 'uganawosvi']
         ]
     ]
 
@@ -23,8 +24,8 @@ class AganawosgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "aganawosga"
         "SG3" | "" | Tense.HABITUAL        | "aganawosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "aganawosgvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvganawosi"
-        "SG3" | "" | Tense.INFINITIVE      | "uganawosdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uganawosvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "aganawosvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uganawohisdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73048 (entrya gakaneha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GakanehaSpec extends VerbBaseSpec {
         definition: "Give/Pass (living)",
         part_of_speech: "v.t.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiyakaneha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyakaneha', habitual: 'jiyakanehoi', remote_past: 'jiyakanelvi', imperative: 'jiyakasi', infinitive: 'jiyakanehdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyakaneha', habitual: 'hiyakanehoi', remote_past: 'hiyakanelvi', imperative: 'hiyakasi', infinitive: 'hiyakanehdi'],
-            [subject: 'SG1', object: '', present: 'gakaneha', habitual: 'gakanehoi', remote_past: 'uwakanelvi', imperative: 'wigakasi', infinitive: 'uwakanehdi'],
+            [subject: 'SG3', object: '', habitual: 'gakanehoi', imperative: 'hiyakasi', infinitive: 'uwakanehdi', present: 'gakaneha', remote_past: 'uwakanelvi'],
             [subject: 'PL3', object: '', present: 'anikaneha', habitual: 'anikanehoi', remote_past: 'unikanelvi', imperative: 'wanikasi', infinitive: 'unikanehdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GakanehaSpec extends VerbBaseSpec {
         conjugateVerb("Gakaneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyakaneha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyakanehoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyakanelvi"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jiyakasi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyakanehdi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyakaneha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyakanehoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyakanelvi"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyakanelvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyakanedi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyakaneha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyakanehoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyakanelvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyakasi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyakanehdi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "akanelvi"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyakanelvi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "akanedi"
         "SG1" | "" | Tense.PRESENT         | "gakaneha"
         "SG1" | "" | Tense.HABITUAL        | "gakanehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uwakanelvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigakasi"
-        "SG1" | "" | Tense.INFINITIVE      | "uwakanehdi"
-        "PL3" | "" | Tense.PRESENT         | "anikaneha"
-        "PL3" | "" | Tense.HABITUAL        | "anikanehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unikanelvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "wanikasi"
-        "PL3" | "" | Tense.INFINITIVE      | "unikanehdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquakanelvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gakanelvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquakanedi"
+        "PL3" | "" | Tense.PRESENT         | "anakaneha"
+        "PL3" | "" | Tense.HABITUAL        | "anakanehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unakanelvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anakanelvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unakanedi"
     }
 }

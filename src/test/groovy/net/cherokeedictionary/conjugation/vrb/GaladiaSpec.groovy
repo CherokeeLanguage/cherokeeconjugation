@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73051 (entrya galadia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GaladiaSpec extends VerbBaseSpec {
         definition: "Put in Container (long)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiladia'],
             [subject: 'SG1', object: '', present: 'jiladia', habitual: 'jiladisgoi', remote_past: 'agiladvi', imperative: 'jilada', infinitive: 'agiladisdi'],
             [subject: 'SG2', object: '', present: 'hiladia', habitual: 'haladisgoi', remote_past: 'jaladvi', imperative: 'hilada', infinitive: 'jaladisdi'],
-            [subject: 'SG1', object: '', present: 'galadia', habitual: 'galadisgoi', remote_past: 'uladvi', imperative: 'wigalada', infinitive: 'uladisdi'],
+            [subject: 'SG3', object: '', habitual: 'galadisgoi', imperative: 'hilada', infinitive: 'uladisdi', present: 'galadia', remote_past: 'uladvi'],
             [subject: 'PL3', object: '', present: 'aniladia', habitual: 'aniladisgoi', remote_past: 'uniladvi', imperative: 'wanilada', infinitive: 'uniladisdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GaladiaSpec extends VerbBaseSpec {
         conjugateVerb("Galadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiladia"
-        "SG1" | "" | Tense.HABITUAL        | "jiladisgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsiladia"
+        "SG1" | "" | Tense.HABITUAL        | "tsiladisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiladvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jilada"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiladvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiladisdi"
         "SG2" | "" | Tense.PRESENT         | "hiladia"
-        "SG2" | "" | Tense.HABITUAL        | "haladisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jaladvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hilada"
-        "SG2" | "" | Tense.INFINITIVE      | "jaladisdi"
-        "SG1" | "" | Tense.PRESENT         | "galadia"
-        "SG1" | "" | Tense.HABITUAL        | "galadisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uladvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigalada"
-        "SG1" | "" | Tense.INFINITIVE      | "uladisdi"
+        "SG2" | "" | Tense.HABITUAL        | "hiladisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsaladvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hiladvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsaladisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsiladia"
+        "SG1" | "" | Tense.HABITUAL        | "tsiladisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiladvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiladvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiladisdi"
         "PL3" | "" | Tense.PRESENT         | "aniladia"
         "PL3" | "" | Tense.HABITUAL        | "aniladisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uniladvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "wanilada"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aniladvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniladisdi"
     }
 }

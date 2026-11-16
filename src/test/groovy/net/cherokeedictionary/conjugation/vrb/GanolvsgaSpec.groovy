@@ -11,7 +11,7 @@ class GanolvsgaSpec extends VerbBaseSpec {
         definition: "Windy (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'ganolvsga', habitual: 'ganolvsgoi', remote_past: 'ganolvsgvi', imperative: 'ganolvsgesdi', infinitive: 'unolvsdi']
+            [subject: 'SG3', object: '', present: 'ganolvsga', habitual: 'ganolvsgoi', remote_past: 'ganolvsgvi', imperative: 'ganolvsgesdi', infinitive: 'unolvsdi']
         ]
     ]
 
@@ -21,10 +21,10 @@ class GanolvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Ganolvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "ganolvsga"
-        "SG1" | "" | Tense.HABITUAL        | "ganolvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "ganolvsgvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganolvsgesdi"
-        "SG1" | "" | Tense.INFINITIVE      | "unolvsdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinolvsga"
+        "SG1" | "" | Tense.HABITUAL        | "tsinolvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginolvsgvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinolvsgvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginolvsdi"
     }
 }

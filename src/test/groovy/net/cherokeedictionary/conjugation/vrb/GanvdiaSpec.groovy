@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73161 (entrya ganvdia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class GanvdiaSpec extends VerbBaseSpec {
         definition: "Missing (Him/It)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'ganvdia', habitual: 'ganvdisgoi', remote_past: 'unvdvi', imperative: 'ganvda', infinitive: 'unvdisdi'],
+                [subject: 'SG1', object: '', present: 'jinvdia, jinvdia'],
+            [subject: 'SG3', object: '', habitual: 'ganvdisgoi', imperative: 'hinvda, hinvda', infinitive: 'unvdisdi', present: 'ganvdia', remote_past: 'unvdvi'],
             [subject: 'PL3', object: '', present: 'aninvdia', habitual: 'aninvdisgoi', remote_past: 'uninvdvi', imperative: 'aninvda', infinitive: 'uninvdisdi'],
             [subject: 'PL1INCL', object: '', present: 'idinvdia', habitual: 'idinvdisgoi', remote_past: 'iginvdvi', imperative: 'idinvda', infinitive: 'iginvdisdi']
         ]
@@ -23,20 +25,20 @@ class GanvdiaSpec extends VerbBaseSpec {
         conjugateVerb("Ganvdia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "ganvdia"
-        "SG1" | "" | Tense.HABITUAL        | "ganvdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unvdvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganvda"
-        "SG1" | "" | Tense.INFINITIVE      | "unvdisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinvdia"
+        "SG1" | "" | Tense.HABITUAL        | "tsinvdisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginvdvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvdvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginvdisdi"
         "PL3" | "" | Tense.PRESENT         | "aninvdia"
         "PL3" | "" | Tense.HABITUAL        | "aninvdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninvdvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvda"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvdvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninvdisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinvdia"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinvdisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginvdvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinvda"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinvdvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "iginvdisdi"
     }
 }

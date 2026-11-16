@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72412 (entrya ahyvdagwaloa) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AhyvdagwaloaSpec extends VerbBaseSpec {
         definition: "Thundering (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ahyvdagwaloa', habitual: 'ahyvdagwalosgoi', remote_past: 'uhyvdagwalovi', imperative: 'dvhyvdagwaloi', infinitive: 'uhyvdagwalosdi']
+            [subject: 'SG3', object: '', habitual: 'ahyvdagwalosgoi', imperative: '', infinitive: 'uhyvdagwalosdi', present: 'ahyvdagwaloa', remote_past: 'uhyvdagwalovi']
         ]
     ]
 
@@ -21,10 +22,10 @@ class AhyvdagwaloaSpec extends VerbBaseSpec {
         conjugateVerb("Ahyvdagwaloa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ahyvdagwaloa"
-        "SG3" | "" | Tense.HABITUAL        | "ahyvdagwalosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhyvdagwalovi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvhyvdagwaloi"
-        "SG3" | "" | Tense.INFINITIVE      | "uhyvdagwalosdi"
+        "SG3" | "" | Tense.PRESENT         | "ayvdaqualoa"
+        "SG3" | "" | Tense.HABITUAL        | "ayvdaqualosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyvdaqualovi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ayvdaqualovi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyvdaqualosdi"
     }
 }

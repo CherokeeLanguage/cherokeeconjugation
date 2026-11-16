@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73749 (entrya udlasitveha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UdlasitvehaSpec extends VerbBaseSpec {
         definition: "Disbelieving (161)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agwadlasitveha'],
             [subject: 'SG1', object: '', present: 'agwadlasitveha', habitual: 'agwadlasitvehoi', remote_past: 'agwadlasitvelvi', imperative: 'agwadlasitvsi', infinitive: 'agwadlasitvehdi'],
             [subject: 'SG2', object: '', present: 'jadlasitveha', habitual: 'jadlasitvehoi', remote_past: 'jadlasitvelvi', imperative: 'jadlasitvsi', infinitive: 'jadlasitvehdi'],
-            [subject: 'SG3', object: '', present: 'udlasitveha', habitual: 'udlasitvehoi', remote_past: 'udlasitvelvi', imperative: 'udlasitvsi', infinitive: 'udlasitvehdi'],
+            [subject: 'SG3', object: '', habitual: 'udlasitvehoi', imperative: 'jadlasitvsi', infinitive: 'udlasitvehdi', present: 'udlasitveha', remote_past: 'udlasitvelvi'],
             [subject: 'PL3', object: '', present: 'unadlasitveha', habitual: 'unadlasitvehoi', remote_past: 'unadlasitvelvi', imperative: 'unadlasitvsi', infinitive: 'unadlasitvehdi'],
             [subject: 'PL1INCL', object: '', present: 'igadlasitveha', habitual: 'igadlasitvehoi', remote_past: 'igadlasitvelvi', imperative: 'igadlasitvsi', infinitive: 'igadlasitvehdi']
         ]
@@ -25,30 +27,30 @@ class UdlasitvehaSpec extends VerbBaseSpec {
         conjugateVerb("Udlasitveha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agwadlasitveha"
-        "SG1" | "" | Tense.HABITUAL        | "agwadlasitvehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwadlasitvelvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "agwadlasitvsi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwadlasitvehdi"
-        "SG2" | "" | Tense.PRESENT         | "jadlasitveha"
-        "SG2" | "" | Tense.HABITUAL        | "jadlasitvehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadlasitvelvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "jadlasitvsi"
-        "SG2" | "" | Tense.INFINITIVE      | "jadlasitvehdi"
-        "SG3" | "" | Tense.PRESENT         | "udlasitveha"
-        "SG3" | "" | Tense.HABITUAL        | "udlasitvehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udlasitvelvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "udlasitvsi"
-        "SG3" | "" | Tense.INFINITIVE      | "udlasitvehdi"
-        "PL3" | "" | Tense.PRESENT         | "unadlasitveha"
-        "PL3" | "" | Tense.HABITUAL        | "unadlasitvehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadlasitvelvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unadlasitvsi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadlasitvehdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igadlasitveha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igadlasitvehoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadlasitvelvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadlasitvsi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadlasitvehdi"
+        "SG1" | "" | Tense.PRESENT         | "aquadlasidveha"
+        "SG1" | "" | Tense.HABITUAL        | "aquadlasidvehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadlasidvelvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadlasidvelvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquadlasidvedi"
+        "SG2" | "" | Tense.PRESENT         | "tsadlasidveha"
+        "SG2" | "" | Tense.HABITUAL        | "tsadlasidvehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadlasidvelvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadlasidvelvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadlasidvedi"
+        "SG3" | "" | Tense.PRESENT         | "udlasidveha"
+        "SG3" | "" | Tense.HABITUAL        | "udlasidvehoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udlasidvelvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "udlasidvelvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udlasidvedi"
+        "PL3" | "" | Tense.PRESENT         | "unadlasidveha"
+        "PL3" | "" | Tense.HABITUAL        | "unadlasidvehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadlasidvelvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unadlasidvelvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadlasidvedi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igadlasidveha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igadlasidvehoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadlasidvelvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadlasidvelvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadlasidvedi"
     }
 }

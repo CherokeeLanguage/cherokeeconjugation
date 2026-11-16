@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72831 (entrya dekanogia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class DekanogiaSpec extends VerbBaseSpec {
         definition: "Singing",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'dejinogia'],
             [subject: 'SG1', object: '', present: 'dejinogia', habitual: 'dejinogisgoi', remote_past: 'dakihnogisvi', imperative: 'dijinogi', infinitive: 'dikihnogisdi'],
             [subject: 'SG2', object: '', present: 'dehihnogia', habitual: 'dehihnogisgoi', remote_past: 'dejahnogisvi', imperative: 'tihnogi', infinitive: 'dijahnogisdi'],
-            [subject: 'SG3', object: '', present: 'dekanogia', habitual: 'dekanogisgoi', remote_past: 'duhnogisvi', imperative: 'dikanogi', infinitive: 'juhnogisdi'],
+            [subject: 'SG3', object: '', habitual: 'dekanogisgoi', imperative: 'tihnogi', infinitive: 'juhnogisdi', present: 'dekanogia', remote_past: 'duhnogisvi'],
             [subject: 'PL3', object: '', present: 'danihnogia', habitual: 'danihnogisgoi', remote_past: 'dunihnogisvi', imperative: 'dinihnogi', infinitive: 'junihnogisdi'],
             [subject: 'PL1INCL', object: '', present: 'dedihnogia', habitual: 'dedihnogisgoi', remote_past: 'degihnogisvi', imperative: 'didihnogi', infinitive: 'digihnogisdi']
         ]
@@ -25,30 +27,30 @@ class DekanogiaSpec extends VerbBaseSpec {
         conjugateVerb("Dekanogia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "dejinogia"
-        "SG1" | "" | Tense.HABITUAL        | "dejinogisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "dakihnogisvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "dijinogi"
-        "SG1" | "" | Tense.INFINITIVE      | "dikihnogisdi"
-        "SG2" | "" | Tense.PRESENT         | "dehihnogia"
-        "SG2" | "" | Tense.HABITUAL        | "dehihnogisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "dejahnogisvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "tihnogi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijahnogisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinogia"
+        "SG1" | "" | Tense.HABITUAL        | "tsinogisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginogisvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinogisvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginogisdi"
+        "SG2" | "" | Tense.PRESENT         | "hinogia"
+        "SG2" | "" | Tense.HABITUAL        | "hinogisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanogisvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinogisvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanogisdi"
         "SG3" | "" | Tense.PRESENT         | "dekanogia"
         "SG3" | "" | Tense.HABITUAL        | "dekanogisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "duhnogisvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dikanogi"
-        "SG3" | "" | Tense.INFINITIVE      | "juhnogisdi"
-        "PL3" | "" | Tense.PRESENT         | "danihnogia"
-        "PL3" | "" | Tense.HABITUAL        | "danihnogisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "dunihnogisvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "dinihnogi"
-        "PL3" | "" | Tense.INFINITIVE      | "junihnogisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedihnogia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedihnogisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degihnogisvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "didihnogi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digihnogisdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unogisvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganogisvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unogisdi"
+        "PL3" | "" | Tense.PRESENT         | "aninogia"
+        "PL3" | "" | Tense.HABITUAL        | "aninogisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninogisvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninogisvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninogisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idinogia"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idinogisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginogisvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinogisvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginogisdi"
     }
 }

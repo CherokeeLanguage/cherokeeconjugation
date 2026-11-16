@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72264 (entrya adisgahlvsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AdisgahlvsgaSpec extends VerbBaseSpec {
         definition: "S/he is Hiding",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'gadisgahlvsga'],
             [subject: 'SG1', object: '', present: 'gadisgahlvsga', habitual: 'gadisgahlvsgoi', remote_past: 'agwadisgahlanvi', imperative: 'gadisgahlvga', infinitive: 'agwadisgahldi'],
             [subject: 'SG2', object: '', present: 'hadisgahlvsga', habitual: 'hadisgahlvsgoi', remote_past: 'jadisgahlanvi', imperative: 'hadisgahlvga', infinitive: 'jadisgahldi'],
-            [subject: 'SG3', object: '', present: 'adisgahlvsga', habitual: 'adisgahlvsgoi', remote_past: 'udisgahlanvi', imperative: 'adisgahlvga', infinitive: 'udisgahldi'],
+            [subject: 'SG3', object: '', habitual: 'adisgahlvsgoi', imperative: 'hadisgahlvga', infinitive: 'udisgahldi', present: 'adisgahlvsga', remote_past: 'udisgahlanvi'],
             [subject: 'PL3', object: '', present: 'anadisgahlvsga', habitual: 'anadisgahlvsgoi', remote_past: 'unadisgahlanvi', imperative: 'anadisgahlvga', infinitive: 'unadisgahldi'],
             [subject: 'PL1INCL', object: '', present: 'idadisgahlvsga', habitual: 'idadisgahlvsgoi', remote_past: 'igadisgahlanvi', imperative: 'idadisgahlvga', infinitive: 'igadisgahldi']
         ]
@@ -25,30 +27,30 @@ class AdisgahlvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Adisgahlvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadisgahlvsga"
-        "SG1" | "" | Tense.HABITUAL        | "gadisgahlvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwadisgahlanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadisgahlvga"
-        "SG1" | "" | Tense.INFINITIVE      | "agwadisgahldi"
-        "SG2" | "" | Tense.PRESENT         | "hadisgahlvsga"
-        "SG2" | "" | Tense.HABITUAL        | "hadisgahlvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadisgahlanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadisgahlvga"
-        "SG2" | "" | Tense.INFINITIVE      | "jadisgahldi"
-        "SG3" | "" | Tense.PRESENT         | "adisgahlvsga"
-        "SG3" | "" | Tense.HABITUAL        | "adisgahlvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udisgahlanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "adisgahlvga"
-        "SG3" | "" | Tense.INFINITIVE      | "udisgahldi"
-        "PL3" | "" | Tense.PRESENT         | "anadisgahlvsga"
-        "PL3" | "" | Tense.HABITUAL        | "anadisgahlvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadisgahlanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anadisgahlvga"
-        "PL3" | "" | Tense.INFINITIVE      | "unadisgahldi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadisgahlvsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idadisgahlvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadisgahlanvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadisgahlvga"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadisgahldi"
+        "SG1" | "" | Tense.PRESENT         | "gadisgatlvsga"
+        "SG1" | "" | Tense.HABITUAL        | "gadisgatlvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadisgatlanvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadisgatlanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquadisgalodi"
+        "SG2" | "" | Tense.PRESENT         | "hadisgatlvsga"
+        "SG2" | "" | Tense.HABITUAL        | "hadisgatlvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadisgatlanvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadisgatlanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadisgalodi"
+        "SG3" | "" | Tense.PRESENT         | "adisgatlvsga"
+        "SG3" | "" | Tense.HABITUAL        | "adisgatlvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udisgatlanvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "adisgatlanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisgalodi"
+        "PL3" | "" | Tense.PRESENT         | "anadisgatlvsga"
+        "PL3" | "" | Tense.HABITUAL        | "anadisgatlvsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadisgatlanvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anadisgatlanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadisgalodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadisgatlvsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idadisgatlvsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadisgatlanvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadisgatlanvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadisgalodi"
     }
 }

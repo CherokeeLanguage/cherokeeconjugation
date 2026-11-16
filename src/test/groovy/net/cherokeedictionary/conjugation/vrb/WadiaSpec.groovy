@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 74024 (entrya wadia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class WadiaSpec extends VerbBaseSpec {
         definition: "Send (long)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'wijidia', habitual: 'wijidisgoi', remote_past: 'wagidvi', imperative: 'wijida', infinitive: 'wagidisdi'],
+                [subject: 'SG1', object: '', present: 'wijidia'],
+            [subject: 'SG3', object: '', habitual: 'wadisgoi', imperative: 'hwida', infinitive: 'wudisdi', present: 'wadia', remote_past: 'wudvi'],
             [subject: 'SG2', object: '', present: 'hwidia', habitual: 'hwidisgoi', remote_past: 'wijadvi', imperative: 'hwida', infinitive: 'wijadisdi'],
             [subject: 'SG3', object: '', present: 'wadia', habitual: 'wadisgoi', remote_past: 'wudvi', imperative: 'wada', infinitive: 'wudisdi'],
             [subject: 'SG3', object: '', present: 'wanidia', habitual: 'wanidisgoi', remote_past: 'wunidvi', imperative: 'wanida', infinitive: 'wunidisdi']
@@ -24,25 +26,25 @@ class WadiaSpec extends VerbBaseSpec {
         conjugateVerb("Wadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "wijidia"
-        "SG3" | "" | Tense.HABITUAL        | "wijidisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wagidvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wijida"
-        "SG3" | "" | Tense.INFINITIVE      | "wagidisdi"
-        "SG2" | "" | Tense.PRESENT         | "hwidia"
-        "SG2" | "" | Tense.HABITUAL        | "hwidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "wijadvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hwida"
-        "SG2" | "" | Tense.INFINITIVE      | "wijadisdi"
         "SG3" | "" | Tense.PRESENT         | "wadia"
         "SG3" | "" | Tense.HABITUAL        | "wadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wudvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wada"
-        "SG3" | "" | Tense.INFINITIVE      | "wudisdi"
-        "SG3" | "" | Tense.PRESENT         | "wanidia"
-        "SG3" | "" | Tense.HABITUAL        | "wanidisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wunidvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wanida"
-        "SG3" | "" | Tense.INFINITIVE      | "wunidisdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "gadvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG2" | "" | Tense.PRESENT         | "hidia"
+        "SG2" | "" | Tense.HABITUAL        | "hidisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hidvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadisdi"
+        "SG3" | "" | Tense.PRESENT         | "wadia"
+        "SG3" | "" | Tense.HABITUAL        | "wadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "gadvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG3" | "" | Tense.PRESENT         | "wadia"
+        "SG3" | "" | Tense.HABITUAL        | "wadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "gadvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
     }
 }

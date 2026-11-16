@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73996 (entrya uwohiyuha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UwohiyuhaSpec extends VerbBaseSpec {
         definition: "Believe, Confident, Faith",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agwohiyuha'],
             [subject: 'SG1', object: '', present: 'agwohiyuha', habitual: 'agwohiyusoi', remote_past: 'agwohiyusvi', imperative: 'agwohiyusesdi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'johiyuha', habitual: 'johiyusoi', remote_past: 'johiyusvi', imperative: 'johiyusesdi', infinitive: ''],
-            [subject: 'SG3', object: '', present: 'uwohiyuha', habitual: 'uwohiyusoi', remote_past: 'uwohiyusvi', imperative: 'uwohiyusesdi', infinitive: ''],
+            [subject: 'SG3', object: '', habitual: 'uwohiyusoi', imperative: 'johiyusesdi', infinitive: '', present: 'uwohiyuha', remote_past: 'uwohiyusvi'],
             [subject: 'PL3', object: '', present: 'unohiyuha', habitual: 'unohiyusoi', remote_past: 'unohiyusvi', imperative: 'unohiyusesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igohiyuha', habitual: 'igohiyusoi', remote_past: 'igohiyusvi', imperative: 'igohiyusesdi', infinitive: '']
         ]
@@ -25,30 +27,30 @@ class UwohiyuhaSpec extends VerbBaseSpec {
         conjugateVerb("Uwohiyuha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agwohiyuha"
-        "SG1" | "" | Tense.HABITUAL        | "agwohiyusoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwohiyusvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "agwohiyusesdi"
+        "SG1" | "" | Tense.PRESENT         | "aquohiyuha"
+        "SG1" | "" | Tense.HABITUAL        | "aquohiyusoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquohiyusvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "aquohiyusvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "johiyuha"
-        "SG2" | "" | Tense.HABITUAL        | "johiyusoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "johiyusvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "johiyusesdi"
+        "SG2" | "" | Tense.PRESENT         | "tsohiyuha"
+        "SG2" | "" | Tense.HABITUAL        | "tsohiyusoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsohiyusvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsohiyusvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "uwohiyuha"
         "SG3" | "" | Tense.HABITUAL        | "uwohiyusoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwohiyusvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uwohiyusesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "uwohiyusvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
         "PL3" | "" | Tense.PRESENT         | "unohiyuha"
         "PL3" | "" | Tense.HABITUAL        | "unohiyusoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unohiyusvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unohiyusesdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unohiyusvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
         "PL1INCL" | "" | Tense.PRESENT         | "igohiyuha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igohiyusoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igohiyusvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igohiyusesdi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igohiyusvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }
 }

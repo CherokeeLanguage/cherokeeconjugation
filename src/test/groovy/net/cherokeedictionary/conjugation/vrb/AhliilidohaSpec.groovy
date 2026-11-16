@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72360 (entrya ahliilidoha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AhliilidohaSpec extends VerbBaseSpec {
         definition: "Its Taking Time (22)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ahliilidoha', habitual: 'ahliilidohoi', remote_past: 'uhliilidolvi', imperative: 'dvhliilidoli', infinitive: 'uhliilidasdi']
+            [subject: 'SG3', object: '', habitual: 'ahliilidohoi', imperative: '', infinitive: 'uhliilidasdi', present: 'ahliilidoha', remote_past: 'uhliilidolvi']
         ]
     ]
 
@@ -21,10 +22,10 @@ class AhliilidohaSpec extends VerbBaseSpec {
         conjugateVerb("Ahliilidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ahliilidoha"
-        "SG3" | "" | Tense.HABITUAL        | "ahliilidohoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhliilidolvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvhliilidoli"
-        "SG3" | "" | Tense.INFINITIVE      | "uhliilidasdi"
+        "SG3" | "" | Tense.PRESENT         | "atliilidoha"
+        "SG3" | "" | Tense.HABITUAL        | "atliilidohoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utliilidolvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "atliilidolvi"
+        "SG3" | "" | Tense.INFINITIVE      | "utliilidasdi"
     }
 }

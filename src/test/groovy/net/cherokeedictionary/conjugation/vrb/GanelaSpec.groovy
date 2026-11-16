@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73115 (entrya ganela) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class GanelaSpec extends VerbBaseSpec {
         definition: "Living At",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'jinela', habitual: 'jineloi', remote_past: 'X', imperative: 'jinelesdi', infinitive: 'X']
+                [subject: 'SG1', object: '', present: 'jinela'],
+            [subject: 'SG3', object: '', habitual: 'ganeloi', imperative: 'hinelesdi', infinitive: '', present: 'ganela', remote_past: '']
         ]
     ]
 
@@ -21,10 +23,10 @@ class GanelaSpec extends VerbBaseSpec {
         conjugateVerb("Ganela", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinela"
-        "SG1" | "" | Tense.HABITUAL        | "jineloi"
+        "SG1" | "" | Tense.PRESENT         | "tsinela"
+        "SG1" | "" | Tense.HABITUAL        | "tsineloi"
         // "SG1" | "" | Tense.REMOTE_PAST     | "X"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinelesdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsine"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
     }
 }

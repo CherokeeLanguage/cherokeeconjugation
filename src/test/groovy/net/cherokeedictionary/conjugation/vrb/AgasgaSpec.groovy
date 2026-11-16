@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72304 (entrya agasga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AgasgaSpec extends VerbBaseSpec {
         definition: "Raining (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'agasga', habitual: 'agasgoi', remote_past: 'ugahnanvi', imperative: 'dvgahvnani', infinitive: 'uganhdi']
+            [subject: 'SG3', object: '', habitual: 'agasgoi', imperative: '', infinitive: 'uganhdi', present: 'agasga', remote_past: 'ugahnanvi']
         ]
     ]
 
@@ -23,8 +24,8 @@ class AgasgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "agasga"
         "SG3" | "" | Tense.HABITUAL        | "agasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugahnanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvgahvnani"
-        "SG3" | "" | Tense.INFINITIVE      | "uganhdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugananvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "agananvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uganidi"
     }
 }

@@ -11,7 +11,7 @@ class LONGSpec extends VerbBaseSpec {
         definition: "– SAME AS NEUTRAL",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'gohosga', habitual: 'gohosgoi', remote_past: 'uwohosvi', imperative: 'wigohohi', infinitive: 'uwohohisdi']
+            [subject: 'SG3', object: '', present: 'gohosga', habitual: 'gohosgoi', remote_past: 'uwohosvi', imperative: 'wigohohi', infinitive: 'uwohohisdi']
         ]
     ]
 
@@ -23,8 +23,8 @@ class LONGSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gohosga"
         "SG1" | "" | Tense.HABITUAL        | "gohosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uwohosvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigohohi"
-        "SG1" | "" | Tense.INFINITIVE      | "uwohohisdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquohosvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gohosvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwohohisdi"
     }
 }

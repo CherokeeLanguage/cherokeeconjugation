@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72277 (entrya adlia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AdliaSpec extends VerbBaseSpec {
         definition: "Put in Container (liquid)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jidlia'],
             [subject: 'SG1', object: '', present: 'jidlia', habitual: 'jidlisgoi', remote_past: 'agidlvi', imperative: 'jidliga', infinitive: 'agidlisdi'],
             [subject: 'SG2', object: '', present: 'hidlia', habitual: 'hidlisgoi', remote_past: 'jadlvi', imperative: 'hidliga', infinitive: 'jadlisdi'],
-            [subject: 'SG3', object: '', present: 'adlia', habitual: 'adlisgoi', remote_past: 'udlvi', imperative: 'wadliga', infinitive: 'udlisdi'],
+            [subject: 'SG3', object: '', habitual: 'adlisgoi', imperative: 'hidliga', infinitive: 'udlisdi', present: 'adlia', remote_past: 'udlvi'],
             [subject: 'PL3', object: '', present: 'anidlia', habitual: 'anidlisgoi', remote_past: 'unidlvi', imperative: 'wanidliga', infinitive: 'unidlisdi']
         ]
     ]
@@ -24,25 +26,25 @@ class AdliaSpec extends VerbBaseSpec {
         conjugateVerb("Adlia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jidlia"
-        "SG1" | "" | Tense.HABITUAL        | "jidlisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agidlvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jidliga"
-        "SG1" | "" | Tense.INFINITIVE      | "agidlisdi"
-        "SG2" | "" | Tense.PRESENT         | "hidlia"
-        "SG2" | "" | Tense.HABITUAL        | "hidlisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadlvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hidliga"
-        "SG2" | "" | Tense.INFINITIVE      | "jadlisdi"
-        "SG3" | "" | Tense.PRESENT         | "adlia"
-        "SG3" | "" | Tense.HABITUAL        | "adlisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udlvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wadliga"
-        "SG3" | "" | Tense.INFINITIVE      | "udlisdi"
-        "PL3" | "" | Tense.PRESENT         | "anidlia"
-        "PL3" | "" | Tense.HABITUAL        | "anidlisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unidlvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "wanidliga"
-        "PL3" | "" | Tense.INFINITIVE      | "unidlisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsitlia"
+        "SG1" | "" | Tense.HABITUAL        | "tsitlisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitlvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agitlisdi"
+        "SG2" | "" | Tense.PRESENT         | "hitlia"
+        "SG2" | "" | Tense.HABITUAL        | "hitlisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hitlvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatlisdi"
+        "SG3" | "" | Tense.PRESENT         | "atlia"
+        "SG3" | "" | Tense.HABITUAL        | "atlisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "utlisdi"
+        "PL3" | "" | Tense.PRESENT         | "anitlia"
+        "PL3" | "" | Tense.HABITUAL        | "anitlisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unitlvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anitlvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unitlisdi"
     }
 }

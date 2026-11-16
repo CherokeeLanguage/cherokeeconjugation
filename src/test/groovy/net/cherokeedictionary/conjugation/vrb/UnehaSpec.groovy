@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73908 (entrya uneha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UnehaSpec extends VerbBaseSpec {
         definition: "Have (liquid)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agineha'],
             [subject: 'SG1', object: '', present: 'agineha', habitual: 'aginehoi', remote_past: 'aginehvi', imperative: 'aginehesdi', infinitive: 'aginehdi'],
             [subject: 'SG2', object: '', present: 'janeha', habitual: 'janehoi', remote_past: 'janehvi', imperative: 'janehesdi', infinitive: 'janehdi'],
-            [subject: 'SG3', object: '', present: 'uneha', habitual: 'unehoi', remote_past: 'unehvi', imperative: 'unehesdi', infinitive: 'unehdi'],
+            [subject: 'SG3', object: '', habitual: 'unehoi', imperative: 'janehesdi', infinitive: 'unehdi', present: 'uneha', remote_past: 'unehvi'],
             [subject: 'PL3', object: '', present: 'unineha', habitual: 'uninehoi', remote_past: 'uninehvi', imperative: 'uninehesdi', infinitive: 'uninehdi']
         ]
     ]
@@ -27,22 +29,22 @@ class UnehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "agineha"
         "SG1" | "" | Tense.HABITUAL        | "aginehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "aginehesdi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginehdi"
-        "SG2" | "" | Tense.PRESENT         | "janeha"
-        "SG2" | "" | Tense.HABITUAL        | "janehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janehvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "janehesdi"
-        "SG2" | "" | Tense.INFINITIVE      | "janehdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "aginehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginedi"
+        "SG2" | "" | Tense.PRESENT         | "tsaneha"
+        "SG2" | "" | Tense.HABITUAL        | "tsanehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanehvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanedi"
         "SG3" | "" | Tense.PRESENT         | "uneha"
         "SG3" | "" | Tense.HABITUAL        | "unehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unehvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "unehesdi"
-        "SG3" | "" | Tense.INFINITIVE      | "unehdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "unehvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unedi"
         "PL3" | "" | Tense.PRESENT         | "unineha"
         "PL3" | "" | Tense.HABITUAL        | "uninehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "uninehesdi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninehdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "uninehvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninedi"
     }
 }

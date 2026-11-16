@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72613 (entrya asgwahlea) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AsgwahleaSpec extends VerbBaseSpec {
         definition: "Catching It",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jisgwahlea'],
             [subject: 'SG1', object: '', present: 'jisgwahlea', habitual: 'jisgwahlesgoi', remote_past: 'aksgwahlesvi', imperative: 'jisgwahlagi', infinitive: 'aksgwahlesdi'],
             [subject: 'SG2', object: '', present: 'hisgwahlea', habitual: 'hisgwahlesgoi', remote_past: 'tsgwahlesvi', imperative: 'hisgwahlagi', infinitive: 'tsgwahlesdi'],
-            [subject: 'SG3', object: '', present: 'asgwahlea', habitual: 'asgwahlesgoi', remote_past: 'usgwahlesvi', imperative: 'asgwahlagi', infinitive: 'usgwahlesdi'],
+            [subject: 'SG3', object: '', habitual: 'asgwahlesgoi', imperative: 'hisgwahlagi', infinitive: 'usgwahlesdi', present: 'asgwahlea', remote_past: 'usgwahlesvi'],
             [subject: 'PL3', object: '', present: 'anisgwahlea', habitual: 'anisgwahlesgoi', remote_past: 'unisgwahlesvi', imperative: 'anisgwahlagi', infinitive: 'unisgwahlesdi'],
             [subject: 'PL1INCL', object: '', present: 'idisgwahlea', habitual: 'idisgwahlesgoi', remote_past: 'iksgwahlesvi', imperative: 'idisgwahlagi', infinitive: 'iksgwahlesdi']
         ]
@@ -25,30 +27,30 @@ class AsgwahleaSpec extends VerbBaseSpec {
         conjugateVerb("Asgwahlea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jisgwahlea"
-        "SG1" | "" | Tense.HABITUAL        | "jisgwahlesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aksgwahlesvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jisgwahlagi"
-        "SG1" | "" | Tense.INFINITIVE      | "aksgwahlesdi"
-        "SG2" | "" | Tense.PRESENT         | "hisgwahlea"
-        "SG2" | "" | Tense.HABITUAL        | "hisgwahlesgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsgwahlesvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisgwahlagi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsgwahlesdi"
-        "SG3" | "" | Tense.PRESENT         | "asgwahlea"
-        "SG3" | "" | Tense.HABITUAL        | "asgwahlesgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usgwahlesvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "asgwahlagi"
-        "SG3" | "" | Tense.INFINITIVE      | "usgwahlesdi"
-        "PL3" | "" | Tense.PRESENT         | "anisgwahlea"
-        "PL3" | "" | Tense.HABITUAL        | "anisgwahlesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisgwahlesvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisgwahlagi"
-        "PL3" | "" | Tense.INFINITIVE      | "unisgwahlesdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idisgwahlea"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idisgwahlesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksgwahlesvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisgwahlagi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksgwahlesdi"
+        "SG1" | "" | Tense.PRESENT         | "tsisquatlea"
+        "SG1" | "" | Tense.HABITUAL        | "tsisquatlesgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agisquatlesvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisquatlesvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agisquatlesdi"
+        "SG2" | "" | Tense.PRESENT         | "hisquatlea"
+        "SG2" | "" | Tense.HABITUAL        | "hisquatlesgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasquatlesvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisquatlesvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasquatlesdi"
+        "SG3" | "" | Tense.PRESENT         | "asquatlea"
+        "SG3" | "" | Tense.HABITUAL        | "asquatlesgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usquatlesvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "asquatlesvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usquatlesdi"
+        "PL3" | "" | Tense.PRESENT         | "anisquatlea"
+        "PL3" | "" | Tense.HABITUAL        | "anisquatlesgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisquatlesvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisquatlesvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unisquatlesdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idisquatlea"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idisquatlesgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisquatlesvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisquatlesvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igisquatlesdi"
     }
 }

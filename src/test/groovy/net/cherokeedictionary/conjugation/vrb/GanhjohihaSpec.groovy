@@ -13,7 +13,7 @@ class GanhjohihaSpec extends VerbBaseSpec {
         conjugations: [
             [subject: 'SG1', object: '', present: 'jinejohiha', habitual: 'jinejohihoi', remote_past: 'aginhjohlvi', imperative: 'jinejoga', infinitive: 'aginhjohisdi'],
             [subject: 'SG2', object: '', present: 'hinhjohiha', habitual: 'hiinhjohihoi', remote_past: 'janhjohlvi', imperative: 'hinhjoga', infinitive: 'janhjohisdi'],
-            [subject: 'SG1', object: '', present: 'ganhjohiha', habitual: 'ganhjohihoi', remote_past: 'unhjohlvi', imperative: 'wiganhjoga', infinitive: 'unhjohisdi'],
+            [subject: 'SG3', object: '', present: 'ganhjohiha', habitual: 'ganhjohihoi', remote_past: 'unhjohlvi', imperative: 'wiganhjoga', infinitive: 'unhjohisdi'],
             [subject: 'PL3', object: '', present: 'aninhjohiha', habitual: 'aninhjohihoi', remote_past: 'uninhjohlvi', imperative: 'waninhjoga', infinitive: 'uninhjohisdi']
         ]
     ]
@@ -24,25 +24,25 @@ class GanhjohihaSpec extends VerbBaseSpec {
         conjugateVerb("Ganhjohiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinejohiha"
-        "SG1" | "" | Tense.HABITUAL        | "jinejohihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginhjohlvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinejoga"
-        "SG1" | "" | Tense.INFINITIVE      | "aginhjohisdi"
-        "SG2" | "" | Tense.PRESENT         | "hinhjohiha"
-        "SG2" | "" | Tense.HABITUAL        | "hiinhjohihoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janhjohlvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinhjoga"
-        "SG2" | "" | Tense.INFINITIVE      | "janhjohisdi"
-        "SG1" | "" | Tense.PRESENT         | "ganhjohiha"
-        "SG1" | "" | Tense.HABITUAL        | "ganhjohihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unhjohlvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wiganhjoga"
-        "SG1" | "" | Tense.INFINITIVE      | "unhjohisdi"
-        "PL3" | "" | Tense.PRESENT         | "aninhjohiha"
-        "PL3" | "" | Tense.HABITUAL        | "aninhjohihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninhjohlvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "waninhjoga"
-        "PL3" | "" | Tense.INFINITIVE      | "uninhjohisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinitsohiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinitsohihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginitsotlvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinitsotlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginitsohisdi"
+        "SG2" | "" | Tense.PRESENT         | "hinitsohiha"
+        "SG2" | "" | Tense.HABITUAL        | "hinitsohihoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanitsotlvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinitsotlvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanitsohisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinitsohiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinitsohihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginitsotlvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinitsotlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginitsohisdi"
+        "PL3" | "" | Tense.PRESENT         | "aninitsohiha"
+        "PL3" | "" | Tense.HABITUAL        | "aninitsohihoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninitsotlvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninitsotlvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninitsohisdi"
     }
 }

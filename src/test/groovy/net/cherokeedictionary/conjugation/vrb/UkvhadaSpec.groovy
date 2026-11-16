@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73862 (entrya ukvhada) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class UkvhadaSpec extends VerbBaseSpec {
         definition: "Foggy (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ukvhada', habitual: 'ukvhadoi', remote_past: 'ukvhadvi', imperative: 'ukvhadesdi', infinitive: 'X']
+                [subject: 'SG1', object: '', present: 'agikvhada'],
+            [subject: 'SG3', object: '', habitual: 'ukvhadoi', imperative: 'jakvhadesdi', infinitive: '----', present: 'ukvhada', remote_past: 'ukvhadvi']
         ]
     ]
 
@@ -24,7 +26,7 @@ class UkvhadaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "ukvhada"
         "SG3" | "" | Tense.HABITUAL        | "ukvhadoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ukvhadvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ukvhadesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ukvhadvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
     }
 }

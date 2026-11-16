@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73937 (entrya usihwasga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UsihwasgaSpec extends VerbBaseSpec {
         definition: "Coughing (179)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'aksihwasga'],
             [subject: 'SG1', object: '', present: 'aksihwasga', habitual: 'aksihwasgoi', remote_past: 'aksihwahvi', imperative: 'aksiwahi', infinitive: 'aksihwahisdi'],
             [subject: 'SG2', object: '', present: 'tsihwasga', habitual: 'tsihwasgoi', remote_past: 'tsihwahvi', imperative: 'tsiwahi', infinitive: 'tsihwahisdi'],
-            [subject: 'SG3', object: '', present: 'usihwasga', habitual: 'usihwasgoi', remote_past: 'usihwahvi', imperative: 'usiwahi', infinitive: 'usihwahisdi'],
+            [subject: 'SG3', object: '', habitual: 'usihwasgoi', imperative: 'tsihwahi', infinitive: 'usihwahisdi', present: 'usihwasga', remote_past: 'usihwahvi'],
             [subject: 'PL3', object: '', present: 'unsihwasga', habitual: 'unsihwasgoi', remote_past: 'unsihwahvi', imperative: 'unsiwahi', infinitive: 'unsihwahisdi'],
             [subject: 'PL1INCL', object: '', present: 'iksihwasga', habitual: 'iksihwasgoi', remote_past: 'iksihwahvi', imperative: 'iksiwahi', infinitive: 'iksihwahisdi']
         ]
@@ -25,30 +27,30 @@ class UsihwasgaSpec extends VerbBaseSpec {
         conjugateVerb("Usihwasga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aksihwasga"
-        "SG1" | "" | Tense.HABITUAL        | "aksihwasgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aksihwahvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "aksiwahi"
-        "SG1" | "" | Tense.INFINITIVE      | "aksihwahisdi"
-        "SG2" | "" | Tense.PRESENT         | "tsihwasga"
-        "SG2" | "" | Tense.HABITUAL        | "tsihwasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsihwahvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsiwahi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsihwahisdi"
-        "SG3" | "" | Tense.PRESENT         | "usihwasga"
-        "SG3" | "" | Tense.HABITUAL        | "usihwasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usihwahvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "usiwahi"
-        "SG3" | "" | Tense.INFINITIVE      | "usihwahisdi"
-        "PL3" | "" | Tense.PRESENT         | "unsihwasga"
-        "PL3" | "" | Tense.HABITUAL        | "unsihwasgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unsihwahvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unsiwahi"
-        "PL3" | "" | Tense.INFINITIVE      | "unsihwahisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "iksihwasga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "iksihwasgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksihwahvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iksiwahi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksihwahisdi"
+        "SG1" | "" | Tense.PRESENT         | "agisiwasga"
+        "SG1" | "" | Tense.HABITUAL        | "agisiwasgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agisiwahvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "agisiwahvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agisiwahisdi"
+        "SG2" | "" | Tense.PRESENT         | "tsasiwasga"
+        "SG2" | "" | Tense.HABITUAL        | "tsasiwasgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasiwahvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsasiwahvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasiwahisdi"
+        "SG3" | "" | Tense.PRESENT         | "usiwasga"
+        "SG3" | "" | Tense.HABITUAL        | "usiwasgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usiwahvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "usiwahvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usiwahisdi"
+        "PL3" | "" | Tense.PRESENT         | "unisiwasga"
+        "PL3" | "" | Tense.HABITUAL        | "unisiwasgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisiwahvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unisiwahvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unisiwahisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igisiwasga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igisiwasgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisiwahvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igisiwahvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igisiwahisdi"
     }
 }

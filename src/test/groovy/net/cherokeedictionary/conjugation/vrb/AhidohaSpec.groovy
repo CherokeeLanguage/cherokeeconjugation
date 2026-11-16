@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72347 (entrya ahidoha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AhidohaSpec extends VerbBaseSpec {
         definition: "Handle/Carry (neutral)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiidoha'],
             [subject: 'SG1', object: '', present: 'jiidoha', habitual: 'jiidohoi', remote_past: 'agihidolvi', imperative: 'jiida', infinitive: 'agihidasdi'],
             [subject: 'SG2', object: '', present: 'hihidoha', habitual: 'hihidohoi', remote_past: 'jahidolvi', imperative: 'hihida', infinitive: 'jahidasdi'],
-            [subject: 'SG3', object: '', present: 'ahidoha', habitual: 'ahidohoi', remote_past: 'uhidolvi', imperative: 'ahida', infinitive: 'uhidasdi'],
+            [subject: 'SG3', object: '', habitual: 'ahidohoi', imperative: 'hihida', infinitive: 'uhidasdi', present: 'ahidoha', remote_past: 'uhidolvi'],
             [subject: 'PL3', object: '', present: 'anihidoha', habitual: 'anihidohoi', remote_past: 'unihidolvi', imperative: 'anihida', infinitive: 'unihidasdi']
         ]
     ]
@@ -24,25 +26,25 @@ class AhidohaSpec extends VerbBaseSpec {
         conjugateVerb("Ahidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiidoha"
-        "SG1" | "" | Tense.HABITUAL        | "jiidohoi"
+        "SG1" | "" | Tense.PRESENT         | "tsihidoha"
+        "SG1" | "" | Tense.HABITUAL        | "tsihidohoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agihidolvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jiida"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihidolvi"
         "SG1" | "" | Tense.INFINITIVE      | "agihidasdi"
         "SG2" | "" | Tense.PRESENT         | "hihidoha"
         "SG2" | "" | Tense.HABITUAL        | "hihidohoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jahidolvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hihida"
-        "SG2" | "" | Tense.INFINITIVE      | "jahidasdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsahidolvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hihidolvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsahidasdi"
         "SG3" | "" | Tense.PRESENT         | "ahidoha"
         "SG3" | "" | Tense.HABITUAL        | "ahidohoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhidolvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ahida"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ahidolvi"
         "SG3" | "" | Tense.INFINITIVE      | "uhidasdi"
         "PL3" | "" | Tense.PRESENT         | "anihidoha"
         "PL3" | "" | Tense.HABITUAL        | "anihidohoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unihidolvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anihida"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anihidolvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihidasdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73110 (entrya ganehiyaa) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanehiyaaSpec extends VerbBaseSpec {
         definition: "Leave Behind (liquid)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jineiyaa'],
             [subject: 'SG1', object: '', present: 'jineiyaa', habitual: 'jineiyasgoi', remote_past: 'aginehiyvi', imperative: 'jineiya', infinitive: 'aginehiyasdi'],
             [subject: 'SG2', object: '', present: 'hinehiyaa', habitual: 'hinehiyasgoi', remote_past: 'janehiyvi', imperative: 'hinehiya', infinitive: 'janehiyasdi'],
-            [subject: 'SG1', object: '', present: 'ganehiyaa', habitual: 'ganehiyasgoi', remote_past: 'unehiyvi', imperative: 'ganehiya', infinitive: 'unehiyasdi'],
+            [subject: 'SG3', object: '', habitual: 'ganehiyasgoi', imperative: 'hinehiya', infinitive: 'unehiyasdi', present: 'ganehiyaa', remote_past: 'unehiyvi'],
             [subject: 'PL3', object: '', present: 'aninehiyaa', habitual: 'aninehiyasgoi', remote_past: 'uninehiyvi', imperative: 'aninehiya', infinitive: 'uninehiyasdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GanehiyaaSpec extends VerbBaseSpec {
         conjugateVerb("Ganehiyaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jineiyaa"
-        "SG1" | "" | Tense.HABITUAL        | "jineiyasgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinehiyaa"
+        "SG1" | "" | Tense.HABITUAL        | "tsinehiyasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginehiyvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jineiya"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehiyvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginehiyasdi"
         "SG2" | "" | Tense.PRESENT         | "hinehiyaa"
         "SG2" | "" | Tense.HABITUAL        | "hinehiyasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janehiyvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehiya"
-        "SG2" | "" | Tense.INFINITIVE      | "janehiyasdi"
-        "SG1" | "" | Tense.PRESENT         | "ganehiyaa"
-        "SG1" | "" | Tense.HABITUAL        | "ganehiyasgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unehiyvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganehiya"
-        "SG1" | "" | Tense.INFINITIVE      | "unehiyasdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanehiyvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehiyvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanehiyasdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinehiyaa"
+        "SG1" | "" | Tense.HABITUAL        | "tsinehiyasgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginehiyvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehiyvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginehiyasdi"
         "PL3" | "" | Tense.PRESENT         | "aninehiyaa"
         "PL3" | "" | Tense.HABITUAL        | "aninehiyasgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninehiyvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehiya"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehiyvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninehiyasdi"
     }
 }

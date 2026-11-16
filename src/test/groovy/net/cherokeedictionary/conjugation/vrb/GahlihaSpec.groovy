@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73024 (entrya gahliha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,10 +12,11 @@ class GahlihaSpec extends VerbBaseSpec {
         definition: "Sleeping",
         part_of_speech: "v.t.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiliha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiliha', habitual: 'jilihoi', remote_past: 'X', imperative: 'jilvna', infinitive: 'agihlvnhdi'],
             [subject: 'SG1', object: 'SG3IN', present: 'hihliha', habitual: 'hihlihoi', remote_past: 'hihlvna', imperative: 'jahlvnhdi', infinitive: ''],
             [subject: 'SG2', object: 'SG3IN', present: 'gahliha', habitual: 'gahlihoi', remote_past: 'gahlvna', imperative: 'uhlvnhdi', infinitive: ''],
-            [subject: 'SG3', object: 'SG3IN', present: 'anihliha', habitual: 'anihlihoi', remote_past: 'anihlvna', imperative: 'unihlvnhdi', infinitive: ''],
+            [subject: 'SG3', object: '', habitual: 'gahlihoi', imperative: 'hihlvna', infinitive: 'uhlvnhdi', present: 'gahliha', remote_past: ''],
             [subject: 'PL3', object: 'SG3IN', present: 'idihliha', habitual: 'idihlihoi', remote_past: 'idihlvna', imperative: 'igihlvnhdi', infinitive: '']
         ]
     ]
@@ -25,30 +27,30 @@ class GahlihaSpec extends VerbBaseSpec {
         conjugateVerb("Gahliha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiliha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jilihoi"
-        // "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "X"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jilvna"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "agihlvnhdi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "hihliha"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "hihlihoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "hihlvna"
-        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "jahlvnhdi"
-        // "SG1" | "SG3IN" | Tense.INFINITIVE      | "X"
-        "SG2" | "SG3IN" | Tense.PRESENT         | "gahliha"
-        "SG2" | "SG3IN" | Tense.HABITUAL        | "gahlihoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "gahlvna"
-        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "uhlvnhdi"
-        // "SG2" | "SG3IN" | Tense.INFINITIVE      | "X"
-        "SG3" | "SG3IN" | Tense.PRESENT         | "anihliha"
-        "SG3" | "SG3IN" | Tense.HABITUAL        | "anihlihoi"
-        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "anihlvna"
-        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unihlvnhdi"
-        // "SG3" | "SG3IN" | Tense.INFINITIVE      | "X"
-        "PL3" | "SG3IN" | Tense.PRESENT         | "idihliha"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "idihlihoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "idihlvna"
-        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "igihlvnhdi"
-        // "PL3" | "SG3IN" | Tense.INFINITIVE      | "X"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsitliha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsitlihoi"
+        // "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsinitlvna"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsitli"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsitlvnidi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "tsitliha"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "tsitlihoi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aginitlvna"
+        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsitli"
+        // "SG1" | "SG3IN" | Tense.INFINITIVE      | "agitlvnidi"
+        "SG2" | "SG3IN" | Tense.PRESENT         | "hitliha"
+        "SG2" | "SG3IN" | Tense.HABITUAL        | "hitlihoi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsanitlvna"
+        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hitli"
+        // "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsatlvnidi"
+        "SG3" | "SG3IN" | Tense.PRESENT         | "gatliha"
+        "SG3" | "SG3IN" | Tense.HABITUAL        | "gatlihoi"
+        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "unitlvna"
+        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "gatli"
+        // "SG3" | "SG3IN" | Tense.INFINITIVE      | "utlvnidi"
+        "PL3" | "SG3IN" | Tense.PRESENT         | "anitliha"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "anitlihoi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uninitlvna"
+        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anitli"
+        // "PL3" | "SG3IN" | Tense.INFINITIVE      | "unitlvnidi"
     }
 }

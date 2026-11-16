@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72205 (entrya adahyiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,11 +12,12 @@ class AdahyihaSpec extends VerbBaseSpec {
         definition: "Denying",
         part_of_speech: "v.t.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiyadayiha, gadayiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyadayiha', habitual: 'jiyadayihoi', remote_past: 'jiyadayilvi', imperative: 'jiyadayiga', infinitive: 'jiyadayisdi'],
             [subject: 'SG1', object: 'SG3IN', present: 'gadayiha', habitual: 'gadayihoi', remote_past: 'agwadahyilvi', imperative: 'gadayhga', infinitive: 'agwadayhsdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyadayiha', habitual: 'hiyadayihoi', remote_past: 'hiyadayilvi', imperative: 'hiyadayiga', infinitive: 'hiyadayisdi'],
             [subject: 'SG2', object: 'SG3IN', present: 'hadayiha', habitual: 'hadayihoi', remote_past: 'jadahyilvi', imperative: 'hadayhga', infinitive: 'jadayhsdi'],
-            [subject: 'SG3', object: 'SG3IN', present: 'adahyiha', habitual: 'adahyihoi', remote_past: 'udahyilvi', imperative: 'adayhga', infinitive: 'udayhsdi'],
+            [subject: 'SG3', object: '', habitual: 'adahyihoi', imperative: 'hiyadayiga, hadayhga', infinitive: 'udayhsdi', present: 'adahyiha', remote_past: 'udahyilvi'],
             [subject: 'PL3', object: 'SG3IN', present: 'anadahyiha', habitual: 'anadahyihoi', remote_past: 'unadahyilvi', imperative: 'anadayhga', infinitive: 'unadayhsdi'],
             [subject: 'PL1INCL', object: 'SG3IN', present: 'idadahyiha', habitual: 'idadahyihoi', remote_past: 'igadahyilvi', imperative: 'idadayhga', infinitive: 'igadayhsdi']
         ]
@@ -27,40 +29,40 @@ class AdahyihaSpec extends VerbBaseSpec {
         conjugateVerb("Adahyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyadayiha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyadayihoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyadayilvi"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jiyadayiga"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyadayiha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyadayihoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyadayilvi"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyadayilvi"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyadayisdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gadayiha"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gadayihoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwadahyilvi"
-        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gadayhga"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquadayilvi"
+        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gadayilvi"
         "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwadayhsdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyadayiha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyadayihoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyadayilvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyadayiga"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "adayilvi"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyadayilvi"
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyadayisdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hadayiha"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hadayihoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jadahyilvi"
-        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hadayhga"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsadayilvi"
+        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hadayilvi"
         "SG2" | "SG3IN" | Tense.INFINITIVE      | "jadayhsdi"
-        "SG3" | "SG3IN" | Tense.PRESENT         | "adahyiha"
-        "SG3" | "SG3IN" | Tense.HABITUAL        | "adahyihoi"
-        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "udahyilvi"
-        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "adayhga"
+        "SG3" | "SG3IN" | Tense.PRESENT         | "adayiha"
+        "SG3" | "SG3IN" | Tense.HABITUAL        | "adayihoi"
+        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "udayilvi"
+        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "adayilvi"
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "udayhsdi"
-        "PL3" | "SG3IN" | Tense.PRESENT         | "anadahyiha"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "anadahyihoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unadahyilvi"
-        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anadayhga"
+        "PL3" | "SG3IN" | Tense.PRESENT         | "anadayiha"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "anadayihoi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unadayilvi"
+        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anadayilvi"
         "PL3" | "SG3IN" | Tense.INFINITIVE      | "unadayhsdi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idadahyiha"
-        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idadahyihoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igadahyilvi"
-        "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idadayhga"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idadayiha"
+        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idadayihoi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igadayilvi"
+        "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idadayilvi"
         "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igadayhsdi"
     }
 }

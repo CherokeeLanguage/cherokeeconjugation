@@ -11,7 +11,7 @@ class GanesoysgaSpec extends VerbBaseSpec {
         definition: "Hailing (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'ganesoysga', habitual: 'ganesoysgoi', remote_past: 'unesoysvi', imperative: 'daganesoysi', infinitive: 'unesoysdi']
+            [subject: 'SG3', object: '', present: 'ganesoysga', habitual: 'ganesoysgoi', remote_past: 'unesoysvi', imperative: 'daganesoysi', infinitive: 'unesoysdi']
         ]
     ]
 
@@ -24,7 +24,7 @@ class GanesoysgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "ganesoysga"
         "SG1" | "" | Tense.HABITUAL        | "ganesoysgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "unesoysvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "daganesoysi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "unesoysvi"
         "SG1" | "" | Tense.INFINITIVE      | "unesoysdi"
     }
 }

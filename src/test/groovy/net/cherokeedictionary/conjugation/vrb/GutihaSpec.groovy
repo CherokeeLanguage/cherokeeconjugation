@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73286 (entrya gutiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class GutihaSpec extends VerbBaseSpec {
         definition: "Snowing (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'gutiha', habitual: 'gutihoi', remote_past: 'uwutahnvi', imperative: 'dagutahni', infinitive: 'uwutodi']
+            [subject: 'SG3', object: '', habitual: 'gutisgoi', imperative: '', infinitive: 'uwutohdi', present: 'gutiha', remote_past: 'uwutahnvi']
         ]
     ]
 
@@ -22,9 +23,9 @@ class GutihaSpec extends VerbBaseSpec {
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gutiha"
-        "SG1" | "" | Tense.HABITUAL        | "gutihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uwutahnvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "dagutahni"
-        "SG1" | "" | Tense.INFINITIVE      | "uwutodi"
+        "SG1" | "" | Tense.HABITUAL        | "gutisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquutanvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gutanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwudodi"
     }
 }

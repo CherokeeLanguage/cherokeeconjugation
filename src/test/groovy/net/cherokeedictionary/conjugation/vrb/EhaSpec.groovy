@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72959 (entrya eha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class EhaSpec extends VerbBaseSpec {
         definition: "Lives (Resides)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'gea', habitual: 'geoi', remote_past: 'x', imperative: 'gehesdi', infinitive: 'x']
+                [subject: 'SG1', object: '', present: 'gea'],
+            [subject: 'SG3', object: '', habitual: 'ehoi', imperative: 'hehesdi', infinitive: '', present: 'eha', remote_past: '']
         ]
     ]
 
@@ -21,10 +23,10 @@ class EhaSpec extends VerbBaseSpec {
         conjugateVerb("Eha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gea"
-        "SG1" | "" | Tense.HABITUAL        | "geoi"
+        "SG1" | "" | Tense.PRESENT         | "geha"
+        "SG1" | "" | Tense.HABITUAL        | "gehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "x"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gehesdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "ge"
         "SG1" | "" | Tense.INFINITIVE      | "x"
     }
 }

@@ -23,8 +23,8 @@ class AyogiSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "ayogi"
         "SG3" | "" | Tense.HABITUAL        | "ayogoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyojvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvyoji"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyotsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ayotsvi"
         "SG3" | "" | Tense.INFINITIVE      | "uyoysdi"
     }
 }

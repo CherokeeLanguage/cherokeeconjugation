@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73142 (entrya ganohili) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanohiliSpec extends VerbBaseSpec {
         definition: "Flying",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinoili'],
             [subject: 'SG1', object: '', present: 'jinoili', habitual: 'jinoilegoi', remote_past: 'aginohilidolvi', imperative: 'jinoilisvi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'hinohili', habitual: 'hinohilegoi', remote_past: 'janohilidolvi', imperative: 'hinohilvsvi', infinitive: ''],
-            [subject: 'SG3', object: '', present: 'ganohili', habitual: 'ganohilegoi', remote_past: 'unohilidolvi', imperative: 'ganohilvsvi', infinitive: ''],
+            [subject: 'SG3', object: '', habitual: 'ganohilisoi', imperative: 'hinohilisesdi', infinitive: '', present: 'ganohili', remote_past: ''],
             [subject: 'PL3', object: '', present: 'aninohili', habitual: 'aninohilegoi', remote_past: 'uninohilidolvi', imperative: 'aninohilvsvi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'idinohili', habitual: 'idinohilegoi', remote_past: 'iginohilidolvi', imperative: 'idinohilvsvi', infinitive: '']
         ]
@@ -25,30 +27,30 @@ class GanohiliSpec extends VerbBaseSpec {
         conjugateVerb("Ganohili", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinoili"
-        "SG1" | "" | Tense.HABITUAL        | "jinoilegoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinohili"
+        "SG1" | "" | Tense.HABITUAL        | "tsinohilisoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginohilidolvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinoilisvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinohi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
         "SG2" | "" | Tense.PRESENT         | "hinohili"
-        "SG2" | "" | Tense.HABITUAL        | "hinohilegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janohilidolvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohilvsvi"
+        "SG2" | "" | Tense.HABITUAL        | "hinohilisoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanohilidolvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "ganohili"
-        "SG3" | "" | Tense.HABITUAL        | "ganohilegoi"
+        "SG3" | "" | Tense.HABITUAL        | "ganohilisoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unohilidolvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohilvsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
         "PL3" | "" | Tense.PRESENT         | "aninohili"
-        "PL3" | "" | Tense.HABITUAL        | "aninohilegoi"
+        "PL3" | "" | Tense.HABITUAL        | "aninohilisoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninohilidolvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohilvsvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
         "PL1INCL" | "" | Tense.PRESENT         | "idinohili"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idinohilegoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idinohilisoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginohilidolvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohilvsvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }
 }

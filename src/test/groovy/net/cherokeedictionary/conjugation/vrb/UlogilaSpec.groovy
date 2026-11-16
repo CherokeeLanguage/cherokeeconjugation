@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73879 (entrya ulogila) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class UlogilaSpec extends VerbBaseSpec {
         definition: "Cloudy (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ulogila', habitual: 'ulogiloi', remote_past: 'ulogilvi', imperative: 'ulogilesdi', infinitive: 'X']
+            [subject: 'SG3', object: '', habitual: 'ulogiloi', imperative: '', infinitive: '', present: 'ulogila', remote_past: 'ulogilvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class UlogilaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "ulogila"
         "SG3" | "" | Tense.HABITUAL        | "ulogiloi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulogilvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulogilesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulogilvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
     }
 }

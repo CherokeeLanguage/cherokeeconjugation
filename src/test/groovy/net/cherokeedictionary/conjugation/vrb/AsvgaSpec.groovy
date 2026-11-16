@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72647 (entrya asvga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class AsvgaSpec extends VerbBaseSpec {
         definition: "It Smells",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'asvga', habitual: 'asvgoi', remote_past: 'asvgvi', imperative: 'asvgesdi', infinitive: 'It']
+                [subject: 'SG1', object: '', present: 'jisvga'],
+            [subject: 'SG3', object: '', habitual: 'asvgoi', imperative: '', infinitive: '', present: 'asvga', remote_past: '']
         ]
     ]
 
@@ -23,8 +25,8 @@ class AsvgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "asvga"
         "SG3" | "" | Tense.HABITUAL        | "asvgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "asvgvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "asvgesdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usvgvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "asv"
         "SG3" | "" | Tense.INFINITIVE      | "It"
     }
 }

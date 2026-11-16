@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72744 (entrya dadeyohvsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class DadeyohvsgaSpec extends VerbBaseSpec {
         definition: "Teaching",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'degadeyohvsga'],
             [subject: 'SG1', object: '', present: 'degadeyohvsga', habitual: 'degadeyohvsgoi', remote_past: 'dagwadeyohnvi', imperative: 'digadeyohvga', infinitive: 'digwadehyohdi'],
             [subject: 'SG2', object: '', present: 'dehadeyohvsga', habitual: 'dehadeyohvsgoi', remote_past: 'dejadeyohnvi', imperative: 'tadeyohvga', infinitive: 'dijadehyohdi'],
-            [subject: 'SG3', object: '', present: 'dadeyohvsga', habitual: 'dadeyohvsgoi', remote_past: 'dudeyohnvi', imperative: 'dideyohvga', infinitive: 'judehyohdi'],
+            [subject: 'SG3', object: '', habitual: 'dadehyohvsgoi', imperative: 'tadehyohvga', infinitive: 'judehyohdi', present: 'dadeyohvsga', remote_past: 'dudeyohnvi'],
             [subject: 'PL3', object: '', present: 'danadeyohvsga', habitual: 'danadeyohvsgoi', remote_past: 'dunadeyohnvi', imperative: 'dinadeyohvga', infinitive: 'junadehyohdi'],
             [subject: 'PL1INCL', object: '', present: 'dedadeyohvsga', habitual: 'dedadeyohvsgoi', remote_past: 'degadeyohnvi', imperative: 'didadeyohvga', infinitive: 'digadehyohdi']
         ]
@@ -25,30 +27,30 @@ class DadeyohvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Dadeyohvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "degadeyohvsga"
-        "SG1" | "" | Tense.HABITUAL        | "degadeyohvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "dagwadeyohnvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "digadeyohvga"
-        "SG1" | "" | Tense.INFINITIVE      | "digwadehyohdi"
-        "SG2" | "" | Tense.PRESENT         | "dehadeyohvsga"
-        "SG2" | "" | Tense.HABITUAL        | "dehadeyohvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "dejadeyohnvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "tadeyohvga"
-        "SG2" | "" | Tense.INFINITIVE      | "dijadehyohdi"
+        "SG1" | "" | Tense.PRESENT         | "gadeyohvsga"
+        "SG1" | "" | Tense.HABITUAL        | "gadeyohvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadeyonvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadeyonvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agideyodi"
+        "SG2" | "" | Tense.PRESENT         | "hadeyohvsga"
+        "SG2" | "" | Tense.HABITUAL        | "hadeyohvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadeyonvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadeyonvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadeyodi"
         "SG3" | "" | Tense.PRESENT         | "dadeyohvsga"
         "SG3" | "" | Tense.HABITUAL        | "dadeyohvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "dudeyohnvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dideyohvga"
-        "SG3" | "" | Tense.INFINITIVE      | "judehyohdi"
-        "PL3" | "" | Tense.PRESENT         | "danadeyohvsga"
-        "PL3" | "" | Tense.HABITUAL        | "danadeyohvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "dunadeyohnvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "dinadeyohvga"
-        "PL3" | "" | Tense.INFINITIVE      | "junadehyohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedadeyohvsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedadeyohvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degadeyohnvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "didadeyohvga"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digadehyohdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udeyonvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "adeyonvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udeyodi"
+        "PL3" | "" | Tense.PRESENT         | "anadeyohvsga"
+        "PL3" | "" | Tense.HABITUAL        | "anadeyohvsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadeyonvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anadeyonvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unideyodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadeyohvsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idadeyohvsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadeyonvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadeyonvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igideyodi"
     }
 }

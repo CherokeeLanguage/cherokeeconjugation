@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72232 (entrya adasdayvhvsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AdasdayvhvsgaSpec extends VerbBaseSpec {
         definition: "Cooking (Meal, Place)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'gadasdayvhvsga'],
             [subject: 'SG1', object: '', present: 'gadasdayvhvsga', habitual: 'gadasdayvhvsgoi', remote_past: 'agwadasdayvhnvi', imperative: 'gadasdayvhvga', infinitive: 'agwadasdayhdi'],
             [subject: 'SG2', object: '', present: 'hadasdayvhvsga', habitual: 'hadasdayvhvsgoi', remote_past: 'jadasdayvhnvi', imperative: 'hadasdayvhvga', infinitive: 'jadasdayhdi'],
-            [subject: 'SG3', object: '', present: 'adasdayvhvsga', habitual: 'adasdayvhvsgoi', remote_past: 'udasdayvhnvi', imperative: 'adasdayvhvga', infinitive: 'udasdayhdi'],
+            [subject: 'SG3', object: '', habitual: 'adasdayvhvsgoi', imperative: 'hadasdayvhvga', infinitive: 'udasdayhdi', present: 'adasdayvhvsga', remote_past: 'udasdayvhnvi'],
             [subject: 'PL3', object: '', present: 'anadasdayvhvsga', habitual: 'anadasdayvhvsgoi', remote_past: 'unadasdayvhnvi', imperative: 'anadasdayvhvga', infinitive: 'unadasdayhdi'],
             [subject: 'PL1INCL', object: '', present: 'idadasdayvhvsga', habitual: 'idadasdayvhvsgoi', remote_past: 'igadasdayvhnvi', imperative: 'idadasdayvhvga', infinitive: 'igadasdayhdi']
         ]
@@ -27,28 +29,28 @@ class AdasdayvhvsgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadasdayvhvsga"
         "SG1" | "" | Tense.HABITUAL        | "gadasdayvhvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwadasdayvhnvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadasdayvhvga"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadasdayvnvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadasdayvnvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwadasdayhdi"
         "SG2" | "" | Tense.PRESENT         | "hadasdayvhvsga"
         "SG2" | "" | Tense.HABITUAL        | "hadasdayvhvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadasdayvhnvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadasdayvhvga"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadasdayvnvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadasdayvnvi"
         "SG2" | "" | Tense.INFINITIVE      | "jadasdayhdi"
         "SG3" | "" | Tense.PRESENT         | "adasdayvhvsga"
         "SG3" | "" | Tense.HABITUAL        | "adasdayvhvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udasdayvhnvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "adasdayvhvga"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udasdayvnvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "adasdayvnvi"
         "SG3" | "" | Tense.INFINITIVE      | "udasdayhdi"
         "PL3" | "" | Tense.PRESENT         | "anadasdayvhvsga"
         "PL3" | "" | Tense.HABITUAL        | "anadasdayvhvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadasdayvhnvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anadasdayvhvga"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadasdayvnvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anadasdayvnvi"
         "PL3" | "" | Tense.INFINITIVE      | "unadasdayhdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idadasdayvhvsga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idadasdayvhvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadasdayvhnvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadasdayvhvga"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadasdayvnvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadasdayvnvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igadasdayhdi"
     }
 }

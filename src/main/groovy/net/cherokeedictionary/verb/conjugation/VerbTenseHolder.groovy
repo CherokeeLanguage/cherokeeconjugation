@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.conjugation
 
 import net.cherokeedictionary.stem.StemType
 import net.cherokeedictionary.transliteration.SyllabaryUtil
+import net.cherokeedictionary.util.StringUtility
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.NonFinalSuffixG
 
@@ -41,10 +42,6 @@ class VerbTenseHolder {
     public void process() {
 //        def su = SyllabaryUtil
 
-//        infinitive = su.parseSyllabary(stemmer.infinitive.syllabary.substring(1))
-//        println stemmer.infinitive.syllabary.substring(1)
-        infinitive = stemmer?.infinitive?.syllabary ? stemmer?.infinitive?.syllabary?.substring(1) : ''
-
         stemmer.getStems().each {
             if (isDebug) println "DEBUG: Stem type: ${it.stemtype}, syllabary: ${it.syllabary}"
             switch (it.stemtype) {
@@ -71,11 +68,30 @@ class VerbTenseHolder {
             }
         }
 
-        // The infinitive must use the normalized Deverbal stem (vowel/consonant
-        // initial like the other stems) so preVowel/preConsonant prefix allomorphy
-        // is selected correctly. Chopping the raw dictionary entry loses the
-        // normalized initial vowel (e.g. ᎤᏓᏙᎵᏍᏙᏗ -> ᏓᏙᎵᏍᏙᏗ instead of ᎠᏓᏙᎵᏍᏙᏗ).
-        //infinitive = deverbal ?: (stemmer?.infinitive?.syllabary ? stemmer.infinitive.syllabary.substring(1) : '')
+        // tio 16Nov26: infinitive stem sourcing -- per-pattern guard resolving
+        // the known conflict. Use the normalized Deverbal stem ONLY when the
+        // raw infinitive entry is a 3rd-person vowel prefix + a consonant-
+        // initial remainder whose onset is NOT w/y (the case where the raw
+        // chop loses the normalized vowel and the preConsonant allomorphs
+        // agi-/uni-/igi- are wrongly chosen over preVowel agw-/una-/iga-).
+        // Verbs like To Be Somewhere (ᎤᏪᏓᏍᏗ: chop leaves ᏪᏓᏍᏗ, w-onset, and
+        // SG3 composes the book's exact ᎤᏪᏓᏍᏗ from the chop) keep the chop --
+        // the Deverbal stem triggers a UW-rule Ꮽ insertion there.
+        def rawInfSyllabary = stemmer?.infinitive?.syllabary
+        infinitive = rawInfSyllabary ? rawInfSyllabary.substring(1) : ''
+        if (deverbal && rawInfSyllabary && rawInfSyllabary.size() > 1) {
+            String chopped = rawInfSyllabary.substring(1)
+            char rawFirst = rawInfSyllabary.charAt(0)
+            boolean thirdPersonVowelPrefix = StringUtility.startsWithVowelSyllabary(String.valueOf(rawFirst))
+            boolean chopConsonantOnset = chopped && !StringUtility.startsWithVowelSyllabary(chopped)
+            char onset = chopped.charAt(0)
+            boolean wyOnset = ['Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ', 'Ꮿ', 'Ᏺ', 'Ᏻ', 'Ᏼ'].contains(String.valueOf(onset))
+            if (thirdPersonVowelPrefix && chopConsonantOnset && !wyOnset
+                    && StringUtility.startsWithVowelSyllabary(deverbal)
+                    && deverbal != chopped) {
+                infinitive = deverbal
+            }
+        }
 	//todo: -- review again -- timo 4Nov26
         // The verb book ("NB: the Future is usually Stem III", To Go): the Future is
         // Stem III + -i, i.e. the Remote Past form with the final suffix -v'i replaced

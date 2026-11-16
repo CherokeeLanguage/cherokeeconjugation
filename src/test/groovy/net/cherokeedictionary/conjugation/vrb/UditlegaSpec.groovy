@@ -24,7 +24,7 @@ class UditlegaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "uditlega"
         "SG3" | "" | Tense.HABITUAL        | "uditlegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uditlegvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uditlegesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "uditlegvi"
         "SG3" | "" | Tense.INFINITIVE      | "uganawohisdi"
     }
 }

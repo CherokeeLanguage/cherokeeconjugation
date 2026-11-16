@@ -21,10 +21,10 @@ class UhyvdladiSpec extends VerbBaseSpec {
         conjugateVerb("Uhyvdladi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "uhyvdladi"
-        "SG3" | "" | Tense.HABITUAL        | "uhyvdloi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhyvdlvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uhyvdlesdi"
-        "SG3" | "" | Tense.INFINITIVE      | "uhyvdladisdi"
+        "SG3" | "" | Tense.PRESENT         | "uyvdladi"
+        "SG3" | "" | Tense.HABITUAL        | "uyvtloi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyvtlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "uyvtlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyvdladisdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73093 (entrya ganadega) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanadegaSpec extends VerbBaseSpec {
         definition: "Selling",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinadega'],
             [subject: 'SG1', object: '', present: 'jindega', habitual: 'jindegoi', remote_past: 'agindinvsvi', imperative: 'jinduga', infinitive: 'agindinvsdi'],
             [subject: 'SG2', object: '', present: 'hinadega', habitual: 'hinadegoi', remote_past: 'janadinvsvi', imperative: 'hinaduga', infinitive: 'janadinvsdi'],
-            [subject: 'SG3', object: '', present: 'ganadega', habitual: 'ganedegoi', remote_past: 'unadinvsvi', imperative: 'ganaduga', infinitive: 'unadinvsdi'],
+            [subject: 'SG3', object: '', habitual: 'ganadegoi', imperative: 'hinaduga', infinitive: 'unadinvdi', present: 'ganadega', remote_past: 'unadinvsvi'],
             [subject: 'PL3', object: '', present: 'aninadega', habitual: 'aninadegoi', remote_past: 'uninadinvsvi', imperative: 'aninaduga', infinitive: 'uninadinvsdi'],
             [subject: 'PL1INCL', object: '', present: 'idinadega', habitual: 'idinadegoi', remote_past: 'idinadinvsvi', imperative: 'idinaduga', infinitive: 'iginadinvsdi']
         ]
@@ -25,30 +27,30 @@ class GanadegaSpec extends VerbBaseSpec {
         conjugateVerb("Ganadega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jindega"
-        "SG1" | "" | Tense.HABITUAL        | "jindegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agindinvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinduga"
-        "SG1" | "" | Tense.INFINITIVE      | "agindinvsdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinadega"
+        "SG1" | "" | Tense.HABITUAL        | "tsinadegoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginadinvsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinadinvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginadinvdi"
         "SG2" | "" | Tense.PRESENT         | "hinadega"
         "SG2" | "" | Tense.HABITUAL        | "hinadegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janadinvsvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinaduga"
-        "SG2" | "" | Tense.INFINITIVE      | "janadinvsdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanadinvsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinadinvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanadinvdi"
         "SG3" | "" | Tense.PRESENT         | "ganadega"
-        "SG3" | "" | Tense.HABITUAL        | "ganedegoi"
+        "SG3" | "" | Tense.HABITUAL        | "ganadegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unadinvsvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganaduga"
-        "SG3" | "" | Tense.INFINITIVE      | "unadinvsdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganadinvsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unadinvdi"
         "PL3" | "" | Tense.PRESENT         | "aninadega"
         "PL3" | "" | Tense.HABITUAL        | "aninadegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninadinvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninaduga"
-        "PL3" | "" | Tense.INFINITIVE      | "uninadinvsdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninadinvsvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninadinvdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinadega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinadegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "idinadinvsvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinaduga"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvsdi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginadinvsvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinadinvsvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvdi"
     }
 }

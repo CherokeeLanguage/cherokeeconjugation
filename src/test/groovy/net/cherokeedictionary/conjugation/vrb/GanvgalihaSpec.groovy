@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73164 (entrya ganvgaliha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanvgalihaSpec extends VerbBaseSpec {
         definition: "Brushing / Cleaning",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinvgalia, jinvgalia'],
             [subject: 'SG1', object: '', present: 'jinvgalia', habitual: 'jinvgalisgoi', remote_past: 'aginvgalvhvi', imperative: 'jinvgala', infinitive: 'aginvgahldi'],
             [subject: 'SG2', object: '', present: 'hinvgaliha', habitual: 'hanvgalisgoi', remote_past: 'janvgalvhvi', imperative: 'hinvgala', infinitive: 'janvgahldi'],
-            [subject: 'SG3', object: '', present: 'ganvgaliha', habitual: 'ganvgalisgoi', remote_past: 'unvgalvhvi', imperative: 'ganvgala', infinitive: 'unvgahldi'],
+            [subject: 'SG3', object: '', habitual: 'ganvgalisgoi', imperative: 'hinvgala, hinvgala', infinitive: 'unvgahldi', present: 'ganvgaliha', remote_past: 'unvgalvhvi'],
             [subject: 'PL3', object: '', present: 'aninvgaliha', habitual: 'aninvgalisgoi', remote_past: 'uninvgalvhvi', imperative: 'aninvgala', infinitive: 'uninvgahldi'],
             [subject: 'PL1INCL', object: '', present: 'idinvgaliha', habitual: 'idinvgalisgoi', remote_past: 'iginvgalvhvi', imperative: 'idinvgala', infinitive: 'iginvgahldi']
         ]
@@ -25,30 +27,30 @@ class GanvgalihaSpec extends VerbBaseSpec {
         conjugateVerb("Ganvgaliha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinvgalia"
-        "SG1" | "" | Tense.HABITUAL        | "jinvgalisgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinvgaliha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinvgalisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginvgalvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinvgala"
-        "SG1" | "" | Tense.INFINITIVE      | "aginvgahldi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvgalvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginvgalodi"
         "SG2" | "" | Tense.PRESENT         | "hinvgaliha"
-        "SG2" | "" | Tense.HABITUAL        | "hanvgalisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janvgalvhvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvgala"
-        "SG2" | "" | Tense.INFINITIVE      | "janvgahldi"
+        "SG2" | "" | Tense.HABITUAL        | "hinvgalisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanvgalvhvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvgalvhvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanvgalodi"
         "SG3" | "" | Tense.PRESENT         | "ganvgaliha"
         "SG3" | "" | Tense.HABITUAL        | "ganvgalisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unvgalvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganvgala"
-        "SG3" | "" | Tense.INFINITIVE      | "unvgahldi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganvgalvhvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unvgalodi"
         "PL3" | "" | Tense.PRESENT         | "aninvgaliha"
         "PL3" | "" | Tense.HABITUAL        | "aninvgalisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninvgalvhvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvgala"
-        "PL3" | "" | Tense.INFINITIVE      | "uninvgahldi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvgalvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninvgalodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinvgaliha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinvgalisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginvgalvhvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinvgala"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginvgahldi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinvgalvhvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginvgalodi"
     }
 }

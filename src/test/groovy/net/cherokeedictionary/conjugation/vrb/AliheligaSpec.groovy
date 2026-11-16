@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72505 (entrya aliheliga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AliheligaSpec extends VerbBaseSpec {
         definition: "Happy, Thankful",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'galieliga'],
             [subject: 'SG1', object: '', present: 'galieliga', habitual: 'galieligoi', remote_past: 'agwalihelijvi', imperative: 'galieligi', infinitive: 'agwalihelisdi'],
             [subject: 'SG2', object: '', present: 'haliheliga', habitual: 'haliheligoi', remote_past: 'jalihelijvi', imperative: 'haliheligi', infinitive: 'jalihelisdi'],
-            [subject: 'SG3', object: '', present: 'aliheliga', habitual: 'aliheligoi', remote_past: 'ulihelijvi', imperative: 'aliheligi', infinitive: 'ulihelisdi'],
+            [subject: 'SG3', object: '', habitual: 'aliheligoi', imperative: 'haliheligi', infinitive: 'ulihelisdi', present: 'aliheliga', remote_past: 'ulihelijvi'],
             [subject: 'PL3', object: '', present: 'analiheliga', habitual: 'analiheligoi', remote_past: 'unahelijvi', imperative: 'analiheligi', infinitive: 'unalihelisdi'],
             [subject: 'PL1INCL', object: '', present: 'idaliheliga', habitual: 'idaliheligoi', remote_past: 'igahelijvi', imperative: 'idaliheligi', infinitive: 'igalihelisdi']
         ]
@@ -25,30 +27,30 @@ class AliheligaSpec extends VerbBaseSpec {
         conjugateVerb("Aliheliga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galieliga"
-        "SG1" | "" | Tense.HABITUAL        | "galieligoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwalihelijvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "galieligi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwalihelisdi"
+        "SG1" | "" | Tense.PRESENT         | "galiheliga"
+        "SG1" | "" | Tense.HABITUAL        | "galiheligoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aqualihelitsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "galihelitsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aqualihelisdi"
         "SG2" | "" | Tense.PRESENT         | "haliheliga"
         "SG2" | "" | Tense.HABITUAL        | "haliheligoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jalihelijvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "haliheligi"
-        "SG2" | "" | Tense.INFINITIVE      | "jalihelisdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalihelitsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "halihelitsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalihelisdi"
         "SG3" | "" | Tense.PRESENT         | "aliheliga"
         "SG3" | "" | Tense.HABITUAL        | "aliheligoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulihelijvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "aliheligi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulihelitsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "alihelitsvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulihelisdi"
         "PL3" | "" | Tense.PRESENT         | "analiheliga"
         "PL3" | "" | Tense.HABITUAL        | "analiheligoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahelijvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "analiheligi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unalihelitsvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "analihelitsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unalihelisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idaliheliga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idaliheligoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igahelijvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaliheligi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalihelitsvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalihelitsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igalihelisdi"
     }
 }

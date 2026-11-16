@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73358 (entrya igaluhga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class IgaluhgaSpec extends VerbBaseSpec {
         definition: "Returning (131)*",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ijiluhga', habitual: 'ijiluhgoi', remote_past: 'vagiluhjvi', imperative: 'jijiluhgi', infinitive: 'vagiluhisdi'],
+                [subject: 'SG1', object: '', present: 'ijiluga'],
+            [subject: 'SG3', object: '', habitual: 'igaluhgoi', imperative: 'jihiluhgi', infinitive: 'vuluhisdi, uluhisdi', present: 'igaluhga', remote_past: 'vuluhjvi, uluhjvi'],
             [subject: 'SG3', object: '', present: 'ihiluhga', habitual: 'ihiluhgoi', remote_past: 'vjaluhjvi', imperative: 'jihiluhgi', infinitive: 'vjaluhisdi'],
             [subject: 'SG3', object: '', present: 'ianiluhga', habitual: 'ianiluhgoi', remote_past: 'vuniluhjvi', imperative: 'jianiluhgi', infinitive: 'vuniluhisdi'],
             [subject: 'SG3', object: '', present: 'iidiluhga', habitual: 'iidiluhgoi', remote_past: 'vigiluhjvi', imperative: 'jiidiluhgi', infinitive: 'vigiluhisdi']
@@ -24,25 +26,25 @@ class IgaluhgaSpec extends VerbBaseSpec {
         conjugateVerb("Igaluhga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ijiluhga"
-        "SG3" | "" | Tense.HABITUAL        | "ijiluhgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "vagiluhjvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "jijiluhgi"
-        "SG3" | "" | Tense.INFINITIVE      | "vagiluhisdi"
-        "SG3" | "" | Tense.PRESENT         | "ihiluhga"
-        "SG3" | "" | Tense.HABITUAL        | "ihiluhgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "vjaluhjvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "jihiluhgi"
-        "SG3" | "" | Tense.INFINITIVE      | "vjaluhisdi"
-        "SG3" | "" | Tense.PRESENT         | "ianiluhga"
-        "SG3" | "" | Tense.HABITUAL        | "ianiluhgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "vuniluhjvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "jianiluhgi"
-        "SG3" | "" | Tense.INFINITIVE      | "vuniluhisdi"
-        "SG3" | "" | Tense.PRESENT         | "iidiluhga"
-        "SG3" | "" | Tense.HABITUAL        | "iidiluhgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "vigiluhjvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "jiidiluhgi"
-        "SG3" | "" | Tense.INFINITIVE      | "vigiluhisdi"
+        "SG3" | "" | Tense.PRESENT         | "igaluga"
+        "SG3" | "" | Tense.HABITUAL        | "igalugoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.PRESENT         | "igaluga"
+        "SG3" | "" | Tense.HABITUAL        | "igalugoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.PRESENT         | "igaluga"
+        "SG3" | "" | Tense.HABITUAL        | "igalugoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.PRESENT         | "igaluga"
+        "SG3" | "" | Tense.HABITUAL        | "igalugoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
     }
 }

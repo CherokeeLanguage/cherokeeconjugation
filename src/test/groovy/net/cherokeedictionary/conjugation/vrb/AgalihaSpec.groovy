@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72297 (entrya agaliha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AgalihaSpec extends VerbBaseSpec {
         definition: "Shining (Moon/Sun Is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'agaliha', habitual: 'agalisgoi', remote_past: 'ugalisvi', imperative: 'dvgalisi', infinitive: 'ugalihisdi']
+            [subject: 'SG3', object: '', habitual: 'agalisgoi', imperative: '', infinitive: 'ugalihisdi', present: 'agaliha', remote_past: 'ugalisvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class AgalihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "agaliha"
         "SG3" | "" | Tense.HABITUAL        | "agalisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ugalisvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvgalisi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "agalisvi"
         "SG3" | "" | Tense.INFINITIVE      | "ugalihisdi"
     }
 }

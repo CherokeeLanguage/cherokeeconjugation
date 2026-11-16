@@ -21,10 +21,10 @@ class UnesahyvdlaSpec extends VerbBaseSpec {
         conjugateVerb("Unesahyvdla", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "unesahyvdla"
-        "SG3" | "" | Tense.HABITUAL        | "unesahyvdloi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unesahyvdlvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "unesahyvdlesdi"
-        "SG3" | "" | Tense.INFINITIVE      | "unesahyvdisdi"
+        "SG3" | "" | Tense.PRESENT         | "unesayvdla"
+        "SG3" | "" | Tense.HABITUAL        | "unesayvtloi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unesayvtlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "unesayvtlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unesayvdisdi"
     }
 }

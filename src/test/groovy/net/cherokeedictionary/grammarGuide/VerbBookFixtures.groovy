@@ -19,7 +19,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "aliheligoi", imperative: "galieligi", infinitive: "ulihelisdi", present: "aliheliga", remote_past: "ulihelitsvi"],
+                [subject: "SG3", habitual: "aliheligoi", imperative: "galieligi", infinitive: "ulihelisdi", present: "aliheliga", remote_past: "ulihelitsvi", immediate_past: "aliheligi"],
                 [subject: "SG1", present: "galieliga"],
             ],
         ],
@@ -64,7 +64,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "anegoi", imperative: "gena", infinitive: "uwenvsdi", present: "ega", remote_past: "uwenvsvi"],
+                [subject: "SG3", habitual: "anegoi", imperative: "gena", infinitive: "uwenvsdi", present: "ega", remote_past: "uwenvsvi", immediate_past: "ena"],
                 [subject: "SG1", present: "gega"],
             ],
         ],
@@ -72,7 +72,19 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", present: "agikaha"],
+                // tio 16Nov26: habitual/remote-past/infinitive/imperative rows
+                // transcribed from the animate-have paradigm (2012 VRB yaml
+                // "Have (living)" agi- row; cedEntries.csv id 73986 agrees on
+                // the -hOi/-hvi pattern). The book's "To Have (a living being)"
+                // page (Cherokee Verb Conjugations pp.42-43) prints ONLY Stem I
+                // and notes the verb alternates a-/consonant onsets and "is
+                // probably easiest to learn this as an irregular verb" — no
+                // Stem IV is printed for it. immediate_past therefore follows
+                // the Stem IV = Stem III pattern the book itself prints on all
+                // three sibling have-something pages (long-rigid p.44
+                // "-vy-v'i" immediate = "-vy-v'i" remote; flexible "-na'-v'i";
+                // liquid "unehv'i"), i.e. the remote-past surface agikahvi.
+                [subject: "SG3", habitual: "agikahoi", imperative: "agikahesdi", infinitive: "agikohdi", present: "agikaha", remote_past: "agikahvi", immediate_past: "agikahvi"],
                 [subject: "SG1", present: "gvyakaha"],
             ],
         ],
@@ -87,7 +99,7 @@ class VerbBookFixtures {
                 // Every printed row (both readings, all tenses) is registered as
                 // a VerbRegistry subject-surface override keyed on "ᎤᎾᎠ", so the
                 // engine consults the book surface directly.
-                [subject: "SG3", habitual: "unaoi", imperative: "aginaesdi", infinitive: "unvdi", present: "unaa", remote_past: "unavi"],
+                [subject: "SG3", habitual: "unaoi", imperative: "aginaesdi", infinitive: "unvdi", present: "unaa", remote_past: "unavi", immediate_past: "unavi"],
                 [subject: "SG1", present: "aginaa"],
             ],
         ],
@@ -95,7 +107,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "He/she/it has multiple liquid things\" unehoi/dunehoi", imperative: "aginehesdi/daginehesdi", infinitive: "uditasdi/tsuditasdi", present: "He/she/it has multiple liquid things\" uneha/duneha", remote_past: "He/she/it had multiple liquid things\" unehvi/dunehvi"],
+                [subject: "SG3", habitual: "He/she/it has multiple liquid things\" unehoi/dunehoi", imperative: "aginehesdi/daginehesdi", infinitive: "uditasdi/tsuditasdi", present: "He/she/it has multiple liquid things\" uneha/duneha", remote_past: "He/she/it had multiple liquid things\" unehvi/dunehvi", immediate_past: "unehvi"],
                 [subject: "SG1", present: "I have multiple liquid things\" agineha/dagineha"],
             ],
         ],
@@ -103,7 +115,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "uwayoi/duwayoi", imperative: "agwvyesdi/dagwvyesdi", infinitive: "uwayi iyulisdodi", present: "uwaya/duwaya", remote_past: "uwayvi/duwayvi"],
+                [subject: "SG3", habitual: "uwayoi/duwayoi", imperative: "agwvyesdi/dagwvyesdi", infinitive: "uwayi iyulisdodi", present: "uwaya/duwaya", remote_past: "uwayvi/duwayvi", immediate_past: "uwayvi"],
                 [subject: "SG1", present: "I have multiple long & rigid things\" agwvya/dagwvya"],
             ],
         ],
@@ -137,7 +149,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "gvsgahlvsgoi", imperative: "hvsgatlvga", infinitive: "uwasgalvdi", present: "gvsgahlvsga", remote_past: "uwasgahlanvi"],
+                [subject: "SG3", habitual: "gvsgahlvsgoi", imperative: "hvsgatlvga", infinitive: "uwasgalvdi", present: "gvsgahlvsga", remote_past: "uwasgahlanvi", immediate_past: "gvsgatlvga"],
                 [subject: "SG1", present: "gvsgahlvsga"],
             ],
         ],
@@ -153,7 +165,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "galvkwdisgoi", imperative: "hilvkwda", infinitive: "ulvkwdodi", present: "galvkwdiha", remote_past: "ulvkwtanvi"],
+                [subject: "SG3", habitual: "galvkwdisgoi", imperative: "hilvkwda", infinitive: "ulvkwdodi", present: "galvkwdiha", remote_past: "ulvkwtanvi", immediate_past: "galvkwda"],
                 [subject: "SG1", present: "tsilvkwdiha"],
             ],
         ],
@@ -161,7 +173,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "ahihoi", imperative: "hiluga", infinitive: "uhisdi", present: "ahiha", remote_past: "utlvi"],
+                [subject: "SG3", habitual: "ahihoi", imperative: "hiluga", infinitive: "uhisdi", present: "ahiha", remote_past: "utlvi", immediate_past: "galuga"],
                 [subject: "SG1", present: "tsiiha"],
             ],
         ],
@@ -169,7 +181,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "ulvkwdoi", imperative: "hilvkwda", infinitive: "ulvkwdodi", present: "ulvkwdi", remote_past: "ulvkwdvi"],
+                [subject: "SG3", habitual: "ulvkwdoi", imperative: "hilvkwda", infinitive: "ulvkwdodi", present: "ulvkwdi", remote_past: "ulvkwdvi", immediate_past: "ulvkwdi"],
                 [subject: "SG1", present: "agilvkwdi"],
             ],
         ],
@@ -177,7 +189,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "agiyohoi", imperative: "tsayoga", infinitive: "uyosdi (uysdi)", present: "uhyoha", remote_past: "agiyolvi"],
+                [subject: "SG3", habitual: "agiyohoi", imperative: "tsayoga", infinitive: "uyosdi (uysdi)", present: "uhyoha", remote_past: "agiyolvi", immediate_past: "uyoga"],
                 [subject: "SG1", present: "agiyoha"],
             ],
         ],
@@ -185,7 +197,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "ugeyusoi", imperative: "tsageyuhvga", infinitive: "ugeyhdi", present: "ugeyuha", remote_past: "ugeyusvi"],
+                [subject: "SG3", habitual: "ugeyusoi", imperative: "tsageyuhvga", infinitive: "ugeyhdi", present: "ugeyuha", remote_past: "ugeyusvi", immediate_past: "ugeyuhvga"],
                 [subject: "SG1", present: "agigeyuha"],
             ],
         ],
@@ -193,7 +205,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "asehehoi", imperative: "hiyasehisi", infinitive: "usehehdi", present: "agwaseheha", remote_past: "usehelvi"],
+                [subject: "SG3", habitual: "asehehoi", imperative: "hiyasehisi", infinitive: "usehehdi", present: "agwaseheha", remote_past: "usehelvi", immediate_past: "asehisi"],
                 [subject: "SG1", present: "gvyaseheha"],
             ],
         ],
@@ -201,7 +213,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "ganvdadisgoi", imperative: "hanvdada", infinitive: "unvdadisdi", present: "anhdadia", remote_past: "agwanvdadvi"],
+                [subject: "SG3", habitual: "ganvdadisgoi", imperative: "hanvdada", infinitive: "unvdadisdi", present: "anhdadia", remote_past: "agwanvdadvi", immediate_past: "anvdada"],
                 [subject: "SG1", present: "ganvdadia"],
             ],
         ],
@@ -225,7 +237,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "galehwisdodisgoi", imperative: "halehwisdoda", infinitive: "ulehwisdododi", present: "alehwisdodiha", remote_past: "ulehwisdotanvi"],
+                [subject: "SG3", habitual: "galehwisdodisgoi", imperative: "halehwisdoda", infinitive: "ulehwisdododi", present: "alehwisdodiha", remote_past: "ulehwisdotanvi", immediate_past: "alehwisdoda"],
                 [subject: "SG1", present: "galehwisdodiha"],
             ],
         ],
@@ -233,7 +245,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "ahlinohedisgoi", imperative: "hihlinoheda", infinitive: "tsilinohedodi", present: "ahlinohediha", remote_past: "atsihlinohetlvi"],
+                [subject: "SG3", habitual: "ahlinohedisgoi", imperative: "hihlinoheda", infinitive: "tsilinohedodi", present: "ahlinohediha", remote_past: "atsihlinohetlvi", immediate_past: "ahlinoheda"],
                 [subject: "SG1", present: "galinohediha"],
             ],
         ],
@@ -241,7 +253,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "tsiyeyohvsgoi", imperative: "tiyeyohvga", infinitive: "tsudeyodi", present: "dadeyohvsga", remote_past: "dagwadeyohnvi"],
+                [subject: "SG3", habitual: "tsiyeyohvsgoi", imperative: "tiyeyohvga", infinitive: "tsudeyodi", present: "dadeyohvsga", remote_past: "dagwadeyohnvi", immediate_past: "dadeyohvga"],
                 [subject: "SG1", present: "degadeyohvsga"],
             ],
         ],
@@ -249,7 +261,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "tsinohisehoi", imperative: "hinohisi", infinitive: "unohisedi", present: "kanohiseha", remote_past: "tsinohiselvi"],
+                [subject: "SG3", habitual: "tsinohisehoi", imperative: "hinohisi", infinitive: "unohisedi", present: "kanohiseha", remote_past: "tsinohiselvi", immediate_past: "kanohisi"],
                 [subject: "SG1", present: "tsinohiseha"],
             ],
         ],
@@ -257,7 +269,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "alihelitsehoi", imperative: "hiyalielitsisi", infinitive: "ulihelitsedi", present: "alihelitseha", remote_past: "ulihelitselvi"],
+                [subject: "SG3", habitual: "alihelitsehoi", imperative: "hiyalielitsisi", infinitive: "ulihelitsedi", present: "alihelitseha", remote_past: "ulihelitselvi", immediate_past: "alihelitsisi"],
                 [subject: "SG1", present: "tsiyalielitseha"],
             ],
         ],
@@ -265,7 +277,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "agatidisgoi", imperative: "higatida", infinitive: "ugatidisdi", present: "aktiya", remote_past: "uktiy(v)dvi"],
+                [subject: "SG3", habitual: "agatidisgoi", imperative: "higatida", infinitive: "ugatidisdi", present: "aktiya", remote_past: "uktiy(v)dvi", immediate_past: "agatida"],
                 [subject: "SG1", present: "tsigatiya"],
             ],
         ],
@@ -273,7 +285,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "agwadulihoi", imperative: "witsadula", infinitive: "udulvdi", present: "uduliha", remote_past: "agwadulihvi"],
+                [subject: "SG3", habitual: "agwadulihoi", imperative: "witsadula", infinitive: "udulvdi", present: "uduliha", remote_past: "agwadulihvi", immediate_past: "udula"],
                 [subject: "SG1", present: "agwaduliha"],
             ],
         ],
@@ -281,7 +293,7 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "agasesdisgoi", imperative: "hagasesda", infinitive: "ugasesdodi", present: "uksesdi", remote_past: "ugasestanvi"],
+                [subject: "SG3", habitual: "agasesdisgoi", imperative: "hagasesda", infinitive: "ugasesdodi", present: "uksesdi", remote_past: "ugasestanvi", immediate_past: "agasesda"],
                 [subject: "SG1", present: "agwagasesdi"],
             ],
         ],

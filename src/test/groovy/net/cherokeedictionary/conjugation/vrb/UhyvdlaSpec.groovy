@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73833 (entrya uhyvdla) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -13,7 +14,7 @@ class UhyvdlaSpec extends VerbBaseSpec {
         conjugations: [
             [subject: 'SG1', object: '', present: 'uhyvdla', habitual: 'aginiyiha', remote_past: 'uhyvdla', imperative: 'aginiyisgoi', infinitive: 'uhyvdla'],
             [subject: 'SG2', object: '', present: 'uhyvdla', habitual: 'janiyiha', remote_past: 'uhyvdla', imperative: 'janiyisgoi', infinitive: 'uhyvdla'],
-            [subject: 'SG3', object: '', present: 'uhyvdla', habitual: 'uniyiha', remote_past: 'uhyvdla', imperative: 'uniyisgoi', infinitive: 'uhyvdla'],
+            [subject: 'SG3', object: '', habitual: 'uhyvdloi', imperative: '', infinitive: '', present: 'uhyvdla', remote_past: 'uhyvdlvi'],
             [subject: 'PL3', object: '', present: 'uhyvdla', habitual: 'uniniyiha', remote_past: 'uhyvdla', imperative: 'uniniyisgoi', infinitive: 'uhyvdla'],
             [subject: 'PL1INCL', object: '', present: 'uhyvdla', habitual: 'iginiyiha', remote_past: 'uhyvdla', imperative: 'iginiyisgoi', infinitive: 'uhyvdla']
         ]
@@ -25,30 +26,30 @@ class UhyvdlaSpec extends VerbBaseSpec {
         conjugateVerb("Uhyvdla", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "uhyvdla"
-        "SG1" | "" | Tense.HABITUAL        | "aginiyiha"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uhyvdla"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "aginiyisgoi"
-        "SG1" | "" | Tense.INFINITIVE      | "uhyvdla"
-        "SG2" | "" | Tense.PRESENT         | "uhyvdla"
-        "SG2" | "" | Tense.HABITUAL        | "janiyiha"
-        "SG2" | "" | Tense.REMOTE_PAST     | "uhyvdla"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "janiyisgoi"
-        "SG2" | "" | Tense.INFINITIVE      | "uhyvdla"
-        "SG3" | "" | Tense.PRESENT         | "uhyvdla"
-        "SG3" | "" | Tense.HABITUAL        | "uniyiha"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhyvdla"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uniyisgoi"
-        "SG3" | "" | Tense.INFINITIVE      | "uhyvdla"
-        "PL3" | "" | Tense.PRESENT         | "uhyvdla"
-        "PL3" | "" | Tense.HABITUAL        | "uniniyiha"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uhyvdla"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "uniniyisgoi"
-        "PL3" | "" | Tense.INFINITIVE      | "uhyvdla"
-        "PL1INCL" | "" | Tense.PRESENT         | "uhyvdla"
-        "PL1INCL" | "" | Tense.HABITUAL        | "iginiyiha"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "uhyvdla"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iginiyisgoi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "uhyvdla"
+        "SG1" | "" | Tense.PRESENT         | "agiyvdla"
+        "SG1" | "" | Tense.HABITUAL        | "agiyvtloi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiyvtlvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "agiyvtlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyvdla"
+        "SG2" | "" | Tense.PRESENT         | "tsayvdla"
+        "SG2" | "" | Tense.HABITUAL        | "tsayvtloi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsayvtlvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsayvtlvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsayvdla"
+        "SG3" | "" | Tense.PRESENT         | "uyvdla"
+        "SG3" | "" | Tense.HABITUAL        | "uyvtloi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyvtlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "uyvtlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyvdla"
+        "PL3" | "" | Tense.PRESENT         | "uniyvdla"
+        "PL3" | "" | Tense.HABITUAL        | "uniyvtloi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniyvtlvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "uniyvtlvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyvdla"
+        "PL1INCL" | "" | Tense.PRESENT         | "igiyvdla"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igiyvtloi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyvtlvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiyvtlvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyvdla"
     }
 }

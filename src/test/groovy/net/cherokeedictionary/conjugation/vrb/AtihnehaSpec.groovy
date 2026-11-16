@@ -11,7 +11,7 @@ class AtihnehaSpec extends VerbBaseSpec {
         definition: "Have With / Hold in Hand (living)",
         part_of_speech: "v.t.",
         conjugations: [
-            [subject: 'SG1', object: 'SG3AN', present: 'jiyatihneha', habitual: 'jiyatihnehoi', remote_past: 'x', imperative: 'x', infinitive: 'jiyatihnvdi']
+            [subject: 'SG3', object: 'SG3AN', present: 'jiyatihneha', habitual: 'jiyatihnehoi', remote_past: 'x', imperative: 'x', infinitive: 'jiyatihnvdi']
         ]
     ]
 
@@ -21,10 +21,10 @@ class AtihnehaSpec extends VerbBaseSpec {
         conjugateVerb("Atihneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatihneha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyatihnehoi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsitsiyatineha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsitsiyatinehoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "x"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "x"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatihnvdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyatinvdi"
     }
 }

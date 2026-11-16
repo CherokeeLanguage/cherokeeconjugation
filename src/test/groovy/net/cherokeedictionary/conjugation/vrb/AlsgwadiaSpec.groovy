@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72530 (entrya alsgwadia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AlsgwadiaSpec extends VerbBaseSpec {
         definition: "It Is Ending/Finishing",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'alsgwadia', habitual: 'alsgwadisgoi', remote_past: 'ulsgwadvi', imperative: 'dvlsgwadi', infinitive: 'ulsgwadisdi']
+            [subject: 'SG3', object: '', habitual: 'alsgwadisgoi', imperative: '', infinitive: 'ulsgwadisdi', present: 'alsgwadia', remote_past: 'ulsgwadvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class AlsgwadiaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "alsgwadia"
         "SG3" | "" | Tense.HABITUAL        | "alsgwadisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulsgwadvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvlsgwadi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsgwadvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulsgwadisdi"
     }
 }

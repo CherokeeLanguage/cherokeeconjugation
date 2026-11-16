@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73099 (entrya ganawidiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanawidihaSpec extends VerbBaseSpec {
         definition: "Take Along (flexible)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinawidiha, jinawidiha'],
             [subject: 'SG1', object: '', present: 'jinawidiha', habitual: 'jinawidisgoi', remote_past: 'aginawidvhvi', imperative: 'jinawida', infinitive: 'aginawitdi'],
             [subject: 'SG2', object: '', present: 'hinawidiha', habitual: 'hinawidisgoi', remote_past: 'janawidvhvi', imperative: 'hinawida', infinitive: 'janawitdi'],
-            [subject: 'SG1', object: '', present: 'ganawidiha', habitual: 'ganawidisgoi', remote_past: 'unawidvhvi', imperative: 'ganawida', infinitive: 'unawitdi'],
+            [subject: 'SG3', object: '', habitual: 'ganawidisgoi', imperative: 'hinawida, hinawida', infinitive: 'unawitdi', present: 'ganawidiha', remote_past: 'unawidvhvi'],
             [subject: 'PL3', object: '', present: 'aninawidiha', habitual: 'aninawidisgoi', remote_past: 'uninawidvhvi', imperative: 'aninawida', infinitive: 'uninawitdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GanawidihaSpec extends VerbBaseSpec {
         conjugateVerb("Ganawidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinawidiha"
-        "SG1" | "" | Tense.HABITUAL        | "jinawidisgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinawidiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinawidisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginawidvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinawida"
-        "SG1" | "" | Tense.INFINITIVE      | "aginawitdi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinawidvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginawitidi"
         "SG2" | "" | Tense.PRESENT         | "hinawidiha"
         "SG2" | "" | Tense.HABITUAL        | "hinawidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janawidvhvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinawida"
-        "SG2" | "" | Tense.INFINITIVE      | "janawitdi"
-        "SG1" | "" | Tense.PRESENT         | "ganawidiha"
-        "SG1" | "" | Tense.HABITUAL        | "ganawidisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unawidvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganawida"
-        "SG1" | "" | Tense.INFINITIVE      | "unawitdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanawidvhvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinawidvhvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanawitidi"
+        "SG1" | "" | Tense.PRESENT         | "tsinawidiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinawidisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginawidvhvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinawidvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginawitidi"
         "PL3" | "" | Tense.PRESENT         | "aninawidiha"
         "PL3" | "" | Tense.HABITUAL        | "aninawidisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninawidvhvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninawida"
-        "PL3" | "" | Tense.INFINITIVE      | "uninawitdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninawidvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninawitidi"
     }
 }

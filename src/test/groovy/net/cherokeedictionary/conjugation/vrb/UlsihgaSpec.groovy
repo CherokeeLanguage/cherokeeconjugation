@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73888 (entrya ulsihga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class UlsihgaSpec extends VerbBaseSpec {
         definition: "Dark (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ulsihga', habitual: 'ulsihgoi', remote_past: 'ulsihgvi', imperative: 'ulsihgesdi', infinitive: 'X']
+            [subject: 'SG3', object: '', habitual: 'ulsihgoi', imperative: 'jalsihgesdi', infinitive: '', present: 'ulsihga', remote_past: 'ulsihgvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class UlsihgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "ulsihga"
         "SG3" | "" | Tense.HABITUAL        | "ulsihgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulsihgvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsihgesdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsihgvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
     }
 }

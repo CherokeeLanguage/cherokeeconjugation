@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73881 (entrya ulsdahneha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UlsdahnehaSpec extends VerbBaseSpec {
         definition: "Happening",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agwalsdahneha'],
             [subject: 'SG1', object: '', present: 'agwalsdahneha', habitual: 'agwalsdahnehoi', remote_past: 'agwalsdahnelvi', imperative: 'agwalsdasi', infinitive: 'agwalsdahnehdi'],
             [subject: 'SG2', object: '', present: 'jalsdahneha', habitual: 'jalsdahnehoi', remote_past: 'jalsdahnelvi', imperative: 'jalsdasi', infinitive: 'jalsdahnehdi'],
-            [subject: 'SG3', object: '', present: 'ulsdahneha', habitual: 'ulsdahnehoi', remote_past: 'ulsdahnelvi', imperative: 'ulsdasi', infinitive: 'ulsdahnehdi'],
+            [subject: 'SG3', object: '', habitual: 'ulsdahnehoi', imperative: 'jalsdasi', infinitive: 'ulsdahnehdi', present: 'ulsdahneha', remote_past: 'ulsdahnelvi'],
             [subject: 'PL3', object: '', present: 'unalsdahneha', habitual: 'unalsdahnehoi', remote_past: 'unalsdahnelvi', imperative: 'unalsdasi', infinitive: 'unalsdahnehdi'],
             [subject: 'PL1INCL', object: '', present: 'igalsdahneha', habitual: 'igalsdahnehoi', remote_past: 'igalsdahnelvi', imperative: 'igalsdasi', infinitive: 'igalsdahnehdi']
         ]
@@ -28,27 +30,27 @@ class UlsdahnehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "agwalsdahneha"
         "SG1" | "" | Tense.HABITUAL        | "agwalsdahnehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwalsdahnelvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "agwalsdasi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "agwalsdahnelvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwalsdahnehdi"
         "SG2" | "" | Tense.PRESENT         | "jalsdahneha"
         "SG2" | "" | Tense.HABITUAL        | "jalsdahnehoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jalsdahnelvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "jalsdasi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "jalsdahnelvi"
         "SG2" | "" | Tense.INFINITIVE      | "jalsdahnehdi"
         "SG3" | "" | Tense.PRESENT         | "ulsdahneha"
         "SG3" | "" | Tense.HABITUAL        | "ulsdahnehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulsdahnelvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsdasi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsdahnelvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulsdahnehdi"
         "PL3" | "" | Tense.PRESENT         | "unalsdahneha"
         "PL3" | "" | Tense.HABITUAL        | "unalsdahnehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unalsdahnelvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unalsdasi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unalsdahnelvi"
         "PL3" | "" | Tense.INFINITIVE      | "unalsdahnehdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igalsdahneha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igalsdahnehoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalsdahnelvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igalsdasi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igalsdahnelvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igalsdahnehdi"
     }
 }

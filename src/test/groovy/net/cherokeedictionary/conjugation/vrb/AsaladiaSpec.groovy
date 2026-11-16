@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72565 (entrya asaladia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AsaladiaSpec extends VerbBaseSpec {
         definition: "Raising/Lifting",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jisaladia'],
             [subject: 'SG1', object: '', present: 'jisaldia', habitual: 'jisaldisgoi', remote_past: 'aksaldanvi', imperative: 'jisaldvga', infinitive: 'aksaldodi'],
             [subject: 'SG2', object: '', present: 'hisaladia', habitual: 'hisaladisgoi', remote_past: 'tsaladanvi', imperative: 'hisaladvga', infinitive: 'tsaladodi'],
-            [subject: 'SG3', object: '', present: 'asaladia', habitual: 'asaladisgoi', remote_past: 'usaladanvi', imperative: 'asaladvga', infinitive: 'usaladodi'],
+            [subject: 'SG3', object: '', habitual: 'asaladisgoi', imperative: 'hisaladvga, hisaladvga', infinitive: 'usaladodi', present: 'asaladia', remote_past: 'usaladanvi'],
             [subject: 'PL3', object: '', present: 'anisaladia', habitual: 'anisaladisgoi', remote_past: 'unisaladanvi', imperative: 'anisaladvga', infinitive: 'unisaladodi'],
             [subject: 'PL1INCL', object: '', present: 'idisaladia', habitual: 'idisaladisgoi', remote_past: 'iksaladanvi', imperative: 'idisaladvga', infinitive: 'iksaladodi']
         ]
@@ -25,30 +27,30 @@ class AsaladiaSpec extends VerbBaseSpec {
         conjugateVerb("Asaladia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jisaldia"
-        "SG1" | "" | Tense.HABITUAL        | "jisaldisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aksaldanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jisaldvga"
-        "SG1" | "" | Tense.INFINITIVE      | "aksaldodi"
+        "SG1" | "" | Tense.PRESENT         | "tsisaladia"
+        "SG1" | "" | Tense.HABITUAL        | "tsisaladisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agisaladanvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisaladanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agisaladodi"
         "SG2" | "" | Tense.PRESENT         | "hisaladia"
         "SG2" | "" | Tense.HABITUAL        | "hisaladisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsaladanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisaladvga"
-        "SG2" | "" | Tense.INFINITIVE      | "tsaladodi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasaladanvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hisaladanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasaladodi"
         "SG3" | "" | Tense.PRESENT         | "asaladia"
         "SG3" | "" | Tense.HABITUAL        | "asaladisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usaladanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "asaladvga"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "asaladanvi"
         "SG3" | "" | Tense.INFINITIVE      | "usaladodi"
         "PL3" | "" | Tense.PRESENT         | "anisaladia"
         "PL3" | "" | Tense.HABITUAL        | "anisaladisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unisaladanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisaladvga"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anisaladanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unisaladodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisaladia"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisaladisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksaladanvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisaladvga"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksaladodi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisaladanvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisaladanvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igisaladodi"
     }
 }

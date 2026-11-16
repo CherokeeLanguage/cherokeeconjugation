@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73063 (entrya galihwoga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class GalihwogaSpec extends VerbBaseSpec {
         definition: "It Is Dying (Animal/Plant)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'galihwoga', habitual: 'galihwogoi', remote_past: 'ulihwojvi', imperative: 'dagalihwoji', infinitive: 'ulihwosdi']
+                [subject: 'SG1', object: '', present: 'jiliwoga'],
+            [subject: 'SG3', object: '', habitual: 'galihwogoi', imperative: 'hilihwogi', infinitive: 'ulihwosdi', present: 'galihwoga', remote_past: 'ulihwojvi']
         ]
     ]
 
@@ -21,10 +23,10 @@ class GalihwogaSpec extends VerbBaseSpec {
         conjugateVerb("Galihwoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galihwoga"
-        "SG1" | "" | Tense.HABITUAL        | "galihwogoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "ulihwojvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "dagalihwoji"
-        "SG1" | "" | Tense.INFINITIVE      | "ulihwosdi"
+        "SG1" | "" | Tense.PRESENT         | "tsiliwoga"
+        "SG1" | "" | Tense.HABITUAL        | "tsiliwogoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiliwotsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiliwotsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiliwosdi"
     }
 }

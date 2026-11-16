@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72314 (entrya agia) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AgiaSpec extends VerbBaseSpec {
         definition: "Eat It (neutral)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jigia'],
             [subject: 'SG1', object: '', present: 'jigia', habitual: 'jigisgoi', remote_past: 'agigvi', imperative: 'jiga', infinitive: 'agigisdi'],
             [subject: 'SG2', object: '', present: 'higia', habitual: 'higisgoi', remote_past: 'jagvi', imperative: 'higa', infinitive: 'jagisdi'],
-            [subject: 'SG1', object: '', present: 'agia', habitual: 'agisgoi', remote_past: 'ugvi', imperative: 'aga', infinitive: 'ugisdi'],
+            [subject: 'SG3', object: '', habitual: 'agisgoi', imperative: 'higi', infinitive: 'ugisdi', present: 'agia', remote_past: 'ugisvi'],
             [subject: 'PL3', object: '', present: 'anigia', habitual: 'anigisgoi', remote_past: 'unigvi', imperative: 'aniga', infinitive: 'anigisdi']
         ]
     ]
@@ -24,25 +26,25 @@ class AgiaSpec extends VerbBaseSpec {
         conjugateVerb("Agia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jigia"
-        "SG1" | "" | Tense.HABITUAL        | "jigisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agigvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jiga"
+        "SG1" | "" | Tense.PRESENT         | "tsigia"
+        "SG1" | "" | Tense.HABITUAL        | "tsigisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigisvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigisvi"
         "SG1" | "" | Tense.INFINITIVE      | "agigisdi"
         "SG2" | "" | Tense.PRESENT         | "higia"
         "SG2" | "" | Tense.HABITUAL        | "higisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jagvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "higa"
-        "SG2" | "" | Tense.INFINITIVE      | "jagisdi"
-        "SG1" | "" | Tense.PRESENT         | "agia"
-        "SG1" | "" | Tense.HABITUAL        | "agisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "ugvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "aga"
-        "SG1" | "" | Tense.INFINITIVE      | "ugisdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsagisvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "higisvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsagisdi"
+        "SG1" | "" | Tense.PRESENT         | "tsigia"
+        "SG1" | "" | Tense.HABITUAL        | "tsigisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigisvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigisvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agigisdi"
         "PL3" | "" | Tense.PRESENT         | "anigia"
         "PL3" | "" | Tense.HABITUAL        | "anigisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unigvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aniga"
-        "PL3" | "" | Tense.INFINITIVE      | "anigisdi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unigisvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anigisvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unigisdi"
     }
 }

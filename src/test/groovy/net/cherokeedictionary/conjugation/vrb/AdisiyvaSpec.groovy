@@ -24,25 +24,25 @@ class AdisiyvaSpec extends VerbBaseSpec {
         conjugateVerb("Adisiyva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jidisiyva"
-        "SG1" | "" | Tense.HABITUAL        | "jidisiyvsgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsidisiyva"
+        "SG1" | "" | Tense.HABITUAL        | "tsidisiyvsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agidisiyvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jidisiyvna"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidisiyvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "agidisiyvsdi"
         "SG2" | "" | Tense.PRESENT         | "hidisiyva"
         "SG2" | "" | Tense.HABITUAL        | "hidisiyvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadisiyvsvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hidisiyvna"
-        "SG2" | "" | Tense.INFINITIVE      | "jadisiyvsdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadisiyvsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hidisiyvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadisiyvsdi"
         "SG3" | "" | Tense.PRESENT         | "adisiyva"
         "SG3" | "" | Tense.HABITUAL        | "adisiyvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udisiyvsvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wadisiyvna"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "adisiyvsvi"
         "SG3" | "" | Tense.INFINITIVE      | "udisiyvsdi"
         "PL3" | "" | Tense.PRESENT         | "anidisiyva"
         "PL3" | "" | Tense.HABITUAL        | "anidisiyvsgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unidisiyvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "wanidisiyvna"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anidisiyvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unidisiyvsdi"
     }
 }

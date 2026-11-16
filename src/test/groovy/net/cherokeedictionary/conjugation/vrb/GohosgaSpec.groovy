@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73248 (entrya gohosga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class GohosgaSpec extends VerbBaseSpec {
         definition: "Fall from Elevated Position, IT (neutral; long)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'gohosga', habitual: 'gohosgoi', remote_past: 'uwohosvi', imperative: 'wigohohi', infinitive: 'uwohohisdi']
+                [subject: 'SG1', object: '', present: 'goosga'],
+            [subject: 'SG3', object: '', habitual: 'gohosgoi', imperative: 'hohohi', infinitive: 'uwohohisdi', present: 'gohosga', remote_past: 'uwohosvi']
         ]
     ]
 
@@ -23,8 +25,8 @@ class GohosgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gohosga"
         "SG1" | "" | Tense.HABITUAL        | "gohosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "uwohosvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigohohi"
-        "SG1" | "" | Tense.INFINITIVE      | "uwohohisdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquohosvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gohosvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwohohisdi"
     }
 }

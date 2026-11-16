@@ -119,8 +119,16 @@ publishing {
 
 test {
     testLogging.showStandardStreams = true
-    // Exclude an entire package and its subpackages
-    exclude 'net/cherokeedictionary/conjugation/vrb/**'
+    // tio 16Nov26: vrb validation specs are WIRED but opt-in. They assert the
+    // engine's surface forms against the 2012 VRB yaml paradigms; as of the
+    // conjRewrite merge the engine implements the newer verb-book conventions
+    // (FUTURE_COMMAND = Stem III -v'i surface vs the yaml's imperative-row
+    // surface, etc.), so ~4800 cells are validation debt awaiting per-verb
+    // reconciliation. Default build stays green; run the validation suite with:
+    //   ./gradlew test -PincludeVrb
+    if (!project.hasProperty('includeVrb')) {
+        exclude 'net/cherokeedictionary/conjugation/vrb/**'
+    }
 
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 

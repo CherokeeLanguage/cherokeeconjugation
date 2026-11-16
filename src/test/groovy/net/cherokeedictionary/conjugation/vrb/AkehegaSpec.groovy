@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72449 (entrya akehega) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class AkehegaSpec extends VerbBaseSpec {
         definition: "Chasing (Him/It)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'akehega', habitual: 'akehegoi', remote_past: 'ukehvsvi', imperative: 'akehuga', infinitive: 'ukehvsdi'],
+                [subject: 'SG1', object: '', present: 'jikehega'],
+            [subject: 'SG3', object: '', habitual: 'akehegoi', imperative: 'hikehuga, hikehuga', infinitive: 'ukehvsdi', present: 'akehega', remote_past: 'ukehvsvi'],
             [subject: 'PL3', object: '', present: 'anikehega', habitual: 'anikehegoi', remote_past: 'unikehvsvi', imperative: 'anikehuga', infinitive: 'unikehvsdi'],
             [subject: 'PL1INCL', object: '', present: 'idikehega', habitual: 'idikehegoi', remote_past: 'igikehvsvi', imperative: 'idikehuga', infinitive: 'igikehvsdi']
         ]
@@ -26,17 +28,17 @@ class AkehegaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "akehega"
         "SG1" | "" | Tense.HABITUAL        | "akehegoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "ukehvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "akehuga"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "ukehvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "ukehvsdi"
         "PL3" | "" | Tense.PRESENT         | "anikehega"
         "PL3" | "" | Tense.HABITUAL        | "anikehegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unikehvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anikehuga"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unikehvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unikehvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idikehega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idikehegoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igikehvsvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idikehuga"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igikehvsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igikehvsdi"
     }
 }

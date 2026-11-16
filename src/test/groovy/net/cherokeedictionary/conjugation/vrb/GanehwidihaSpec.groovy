@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73113 (entrya ganehwidiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanehwidihaSpec extends VerbBaseSpec {
         definition: "Take Along (liquid)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinewidiha'],
             [subject: 'SG1', object: '', present: 'jinewidiha', habitual: 'jinewidisgoi', remote_past: 'aginehwidvhvi', imperative: 'jinewida', infinitive: 'aginehwitdi'],
             [subject: 'SG2', object: '', present: 'hinehwidiha', habitual: 'hinehwidisgoi', remote_past: 'jenehwidvhvi', imperative: 'hinehwida', infinitive: 'janehwitdi'],
-            [subject: 'SG1', object: '', present: 'ganehwidiha', habitual: 'ganehwidisgoi', remote_past: 'unehwidvhvi', imperative: 'ganehwida', infinitive: 'unehwitdi'],
+            [subject: 'SG3', object: '', habitual: 'ganehwidisgoi', imperative: 'hinehwida', infinitive: 'unehwitdi', present: 'ganehwidiha', remote_past: 'unehwidvhvi'],
             [subject: 'PL3', object: '', present: 'aninehwidiha', habitual: 'aninehwidisgoi', remote_past: 'uninehwidvhvi', imperative: 'aninehwida', infinitive: 'uninehwitdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GanehwidihaSpec extends VerbBaseSpec {
         conjugateVerb("Ganehwidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinewidiha"
-        "SG1" | "" | Tense.HABITUAL        | "jinewidisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginehwidvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinewida"
-        "SG1" | "" | Tense.INFINITIVE      | "aginehwitdi"
-        "SG2" | "" | Tense.PRESENT         | "hinehwidiha"
-        "SG2" | "" | Tense.HABITUAL        | "hinehwidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jenehwidvhvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehwida"
-        "SG2" | "" | Tense.INFINITIVE      | "janehwitdi"
-        "SG1" | "" | Tense.PRESENT         | "ganehwidiha"
-        "SG1" | "" | Tense.HABITUAL        | "ganehwidisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unehwidvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganehwida"
-        "SG1" | "" | Tense.INFINITIVE      | "unehwitdi"
-        "PL3" | "" | Tense.PRESENT         | "aninehwidiha"
-        "PL3" | "" | Tense.HABITUAL        | "aninehwidisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninehwidvhvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehwida"
-        "PL3" | "" | Tense.INFINITIVE      | "uninehwitdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinewidiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinewidisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginewidvhvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinewidvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginewitidi"
+        "SG2" | "" | Tense.PRESENT         | "hinewidiha"
+        "SG2" | "" | Tense.HABITUAL        | "hinewidisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanewidvhvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinewidvhvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanewitidi"
+        "SG1" | "" | Tense.PRESENT         | "tsinewidiha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinewidisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginewidvhvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinewidvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginewitidi"
+        "PL3" | "" | Tense.PRESENT         | "aninewidiha"
+        "PL3" | "" | Tense.HABITUAL        | "aninewidisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninewidvhvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninewidvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninewitidi"
     }
 }

@@ -24,7 +24,7 @@ class NigalstanvsgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "nigalstanvsga"
         "SG3" | "" | Tense.HABITUAL        | "nigalstanvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "nigalsda"
-        // "SG3" | "" | Tense.FUTURE_COMMAND      | "/"
+        // "SG3" | "" | Tense.FUTURE_COMMAND      | "nigalsda"
         "SG3" | "" | Tense.INFINITIVE      | "nulstanvi"
     }
 }

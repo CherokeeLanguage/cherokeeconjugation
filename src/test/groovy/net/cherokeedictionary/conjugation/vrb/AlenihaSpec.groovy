@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72499 (entrya aleniha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AlenihaSpec extends VerbBaseSpec {
         definition: "Beginning",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'galenia'],
             [subject: 'SG1', object: '', present: 'galenia', habitual: 'galenisgoi', remote_past: 'agwalenvhvi', imperative: 'galena', infinitive: 'agwalenhdi'],
             [subject: 'SG2', object: '', present: 'haleniha', habitual: 'halenisgoi', remote_past: 'jalenvhvi', imperative: 'halena', infinitive: 'jalenhdi'],
-            [subject: 'SG3', object: '', present: 'aleniha', habitual: 'alenisgoi', remote_past: 'ulenvhvi', imperative: 'alena', infinitive: 'ulenhdi'],
+            [subject: 'SG3', object: '', habitual: 'alenisgoi', imperative: 'halena', infinitive: 'ulenhdi', present: 'aleniha', remote_past: 'ulenvhvi'],
             [subject: 'PL3', object: '', present: 'analeniha', habitual: 'analenisgoi', remote_past: 'unalenvhvi', imperative: 'analena', infinitive: 'unalenhdi'],
             [subject: 'PL1INCL', object: '', present: 'idaleniha', habitual: 'idalenisgoi', remote_past: 'igalenvhvi', imperative: 'idalena', infinitive: 'igalenhdi']
         ]
@@ -25,30 +27,30 @@ class AlenihaSpec extends VerbBaseSpec {
         conjugateVerb("Aleniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galenia"
+        "SG1" | "" | Tense.PRESENT         | "galeniha"
         "SG1" | "" | Tense.HABITUAL        | "galenisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwalenvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "galena"
-        "SG1" | "" | Tense.INFINITIVE      | "agwalenhdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aqualenvhvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "galenvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aqualenidi"
         "SG2" | "" | Tense.PRESENT         | "haleniha"
         "SG2" | "" | Tense.HABITUAL        | "halenisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jalenvhvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "halena"
-        "SG2" | "" | Tense.INFINITIVE      | "jalenhdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalenvhvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "halenvhvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalenidi"
         "SG3" | "" | Tense.PRESENT         | "aleniha"
         "SG3" | "" | Tense.HABITUAL        | "alenisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulenvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "alena"
-        "SG3" | "" | Tense.INFINITIVE      | "ulenhdi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "alenvhvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulenidi"
         "PL3" | "" | Tense.PRESENT         | "analeniha"
         "PL3" | "" | Tense.HABITUAL        | "analenisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unalenvhvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "analena"
-        "PL3" | "" | Tense.INFINITIVE      | "unalenhdi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "analenvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unalenidi"
         "PL1INCL" | "" | Tense.PRESENT         | "idaleniha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idalenisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalenvhvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalena"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igalenhdi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalenvhvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igalenidi"
     }
 }

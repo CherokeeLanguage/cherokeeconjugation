@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73493 (entrya kanoheha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class KanohehaSpec extends VerbBaseSpec {
         definition: "Telling",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinoheha'],
             [subject: 'SG1', object: '', present: 'jinoheha', habitual: 'jinohesgoi', remote_past: 'akihnohehlvi', imperative: 'jinohvla', infinitive: 'akihnohehdi'],
             [subject: 'SG2', object: '', present: 'hinoheha', habitual: 'hinohesgoi', remote_past: 'jahnohehlvi', imperative: 'hihnohvla', infinitive: 'jahnohehdi'],
-            [subject: 'SG3', object: '', present: 'kanoheha', habitual: 'kanohesgoi', remote_past: 'uhnohehlvi', imperative: 'kanohvla', infinitive: 'uhnohehdi'],
+            [subject: 'SG3', object: '', habitual: 'kanohesgoi', imperative: 'hihnohvla', infinitive: 'uhnohehdi', present: 'kanoheha', remote_past: 'uhnohehlvi'],
             [subject: 'PL3', object: '', present: 'aninoheha', habitual: 'aninohesgoi', remote_past: 'unihnohehlvi', imperative: 'anihnohvla', infinitive: 'unihnohehdi'],
             [subject: 'PL1INCL', object: '', present: 'idinoheha', habitual: 'idinohesgoi', remote_past: 'igihnohehlvi', imperative: 'idihnohvla', infinitive: 'igihnohehdi']
         ]
@@ -25,30 +27,30 @@ class KanohehaSpec extends VerbBaseSpec {
         conjugateVerb("Kanoheha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinoheha"
-        "SG1" | "" | Tense.HABITUAL        | "jinohesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "akihnohehlvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinohvla"
-        "SG1" | "" | Tense.INFINITIVE      | "akihnohehdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinoheha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinohesgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginohetlvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinohetlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginohedi"
         "SG2" | "" | Tense.PRESENT         | "hinoheha"
         "SG2" | "" | Tense.HABITUAL        | "hinohesgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jahnohehlvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hihnohvla"
-        "SG2" | "" | Tense.INFINITIVE      | "jahnohehdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanohetlvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohetlvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanohedi"
         "SG3" | "" | Tense.PRESENT         | "kanoheha"
         "SG3" | "" | Tense.HABITUAL        | "kanohesgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhnohehlvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "kanohvla"
-        "SG3" | "" | Tense.INFINITIVE      | "uhnohehdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unohetlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohetlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "unohedi"
         "PL3" | "" | Tense.PRESENT         | "aninoheha"
         "PL3" | "" | Tense.HABITUAL        | "aninohesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unihnohehlvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anihnohvla"
-        "PL3" | "" | Tense.INFINITIVE      | "unihnohehdi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninohetlvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohetlvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninohedi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinoheha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinohesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igihnohehlvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idihnohvla"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igihnohehdi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginohetlvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohetlvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginohedi"
     }
 }

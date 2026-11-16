@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73126 (entrya ganhjidoha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GanhjidohaSpec extends VerbBaseSpec {
         definition: "Handle/Carry (liquid)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jinvjidoha'],
             [subject: 'SG1', object: '', present: 'jinvjidoha', habitual: 'jinvjidohoi', remote_past: 'aginhjidolvi', imperative: 'jinvjida', infinitive: 'aginhjidasdi'],
             [subject: 'SG2', object: '', present: 'hinhjidoha', habitual: 'hinhjidohoi', remote_past: 'janhjidolvi', imperative: 'hinhjida', infinitive: 'janhjidasdi'],
-            [subject: 'SG1', object: '', present: 'ganhjidoha', habitual: 'ganhjidohoi', remote_past: 'unhjidolvi', imperative: 'ganhjida', infinitive: 'unhjidasdi'],
+            [subject: 'SG3', object: '', habitual: 'ganhjidohoi', imperative: 'hinhjida', infinitive: 'unhjidasdi', present: 'ganhjidoha', remote_past: 'unhjidolvi'],
             [subject: 'PL3', object: '', present: 'aninhjidoha', habitual: 'aninhjidohoi', remote_past: 'uninhjidolvi', imperative: 'aninhjida', infinitive: 'uninhjidasdi']
         ]
     ]
@@ -24,25 +26,25 @@ class GanhjidohaSpec extends VerbBaseSpec {
         conjugateVerb("Ganhjidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinvjidoha"
-        "SG1" | "" | Tense.HABITUAL        | "jinvjidohoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginhjidolvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinvjida"
-        "SG1" | "" | Tense.INFINITIVE      | "aginhjidasdi"
-        "SG2" | "" | Tense.PRESENT         | "hinhjidoha"
-        "SG2" | "" | Tense.HABITUAL        | "hinhjidohoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janhjidolvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinhjida"
-        "SG2" | "" | Tense.INFINITIVE      | "janhjidasdi"
-        "SG1" | "" | Tense.PRESENT         | "ganhjidoha"
-        "SG1" | "" | Tense.HABITUAL        | "ganhjidohoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unhjidolvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "ganhjida"
-        "SG1" | "" | Tense.INFINITIVE      | "unhjidasdi"
-        "PL3" | "" | Tense.PRESENT         | "aninhjidoha"
-        "PL3" | "" | Tense.HABITUAL        | "aninhjidohoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninhjidolvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninhjida"
-        "PL3" | "" | Tense.INFINITIVE      | "uninhjidasdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinitsidoha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinitsidohoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginitsidolvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinitsidolvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginitsidasdi"
+        "SG2" | "" | Tense.PRESENT         | "hinitsidoha"
+        "SG2" | "" | Tense.HABITUAL        | "hinitsidohoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanitsidolvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinitsidolvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanitsidasdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinitsidoha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinitsidohoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginitsidolvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinitsidolvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginitsidasdi"
+        "PL3" | "" | Tense.PRESENT         | "aninitsidoha"
+        "PL3" | "" | Tense.HABITUAL        | "aninitsidohoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninitsidolvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninitsidolvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninitsidasdi"
     }
 }

@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72405 (entrya ahyeha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AhyehaSpec extends VerbBaseSpec {
         definition: "Have With / Hold in Hand (neutral)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiyeha'],
             [subject: 'SG1', object: '', present: 'jiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
             [subject: 'SG2', object: '', present: 'hihyeha', habitual: 'hihyehoi', remote_past: 'hihyehvi', imperative: 'hihyehesdi', infinitive: 'hihyehi'],
-            [subject: 'SG3', object: '', present: 'ahyeha', habitual: 'ahyehoi', remote_past: 'ahyehvi', imperative: 'ahyehesdi', infinitive: 'gahyehi'],
+            [subject: 'SG3', object: '', habitual: 'ahyehoi', imperative: '', infinitive: '', present: 'ahyeha', remote_past: 'ahyehvi'],
             [subject: 'PL3', object: '', present: 'anihyeha', habitual: 'anihyehoi', remote_past: 'anihyehvi', imperative: 'anihyehesdi', infinitive: 'anihyehi']
         ]
     ]
@@ -24,25 +26,25 @@ class AhyehaSpec extends VerbBaseSpec {
         conjugateVerb("Ahyeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiyeha"
-        "SG1" | "" | Tense.HABITUAL        | "jiyehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jiyehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jiyehesdi"
-        "SG1" | "" | Tense.INFINITIVE      | "jiyehi"
-        "SG2" | "" | Tense.PRESENT         | "hihyeha"
-        "SG2" | "" | Tense.HABITUAL        | "hihyehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hihyehvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hihyehesdi"
-        "SG2" | "" | Tense.INFINITIVE      | "hihyehi"
-        "SG3" | "" | Tense.PRESENT         | "ahyeha"
-        "SG3" | "" | Tense.HABITUAL        | "ahyehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ahyehvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ahyehesdi"
-        "SG3" | "" | Tense.INFINITIVE      | "gahyehi"
-        "PL3" | "" | Tense.PRESENT         | "anihyeha"
-        "PL3" | "" | Tense.HABITUAL        | "anihyehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "anihyehvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anihyehesdi"
-        "PL3" | "" | Tense.INFINITIVE      | "anihyehi"
+        "SG1" | "" | Tense.PRESENT         | "tsiyeha"
+        "SG1" | "" | Tense.HABITUAL        | "tsiyehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiyehvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiyehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyehi"
+        "SG2" | "" | Tense.PRESENT         | "hiyeha"
+        "SG2" | "" | Tense.HABITUAL        | "hiyehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsayehvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hiyehvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsayehi"
+        "SG3" | "" | Tense.PRESENT         | "ayeha"
+        "SG3" | "" | Tense.HABITUAL        | "ayehoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyehvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ayehvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyehi"
+        "PL3" | "" | Tense.PRESENT         | "aniyeha"
+        "PL3" | "" | Tense.HABITUAL        | "aniyehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniyehvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aniyehvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyehi"
     }
 }

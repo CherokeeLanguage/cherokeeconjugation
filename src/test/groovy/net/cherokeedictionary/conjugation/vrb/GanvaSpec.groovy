@@ -13,7 +13,7 @@ class GanvaSpec extends VerbBaseSpec {
         conjugations: [
             [subject: 'SG1', object: '', present: 'jinva', habitual: 'jinvsgoi', remote_past: 'agnvsvi', imperative: 'jinvna', infinitive: 'aginvsdi'],
             [subject: 'SG2', object: '', present: 'hinva', habitual: 'hinvsgoi', remote_past: 'janvsvi', imperative: 'hinvna', infinitive: 'janvsdi'],
-            [subject: 'SG1', object: '', present: 'ganva', habitual: 'ganvsgoi', remote_past: 'unvsvi', imperative: 'wiganvna', infinitive: 'unvsdi'],
+            [subject: 'SG3', object: '', present: 'ganva', habitual: 'ganvsgoi', remote_past: 'unvsvi', imperative: 'wiganvna', infinitive: 'unvsdi'],
             [subject: 'PL3', object: '', present: 'aninva', habitual: 'aninvsgoi', remote_past: 'uninvsvi', imperative: 'waninvna', infinitive: 'uninvsdi']
         ]
     ]
@@ -24,25 +24,25 @@ class GanvaSpec extends VerbBaseSpec {
         conjugateVerb("Ganva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinva"
-        "SG1" | "" | Tense.HABITUAL        | "jinvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agnvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinvna"
+        "SG1" | "" | Tense.PRESENT         | "tsinva"
+        "SG1" | "" | Tense.HABITUAL        | "tsinvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginvsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginvsdi"
         "SG2" | "" | Tense.PRESENT         | "hinva"
         "SG2" | "" | Tense.HABITUAL        | "hinvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janvsvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvna"
-        "SG2" | "" | Tense.INFINITIVE      | "janvsdi"
-        "SG1" | "" | Tense.PRESENT         | "ganva"
-        "SG1" | "" | Tense.HABITUAL        | "ganvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "unvsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wiganvna"
-        "SG1" | "" | Tense.INFINITIVE      | "unvsdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanvsvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanvsdi"
+        "SG1" | "" | Tense.PRESENT         | "tsinva"
+        "SG1" | "" | Tense.HABITUAL        | "tsinvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginvsvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginvsdi"
         "PL3" | "" | Tense.PRESENT         | "aninva"
         "PL3" | "" | Tense.HABITUAL        | "aninvsgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninvsvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "waninvna"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninvsdi"
     }
 }

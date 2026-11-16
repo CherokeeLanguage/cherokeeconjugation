@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72348 (entrya ahiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,8 @@ class AhihaSpec extends VerbBaseSpec {
         definition: "Killing (Him/It)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ahiha', habitual: 'ahihoi', remote_past: 'uhlvi', imperative: 'aluga', infinitive: 'uhisdi'],
+                [subject: 'SG1', object: '', present: 'jiiha'],
+            [subject: 'SG3', object: '', habitual: 'ahihoi', imperative: 'hiluga', infinitive: 'uhisdi', present: 'ahiha', remote_past: 'uhlvi'],
             [subject: 'PL3', object: '', present: 'anihiha', habitual: 'anihihoi', remote_past: 'unihlvi', imperative: 'aniluga', infinitive: 'unihisdi'],
             [subject: 'PL1INCL', object: '', present: 'idihiha', habitual: 'idihihoi', remote_past: 'igihlvi', imperative: 'idiluga', infinitive: 'igihisdi']
         ]
@@ -25,18 +27,18 @@ class AhihaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "ahiha"
         "SG3" | "" | Tense.HABITUAL        | "ahihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uhlvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "aluga"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utlvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvi"
         "SG3" | "" | Tense.INFINITIVE      | "uhisdi"
         "PL3" | "" | Tense.PRESENT         | "anihiha"
         "PL3" | "" | Tense.HABITUAL        | "anihihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unihlvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aniluga"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unitlvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anitlvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idihiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idihihoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igihlvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiluga"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igitlvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iditlvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igihisdi"
     }
 }

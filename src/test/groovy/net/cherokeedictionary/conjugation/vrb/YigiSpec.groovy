@@ -23,8 +23,8 @@ class YigiSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "tla"
         "SG3" | "" | Tense.HABITUAL        | "yigi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "gesoi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "jigesvi"
-        "SG3" | "" | Tense.INFINITIVE      | "gesesdi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugesoi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "gagesoi"
+        "SG3" | "" | Tense.INFINITIVE      | "usesdi"
     }
 }

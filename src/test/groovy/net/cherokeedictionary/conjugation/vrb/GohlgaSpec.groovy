@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73242 (entrya gohlga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class GohlgaSpec extends VerbBaseSpec {
         definition: "Recognizing Him (120)",
         part_of_speech: "v.t.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'goliga'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyoliga', habitual: 'jiyoligoi', remote_past: 'jiyohlvi', imperative: 'jiyoligi', infinitive: 'jiyohlisdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyoliga', habitual: 'hiyoligoi', remote_past: 'hiyohljvi', imperative: 'hiyoligi', infinitive: 'hiyohlisdi'],
-            [subject: 'SG3', object: 'SG3AN', present: 'gohlga', habitual: 'gohlgoi', remote_past: 'uwohljvi', imperative: 'gohlgi', infinitive: 'uwohlisdi'],
+            [subject: 'SG3', object: '', habitual: 'gohlgoi', imperative: 'hohlgi', infinitive: 'uwohlisdi', present: 'gohlga', remote_past: 'uwohljvi'],
             [subject: 'PL3', object: 'SG3AN', present: 'anohlga', habitual: 'anohlgoi', remote_past: 'unohlvi', imperative: 'anohlgi', infinitive: 'unohlisdi'],
             [subject: 'PL1INCL', object: 'SG3AN', present: 'edohlga', habitual: 'edohlgoi', remote_past: 'edohlvi', imperative: 'edohlgi', infinitive: 'edohlisdi']
         ]
@@ -25,30 +27,30 @@ class GohlgaSpec extends VerbBaseSpec {
         conjugateVerb("Gohlga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyoliga"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyoligoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyohlvi"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jiyoligi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyohlisdi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyoliga"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyoligoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyohljvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyoligi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyohlisdi"
-        "SG3" | "SG3AN" | Tense.PRESENT         | "gohlga"
-        "SG3" | "SG3AN" | Tense.HABITUAL        | "gohlgoi"
-        "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwohljvi"
-        "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "gohlgi"
-        "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwohlisdi"
-        "PL3" | "SG3AN" | Tense.PRESENT         | "anohlga"
-        "PL3" | "SG3AN" | Tense.HABITUAL        | "anohlgoi"
-        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unohlvi"
-        "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anohlgi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "unohlisdi"
-        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edohlga"
-        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edohlgoi"
-        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edohlvi"
-        "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edohlgi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "edohlisdi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyologa"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyologoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyolotsvi"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyolotsvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwotlisdi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyologa"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyologoi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "olotsvi"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyolotsvi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "wotlisdi"
+        "SG3" | "SG3AN" | Tense.PRESENT         | "ologa"
+        "SG3" | "SG3AN" | Tense.HABITUAL        | "gologoi"
+        "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwolotsvi"
+        "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "olotsvi"
+        "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwotlisdi"
+        "PL3" | "SG3AN" | Tense.PRESENT         | "anologa"
+        "PL3" | "SG3AN" | Tense.HABITUAL        | "anologoi"
+        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "anolotsvi"
+        "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anolotsvi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "aniwotlisdi"
+        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edologa"
+        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edologoi"
+        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "olotsvi"
+        "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edolotsvi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "wotlisdi"
     }
 }

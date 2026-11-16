@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72547 (entrya anagaliha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AnagalihaSpec extends VerbBaseSpec {
         definition: "Lightning (It is)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'anagaliha', habitual: 'anagalisgoi', remote_past: 'unagalvhvi', imperative: 'dvnagalvhi', infinitive: 'x']
+            [subject: 'SG3', object: '', habitual: 'anagalisgoi', imperative: '', infinitive: '', present: 'anagaliha', remote_past: 'unagalvhvi']
         ]
     ]
 
@@ -24,7 +25,7 @@ class AnagalihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.PRESENT         | "anagaliha"
         "SG3" | "" | Tense.HABITUAL        | "anagalisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unagalvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvnagalvhi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "anagalvhvi"
         "SG3" | "" | Tense.INFINITIVE      | "x"
     }
 }

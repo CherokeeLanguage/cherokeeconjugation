@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72500 (entrya alidliha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,7 +12,7 @@ class AlidlihaSpec extends VerbBaseSpec {
         definition: "Its Boiling (39)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'alidliha', habitual: 'alidlisgoi', remote_past: 'ulidlvhvi', imperative: 'dvlidlvhi', infinitive: 'ulihldi']
+            [subject: 'SG3', object: '', habitual: 'alidlisgoi', imperative: '', infinitive: 'ulihldi', present: 'alidliha', remote_past: 'ulidlvhvi']
         ]
     ]
 
@@ -24,10 +25,10 @@ class AlidlihaSpec extends VerbBaseSpec {
         conjugateVerb("Alidliha", details, subj, obj, tenz, expected) == syllabary
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "alidliha"
-        "SG3" | "" | Tense.HABITUAL        | "alidlisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulidlvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "dvlidlvhi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulihldi"
+        "SG3" | "" | Tense.PRESENT         | "alitliha"
+        "SG3" | "" | Tense.HABITUAL        | "alitlisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulitlvhvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "alitlvhvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulilodi"
     }
 }

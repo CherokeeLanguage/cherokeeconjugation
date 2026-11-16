@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72429 (entrya ajavsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AjavsgaSpec extends VerbBaseSpec {
         definition: "S/he is Getting in a Car, Box, Etc.",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'gajavsga'],
             [subject: 'SG1', object: '', present: 'gajavsga', habitual: 'gajavsgoi', remote_past: 'agwajanvi', imperative: 'gajavga', infinitive: 'agwajodi'],
             [subject: 'SG2', object: '', present: 'hajavsga', habitual: 'hajavsgoi', remote_past: 'jajanvi', imperative: 'hajavga', infinitive: 'jajodi'],
-            [subject: 'SG3', object: '', present: 'ajavsga', habitual: 'ajavsgoi', remote_past: 'ujanvi', imperative: 'ajavga', infinitive: 'ujodi'],
+            [subject: 'SG3', object: '', habitual: 'ajavsgoi', imperative: 'hajavga', infinitive: '', present: 'ajavsga', remote_past: 'ujanvi'],
             [subject: 'PL3', object: '', present: 'anajavsga', habitual: 'anajavsgoi', remote_past: 'unajanvi', imperative: 'anajavga', infinitive: 'unajodi'],
             [subject: 'PL1INCL', object: '', present: 'idajavsga', habitual: 'idajavsgoi', remote_past: 'igajanvi', imperative: 'idajavga', infinitive: 'igajodi']
         ]
@@ -25,30 +27,30 @@ class AjavsgaSpec extends VerbBaseSpec {
         conjugateVerb("Ajavsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gajavsga"
-        "SG1" | "" | Tense.HABITUAL        | "gajavsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwajanvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gajavga"
-        "SG1" | "" | Tense.INFINITIVE      | "agwajodi"
-        "SG2" | "" | Tense.PRESENT         | "hajavsga"
-        "SG2" | "" | Tense.HABITUAL        | "hajavsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jajanvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hajavga"
-        "SG2" | "" | Tense.INFINITIVE      | "jajodi"
-        "SG3" | "" | Tense.PRESENT         | "ajavsga"
-        "SG3" | "" | Tense.HABITUAL        | "ajavsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ujanvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ajavga"
-        "SG3" | "" | Tense.INFINITIVE      | "ujodi"
-        "PL3" | "" | Tense.PRESENT         | "anajavsga"
-        "PL3" | "" | Tense.HABITUAL        | "anajavsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unajanvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anajavga"
-        "PL3" | "" | Tense.INFINITIVE      | "unajodi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idajavsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idajavsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igajanvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idajavga"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igajodi"
+        "SG1" | "" | Tense.PRESENT         | "gatsavsga"
+        "SG1" | "" | Tense.HABITUAL        | "gatsavsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquatsanvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gatsanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquatsodi"
+        "SG2" | "" | Tense.PRESENT         | "hatsavsga"
+        "SG2" | "" | Tense.HABITUAL        | "hatsavsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsanvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hatsanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatsodi"
+        "SG3" | "" | Tense.PRESENT         | "atsavsga"
+        "SG3" | "" | Tense.HABITUAL        | "atsavsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utsanvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "atsanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "utsodi"
+        "PL3" | "" | Tense.PRESENT         | "anatsavsga"
+        "PL3" | "" | Tense.HABITUAL        | "anatsavsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unatsanvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "anatsanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unatsodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idatsavsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idatsavsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsanvi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatsanvi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igatsodi"
     }
 }

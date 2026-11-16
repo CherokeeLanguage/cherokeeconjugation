@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 72678 (entrya atolsdiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class AtolsdihaSpec extends VerbBaseSpec {
         definition: "Loaning",
         part_of_speech: "v.t.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiyatolsdiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyatolsdiha', habitual: 'jiyatolsdisgoi', remote_past: 'jiyatolstanvi', imperative: 'jiyatolsda', infinitive: 'jiyatolsdohdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyatolsdiha', habitual: 'hiyatolsdisgoi', remote_past: 'hiyatolstanvi', imperative: 'hiyatolsda', infinitive: 'hiyatolsdohdi'],
-            [subject: 'SG3', object: 'SG3AN', present: 'atolsdiha', habitual: 'atolsdisgoi', remote_past: 'utolstanvi', imperative: 'atolsda', infinitive: 'utolsdohdi'],
+            [subject: 'SG3', object: '', habitual: 'atolsdisgoi', imperative: 'hiyatolsda', infinitive: 'utolsdohdi', present: 'atolsdiha', remote_past: 'utolstanvi'],
             [subject: 'PL3', object: 'SG3AN', present: 'anatolsdiha', habitual: 'anatolsdisgoi', remote_past: 'unatolstanvi', imperative: 'anatolsda', infinitive: 'unatolsdohdi'],
             [subject: 'PL1INCL', object: 'SG3AN', present: 'idatolsdiha', habitual: 'idatolsdisgoi', remote_past: 'igatolstanvi', imperative: 'idatolsda', infinitive: 'igatolsdohdi']
         ]
@@ -28,27 +30,27 @@ class AtolsdihaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatolsdiha"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyatolsdisgoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyatolstanvi"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jiyatolsda"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "jiyatolstanvi"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatolsdohdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyatolsdiha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyatolsdisgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyatolstanvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyatolsda"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyatolstanvi"
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyatolsdohdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "atolsdiha"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "atolsdisgoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "utolstanvi"
-        "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "atolsda"
+        "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "utolstanvi"
         "SG3" | "SG3AN" | Tense.INFINITIVE      | "utolsdohdi"
         "PL3" | "SG3AN" | Tense.PRESENT         | "anatolsdiha"
         "PL3" | "SG3AN" | Tense.HABITUAL        | "anatolsdisgoi"
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unatolstanvi"
-        "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anatolsda"
+        "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "unatolstanvi"
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "unatolsdohdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "idatolsdiha"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "idatolsdisgoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "igatolstanvi"
-        "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "idatolsda"
+        "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "igatolstanvi"
         "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "igatolsdohdi"
     }
 }

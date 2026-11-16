@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73009 (entrya gadvvsga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,10 +12,11 @@ class GadvvsgaSpec extends VerbBaseSpec {
         definition: "Hang Up (flexible)",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'jiyadvvsga, gadvvsga'],
             [subject: 'SG1', object: '', present: 'gadvvsga', habitual: 'gadvvsgoi', remote_past: 'agwadvnvi', imperative: 'gadvvga', infinitive: 'agwadvdi'],
             [subject: 'SG2', object: '', present: 'hadvvsga', habitual: 'hadvvsgoi', remote_past: 'jadvnvi', imperative: 'hadvvga', infinitive: 'jadvdi'],
             [subject: 'SG1', object: '', present: 'gadvvsga', habitual: 'gadvvsgoi', remote_past: 'udvnvi', imperative: 'wigadvvga', infinitive: 'udvdi'],
-            [subject: 'SG3', object: '', present: 'anadvvsga', habitual: 'anadvvsgoi', remote_past: 'unadvnvi', imperative: 'wanadvvga', infinitive: 'unadvdi']
+            [subject: 'SG3', object: '', habitual: 'gadvvsgoi', imperative: 'hadvvga', infinitive: 'udvdi', present: 'gadvvsga', remote_past: 'udvnvi']
         ]
     ]
 
@@ -26,23 +28,23 @@ class GadvvsgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadvvsga"
         "SG1" | "" | Tense.HABITUAL        | "gadvvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwadvnvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadvvga"
-        "SG1" | "" | Tense.INFINITIVE      | "agwadvdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadvnvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadvnvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquadvdi"
         "SG2" | "" | Tense.PRESENT         | "hadvvsga"
         "SG2" | "" | Tense.HABITUAL        | "hadvvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadvnvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadvvga"
-        "SG2" | "" | Tense.INFINITIVE      | "jadvdi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvnvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hadvnvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadvdi"
         "SG1" | "" | Tense.PRESENT         | "gadvvsga"
         "SG1" | "" | Tense.HABITUAL        | "gadvvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "udvnvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "wigadvvga"
-        "SG1" | "" | Tense.INFINITIVE      | "udvdi"
-        "SG3" | "" | Tense.PRESENT         | "anadvvsga"
-        "SG3" | "" | Tense.HABITUAL        | "anadvvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unadvnvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "wanadvvga"
-        "SG3" | "" | Tense.INFINITIVE      | "unadvdi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadvnvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "gadvnvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquadvdi"
+        "SG3" | "" | Tense.PRESENT         | "gadvvsga"
+        "SG3" | "" | Tense.HABITUAL        | "gadvvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udvnvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "advnvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udvdi"
     }
 }

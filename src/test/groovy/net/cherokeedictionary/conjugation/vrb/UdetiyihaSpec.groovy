@@ -1,3 +1,4 @@
+// tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73739 (entrya udetiyiha) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
@@ -11,9 +12,10 @@ class UdetiyihaSpec extends VerbBaseSpec {
         definition: "S/hes Having a Birthday",
         part_of_speech: "v.i.",
         conjugations: [
+                [subject: 'SG1', object: '', present: 'agwadetiyiha'],
             [subject: 'SG1', object: '', present: 'agwadetiyiha', habitual: 'agwadetiyisgoi', remote_past: 'agwadetiyvhvi', imperative: 'agwadetiya', infinitive: 'agwadetiyhdi'],
             [subject: 'SG2', object: '', present: 'jadetiyiha', habitual: 'jadetiyisgoi', remote_past: 'jadetiyvhvi', imperative: 'jadetiya', infinitive: 'jadetiyhdi'],
-            [subject: 'SG3', object: '', present: 'udetiyiha', habitual: 'udetiyisgoi', remote_past: 'udetiyvhvi', imperative: 'udetiya', infinitive: 'udetiyhdi'],
+            [subject: 'SG3', object: '', habitual: 'udetiyisgoi', imperative: 'jadetiya', infinitive: 'udetiyhdi', present: 'udetiyiha', remote_past: 'udetiyvhvi'],
             [subject: 'PL3', object: '', present: 'unadetiyiha', habitual: 'unadetiyisgoi', remote_past: 'unadetiyvhvi', imperative: 'unadetiya', infinitive: 'unadetiyhdi'],
             [subject: 'PL1INCL', object: '', present: 'igadetiyiha', habitual: 'igadetiyisgoi', remote_past: 'igadetiyvhvi', imperative: 'igadetiya', infinitive: 'igadetiyhdi']
         ]
@@ -25,30 +27,30 @@ class UdetiyihaSpec extends VerbBaseSpec {
         conjugateVerb("Udetiyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agwadetiyiha"
-        "SG1" | "" | Tense.HABITUAL        | "agwadetiyisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwadetiyvhvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "agwadetiya"
+        "SG1" | "" | Tense.PRESENT         | "aquadetiyiha"
+        "SG1" | "" | Tense.HABITUAL        | "aquadetiyisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquadetiyvhvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadetiyvhvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwadetiyhdi"
-        "SG2" | "" | Tense.PRESENT         | "jadetiyiha"
-        "SG2" | "" | Tense.HABITUAL        | "jadetiyisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jadetiyvhvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "jadetiya"
+        "SG2" | "" | Tense.PRESENT         | "tsadetiyiha"
+        "SG2" | "" | Tense.HABITUAL        | "tsadetiyisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadetiyvhvi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadetiyvhvi"
         "SG2" | "" | Tense.INFINITIVE      | "jadetiyhdi"
         "SG3" | "" | Tense.PRESENT         | "udetiyiha"
         "SG3" | "" | Tense.HABITUAL        | "udetiyisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udetiyvhvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "udetiya"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "udetiyvhvi"
         "SG3" | "" | Tense.INFINITIVE      | "udetiyhdi"
         "PL3" | "" | Tense.PRESENT         | "unadetiyiha"
         "PL3" | "" | Tense.HABITUAL        | "unadetiyisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unadetiyvhvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unadetiya"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unadetiyvhvi"
         "PL3" | "" | Tense.INFINITIVE      | "unadetiyhdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igadetiyiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igadetiyisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadetiyvhvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadetiya"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadetiyvhvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igadetiyhdi"
     }
 }
