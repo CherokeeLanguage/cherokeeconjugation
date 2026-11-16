@@ -48,9 +48,12 @@ class ToHaveSomethingFlexiblePresentSpec extends VerbBaseSpec {
      */
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
-        // TODO(engine-comparison): replace this echo with a conjugation-engine call,
-        // e.g. conjStr(pronoun, "SG3IN", verbFixture, TENSE, "v.i.")
-        return [romanized: row.romanized, syllabary: row.syllabary]
+        // Harness check: retrieve engine output for this same pronoun/tense/verb
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+            VERB, TENSE, row.english, [conjugations: VERB_BOOK]
+        )
+        
+        return [romanized: row.romanized, syllabary: row.syllabary, engineSyllabary: engineSyllabary]
     }
 
     def "present tense form matches the verb book (#row.pronoun)"() {
@@ -60,6 +63,9 @@ class ToHaveSomethingFlexiblePresentSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
+
 
         and: "the English translation is preserved for later deconstruction"
         row.english

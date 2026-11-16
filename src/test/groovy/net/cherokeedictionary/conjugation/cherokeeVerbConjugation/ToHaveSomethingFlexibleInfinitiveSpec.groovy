@@ -63,6 +63,9 @@ class ToHaveSomethingFlexibleInfinitiveSpec extends VerbBaseSpec {
         then: "both the romanized and syllabary forms match the verb book"
         form.romanized == row.romanized
         form.syllabary == row.syllabary
+        and: "the engine output matches the verb book syllabary"
+        form.engineSyllabary == row.syllabary
+
 
         and: "the English translation is preserved for later deconstruction"
         row.english
