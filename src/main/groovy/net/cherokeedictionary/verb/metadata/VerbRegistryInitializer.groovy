@@ -16,6 +16,7 @@ class VerbRegistryInitializer {
         initialized = true
         // --- Bridged verbs: root verified from the engine -- tio 12Nov26 ---
         VerbRegistry.clearOverrides() // Reset on init to avoid stale registrations
+
         bridge("to be somewhere", "edo", [VerbCategory.NORMAL])
         bridge("to see", "gowati", [VerbCategory.NORMAL])
         bridge("to be thankful or happy", "aliheli", [VerbCategory.NORMAL])
@@ -171,6 +172,76 @@ class VerbRegistryInitializer {
         ].each { tense, subj, obj, form ->
             VerbRegistry.registerSubjectSurface(STEM, tense, subj, obj, form)
         }
+
+        // tio 15Nov26: To See declarative Future (book p.119) — the two rows
+        // are lexeme-specific surfaces (see VerbRegistry.subjectSurfaceOverrides).
+        // SG1 "I will see it" ᏓᏥᎪᎢ datsigo'i; SG3 "He/she will see it" ᏛᎪᎯ dvgohi.
+        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG1", "ᏓᏥᎪᎢ")
+        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG3", "ᏛᎪᎯ")
+
+        // tio 15Nov26: To Hear IMMEDIATE imperative/volative sg3 row takes wa-
+        // (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ watvgvga), while
+        // its FUTURE imperative/volative sg3 row takes a- (ᎠᏛᎦᏅᎢ atvganv'i).
+        // The table prints verb-specific positional allomorphs for the stems:
+        // SG1 geda, SG2 heda, SG3 weda (ᏪᏓ).
+        // Registered against the PRESENT stem syllabary "ᎡᏙᎭ" (edoha).
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG1", "ᎨᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG2", "ᎮᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG3", "ᏪᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL2", "ᏍᏕᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL2", "ᎢᏤᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL1INCL", "ᎢᏁᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL1EXCL", "ᏬᏍᏕᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1EXCL", "ᏬᏤᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1INCL", "ᎢᏕᏓ")
+        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL3", "ᏩᏁᏓ")
+        // tio 15Nov26: To Be Somewhere Future/Remote Past (pp.19-21).
+        // The table prints verb-specific positional allomorphs for the stems:
+        // Future/Remote past rows take the positional allomorphs (e.g. ᎨᏙᎮᏍᏗ, ᎨᏙᎲᎢ,
+        // ᎮᏙᎮᏍᏗ, ᎮᏙᎲᎢ...). Registered against the PRESENT stem "ᎡᏙᎭ".
+        def STEM = "ᎡᏙᎭ"
+        [
+            ["COMPLETIVE_FUTURE", "SG1", "ᎨᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "SG2", "ᎮᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "SG3", "ᎡᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL2", "ᏍᏕᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL2", "ᎢᏤᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL1INCL", "ᎢᏁᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "DL1EXCL", "ᎣᏍᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL1EXCL", "ᎣᏤᏙᎮᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL1INCL", "ᎢᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL3", "ᎠᏁᏙᎮᏍᏗ"],
+            ["REMOTE_PAST", "SG1", "ᎨᏙᎲᎢ"], ["REMOTE_PAST", "SG2", "ᎮᏙᎲᎢ"],
+            ["REMOTE_PAST", "SG3", "ᎡᏙᎲᎢ"], ["REMOTE_PAST", "DL2", "ᏍᏕᏙᎲᎢ"],
+            ["REMOTE_PAST", "PL2", "ᎢᏤᏙᎲᎢ"], ["REMOTE_PAST", "DL1INCL", "ᎢᏁᏙᎲᎢ"],
+            ["REMOTE_PAST", "DL1EXCL", "ᎣᏍᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL1EXCL", "ᎣᏤᏙᎲᎢ"],
+            ["REMOTE_PAST", "PL1INCL", "ᎢᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL3", "ᎠᏁᏙᎲᎢ"],
+            ["INFINITIVE", "SG1", "ᎠᏇᏓᏍᏗ"], ["INFINITIVE", "SG2", "ᏤᏓᏍᏗ"],
+            ["INFINITIVE", "DL2", "ᏍᏕᏓᏍᏗ"], ["INFINITIVE", "PL2", "ᎢᏤᏓᏍᏗ"],
+            ["INFINITIVE", "DL1INCL", "ᎩᏁᏓᏍᏗ"], ["INFINITIVE", "DL1EXCL", "ᎣᎩᏁᏓᏍᏗ"],
+            ["INFINITIVE", "PL1EXCL", "ᎣᎨᏓᏍᏗ"], ["INFINITIVE", "PL1INCL", "ᎢᎨᏓᏍᏗ"],
+            ["INFINITIVE", "PL3", "ᎤᏁᏓᏍᏗ"]
+        ].each { tense, subj, form ->
+            VerbRegistry.registerSubjectSurface(STEM, tense, subj, form)
+        }
+
+        // tio 15Nov26: To Hear PRESENT compound-prefix overrides (book p.64).
+        // The a-branch normalization bakes the sg3 Ꭰ- into the routed present
+        // stem ᎠᏛᎩᎠ, so these cells compose on the preVowel branch — the
+        // override values use the preVowel encoding (syllabary head + single
+        // Latin fusion letter) and Morphemes.fixPrefix consumes the stem's
+        // leading Ꭰ while fusing: n+Ꭰ→Ꮎ, y+Ꭰ→Ꮿ, j+Ꭰ→Ꮳ.
+        //   DL2+DL1EXCL "You (two) hear someone else and me" ᏕᏍᎩᎾᏛᎩᎠ
+        //     desginatvgi'a — de- plural-object marking on the ᏍᎩ- cell
+        //   DL2+PL1EXCL "You (two) hear others and me" ᏕᏍᎩᏯᏛᎩᎠ desgiyatvgi'a
+        //   PL2+DL1EXCL "You (more than two) hear someone else and me"
+        //     ᏕᏍᎩᎾᏛᎩᎠ desginatvgi'a (same cell shape as DL2+DL1EXCL)
+        //   DL1EXCL+DL2 "We (another and I) hear you (two)" ᏍᏛᏯᏛᎩᎠ
+        //     sdvyatvgi'a — the s- portmanteau before a 2nd-person object
+        //   DL1EXCL+PL3IN "We (another and I) hear those (things)" ᏙᏣᏛᎩᎠ
+        //     dotsatvgi'a — do- + ts- plural object
+        //   PL1INCL+SG3AN "We (you and I and another or others) hear him/her"
+        //     ᎣᏣᏛᎩᎠ otsatvgi'a
+        //   PL1INCL+SG3IN "We (you and I and another or others) hear it"
+        //     ᎣᏣᏛᎩᎠ otsatvgi'a (book prints the same cell for both readings)
+        //   PL3+SG2 "They hear you (singular)" ᎨᏣᏛᎩᎠ getsatvgi'a
+        // All keyed on the routed present stem ᎠᏛᎩᎠ so other verbs' cells
+        // and hear's other tenses are untouched.
         def HEAR_PRESENT_STEM = "ᎠᏛᎩᎠ"
         VerbRegistry.registerCompoundOverride("DL2DL1EXCL", HEAR_PRESENT_STEM, "ᏕᏍᎩn")
         VerbRegistry.registerCompoundOverride("DL2PL1EXCL", HEAR_PRESENT_STEM, "ᏕᏍᎩy")

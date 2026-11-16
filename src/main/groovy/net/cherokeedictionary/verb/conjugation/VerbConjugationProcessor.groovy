@@ -598,11 +598,13 @@ class VerbConjugationProcessor {
         // derives (To See future ᏓᏥᎪᎢ / ᏛᎪᎯ). Checked before stem selection
         // so the override short-circuits the whole composition; keyed on
         // present3rd because verb.root is not assigned until further below.
+        log "DEBUG: stemmer present3rd=${verb.stemmer?.present3rd?.syllabary}"
         String subjectSurface = VerbRegistry.getSubjectSurface(
                 verb.stemmer?.present3rd?.syllabary,
                 verb.tense.name(),
                 verb.compoundPrefix?.prefix1?.name())
         if (subjectSurface) {
+            println "DEBUG: subjectSurface=${subjectSurface}"
             // The registered surface is book-final (it already carries da-
             // where the book prints it). The da- initial-prefix flag set above
             // must be cleared, or PrefixProcessor glues a second Ꮣ onto the

@@ -221,6 +221,11 @@ class VerbRegistry {
     // consults this), the engine Tense name, and the PrefixTableSubject name.
     private static final Map<String, String> subjectSurfaceOverrides = [:]
 
+    static void clearOverrides() {
+        subjectSurfaceOverrides.clear()
+        compoundPrefixOverrides.clear()
+    }
+    
     /** Registers a whole-form surface for (present3rd stem, tense, subject). -- tio 15Nov26 */
     static void registerSubjectSurface(String present3rdStem, String tense, String subject, String form) {
         if (present3rdStem && tense && subject && form) {

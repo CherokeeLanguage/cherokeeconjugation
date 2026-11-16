@@ -171,6 +171,8 @@ class VerbBookEngineHarness {
         }
 
         // Use the fixture to provide the stemmer-building info
-        return VerbBaseSpec.conjugateVerb(verbName, fixture, subj, obj, tense, null)
+        def result = VerbBaseSpec.conjugateVerb(verbName, fixture, subj, obj, tense, null)
+        println "DEBUG: getEngineSyllabary(${verbName}, ${tense}, ${english}) -> ${result}"
+        return result
     }
 }

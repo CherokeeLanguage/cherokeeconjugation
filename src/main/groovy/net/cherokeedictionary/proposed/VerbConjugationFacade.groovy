@@ -3,7 +3,7 @@ package net.cherokeedictionary.proposed
 import net.cherokeedictionary.core.Verb
 
 class VerbConjugationFacade {
-    boolean isDebug = false;
+    boolean isDebug = true;
 
     private final List<ConjugationStep> pipelineSteps = [
         new StubInitialPrefixStep(),
