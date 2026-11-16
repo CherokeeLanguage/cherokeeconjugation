@@ -27,6 +27,7 @@ class VerbRegistryInitializer {
         bridge("to hear", "advgi", [VerbCategory.NORMAL])
         bridge("to want", "aduli", [VerbCategory.IRREGULAR])
         bridge("to kill", "hi", [VerbCategory.NORMAL])
+        bridge("to help", "asdeli", [VerbCategory.NORMAL])
         bridge("to hit", "vni", [VerbCategory.NORMAL])
         bridge("to have something flexible", "una", [VerbCategory.NORMAL])
         // NOTE: "to have" is special-cased in the engine (empty root, fully
