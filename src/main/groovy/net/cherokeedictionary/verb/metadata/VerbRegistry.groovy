@@ -15,6 +15,17 @@ class VerbRegistry {
     static {
         VerbRegistryInitializer.init() // -- tio 11Nov26
     }
+    static void clearOverrides() {
+        verbOverrides.clear()
+        compoundPrefixOverrides.clear()
+        stemIIISyncopeStems.clear()
+        fivSg3WStems.clear()
+        iivSg3WStems.clear()
+        subjectSurfaceOverrides.clear()
+        unifiedSg3PresentStems.clear()
+        wiInsertionStems.clear()
+    }
+
     // Map of root to list of categories
     private static final Map<String, List<VerbCategory>> verbCategories = [:]
 
@@ -221,26 +232,29 @@ class VerbRegistry {
     // consults this), the engine Tense name, and the PrefixTableSubject name.
     private static final Map<String, String> subjectSurfaceOverrides = [:]
 
-    static void clearOverrides() {
-        subjectSurfaceOverrides.clear()
-        compoundPrefixOverrides.clear()
-    }
-    
-    /** Registers a whole-form surface for (present3rd stem, tense, subject). -- tio 15Nov26 */
-    static void registerSubjectSurface(String present3rdStem, String tense, String subject, String form) {
+    /**
+     * Registers a whole-form surface for (present3rd stem, tense, subject, object).
+     * obj "NONE" = the row is object-agnostic (intransitive or a single book row
+     * covering both object readings); a named object (SG3AN, SG3IN, PL3IN ...)
+     * applies only when the conjugation carries that object. -- tio 16Nov26
+     */
+    static void registerSubjectSurface(String present3rdStem, String tense, String subject, String obj, String form) {
         if (present3rdStem && tense && subject && form) {
-            subjectSurfaceOverrides.put("${present3rdStem}|${tense}|${subject}" as String, form)
+            subjectSurfaceOverrides.put("${present3rdStem}|${tense}|${subject}|${obj ?: 'NONE'}" as String, form)
         }
     }
 
-    /** Whole-form surface for this verb/tense/subject, or null to compose normally. -- tio 15Nov26 */
-    static String getSubjectSurface(String present3rd, String tense, String subject) {
+    /** Whole-form surface for this verb/tense/subject/object, or null to compose normally. -- tio 15Nov26 */
+    static String getSubjectSurface(String present3rd, String tense, String subject, String obj) {
         if (!present3rd || !tense || !subject) return null
         // contained-in stem match, same rationale as hasFivSg3W above (the
         // citation row may carry a baked sg3 prefix and/or a tense suffix).
+        // obj "NONE" rows match every object reading; named-object rows match
+        // only that object. -- tio 16Nov26
         return subjectSurfaceOverrides.find { key, val ->
             def parts = key.split("\\|")
-            present3rd.contains(parts[0]) && parts[1] == tense && parts[2] == subject
+            def keyObj = parts.length > 3 ? parts[3] : "NONE"
+            present3rd.contains(parts[0]) && parts[1] == tense && parts[2] == subject && (keyObj == "NONE" || keyObj == (obj ?: "NONE"))
         }?.value
     }
 

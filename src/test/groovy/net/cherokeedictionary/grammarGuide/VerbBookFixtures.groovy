@@ -80,8 +80,15 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3IN",
             conjugations: [
-                [subject: "SG3", habitual: "He/she/it has multiple flexible things\" unaoi/dunaoi", imperative: "aginaesdi/daginaesdi", infinitive: "unvdi/tsunvdi", present: "unaa/dunaa", remote_past: "unavi/dunavi"],
-                [subject: "SG1", present: "I have multiple flexible things\" aginaa/daginaa"],
+                // tio 16Nov26: citations reduced to the bare SG3IN reading — the
+                // old entries carried english fragments and "/"-joined dual
+                // readings ("unaa/dunaa"), which tsalagiToSyllabary turned into
+                // invalid-letter garbage and nulled the infinitive composition.
+                // Every printed row (both readings, all tenses) is registered as
+                // a VerbRegistry subject-surface override keyed on "ᎤᎾᎠ", so the
+                // engine consults the book surface directly.
+                [subject: "SG3", habitual: "unaoi", imperative: "aginaesdi", infinitive: "unvdi", present: "unaa", remote_past: "unavi"],
+                [subject: "SG1", present: "aginaa"],
             ],
         ],
         "to have something liquid, in a container": [
@@ -119,7 +126,10 @@ class VerbBookFixtures {
             partOfSpeech: "v.t.",
             objectClass: "SG3AN",
             conjugations: [
-                [subject: "SG3", habitual: "tsisdelisgoi", imperative: "hisdela", infinitive: "usdelvdi", present: "asdeliha", remote_past: "tsisdelvhvi"],
+                // tio 16Nov26: citations corrected to the book's THIRD SINGULAR
+                // rows (ToHear precedent — the old habitual/remote_past entries
+                // were the SG1 rows, so the sg3 short-circuits printed ᏥᏍᏕ-).
+                [subject: "SG3", habitual: "asdelisgoi", imperative: "hisdela", infinitive: "usdelvdi", present: "asdeliha", remote_past: "usdelvhvi", immediate_past: "asdela"],
                 [subject: "SG1", present: "tsisdeliha"],
             ],
         ],

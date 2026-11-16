@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**

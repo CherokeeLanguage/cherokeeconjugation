@@ -75,11 +75,36 @@ class VerbBookEngineHarness {
         "him/her": "SG3AN",
         "those (things)": "PL3IN",
         "those things": "PL3IN",
+        // tio 16Nov26: the "to have (something X)" verbs phrase the plural-object
+        // reading as "multiple X things" (To Have Something Flexible pp.50-53) —
+        // without this key every plural reading resolved to the SG3IN default
+        // and the engine printed the singular-object form.
+        "multiple flexible things": "PL3IN",
         "them": "PL3AN",
         "it": "SG3IN",
         "you": "SG2",
         "me": "SG1"
     ]
+
+    // tio 16Nov26: dual-reading rows. Several verb-book tables print one row
+    // covering both object readings ("sg3in form / pl3in form", e.g. To Have
+    // Something Flexible present "ᎠᎩᎾᎠ/ᏓᎩᎾᎠ"), with the english truncated
+    // after the first reading on some rows (transcription: trailing `"/`).
+    // Conjugate BOTH readings — the second synthesized from the first by the
+    // book's own phrasing rule ("something flexible (singular)" → "multiple
+    // flexible things") when the second half is missing — and join with "/",
+    // mirroring the printed row.
+    static String getEngineSyllabaryDual(String verbName, String tense, String english, Map details) {
+        def halves = english.split('"/')
+        def first = halves[0].replaceAll('^[\"/\']+|[\"/\']+$', '')
+        def second = (halves.size() > 1 && halves[1]) ? halves[1].replaceAll('^[\"/\']+|[\"/\']+$', '') : null
+        if (!second) {
+            second = first.replace("something flexible (singular)", "multiple flexible things")
+        }
+        def a = getEngineSyllabary(verbName, tense, first, details)
+        def b = getEngineSyllabary(verbName, tense, second, details)
+        return "${a}/${b}"
+    }
 
     static String getEngineSyllabary(String verbName, String tense, String english, Map details) {
         // tio 13Nov26: the book's "May ..." volative rows (IMMEDIATE_IMPERATIVE_VOLATIVE

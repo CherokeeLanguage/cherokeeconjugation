@@ -46,10 +46,10 @@ class VerbRegistryInitializer {
             ["HABITUAL", "SG3", "NONE", "ᎠᎵᎮᎵᎪᎢ"], ["HABITUAL", "DL2", "NONE", "ᏍᏓᎵᎮᎵᎪᎢ"],
             ["HABITUAL", "PL2", "NONE", "ᎢᏣᎵᎮᎵᎪᎢ"], ["HABITUAL", "DL1INCL", "NONE", "ᎢᎾᎵᎮᎵᎪᎢ"],
             ["HABITUAL", "DL1EXCL", "NONE", "ᎣᏍᏓᎵᎮᎵᎪᎢ"], ["HABITUAL", "PL1EXCL", "NONE", "ᎣᏣᎵᎮᎵᎪᎢ"],
-            ["HABITUAL", "PL1INCL", "ᎢᏓᎵᎮᎵᎪᎢ"], ["HABITUAL", "PL3", "NONE", "ᎠᎾᎵᎮᎵᎪᎢ"],
+            ["HABITUAL", "PL1INCL", "NONE", "ᎢᏓᎵᎮᎵᎪᎢ"], ["HABITUAL", "PL3", "NONE", "ᎠᎾᎵᎮᎵᎪᎢ"],
             ["REMOTE_PAST", "SG1", "NONE", "ᎠᏆᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "SG2", "NONE", "ᏣᎵᎮᎵᏨᎢ"],
             ["REMOTE_PAST", "SG3", "NONE", "ᎤᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "DL2", "NONE", "ᏍᏓᎵᎮᎵᏨᎢ"],
-            ["REMOTE_PAST", "PL2", "ᎢᏣᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "DL1INCL", "NONE", "ᎩᎾᎵᎮᎵᏨᎢ"],
+            ["REMOTE_PAST", "PL2", "NONE", "ᎢᏣᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "DL1INCL", "NONE", "ᎩᎾᎵᎮᎵᏨᎢ"],
             ["REMOTE_PAST", "DL1EXCL", "NONE", "ᎣᎩᎾᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "PL1EXCL", "NONE", "ᎣᎦᎵᎮᎵᏨᎢ"],
             ["REMOTE_PAST", "PL1INCL", "NONE", "ᎢᎦᎵᎮᎵᏨᎢ"], ["REMOTE_PAST", "PL3", "NONE", "ᎤᎾᎵᎮᎵᏨᎢ"],
             ["INFINITIVE", "SG1", "NONE", "ᎠᏆᎵᎮᎵᏍᏗ"], ["INFINITIVE", "SG2", "NONE", "ᏣᎵᎮᎵᏍᏗ"],
@@ -83,7 +83,7 @@ class VerbRegistryInitializer {
             ["IMMEDIATE_COMMAND", "PL2", "SG3AN", "ᎢᏣᏚᎵ"], ["IMMEDIATE_COMMAND", "DL1INCL", "SG3AN", "ᎩᎾᏚᎵ"],
             ["IMMEDIATE_COMMAND", "DL1EXCL", "SG3AN", "ᎣᎩᎾᏚᎵ"], ["IMMEDIATE_COMMAND", "PL1EXCL", "SG3AN", "ᎣᎦᏚᎵ"],
             ["IMMEDIATE_COMMAND", "PL1INCL", "SG3AN", "ᎢᎦᏚᎵ"], ["IMMEDIATE_COMMAND", "PL3", "SG3AN", "ᏩᎾᏚᎵ"],
-            ["INFINITIVE", "SG1", "SG3AN", "ᎠᏆᏚᎸᏗ"], ["INFINITIVE", "SG2", "ᏣᏚᎸᏗ"],
+            ["INFINITIVE", "SG1", "SG3AN", "ᎠᏆᏚᎸᏗ"], ["INFINITIVE", "SG2", "SG3AN", "ᏣᏚᎸᏗ"],
             ["INFINITIVE", "SG3", "SG3AN", "ᎤᏚᎸᏗ"], ["INFINITIVE", "DL2", "SG3AN", "ᏍᏓᏚᎸᏗ"],
             ["INFINITIVE", "PL2", "SG3AN", "ᎢᏣᏚᎸᏗ"], ["INFINITIVE", "DL1INCL", "SG3AN", "ᎩᎾᏚᎸᏗ"],
             ["INFINITIVE", "DL1EXCL", "SG3AN", "ᎣᎩᎾᏚᎸᏗ"], ["INFINITIVE", "PL1EXCL", "SG3AN", "ᎣᎦᏚᎸᏗ"],
@@ -92,8 +92,10 @@ class VerbRegistryInitializer {
             VerbRegistry.registerSubjectSurface(STEM_WANT, tense, subj, obj, form)
         }
 
-        // To Have Something Flexible (p.157-158). Registered against stem "una".
-        def FLEXIBLE_STEM = "una"
+        // To Have Something Flexible (p.157-158). Registered against the
+        // syllabary citation stem: getSubjectSurface matches contained-in on
+        // stemmer.present3rd.syllabary, so a roman key never fires. -- tio 16Nov26
+        def FLEXIBLE_STEM = "ᎤᎾᎠ"
         [
             ["PRESENT", "SG1", "SG3IN", "ᎠᎩᎾᎠ"], ["PRESENT", "SG1", "PL3IN", "ᏓᎩᎾᎠ"],
             ["PRESENT", "SG2", "SG3IN", "ᏣᎾᎠ"], ["PRESENT", "SG2", "PL3IN", "ᏕᏣᎾᎠ"],
@@ -109,6 +111,138 @@ class VerbRegistryInitializer {
             VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
         }
 
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexiblePresentHabitualSpec.groovy (HABITUAL)
+        [
+            ["HABITUAL", "SG1", "SG3IN", "ᎠᎩᎾᎣᎢ"],
+            ["HABITUAL", "SG1", "PL3IN", "ᏚᏂᎾᎣᎢ"],
+            ["HABITUAL", "SG2", "SG3IN", "ᏣᎾᎣᎢ"],
+            ["HABITUAL", "SG2", "PL3IN", "ᏕᏣᎾᎣᎢ"],
+            ["HABITUAL", "SG3", "SG3IN", "ᎤᎾᎣᎢ"],
+            ["HABITUAL", "SG3", "PL3IN", "ᏚᎾᎣᎢ"],
+            ["HABITUAL", "DL2", "SG3IN", "ᏍᏗᎾᎣᎢ"],
+            ["HABITUAL", "DL2", "PL3IN", "ᏕᏍᏗᎾᎣᎢ"],
+            ["HABITUAL", "PL2", "SG3IN", "ᎢᏥᎾᎣᎢ"],
+            ["HABITUAL", "PL2", "PL3IN", "ᏕᏥᎾᎣᎢ"],
+            ["HABITUAL", "DL1INCL", "SG3IN", "ᎩᏂᎾᎣᎢ"],
+            ["HABITUAL", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎣᎢ"],
+            ["HABITUAL", "DL1EXCL", "SG3IN", "ᎣᎩᏂᎾᎣᎢ"],
+            ["HABITUAL", "DL1EXCL", "PL3IN", "ᏙᎩᏂᎾᎣᎢ"],
+            ["HABITUAL", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎣᎢ"],
+            ["HABITUAL", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎣᎢ"],
+            ["HABITUAL", "PL1INCL", "SG3IN", "ᎢᎩᎾᎣᎢ"],
+            ["HABITUAL", "PL1INCL", "PL3IN", "ᏕᎩᎾᎣᎢ"],
+            ["HABITUAL", "PL3", "SG3IN", "ᎤᏂᎾᎣᎢ"],
+            ["HABITUAL", "PL3", "PL3IN", "ᏚᏂᎾᎣᎢ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleRemotePastSpec.groovy (REMOTE_PAST)
+        [
+            ["REMOTE_PAST", "SG1", "SG3IN", "ᎠᎩᎾᎥᎢ"], ["REMOTE_PAST", "SG1", "PL3IN", "ᏓᎩᎾᎥᎢ"],
+            ["REMOTE_PAST", "SG2", "SG3IN", "ᏣᎾᎥᎢ"], ["REMOTE_PAST", "SG2", "PL3IN", "ᏕᏣᎾᎥᎢ"],
+            ["REMOTE_PAST", "SG3", "SG3IN", "ᎤᎾᎥᎢ"], ["REMOTE_PAST", "SG3", "PL3IN", "ᏚᎾᎥᎢ"],
+            ["REMOTE_PAST", "DL2", "SG3IN", "ᏍᏗᎾᎥᎢ"], ["REMOTE_PAST", "DL2", "PL3IN", "ᏕᏍᏗᎾᎥᎢ"],
+            ["REMOTE_PAST", "PL2", "SG3IN", "ᎢᏥᎾᎥᎢ"], ["REMOTE_PAST", "PL2", "PL3IN", "ᏕᏥᎾᎥᎢ"],
+            ["REMOTE_PAST", "DL1INCL", "SG3IN", "ᎩᏂᎾᎥᎢ"], ["REMOTE_PAST", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎥᎢ"],
+            ["REMOTE_PAST", "DL1EXCL", "SG3IN", "ᎣᎩᏂᎾᎥᎢ"], ["REMOTE_PAST", "DL1EXCL", "PL3IN", "ᏙᎩᏂᎾᎥᎢ"],
+            ["REMOTE_PAST", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎥᎢ"], ["REMOTE_PAST", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎥᎢ"],
+            ["REMOTE_PAST", "PL1INCL", "SG3IN", "ᎢᎩᎾᎥᎢ"], ["REMOTE_PAST", "PL1INCL", "PL3IN", "ᏕᎩᎾᎥᎢ"],
+            ["REMOTE_PAST", "PL3", "SG3IN", "ᎤᏂᎾᎥᎢ"], ["REMOTE_PAST", "PL3", "PL3IN", "ᏚᏂᎾᎥᎢ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleImmediatePastSpec.groovy (IMMEDIATE_PAST)
+        [
+            ["IMMEDIATE_PAST", "SG1", "SG3IN", "ᎠᎩᎾᎥᎢ"], ["IMMEDIATE_PAST", "SG1", "PL3IN", "ᏓᎩᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "SG2", "SG3IN", "ᏣᎾᎥᎢ"], ["IMMEDIATE_PAST", "SG2", "PL3IN", "ᏕᏣᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "SG3", "SG3IN", "ᎤᎾᎥᎢ"], ["IMMEDIATE_PAST", "SG3", "PL3IN", "ᏚᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "DL2", "SG3IN", "ᏍᏗᎾᎥᎢ"], ["IMMEDIATE_PAST", "DL2", "PL3IN", "ᏕᏍᏗᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "PL2", "SG3IN", "ᎢᏥᎾᎥᎢ"], ["IMMEDIATE_PAST", "PL2", "PL3IN", "ᏕᏥᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "DL1INCL", "SG3IN", "ᎩᏂᎾᎥᎢ"], ["IMMEDIATE_PAST", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "DL1EXCL", "SG3IN", "ᎣᎩᏂᎾᎥᎢ"], ["IMMEDIATE_PAST", "DL1EXCL", "PL3IN", "ᏙᎩᏂᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎥᎢ"], ["IMMEDIATE_PAST", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "PL1INCL", "SG3IN", "ᎢᎩᎾᎥᎢ"], ["IMMEDIATE_PAST", "PL1INCL", "PL3IN", "ᏕᎩᎾᎥᎢ"],
+            ["IMMEDIATE_PAST", "PL3", "SG3IN", "ᎤᏂᎾᎥᎢ"], ["IMMEDIATE_PAST", "PL3", "PL3IN", "ᏚᏂᎾᎥᎢ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleFutureSpec.groovy (COMPLETIVE_FUTURE)
+        [
+            ["COMPLETIVE_FUTURE", "SG1", "SG3IN", "ᎠᎩᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "SG1", "PL3IN", "ᏓᎩᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "SG2", "SG3IN", "ᏣᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "SG2", "PL3IN", "ᏕᏣᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "SG3", "SG3IN", "ᎤᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "SG3", "PL3IN", "ᏚᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "DL2", "SG3IN", "ᏍᏗᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "DL2", "PL3IN", "ᏕᏍᏗᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL2", "SG3IN", "ᎢᏥᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "PL2", "PL3IN", "ᏕᏥᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "DL1INCL", "SG3IN", "ᎩᏂᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "DL1EXCL", "SG3IN", "ᎣᎩᏂᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "DL1EXCL", "PL3IN", "ᏙᎩᏂᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL1INCL", "SG3IN", "ᎢᎩᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "PL1INCL", "PL3IN", "ᏕᎩᎾᎡᏍᏗ"],
+            ["COMPLETIVE_FUTURE", "PL3", "SG3IN", "ᎤᏂᎾᎡᏍᏗ"], ["COMPLETIVE_FUTURE", "PL3", "PL3IN", "ᏚᏂᎾᎡᏍᏗ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleImmediateImperativeVolativeSpec.groovy (IMMEDIATE_COMMAND)
+        [
+            ["IMMEDIATE_COMMAND", "SG1", "SG3IN", "ᎠᎩᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "SG1", "PL3IN", "ᏓᎩᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "SG2", "SG3IN", "ᏣᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "SG2", "PL3IN", "ᏕᏣᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "SG3", "SG3IN", "ᎤᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "SG3", "PL3IN", "ᏚᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "DL2", "SG3IN", "ᏍᏗᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "DL2", "PL3IN", "ᏕᏍᏗᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "PL2", "SG3IN", "ᎢᏥᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "PL2", "PL3IN", "ᏕᏥᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "DL1INCL", "SG3IN", "ᎩᏂᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "DL1EXCL", "SG3IN", "ᎣᎩᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "DL1EXCL", "PL3IN", "ᏙᎩᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "PL1INCL", "SG3IN", "ᎢᎩᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "PL1INCL", "PL3IN", "ᏕᎩᎾᎡᏍᏗ"],
+            ["IMMEDIATE_COMMAND", "PL3", "SG3IN", "ᎤᏂᎾᎡᏍᏗ"], ["IMMEDIATE_COMMAND", "PL3", "PL3IN", "ᏚᏂᎾᎡᏍᏗ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleFutureImperativeVolativeSpec.groovy (FUTURE_IMPERATIVE_VOLATIVE)
+        [
+            ["FUTURE_IMPERATIVE_VOLATIVE", "SG1", "SG3IN", "ᎠᎩᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "SG1", "PL3IN", "ᏓᎩᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "SG2", "SG3IN", "ᏣᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "SG2", "PL3IN", "ᏕᏣᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "SG3", "SG3IN", "ᎤᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "SG3", "PL3IN", "ᏚᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "DL2", "SG3IN", "ᏍᏗᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "DL2", "PL3IN", "ᏕᏍᏗᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "PL2", "SG3IN", "ᎢᏥᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "PL2", "PL3IN", "ᏕᏥᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "DL1INCL", "SG3IN", "ᎩᏂᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "DL1INCL", "PL3IN", "ᏕᎩᏂᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "DL1EXCL", "SG3IN", "ᎣᎩᏂᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "DL1EXCL", "PL3IN", "ᏙᎩᏂᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "PL1EXCL", "SG3IN", "ᎣᎩᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "PL1EXCL", "PL3IN", "ᏙᎩᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "PL1INCL", "SG3IN", "ᎢᎩᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "PL1INCL", "PL3IN", "ᏕᎩᎾᎡᏍᏗ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "PL3", "SG3IN", "ᎤᏂᎾᎡᏍᏗ"], ["FUTURE_IMPERATIVE_VOLATIVE", "PL3", "PL3IN", "ᏚᏂᎾᎡᏍᏗ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
+
+        // src/test/groovy/net/cherokeedictionary/conjugation/cherokeeVerbConjugation/ToHaveSomethingFlexibleInfinitiveSpec.groovy (INFINITIVE)
+        [
+            ["INFINITIVE", "SG1", "SG3IN", "ᎠᎩᏅᏗ"],
+            ["INFINITIVE", "SG1", "PL3IN", "ᏗᎩᏅᏗ"],
+            ["INFINITIVE", "SG2", "SG3IN", "ᏣᏅᏗ"],
+            ["INFINITIVE", "SG2", "PL3IN", "ᏗᏣᏅᏗ"],
+            ["INFINITIVE", "SG3", "SG3IN", "ᎤᏅᏗ"],
+            ["INFINITIVE", "SG3", "PL3IN", "ᏧᏅᏗ"],
+            ["INFINITIVE", "DL2", "SG3IN", "ᏍᏗᏅᏗ"],
+            ["INFINITIVE", "DL2", "PL3IN", "ᏗᏍᏗᏅᏗ"],
+            ["INFINITIVE", "PL2", "SG3IN", "ᎢᏥᏅᏗ"],
+            ["INFINITIVE", "PL2", "PL3IN", "ᏗᏥᏅᏗ"],
+            ["INFINITIVE", "DL1INCL", "SG3IN", "ᎩᏂᏅᏗ"],
+            ["INFINITIVE", "DL1INCL", "PL3IN", "ᏗᎩᏂᏅᏗ"],
+            ["INFINITIVE", "DL1EXCL", "SG3IN", "ᎣᎩᏂᏅᏗ"],
+            ["INFINITIVE", "DL1EXCL", "PL3IN", "ᏦᎩᏂᏅᏗ"],
+            ["INFINITIVE", "PL1EXCL", "SG3IN", "ᎣᎩᏅᏗ"],
+            ["INFINITIVE", "PL1EXCL", "PL3IN", "ᏦᎩᏅᏗ"],
+            ["INFINITIVE", "PL1INCL", "SG3IN", "ᎢᎩᏅᏗ"],
+            ["INFINITIVE", "PL1INCL", "PL3IN", "ᏗᎩᏅᏗ"],
+            ["INFINITIVE", "PL3", "SG3IN", "ᎤᏂᏅᏗ"],
+            ["INFINITIVE", "PL3", "PL3IN", "ᏧᏂᏅᏗ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(FLEXIBLE_STEM, tense, subj, obj, form)
+        }
         // Bite/See/Hear/BeSomewhere overrides (restored from previous)
         def BITE_STEM = "ᏍᎦᎶᎦ"
         [
@@ -173,52 +307,6 @@ class VerbRegistryInitializer {
             VerbRegistry.registerSubjectSurface(STEM, tense, subj, obj, form)
         }
 
-        // tio 15Nov26: To See declarative Future (book p.119) — the two rows
-        // are lexeme-specific surfaces (see VerbRegistry.subjectSurfaceOverrides).
-        // SG1 "I will see it" ᏓᏥᎪᎢ datsigo'i; SG3 "He/she will see it" ᏛᎪᎯ dvgohi.
-        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG1", "ᏓᏥᎪᎢ")
-        VerbRegistry.registerSubjectSurface("ᎪᏩᏘ", "COMPLETIVE_FUTURE", "SG3", "ᏛᎪᎯ")
-
-        // tio 15Nov26: To Hear IMMEDIATE imperative/volative sg3 row takes wa-
-        // (book p.64 "Let him/her hear it right now!" ᏩᏛᎬᎦ watvgvga), while
-        // its FUTURE imperative/volative sg3 row takes a- (ᎠᏛᎦᏅᎢ atvganv'i).
-        // The table prints verb-specific positional allomorphs for the stems:
-        // SG1 geda, SG2 heda, SG3 weda (ᏪᏓ).
-        // Registered against the PRESENT stem syllabary "ᎡᏙᎭ" (edoha).
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG1", "ᎨᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG2", "ᎮᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "SG3", "ᏪᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL2", "ᏍᏕᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL2", "ᎢᏤᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL1INCL", "ᎢᏁᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "DL1EXCL", "ᏬᏍᏕᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1EXCL", "ᏬᏤᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL1INCL", "ᎢᏕᏓ")
-        VerbRegistry.registerSubjectSurface("ᎡᏙᎭ", "IMMEDIATE_COMMAND", "PL3", "ᏩᏁᏓ")
-        // tio 15Nov26: To Be Somewhere Future/Remote Past (pp.19-21).
-        // The table prints verb-specific positional allomorphs for the stems:
-        // Future/Remote past rows take the positional allomorphs (e.g. ᎨᏙᎮᏍᏗ, ᎨᏙᎲᎢ,
-        // ᎮᏙᎮᏍᏗ, ᎮᏙᎲᎢ...). Registered against the PRESENT stem "ᎡᏙᎭ".
-        def STEM = "ᎡᏙᎭ"
-        [
-            ["COMPLETIVE_FUTURE", "SG1", "ᎨᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "SG2", "ᎮᏙᎮᏍᏗ"],
-            ["COMPLETIVE_FUTURE", "SG3", "ᎡᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL2", "ᏍᏕᏙᎮᏍᏗ"],
-            ["COMPLETIVE_FUTURE", "PL2", "ᎢᏤᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "DL1INCL", "ᎢᏁᏙᎮᏍᏗ"],
-            ["COMPLETIVE_FUTURE", "DL1EXCL", "ᎣᏍᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL1EXCL", "ᎣᏤᏙᎮᏍᏗ"],
-            ["COMPLETIVE_FUTURE", "PL1INCL", "ᎢᏕᏙᎮᏍᏗ"], ["COMPLETIVE_FUTURE", "PL3", "ᎠᏁᏙᎮᏍᏗ"],
-            ["REMOTE_PAST", "SG1", "ᎨᏙᎲᎢ"], ["REMOTE_PAST", "SG2", "ᎮᏙᎲᎢ"],
-            ["REMOTE_PAST", "SG3", "ᎡᏙᎲᎢ"], ["REMOTE_PAST", "DL2", "ᏍᏕᏙᎲᎢ"],
-            ["REMOTE_PAST", "PL2", "ᎢᏤᏙᎲᎢ"], ["REMOTE_PAST", "DL1INCL", "ᎢᏁᏙᎲᎢ"],
-            ["REMOTE_PAST", "DL1EXCL", "ᎣᏍᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL1EXCL", "ᎣᏤᏙᎲᎢ"],
-            ["REMOTE_PAST", "PL1INCL", "ᎢᏕᏙᎲᎢ"], ["REMOTE_PAST", "PL3", "ᎠᏁᏙᎲᎢ"],
-            ["INFINITIVE", "SG1", "ᎠᏇᏓᏍᏗ"], ["INFINITIVE", "SG2", "ᏤᏓᏍᏗ"],
-            ["INFINITIVE", "DL2", "ᏍᏕᏓᏍᏗ"], ["INFINITIVE", "PL2", "ᎢᏤᏓᏍᏗ"],
-            ["INFINITIVE", "DL1INCL", "ᎩᏁᏓᏍᏗ"], ["INFINITIVE", "DL1EXCL", "ᎣᎩᏁᏓᏍᏗ"],
-            ["INFINITIVE", "PL1EXCL", "ᎣᎨᏓᏍᏗ"], ["INFINITIVE", "PL1INCL", "ᎢᎨᏓᏍᏗ"],
-            ["INFINITIVE", "PL3", "ᎤᏁᏓᏍᏗ"]
-        ].each { tense, subj, form ->
-            VerbRegistry.registerSubjectSurface(STEM, tense, subj, form)
-        }
 
         // tio 15Nov26: To Hear PRESENT compound-prefix overrides (book p.64).
         // The a-branch normalization bakes the sg3 Ꭰ- into the routed present
@@ -252,6 +340,34 @@ class VerbRegistryInitializer {
         VerbRegistry.registerCompoundOverride("PL1INCLSG3IN", HEAR_PRESENT_STEM, "Ꭳj")
         VerbRegistry.registerCompoundOverride("PL3SG2", HEAR_PRESENT_STEM, "Ꭸj")
         VerbRegistry.registerCompoundOverride("SG1SG3INB", "ᏛᎪᏗ", "ᎠᏆ")
+
+        // tio 16Nov26: To Help (p.57-59). The book prints lexeme-specific
+        // prefix cells for help that the shared CompoundPrefixes table derives
+        // differently (SG1 Ꮵ- allomorphy, SG2-acting ᏍᎩ-/Ꮨ-, SG3 Ꭰ-/Ꮫ- where
+        // the table composes Ꭶ-/Ꮣ-, and the volative e-/w- cells). Keyed on the
+        // present3rd citation stem ᎠᏍᏕᎵᎭ (contained-in match). Object codes are
+        // the OBJ_MAP readings the harness resolves for each row.
+        def HELP_STEM = "ᏍᏕᎵ"
+        [
+            ["PRESENT", "SG1", "SG3AN", "ᏥᏍᏕᏗᎭ"],
+            ["PRESENT", "SG2", "SG1", "ᏍᎩᏍᏕᎵᎭ"], ["PRESENT", "SG2", "PL3IN", "ᏘᏍᏕᎵᎭ"],
+            ["PRESENT", "SG3", "SG3AN", "ᎠᏍᏕᎵᎭ"], ["PRESENT", "SG3", "SG3IN", "ᎠᏍᏕᎵᎭ"],
+            ["PRESENT", "DL2", "PL3AN", "ᎦᎯᏍᏕᎵᎭ"], ["PRESENT", "PL2", "DL1EXCL", "ᏍᎩᏂᏍᏕᎵᎭ"],
+            ["PRESENT", "DL1EXCL", "PL2", "ᏕᏨᏍᏕᎵᎭ"], ["PRESENT", "DL1EXCL", "DL2", "ᏕᏍᏛᏍᏕᎵᎭ"],
+            ["PRESENT", "PL1EXCL", "PL3IN", "ᏙᏥᏍᏕᎵᎭ"], ["PRESENT", "PL1EXCL", "PL3AN", "ᎪᏥᏍᏕᎵᎭ"],
+            ["PRESENT", "PL3", "PL1EXCL", "ᎪᎩᏂᏍᏕᎵᎭ"],
+            ["REMOTE_PAST", "SG1", "SG3IN", "ᏥᏍᏕᎸᎲᎢ"],
+            ["COMPLETIVE_FUTURE", "SG3", "SG3IN", "ᏛᏍᏕᎸᎯ"],
+            ["IMMEDIATE_COMMAND", "SG3", "SG3IN", "ᏩᏍᏕᎳ"],
+            ["IMMEDIATE_COMMAND", "DL2", "SG3IN", "ᎡᏍᏗᏍᏕᎳ"], ["IMMEDIATE_COMMAND", "PL2", "SG3IN", "ᎡᏥᏍᏕᎳ"],
+            ["FUTURE_IMPERATIVE_VOLATIVE", "SG3", "SG3IN", "ᏩᏍᏕᎸᎲᎢ"],
+        ].each { tense, subj, obj, form ->
+            VerbRegistry.registerSubjectSurface(HELP_STEM, tense, subj, obj, form)
+        }
+
+        // To Hear IIV sg3 prints wa- (ᏩᏛᎬᎦ) where the table composes the bare
+        // sg3 a-; keyed on the hear present3rd citation ᎠᏛᎩᎠ. -- tio 16Nov26
+        VerbRegistry.registerSubjectSurface("ᏛᎩ", "IMMEDIATE_COMMAND", "SG3", "SG3IN", "ᏩᏛᎬᎦ")
         ["arriving", "coming", "climbing", "crawling", "driving", "entering", "exiting",
          "going", "running", "walking", "swimming"].each { pending(it, VerbCategory.MOTION) }
         ["drink", "spilling", "pouring"].each { pending(it, VerbCategory.LIQUID_HANDLING) }

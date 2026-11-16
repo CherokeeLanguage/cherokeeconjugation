@@ -602,7 +602,8 @@ class VerbConjugationProcessor {
         String subjectSurface = VerbRegistry.getSubjectSurface(
                 verb.stemmer?.present3rd?.syllabary,
                 verb.tense.name(),
-                verb.compoundPrefix?.prefix1?.name())
+                verb.compoundPrefix?.prefix1?.name(),
+                verb.compoundPrefix?.prefix2?.name())
         if (subjectSurface) {
             println "DEBUG: subjectSurface=${subjectSurface}"
             // The registered surface is book-final (it already carries da-

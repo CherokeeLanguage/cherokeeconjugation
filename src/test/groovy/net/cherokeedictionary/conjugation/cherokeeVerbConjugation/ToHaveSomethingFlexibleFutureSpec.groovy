@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -49,7 +50,7 @@ class ToHaveSomethingFlexibleFutureSpec extends VerbBaseSpec {
     Map conjugate(String pronoun) {
         def row = VERB_BOOK.find { it.pronoun == pronoun }
         // Harness check: retrieve engine output for this same pronoun/tense/verb
-        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabary(
+        def engineSyllabary = VerbBookEngineHarness.getEngineSyllabaryDual(
             VERB, TENSE, row.english, [conjugations: VERB_BOOK]
         )
         

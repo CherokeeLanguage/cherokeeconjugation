@@ -1,6 +1,7 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
+import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import spock.lang.Unroll
 
 /**
@@ -91,8 +92,8 @@ class ToHelpPresentSpec extends VerbBaseSpec {
             [object: 'PL3AN', pronoun: "First Plural Exclusive", romanized: "dotsisdeliha", syllabary: "ᏙᏥᏍᏕᎵᎭ", english: "We (others and I) are helping those things", occurrence: 1],
             [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "edisdeliha", syllabary: "ᎡᏗᏍᏕᎵᎭ", english: "We (you and I and another or others) are helping him/her", occurrence: 1],
             [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "idisdeliha", syllabary: "ᎢᏗᏍᏕᎵᎭ", english: "We (you and I and another or others) are helping it", occurrence: 1],
-            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "gedisdeliha", syllabary: "ᎨᏗᏍᏕᎵᎭ", english: "We (others and I) are helping them", occurrence: 1],
-            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dedisdeliha", syllabary: "ᏕᏗᏍᏕᎵᎭ", english: "We (others and I) are helping those things", occurrence: 1],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "gedisdeliha", syllabary: "ᎨᏗᏍᏕᎵᎭ", english: "We (you and I and another or others) are helping them", occurrence: 1],
+            [object: 'PL3AN', pronoun: "First Plural Inclusive", romanized: "dedisdeliha", syllabary: "ᏕᏗᏍᏕᎵᎭ", english: "We (you and I and another or others) are helping those things", occurrence: 1],
             [object: 'PL3AN', pronoun: "Third Plural", romanized: "gvgisdeliha", syllabary: "ᎬᎩᏍᏕᎵᎭ", english: "They are helping me", occurrence: 1],
             [object: 'SG3IN', pronoun: "Third Plural", romanized: "getsasdeliha", syllabary: "ᎨᏣᏍᏕᎵᎭ", english: "They are helping you (singular)", occurrence: 1],
             [object: 'PL3AN', pronoun: "Third Plural", romanized: "anisdeliha", syllabary: "ᎠᏂᏍᏕᎵᎭ", english: "They are helping him/her", occurrence: 1],
