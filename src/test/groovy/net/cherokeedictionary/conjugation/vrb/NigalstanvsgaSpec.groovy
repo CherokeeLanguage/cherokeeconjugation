@@ -21,10 +21,10 @@ class NigalstanvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Nigalstanvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "nigalstanvsga"
-        "SG3" | "" | Tense.HABITUAL        | "nigalstanvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "nigalsda"
-        // "SG3" | "" | Tense.FUTURE_COMMAND      | "nigalsda"
-        "SG3" | "" | Tense.INFINITIVE      | "nulstanvi"
+        "SG3" | "" | Tense.PRESENT         | "nigalistanvsga"
+        "SG3" | "" | Tense.HABITUAL        | "nigalistanvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugalisda"
+        // "SG3" | "" | Tense.FUTURE_COMMAND      | "gagalisda"
+        "SG3" | "" | Tense.INFINITIVE      | "ulistanvi"
     }
 }

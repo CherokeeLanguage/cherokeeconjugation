@@ -60,6 +60,17 @@ abstract class VerbBaseSpec extends Specification {
         // came back as the bare subject form). Accept both spellings.
         def partOfSpeech = details.get("part_of_speech", details.get("partOfSpeech", "v.i."))
 
+        // tio 16Nov26: romanized (vrb/CED) citations convert through the CED
+        // convention variant; wired fixtures already carry syllabary and use
+        // the plain path. See DISCREPANCIES.md D9/D12.
+        def toSyll = { String s ->
+            if (!s) { return null }
+            boolean hasGlyph = s.chars().any { it >= 0x13A0 && it <= 0x13F5 }
+            return hasGlyph ?
+                SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(s)) :
+                SyllabaryUtil.tsalagiToSyllabaryCed(normalizeBookRomanization(s))
+        }
+
         def request = new ConjugationRequest(
             subject: subj,
             object: obj,
@@ -67,13 +78,13 @@ abstract class VerbBaseSpec extends Specification {
             partOfSpeech: partOfSpeech,
             wi: initialPrefixes.wi ? "true" : null,
             de: wantsDe ? "true" : null,
-            habitual: thirdPersonRow?.habitual ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.habitual)) : null,
-            imperative: thirdPersonRow?.imperative ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.imperative)) : null,
-            infinitive: thirdPersonRow?.infinitive ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.infinitive)) : null,
-            present3rd: thirdPersonRow?.present ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.present)) : null,
-            remotepast: thirdPersonRow?.remote_past ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.remote_past)) : null,
-            immediatepast: thirdPersonRow?.immediate_past ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(thirdPersonRow.immediate_past)) : null,
-            present1st: firstPersonRow?.present ? SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(firstPersonRow.present)) : null
+            habitual: toSyll(thirdPersonRow?.habitual),
+            imperative: toSyll(thirdPersonRow?.imperative),
+            infinitive: toSyll(thirdPersonRow?.infinitive),
+            present3rd: toSyll(thirdPersonRow?.present),
+            remotepast: toSyll(thirdPersonRow?.remote_past),
+            immediatepast: toSyll(thirdPersonRow?.immediate_past),
+            present1st: toSyll(firstPersonRow?.present)
         )
         
         // Handle immediate past if present in the row

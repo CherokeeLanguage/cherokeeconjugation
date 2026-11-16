@@ -22,10 +22,10 @@ class AlsgwadiaSpec extends VerbBaseSpec {
         conjugateVerb("Alsgwadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "alsgwadia"
-        "SG3" | "" | Tense.HABITUAL        | "alsgwadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulsgwadvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsgwadvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulsgwadisdi"
+        "SG3" | "" | Tense.PRESENT         | "alisquadia"
+        "SG3" | "" | Tense.HABITUAL        | "alisquadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulisquadvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "alisquadvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulisquadisdi"
     }
 }

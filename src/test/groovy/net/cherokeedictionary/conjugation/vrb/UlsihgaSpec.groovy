@@ -22,10 +22,10 @@ class UlsihgaSpec extends VerbBaseSpec {
         conjugateVerb("Ulsihga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ulsihga"
-        "SG3" | "" | Tense.HABITUAL        | "ulsihgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulsihgvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulsihgvi"
+        "SG3" | "" | Tense.PRESENT         | "ulisiga"
+        "SG3" | "" | Tense.HABITUAL        | "ulisigoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulisigvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ulisigvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
     }
 }
