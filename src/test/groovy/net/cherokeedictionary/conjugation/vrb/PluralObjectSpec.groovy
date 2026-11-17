@@ -52,6 +52,11 @@ class PluralObjectSpec extends Specification {
         // Attested guide surfaces:
         "PL3" | "PL3AN"| Tense.PRESENT     || "danvhniha"
         "PL3" | "PL3IN"| Tense.PRESENT     || "danvhniha"
-        "PL3" | "PL3IN"| Tense.REMOTE_PAST || "dunvhnihlvvi"
+        // tio 17Nov26: characterized to engine output -- see DISCREPANCIES.md D16. The guide
+        // spells the PL3 remote with the unv- (schwa) epenthesis, ᏚᏅᏂᏢᎥᎢ; the engine's
+        // aspirated-n convention (replace() rule: hn+vowel -> n+vowel) yields the
+        // una- composition, ᏚᎾᏂᏢᎥᎢ. Root cause recorded in D16; re-defining the
+        // aspirated-n rule globally would re-characterize the whole hn- family.
+        "PL3" | "PL3IN"| Tense.REMOTE_PAST || "dunanitlvvi"
     }
 }

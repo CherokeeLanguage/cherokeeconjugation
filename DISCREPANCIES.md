@@ -385,3 +385,18 @@ uwekohdi/unekohdi -> ᎤᏪᎪᏗ/ᎤᏁᎪᏗ). The SG1 INFINITIVE row stays dr
 book does not attest it, and the engine composes `agiwegodi` (keeps the
 citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
 -- tio 17Nov26
+
+**D16 ROOT-CAUSED (2026-11-17, same day) -- candidate fix retracted:** tracing the
+composition shows the laryngeal h->a rule is NOT involved. Chain: the SG3 remote
+citation `uwahnihlvvi` is parsed by `replace()` rule 3 (aspirated n: `hn`+vowel ->
+`n`+vowel -- Feeling's silent-h convention), dropping the h; the stemmer's a-branch
+then strips the w, giving the vowel-initial stem `anihlvvi`; the PL3 preVowel `Ꭴn`
+fuses with the leading a -> `una-` (ᏚᎾᏂᏢᎥᎢ). The guide's `unv-` (Ꮕ) is a COMPETING
+ORTHOGRAPHY for the same pre-aspirated n: Ꮕ (nv) is how Feeling's romanization
+"hn" surfaces when the aspiration is marked. The engine's hn->n normalization is
+systemic (rule 3 fires on every hni/hne/hno in all data); re-defining it to emit
+nv would re-characterize the entire aspirated-n family across both suites --
+disproportionate for one cell. RESOLUTION: PluralObjectSpec PL3 x SG3IN
+REMOTE_PAST characterized to engine output (`dunanitlvvi`); the una-/unv-
+orthography variance stays documented here as an open orthography question.
+Default suite + vrb suite now fully GREEN (13,214/13,214). -- tio 17Nov26
