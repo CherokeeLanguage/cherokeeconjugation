@@ -10,6 +10,13 @@ import spock.lang.Unroll
 class AdidihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Getting Up",
+        // tio 17Nov26: D6 verdict from the 2012 book (p.73): SG2/SG3 keep the present suffix
+        // -ha (hadidiha/adidiha), but SG1 surfaces it as a glottal: gadidi'a. Whole-form
+        // surface registered for the SG1 present (engine recomposes the glottal to -ha).
+        // -- tio 17Nov26
+        surfaceOverrides: [
+            [tense: 'PRESENT', subject: 'SG1', obj: 'NONE', form: 'gadidia']
+        ],
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'gadidia'],
@@ -27,7 +34,8 @@ class AdidihaSpec extends VerbBaseSpec {
         conjugateVerb("Adidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadidiha"
+        // tio 17Nov26: SG1 present re-aligned to the book glottal form (D6).
+        "SG1" | "" | Tense.PRESENT         | "gadidia"
         "SG1" | "" | Tense.HABITUAL        | "gadidisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquadidvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadidvhvi"

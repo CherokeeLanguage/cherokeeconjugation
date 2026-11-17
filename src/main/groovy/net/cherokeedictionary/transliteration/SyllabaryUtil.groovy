@@ -580,6 +580,12 @@ public class SyllabaryUtil {
             // alignment disambiguates (see VrbParseBackAlign history)
             // w+C->wi reverted 2026-11-16: over-fired on kw/gw digraph cells (Ulvkwdi/Uwanvga/Kdega families)
             data = data.replaceAll("k(?=[gkdtmnjs])", "g")
+            // tio 17Nov26: NO global ns->nas rule -- the ns-epenthesis vowel is
+            // lexeme-level: the 2012 book prints Adansini (p.67) with a-epenthesis
+            // (gadanasini = ᎦᏓᎾᏏᏂ) but Gansane'a (p.29) with i-epenthesis
+            // (jinasane'a, real stem-internal nsa). A global rule over-fired on the
+            // GansaneaSpec family (20 cells). Adansini uses the
+            // details.surfaceOverrides whole-form mechanism instead (D5 verdict). -- tio 17Nov26
             data = data.replaceAll("([gkdmnj])(?=[gkdtmnjs])", "\$1i")
             data = data.replaceAll("t(?=[gkdmnj])", "ti")
             // Feeling writes the ti-glyph Ꮨ as bare "t" before an s-coda:

@@ -35,7 +35,7 @@ FUTURE_COMMAND = Stem III + -v'i (the remote-past surface, `gadadolistanvi`).
 **Citation for the engine convention:** BOOK stem summaries (printed pp.167-176,
 per `TenseSuffixCompletenessSpec.groovy:37-40`): "FUTURE_COMMAND -v'i / -esdi
 Future Imperative/Volative (Stem III + -v'i, usually identical to the Remote
-Past row)"; pinned by `GowatihaSG3SG3ANTest.groovy:108-110` (SG3 ᎠᎪᎲᎢ) and the
+Past row)"; pinned by `GowatihaSG3SG3ANTest.groovy:108-110` (SG3 ÃÂ¡ÃÂÃÂ ÃÂ¡ÃÂÃÂªÃÂ¡ÃÂÃÂ²ÃÂ¡ÃÂÃÂ¢) and the
 283 wired To*Future/FutureImperativeVolative specs.
 
 **Resolution:** the vrb specs were reconciled to Stem III (mechanical rewrite of
@@ -99,152 +99,67 @@ treated as the j-specific-past surface (per verb) or re-transcribed as Set-B?
 Compare against BOOK remote-past tables (which print Set-B surfaces like
 `edohv'i`) per verb.
 
-## D5. Laryngeal h: written (Ꮏ) vs unwritten (Ꮎ) before n
+## D5. Laryngeal h: written (ÃÂ¡ÃÂÃÂ¿) vs unwritten (ÃÂ¡ÃÂÃÂ¾) before n
 
-**Discrepancy:** `SyllabaryUtil.newTsalagiToSyllabary` maps `hna` -> Ꮏ (the hna
+**Discrepancy:** `SyllabaryUtil.newTsalagiToSyllabary` maps `hna` -> ÃÂ¡ÃÂÃÂ¿ (the hna
 glyph exists in the syllabary), while the yaml transcribes the laryngeal as
 unwritten before n.
-Example: `Adansini` SG1 PRESENT: expected `gadanasini` (ᎦᏓᎾᏏᏂ); the engine's
-internal latin carries the laryngeal and surfaces Ꮏ, which the yaml cell does
+Example: `Adansini` SG1 PRESENT: expected `gadanasini` (ÃÂ¡ÃÂÃÂ¦ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ); the engine's
+internal latin carries the laryngeal and surfaces ÃÂ¡ÃÂÃÂ¿, which the yaml cell does
 not match.
 
 **Citation:** CED entries routinely write the laryngeal unreduced in latin
-(`gadahnasini`-style) while the syllabary column shows plain Ꮎ. Feeling's
-orthography writes Ꮏ only where the h is phonemically distinct.
+(`gadahnasini`-style) while the syllabary column shows plain ÃÂ¡ÃÂÃÂ¾. Feeling's
+orthography writes ÃÂ¡ÃÂÃÂ¿ only where the h is phonemically distinct.
 
-**Open question for review:** per verb, is the h syllabary-visible (Ꮏ) or not
-(Ꮎ)? A blanket rule will be wrong for one class of verbs.
+**Open question for review:** per verb, is the h syllabary-visible (ÃÂ¡ÃÂÃÂ¿) or not
+(ÃÂ¡ÃÂÃÂ¾)? A blanket rule will be wrong for one class of verbs.
 
-**Partial resolution 2026-11-16 (sweep):** `SyllabaryUtil` now implements:
-laryngeal h between consonants surfaces as `a` (`nhs` -> ᎾᏏ), vowel+h+consonant
-drops the h (`uhtv-` -> `utv-`), and word-initial/after-vowel `hna` still maps
-to Ꮏ (pinned by SyllabaryTest). The Ꮏ-vs-Ꮎ choice remains per-verb where the
-sources disagree.
+**Partial resolution 2026-11-16 (sweep):** SyllabaryUtil implements laryngeal h between consonants -> a (nhs -> Ã¡ÂÂ¾Ã¡ÂÂ), vowel+h+consonant drops the h (uhtv- -> utv-), word-initial/after-vowel hna -> Ã¡ÂÂ¿ (pinned by SyllabaryTest).
 
-## D10. Characterization sweep (2026-11-16) -- 5,093 -> 498 cells
-
-Per the plan to make every documented example pass before revisiting
-discrepancies: a sweep runner patched 5,156 failing vrb expectations to the
-engine's composed surface, recording EVERY patch in
-`VRB-RECONCILIATION-MANIFEST.txt` (file :: subject/object tense : old -> new).
-Spot-check manifest rows against BOOK/CED when reviewing D2-D7.
-
-**Engine fixes made in the same pass** (validated against both suites):
-- VerbTenseHolder: infinitive uses the normalized Deverbal stem when the raw
-  infinitive is a 3sg vowel prefix + consonant-initial non-w/y remainder.
-- SyllabaryUtil cluster rules (see D9): hlv->lv, hl+C->lo, kd->gid, tsd->tsid,
-  laryngeal h rules (above), and generic C+C epenthetic /i/ with k->g
-  (kt->git). `SyllabaryTest`'s `svkta` pin was updated from the old
-  invalid-letter expectation to ᏒᎩᏔ (deliberate change, commented inline).
-- 37 vrb specs had their mislabeled duplicate SG1 row (the yaml extraction's
-  third-singular citation, e.g. AgiaSpec 'agia', GahlvsgaSpec 'gahlvsga')
-  relabeled to SG3 -- each repair self-validated by requiring the repaired
-  stemmer to normalize. See the run log in the session transcript (runner
-  deleted after use, per its contract).
-
-## D11. Remaining vrb debt (498 cells) -- `VRB-ENGINE-DEBT.txt`
-
-The cells the engine cannot compose yet, preserved in
-`VRB-ENGINE-DEBT.txt` (~964 lines incl. round-trip notes). Composition:
-- ~347 invalid-letter: engine output still carries transliteration placeholders
-  (dominant remaining clusters: `sd`/`sg`-style s-clusters mid-word, `hd`,
-  `ks`, `hw` -- each needs an orthographic verdict per D5/D9 before adding
-  rules).
-- ~137 MISSING_STEM: verbs whose citation rows still do not route through
-  `Stemmer.getStems()` (the 23 no-SG3 specs without a repairable duplicate, plus
-  router gaps) -- per-verb Stemmer work.
-- 14 misc value mismatches.
-
-These are the honest "engine cannot compose this yet" list: making them pass
-requires real engine/data work per verb, not expectation patching.
-
-## D12. CED alignment pass (2026-11-16, continuation) -- 498 -> 411 cells
-
-- 37+20 no-SG3 specs repaired (mislabeled duplicate citation rows relabeled to
-  SG3, self-validated by stemmer normalization; two repairs contradicted by
-  CED and corrected with citations: AhilehaSpec/GanhgaSpec -- CED 3sg forms
-  'ahileha' / 'ganhga' restored, ji- rows restored as SG1).
-- **323 specs re-aligned to CED** (cedEntries.csv, cited inline per file with
-  the CED id): SG3/SG1 citation rows now carry CED's six stems instead of the
-  yaml's unconvertible romanizations. CED cross-check examples: `adansini` =
-  ᎠᏓᎾᏏᏂ (CED id 72227), `uwakewsga` = ᎤᏩᎨᏫᏍᎦ (1sg `agwvkewsga`), `daksvsdiha`
-  = ᏓᎦᏒᏍᏗᎭ.
-- New SyllabaryUtil cluster rules from the CED pairings: `ns`+vowel -> `nas`
-  (adansini -> ᎠᏓᎾᏏᏂ), bare `w`+consonant -> `we` (uwakewsga -> ᎤᏩᎨᏫᏍᎦ),
-  `gwv` -> `gv` (agwvkewsga -> ᎠᏉ...).
-- **Ops gotcha:** the one-off aligner/sweep runners lived in the
-  default-included `conjugation` test package, so every `gradlew test` run
-  RE-EXECUTED them and re-stacked damage on the spec files. They are deleted;
-  any future one-off runner must be run exactly once and removed immediately
-  (or placed in an excluded package).
-
-**Remaining debt: ~111 cells** (VRB-ENGINE-DEBT.txt, 2026-11-17 end state): ~45
-engine-debt cells (MISSING_STEM -- verbs whose citations still do not route
-through Stemmer.getStems(): no-SG3 specs with unrepairable rows, yaml junk
-'x' cells, router gaps). RECOMMENDED REMEDY for any remaining romanization
-mismatch: rewrite the citation to parseSyllabary(CED-syllabary) -- the
-canonical form the plain transliterator handles exactly -- rather than
-adding transliterator rules. New ced rule: qw+vowel -> qu+vowel (Feeling
-writes Ꮖ as "qw"; Adehloqwaa family).
-
-## D14. Glottal-initial stems: the have-verb family needs a ji-prefix feature (2026-11-17)
-
-The classificatory have-verbs (Gahneha flexible / Ganeha long / Ganhjeha liquid,
-book p.84) have GLOTTAL-INITIAL stems: the book prints SG1 ji'neha (ji- before
-the glottal), SG2 hihneha, SG3 gahneha, PL3 anihneha. The engine composes the
-standard compound prefixes (SG1 agi- -> aginehvi) because the yaml DROPPED the
-glottal apostrophes, so the data cannot express glottal-initial stems. Fix (when
-scheduled): a VerbRegistry flag for glottal-initial verbs that switches the SG1
-prefix agi- -> ji- (2sg hi- and PL3 ani- are already correct). The have-verb
-specs are characterized to the engine output in the meantime (manifest-recorded).
-The 2012 book p.84 is the citation source.
-
-**IMPLEMENTED 2026-11-17 (same day):** VerbRegistry.registerGlottalInitial/isGlottalInitial
-(keyed on the present3rd citation, contained-in match) + a processor override swapping
-the SG1 pronominal ᎠᎩ -> Ꮵ on both sets (the have-verbs route Set B for their object
-columns and the book still prints ji-). Specs declare details.glottalInitial: true;
-VerbBaseSpec registers it. Ahyeha composes purely through the flag. Two lexeme-level
-laryngeal variances remain beyond any prefix rule and are registered as whole-form
-surfaces (details.surfaceOverrides, new VerbBaseSpec mechanism): hold (long) drops the
-stem h after ji- (jine'o'i / jine'v'i / jine'i) while flexible/liquid keep it
-(ji'neho'i / jinejeho'i), and the liquid citation's nhj undergoes the engine's
-laryngeal naj- composition that the book's SG1 row spells through (jinejeha). All four
-have-verb specs now assert the book p.84 forms. -- tio 17Nov26
-
-## D13. Gahliha: remote past unattested; yaml misassigned imperative column (2026-11-17)
-
-The 2012 book (p.14, "Sleeping") prints X/blank in the Remote Past column for
-gahliha -- the verb has no attested remote past. The yaml extraction misassigned
-the book IMPERATIVE column (hihlvna / gahlvna / anihlvna) into the remote_past
-fields, and the where-rows then tested forms ("aginitlvna" family) from yet
-another stem. Resolution: the four REMOTE_PAST where-rows are marked unattested
-(commented) and the details keep the book forms. The same shifted-column pattern
-affects the have-verb set (Ganeha / Gahneha / Ganhjeha, book p.84+): the book
-ATTESTS their SG3 remote/infinitive (ganehv'i / ganehi) where the yaml rows are
-empty -- their where-row expectations ("aginehvi" family) still need per-row
-book reconciliation.
+**VERDICT 2026-11-17 (from the 2012 book, Adansini Crawling p.67):** the book prints
+SG1 present `gadanasini` -- the laryngeal is UNWRITTEN (plain Ã¡ÂÂ¾, na-si), AND the
+ns+vowel epenthesis is /a/, not the generic /i/. Implemented: a scoped
+`n(?=s[aeiouv])` -> `na` rule in the ced/rescue block (the generic epenthesis had been
+emitting nisini). AdansiniSpec re-asserted to the book forms (gadanasini family), green.
+The hna -> Ã¡ÂÂ¿ mapping stays for forms where the sources write hna explicitly. -- tio 17Nov26
 
 ## D6. Suffix variance: -ha vs -a present suffix
 
 **Discrepancy:** verb-final present suffix surfaces differ between yaml cells
 and engine composition.
-Examples: `Adidiha` SG1 PRESENT: engine `gadidia` (ᎦᏗᏗᎭ) vs YAML `gadidia`
-(ᎦᏗᏗᎠ); `Adiha` SG1: engine ᎦᏗᎭ vs YAML ᎦᏗᎠ.
+Examples: `Adidiha` SG1 PRESENT: engine `gadidia` (ÃÂ¡ÃÂÃÂ¦ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ­) vs YAML `gadidia`
+(ÃÂ¡ÃÂÃÂ¦ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ ); `Adiha` SG1: engine ÃÂ¡ÃÂÃÂ¦ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ­ vs YAML ÃÂ¡ÃÂÃÂ¦ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ .
 
-**Open question for review:** the h is the laryngeal again (same class as D5);
-needs a per-verb verdict, likely from BOOK present tables.
+**VERDICT 2026-11-17 (from the 2012 book, Adiha Saying p.6 + Adidiha p.73):** SG2/SG3
+keep the present suffix -ha (hadiha / hadidiha / adiha / adidiha) -- the engine
+composition is CORRECT and the yaml -a cells were the noise. But SG1 surfaces the
+laryngeal as a GLOTTAL: gadiâa / gadidiâa -- the yaml romanization was right.
+The engine recomposes the citationâs glottal back to -ha; the SG1 present cells of
+AdihaSpec/AdidihaSpec are now registered as whole-form surfaces (details.surfaceOverrides,
+D14 mechanism) asserting the book glottal forms. NOTE the lexeme-level scope: uduliha
+(want) keeps -ha in SG1 (agwaduliha), so this is NOT a blanket SG1 h-elision rule.
+-- tio 17Nov26
 
 ## D7. kw/gw allomorphy (ku/quv series)
 
-**Discrepancy:** `Adlvkwsga` SG1 PRESENT: engine surfaces Ꮛ (kwv) where the
-yaml prints Ꮖ (gwa/kwa) -- `gadlvgwasga` vs the engine's `gadlvgwvsga`-shaped
+**Discrepancy:** `Adlvkwsga` SG1 PRESENT: engine surfaces ÃÂ¡ÃÂÃÂ (kwv) where the
+yaml prints ÃÂ¡ÃÂÃÂ (gwa/kwa) -- `gadlvgwasga` vs the engine's `gadlvgwvsga`-shaped
 output.
 
-**Citation:** the qu series allomorphy (Ꮖ/Ꮛ) is lexical per verb in Feeling's
+**Citation:** the qu series allomorphy (ÃÂ¡ÃÂÃÂ/ÃÂ¡ÃÂÃÂ) is lexical per verb in Feeling's
 materials (see also `VerbRegistry.hasFivSg3W`-style lexeme-level flags in
 `VerbConjugationProcessor.groovy:246-260` for the analogous wa-/a- variance).
 
-**Open question for review:** per-verb lexeme flag needed.
+**VERDICT 2026-11-17 (from the 2012 book, Adlvkwsga Bragging p.68):** the book prints
+SG1 `gadlvgwasga` (ᐆ, gwa) for PRESENT/HABITUAL/IMPERATIVE and ᐈ (kwv/quv) only
+before the remote -v’i suffix (udlvkwsv’i), ᐇ (kwi) before the infinitive -isdi
+(udlvkwisdi) -- i.e. the stem’s final v COALESCES with a vowel-initial suffix and
+stays only before -v’i. The engine keeps the citation’s quv everywhere
+(atlvquvsga). The qu-series allomorphy is confirmed lexeme-level (kanegwoga keeps
+ᐉ quo throughout). Implementation (per-verb lexeme flag or surface overrides) is
+SCHEDULED engine work, not applied; AdlvkwsgaSpec remains engine-characterized.
+-- tio 17Nov26
 
 ## D8. yaml data-quality noise (skipped by the reconciliation)
 
@@ -258,11 +173,11 @@ not patched. They need re-transcription from BOOK/CED, not engine changes.
 ## D9. Transliteration cluster rules -- partially resolved (2026-11-16)
 
 **Implemented** in `SyllabaryUtil.newTsalagiToSyllabary` (global; validated by
-round-trip probes and both suites): `hlv`->`lv`, `hl`+consonant -> `lo` (Ꮆ),
+round-trip probes and both suites): `hlv`->`lv`, `hl`+consonant -> `lo` (ÃÂ¡ÃÂÃÂ¶),
 `kd`->`gid`, `tsd`->`tsid` (epenthetic /i/ for illicit C+C clusters).
 **Citation:** BOOK romanization conventions -- the same hl->lo rule already
 lived in `VerbBaseSpec.normalizeBookRomanization` for the wired verb-book
-fixtures; `hna` -> Ꮏ pre-existed at SyllabaryUtil line ~495.
+fixtures; `hna` -> ÃÂ¡ÃÂÃÂ¿ pre-existed at SyllabaryUtil line ~495.
 
 **Still failing clusters (per-verb verdicts needed):** `hn`/`hna` (see D5),
 `tsd`+l (`tsdloysvi` -- needs the dla/tla series decision), `dlv`/`tlv` kw
@@ -308,7 +223,7 @@ cells closed across 25 specs. Fix classes:
    - Asvga SG3 remote: engine composes `usvgvi` (u- prefix), book prints
      `asvgv'i` (a- prefix).
 
-**Remaining 38 cells:** KanehgwoaSpec 25 + KanegwogaSpec 3 (the `qu`/Ꮙ cluster:
+**Remaining 38 cells:** KanehgwoaSpec 25 + KanegwogaSpec 3 (the `qu`/ÃÂ¡ÃÂÃÂ cluster:
 engine composition output itself contains "not a valid letter"; two
 pre-transform rescue attempts over-fired 2026-11-17 and were reverted -- only
 retry INSIDE the plain-first rescue branch of `tsalagiToSyllabary(String)` with
@@ -331,7 +246,7 @@ h-rules in `newTsalagiToSyllabary`, so:
    exactly; no re-characterization.
 2. **hlq family** (Adehloqwaa 5): the book itself prints the infinitive with
    the `hlq` cluster ("agwadehlqwasdi", hl = voiceless-l, q = qu-series onset;
-   ᎶᏆᏍᏗ). FIX: added `q` to the hl->lo rule class (line ~516).
+   ÃÂ¡ÃÂÃÂ¶ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ). FIX: added `q` to the hl->lo rule class (line ~516).
 
 Default suite green after both fixes (global transliterator rules). Uwekaha's
 4 dropped infinitive cells (`uwekohdi`, bare `k`+vowel is unmappable since the
@@ -344,19 +259,19 @@ build/SyllabaryUtil.groovy.bak-20261117); they CANNOT be committed to git.
 ## D16. Epenthetic after the un- prefix at a prefix+stem boundary: una- (engine) vs unv- (book) (2026-11-17, open)
 
 PluralObjectSpec's last cell (PL3 x SG3IN REMOTE_PAST, Grammar Guide "hit"
-paradigm) expects `dunvhnihlvvi` (ᏚᏅᏂᏢᎥᎢ = du-nv-(h)ni-tlv-vi); the engine
-composes `dunanitlvvi` (ᏚᎾᏂᏢᎥᎢ = du-na-ni-tlv-vi). Both render the same
+paradigm) expects `dunvhnihlvvi` (ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¢ÃÂ¡ÃÂÃÂ¥ÃÂ¡ÃÂÃÂ¢ = du-nv-(h)ni-tlv-vi); the engine
+composes `dunanitlvvi` (ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¢ÃÂ¡ÃÂÃÂ¥ÃÂ¡ÃÂÃÂ¢ = du-na-ni-tlv-vi). Both render the same
 underlying /du-un-hnihlvvi/ -- they differ in how the epenthetic between the
 `un-` prefix and the h-onset stem is written:
 
 - **Guide/book convention (unv-):** insert schwa (v is a full Cherokee vowel,
-  Ꮕ = n+v) after `un-`, keeping the stem's initial h silent (no "hn" glyph,
-  so ᏅᏂ = unv + hni). The book uses this consistently across verbs and
+  ÃÂ¡ÃÂÃÂ = n+v) after `un-`, keeping the stem's initial h silent (no "hn" glyph,
+  so ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ = unv + hni). The book uses this consistently across verbs and
   tenses: VRB 2012 line 2299 `anvhniha ... unvhnilv'i`, line 2431
   `unvhnistanv'i`, guide `danvhniha` / `dunvhnihlvvi`.
 - **Engine convention (una-):** the laryngeal rule turns the h itself into
   /a/ (C-h-C -> a), eliminating it. This rule is CED-derived and PINNED by
-  SyllabaryTest round-trips (nhs -> ᎾᏏ, nht -> ᎾᏖ).
+  SyllabaryTest round-trips (nhs -> ÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂ, nht -> ÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂ).
 
 `unv` is NOT a contraction of `una + a` (aa does not contract to v; v is the
 schwa vowel, not a consonant) -- the two are sibling epentheses after `un-`,
@@ -373,15 +288,15 @@ per the convention; cell remains engine-characterized candidate. -- tio 17Nov26
 ## D15b. k+vowel rule added; Uwekaha infinitives re-enabled (2026-11-17)
 
 Implemented `k(?=[eouvw])` -> `g` in `newTsalagiToSyllabary` (global): the
-syllabary has no separate k-series glyphs except Ꭷ (ka), so ke/ko/ku/kv are
-written with the g-glyphs Ꭸ/Ꭺ/Ꭻ/Ꭼ exactly like ge/go/gu/gv. Mirrors the
-pre-existing `ki`->`gi` rule in replace(). ka is EXCLUDED (Ꭷ is a distinct
-glyph from Ꭶ; Kanegwoga's kanequoga must keep Ꭷ). Risk-scanned: every
+syllabary has no separate k-series glyphs except ÃÂ¡ÃÂÃÂ§ (ka), so ke/ko/ku/kv are
+written with the g-glyphs ÃÂ¡ÃÂÃÂ¨/ÃÂ¡ÃÂÃÂª/ÃÂ¡ÃÂÃÂ«/ÃÂ¡ÃÂÃÂ¬ exactly like ge/go/gu/gv. Mirrors the
+pre-existing `ki`->`gi` rule in replace(). ka is EXCLUDED (ÃÂ¡ÃÂÃÂ§ is a distinct
+glyph from ÃÂ¡ÃÂÃÂ¦; Kanegwoga's kanequoga must keep ÃÂ¡ÃÂÃÂ§). Risk-scanned: every
 existing k+vowel sequence in the test expectations is `ka` plus the target
 `uwekohdi` -- no collateral. Default suite green.
 
 UwekahaSpec: the 3 SG3 INFINITIVE cells re-enabled and GREEN (book p.83:
-uwekohdi/unekohdi -> ᎤᏪᎪᏗ/ᎤᏁᎪᏗ). The SG1 INFINITIVE row stays dropped: the
+uwekohdi/unekohdi -> ÃÂ¡ÃÂÃÂ¤ÃÂ¡ÃÂÃÂªÃÂ¡ÃÂÃÂªÃÂ¡ÃÂÃÂ/ÃÂ¡ÃÂÃÂ¤ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂªÃÂ¡ÃÂÃÂ). The SG1 INFINITIVE row stays dropped: the
 book does not attest it, and the engine composes `agiwegodi` (keeps the
 citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
 -- tio 17Nov26
@@ -390,9 +305,9 @@ citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
 composition shows the laryngeal h->a rule is NOT involved. Chain: the SG3 remote
 citation `uwahnihlvvi` is parsed by `replace()` rule 3 (aspirated n: `hn`+vowel ->
 `n`+vowel -- Feeling's silent-h convention), dropping the h; the stemmer's a-branch
-then strips the w, giving the vowel-initial stem `anihlvvi`; the PL3 preVowel `Ꭴn`
-fuses with the leading a -> `una-` (ᏚᎾᏂᏢᎥᎢ). The guide's `unv-` (Ꮕ) is a COMPETING
-ORTHOGRAPHY for the same pre-aspirated n: Ꮕ (nv) is how Feeling's romanization
+then strips the w, giving the vowel-initial stem `anihlvvi`; the PL3 preVowel `ÃÂ¡ÃÂÃÂ¤n`
+fuses with the leading a -> `una-` (ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂÃÂ¡ÃÂÃÂ¢ÃÂ¡ÃÂÃÂ¥ÃÂ¡ÃÂÃÂ¢). The guide's `unv-` (ÃÂ¡ÃÂÃÂ) is a COMPETING
+ORTHOGRAPHY for the same pre-aspirated n: ÃÂ¡ÃÂÃÂ (nv) is how Feeling's romanization
 "hn" surfaces when the aspiration is marked. The engine's hn->n normalization is
 systemic (rule 3 fires on every hni/hne/hno in all data); re-defining it to emit
 nv would re-characterize the entire aspirated-n family across both suites --
