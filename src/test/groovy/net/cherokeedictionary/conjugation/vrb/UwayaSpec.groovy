@@ -11,6 +11,18 @@ import spock.lang.Unroll
 class UwayaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Have (long)",
+        // tio 17Nov26: D15 verdict (user, verified against the Feeling Dictionary): the SG3
+        // infinitive is udisdi -- the book p.83 column (agwvdisdi / jvdisdi / udisdi /
+        // unvdisdi) carries the wa-epenthesis ONLY in the agw-/jv- 1sg/2sg rows, not in
+        // SG3/PL3 (PL3 unvdisdi). The engine composes uwadisdi (the Ꭴw preVowel fusion
+        // keeps the stem's wa); the book form is asserted via a whole-form surface (the
+        // structural fusion fix is deferred -- touching it risks the 224-cell
+        // infinitive-guard work). The harness composes from the FIRST SG3 row (uwaya),
+        // so all three SG3 alternant rows assert udisdi; the unvya alternant's attested
+        // unvdisdi cannot be distinguished by the single-row engine path.
+        surfaceOverrides: [
+            [tense: 'INFINITIVE', subject: 'SG3', obj: 'NONE', form: 'udisdi']
+        ],
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'aquvya'],
@@ -37,16 +49,16 @@ class UwayaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
         "SG3" | "" | Tense.PRESENT         | "uwaya"
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
         "SG3" | "" | Tense.PRESENT         | "uwaya"
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
     }
 }

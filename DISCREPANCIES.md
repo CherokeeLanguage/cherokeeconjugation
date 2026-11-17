@@ -348,3 +348,25 @@ impersonal imperatives from EXPECTED_GAPS and asserts the sentinel for all 16.
 The question is now un-reaskable: requesting an imperative for an impersonal
 verb returns a documented refusal, and the cohort documentation (GAP.md) records
 the three-way cell classification. -- tio 17Nov26
+
+## D15 RESOLVED (2026-11-17, user verdicts -- both open questions closed)
+
+- **Uwaya (Have long, p.83) SG3 infinitive: `udisdi` is CORRECT** -- verified
+  against the Feeling Dictionary. The book's infinitive column carries the
+  wa-epenthesis ONLY in the agw-/jv- 1sg/2sg rows (agwvdisdi / jvdisdi), not in
+  SG3/PL3 (udisdi / unvdisdi). The engine composes uwadisdi (the Ꭴw preVowel
+  fusion keeps the stem's wa); the book form is asserted via a whole-form
+  surface override. The structural fusion fix is deferred -- touching it risks
+  the 224-cell infinitive-guard work. The harness composes from the FIRST SG3
+  row, so the unvya alternant's attested unvdisdi cannot be distinguished by
+  the single-row engine path.
+- **Asvga (Smells, p.75) SG3 remote past: `asvgv'i` (a- prefix) is CORRECT --
+  and it is a BOOK-ONLY FORM: the CED does not list this form. Because the
+  book has it, that is the form we say exists** (annotation per user
+  instruction). The engine composes the table-default u- prefix (usvgvi; cf.
+  sibling Galiga ulijv'i), so the lexeme-specific a- is registered via surface
+  overrides (REMOTE_PAST + FUTURE_COMMAND, which asserts the remote row per
+  D1). Zero-risk closure -- prefix allomorphy is exactly what the
+  surface-override mechanism is for.
+
+With these two, every open question in the D15 block is closed. -- tio 17Nov26

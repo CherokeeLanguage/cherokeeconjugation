@@ -14,6 +14,16 @@ class AsvgaSpec extends VerbBaseSpec {
         // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
         // box has no imperative column because the form is impermissible, not unattested).
         impersonal: true,
+        // tio 17Nov26: D15 verdict (user): the SG3 remote past is asvgv'i (a- prefix) per the
+        // 2012 book p.75. BOOK-ONLY FORM: the CED does not list this form -- because the book
+        // has it, that is the form we say exists (annotation per user instruction). The engine
+        // composes the table-default u- prefix (usvgvi; cf. sibling Galiga ulijv'i), so the
+        // lexeme-specific a- is registered as a whole-form surface; FUTURE_COMMAND asserts
+        // the remote row per D1. -- tio 17Nov26
+        surfaceOverrides: [
+            [tense: 'REMOTE_PAST', subject: 'SG3', obj: 'NONE', form: 'asvgvi'],
+            [tense: 'FUTURE_COMMAND', subject: 'SG3', obj: 'NONE', form: 'asvgvi']
+        ],
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsisvga'],
@@ -29,8 +39,10 @@ class AsvgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "asvga"
         "SG3" | "" | Tense.HABITUAL        | "asvgoi"
-        // tio 17Nov26: remote/infinitive supplied from the 2012 book (asvgv'i, ulihwosdi). DIVERGENCE (D15): the engine composes the SG3 remote past with a u- prefix (usvgvi) where the book prints asvgv'i -- characterized to engine output; FUTURE_COMMAND asserts the remote row per D1.
-        "SG3" | "" | Tense.REMOTE_PAST     | "usvgvi"
+        // tio 17Nov26: SG3 remote asserted to the book's asvgv'i (a- prefix, p.75) per the
+        // D15 verdict -- BOOK-ONLY FORM (CED does not list it); FUTURE_COMMAND asserts the
+        // remote row per D1.
+        "SG3" | "" | Tense.REMOTE_PAST     | "asvgvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asvgvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulihwosdi"
     }
