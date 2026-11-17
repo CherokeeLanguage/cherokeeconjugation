@@ -10,6 +10,9 @@ import spock.lang.Unroll
 class AhliilidohaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Its Taking Time (22)",
+        // tio 17Nov26: no imperative ON PURPOSE (user verdict 2026-11-17) -- annotated with the
+        // impersonal cohort; the imperative is impermissible, not unattested.
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'ahliilidohoi', imperative: '', infinitive: 'uhliilidasdi', present: 'ahliilidoha', remote_past: 'uhliilidolvi']

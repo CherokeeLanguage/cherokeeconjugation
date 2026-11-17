@@ -170,6 +170,7 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Nigalstanvsga (Happening, p.75)",
         "Uhyvdla (Cold, p.77)",
         "Ulogila (Cloudy, p.78)",
+        "Ahliilidoha (Taking Time, p.76 -- no imperative on purpose, user verdict 2026-11-17)",
     ]
 
     def "impersonal verbs refuse the imperative with the NO_IMPERATIVE sentinel (#verb)"() {
@@ -265,18 +266,23 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Uwohiyuha|INFINITIVE",
         "Uwotla|INFINITIVE",
         "Wakti|INFINITIVE",
-        // tio 17Nov26: IMMEDIATE_COMMAND gaps, classified against the 2012 book.
-        // The 16 IMPERSONAL verbs (weather/nature, no agent to command) are NOT gaps --
-        // their imperative is impermissible (a lexical property, details.impersonal),
-        // asserted by the NO_IMPERATIVE sentinel test. Remaining:
-        //  - Atihneha/Ahileha/Ai: the book prints x in the imperative column;
-        //  - Ahili: the book attests ji.i.luga (p.10) but CED carries no imperative
-        //    syllabary anchor to derive a parse-back citation from;
-        //  - Anidonaa/Anina: the group-standing/sitting imperatives live inside the
-        //    Gadoga/Uwotla boxes as compound forms without CED anchors.
+        // tio 17Nov26 (user-adjudicated): IMMEDIATE_COMMAND gaps, classified against
+        // the 2012 book. The impersonal cohort (weather/nature + Ahliilidoha, whose
+        // imperative is absent ON PURPOSE) is NOT here -- those are impermissible
+        // (details.impersonal), asserted by the NO_IMPERATIVE sentinel test. Remaining:
+        //  - Atihneha/Ahileha/Ai: the book prints x in the imperative column (correct --
+        //    no attested form);
+        //  - Ahili: the book ATTESTS the imperative (ji'i'luga / hihi'luga / ahi'luga /
+        //    anihi'luga / idihi'luga, p.10) but CED marks it empty (-----) -- the BOOK
+        //    has the value while CED does not, so a CED-derived parse-back citation
+        //    cannot be built;
+        //  - Anidonaa: the book footnote governs the form (VRB pp.18, Gadoga box):
+        //    /Danidoga/ if only two are standing, /anidona/ if three or more -- the
+        //    imperative belongs to the two-vs-3+ alternant pair, not a single stem;
+        //  - Anina: same footnote pattern (VRB pp.18, Uwotla box): /Dunotla/ if only
+        //    two are sitting, /ani'na/ if three or more.
         "Ahileha|IMMEDIATE_COMMAND",
         "Ahili|IMMEDIATE_COMMAND",
-        "Ahliilidoha|IMMEDIATE_COMMAND",
         "Ai|IMMEDIATE_COMMAND",
         "Anidonaa|IMMEDIATE_COMMAND",
         "Anina|IMMEDIATE_COMMAND",
