@@ -15,7 +15,10 @@ class GanesoysgaSpec extends VerbBaseSpec {
         // infinitive x (unattested). -- tio 17Nov26
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ganesosga', habitual: 'ganesosgoi', remote_past: 'unesosvi', imperative: 'daganesoysi', infinitive: '----']
+            // tio 17Nov26: the "daganesoysi" the yaml carried as imperative is the book's FUTURE
+            // column (p.78) -- the box has no imperative for this impersonal verb; the future form
+            // is da-ganeso-si with the same glide-y drop. -- tio 17Nov26
+            [subject: 'SG3', object: '', present: 'ganesosga', habitual: 'ganesosgoi', remote_past: 'unesosvi', imperative: '----', infinitive: '----']
         ]
     ]
 

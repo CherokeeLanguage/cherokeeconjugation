@@ -18,17 +18,38 @@ import spock.lang.Unroll
 @Unroll
 class VrbStemCoverageMetaSpec extends VerbBaseSpec {
 
-    /** Tenses the vrb where-tables exercise (the yaml paradigm set). */
+    /**
+     * Tenses the gate exercises. The five yaml-paradigm tenses plus
+     * IMMEDIATE_COMMAND -- the vrb details carry imperative citations for
+     * nearly every verb, and until 2026-11-17 they were never exercised.
+     * -- tio 17Nov26
+     */
     static final List<String> TENSES = [
         "PRESENT",
         "HABITUAL",
         "REMOTE_PAST",
         "FUTURE_COMMAND",
         "INFINITIVE",
+        "IMMEDIATE_COMMAND",
     ]
 
-    /** Subjects exercised (SG3 always; SG1 when the details carry an SG1 row). */
-    static final List<String> SUBJECTS = ["SG3", "SG1"]
+    /** Which SG3 row key each tense composes from. */
+    static final Map<String, String> TENSE_STEM_KEY = [
+        "PRESENT"           : "present",
+        "HABITUAL"          : "habitual",
+        "REMOTE_PAST"       : "remote_past",
+        "FUTURE_COMMAND"    : "remote_past",
+        "INFINITIVE"        : "infinitive",
+        "IMMEDIATE_COMMAND" : "imperative",
+    ]
+
+    /**
+     * Subjects with cited rows in the vrb data. SG2/PL3/PL1INCL were never
+     * meta-tested before 2026-11-17 -- the composition paths they stress
+     * (SG2 hi-/tsa- allomorphy, PL3 un-/ani-, PL1INCL id-/igi-) are exactly
+     * what a full-inventory gate must cover. -- tio 17Nov26
+     */
+    static final List<String> SUBJECTS = ["SG3", "SG1", "SG2", "PL3", "PL1INCL"]
 
     /** Specs without a `details` map (harness-internal or custom-stemmer specs). */
     static final List<String> SKIPPED_SPECS = [
@@ -71,16 +92,9 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
      * Which SG3 row key each tense composes from. The vrb details never carry a
      * `future_command` key: per the D1 convention the yaml's FUTURE_COMMAND cells
      * assert the yaml's own REMOTE_PAST row, so FUTURE_COMMAND composes from
-     * remote_past (mirrors TENSE_STEM_KEY in the wired meta-test). -- tio 17Nov26
+     * remote_past (mirrors TENSE_STEM_KEY in the wired meta-test).
+     * (The map itself lives above, beside the TENSES list.) -- tio 17Nov26
      */
-    static final Map<String, String> TENSE_STEM_KEY = [
-        "PRESENT"        : "present",
-        "HABITUAL"       : "habitual",
-        "REMOTE_PAST"    : "remote_past",
-        "FUTURE_COMMAND" : "remote_past",
-        "INFINITIVE"     : "infinitive",
-    ]
-
     /** True when the SG3 row cites a usable stem for the tense. */
     static boolean hasStemRow(Map details, String tense) {
         def key = TENSE_STEM_KEY[tense]
@@ -95,11 +109,14 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
     static List<List> compositionRows() {
         def rows = []
         discoverVrbSpecs().each { spec ->
-            def sg1 = spec.details.conjugations.find { it.subject == "SG1" && it.present }
             TENSES.each { String tense ->
                 if (hasStemRow(spec.details, tense)) {
-                    rows << [spec.name, tense, "SG3"]
-                    if (sg1) rows << [spec.name, tense, "SG1"]
+                    SUBJECTS.each { String subj ->
+                        def row = spec.details.conjugations.find { it.subject == subj }
+                        // the subject row must cite at least a present form (the
+                        // composition derives the rest from the SG3 stems)
+                        if (row?.present) rows << [spec.name, tense, subj]
+                    }
                 }
             }
         }
@@ -198,5 +215,35 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Uwohiyuha|INFINITIVE",
         "Uwotla|INFINITIVE",
         "Wakti|INFINITIVE",
+        // tio 17Nov26: IMMEDIATE_COMMAND gaps, classified against the 2012 book:
+        //  - impersonal weather/nature verbs whose boxes have NO imperative column;
+        //  - Atihneha/Ahileha/Ai: the book prints x in the imperative column;
+        //  - Ahili: the book attests ji'i'luga (p.10) but CED carries no imperative
+        //    syllabary anchor to derive a parse-back citation from;
+        //  - Anidonaa/Anina: the group-standing/sitting imperatives live inside the
+        //    Gadoga/Uwotla boxes as compound forms without CED anchors.
+        "Adaleniha|IMMEDIATE_COMMAND",
+        "Agaliha|IMMEDIATE_COMMAND",
+        "Aganawosga|IMMEDIATE_COMMAND",
+        "Agasga|IMMEDIATE_COMMAND",
+        "Ahileha|IMMEDIATE_COMMAND",
+        "Ahili|IMMEDIATE_COMMAND",
+        "Ahliilidoha|IMMEDIATE_COMMAND",
+        "Ahyahtvhvsga|IMMEDIATE_COMMAND",
+        "Ahyvdagwaloa|IMMEDIATE_COMMAND",
+        "Ai|IMMEDIATE_COMMAND",
+        "Alidliha|IMMEDIATE_COMMAND",
+        "Alsgwadia|IMMEDIATE_COMMAND",
+        "Anagaliha|IMMEDIATE_COMMAND",
+        "Anidonaa|IMMEDIATE_COMMAND",
+        "Anina|IMMEDIATE_COMMAND",
+        "Asvga|IMMEDIATE_COMMAND",
+        "Atihneha|IMMEDIATE_COMMAND",
+        "Galiga|IMMEDIATE_COMMAND",
+        "Ganesoysga|IMMEDIATE_COMMAND",
+        "Gutiha|IMMEDIATE_COMMAND",
+        "Nigalstanvsga|IMMEDIATE_COMMAND",
+        "Uhyvdla|IMMEDIATE_COMMAND",
+        "Ulogila|IMMEDIATE_COMMAND",
     ]
 }

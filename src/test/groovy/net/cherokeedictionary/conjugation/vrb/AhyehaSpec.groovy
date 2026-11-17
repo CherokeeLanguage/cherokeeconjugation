@@ -21,7 +21,8 @@ class AhyehaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'jiyeha'],
             [subject: 'SG1', object: '', present: 'jiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
             [subject: 'SG2', object: '', present: 'hihyeha', habitual: 'hihyehoi', remote_past: 'hihyehvi', imperative: 'hihyehesdi', infinitive: 'hihyehi'],
-            [subject: 'SG3', object: '', habitual: "ayehoi", imperative: "", infinitive: "gahyehi", present: "ayeha", remote_past: 'ayehvi'],
+            // tio 17Nov26: SG3 imperative supplied from the 2012 book (p.84: ahyehesdi) -- the yaml left it empty.
+            [subject: 'SG3', object: '', habitual: "ayehoi", imperative: 'ahyehesdi', infinitive: "gahyehi", present: "ayeha", remote_past: 'ayehvi'],
             [subject: 'PL3', object: '', present: 'anihyeha', habitual: 'anihyehoi', remote_past: 'anihyehvi', imperative: 'anihyehesdi', infinitive: 'anihyehi']
         ]
     ]
