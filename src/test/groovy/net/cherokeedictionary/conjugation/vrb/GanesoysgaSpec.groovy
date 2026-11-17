@@ -9,9 +9,13 @@ import spock.lang.Unroll
 class GanesoysgaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Hailing (It is)",
+        // tio 17Nov26: Feeling's glide-y orthography -- the book (p.78) writes "ganesoysga" /
+        // "unesoysv'i" where CED's convention (Ayogi "uyosdi" = ᎤᏲᏍᏗ) drops the y before the
+        // s-onset: canonical ganesosga / ganesosgoi / unesosvi (ᎦᏁᏐᏍᎦ...). The book marks the
+        // infinitive x (unattested). -- tio 17Nov26
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ganesoysga', habitual: 'ganesoysgoi', remote_past: 'unesoysvi', imperative: 'daganesoysi', infinitive: 'unesoysdi']
+            [subject: 'SG3', object: '', present: 'ganesosga', habitual: 'ganesosgoi', remote_past: 'unesosvi', imperative: 'daganesoysi', infinitive: '----']
         ]
     ]
 
@@ -21,10 +25,10 @@ class GanesoysgaSpec extends VerbBaseSpec {
         conjugateVerb("Ganesoysga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ganesoysga"
-        "SG3" | "" | Tense.HABITUAL        | "ganesoysgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unesoysvi"
+        "SG3" | "" | Tense.PRESENT         | "ganesosga"
+        "SG3" | "" | Tense.HABITUAL        | "ganesosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unesosvi"
         // "SG3" | "" | Tense.FUTURE_COMMAND      | "unesoysvi"  // unattested -- the 2012 book (p.78) has no imperative column for weather verbs
-        "SG3" | "" | Tense.INFINITIVE      | "unesoysdi"
+        // "SG3" | "" | Tense.INFINITIVE      | "unesoysdi"  // tio 17Nov26: unattested -- the book prints x in the infinitive column
     }
 }

@@ -11,7 +11,7 @@ class AyogiSpec extends VerbBaseSpec {
         definition: "It Is Breaking",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', present: 'ayogi', habitual: 'ayogoi', remote_past: 'uyojvi', imperative: 'dvyoji', infinitive: 'uyoysdi']
+            [subject: 'SG3', object: '', present: 'ayogi', habitual: 'ayogoi', remote_past: 'uyojvi', imperative: 'dvyoji', infinitive: 'uyosdi']
         ]
     ]
 
@@ -25,6 +25,6 @@ class AyogiSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "ayogoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uyotsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayotsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyoysdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyosdi"
     }
 }
