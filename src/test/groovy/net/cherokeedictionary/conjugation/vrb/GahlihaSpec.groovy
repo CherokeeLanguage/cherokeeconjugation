@@ -35,22 +35,22 @@ class GahlihaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsitlvnvdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "tsitliha"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "tsitlihoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aginitlvna"
+        // "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aginitlvna"  // tio 16Nov26: remote past UNATTESTED -- the 2012 book (p.14) prints X/blank in the remote column; the yaml extraction misassigned the imperative column (hihlvna/gahlvna) to remote_past
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsitli"
         // "SG1" | "SG3IN" | Tense.INFINITIVE      | "agitlvnvdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hitliha"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hitlihoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsanitlvna"
+        // "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsanitlvna"  // unattested (book p.14)
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hitli"
         // "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsatlvnvdi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "gatliha"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "gatlihoi"
-        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "unitlvna"
+        // "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "unitlvna"  // unattested (book p.14)
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "gatli"
         // "SG3" | "SG3IN" | Tense.INFINITIVE      | "utlvnvdi"
         "PL3" | "SG3IN" | Tense.PRESENT         | "anitliha"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "anitlihoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uninitlvna"
+        // "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uninitlvna"  // unattested (book p.14)
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anitli"
         // "PL3" | "SG3IN" | Tense.INFINITIVE      | "unitlvnvdi"
     }

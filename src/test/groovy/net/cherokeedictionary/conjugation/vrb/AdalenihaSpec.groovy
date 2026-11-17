@@ -26,6 +26,6 @@ class AdalenihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "adalenisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udalenvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adalenvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udalenidi"
+        "SG3" | "" | Tense.INFINITIVE      | "udalenadi"
     }
 }

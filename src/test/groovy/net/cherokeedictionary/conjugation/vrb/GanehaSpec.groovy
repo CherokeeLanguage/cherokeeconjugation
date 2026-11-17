@@ -16,7 +16,7 @@ class GanehaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'tsineha'],
             [subject: 'SG1', object: '', present: 'jinea', habitual: 'jineoi', remote_past: 'jinevi', imperative: 'jineesdi', infinitive: 'jinei'],
             [subject: 'SG2', object: '', present: 'hineha', habitual: 'hinehoi', remote_past: 'hinehvi', imperative: 'hinehesdi', infinitive: 'hinehi'],
-            [subject: 'SG3', object: '', habitual: 'ganehoi', imperative: 'hinehesdi', infinitive: '', present: 'ganeha', remote_past: ''],
+            [subject: 'SG3', object: '', habitual: 'ganehoi', imperative: 'ganehesdi', infinitive: 'ganehi', present: 'ganeha', remote_past: 'ganehvi'],
             [subject: 'PL3', object: '', present: 'anineha', habitual: 'aninehoi', remote_past: 'aninehvi', imperative: 'aninehesdi', infinitive: 'aninehi']
         ]
     ]
@@ -30,22 +30,22 @@ class GanehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "tsineha"
         "SG1" | "" | Tense.HABITUAL        | "tsinehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsine"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginehi"
         "SG2" | "" | Tense.PRESENT         | "hineha"
         "SG2" | "" | Tense.HABITUAL        | "hinehoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hine"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehvi"
         "SG2" | "" | Tense.INFINITIVE      | "tsanehi"
         "SG1" | "" | Tense.PRESENT         | "tsineha"
         "SG1" | "" | Tense.HABITUAL        | "tsinehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsine"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginehi"
         "PL3" | "" | Tense.PRESENT         | "anineha"
         "PL3" | "" | Tense.HABITUAL        | "aninehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "anine"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninehi"
     }
 }

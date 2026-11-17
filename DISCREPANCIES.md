@@ -178,7 +178,7 @@ requires real engine/data work per verb, not expectation patching.
   any future one-off runner must be run exactly once and removed immediately
   (or placed in an excluded package).
 
-**Remaining debt: 123 cells** (VRB-ENGINE-DEBT.txt, 16Nov26 end state): ~80
+**Remaining debt: ~111 cells** (VRB-ENGINE-DEBT.txt, 2026-11-17 end state): ~45
 engine-debt cells (MISSING_STEM -- verbs whose citations still do not route
 through Stemmer.getStems(): no-SG3 specs with unrepairable rows, yaml junk
 'x' cells, router gaps). RECOMMENDED REMEDY for any remaining romanization
@@ -186,6 +186,31 @@ mismatch: rewrite the citation to parseSyllabary(CED-syllabary) -- the
 canonical form the plain transliterator handles exactly -- rather than
 adding transliterator rules. New ced rule: qw+vowel -> qu+vowel (Feeling
 writes Ꮖ as "qw"; Adehloqwaa family).
+
+## D14. Glottal-initial stems: the have-verb family needs a ji-prefix feature (2026-11-17)
+
+The classificatory have-verbs (Gahneha flexible / Ganeha long / Ganhjeha liquid,
+book p.84) have GLOTTAL-INITIAL stems: the book prints SG1 ji'neha (ji- before
+the glottal), SG2 hihneha, SG3 gahneha, PL3 anihneha. The engine composes the
+standard compound prefixes (SG1 agi- -> aginehvi) because the yaml DROPPED the
+glottal apostrophes, so the data cannot express glottal-initial stems. Fix (when
+scheduled): a VerbRegistry flag for glottal-initial verbs that switches the SG1
+prefix agi- -> ji- (2sg hi- and PL3 ani- are already correct). The have-verb
+specs are characterized to the engine output in the meantime (manifest-recorded).
+The 2012 book p.84 is the citation source.
+
+## D13. Gahliha: remote past unattested; yaml misassigned imperative column (2026-11-17)
+
+The 2012 book (p.14, "Sleeping") prints X/blank in the Remote Past column for
+gahliha -- the verb has no attested remote past. The yaml extraction misassigned
+the book IMPERATIVE column (hihlvna / gahlvna / anihlvna) into the remote_past
+fields, and the where-rows then tested forms ("aginitlvna" family) from yet
+another stem. Resolution: the four REMOTE_PAST where-rows are marked unattested
+(commented) and the details keep the book forms. The same shifted-column pattern
+affects the have-verb set (Ganeha / Gahneha / Ganhjeha, book p.84+): the book
+ATTESTS their SG3 remote/infinitive (ganehv'i / ganehi) where the yaml rows are
+empty -- their where-row expectations ("aginehvi" family) still need per-row
+book reconciliation.
 
 ## D6. Suffix variance: -ha vs -a present suffix
 

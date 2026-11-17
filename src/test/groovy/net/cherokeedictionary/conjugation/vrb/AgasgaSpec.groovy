@@ -26,6 +26,6 @@ class AgasgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "agasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ugananvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agananvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uganidi"
+        "SG3" | "" | Tense.INFINITIVE      | "uganadi"
     }
 }
