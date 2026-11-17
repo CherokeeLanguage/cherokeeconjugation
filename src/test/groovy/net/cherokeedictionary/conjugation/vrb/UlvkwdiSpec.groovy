@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73892) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73892 (entrya ulvkwdi) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,12 +13,12 @@ class UlvkwdiSpec extends VerbBaseSpec {
         definition: "Like (It)",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jilvgwodi, agilvkwdi'],
+                [subject: 'SG1', object: '', present: 'tsilvquodi, agilvquodi'],
             [subject: 'SG1', object: 'SG3AN', present: 'jilvgwodi', habitual: 'jilvgwodoi', remote_past: 'jilvgwotanvi', imperative: 'jilvgwoda', infinitive: 'jilvgwodohdi'],
             [subject: 'SG1', object: 'SG3IN', present: 'agilvkwdi', habitual: 'agilvkwdoi', remote_past: 'agilvkwtanvi', imperative: 'jilvkwda', infinitive: 'agilvkwdohdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hilvgwodi', habitual: 'hilvgwodoi', remote_past: 'hilvgwotanvi', imperative: 'hilvgwoda', infinitive: 'hilvgwodohdi'],
             [subject: 'SG2', object: 'SG3IN', present: 'jalvkwdi', habitual: 'jalvkwdoi', remote_past: 'jalvkwtanvi', imperative: 'hilvkwda', infinitive: 'jalvkwdohdi'],
-            [subject: 'SG3', object: '', habitual: 'ulvkwdoi', imperative: 'hilvgwoda, hilvkwda', infinitive: 'ulvkwdohdi', present: 'ulvkwdi', remote_past: 'ulvkwdvi'],
+            [subject: 'SG3', object: '', habitual: 'ulvquodoi', imperative: 'hilvquoda, hilvquoda', infinitive: 'ulvquododi', present: 'ulvquodi', remote_past: 'ulvquodvi'],
             [subject: 'PL3', object: 'SG3IN', present: 'unilvkwdi', habitual: 'unilvkwdoi', remote_past: 'unilvkwtanvi', imperative: 'unilvkwda', infinitive: 'unilvkwdohdi'],
             [subject: 'PL1INCL', object: 'SG3IN', present: 'igilvkwdi', habitual: 'igilvkwdoi', remote_past: 'igilvkwtanvi', imperative: 'igilvkwda', infinitive: 'igilvkwdohdi']
         ]
@@ -29,40 +30,40 @@ class UlvkwdiSpec extends VerbBaseSpec {
         conjugateVerb("Ulvkwdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsilvquedi"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsilvquedoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsilvquedvi"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsilvquedvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsilvquedodi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "agilvquedi"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "agilvquedoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agilvquedvi"
-        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "agilvquedvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agilvquedodi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "lvquedi"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "lvquedoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "lvquedvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "lvquedvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "lvquedodi"
-        "SG2" | "SG3IN" | Tense.PRESENT         | "tsalvquedi"
-        "SG2" | "SG3IN" | Tense.HABITUAL        | "tsalvquedoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsalvquedvi"
-        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsalvquedvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsalvquedodi"
-        "SG3" | "SG3IN" | Tense.PRESENT         | "ulvquedi"
-        "SG3" | "SG3IN" | Tense.HABITUAL        | "ulvquedoi"
-        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "ulvquedvi"
-        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "ulvquedvi"
-        "SG3" | "SG3IN" | Tense.INFINITIVE      | "ulvquedodi"
-        "PL3" | "SG3IN" | Tense.PRESENT         | "unilvquedi"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "unilvquedoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unilvquedvi"
-        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unilvquedvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unilvquedodi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "igilvquedi"
-        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "igilvquedoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igilvquedvi"
-        "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "igilvquedvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igilvquedodi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsilvquodi"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsilvquodoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsilvquodvi"
+        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsilvquodvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsilvquododi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "agilvquodi"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "agilvquodoi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agilvquodvi"
+        "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "agilvquodvi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agilvquododi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "lvquodi"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "lvquodoi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "lvquodvi"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "lvquodvi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "lvquododi"
+        "SG2" | "SG3IN" | Tense.PRESENT         | "tsalvquodi"
+        "SG2" | "SG3IN" | Tense.HABITUAL        | "tsalvquodoi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsalvquodvi"
+        "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsalvquodvi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsalvquododi"
+        "SG3" | "SG3IN" | Tense.PRESENT         | "ulvquodi"
+        "SG3" | "SG3IN" | Tense.HABITUAL        | "ulvquodoi"
+        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "ulvquodvi"
+        "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "ulvquodvi"
+        "SG3" | "SG3IN" | Tense.INFINITIVE      | "ulvquododi"
+        "PL3" | "SG3IN" | Tense.PRESENT         | "unilvquodi"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "unilvquodoi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unilvquodvi"
+        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unilvquodvi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unilvquododi"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "igilvquodi"
+        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "igilvquodoi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igilvquodvi"
+        "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "igilvquodvi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igilvquododi"
     }
 }

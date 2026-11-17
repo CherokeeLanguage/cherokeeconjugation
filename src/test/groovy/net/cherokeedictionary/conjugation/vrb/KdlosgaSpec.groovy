@@ -1,3 +1,4 @@
+// tio 16Nov26: citations re-written to canonical parse-back romanization of the CED syllabary (cedEntries.csv id 73512) -- the yaml orthography (gwv=Ꮙ, bare w, l+C) is unmappable by the plain transliterator (DISCREPANCIES.md D9/D12)
 // tio 16Nov26: citation rows re-aligned to CED cedEntries.csv id 73512 (entrya kdlosga) -- the yaml transcription carried unconvertible romanization clusters (DISCREPANCIES.md D9/D12)
 package net.cherokeedictionary.conjugation.vrb
 
@@ -12,7 +13,7 @@ class KdlosgaSpec extends VerbBaseSpec {
         definition: "Fire/Light is Going Out (143)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', habitual: 'kdlosgoi', imperative: 'hvhdlohi', infinitive: 'uwhdlohisdi', present: 'kdlosga', remote_past: 'uwhdlosvi'],
+            [subject: 'SG3', object: '', habitual: 'gvtlosgoi', imperative: 'hvtlohi', infinitive: 'uwvtlohisdi', present: 'gvtlosga', remote_past: 'uwvtlosvi'],
             [subject: 'SG3', object: '', present: 'anvhdlosga', habitual: 'anvhdlosgoi', remote_past: 'unhdlosvi', imperative: 'anvhdlohi', infinitive: 'unhdlohisdi']
         ]
     ]
@@ -23,15 +24,15 @@ class KdlosgaSpec extends VerbBaseSpec {
         conjugateVerb("Kdlosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "gitlosga"
-        "SG3" | "" | Tense.HABITUAL        | "gitlosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwuwetlosvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uwetlosvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwetlohisdi"
-        "SG3" | "" | Tense.PRESENT         | "gitlosga"
-        "SG3" | "" | Tense.HABITUAL        | "gitlosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwuwetlosvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "uwetlosvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwetlohisdi"
+        "SG3" | "" | Tense.PRESENT         | "gvtlosga"
+        "SG3" | "" | Tense.HABITUAL        | "gvtlosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwatlosvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "vtlosvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwvtlohisdi"
+        "SG3" | "" | Tense.PRESENT         | "gvtlosga"
+        "SG3" | "" | Tense.HABITUAL        | "gvtlosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwatlosvi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "vtlosvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwvtlohisdi"
     }
 }

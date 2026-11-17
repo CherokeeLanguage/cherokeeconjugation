@@ -3,31 +3,11 @@ AdasdayvhvsgaSpec.groovy :: SG2/- INFINITIVE expected=jadasdayhdi ACT=ᏣᏓᏍ�
 AdasdayvhvsgaSpec.groovy :: SG3/- INFINITIVE expected=udasdayhdi ACT=ᎤᏓᏍᏓnot a valid letterᏗ
 AdasdayvhvsgaSpec.groovy :: PL3/- INFINITIVE expected=unadasdayhdi ACT=ᎤᎾᏓᏍᏓnot a valid letterᏗ
 AdasdayvhvsgaSpec.groovy :: PL1INCL/- INFINITIVE expected=igadasdayhdi ACT=ᎢᎦᏓᏍᏓnot a valid letterᏗ
-AdehloqwaaSpec.groovy :: SG1/- PRESENT expected=gadeloqwaa ACT=ᎦᏕᏠnot a valid letterᏩᎠ
-AdehloqwaaSpec.groovy :: SG1/- HABITUAL expected=gadeloqwasgoi ACT=ᎦᏕᏠnot a valid letterᏩᏍᎪᎢ
-AdehloqwaaSpec.groovy :: SG1/- REMOTE_PAST expected=agwadehloqwavi ACT=ᎠᏆᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG1/- FUTURE_COMMAND expected=agwadehloqwavi ACT=ᎦᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG1/- INFINITIVE expected=agwadehlqwasdi ACT=ᎠᏆᏕnot a valid letternot a valid letterᏩᏍᏗ
-AdehloqwaaSpec.groovy :: SG2/- PRESENT expected=hadehloqwaa ACT=ᎭᏕᏠnot a valid letterᏩᎠ
-AdehloqwaaSpec.groovy :: SG2/- HABITUAL expected=hadehloqwasgoi ACT=ᎭᏕᏠnot a valid letterᏩᏍᎪᎢ
-AdehloqwaaSpec.groovy :: SG2/- REMOTE_PAST expected=jadehloqwavi ACT=ᏣᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG2/- FUTURE_COMMAND expected=jadehloqwavi ACT=ᎭᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG2/- INFINITIVE expected=jadehlqwasdi ACT=ᏣᏕnot a valid letternot a valid letterᏩᏍᏗ
-AdehloqwaaSpec.groovy :: SG3/- PRESENT expected=adehloqwaa ACT=ᎠᏕᏠnot a valid letterᏩᎠ
-AdehloqwaaSpec.groovy :: SG3/- HABITUAL expected=adehloqwasgoi ACT=ᎠᏕᏠnot a valid letterᏩᏍᎪᎢ
-AdehloqwaaSpec.groovy :: SG3/- REMOTE_PAST expected=udehloqwavi ACT=ᎤᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG3/- FUTURE_COMMAND expected=udehloqwavi ACT=ᎠᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: SG3/- INFINITIVE expected=udehlqwasdi ACT=ᎤᏕnot a valid letternot a valid letterᏩᏍᏗ
-AdehloqwaaSpec.groovy :: PL3/- PRESENT expected=anadehloqwaa ACT=ᎠᎾᏕᏠnot a valid letterᏩᎠ
-AdehloqwaaSpec.groovy :: PL3/- HABITUAL expected=anadehloqwasgoi ACT=ᎠᎾᏕᏠnot a valid letterᏩᏍᎪᎢ
-AdehloqwaaSpec.groovy :: PL3/- REMOTE_PAST expected=unadehloqwavi ACT=ᎤᎾᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: PL3/- FUTURE_COMMAND expected=unadehloqwavi ACT=ᎠᎾᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: PL3/- INFINITIVE expected=unadehlqwasdi ACT=ᎤᎾᏕnot a valid letternot a valid letterᏩᏍᏗ
-AdehloqwaaSpec.groovy :: PL1INCL/- PRESENT expected=idadehloqwaa ACT=ᎢᏓᏕᏠnot a valid letterᏩᎠ
-AdehloqwaaSpec.groovy :: PL1INCL/- HABITUAL expected=idadehloqwasgoi ACT=ᎢᏓᏕᏠnot a valid letterᏩᏍᎪᎢ
-AdehloqwaaSpec.groovy :: PL1INCL/- REMOTE_PAST expected=igadehloqwavi ACT=ᎢᎦᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: PL1INCL/- FUTURE_COMMAND expected=igadehloqwavi ACT=ᎢᏓᏕᏠnot a valid letterᏩᎥᎢ
-AdehloqwaaSpec.groovy :: PL1INCL/- INFINITIVE expected=igadehlqwasdi ACT=ᎢᎦᏕnot a valid letternot a valid letterᏩᏍᏗ
+AdehloqwaaSpec.groovy :: SG1/- INFINITIVE expected=agwadehlqwasdi ACT=ᎠᏆᏕnot a valid letterᏆᏍᏗ
+AdehloqwaaSpec.groovy :: SG2/- INFINITIVE expected=jadehlqwasdi ACT=ᏣᏕnot a valid letterᏆᏍᏗ
+AdehloqwaaSpec.groovy :: SG3/- INFINITIVE expected=udehlqwasdi ACT=ᎤᏕnot a valid letterᏆᏍᏗ
+AdehloqwaaSpec.groovy :: PL3/- INFINITIVE expected=unadehlqwasdi ACT=ᎤᎾᏕnot a valid letterᏆᏍᏗ
+AdehloqwaaSpec.groovy :: PL1INCL/- INFINITIVE expected=igadehlqwasdi ACT=ᎢᎦᏕnot a valid letterᏆᏍᏗ
 AdlohyihaSpec.groovy :: SG1/- INFINITIVE expected=agwadloysdi ACT=ᎠᏆᏠnot a valid letterᏍᏗ
 AdlohyihaSpec.groovy :: SG2/- INFINITIVE expected=jadloysdi ACT=ᏣᏠnot a valid letterᏍᏗ
 AdlohyihaSpec.groovy :: SG3/- INFINITIVE expected=udloysdi ACT=ᎤᏠnot a valid letterᏍᏗ
@@ -163,11 +143,6 @@ ROUNDTRIP UhnihaSpec.groovy :: SG2/- INFINITIVE expected=X ACT=MISSING_STEM_INFI
 ROUNDTRIP UhnihaSpec.groovy :: SG3/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UhnihaSpec.groovy :: PL3/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UhnihaSpec.groovy :: PL1INCL/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
-UhyohaSpec.groovy :: SG1/- INFINITIVE expected=agiysdi ACT=ᎠᎩnot a valid letterᏍᏗ
-UhyohaSpec.groovy :: SG2/- INFINITIVE expected=jaysdi ACT=Ꮳnot a valid letterᏍᏗ
-UhyohaSpec.groovy :: SG3/- INFINITIVE expected=uysdi ACT=Ꭴnot a valid letterᏍᏗ
-UhyohaSpec.groovy :: PL3/- INFINITIVE expected=uniysdi ACT=ᎤᏂnot a valid letterᏍᏗ
-UhyohaSpec.groovy :: PL1INCL/- INFINITIVE expected=igiysdi ACT=ᎢᎩnot a valid letterᏍᏗ
 ROUNDTRIP UhyvdlaSpec.groovy :: SG1/- INFINITIVE expected=agiyvdla ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UhyvdlaSpec.groovy :: SG2/- INFINITIVE expected=tsayvdla ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UhyvdlaSpec.groovy :: SG3/- INFINITIVE expected=uyvdla ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
@@ -212,16 +187,6 @@ ROUNDTRIP UwohiyuhaSpec.groovy :: PL1INCL/- INFINITIVE expected=X ACT=MISSING_ST
 ROUNDTRIP UwotlaSpec.groovy :: SG1/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UwotlaSpec.groovy :: SG2/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP UwotlaSpec.groovy :: SG3/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
-UyetsgaSpec.groovy :: SG1/- PRESENT expected=agiyetsga ACT=ᎠᎩᏰnot a valid letterᏍᎦ
-UyetsgaSpec.groovy :: SG1/- HABITUAL expected=agiyetsgoi ACT=ᎠᎩᏰnot a valid letterᏍᎪᎢ
-UyetsgaSpec.groovy :: SG2/- PRESENT expected=jayetsga ACT=ᏣᏰnot a valid letterᏍᎦ
-UyetsgaSpec.groovy :: SG2/- HABITUAL expected=jayetsgoi ACT=ᏣᏰnot a valid letterᏍᎪᎢ
-UyetsgaSpec.groovy :: SG3/- PRESENT expected=uyetsga ACT=ᎤᏰnot a valid letterᏍᎦ
-UyetsgaSpec.groovy :: SG3/- HABITUAL expected=uyetsgoi ACT=ᎤᏰnot a valid letterᏍᎪᎢ
-UyetsgaSpec.groovy :: PL3/- PRESENT expected=uniyetsga ACT=ᎤᏂᏰnot a valid letterᏍᎦ
-UyetsgaSpec.groovy :: PL3/- HABITUAL expected=uniyetsgoi ACT=ᎤᏂᏰnot a valid letterᏍᎪᎢ
-UyetsgaSpec.groovy :: PL1INCL/- PRESENT expected=igiyetsga ACT=ᎢᎩᏰnot a valid letterᏍᎦ
-UyetsgaSpec.groovy :: PL1INCL/- HABITUAL expected=igiyetsgoi ACT=ᎢᎩᏰnot a valid letterᏍᎪᎢ
 ROUNDTRIP WaktiSpec.groovy :: SG1/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP WaktiSpec.groovy :: SG3/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE
 ROUNDTRIP WaktiSpec.groovy :: PL3/- INFINITIVE expected=X ACT=MISSING_STEM_INFINITIVE cand=MISSING_STEM_INFINITIVE

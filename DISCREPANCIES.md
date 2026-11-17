@@ -178,7 +178,7 @@ requires real engine/data work per verb, not expectation patching.
   any future one-off runner must be run exactly once and removed immediately
   (or placed in an excluded package).
 
-**Remaining debt: ~130 cells** (VRB-ENGINE-DEBT.txt, 16Nov26 end state): ~80
+**Remaining debt: 123 cells** (VRB-ENGINE-DEBT.txt, 16Nov26 end state): ~80
 engine-debt cells (MISSING_STEM -- verbs whose citations still do not route
 through Stemmer.getStems(): no-SG3 specs with unrepairable rows, yaml junk
 'x' cells, router gaps). RECOMMENDED REMEDY for any remaining romanization
