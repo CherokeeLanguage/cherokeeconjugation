@@ -190,12 +190,36 @@ class VerbRegistry {
     /** True when this verb's FUTURE_IMPERATIVE_VOLATIVE sg3 row prints wa-. -- tio 15Nov26 */
     static boolean hasFivSg3W(String present3rd) {
         if (!present3rd) return false
+        if (!present3rd) return false
         // The bare present stem is matched INSIDE the present3rd citation row:
         // consonant stems may carry a baked sg3 Ꭰ- prefix (To Bite "asgahlga"
         // ᎠᏍᎦᎶᎦ) AND/OR a tense suffix after the stem (To See "agowtiha"
         // ᎠᎪᏩᏘᎭ = Ꭰ + ᎪᏩᏘ + -Ꭽ), so neither a whole-citation nor a
         // suffix match survives both shapes.
         return fivSg3WStems.find { present3rd.contains(it) } != null
+    }
+
+    // tio 17Nov26: GLOTTAL-INITIAL stems take the ji- allomorph of the SG1
+    // Set-A pronominal instead of agi-. The 2012 VRB have-verb family prints
+    // it across every tense: have-with (neutral) p.84 SG1 ji'yeha / remote
+    // ji'yehv'i / infinitive ji'yehi; hold (long) ji'ne'a; hold (flexible)
+    // ji'neha; hold (liquid) ji'nehv'i — the yaml dropped the glottal
+    // apostrophes, so the vrb specs carried agi- until now. 2sg hi- and PL3
+    // ani- are already correct (book hihyeha / anihyeha), so this is strictly
+    // an SG1 swap: ᎠᎩ -> Ꮵ. Keyed on the present3rd citation (contained-in
+    // match, same rationale as hasFivSg3W above) and registered lexically via
+    // VerbBaseSpec details.glottalInitial. -- tio 17Nov26
+    private static final Set<String> glottalInitialStems = []
+
+    /** Registers a verb (by present3rd citation) whose SG1 rows print ji-. -- tio 17Nov26 */
+    static void registerGlottalInitial(String present3rd) {
+        if (present3rd) glottalInitialStems.add(present3rd)
+    }
+
+    /** True when this verb's SG1 Set-A rows print ji- instead of agi-. -- tio 17Nov26 */
+    static boolean isGlottalInitial(String present3rd) {
+        if (!present3rd) return false
+        return glottalInitialStems.find { present3rd.contains(it) } != null
     }
 
     // tio 15Nov26: IMMEDIATE imperative/volative sibling of the FIV flag. The

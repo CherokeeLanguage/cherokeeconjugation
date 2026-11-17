@@ -199,6 +199,18 @@ prefix agi- -> ji- (2sg hi- and PL3 ani- are already correct). The have-verb
 specs are characterized to the engine output in the meantime (manifest-recorded).
 The 2012 book p.84 is the citation source.
 
+**IMPLEMENTED 2026-11-17 (same day):** VerbRegistry.registerGlottalInitial/isGlottalInitial
+(keyed on the present3rd citation, contained-in match) + a processor override swapping
+the SG1 pronominal ᎠᎩ -> Ꮵ on both sets (the have-verbs route Set B for their object
+columns and the book still prints ji-). Specs declare details.glottalInitial: true;
+VerbBaseSpec registers it. Ahyeha composes purely through the flag. Two lexeme-level
+laryngeal variances remain beyond any prefix rule and are registered as whole-form
+surfaces (details.surfaceOverrides, new VerbBaseSpec mechanism): hold (long) drops the
+stem h after ji- (jine'o'i / jine'v'i / jine'i) while flexible/liquid keep it
+(ji'neho'i / jinejeho'i), and the liquid citation's nhj undergoes the engine's
+laryngeal naj- composition that the book's SG1 row spells through (jinejeha). All four
+have-verb specs now assert the book p.84 forms. -- tio 17Nov26
+
 ## D13. Gahliha: remote past unattested; yaml misassigned imperative column (2026-11-17)
 
 The 2012 book (p.14, "Sleeping") prints X/blank in the Remote Past column for

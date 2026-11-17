@@ -216,6 +216,19 @@ class VerbConjugationProcessor {
                 return "MISSING_ENTRY" + (it ?: "")
             }
 
+            // tio 17Nov26: glottal-initial stems take the ji- allomorph of the
+            // SG1 pronominal (VerbRegistry.isGlottalInitial — the 2012 VRB
+            // have-verb family prints ji'yeha / ji'yehv'i / ji'yehi across every
+            // tense, p.84). Strictly an SG1 swap: ᎠᎩ -> Ꮵ (2sg hi- and PL3 ani-
+            // compose correctly). Set-agnostic on purpose: the have-verbs route
+            // Set B for their object columns (SG1SG3INB also surfaces ᎠᎩ) and
+            // the book still prints ji- on every SG1 row, with or without an
+            // object reading. -- tio 17Nov26
+            if (pref?.prefix1 == PrefixTableSubject.SG1
+                    && VerbRegistry.isGlottalInitial(verb.stemmer?.present3rd?.syllabary)) {
+                returnPrefix = 'Ꮵ'
+            }
+
             // tio 12Nov26: per-verb compound-prefix override (VerbRegistry).
             // The verb book prints verb-specific prefix cells for some person
             // combos — To Bite p.29 exercises the dA-/dE-/dO- distributive

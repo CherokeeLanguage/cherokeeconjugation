@@ -11,10 +11,15 @@ import spock.lang.Unroll
 class AhyehaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Have With / Hold in Hand (neutral)",
+        // tio 17Nov26: glottal-initial stem -- the 2012 book (p.84) prints SG1 ji-yeha on
+        // every tense row (ji'yeha / ji'yeho'i / ji'yehv'i / ji'yehesdi / ji'yehi); the yaml
+        // dropped the glottal apostrophes and carried tsiyeha/agiyeh-. D14: the engine's
+        // SG1 ji- swap is registered lexically from this flag.
+        glottalInitial: true,
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'tsiyeha'],
-            [subject: 'SG1', object: '', present: 'tsiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
+                [subject: 'SG1', object: '', present: 'jiyeha'],
+            [subject: 'SG1', object: '', present: 'jiyeha', habitual: 'jiyehoi', remote_past: 'jiyehvi', imperative: 'jiyehesdi', infinitive: 'jiyehi'],
             [subject: 'SG2', object: '', present: 'hihyeha', habitual: 'hihyehoi', remote_past: 'hihyehvi', imperative: 'hihyehesdi', infinitive: 'hihyehi'],
             [subject: 'SG3', object: '', habitual: "ayehoi", imperative: "", infinitive: "gahyehi", present: "ayeha", remote_past: 'ayehvi'],
             [subject: 'PL3', object: '', present: 'anihyeha', habitual: 'anihyehoi', remote_past: 'anihyehvi', imperative: 'anihyehesdi', infinitive: 'anihyehi']
@@ -27,11 +32,12 @@ class AhyehaSpec extends VerbBaseSpec {
         conjugateVerb("Ahyeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsiyeha"
-        "SG1" | "" | Tense.HABITUAL        | "tsiyehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agiyehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiyehvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiyehi"
+        "SG1" | "" | Tense.PRESENT         | "jiyeha"
+        "SG1" | "" | Tense.HABITUAL        | "jiyehoi"
+        // tio 17Nov26: SG1 cells re-aligned to book p.84 (ji- glottal allomorph, D14).
+        "SG1" | "" | Tense.REMOTE_PAST     | "jiyehvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "jiyehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "jiyehi"
         "SG2" | "" | Tense.PRESENT         | "hiyeha"
         "SG2" | "" | Tense.HABITUAL        | "hiyehoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsayehvi"

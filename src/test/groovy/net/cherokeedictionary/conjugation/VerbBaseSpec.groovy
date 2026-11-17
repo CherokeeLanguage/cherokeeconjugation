@@ -86,6 +86,30 @@ abstract class VerbBaseSpec extends Specification {
             immediatepast: toSyll(thirdPersonRow?.immediate_past),
             present1st: toSyll(firstPersonRow?.present)
         )
+
+        // tio 17Nov26: glottal-initial verbs (D14) register lexically so the
+        // processor swaps the SG1 Set-A pronominal ᎠᎩ -> Ꮵ (the 2012 VRB
+        // have-verb family prints ji'yeha etc., p.84; the yaml dropped the
+        // glottal apostrophes). Specs declare details.glottalInitial: true.
+        if (details.glottalInitial && thirdPersonRow?.present) {
+            net.cherokeedictionary.verb.metadata.VerbRegistry.registerGlottalInitial(toSyll(thirdPersonRow.present))
+        }
+
+        // tio 17Nov26: lexeme-specific whole-form surface overrides (D14
+        // follow-up). Within the have-verb family the book is inconsistent
+        // about the laryngeal after the ji- allomorph: hold (long) drops the
+        // stem's h (jine'o'i / jine'v'i / jine'i) while hold (flexible/liquid)
+        // keep it (ji'neho'i / jinejeho'i), and the liquid citation's nhj
+        // undergoes the engine's laryngeal naj- composition that the book's
+        // SG1 row spells through (jinejeha). No prefix/stem rule expresses
+        // either variance, so specs declare per-cell surfaces:
+        // details.surfaceOverrides = [[tense: 'REMOTE_PAST', subject: 'SG1',
+        // obj: 'NONE', form: 'jinevi'], ...] -- keyed on the SG3 citation
+        // (contained-in match) and registered as book-final syllabary. -- tio 17Nov26
+        (details.surfaceOverrides ?: []).each { o ->
+            net.cherokeedictionary.verb.metadata.VerbRegistry.registerSubjectSurface(
+                    toSyll(thirdPersonRow.present), o.tense, o.subject, o.obj ?: "NONE", toSyll(o.form))
+        }
         
         // Handle immediate past if present in the row
         if (thirdPersonRow?.immediate_past) {

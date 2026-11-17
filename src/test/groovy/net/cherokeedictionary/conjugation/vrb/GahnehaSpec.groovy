@@ -12,8 +12,11 @@ class GahnehaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Have With / Hold in Hand (flexible)",
         part_of_speech: "v.i.",
+        // tio 17Nov26: glottal-initial stem -- the 2012 book (p.84) prints SG1 ji-neha on every tense row; the yaml
+        // dropped the glottal apostrophes. D14: the engine's SG1 ji- swap is registered lexically from this flag.
+        glottalInitial: true,
         conjugations: [
-                [subject: 'SG1', object: '', present: 'tsineha, tsineha'],
+                [subject: 'SG1', object: '', present: 'jineha'],
             [subject: 'SG1', object: '', present: 'jineha', habitual: 'jinehoi', remote_past: 'jinehvi', imperative: 'jinehesdi', infinitive: 'jinehi'],
             [subject: 'SG2', object: '', present: 'hihneha', habitual: 'hihnehoi', remote_past: 'hihnehvi', imperative: 'hihnehesdi', infinitive: 'hihnehi'],
             [subject: 'SG3', object: '', habitual: 'ganehoi', imperative: 'gahnehesdi', infinitive: 'gahnehi', present: 'ganeha', remote_past: 'gahnehvi'],
@@ -27,21 +30,21 @@ class GahnehaSpec extends VerbBaseSpec {
         conjugateVerb("Gahneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsineha"
-        "SG1" | "" | Tense.HABITUAL        | "tsinehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginehi"
+        "SG1" | "" | Tense.PRESENT         | "jineha"
+        "SG1" | "" | Tense.HABITUAL        | "jinehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "jinehvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "jinehi"
         "SG2" | "" | Tense.PRESENT         | "hineha"
         "SG2" | "" | Tense.HABITUAL        | "hinehoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehvi"
         "SG2" | "" | Tense.INFINITIVE      | "tsanehi"
-        "SG1" | "" | Tense.PRESENT         | "tsineha"
-        "SG1" | "" | Tense.HABITUAL        | "tsinehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinehvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginehi"
+        "SG1" | "" | Tense.PRESENT         | "jineha"
+        "SG1" | "" | Tense.HABITUAL        | "jinehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "jinehvi"
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "jinehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "jinehi"
         "PL3" | "" | Tense.PRESENT         | "anineha"
         "PL3" | "" | Tense.HABITUAL        | "aninehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
