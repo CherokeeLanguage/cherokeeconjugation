@@ -248,6 +248,28 @@ class VerbRegistry {
         return quvCoalescingStems.find { present3rd.contains(it) } != null
     }
 
+    // tio 17Nov26: IMPERSONAL verbs -- weather/nature/impersonal "it is ..." verbs
+    // (Agaliha shining, Gutiha snowing, ...) have NO imperative because there is
+    // no agent to command ("you cannot tell the sun to shine" -- user verdict,
+    // 2026-11-17). This is a LEXICAL PROPERTY, not a data gap: the 2012 book's
+    // boxes for these verbs have no imperative column BECAUSE the form is
+    // impermissible. Conjugate returns the documented NO_IMPERATIVE sentinel for
+    // IMMEDIATE_COMMAND on registered verbs. Keyed on the present3rd citation,
+    // contained-in match, same rationale as hasFivSg3W. Registered lexically via
+    // VerbBaseSpec details.impersonal. -- tio 17Nov26
+    private static final Set<String> impersonalStems = []
+
+    /** Registers a verb (by present3rd citation) as impersonal -- no imperative exists. -- tio 17Nov26 */
+    static void registerImpersonal(String present3rd) {
+        if (present3rd) impersonalStems.add(present3rd)
+    }
+
+    /** True when this verb is impersonal and its imperative is impermissible. -- tio 17Nov26 */
+    static boolean isImpersonal(String present3rd) {
+        if (!present3rd) return false
+        return impersonalStems.find { present3rd.contains(it) } != null
+    }
+
     // tio 15Nov26: IMMEDIATE imperative/volative sibling of the FIV flag. The
     // guide mandates w- for ALL non-second-person "let ... right now!" forms,
     // and the book confirms per verb — To See IIV sg3 "Let him/her see it

@@ -11,6 +11,9 @@ import spock.lang.Unroll
 class UhyvdlaSpec extends VerbBaseSpec {
     static def details = [
         definition: "uniyiha S/he Has a Cold",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG1', object: '', present: 'uhyvdla', habitual: 'aginiyiha', remote_past: 'uhyvdla', imperative: 'aginiyisgoi', infinitive: 'uhyvdla'],

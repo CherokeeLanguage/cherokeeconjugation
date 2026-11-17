@@ -10,6 +10,9 @@ import spock.lang.Unroll
 class GutihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Snowing (It is)",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'gutisgoi', imperative: '', infinitive: 'uwutohdi', present: 'gutiha', remote_past: 'uwutahnvi']

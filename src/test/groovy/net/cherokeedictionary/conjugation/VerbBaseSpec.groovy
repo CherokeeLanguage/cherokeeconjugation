@@ -101,6 +101,14 @@ abstract class VerbBaseSpec extends Specification {
             net.cherokeedictionary.verb.metadata.VerbRegistry.registerQuvCoalescing(toSyll(thirdPersonRow.present))
         }
 
+        // tio 17Nov26: impersonal verbs (details.impersonal) -- the imperative is
+        // impermissible ("you cannot tell the sun to shine"), a lexical property
+        // not a data gap. See VerbRegistry.isImpersonal / Conjugate's
+        // NO_IMPERATIVE sentinel. -- tio 17Nov26
+        if (details.impersonal && thirdPersonRow?.present) {
+            net.cherokeedictionary.verb.metadata.VerbRegistry.registerImpersonal(toSyll(thirdPersonRow.present))
+        }
+
         // tio 17Nov26: lexeme-specific whole-form surface overrides (D14
         // follow-up). Within the have-verb family the book is inconsistent
         // about the laryngeal after the ji- allomorph: hold (long) drops the

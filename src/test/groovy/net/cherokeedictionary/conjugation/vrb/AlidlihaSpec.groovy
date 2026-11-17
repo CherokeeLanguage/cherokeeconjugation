@@ -10,6 +10,9 @@ import spock.lang.Unroll
 class AlidlihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Its Boiling (39)",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'alidlisgoi', imperative: '', infinitive: 'ulihldi', present: 'alidliha', remote_past: 'ulidlvhvi']

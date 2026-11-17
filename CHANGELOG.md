@@ -2,8 +2,8 @@
 
 Chronological record of the engine and validation work, 2026-11-11 → 2026-11-17.
 Every code change carries a `-- tio <DDMMMYY>` comment tag traceable to these
-entries. Companion documents: [DISCREPANCIES.md](DISCREPANCIES.md) (the D1–D16
-ledger, each item with a verdict and citation) and [GAP.md](GAP.md) (the 67
+entries. Companion documents: [DISCREPANCIES.md](DISCREPANCIES.md) (the D1–D17
+ledger, each item with a verdict and citation) and [GAP.md](GAP.md) (the
 book-unattested stem gaps).
 
 ---
@@ -11,6 +11,15 @@ book-unattested stem gaps).
 ## 2026-11-17 — finish line: full verb inventory, all suites green
 
 **Engine features (VerbRegistry / processor / transliterator):**
+
+- **D17 impersonal-verb imperative refusal** — linguistic verdict: the 16
+  weather/nature verbs' imperative is IMPERMISSIBLE (no agent to command), not
+  unattested. Encoded as a lexical property: `details.impersonal` →
+  `VerbRegistry.registerImpersonal` → Conjugate returns the `NO_IMPERATIVE`
+  sentinel for IMMEDIATE_COMMAND (previously composed garbage). The coverage
+  gate asserts the sentinel for all 16 and exempts them from EXPECTED_GAPS;
+  GAP.md reclassified 67 → 51 gaps with the three-way cell taxonomy
+  (attested / impermissible / unattested).
 - **D14 glottal-initial SG1 allomorph** — `registerGlottalInitial`/`isGlottalInitial`
   + a processor swap of the SG1 pronominal ᎠᎩ → Ꮵ, set-agnostic (the have-verb
   family routes Set B for object columns and the book still prints ji-). Specs
@@ -40,6 +49,7 @@ book-unattested stem gaps).
   (0b2a044).
 
 **Data / spec work:**
+
 - **D15 book transcription pass** — per-verb citation fixes from the 2012 VRB
   text layer (`../docs/processed/vrb2012.txt`; grep needs `-a`). Key mechanism:
   the harness composes ALL subjects/tenses from the FIRST SG3 row only, so an
@@ -58,12 +68,12 @@ book-unattested stem gaps).
 - Last engine-debt verbs fixed: Ayogi (`uyosdi`, CED), Adlohyiha (`udloyisdi`,
   parse-back of ᎤᏠᏱᏍᏗ), Ganesoysga (glide-y drop per the Ayogi CED precedent;
   its "imperative" was actually the book's Future column) (a6a22e4, c9639fc).
-- **GAP.md** — documented register of all 67 book-unattested gaps, 4 classes
-  (fab670a).
+- **GAP.md** — documented register of the book-unattested gaps, with the
+  three-way cell taxonomy (fab670a).
 
-**State at end of day:** default suite 4,377 green; vrb 19,014 total green
-(10,177-row composition gate); zero verbs blocked on engine/spec work; D1–D16
-all carry verdicts.
+**State at end of day:** default suite 4,377 green; vrb suite fully green
+(incl. the 10,177-row composition gate); zero verbs blocked on engine/spec
+work; D1–D17 all carry verdicts.
 
 ---
 
@@ -142,11 +152,12 @@ all carry verdicts.
 
 - `-- tio <DDMMMYY>` — every substantive code comment ends with this tag; grep
   `tio 17Nov26` to find all changes from a given day.
-- DISCREPANCIES.md — D1–D16 ledger. Each item: discrepancy, citation (book
+- DISCREPANCIES.md — D1–D17 ledger. Each item: discrepancy, citation (book
   page / CED id), verdict, and whether it is implemented, characterized, or an
   open question.
-- GAP.md — the 67 book-unattested stem gaps (mirrors
-  VrbStemCoverageMetaSpec.EXPECTED_GAPS; the meta-test enforces sync).
+- GAP.md — the book-unattested stem gaps (mirrors
+  VrbStemCoverageMetaSpec.EXPECTED_GAPS; the meta-test enforces sync) plus the
+  impersonal-verb cohort register.
 
 ## Ops rules (hard-won)
 
@@ -159,3 +170,5 @@ all carry verdicts.
    clusters (gwv, w+C — both over-fired and were reverted).
 4. Citations should be parse-back forms (`parseSyllabary(CED syllabary)`), not
    Feeling's raw romanization — the plain transliterator handles them exactly.
+5. In-place perl with `\x{...}` escapes on UTF-8 docs has corrupted encodings
+   twice — prefer the Write/Edit tools for document files.

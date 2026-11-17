@@ -13,6 +13,9 @@ class GanesoysgaSpec extends VerbBaseSpec {
         // "unesoysv'i" where CED's convention (Ayogi "uyosdi" = ᎤᏲᏍᏗ) drops the y before the
         // s-onset: canonical ganesosga / ganesosgoi / unesosvi (ᎦᏁᏐᏍᎦ...). The book marks the
         // infinitive x (unattested). -- tio 17Nov26
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             // tio 17Nov26: the "daganesoysi" the yaml carried as imperative is the book's FUTURE

@@ -10,6 +10,9 @@ import spock.lang.Unroll
 class AdalenihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "It Is Beginning/Starting",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'adalenisgoi', imperative: '', infinitive: 'udalenhdi', present: 'adaleniha', remote_past: 'udalenvhvi']

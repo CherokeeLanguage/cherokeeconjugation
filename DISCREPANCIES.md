@@ -324,3 +324,27 @@ disproportionate for one cell. RESOLUTION: PluralObjectSpec PL3 x SG3IN
 REMOTE_PAST characterized to engine output (`dunanitlvvi`); the una-/unv-
 orthography variance stays documented here as an open orthography question.
 Default suite + vrb suite now fully GREEN (13,214/13,214). -- tio 17Nov26
+
+## D17. Impersonal verbs: the imperative is IMPERMISSIBLE, not unattested (2026-11-17, RESOLVED)
+
+**Linguistic verdict (user, 2026-11-17):** the impersonal weather/nature verbs
+(Agaliha shining, Gutiha snowing, ...) have NO imperative because there is no
+agent to command — "you cannot tell the sun or moon to shine." The 2012 book's
+boxes for these verbs have no imperative column BECAUSE the form is
+impermissible, not because it is missing. This is a LEXICAL PROPERTY of the
+verb, distinct from the unattested-x cells.
+
+**Model decision:** paradigm cells are now classified three ways, not two:
+(a) attested — composes and is asserted; (b) impermissible — a lexical
+property, `details.impersonal: true` → `VerbRegistry.registerImpersonal` →
+Conjugate returns the documented **NO_IMPERATIVE** sentinel for IMMEDIATE_
+COMMAND (the volative "let it ..." tenses are NOT blocked); (c) unattested —
+the GAP.md register / EXPECTED_GAPS.
+
+**Implementation:** 16 verbs flagged impersonal (list in GAP.md, each with its
+book location); Conjugate short-circuits before composition (previously
+Ganesoysga composed garbage: ᎦᎦᏁᏐnot a valid letterᏏ); the coverage gate exempts
+impersonal imperatives from EXPECTED_GAPS and asserts the sentinel for all 16.
+The question is now un-reaskable: requesting an imperative for an impersonal
+verb returns a documented refusal, and the cohort documentation (GAP.md) records
+the three-way cell classification. -- tio 17Nov26

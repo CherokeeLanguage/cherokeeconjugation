@@ -110,6 +110,10 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         def rows = []
         discoverVrbSpecs().each { spec ->
             TENSES.each { String tense ->
+                // tio 17Nov26: impersonal verbs' imperatives are IMPERMISSIBLE (a
+                // lexical property, not a gap) -- never attempted, asserted by
+                // the dedicated sentinel test below.
+                if (tense == "IMMEDIATE_COMMAND" && spec.details.impersonal) return
                 if (hasStemRow(spec.details, tense)) {
                     SUBJECTS.each { String subj ->
                         def row = spec.details.conjugations.find { it.subject == subj }
@@ -123,17 +127,63 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         return rows
     }
 
-    /** The verb|tense pairs whose SG3 row cites no usable stem. */
+    /**
+     * The verb|tense pairs whose SG3 row cites no usable stem. IMPERSONAL verbs'
+     * missing imperatives are deliberately NOT here -- they are impermissible
+     * forms (a lexical property), asserted by the sentinel test below. -- tio 17Nov26
+     */
     static List<String> actualGaps() {
         def gaps = []
         discoverVrbSpecs().each { spec ->
             TENSES.each { String tense ->
+                if (tense == "IMMEDIATE_COMMAND" && spec.details.impersonal) return
                 if (!hasStemRow(spec.details, tense)) {
                     gaps << "${spec.name}|${tense}"
                 }
             }
         }
         return gaps.sort()
+    }
+
+    /**
+     * The impersonal verb cohort (user verdict 2026-11-17: "you cannot tell the
+     * sun or moon to shine" -- the imperative is impermissible, not unattested).
+     * The book's boxes for these verbs have no imperative column BECAUSE the form
+     * does not exist linguistically. Conjugate returns the NO_IMPERATIVE sentinel
+     * (see VerbRegistry.isImpersonal / Conjugate). Each entry cites the book
+     * location of the (column-less) box. -- tio 17Nov26
+     */
+    static final List<String> IMPERSONAL_VERBS = [
+        "Adaleniha (It Is Beginning, p.76)",
+        "Agaliha (Moon/Sun Shining, p.77)",
+        "Aganawosga (Warming, p.77)",
+        "Agasga (Growing, p.23)",
+        "Ahyahtvhvsga (Frosting, p.11)",
+        "Ahyvdagwaloa (Thundering, p.78)",
+        "Alidliha (Boiling, p.39)",
+        "Alsgwadia (Ending, p.76)",
+        "Anagaliha (Lightning, p.78)",
+        "Asvga (Smelling, p.75)",
+        "Galiga (Burning, p.75)",
+        "Ganesoysga (Hailing, p.78)",
+        "Gutiha (Snowing, p.78)",
+        "Nigalstanvsga (Happening, p.75)",
+        "Uhyvdla (Cold, p.77)",
+        "Ulogila (Cloudy, p.78)",
+    ]
+
+    def "impersonal verbs refuse the imperative with the NO_IMPERATIVE sentinel (#verb)"() {
+        given: "the spec's details with details.impersonal set"
+        Map details = discoverVrbSpecs().find { it.name == verb }.details
+
+        when: "we request the imperative through the production path"
+        String result = conjugateVerb(verb, details, "SG3", "", "IMMEDIATE_COMMAND", null)
+
+        then: "the engine refuses -- no imperative exists to compose"
+        result == "NO_IMPERATIVE"
+
+        where:
+        verb << IMPERSONAL_VERBS.collect { it.split(/ \(/)[0] }
     }
 
     def "#verb #tense #subj composes a full word"() {
@@ -215,35 +265,21 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Uwohiyuha|INFINITIVE",
         "Uwotla|INFINITIVE",
         "Wakti|INFINITIVE",
-        // tio 17Nov26: IMMEDIATE_COMMAND gaps, classified against the 2012 book:
-        //  - impersonal weather/nature verbs whose boxes have NO imperative column;
+        // tio 17Nov26: IMMEDIATE_COMMAND gaps, classified against the 2012 book.
+        // The 16 IMPERSONAL verbs (weather/nature, no agent to command) are NOT gaps --
+        // their imperative is impermissible (a lexical property, details.impersonal),
+        // asserted by the NO_IMPERATIVE sentinel test. Remaining:
         //  - Atihneha/Ahileha/Ai: the book prints x in the imperative column;
-        //  - Ahili: the book attests ji'i'luga (p.10) but CED carries no imperative
+        //  - Ahili: the book attests ji.i.luga (p.10) but CED carries no imperative
         //    syllabary anchor to derive a parse-back citation from;
         //  - Anidonaa/Anina: the group-standing/sitting imperatives live inside the
         //    Gadoga/Uwotla boxes as compound forms without CED anchors.
-        "Adaleniha|IMMEDIATE_COMMAND",
-        "Agaliha|IMMEDIATE_COMMAND",
-        "Aganawosga|IMMEDIATE_COMMAND",
-        "Agasga|IMMEDIATE_COMMAND",
         "Ahileha|IMMEDIATE_COMMAND",
         "Ahili|IMMEDIATE_COMMAND",
         "Ahliilidoha|IMMEDIATE_COMMAND",
-        "Ahyahtvhvsga|IMMEDIATE_COMMAND",
-        "Ahyvdagwaloa|IMMEDIATE_COMMAND",
         "Ai|IMMEDIATE_COMMAND",
-        "Alidliha|IMMEDIATE_COMMAND",
-        "Alsgwadia|IMMEDIATE_COMMAND",
-        "Anagaliha|IMMEDIATE_COMMAND",
         "Anidonaa|IMMEDIATE_COMMAND",
         "Anina|IMMEDIATE_COMMAND",
-        "Asvga|IMMEDIATE_COMMAND",
         "Atihneha|IMMEDIATE_COMMAND",
-        "Galiga|IMMEDIATE_COMMAND",
-        "Ganesoysga|IMMEDIATE_COMMAND",
-        "Gutiha|IMMEDIATE_COMMAND",
-        "Nigalstanvsga|IMMEDIATE_COMMAND",
-        "Uhyvdla|IMMEDIATE_COMMAND",
-        "Ulogila|IMMEDIATE_COMMAND",
     ]
 }

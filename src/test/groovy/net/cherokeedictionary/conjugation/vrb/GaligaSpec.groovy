@@ -11,6 +11,9 @@ import spock.lang.Unroll
 class GaligaSpec extends VerbBaseSpec {
     static def details = [
         definition: "It Is Burning",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'galigoi', imperative: '', infinitive: '', present: 'galiga', remote_past: 'ulitsvi']

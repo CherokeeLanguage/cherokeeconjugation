@@ -10,6 +10,9 @@ import spock.lang.Unroll
 class AgalihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Shining (Moon/Sun Is)",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', habitual: 'agalisgoi', imperative: '', infinitive: 'ugalihisdi', present: 'agaliha', remote_past: 'ugalisvi']

@@ -9,6 +9,9 @@ import spock.lang.Unroll
 class NigalstanvsgaSpec extends VerbBaseSpec {
     static def details = [
         definition: "It is Happening/Becoming",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG3', object: '', present: 'nigalstanvsga', habitual: 'nigalstanvsgoi', remote_past: 'nigalsda', imperative: '/', infinitive: 'nulstanvi']

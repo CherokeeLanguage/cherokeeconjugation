@@ -48,6 +48,23 @@ class Conjugate {
         ConjugationHelper.determineVerbSet(verb)
         ConjugationHelper.determineCompoundPrefix(verb)
 
+        // tio 17Nov26: IMPERSONAL verbs have NO imperative -- there is no agent to
+        // command. You cannot tell the sun or moon to shine (user's verdict on the
+        // Agaliha class, 2026-11-17): the imperative is linguistically IMPERMISSIBLE,
+        // not merely unattested, so it is a lexical property of the verb rather than
+        // a data gap. Registered lexically (VerbRegistry.registerImpersonal via
+        // VerbBaseSpec details.impersonal); requesting an imperative/volative form
+        // returns the documented NO_IMPERATIVE sentinel instead of composing
+        // garbage (previously ᎦᎦᏁᏐnot a valid letterᏏ for Ganesoysga). The
+        // volative tenses ("let it hail") are NOT blocked -- only the true
+        // imperative. -- tio 17Nov26
+        if (verb.tense == Tense.IMMEDIATE_COMMAND
+                && VerbRegistry.isImpersonal(verb.stemmer?.present3rd?.syllabary)) {
+            verb.wholeWord = "NO_IMPERATIVE"
+            verb.pronounReflexiveRoot = "NO_IMPERATIVE"
+            return verb
+        }
+
         println "DEBUG: conjugating verb=${verb.root} tense=${verb.tense} set=${verb.verbset} prefix=${verb.compoundPrefix}"
 
         // tio 12Nov26: reset per-conjugation so a reused Verb never carries a

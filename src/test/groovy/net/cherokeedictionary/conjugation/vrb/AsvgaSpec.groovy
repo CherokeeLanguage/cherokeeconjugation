@@ -11,6 +11,9 @@ import spock.lang.Unroll
 class AsvgaSpec extends VerbBaseSpec {
     static def details = [
         definition: "It Smells",
+        // tio 17Nov26: IMPERSONAL verb -- no imperative exists (no agent to command; the book
+        // box has no imperative column because the form is impermissible, not unattested).
+        impersonal: true,
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsisvga'],
