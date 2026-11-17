@@ -28,7 +28,8 @@ class UwekahaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "tsitsekahoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agitsekahvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitsekahvi"
-        // tio 17Nov26: the infinitive cluster kohdi/jekohdi (book p.83: uwekohdi, unekohdi) is UNMAPPABLE by the plain transliterator ("ko" is not a plain CV sequence) -- engine output itself carries "not a valid letter". Cell dropped as transliterator debt (see DISCREPANCIES.md D9/D12).
+        // tio 17Nov26: SG1 infinitive UNATTESTED in the 2012 book p.83 (the yaml row is junk); the engine
+        // composes agiwegodi (keeps the citation's we-), same wa-epenthesis class as the D15 Uwaya open question.
         // "SG1" | "" | Tense.INFINITIVE      | "agikohdi"
         "SG3" | "" | Tense.PRESENT         | "tsekaha"
         "SG3" | "" | Tense.HABITUAL        | "tsekahoi"

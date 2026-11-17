@@ -534,6 +534,13 @@ public class SyllabaryUtil {
         // Kanehgwoa vrb family, DISCREPANCIES.md D15).
         data = data.replaceAll("([bcdfgjklmnprstz])h(?!na)(?=[bcdfgjklmnprstzq])", "\$1a")
         data = data.replaceAll("([aeiouv])h(?=[bcdfgjklmnprstzq])", "\$1")
+        // tio 17Nov26: bare k before e/o/u/v surfaces with the g-series glyphs --
+        // the syllabary has no separate k-series except Ꭷ (ka), so ke/ko/ku/kv
+        // are written Ꭸ/Ꭺ/Ꭻ/Ꭼ exactly like ge/go/gu/gv (Uwekaha p.83
+        // infinitive "uwekohdi" -> ᎤᏪᎪᏗ). Mirrors the ki->gi rule that
+        // pre-existed in replace(). ka is excluded: Ꭷ is a distinct glyph from
+        // Ꭶ (Kanegwoga's kanequoga must keep Ꭷ). -- tio 17Nov26
+        data = data.replaceAll("k(?=[eouvw])", "g")
         // tio 16Nov26: remaining illicit C+C onsets get the epenthetic /i/
         // (Cherokee syllabary has no C+C except s-coda + C and the dla/tla,
         // ts-, gw/kw/qu digraphs handled above): kt->git, td->tid, nd->nid...

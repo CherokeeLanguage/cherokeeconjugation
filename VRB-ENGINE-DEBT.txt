@@ -14,9 +14,9 @@ PluralObjectSpec.groovy :: PL3 x SG3IN REMOTE_PAST expected=dunvhnihlvvi -- PL3 
 #   before nv-onsets. USER ADJUDICATION required (D7-adjacent); not auto-patched.
 #
 # ALSO DROPPED from assertions (not counted above):
-# - UwekahaSpec 4 INFINITIVE cells: bare "k"+vowel ("uwekohdi", book p.83) is
-#   unmappable -- the syllabary k-series has only ka. Needs a k-vowel decision
-#   (ko->go? per-glyph k handling) before re-enabling.
+# RESOLVED 2026-11-17 (D15b): k+eouvw->g rule added; Uwekaha 3 SG3 INF cells
+# re-enabled and green. The SG1 INF row is UNATTESTED in the book (dropped;
+# engine composes agiwegodi -- D15 wa-epenthesis open question).
 #
 # ops note: SyllabaryUtil.groovy is UNTRACKED (cloned dependency, per README);
 # the D15a fixes live only in the working copy. Backup:

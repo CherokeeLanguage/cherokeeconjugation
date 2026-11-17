@@ -340,3 +340,48 @@ k-vowel decision. Remaining vrb debt: PluralObjectSpec 1 cell (una- vs unv-,
 user adjudication). NOTE: SyllabaryUtil.groovy is UNTRACKED (cloned
 dependency, per README) -- these fixes exist only in the working copy (backup:
 build/SyllabaryUtil.groovy.bak-20261117); they CANNOT be committed to git.
+
+## D16. Epenthetic after the un- prefix at a prefix+stem boundary: una- (engine) vs unv- (book) (2026-11-17, open)
+
+PluralObjectSpec's last cell (PL3 x SG3IN REMOTE_PAST, Grammar Guide "hit"
+paradigm) expects `dunvhnihlvvi` (ᏚᏅᏂᏢᎥᎢ = du-nv-(h)ni-tlv-vi); the engine
+composes `dunanitlvvi` (ᏚᎾᏂᏢᎥᎢ = du-na-ni-tlv-vi). Both render the same
+underlying /du-un-hnihlvvi/ -- they differ in how the epenthetic between the
+`un-` prefix and the h-onset stem is written:
+
+- **Guide/book convention (unv-):** insert schwa (v is a full Cherokee vowel,
+  Ꮕ = n+v) after `un-`, keeping the stem's initial h silent (no "hn" glyph,
+  so ᏅᏂ = unv + hni). The book uses this consistently across verbs and
+  tenses: VRB 2012 line 2299 `anvhniha ... unvhnilv'i`, line 2431
+  `unvhnistanv'i`, guide `danvhniha` / `dunvhnihlvvi`.
+- **Engine convention (una-):** the laryngeal rule turns the h itself into
+  /a/ (C-h-C -> a), eliminating it. This rule is CED-derived and PINNED by
+  SyllabaryTest round-trips (nhs -> ᎾᏏ, nht -> ᎾᏖ).
+
+`unv` is NOT a contraction of `una + a` (aa does not contract to v; v is the
+schwa vowel, not a consonant) -- the two are sibling epentheses after `un-`,
+not parent/child.
+
+**Candidate fix (not applied):** the engine's h->a rule arguably over-applies
+at PREFIX+STEM boundaries -- the pinned CED cells (nhs, nht) are all
+STEM-INTERNAL clusters, a different environment. Restricting h->a to
+stem-internal clusters would let prefix-boundary h surface per the book
+(silent h + schwa epenthesis -> unv-). This touches the globally-pinned
+laryngeal rule; would need round-trip probes + both suites. NOT auto-patched
+per the convention; cell remains engine-characterized candidate. -- tio 17Nov26
+
+## D15b. k+vowel rule added; Uwekaha infinitives re-enabled (2026-11-17)
+
+Implemented `k(?=[eouvw])` -> `g` in `newTsalagiToSyllabary` (global): the
+syllabary has no separate k-series glyphs except Ꭷ (ka), so ke/ko/ku/kv are
+written with the g-glyphs Ꭸ/Ꭺ/Ꭻ/Ꭼ exactly like ge/go/gu/gv. Mirrors the
+pre-existing `ki`->`gi` rule in replace(). ka is EXCLUDED (Ꭷ is a distinct
+glyph from Ꭶ; Kanegwoga's kanequoga must keep Ꭷ). Risk-scanned: every
+existing k+vowel sequence in the test expectations is `ka` plus the target
+`uwekohdi` -- no collateral. Default suite green.
+
+UwekahaSpec: the 3 SG3 INFINITIVE cells re-enabled and GREEN (book p.83:
+uwekohdi/unekohdi -> ᎤᏪᎪᏗ/ᎤᏁᎪᏗ). The SG1 INFINITIVE row stays dropped: the
+book does not attest it, and the engine composes `agiwegodi` (keeps the
+citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
+-- tio 17Nov26
