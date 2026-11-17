@@ -10,6 +10,12 @@ import spock.lang.Unroll
 class AdlvkwsgaSpec extends VerbBaseSpec {
     static def details = [
         definition: "S/hes Bragging",
+        // tio 17Nov26: D7 -- the 2012 book (Bragging p.68) coalesces the qu-series stem-final v into
+        // the vowel-initial suffixes: present/habitual/imperative surface ᐆ (qua), while ᐈ stays
+        // before the remote -v’i and ᐇ before the infinitive -isdi (all confirmed by the book box).
+        // The engine keeps the citation’s quv everywhere; the lexeme flag applies the coalescence
+        // (registerQuvCoalescing). Lexeme-level: kanegwoga keeps ᐉ quo throughout.
+        quvCoalescing: true,
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'gadlvgwasga'],
@@ -26,23 +32,23 @@ class AdlvkwsgaSpec extends VerbBaseSpec {
         conjugateVerb("Adlvkwsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gatlvquvsga"
-        "SG1" | "" | Tense.HABITUAL        | "gatlvquvsgoi"
+        "SG1" | "" | Tense.PRESENT         | "gatlvquasga"
+        "SG1" | "" | Tense.HABITUAL        | "gatlvquasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquatlvquvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatlvquvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquatlvquisdi"
-        "SG2" | "" | Tense.PRESENT         | "hatlvquvsga"
-        "SG2" | "" | Tense.HABITUAL        | "hatlvquvsgoi"
+        "SG2" | "" | Tense.PRESENT         | "hatlvquasga"
+        "SG2" | "" | Tense.HABITUAL        | "hatlvquasgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsatlvquvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatlvquvsvi"
         "SG2" | "" | Tense.INFINITIVE      | "tsatlvquisdi"
-        "SG3" | "" | Tense.PRESENT         | "atlvquvsga"
-        "SG3" | "" | Tense.HABITUAL        | "atlvquvsgoi"
+        "SG3" | "" | Tense.PRESENT         | "atlvquasga"
+        "SG3" | "" | Tense.HABITUAL        | "atlvquasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utlvquvsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvquvsvi"
         "SG3" | "" | Tense.INFINITIVE      | "utlvquisdi"
-        "SG3" | "" | Tense.PRESENT         | "atlvquvsga"
-        "SG3" | "" | Tense.HABITUAL        | "atlvquvsgoi"
+        "SG3" | "" | Tense.PRESENT         | "atlvquasga"
+        "SG3" | "" | Tense.HABITUAL        | "atlvquasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utlvquvsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvquvsvi"
         "SG3" | "" | Tense.INFINITIVE      | "utlvquisdi"

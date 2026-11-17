@@ -95,6 +95,12 @@ abstract class VerbBaseSpec extends Specification {
             net.cherokeedictionary.verb.metadata.VerbRegistry.registerGlottalInitial(toSyll(thirdPersonRow.present))
         }
 
+        // tio 17Nov26: qu-series v-coalescing (D7, book Adlvkwsga p.68) registers
+        // lexically from details.quvCoalescing -- see VerbRegistry.isQuvCoalescing. -- tio 17Nov26
+        if (details.quvCoalescing && thirdPersonRow?.present) {
+            net.cherokeedictionary.verb.metadata.VerbRegistry.registerQuvCoalescing(toSyll(thirdPersonRow.present))
+        }
+
         // tio 17Nov26: lexeme-specific whole-form surface overrides (D14
         // follow-up). Within the have-verb family the book is inconsistent
         // about the laryngeal after the ji- allomorph: hold (long) drops the

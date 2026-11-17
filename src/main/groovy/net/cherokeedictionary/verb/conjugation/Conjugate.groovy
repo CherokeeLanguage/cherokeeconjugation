@@ -9,6 +9,7 @@ import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.PrefixProcessor
+import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.conjugation.VerbConjugationProcessor
 import net.cherokeedictionary.verb.containers.FinalSuffixProcessor
 import net.cherokeedictionary.verb.containers.NonFinalSuffixProcessor
@@ -75,6 +76,17 @@ class Conjugate {
             verb.wholeWord = PrefixProcessor.process(verb)
             verb.wholeWord = NonFinalSuffixProcessor.process(verb)
             verb.wholeWord = FinalSuffixProcessor.process(verb)
+
+            // tio 17Nov26: D7 qu-series v-coalescing (VerbRegistry.isQuvCoalescing,
+            // 2012 book Adlvkwsga p.68) -- applied POST-pipeline so it covers every
+            // composition path, including the PRESENT/REMOTE citation echoes: the
+            // coalesced pair ᏋᏍ (quv + s-onset suffix) surfaces ᏆᏍ (qua), while
+            // Ꮛ before Ꮢ (remote -v'i) and Ꮘ (infinitive -isdi) are untouched --
+            // exactly the book's allomorphy. -- tio 17Nov26
+            if (VerbRegistry.isQuvCoalescing(verb.stemmer?.present3rd?.syllabary)
+                    && verb.wholeWord) {
+                verb.wholeWord = verb.wholeWord.replaceAll("Ꮛ(?=Ꮝ)", "Ꮖ")
+            }
         } else {
             verb.pronounReflexiveRoot = "      "
             verb.wholeWord = "       "

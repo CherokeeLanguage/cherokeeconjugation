@@ -222,6 +222,32 @@ class VerbRegistry {
         return glottalInitialStems.find { present3rd.contains(it) } != null
     }
 
+    // tio 17Nov26: QU-SERIES V-COALESCING (D7 verdict, 2012 book Adlvkwsga
+    // Bragging p.68). The book prints the stem-final v of the qu-series coalesced
+    // into a vowel-initial suffix -- SG1 gadlvgwasga / habitual -sgo'i / imperative
+    // -gwa all surface Ꮖ (qua) -- while the v REMAINS before the remote -v'i
+    // suffix (udlvkwsv'i, Ꮛ) and the infinitive -isdi surfaces Ꮘ (qui,
+    // udlvkwisdi). The engine keeps the citation's quv everywhere (atlvquvsga).
+    // The allomorphy is lexeme-level: kanegwoga (Increase p.78) keeps Ꮙ (quo)
+    // throughout, so no phonological rule is possible. Implemented at the
+    // CED-canonical glyph level (the coalesced pair ᏋᏍ -> ᏆᏍ; Feeling's
+    // romanization "dlvgwa" is non-canonical and cannot be transliterated
+    // directly). Keyed on the present3rd citation, contained-in match, same
+    // rationale as hasFivSg3W. Registered lexically via
+    // VerbBaseSpec details.quvCoalescing. -- tio 17Nov26
+    private static final Set<String> quvCoalescingStems = []
+
+    /** Registers a verb (by present3rd citation) whose qu-series v coalesces before vowel-initial suffixes. -- tio 17Nov26 */
+    static void registerQuvCoalescing(String present3rd) {
+        if (present3rd) quvCoalescingStems.add(present3rd)
+    }
+
+    /** True when this verb's qu-series v coalesces before vowel-initial suffixes (ᏋᏍ -> ᏆᏍ). -- tio 17Nov26 */
+    static boolean isQuvCoalescing(String present3rd) {
+        if (!present3rd) return false
+        return quvCoalescingStems.find { present3rd.contains(it) } != null
+    }
+
     // tio 15Nov26: IMMEDIATE imperative/volative sibling of the FIV flag. The
     // guide mandates w- for ALL non-second-person "let ... right now!" forms,
     // and the book confirms per verb — To See IIV sg3 "Let him/her see it
