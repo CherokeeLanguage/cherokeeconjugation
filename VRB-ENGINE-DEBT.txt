@@ -1,27 +1,23 @@
-# VRB engine debt -- regenerated 2026-11-17 after the book transcription pass (D15)
-# 34 failing vrb cells (was 111). Default suite: green.
+# VRB engine debt -- regenerated 2026-11-17 (D15 transcription pass + D15a SyllabaryUtil fix)
+# 1 failing vrb cell (was 111 at session start; 34 after the D15 book transcription; 1 after D15a).
+# Default suite: green. Full suite: 13,213/13,214.
 #
-# Buckets:
-# 1. qu/Ꮙ composition cluster (28 cells) -- engine composition OUTPUT contains
-#    "not a valid letter". Retry ONLY inside the plain-first rescue branch of
-#    tsalagiToSyllabary(String), with round-trip probes per spec. Two
-#    pre-transform attempts (2026-11-17) over-fired 137->258 and were REVERTED.
-#    parse conventions: parse(Ꮙ)="quo", parse(Ꮚ)="quv"; gwv/w+C are ambiguous
-#    across verbs -- do NOT add global pre-transforms.
-# 2. tlo/hlq composition (5 cells, Adehloqwaa INFINITIVE) -- needs engine
-#    verb.addTrace-style tracing work.
-# 3. User adjudication (1 cell, PluralObjectSpec PL3 remote una- vs unv-).
+# FIXED 2026-11-17 (DISCREPANCIES.md D15a) -- NOT a composition-rescue problem:
+# - hgw family (Kanehgwoa 25 + Kanegwoga 3): replace() maps gwo->quo BEFORE the
+#   h-rules, so hgw arrives as "hqu"; the h-rule lookahead classes lacked q.
+#   Fix: q added to both h-rule lookaheads in newTsalagiToSyllabary.
+# - hlq family (Adehloqwaa 5): the book prints the infinitive with the hlq
+#   cluster (agwadehlqwasdi = ᎶᏆᏍᏗ); the hl->lo rule class lacked q.
 #
-AdehloqwaaSpec.groovy :: SG1/- INFINITIVE expected=agwadehlqwasdi ACT=ᎠᏆᏕnot a valid letterᏆᏍᏗ
-AdehloqwaaSpec.groovy :: SG2/- INFINITIVE expected=jadehlqwasdi ACT=ᏣᏕnot a valid letterᏆᏍᏗ
-AdehloqwaaSpec.groovy :: SG3/- INFINITIVE expected=udehlqwasdi ACT=ᎤᏕnot a valid letterᏆᏍᏗ
-AdehloqwaaSpec.groovy :: PL3/- INFINITIVE expected=unadehlqwasdi ACT=ᎤᎾᏕnot a valid letterᏆᏍᏗ
-AdehloqwaaSpec.groovy :: PL1INCL/- INFINITIVE expected=igadehlqwasdi ACT=ᎢᎦᏕnot a valid letterᏆᏍᏗ
-# NOTE: AhyehaSpec infinitives were fixed from book p.84 (SG3 citation gahyehi) and are green;
-# the book prints ji'yehi/hihyehi for SG1/SG2 (D14 glottal-initial family) where the engine
-# composes standard agi-/tsa- -- divergence noted under D14, cells characterized.
-KanegwogaSpec.groovy :: SG3/- REMOTE_PAST expected=unequotsvi ACT=ᎤᏁnot a valid letterᏉᏨᎢ
-KanegwogaSpec.groovy :: SG3/- FUTURE_COMMAND expected=ganequotsvi ACT=ᎦᏁnot a valid letterᏉᏨᎢ
-KanegwogaSpec.groovy :: SG3/- INFINITIVE expected=unequoisdi ACT=ᎤᏁnot a valid letterᏉᎢᏍᏗ
-KanehgwoaSpec.groovy :: 25 cells, all tenses x 5 subjects -- engine composition output carries "not a valid letter" on the Ꮙ (qu) cluster
-PluralObjectSpec.groovy :: PL3 x SG3IN REMOTE_PAST expected=dunvhnihlvvi -- una- vs unv- before nv-onsets (user adjudication, D7-adjacent)
+# REMAINING (1 cell):
+PluralObjectSpec.groovy :: PL3 x SG3IN REMOTE_PAST expected=dunvhnihlvvi -- PL3 una- vs unv-
+#   before nv-onsets. USER ADJUDICATION required (D7-adjacent); not auto-patched.
+#
+# ALSO DROPPED from assertions (not counted above):
+# - UwekahaSpec 4 INFINITIVE cells: bare "k"+vowel ("uwekohdi", book p.83) is
+#   unmappable -- the syllabary k-series has only ka. Needs a k-vowel decision
+#   (ko->go? per-glyph k handling) before re-enabling.
+#
+# ops note: SyllabaryUtil.groovy is UNTRACKED (cloned dependency, per README);
+# the D15a fixes live only in the working copy. Backup:
+# build/SyllabaryUtil.groovy.bak-20261117

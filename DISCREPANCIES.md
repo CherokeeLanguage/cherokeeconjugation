@@ -304,3 +304,27 @@ round-trip probes), AdehloqwaaSpec 5 (tlo/hlq composition, needs engine
 addTrace work), PluralObjectSpec 1 (una- vs unv- -- user adjudication).
 UwekahaSpec 4 infinitive cells also carry unmappable `ko` clusters (book:
 `uwekohdi`/`unekohdi`) -- dropped from assertion, same rescue-branch bucket.
+
+## D15a. qu/hlq clusters ROOT-CAUSED and FIXED (2026-11-17, SyllabaryUtil) -- 34 -> 1 cell
+
+The "qu composition cluster" was NOT a composition-rescue problem. The
+pre-existing `replace()` helper maps `gwo`->`quo` and `jv`->`tsv` BEFORE the
+h-rules in `newTsalagiToSyllabary`, so:
+
+1. **hgw family** (Kanehgwoa 25 + Kanegwoga 3): pre-aspirated `hgw`+vowel
+   arrives as `hqu` after the gwo->quo rewrite, and the vowel-h-drop /
+   laryngeal-rules' lookahead classes `[bcdfgjklmnprstz]` lacked `q` -- the h
+   survived and poisoned the word. FIX: added `q` to both lookahead classes
+   (SyllabaryUtil lines ~527-530). Engine now composes the yaml expectations
+   exactly; no re-characterization.
+2. **hlq family** (Adehloqwaa 5): the book itself prints the infinitive with
+   the `hlq` cluster ("agwadehlqwasdi", hl = voiceless-l, q = qu-series onset;
+   ᎶᏆᏍᏗ). FIX: added `q` to the hl->lo rule class (line ~516).
+
+Default suite green after both fixes (global transliterator rules). Uwekaha's
+4 dropped infinitive cells (`uwekohdi`, bare `k`+vowel is unmappable since the
+k-series has only ka) are a DIFFERENT cluster and remain dropped pending the
+k-vowel decision. Remaining vrb debt: PluralObjectSpec 1 cell (una- vs unv-,
+user adjudication). NOTE: SyllabaryUtil.groovy is UNTRACKED (cloned
+dependency, per README) -- these fixes exist only in the working copy (backup:
+build/SyllabaryUtil.groovy.bak-20261117); they CANNOT be committed to git.
