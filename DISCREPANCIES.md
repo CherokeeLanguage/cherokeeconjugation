@@ -35,7 +35,7 @@ FUTURE_COMMAND = Stem III + -v'i (the remote-past surface, `gadadolistanvi`).
 **Citation for the engine convention:** BOOK stem summaries (printed pp.167-176,
 per `TenseSuffixCompletenessSpec.groovy:37-40`): "FUTURE_COMMAND -v'i / -esdi
 Future Imperative/Volative (Stem III + -v'i, usually identical to the Remote
-Past row)"; pinned by `GowatihaSG3SG3ANTest.groovy:108-110` (SG3 ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ ÃÂÃÂ¡ÃÂÃÂÃÂÃÂªÃÂÃÂ¡ÃÂÃÂÃÂÃÂ²ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢) and the
+Past row)"; pinned by `GowatihaSG3SG3ANTest.groovy:108-110` (SG3 ᎠᎪᎲᎢ) and the
 283 wired To*Future/FutureImperativeVolative specs.
 
 **Resolution:** the vrb specs were reconciled to Stem III (mechanical rewrite of
@@ -99,43 +99,43 @@ treated as the j-specific-past surface (per verb) or re-transcribed as Set-B?
 Compare against BOOK remote-past tables (which print Set-B surfaces like
 `edohv'i`) per verb.
 
-## D5. Laryngeal h: written (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿) vs unwritten (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾) before n
+## D5. Laryngeal h: written (Ꮏ) vs unwritten (Ꮎ) before n
 
-**Discrepancy:** `SyllabaryUtil.newTsalagiToSyllabary` maps `hna` -> ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿ (the hna
+**Discrepancy:** `SyllabaryUtil.newTsalagiToSyllabary` maps `hna` -> Ꮏ (the hna
 glyph exists in the syllabary), while the yaml transcribes the laryngeal as
 unwritten before n.
-Example: `Adansini` SG1 PRESENT: expected `gadanasini` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ); the engine's
-internal latin carries the laryngeal and surfaces ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿, which the yaml cell does
+Example: `Adansini` SG1 PRESENT: expected `gadanasini` (ᎦᏓᎾᏏᏂ); the engine's
+internal latin carries the laryngeal and surfaces Ꮏ, which the yaml cell does
 not match.
 
 **Citation:** CED entries routinely write the laryngeal unreduced in latin
-(`gadahnasini`-style) while the syllabary column shows plain ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾. Feeling's
-orthography writes ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿ only where the h is phonemically distinct.
+(`gadahnasini`-style) while the syllabary column shows plain Ꮎ. Feeling's
+orthography writes Ꮏ only where the h is phonemically distinct.
 
-**Open question for review:** per verb, is the h syllabary-visible (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿) or not
-(ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾)? A blanket rule will be wrong for one class of verbs.
+**Open question for review:** per verb, is the h syllabary-visible (Ꮏ) or not
+(Ꮎ)? A blanket rule will be wrong for one class of verbs.
 
-**Partial resolution 2026-11-16 (sweep):** SyllabaryUtil implements laryngeal h between consonants -> a (nhs -> ÃÂ¡ÃÂÃÂ¾ÃÂ¡ÃÂÃÂ), vowel+h+consonant drops the h (uhtv- -> utv-), word-initial/after-vowel hna -> ÃÂ¡ÃÂÃÂ¿ (pinned by SyllabaryTest).
+**Partial resolution 2026-11-16 (sweep):** SyllabaryUtil implements laryngeal h between consonants -> a (nhs -> Ꮎᓏ), vowel+h+consonant drops the h (uhtv- -> utv-), word-initial/after-vowel hna -> ᏿ (pinned by SyllabaryTest).
 
 **VERDICT 2026-11-17 (from the 2012 book, Adansini Crawling p.67):** the book prints
-SG1 present `gadanasini` -- the laryngeal is UNWRITTEN (plain ÃÂ¡ÃÂÃÂ¾, na-si), AND the
+SG1 present `gadanasini` -- the laryngeal is UNWRITTEN (plain Ꮎ, na-si), AND the
 ns+vowel epenthesis is /a/, not the generic /i/. Implemented: a scoped
 `n(?=s[aeiouv])` -> `na` rule in the ced/rescue block (the generic epenthesis had been
 emitting nisini). AdansiniSpec re-asserted to the book forms (gadanasini family), green.
-The hna -> ÃÂ¡ÃÂÃÂ¿ mapping stays for forms where the sources write hna explicitly. -- tio 17Nov26
+The hna -> ᏿ mapping stays for forms where the sources write hna explicitly. -- tio 17Nov26
 
 ## D6. Suffix variance: -ha vs -a present suffix
 
 **Discrepancy:** verb-final present suffix surfaces differ between yaml cells
 and engine composition.
-Examples: `Adidiha` SG1 PRESENT: engine `gadidia` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ­) vs YAML `gadidia`
-(ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ ); `Adiha` SG1: engine ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ­ vs YAML ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ .
+Examples: `Adidiha` SG1 PRESENT: engine `gadidia` (ᎦᏗᏗᎭ) vs YAML `gadidia`
+(ᎦᏗᏗᎠ); `Adiha` SG1: engine ᎦᏗᎭ vs YAML ᎦᏗᎠ.
 
 **VERDICT 2026-11-17 (from the 2012 book, Adiha Saying p.6 + Adidiha p.73):** SG2/SG3
 keep the present suffix -ha (hadiha / hadidiha / adiha / adidiha) -- the engine
 composition is CORRECT and the yaml -a cells were the noise. But SG1 surfaces the
-laryngeal as a GLOTTAL: gadiÃ¢ÂÂa / gadidiÃ¢ÂÂa -- the yaml romanization was right.
-The engine recomposes the citationÃ¢ÂÂs glottal back to -ha; the SG1 present cells of
+laryngeal as a GLOTTAL: gadi’a / gadidi’a -- the yaml romanization was right.
+The engine recomposes the citation’s glottal back to -ha; the SG1 present cells of
 AdihaSpec/AdidihaSpec are now registered as whole-form surfaces (details.surfaceOverrides,
 D14 mechanism) asserting the book glottal forms. NOTE the lexeme-level scope: uduliha
 (want) keeps -ha in SG1 (agwaduliha), so this is NOT a blanket SG1 h-elision rule.
@@ -143,21 +143,21 @@ D14 mechanism) asserting the book glottal forms. NOTE the lexeme-level scope: ud
 
 ## D7. kw/gw allomorphy (ku/quv series)
 
-**Discrepancy:** `Adlvkwsga` SG1 PRESENT: engine surfaces ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ (kwv) where the
-yaml prints ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ (gwa/kwa) -- `gadlvgwasga` vs the engine's `gadlvgwvsga`-shaped
+**Discrepancy:** `Adlvkwsga` SG1 PRESENT: engine surfaces Ꮛ (kwv) where the
+yaml prints Ꮖ (gwa/kwa) -- `gadlvgwasga` vs the engine's `gadlvgwvsga`-shaped
 output.
 
-**Citation:** the qu series allomorphy (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ) is lexical per verb in Feeling's
+**Citation:** the qu series allomorphy (Ꮖ/Ꮛ) is lexical per verb in Feeling's
 materials (see also `VerbRegistry.hasFivSg3W`-style lexeme-level flags in
 `VerbConjugationProcessor.groovy:246-260` for the analogous wa-/a- variance).
 
 **VERDICT 2026-11-17 (from the 2012 book, Adlvkwsga Bragging p.68):** the book prints
-SG1 `gadlvgwasga` (á, gwa) for PRESENT/HABITUAL/IMPERATIVE and á (kwv/quv) only
-before the remote -vâi suffix (udlvkwsvâi), á (kwi) before the infinitive -isdi
-(udlvkwisdi) -- i.e. the stemâs final v COALESCES with a vowel-initial suffix and
-stays only before -vâi. The engine keeps the citationâs quv everywhere
+SG1 `gadlvgwasga` (ᐆ, gwa) for PRESENT/HABITUAL/IMPERATIVE and ᐈ (kwv/quv) only
+before the remote -v’i suffix (udlvkwsv’i), ᐇ (kwi) before the infinitive -isdi
+(udlvkwisdi) -- i.e. the stem’s final v COALESCES with a vowel-initial suffix and
+stays only before -v’i. The engine keeps the citation’s quv everywhere
 (atlvquvsga). The qu-series allomorphy is confirmed lexeme-level (kanegwoga keeps
-á quo throughout). **IMPLEMENTED 2026-11-17 (same day):** VerbRegistry.registerQuvCoalescing/isQuvCoalescing
+ᐉ quo throughout). **IMPLEMENTED 2026-11-17 (same day):** VerbRegistry.registerQuvCoalescing/isQuvCoalescing
 (keyed on present3rd, contained-in match) + a POST-pipeline glyph rule in Conjugate:
 for registered verbs the composed surface ᐈᏽ (quv + s-onset suffix) becomes
 ᐆᏽ (qua) -- covering every composition path including the citation echoes -- while
@@ -182,11 +182,11 @@ not patched. They need re-transcription from BOOK/CED, not engine changes.
 ## D9. Transliteration cluster rules -- partially resolved (2026-11-16)
 
 **Implemented** in `SyllabaryUtil.newTsalagiToSyllabary` (global; validated by
-round-trip probes and both suites): `hlv`->`lv`, `hl`+consonant -> `lo` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¶),
+round-trip probes and both suites): `hlv`->`lv`, `hl`+consonant -> `lo` (Ꮆ),
 `kd`->`gid`, `tsd`->`tsid` (epenthetic /i/ for illicit C+C clusters).
 **Citation:** BOOK romanization conventions -- the same hl->lo rule already
 lived in `VerbBaseSpec.normalizeBookRomanization` for the wired verb-book
-fixtures; `hna` -> ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¿ pre-existed at SyllabaryUtil line ~495.
+fixtures; `hna` -> Ꮏ pre-existed at SyllabaryUtil line ~495.
 
 **Still failing clusters (per-verb verdicts needed):** `hn`/`hna` (see D5),
 `tsd`+l (`tsdloysvi` -- needs the dla/tla series decision), `dlv`/`tlv` kw
@@ -232,7 +232,7 @@ cells closed across 25 specs. Fix classes:
    - Asvga SG3 remote: engine composes `usvgvi` (u- prefix), book prints
      `asvgv'i` (a- prefix).
 
-**Remaining 38 cells:** KanehgwoaSpec 25 + KanegwogaSpec 3 (the `qu`/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ cluster:
+**Remaining 38 cells:** KanehgwoaSpec 25 + KanegwogaSpec 3 (the `qu`/Ꮙ cluster:
 engine composition output itself contains "not a valid letter"; two
 pre-transform rescue attempts over-fired 2026-11-17 and were reverted -- only
 retry INSIDE the plain-first rescue branch of `tsalagiToSyllabary(String)` with
@@ -255,7 +255,7 @@ h-rules in `newTsalagiToSyllabary`, so:
    exactly; no re-characterization.
 2. **hlq family** (Adehloqwaa 5): the book itself prints the infinitive with
    the `hlq` cluster ("agwadehlqwasdi", hl = voiceless-l, q = qu-series onset;
-   ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¶ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ). FIX: added `q` to the hl->lo rule class (line ~516).
+   ᎶᏆᏍᏗ). FIX: added `q` to the hl->lo rule class (line ~516).
 
 Default suite green after both fixes (global transliterator rules). Uwekaha's
 4 dropped infinitive cells (`uwekohdi`, bare `k`+vowel is unmappable since the
@@ -268,19 +268,19 @@ build/SyllabaryUtil.groovy.bak-20261117); they CANNOT be committed to git.
 ## D16. Epenthetic after the un- prefix at a prefix+stem boundary: una- (engine) vs unv- (book) (2026-11-17, open)
 
 PluralObjectSpec's last cell (PL3 x SG3IN REMOTE_PAST, Grammar Guide "hit"
-paradigm) expects `dunvhnihlvvi` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢ = du-nv-(h)ni-tlv-vi); the engine
-composes `dunanitlvvi` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢ = du-na-ni-tlv-vi). Both render the same
+paradigm) expects `dunvhnihlvvi` (ᏚᏅᏂᏢᎥᎢ = du-nv-(h)ni-tlv-vi); the engine
+composes `dunanitlvvi` (ᏚᎾᏂᏢᎥᎢ = du-na-ni-tlv-vi). Both render the same
 underlying /du-un-hnihlvvi/ -- they differ in how the epenthetic between the
 `un-` prefix and the h-onset stem is written:
 
 - **Guide/book convention (unv-):** insert schwa (v is a full Cherokee vowel,
-  ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ = n+v) after `un-`, keeping the stem's initial h silent (no "hn" glyph,
-  so ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ = unv + hni). The book uses this consistently across verbs and
+  Ꮕ = n+v) after `un-`, keeping the stem's initial h silent (no "hn" glyph,
+  so ᏅᏂ = unv + hni). The book uses this consistently across verbs and
   tenses: VRB 2012 line 2299 `anvhniha ... unvhnilv'i`, line 2431
   `unvhnistanv'i`, guide `danvhniha` / `dunvhnihlvvi`.
 - **Engine convention (una-):** the laryngeal rule turns the h itself into
   /a/ (C-h-C -> a), eliminating it. This rule is CED-derived and PINNED by
-  SyllabaryTest round-trips (nhs -> ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ, nht -> ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ).
+  SyllabaryTest round-trips (nhs -> ᎾᏏ, nht -> ᎾᏖ).
 
 `unv` is NOT a contraction of `una + a` (aa does not contract to v; v is the
 schwa vowel, not a consonant) -- the two are sibling epentheses after `un-`,
@@ -297,15 +297,15 @@ per the convention; cell remains engine-characterized candidate. -- tio 17Nov26
 ## D15b. k+vowel rule added; Uwekaha infinitives re-enabled (2026-11-17)
 
 Implemented `k(?=[eouvw])` -> `g` in `newTsalagiToSyllabary` (global): the
-syllabary has no separate k-series glyphs except ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ§ (ka), so ke/ko/ku/kv are
-written with the g-glyphs ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¨/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂª/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ«/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¬ exactly like ge/go/gu/gv. Mirrors the
-pre-existing `ki`->`gi` rule in replace(). ka is EXCLUDED (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ§ is a distinct
-glyph from ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¦; Kanegwoga's kanequoga must keep ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ§). Risk-scanned: every
+syllabary has no separate k-series glyphs except Ꭷ (ka), so ke/ko/ku/kv are
+written with the g-glyphs Ꭸ/Ꭺ/Ꭻ/Ꭼ exactly like ge/go/gu/gv. Mirrors the
+pre-existing `ki`->`gi` rule in replace(). ka is EXCLUDED (Ꭷ is a distinct
+glyph from Ꭶ; Kanegwoga's kanequoga must keep Ꭷ). Risk-scanned: every
 existing k+vowel sequence in the test expectations is `ka` plus the target
 `uwekohdi` -- no collateral. Default suite green.
 
 UwekahaSpec: the 3 SG3 INFINITIVE cells re-enabled and GREEN (book p.83:
-uwekohdi/unekohdi -> ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¤ÃÂÃÂ¡ÃÂÃÂÃÂÃÂªÃÂÃÂ¡ÃÂÃÂÃÂÃÂªÃÂÃÂ¡ÃÂÃÂÃÂÃÂ/ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¤ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂªÃÂÃÂ¡ÃÂÃÂÃÂÃÂ). The SG1 INFINITIVE row stays dropped: the
+uwekohdi/unekohdi -> ᎤᏪᎪᏗ/ᎤᏁᎪᏗ). The SG1 INFINITIVE row stays dropped: the
 book does not attest it, and the engine composes `agiwegodi` (keeps the
 citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
 -- tio 17Nov26
@@ -314,9 +314,9 @@ citation's we-), the same wa-epenthesis class as the D15 Uwaya open question.
 composition shows the laryngeal h->a rule is NOT involved. Chain: the SG3 remote
 citation `uwahnihlvvi` is parsed by `replace()` rule 3 (aspirated n: `hn`+vowel ->
 `n`+vowel -- Feeling's silent-h convention), dropping the h; the stemmer's a-branch
-then strips the w, giving the vowel-initial stem `anihlvvi`; the PL3 preVowel `ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¤n`
-fuses with the leading a -> `una-` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¾ÃÂÃÂ¡ÃÂÃÂÃÂÃÂÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ¢). The guide's `unv-` (ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ) is a COMPETING
-ORTHOGRAPHY for the same pre-aspirated n: ÃÂÃÂ¡ÃÂÃÂÃÂÃÂ (nv) is how Feeling's romanization
+then strips the w, giving the vowel-initial stem `anihlvvi`; the PL3 preVowel `Ꭴn`
+fuses with the leading a -> `una-` (ᏚᎾᏂᏢᎥᎢ). The guide's `unv-` (Ꮕ) is a COMPETING
+ORTHOGRAPHY for the same pre-aspirated n: Ꮕ (nv) is how Feeling's romanization
 "hn" surfaces when the aspiration is marked. The engine's hn->n normalization is
 systemic (rule 3 fires on every hni/hne/hno in all data); re-defining it to emit
 nv would re-characterize the entire aspirated-n family across both suites --
