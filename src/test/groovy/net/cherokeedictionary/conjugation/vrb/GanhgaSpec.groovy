@@ -32,8 +32,8 @@ class GanhgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsinvga"
         "SG1" | "" | Tense.HABITUAL        | "tsinvgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "x"
+        // tio 17Nov26: REMOTE_PAST UNATTESTED -- the 2012 book (Lying Down, Ganhga) prints x in the remote column for every subject row; yaml junk value dropped.
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinv"
-        "SG1" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Ganhga has no infinitive column; yaml junk value dropped.
     }
 }

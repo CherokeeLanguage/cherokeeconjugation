@@ -28,6 +28,6 @@ class AninaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "aninoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uninvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aninvi"
-        "SG3" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book prints Anina (ani'na) only inside the Uwotla (Sitting) box p.71; no infinitive column. yaml junk dropped.
     }
 }

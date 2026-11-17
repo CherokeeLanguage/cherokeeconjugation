@@ -25,8 +25,9 @@ class GaligaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsiliga"
         "SG1" | "" | Tense.HABITUAL        | "tsiligoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agilitsvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsilitsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "It"
+        // tio 17Nov26: the SG1 remote/future-command/infinitive rows are yaml fabrications (the 2012 book box, Galiga Burning p.75, has only the SG3 box); dropped.
+        // "SG1" | "" | Tense.REMOTE_PAST     | "agilitsvi"
+        // "SG1" | "" | Tense.FUTURE_COMMAND      | "tsilitsvi"
+        // "SG1" | "" | Tense.INFINITIVE      | "It"
     }
 }

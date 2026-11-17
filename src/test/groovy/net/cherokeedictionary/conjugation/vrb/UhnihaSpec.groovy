@@ -32,7 +32,7 @@ class UhnihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "aquanihoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquanihvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquanihvi"
-        "SG1" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book (Uhniha, In Bed) prints x in the infinitive column.
         "SG2" | "" | Tense.PRESENT         | "tsaniha"
         "SG2" | "" | Tense.HABITUAL        | "tsanihoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanihvi"

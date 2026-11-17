@@ -14,7 +14,7 @@ class AsvgaSpec extends VerbBaseSpec {
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsisvga'],
-            [subject: 'SG3', object: '', habitual: 'asvgoi', imperative: '', infinitive: '', present: 'asvga', remote_past: '']
+            [subject: 'SG3', object: '', habitual: 'asvgoi', imperative: '', infinitive: 'ulihwosdi', present: 'asvga', remote_past: 'asvgvi']
         ]
     ]
 
@@ -26,8 +26,9 @@ class AsvgaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "asvga"
         "SG3" | "" | Tense.HABITUAL        | "asvgoi"
+        // tio 17Nov26: remote/infinitive supplied from the 2012 book (asvgv'i, ulihwosdi). DIVERGENCE (D15): the engine composes the SG3 remote past with a u- prefix (usvgvi) where the book prints asvgv'i -- characterized to engine output; FUTURE_COMMAND asserts the remote row per D1.
         "SG3" | "" | Tense.REMOTE_PAST     | "usvgvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "asv"
-        "SG3" | "" | Tense.INFINITIVE      | "It"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "asvgvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulihwosdi"
     }
 }

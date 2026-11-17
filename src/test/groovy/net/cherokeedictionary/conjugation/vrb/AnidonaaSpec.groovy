@@ -28,6 +28,6 @@ class AnidonaaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "anidonaoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unidonavi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anidonavi"
-        "SG3" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book prints Anidonaa only inside the Gadoga (Standing) box p.56; no infinitive column. yaml junk dropped.
     }
 }

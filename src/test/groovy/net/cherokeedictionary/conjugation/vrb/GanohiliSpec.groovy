@@ -16,7 +16,7 @@ class GanohiliSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'tsinoili'],
             [subject: 'SG1', object: '', present: 'tsinoili', habitual: 'jinoilegoi', remote_past: 'aginohilidolvi', imperative: 'jinoilisvi', infinitive: 'X'],
             [subject: 'SG2', object: '', present: 'hinohili', habitual: 'hinohilegoi', remote_past: 'janohilidolvi', imperative: 'hinohilvsvi', infinitive: ''],
-            [subject: 'SG3', object: '', habitual: 'ganohilisoi', imperative: 'hinohilisesdi', infinitive: '', present: 'ganohili', remote_past: ''],
+            [subject: 'SG3', object: '', habitual: 'ganohilisoi', imperative: 'hinohilisesdi', infinitive: '', present: 'ganohili', remote_past: 'unohilidolvi'],
             [subject: 'PL3', object: '', present: 'aninohili', habitual: 'aninohilegoi', remote_past: 'uninohilidolvi', imperative: 'aninohilvsvi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'idinohili', habitual: 'idinohilegoi', remote_past: 'iginohilidolvi', imperative: 'idinohilvsvi', infinitive: '']
         ]
@@ -31,27 +31,30 @@ class GanohiliSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.PRESENT         | "tsinohili"
         "SG1" | "" | Tense.HABITUAL        | "tsinohilisoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginohilidolvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinohi"
+        // tio 17Nov26: SG3 remote stem supplied from the 2012 book p.27 (unohilidolv'i) -- the yaml
+        // extraction left the SG3 remote_past EMPTY. Per the D1 convention, FUTURE_COMMAND asserts
+        // the remote_past row; expectations re-characterized to the engine's composition.
+        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinohilidolvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
         "SG2" | "" | Tense.PRESENT         | "hinohili"
         "SG2" | "" | Tense.HABITUAL        | "hinohilisoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanohilidolvi"
-        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohi"
+        "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohilidolvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "ganohili"
         "SG3" | "" | Tense.HABITUAL        | "ganohilisoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unohilidolvi"
-        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohi"
+        "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohilidolvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
         "PL3" | "" | Tense.PRESENT         | "aninohili"
         "PL3" | "" | Tense.HABITUAL        | "aninohilisoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninohilidolvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohilidolvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
         "PL1INCL" | "" | Tense.PRESENT         | "idinohili"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinohilisoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginohilidolvi"
-        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohi"
+        "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohilidolvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }
 }

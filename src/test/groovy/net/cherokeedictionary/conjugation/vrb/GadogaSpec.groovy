@@ -28,17 +28,20 @@ class GadogaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsidoga"
         "SG1" | "" | Tense.HABITUAL        | "tsidogoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "x"
+        // tio 17Nov26: REMOTE_PAST UNATTESTED -- the 2012 book (Standing, Gadoga) prints x in the
+        // remote column for every subject row; the yaml 'x' junk values (and PL3/PL1INCL rows
+        // carrying the alternate 3+-standing present forms anidona'a/ididona'a) are dropped.
+        // "SG1" | "" | Tense.REMOTE_PAST     | "x"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsido"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
         "PL3" | "" | Tense.PRESENT         | "anidoga"
         // "PL3" | "" | Tense.HABITUAL        | "/"
-        "PL3" | "" | Tense.REMOTE_PAST     | "anidonaa"
+        // "PL3" | "" | Tense.REMOTE_PAST     | "anidonaa"  // unattested (book prints x; anidona'a is the 3+-standing PRESENT alternate)
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anido"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
         "PL1INCL" | "" | Tense.PRESENT         | "ididoga"
         // "PL1INCL" | "" | Tense.HABITUAL        | "/"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "ididonaa"
+        // "PL1INCL" | "" | Tense.REMOTE_PAST     | "ididonaa"  // unattested (book prints x; ididona'a is the 3+-standing PRESENT alternate)
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idido"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "/"
     }

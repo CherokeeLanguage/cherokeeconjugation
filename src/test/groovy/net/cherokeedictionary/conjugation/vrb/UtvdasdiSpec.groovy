@@ -14,7 +14,7 @@ class UtvdasdiSpec extends VerbBaseSpec {
         part_of_speech: "v.t.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsiyadvdasdi, aquadvdasdi'],
-            [subject: 'SG1', object: 'SG3AN', present: 'jiyatvdasdi', habitual: 'jiyatvdasdoi', remote_past: 'jiyatvdastanvi', imperative: 'gatvdasda', infinitive: '/jiyatvdasda'],
+            [subject: 'SG1', object: 'SG3AN', present: 'jiyatvdasdi', habitual: 'jiyatvdasdoi', remote_past: 'jiyatvdastanvi', imperative: 'gatvdasda', infinitive: "jiyatvdasdohdi"],
             [subject: 'SG1', object: 'SG3IN', present: 'aktvdasdi', habitual: 'aktvdasdoi', remote_past: 'aktvdastanvi', imperative: 'agwatvdasdesdi', infinitive: 'aktvdasdohdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyatvdasdi', habitual: 'hiyatvdasdoi', remote_past: 'hiyatvdastanvi', imperative: 'hatvdasda', infinitive: '/'],
             [subject: 'SG2', object: 'SG3IN', present: 'tstvdasdi', habitual: 'tstvdasdoi', remote_past: 'tstvdastanvi', imperative: 'tstvdasdesdi', infinitive: 'tstvdasdohdi'],
@@ -34,7 +34,8 @@ class UtvdasdiSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyadvdasdoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyadvdasdvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyadvdasdvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "/jiyatvdasda"
+        // tio 17Nov26: infinitive supplied from the 2012 book p.5 (jiyatvdasdohdi) -- the yaml carried a "/"-prefixed junk value.
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatvdasdohdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "aquadvdasdi"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "aquadvdasdoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquadvdasdvi"

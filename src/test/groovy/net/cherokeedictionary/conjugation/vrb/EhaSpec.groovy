@@ -25,8 +25,8 @@ class EhaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "geha"
         "SG1" | "" | Tense.HABITUAL        | "gehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "x"
+        // tio 17Nov26: REMOTE_PAST UNATTESTED -- the 2012 book (Eha, Lives) prints x in the remote column for every row.
         "SG1" | "" | Tense.FUTURE_COMMAND      | "ge"
-        "SG1" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Eha has no infinitive column; yaml junk dropped.
     }
 }

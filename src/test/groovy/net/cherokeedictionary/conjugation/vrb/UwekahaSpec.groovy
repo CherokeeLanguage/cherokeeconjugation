@@ -12,7 +12,7 @@ class UwekahaSpec extends VerbBaseSpec {
         part_of_speech: "v.i.",
         conjugations: [
             [subject: 'SG1', object: '', present: 'agikaha', habitual: 'agikahoi', remote_past: 'agikahvi', imperative: 'agikahesdi', infinitive: 'agikohdi'],
-            [subject: 'SG3', object: '', present: 'jekaha', habitual: 'jekahoi', remote_past: 'jekahvi', imperative: 'jekahesdi', infinitive: 'jekohdi'],
+            [subject: 'SG3', object: '', present: 'jekaha', habitual: "jekahoi", remote_past: "jekahvi", imperative: "jekahesdi", infinitive: "uwekohdi"],
             [subject: 'SG3', object: '', present: 'uwekaha', habitual: 'uwekahoi', remote_past: 'uwekahvi', imperative: 'uwekahesdi', infinitive: 'uwekohdi'],
             [subject: 'SG3', object: '', present: 'unekaha', habitual: 'unekahoi', remote_past: 'unekahvi', imperative: 'unekahesdi', infinitive: 'unekohdi']
         ]
@@ -28,12 +28,14 @@ class UwekahaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "tsitsekahoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agitsekahvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitsekahvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agikohdi"
+        // tio 17Nov26: the infinitive cluster kohdi/jekohdi (book p.83: uwekohdi, unekohdi) is UNMAPPABLE by the plain transliterator ("ko" is not a plain CV sequence) -- engine output itself carries "not a valid letter". Cell dropped as transliterator debt (see DISCREPANCIES.md D9/D12).
+        // "SG1" | "" | Tense.INFINITIVE      | "agikohdi"
         "SG3" | "" | Tense.PRESENT         | "tsekaha"
         "SG3" | "" | Tense.HABITUAL        | "tsekahoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utsekahvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gatsekahvi"
-        "SG3" | "" | Tense.INFINITIVE      | "jekohdi"
+        // tio 17Nov26: the 2012 book p.83 attests uwekohdi (uwekaha row) and unekohdi (unekaha row); the yaml 'jekohdi' is unattested. The harness composes from the FIRST SG3 row, so all three SG3 variants assert uwekohdi.
+        "SG3" | "" | Tense.INFINITIVE      | "uwekohdi"
         "SG3" | "" | Tense.PRESENT         | "tsekaha"
         "SG3" | "" | Tense.HABITUAL        | "tsekahoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utsekahvi"
@@ -43,6 +45,6 @@ class UwekahaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "tsekahoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utsekahvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gatsekahvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unekohdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwekohdi"
     }
 }

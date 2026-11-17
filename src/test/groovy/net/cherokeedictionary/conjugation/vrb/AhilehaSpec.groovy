@@ -33,7 +33,7 @@ class AhilehaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsihileha"
         "SG1" | "" | Tense.HABITUAL        | "tsihilehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "x"
+        // tio 17Nov26: REMOTE_PAST UNATTESTED -- yaml junk value dropped.
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihile"
         "SG1" | "" | Tense.INFINITIVE      | "agihilvsdi"
     }

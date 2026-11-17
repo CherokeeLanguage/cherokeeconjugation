@@ -13,7 +13,8 @@ class GataSpec extends VerbBaseSpec {
         definition: "It Is Hanging",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG3', object: '', habitual: 'gadoi', imperative: 'hatesdi', infinitive: '', present: 'gata', remote_past: '']
+            // tio 17Nov26: remote_past supplied from the 2012 book (Gata, Hanging p.75: past gatv'i); SG1 rows are yaml fabrications -- the book lists only the impersonal SG3 box.
+            [subject: 'SG3', object: '', habitual: 'gadoi', imperative: 'hatesdi', infinitive: '', present: 'gata', remote_past: 'gatvi']
         ]
     ]
 
@@ -25,8 +26,9 @@ class GataSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsita"
         "SG1" | "" | Tense.HABITUAL        | "tsidoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agidvi"
-        "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidvi"
-        "SG1" | "" | Tense.INFINITIVE      | "It"
+        // tio 17Nov26: the SG1 remote/future-command/infinitive rows are yaml fabrications (the 2012 book box has no SG1 row); dropped.
+        // "SG1" | "" | Tense.REMOTE_PAST     | "agidvi"
+        // "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidvi"
+        // "SG1" | "" | Tense.INFINITIVE      | "It"
     }
 }

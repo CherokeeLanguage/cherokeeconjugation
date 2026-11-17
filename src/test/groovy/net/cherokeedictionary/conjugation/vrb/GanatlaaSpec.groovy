@@ -29,7 +29,7 @@ class GanatlaaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "tsinatlaoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginatlavi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinatlavi"
-        "SG1" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book (Ganatla'a p.74) prints x in the infinitive column.
         "SG2" | "" | Tense.PRESENT         | "hinatlaa"
         "SG2" | "" | Tense.HABITUAL        | "hinatlaoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanatlavi"

@@ -32,7 +32,7 @@ class UnegujaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "aginegutsoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginegutsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aginegutsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Uneguja has no infinitive column; yaml junk dropped.
         "SG2" | "" | Tense.PRESENT         | "tsanegutsa"
         "SG2" | "" | Tense.HABITUAL        | "tsanegutsoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsanegutsvi"

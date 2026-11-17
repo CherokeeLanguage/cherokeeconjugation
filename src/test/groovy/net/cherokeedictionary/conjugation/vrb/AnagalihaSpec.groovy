@@ -26,6 +26,6 @@ class AnagalihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "anagalisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unagalvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anagalvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "x"
+        // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Anagaliha (Lightning) has no infinitive column; yaml junk dropped.
     }
 }

@@ -23,8 +23,9 @@ class AtihnehaSpec extends VerbBaseSpec {
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "tsitsiyatineha"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "tsitsiyatinehoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "x"
-        "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "x"
+        // tio 17Nov26: the 2012 book (Atihneha, Have With/Hold in Hand p.83) prints x in BOTH the remote and imperative columns; yaml junk dropped.
+        // "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "x"
+        // "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "x"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyatinvdi"
     }
 }

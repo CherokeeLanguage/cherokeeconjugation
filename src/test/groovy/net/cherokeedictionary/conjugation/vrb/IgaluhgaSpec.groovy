@@ -14,7 +14,7 @@ class IgaluhgaSpec extends VerbBaseSpec {
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'itsiluga'],
-            [subject: 'SG3', object: '', habitual: 'igalugoi', imperative: 'tsihilugi', infinitive: 'vuluhisdi, uluhisdi', present: 'igaluga', remote_past: 'vulutsvi, ulutsvi'],
+            [subject: 'SG3', object: '', habitual: 'igalugoi', imperative: 'tsihilugi', infinitive: "uluhisdi", present: 'igaluga', remote_past: 'vulutsvi, ulutsvi'],
             [subject: 'SG3', object: '', present: 'ihiluhga', habitual: 'ihiluhgoi', remote_past: 'vjaluhjvi', imperative: 'jihiluhgi', infinitive: 'vjaluhisdi'],
             [subject: 'SG3', object: '', present: 'ianiluhga', habitual: 'ianiluhgoi', remote_past: 'vuniluhjvi', imperative: 'jianiluhgi', infinitive: 'vuniluhisdi'],
             [subject: 'SG3', object: '', present: 'iidiluhga', habitual: 'iidiluhgoi', remote_past: 'vigiluhjvi', imperative: 'jiidiluhgi', infinitive: 'vigiluhisdi']
@@ -31,21 +31,21 @@ class IgaluhgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.HABITUAL        | "igalugoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uluhisdi"
         "SG3" | "" | Tense.PRESENT         | "igaluga"
         "SG3" | "" | Tense.HABITUAL        | "igalugoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uluhisdi"
         "SG3" | "" | Tense.PRESENT         | "igaluga"
         "SG3" | "" | Tense.HABITUAL        | "igalugoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uluhisdi"
         "SG3" | "" | Tense.PRESENT         | "igaluga"
         "SG3" | "" | Tense.HABITUAL        | "igalugoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulutsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "galutsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugiluhisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uluhisdi"
     }
 }

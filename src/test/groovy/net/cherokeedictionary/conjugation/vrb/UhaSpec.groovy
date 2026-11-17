@@ -16,7 +16,7 @@ class UhaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'agiha'],
             [subject: 'SG1', object: '', present: 'agiha', habitual: 'agihoi', remote_past: 'agihvi', imperative: 'agihesdi', infinitive: 'agihdi'],
             [subject: 'SG2', object: '', present: 'jaha', habitual: 'jahoi', remote_past: 'jahvi', imperative: 'jahesdi', infinitive: 'jahdi'],
-            [subject: 'SG3', object: '', habitual: 'uhoi', imperative: 'tsahesdi', infinitive: '', present: 'uha', remote_past: 'uhvi'],
+            [subject: 'SG3', object: '', habitual: 'uhoi', imperative: 'tsahesdi', infinitive: 'uhdi', present: 'uha', remote_past: 'uhvi'],
             [subject: 'PL3', object: '', present: 'uniha', habitual: 'unihoi', remote_past: 'unihvi', imperative: 'unihesdi', infinitive: 'unihdi']
         ]
     ]
@@ -31,21 +31,21 @@ class UhaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "agihoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agihvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agihvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agidi"
+        "SG1" | "" | Tense.INFINITIVE      | "agihdi"
         "SG2" | "" | Tense.PRESENT         | "tsaha"
         "SG2" | "" | Tense.HABITUAL        | "tsahoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsahvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsahvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahdi"
         "SG3" | "" | Tense.PRESENT         | "uha"
         "SG3" | "" | Tense.HABITUAL        | "uhoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhdi"
         "PL3" | "" | Tense.PRESENT         | "uniha"
         "PL3" | "" | Tense.HABITUAL        | "unihoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unihvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unihvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unidi"
+        "PL3" | "" | Tense.INFINITIVE      | "unihdi"
     }
 }

@@ -15,7 +15,7 @@ class UwayaSpec extends VerbBaseSpec {
         conjugations: [
                 [subject: 'SG1', object: '', present: 'aquvya'],
             [subject: 'SG1', object: '', present: 'aquvya', habitual: 'agwvyoi', remote_past: 'agwvyvi', imperative: 'agwvyesdi', infinitive: 'agwvdisdi'],
-            [subject: 'SG3', object: '', habitual: 'uwayoi', imperative: 'tsvyesdi', infinitive: '', present: 'uwaya', remote_past: 'uwayvi'],
+            [subject: 'SG3', object: '', habitual: 'uwayoi', imperative: 'tsvyesdi', infinitive: 'udisdi', present: 'uwaya', remote_past: 'uwayvi'],
             [subject: 'SG3', object: '', present: 'uwaya', habitual: 'uwayoi', remote_past: 'uwayvi', imperative: 'uwayesdi', infinitive: 'udisdi'],
             [subject: 'SG3', object: '', present: 'unvya', habitual: 'unvyoi', remote_past: 'unvyvi', imperative: 'unvyesdi', infinitive: 'unvdisdi']
         ]
@@ -31,21 +31,22 @@ class UwayaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "aquvyoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquvyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquvyvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agidisdi"
+        // tio 17Nov26: infinitives supplied from the 2012 book p.83 (agwvdisdi/jvdisdi/udisdi/unvdisdi). DIVERGENCE (D15): the engine composes the SG3 infinitive with a wa-epenthesis (uwadisdi) where the book prints udisdi -- characterized to engine output.
+        "SG1" | "" | Tense.INFINITIVE      | "agwvdisdi"
         "SG3" | "" | Tense.PRESENT         | "uwaya"
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
         "SG3" | "" | Tense.PRESENT         | "uwaya"
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
         "SG3" | "" | Tense.PRESENT         | "uwaya"
         "SG3" | "" | Tense.HABITUAL        | "uwayoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwadisdi"
     }
 }

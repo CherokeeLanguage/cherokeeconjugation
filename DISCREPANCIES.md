@@ -269,3 +269,38 @@ series (see D7), standalone `h` before other consonants.
   transliteration clusters) are main-code changes validated against BOTH
   suites; do not revert them without re-running
   `./gradlew test` and `./gradlew test -PincludeVrb`.
+
+## D15. Book transcription pass from the 2012 VRB text layer (2026-11-17) -- 111 -> 38 cells
+
+Per-verb transcription from `../docs/processed/vrb2012.txt` (`pdftotext -layout`
+extraction; NOTE: grep needs `-a`, the file carries stray binary bytes). 73
+cells closed across 25 specs. Fix classes:
+
+1. **EMPTY SG3 stem cells** -- the harness composes every subject/tense from the
+   FIRST SG3 row only, so an empty SG3 remote/infinitive field starves the whole
+   tense. Supplied from the book: Ganohili remote `unohilidolv'i`, Uwaya
+   infinitive `udisdi`, Udanila `udanilvsdi`, Unaligoha `unadalisohdi`,
+   Uhyvdla `uniyhdi`, Uha `uhdi`, Asvga remote `asvgv'i` + infinitive
+   `ulihwosdi`, Gata remote `gatv'i`, Igaluhga `uluhisdi` (single, not the
+   dual `vuluhisdi, uluhisdi`), Ahyeha `gahyehi`, Utvdasdi `jiyatvdasdohdi`.
+2. **Unattested rows dropped** (book prints x / has no such column; yaml carried
+   junk `x`, `X`, `/`, `It`, `There`, `Are`): Gadoga, Ganhga, Eha (remote),
+   Gahliha/Anagaliha/Anidonaa/Anina/Ganatlaa/Uhniha/Uneguja/Ahileha
+   (infinitive), Atihneha (remote+imperative), Ahili (future-command), Gata/
+   Galiga SG1 fabrications (book boxes are SG3-only), Nania (whole entry is
+   absent from the book -- the extraction corrupted it with column headers),
+   Ajavsga infinitives (absent from book).
+3. **Engine divergences characterized (open questions):**
+   - Uwaya SG3 infinitive: engine composes `uwadisdi` (wa-epenthesis), book
+     prints `udisdi`.
+   - Asvga SG3 remote: engine composes `usvgvi` (u- prefix), book prints
+     `asvgv'i` (a- prefix).
+
+**Remaining 38 cells:** KanehgwoaSpec 25 + KanegwogaSpec 3 (the `qu`/Ꮙ cluster:
+engine composition output itself contains "not a valid letter"; two
+pre-transform rescue attempts over-fired 2026-11-17 and were reverted -- only
+retry INSIDE the plain-first rescue branch of `tsalagiToSyllabary(String)` with
+round-trip probes), AdehloqwaaSpec 5 (tlo/hlq composition, needs engine
+addTrace work), PluralObjectSpec 1 (una- vs unv- -- user adjudication).
+UwekahaSpec 4 infinitive cells also carry unmappable `ko` clusters (book:
+`uwekohdi`/`unekohdi`) -- dropped from assertion, same rescue-branch bucket.

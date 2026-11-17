@@ -13,7 +13,7 @@ class UdanilaSpec extends VerbBaseSpec {
         conjugations: [
             [subject: 'SG1', object: '', present: 'agwadanila', habitual: 'agwadaniloi', remote_past: 'agwadanilvi', imperative: 'X', infinitive: 'agwadanilvsdi'],
             [subject: 'SG2', object: '', present: 'jadanila', habitual: 'jadaniloi', remote_past: 'jadanilvi', imperative: 'jadanilvsdi', infinitive: ''],
-            [subject: 'SG3', object: '', present: 'udanila', habitual: 'udaniloi', remote_past: 'udanilvi', imperative: 'udanilvsdi', infinitive: ''],
+            [subject: 'SG3', object: '', present: 'udanila', habitual: 'udaniloi', remote_past: 'udanilvi', imperative: 'udanilvsdi', infinitive: 'udanilvsdi'],
             [subject: 'PL3', object: '', present: 'unadanila', habitual: 'unadaniloi', remote_past: 'unadanilvi', imperative: 'unadanilvsdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igadanila', habitual: 'igadaniloi', remote_past: 'igadanilvi', imperative: 'igadanilvsdi', infinitive: '']
         ]
