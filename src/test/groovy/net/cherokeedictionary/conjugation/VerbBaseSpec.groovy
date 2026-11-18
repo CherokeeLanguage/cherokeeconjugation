@@ -75,12 +75,12 @@ abstract class VerbBaseSpec extends Specification {
         // tio 16Nov26: romanized (vrb/CED) citations convert through the CED
         // convention variant; wired fixtures already carry syllabary and use
         // the plain path. See DISCREPANCIES.md D9/D12.
+        // tio 18Nov26: logic hoisted to main-side VerbInputNormalizer.toSyll
+        // (single home, shared with the facade's input gate and
+        // VerbLexemeFlagLoader) -- behavior byte-identical to the previous
+        // private copy.
         def toSyll = { String s ->
-            if (!s) { return null }
-            boolean hasGlyph = s.chars().any { it >= 0x13A0 && it <= 0x13F5 }
-            return hasGlyph ?
-                SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(s)) :
-                SyllabaryUtil.tsalagiToSyllabaryCed(normalizeBookRomanization(s))
+            return net.cherokeedictionary.conjugation.VerbInputNormalizer.toSyll(s)
         }
 
         def request = new ConjugationRequest(

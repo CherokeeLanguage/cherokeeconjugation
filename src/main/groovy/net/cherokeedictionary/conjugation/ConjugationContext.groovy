@@ -15,14 +15,19 @@ class ConjugationContext {
     }
 
     void buildBaseVerb() {
+        // tio 18Nov26: INPUT GATE (VerbInputNormalizer) -- glyph stems pass
+        // through byte-identical (the dictionary contract: syllabary in),
+        // roman stems convert to CED-canonical syllabary. Every stem funnels
+        // through here so facade consumers get one normalization behavior.
+        def stem = { String s -> VerbInputNormalizer.normalizeRequestStem(s) }
         def stemmer = new Stemmer()
-        if (request.habitual) stemmer.habitual = new DefinitionLine(syllabary: request.habitual)
-        if (request.imperative) stemmer.imperative = new DefinitionLine(syllabary: request.imperative)
-        if (request.infinitive) stemmer.infinitive = new DefinitionLine(syllabary: request.infinitive)
-        if (request.present1st) stemmer.present1st = new DefinitionLine(syllabary: request.present1st)
-        if (request.present3rd) stemmer.present3rd = new DefinitionLine(syllabary: request.present3rd)
-        if (request.remotepast) stemmer.remotepast = new DefinitionLine(syllabary: request.remotepast)
-        if (request.immediatepast) stemmer.immediatepast = new DefinitionLine(syllabary: request.immediatepast)
+        if (request.habitual) stemmer.habitual = new DefinitionLine(syllabary: stem(request.habitual))
+        if (request.imperative) stemmer.imperative = new DefinitionLine(syllabary: stem(request.imperative))
+        if (request.infinitive) stemmer.infinitive = new DefinitionLine(syllabary: stem(request.infinitive))
+        if (request.present1st) stemmer.present1st = new DefinitionLine(syllabary: stem(request.present1st))
+        if (request.present3rd) stemmer.present3rd = new DefinitionLine(syllabary: stem(request.present3rd))
+        if (request.remotepast) stemmer.remotepast = new DefinitionLine(syllabary: stem(request.remotepast))
+        if (request.immediatepast) stemmer.immediatepast = new DefinitionLine(syllabary: stem(request.immediatepast))
 
         verb = Conjugate.createVerbToConjugate(
             request.subject, 

@@ -8,6 +8,36 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — input gate: VerbInputNormalizer on the conjugation path
+
+**User decisions.** The dictionary passes SYLLABARY only. Specs stay untouched
+(CED-canonical). A future backlog item: pass in a verb that is broken down and
+conjugated without the five stems (deconstruction is already a separate
+backlog feature). For now, implement the input gate.
+
+**What shipped.** `VerbInputNormalizer` (main, conjugation package):
+- `normalizeRequestStem` — the GATE, invoked in
+  `ConjugationContext.buildBaseVerb` for every stem: glyphs pass through
+  byte-identical (the dictionary contract); roman input converts
+  (all glottal apostrophes dropped — unwritten in the syllabary both between
+  dual vowels and before consonants; the phonemic glottal-initial property
+  lives in the `glottalInitial` lexeme flag, not the orthography, matching
+  the stem-wiring convention the specs always applied), book repairs
+  (ow→owa / hl→lo) then the CED-convention transliterator.
+- `toSyll` + `normalizeBookRomanization` — the shared converter hoisted from
+  the private copies in `VerbBaseSpec` (test) and `VerbLexemeFlagLoader`;
+  both now delegate; behavior byte-identical, single home.
+- Deliberately NOT normalized (need round-trip probes + rulings; roman-only
+  concerns): d/t and g/k spirantization, tone diacritics, uw-/u- fusion (D15).
+
+**Engine effect.** None on composition — the gate is a boundary conversion.
+Glyph input (the dictionary) is unaffected; the 23,522 combined-suite tests
+all green (7 new gate tests in `VerbInputNormalizerTest`). The normalization
+decision (normalizing spec entries wholesale) is closed as "specs stay
+as-is".
+
+---
+
 ## 2026-11-18 — glottal-class audit: Aja'vsga found, infinitive wired; impersonal-grid discovery; D18
 
 **Audit.** Cross-checked all 407 vrb specs against every `Verb :` entry in the

@@ -31,23 +31,19 @@ class VerbLexemeFlagLoader {
     private static Map<String, Map> lexemes
 
     /** The book's romanization artifacts ("agowtiha" for ᎠᎪᏩᏘᎭ) must be
-     * repaired before transliteration; identical to VerbBaseSpec's private
-     * normalizeBookRomanization (kept in step so the data file and the specs
-     * convert citations identically). -- tio 18Nov26 */
+     * repaired before transliteration. tio 18Nov26: logic HOISTED to
+     * VerbInputNormalizer (single home; the conjugation-path input gate and
+     * the test harness now share it) -- this delegate keeps the loader's
+     * conversion behavior byte-identical. -- tio 18Nov26 */
     private static String normalizeBookRomanization(String latin) {
-        return latin?.replaceAll("ow(?=[bcdfghjklmnprstz])", "owa")
-                     .replaceAll("hl(?=[bcdfghjklmnprstz'])", "lo")
+        return net.cherokeedictionary.conjugation.VerbInputNormalizer.normalizeBookRomanization(latin)
     }
 
     /** Roman (vrb/CED convention) -> syllabary; wired fixtures carry glyphs and
-     * use the plain path. Mirrors VerbBaseSpec.toSyll. See DISCREPANCIES.md
-     * D9/D12. -- tio 18Nov26 */
+     * use the plain path. Delegates to VerbInputNormalizer.toSyll -- identical
+     * behavior, single home. See DISCREPANCIES.md D9/D12. -- tio 18Nov26 */
     static String toSyll(String s) {
-        if (!s) { return null }
-        boolean hasGlyph = s.chars().any { it >= 0x13A0 && it <= 0x13F5 }
-        return hasGlyph ?
-            SyllabaryUtil.tsalagiToSyllabary(normalizeBookRomanization(s)) :
-            SyllabaryUtil.tsalagiToSyllabaryCed(normalizeBookRomanization(s))
+        return net.cherokeedictionary.conjugation.VerbInputNormalizer.toSyll(s)
     }
 
     private static Map<String, Map> load() {
