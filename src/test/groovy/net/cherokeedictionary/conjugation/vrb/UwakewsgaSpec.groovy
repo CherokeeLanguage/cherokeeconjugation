@@ -49,11 +49,13 @@ class UwakewsgaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "uwagewisvi"
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "uwagewisvi"
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "uwawagewisdi"
-        "PL3" | "SG3IN" | Tense.PRESENT         | "unagewisga"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "unagewisgoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unagewisvi"
-        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unagewisvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unawagewisdi"
+        // D16 (17Nov26): PL3 un- + v-stem composes Ꮕ (nv) per the book PL3 row
+        // (unvkewsga / unvkewsvi; CED canonical parse-back gewis-).
+        "PL3" | "SG3IN" | Tense.PRESENT         | "unvgewisga"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "unvgewisgoi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unvgewisvi"
+        "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unvgewisvi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unvwagewisdi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "igvgewisga"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "igvgewisgoi"
         "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igvgewisvi"

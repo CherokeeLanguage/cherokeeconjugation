@@ -42,7 +42,7 @@ class NigvnhdihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uyuwanadodi"
         "PL3" | "" | Tense.PRESENT         | "anvnadiha"
         "PL3" | "" | Tense.HABITUAL        | "anvnadisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unanatanvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvnatanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvnatanvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniyuwanadodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvnadiha"

@@ -1,6 +1,7 @@
 # VRB engine debt -- regenerated 2026-11-17 (D15 transcription pass + D15a SyllabaryUtil fix)
-# 1 failing vrb cell (was 111 at session start; 34 after the D15 book transcription; 1 after D15a).
-# Default suite: green. Full suite: 13,213/13,214.
+# 0 failing vrb cells (was 111 at session start; 34 after the D15 book transcription; 1 after D15a; 0 after D16).
+# Default suite: green. WSL manual harness: vrb 19,031 tests, 0 composition failures
+# (10 GahnehaSpec bulk-run failures are a pre-existing VerbRegistry key collision -- see below).
 #
 # FIXED 2026-11-17 (DISCREPANCIES.md D15a) -- NOT a composition-rescue problem:
 # - hgw family (Kanehgwoa 25 + Kanegwoga 3): replace() maps gwo->quo BEFORE the
@@ -9,9 +10,20 @@
 # - hlq family (Adehloqwaa 5): the book prints the infinitive with the hlq
 #   cluster (agwadehlqwasdi = ᎶᏆᏍᏗ); the hl->lo rule class lacked q.
 #
-# REMAINING (1 cell):
-PluralObjectSpec.groovy :: PL3 x SG3IN REMOTE_PAST expected=dunvhnihlvvi -- PL3 una- vs unv-
-#   before nv-onsets. USER ADJUDICATION required (D7-adjacent); not auto-patched.
+# RESOLVED 2026-11-17 (DISCREPANCIES.md D16, user ruling "Option 2"):
+# RuleVtoA (B4 v->a) was firing at PL3 subject too; scoped to SG3 only. The PL3
+# preVowel branch now fuses the stem Ꭵ via the N map (Ꭵ->Ꮕ): ᏚᏅᏂᏢᎥᎢ. 20 PL3
+# pins re-aligned to the book's unv- rows across 10 specs (Uwanvga, Uwakewsga,
+# Nigvnhdiha, Nigvnhdea, Kdiha, Gvjahlvsga, Gvhnisdiha, Gvhniha, Degvdiyea,
+# PluralObjectSpec). Stem-internal rule 3 (hn+vowel->n+vowel, nhs/nht pins)
+# untouched; the scoped unhni->unvhni boundary rule stays.
+# WSL harness: SyllabaryTest 15/15; default suite 4,354 green; vrb suite
+# 19,031 tests, 0 composition failures. 10 remaining bulk-run failures are
+# PRE-EXISTING order artifacts: GahnehaSpec vs GanehaSpec register conflicting
+# state under the same citation key ᎦᏁᎭ in the global VerbRegistry (Gahneha
+# passes 20/20 in isolation; reproduced with the old RuleVtoA). Test-infra
+# item: give the two ganeha-cited verbs distinct registry keys or fork per
+# spec.
 #
 # ALSO DROPPED from assertions (not counted above):
 # RESOLVED 2026-11-17 (D15b): k+eouvw->g rule added; Uwekaha 3 SG3 INF cells

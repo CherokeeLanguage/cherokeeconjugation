@@ -42,11 +42,14 @@ class UwanvgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uwanvgvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwanvgvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwawanvsdi"
-        "PL3" | "" | Tense.PRESENT         | "unanvga"
-        "PL3" | "" | Tense.HABITUAL        | "unanvgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unanvgvi"
-        "PL3" | "" | Tense.FUTURE_COMMAND      | "unanvgvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unawanvsdi"
+        // D16 (17Nov26): PL3 un- + v-stem fuses the stem v into the boundary
+        // as Ꮕ (nv) at every tense (RuleVtoA is SG3-only now); pins re-aligned
+        // to the book PL3 row (unvnvga ...).
+        "PL3" | "" | Tense.PRESENT         | "unvnvga"
+        "PL3" | "" | Tense.HABITUAL        | "unvnvgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvnvgvi"
+        "PL3" | "" | Tense.FUTURE_COMMAND      | "unvnvgvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unvwanvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igvnvga"
         "PL1INCL" | "" | Tense.HABITUAL        | "igvnvgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igvnvgvi"

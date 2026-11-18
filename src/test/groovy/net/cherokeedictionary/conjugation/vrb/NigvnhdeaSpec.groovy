@@ -44,7 +44,7 @@ class NigvnhdeaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uyuwanadesdi"
         "PL3" | "" | Tense.PRESENT         | "anvnadea"
         "PL3" | "" | Tense.HABITUAL        | "anvnadesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unanadesvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvnadesvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvnadesvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniyuwanadesdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvnadea"

@@ -52,11 +52,11 @@ class PluralObjectSpec extends Specification {
         // Attested guide surfaces:
         "PL3" | "PL3AN"| Tense.PRESENT     || "danvhniha"
         "PL3" | "PL3IN"| Tense.PRESENT     || "danvhniha"
-        // tio 17Nov26: characterized to engine output -- see DISCREPANCIES.md D16. The guide
-        // spells the PL3 remote with the unv- (schwa) epenthesis, ᏚᏅᏂᏢᎥᎢ; the engine's
-        // aspirated-n convention (replace() rule: hn+vowel -> n+vowel) yields the
-        // una- composition, ᏚᎾᏂᏢᎥᎢ. Root cause recorded in D16; re-defining the
-        // aspirated-n rule globally would re-characterize the whole hn- family.
-        "PL3" | "PL3IN"| Tense.REMOTE_PAST || "dunanitlvvi"
+        // D16 (17Nov26): re-aligned to the guide's unv- (Ꮕ) epenthesis at the
+        // un- prefix boundary — RuleVtoA (B4 v->a) is scoped to the SG3 uw-
+        // environment only, so the PL3 preVowel branch fuses the stem Ꭵ via the
+        // N map (Ꭵ->Ꮕ): ᏚᏅᏂᏢᎥᎢ. VRB 2012 line 2299 `unvhnilv'i`, line 2431
+        // `unvhnistanv'i`, guide `danvhniha` / `dunvhnihlvvi`.
+        "PL3" | "PL3IN"| Tense.REMOTE_PAST || "dunvhnihlvvi"
     }
 }

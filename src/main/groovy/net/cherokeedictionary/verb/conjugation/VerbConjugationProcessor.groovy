@@ -72,11 +72,13 @@ class VerbConjugationProcessor {
         def vs = verbset == VerbSet.A ? "" : "B"
         def verbPrefix = pref?.prefix2 ? "${pref?.prefix1}${pref?.prefix2}${vs}" as String : "${pref?.prefix1}${vs}" as String;
 
-        // B4 (Feeling P4 notes): Set B + 3rd person subject + inanimate object +
+        // B4 (Feeling P4 notes): Set B + sg3 subject + inanimate object +
         // v-initial stem: stem-initial Ꭵ surfaces as Ꭰ before the prefix merge
         // (ᎤᏩᎨᏩᏍᎦ uwakewsga "he's forgetting it", vs ᎬᎨᏩᏍᎦ gv-kewsga "him").
-        // P4(6) notes "-w- is inserted between u- and a following vowel" for these
-        // forms, so the uw+a -> u contraction (RuleUW, e.g. ᎤᏚᎵᎭ for want) does
+        // SG3 ONLY — the PL3 un- cells fuse the stem Ꭵ into the boundary as Ꮕ
+        // (nv) instead (book unv- convention, D16). P4(6) notes "-w- is
+        // inserted between u- and a following vowel" for these forms, so the
+        // uw+a -> u contraction (RuleUW, e.g. ᎤᏚᎵᎭ for want) does
         // NOT apply when the a came from the changed -v-. timo 10Nov26
         def vtoAStem = RuleVtoA.apply(pref?.prefix1, pref?.prefix2, verbset, it)
         boolean stemWasVtoA = (vtoAStem != null)

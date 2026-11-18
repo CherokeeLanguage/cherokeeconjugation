@@ -265,7 +265,7 @@ user adjudication). NOTE: SyllabaryUtil.groovy is UNTRACKED (cloned
 dependency, per README) -- these fixes exist only in the working copy (backup:
 build/SyllabaryUtil.groovy.bak-20261117); they CANNOT be committed to git.
 
-## D16. Epenthetic after the un- prefix at a prefix+stem boundary: una- (engine) vs unv- (book) (2026-11-17, open)
+## D16. Epenthetic after the un- prefix at a prefix+stem boundary: una- (engine) vs unv- (book) (2026-11-17, RESOLVED)
 
 PluralObjectSpec's last cell (PL3 x SG3IN REMOTE_PAST, Grammar Guide "hit"
 paradigm) expects `dunvhnihlvvi` (ᏚᏅᏂᏢᎥᎢ = du-nv-(h)ni-tlv-vi); the engine
@@ -324,6 +324,38 @@ disproportionate for one cell. RESOLUTION: PluralObjectSpec PL3 x SG3IN
 REMOTE_PAST characterized to engine output (`dunanitlvvi`); the una-/unv-
 orthography variance stays documented here as an open orthography question.
 Default suite + vrb suite now fully GREEN (13,214/13,214). -- tio 17Nov26
+
+**D16 RESOLVED (2026-11-17, user ruling "Option 2" -- Ꮕ required at prefix
+boundaries):** the root cause goes one layer deeper than the transliteration
+orthography traced above: the COMPOSITION engine itself destroyed the v. The
+stemmer models aspirated-n stems as v-INITIAL (hit's routed remote stem is
+ᎥᏂᏢᎥᎢ; the citation's uw- a-artifact is where the v is reconstructed), and
+`RuleVtoA` (B4, Feeling P4 v->a in third person) was scoped to SG3 **and PL3**
+subjects -- so at PL3 the stem Ꭵ was rewritten to Ꭰ and the preVowel branch
+fused N['Ꭰ'] = Ꮎ (una-). Feeling's P4(6) note describes the SG3 uw- allomorph
+("-w- inserted between u- and a following vowel"); the PL3 un- prefix has no
+such allomorph. Fix: RuleVtoA.apply restricted to SG3 subject (plus the SG3IN
+object check), so the PL3 preVowel branch fuses the stem Ꭵ directly via the
+N map's existing Ꭵ->Ꮕ entry: Ꮪ + Ꮕ + ᏂᏢᎥᎢ = ᏚᏅᏂᏢᎥᎢ. SG3 cells keep v->a
+(ᎤᏩᏂᏢᎥᎢ uwahnihlvvi unchanged; UwakewsgaSpec SG3 rows unchanged). Stem-internal
+rule-3 (hn+vowel -> n+vowel, nhs/nht pins) untouched; the scoped
+`unhni -> unvhni` boundary rule in SyllabaryUtil stays for direct
+romanization of guide text.
+
+20 previously engine-characterized PL3 pins re-aligned to the book's unv-
+rows (all confirmed against the fixtures): Uwanvga (unvnvga/unvnvgoi/
+unvnvgvi/unvwanvsdi), Uwakewsga (unvgewisga family -- CED canonical of the
+book row unvkewsga), Nigvnhdiha (unvnatanvi), Nigvnhdea (unvnadesvi), Kdiha
+(unvtanvi), Gvjahlvsga (unvtsatlanvi), Gvhnisdiha (unvhnistanvi VRB 2431 /
+unvnisdodi), Gvhniha (unvhnilvi VRB 2299 / unvnisdi), Degvdiyea (unvdiyevi),
+PluralObjectSpec (dunvhnihlvvi, full guide match). Verification (WSL manual
+JVM harness, Gradle daemon still unusable): SyllabaryTest 15/15; default
+suite 4,354 green (17 init-errors = non-test helper scripts JUnitCore
+shouldn't run); vrb suite 19,031 tests with 10 remaining failures -- ALL
+pre-existing: GahnehaSpec vs GanehaSpec register conflicting state under the
+SAME citation key ᎦᏁᎭ in the global VerbRegistry, so the bulk run is
+order-dependent (GahnehaSpec passes 20/20 in isolation; reproduced with the
+OLD RuleVtoA). Test-infra item, not a composition regression. -- tio 17Nov26
 
 ## D17. Impersonal verbs: the imperative is IMPERMISSIBLE, not unattested (2026-11-17, RESOLVED)
 

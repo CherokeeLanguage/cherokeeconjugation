@@ -379,6 +379,8 @@ public class SyllabaryUtil {
 
         // 3. Aspirated n-: hne, hni, hno, hnu, hnv -> ne, ni, no, nu, nv
         // (Note: 'hna' is intentionally preserved because Cherokee has a dedicated syllabary character: Ꮏ)
+        // Fix for un+hni -> unv+ni (ᏅᏂ)
+        data = data.replaceAll(/(?i)unhni/, 'unvhni')
         data = data.replaceAll(/(?i)hn([eiouv])/, 'n$1')
 
         // 4. Pre-aspirated stops, affricates, labiovelars, and sonorants:

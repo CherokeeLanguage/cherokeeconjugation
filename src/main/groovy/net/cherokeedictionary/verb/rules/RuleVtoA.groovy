@@ -15,10 +15,10 @@ import net.cherokeedictionary.util.VerbSet
  *
  * Scope (from the paradigm examples):
  *   - Set B prefixes only (1st/2nd person forms keep the -v-, agwv-kewsga),
- *   - third person subject (SG3/PL3),
- *   - inanimate object (SG3IN/PL3IN): ᎬᎨᏩᏍᎦ gv-kewsga "he's forgetting him"
- *     (3rd subject, AN object) keeps the stem -v-, as does ᏚᎨᏅᎨᏩᏍᎦ
- *     du-nv-kewsga "they're forgetting them (an)".
+ *   - SG3 subject only, with inanimate object (SG3IN): ᎤᏩᎨᏩᏍᎦ uwakewsga
+ *     "he's forgetting it". The PL3 cells do NOT take this change: un- fuses
+ *     the stem's v into the boundary as Ꮕ (nv) per the book's unv- convention
+ *     (D16 -- ᏚᏅᏂᏢᎥᎢ dunvhnihlvvi, unvkewsvi).
  *   - The surface effect is Ꭵ -> Ꭰ on the normalized stem, applied before the
  *     pronominal prefix is merged (P4(6): uw- + a-stem inserts -w-, so
  *     u- + Ꭰkewsga -> ᎤᏩᎨᏩᏍᎦ via the normal preVowel machinery).
@@ -36,7 +36,19 @@ class RuleVtoA implements PrefixRule {
         if (verbSet != VerbSet.B) {
             return null
         }
-        if (pts != PrefixTableSubject.SG3 && pts != PrefixTableSubject.PL3) {
+        // tio 17Nov26: SG3 ONLY (D16). The changed-v environment is the sg3 uw-
+        // allomorph: P4(6) "-w- is inserted between u- and a following vowel" —
+        // uw- + v-stem needs the v->a to build ᎤᏩᎨᏩᏍᎦ uwakewsga. The PL3 un-
+        // prefix has no such allomorph: the book composes un- + v-stem by fusing
+        // the stem's v directly into the boundary as Ꮕ (nv = n + schwa) at every
+        // Set B tense — VRB 2012 line 2299 `unvhnilv'i`, line 2431
+        // `unvhnistanv'i`, guide `danvhniha` / `dunvhnihlvvi` (hit), VRB forget
+        // PL3 row `unvkewsga` / `unvkewsvi` (UwakewsgaSpec fixture). Routing the
+        // PL3 cells through v->a turned the boundary into the una- epenthesis
+        // (ᏚᎾᏂᏢᎥᎢ) instead of the book's unv- (ᏚᏅᏂᏢᎥᎢ). PL3 keeps the stem
+        // Ꭵ so Morphemes.fixPrefix fuses via the N map's Ꭵ->Ꮕ entry.
+        // DISCREPANCIES.md D16 -- timo 17Nov26
+        if (pts != PrefixTableSubject.SG3) {
             return null
         }
         if (pto != PrefixTableObject.SG3IN && pto != PrefixTableObject.PL3IN) {

@@ -44,7 +44,7 @@ class GvjahlvsgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uwvtsalodi"
         "PL3" | "" | Tense.PRESENT         | "anvtsatlvsga"
         "PL3" | "" | Tense.HABITUAL        | "anvtsatlvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatsatlanvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvtsatlanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvtsatlanvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniwvtsalodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvtsatlvsga"

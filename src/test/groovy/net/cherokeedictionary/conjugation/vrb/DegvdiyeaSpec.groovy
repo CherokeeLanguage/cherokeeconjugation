@@ -44,7 +44,7 @@ class DegvdiyeaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uwadiyedi"
         "PL3" | "" | Tense.PRESENT         | "anvdiyea"
         "PL3" | "" | Tense.HABITUAL        | "anvdiyesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadiyevi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvdiyevi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvdiyevi"
         "PL3" | "" | Tense.INFINITIVE      | "uniwadiyedi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvdiyea"

@@ -45,7 +45,7 @@ class KdihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uwvdodi"
         "PL3" | "" | Tense.PRESENT         | "anvdiha"
         "PL3" | "" | Tense.HABITUAL        | "anvdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatanvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvtanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvtanvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniwvdodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvdiha"
