@@ -30,6 +30,6 @@
 # re-enabled and green. The SG1 INF row is UNATTESTED in the book (dropped;
 # engine composes agiwegodi -- D15 wa-epenthesis open question).
 #
-# ops note: SyllabaryUtil.groovy is UNTRACKED (cloned dependency, per README);
-# the D15a fixes live only in the working copy. Backup:
+# ops note: SyllabaryUtil.groovy is TRACKED as of 580f4d3 (was gitignored);
+# the D15a fixes are committed. Historical backup, no longer relevant:
 # build/SyllabaryUtil.groovy.bak-20261117

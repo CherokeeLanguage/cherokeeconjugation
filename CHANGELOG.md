@@ -1,10 +1,48 @@
 # CHANGELOG — Cherokee Conjugation Engine
 
-Chronological record of the engine and validation work, 2026-11-11 → 2026-11-17.
+Chronological record of the engine and validation work, 2026-11-11 → 2026-11-18.
 Every code change carries a `-- tio <DDMMMYY>` comment tag traceable to these
 entries. Companion documents: [DISCREPANCIES.md](DISCREPANCIES.md) (the D1–D17
 ledger, each item with a verdict and citation) and [GAP.md](GAP.md) (the
 book-unattested stem gaps).
+
+---
+
+## 2026-11-18 — build ops: `./gradlew` works under WSL again
+
+**Symptom.** Every build died with `The first result from the daemon was empty`
+(or, with `--no-daemon`, the same message after "a single-use Daemon process
+will be forked"). The daemon log showed it listening on
+`[localhost/127.0.0.1]` and then `Cannot accept connection from remote address
+/127.0.0.1` — it rejected its own client. Verification had been running through
+a hand-rolled `javac`/`groovyc` + JUnitCore harness as a result.
+
+**Root cause.** JDK8's `InetAddress.isReachable(50)` returns **false** for
+`127.0.0.1` under WSL but **true** for `::1`. Gradle 6.8.3's
+`InetAddresses.analyzeNetworkInterface()` only registers a loopback address when
+that check passes, so `127.0.0.1` is dropped from `communicationAddresses`
+(the daemon's accept-list) while `InetAddressFactory.findLocalBindingAddress()`
+still binds to it via `InetAddress.getLoopbackAddress()`. The two disagree, so
+`TcpIncomingConnector` rejects every connection. Confirmed with a standalone
+probe: `127.0.0.1 -> isReachable=false`, `::1 -> isReachable=true`.
+
+**Why the old workaround never worked.** `org.gradle.jvmargs` contained
+`-Djava.net.preferIPv6Addresses=true`, but `JvmOptions.jvmArgs()` parses `-D`
+args into *system properties*; only a fixed immutable set (`file.encoding`,
+`user.*`, …) is emitted as real daemon JVM args. Arbitrary properties are
+applied per-build *inside* the already-started daemon — too late for the
+`InetAddressFactory` static init, and they never appear in `daemonOpts`.
+
+**Fix.** `gradlew` now exports `JAVA_TOOL_OPTIONS=-Djava.net.preferIPv6Addresses=true`
+on WSL only (`/proc/version` matches `microsoft`) and only when the flag is not
+already present; `JAVA_TOOL_OPTIONS` is inherited by client, daemon and test
+worker JVMs, so the daemon binds to and advertises `::1` and the accept-list
+matches. `gradle.properties` keeps the memory args and documents why the flag
+cannot live there.
+
+**Verified with real Gradle (not the manual harness):** `./gradlew test` →
+4,377 tests, 0 failures; `./gradlew test -PincludeVrb` → 23,408 tests (19,031
+vrb), 0 failures / 0 errors. Warm daemon reuse and `--no-daemon` both work.
 
 ---
 

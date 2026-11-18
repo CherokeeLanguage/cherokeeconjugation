@@ -105,6 +105,23 @@ Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
 fi
 
+# --- WSL loopback workaround (tio 18Nov26) -----------------------------------
+# On WSL, JDK8's InetAddress.isReachable() reports 127.0.0.1 as unreachable but
+# ::1 as reachable. Gradle's InetAddresses then drops 127.0.0.1 from the daemon
+# communication addresses while the daemon still binds to it, so the daemon
+# rejects its own client ("Cannot accept connection from remote address
+# /127.0.0.1") and every build dies with "The first result from the daemon was
+# empty". Putting the flag in org.gradle.jvmargs does NOT work: Gradle routes
+# arbitrary -D args into per-build system properties rather than the daemon JVM
+# start arguments. JAVA_TOOL_OPTIONS is inherited by every JVM (client, daemon
+# and test workers), so use that. Harmless on non-WSL systems (skipped there).
+if grep -qi microsoft /proc/version 2>/dev/null \
+        && ! printf '%s' "${JAVA_TOOL_OPTIONS:-}" | grep -q -- "-Djava.net.preferIPv6Addresses"; then
+    JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:+$JAVA_TOOL_OPTIONS }-Djava.net.preferIPv6Addresses=true"
+    export JAVA_TOOL_OPTIONS
+fi
+# -----------------------------------------------------------------------------
+
 # Increase the maximum file descriptors if we can.
 if [ "$cygwin" = "false" -a "$darwin" = "false" -a "$nonstop" = "false" ] ; then
     MAX_FD_LIMIT=`ulimit -H -n`
