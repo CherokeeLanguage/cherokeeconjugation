@@ -147,6 +147,14 @@
         { "tense": "IMMEDIATE_COMMAND", "subject": "PL1INCL", "obj": "NONE", "form": "idinesdi" },
         { "tense": "IMMEDIATE_COMMAND", "subject": "PL3", "obj": "NONE", "form": "aninesdi" }
       ]
+    },
+    "Nania": {
+      "citation": "nania",
+      "note": "Nani'a 'There Are (#)' (2012 book p.31) -- NOT absent from the book (earlier junk-verb reading was WRONG): the yaml dropped the glottal apostrophes (nani'a -> Nania). PRONOUN-LIMITED quantifier verb with plural-only rows (nosdi'a DL1INCL / noji'a PL1INCL / nisdi'a DL2 / niji'a PL2 / nani'a PL3 -- no SG1/SG2/SG3); the SG3 citation row carries the PL3 form per CED id 73552 (ᎾᏂᎠ, glottal unwritten). The book prints the bare citation for PL3 PRESENT (no ani- prefix) and nani'esdi for the imperative -- raw composition mangles both. -- tio 18Nov26",
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "PL3", "obj": "NONE", "form": "nania" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "naniesdi" }
+      ]
     }
   }
 }

@@ -39,7 +39,7 @@ prints x / has no column — the gaps below).
 |---|---|---|
 | Book prints x / column absent | 33 | The book prints literal `x` in the remote-past or infinitive column, or the box has no such column |
 | No CED syllabary anchor / footnote-governed alternants | 1 | The book attests a form but CED carries no anchor to derive a parse-back citation from, or the form is footnote-governed (two-vs-3+ alternant pairs) |
-| yaml junk entry | 13 | The verb is absent from (or corrupted in) the 2012 book — Nania wholesale; Ai/Ajavsga-style junk rows |
+| Glottal-apostrophe yaml rows (cleaned) | 13 | The verbs EXIST in the 2012 book — the yaml dropped the glottal apostrophes between dual vowels (Nani'a → "Nania", A'i → "Ai") and leaked header text into stem fields; the corrupted rows were cleaned from the specs 2026-11-18 and the remaining gaps are the book's genuine x / no-column cells (user correction 2026-11-18: "they do exist in the VRB — try dual vowels with an apostrophe between them") |
 
 ## IMPERATIVE gaps (6) — IMMEDIATE_COMMAND
 
@@ -90,8 +90,17 @@ The book prints `x` in the infinitive column, or the box has no infinitive colum
 
 ## Notes
 
+- tio 18Nov26 CLASS CORRECTION (user verdict): there is no "yaml junk / absent
+  verb" class — Nani'a (There Are (#), p.31) and A'i (Walking, p.1) exist in
+  the VRB with full boxes; the yaml had dropped the glottal apostrophes
+  (nani'a → "Nania") and leaked header text into stem fields. NaniaSpec is
+  re-aligned to the p.31 box (pronoun-limited verb: plural-only rows nosdi'a /
+  noji'a / nisdi'a / niji'a / nani'a — no SG1/SG2/SG3; remote X; no
+  infinitive column) and AiSpec to p.1 (remote past ATTESTED, ga'isv'i →
+  aisvi; imperative/infinitive x). The remaining Nania/Ai gaps are genuine
+  unattested columns, not absence.
 - Ganesoysga's `daganesoysi`, which the yaml carried as an imperative, is the book's
-  **Future** column (p.78) — corrected in GanesoysgaSpec with the glide-y drop
+  Future column (p.78) — corrected in GanesoysgaSpec with the glide-y drop
   (canonical `daganesosi` shape). Its imperative is impermissible (impersonal).
 - Ahyeha's SG3 imperative (`ahyehesdi`, p.84) was transcribed 2026-11-17 and is NOT
   a gap — it composes through the D14 glottal-flag path.

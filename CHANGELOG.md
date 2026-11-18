@@ -8,6 +8,35 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — "yaml junk" class corrected: Nani'a / A'i exist in the VRB (glottal apostrophes dropped)
+
+**User correction.** The "yaml junk entry" gap class claimed Nania was
+"absent from the 2012 book (index and body)" and Ai/Ajavsga were junk rows.
+Wrong: the verbs exist — the yaml transcription had dropped the glottal
+apostrophes between dual vowels (Nani'a → "Nania", A'i → "Ai", nosdi'a →
+"nosdia") and leaked header text ("There"/"Are") into stem fields. The
+corrupted extraction is what looked like absence.
+
+**Re-alignment.** NaniaSpec rewritten against the true box (VRB p.31):
+Nani'a is a PRONOUN-LIMITED quantifier verb — plural-only rows nosdi'a
+(DL1INCL) / noji'a (PL1INCL) / nisdi'a (DL2) / niji'a (PL2) / nani'a (PL3),
+no SG1/SG2/SG3 rows; the SG3 citation row carries the PL3 form per CED id
+73552 (ᎾᏂᎠ, glottal unwritten between vowels). Attested cells asserted
+(SG3 PRESENT/HABITUAL, PL3 PRESENT, SG3 IMMEDIATE_COMMAND naniesdi — raw
+composition prefixes a- onto the plural citation stem, so the PL3 PRESENT
+bare-citation form and SG3 imperative are whole-form surfaceOverrides).
+AiSpec corrected (VRB p.1): REMOTE_PAST is ATTESTED (ga'isv'i → aquaisvi) —
+previously spuriously framed as blocked; FC is not asserted (no column in
+the book; engine composes the completive shape for this vowel-initial stem).
+Both lexemes' provenance notes and verbLexemes.json updated.
+
+**Docs.** GAP.md class relabeled "Glottal-apostrophe yaml rows (cleaned)"
+with the user verdict quoted; the "absent verb" reading is retired. Combined
+suite green.
+
+---
+
+
 ## 2026-11-18 — footnote-gap verbs closed: Ahili / Anidonaa / Anina imperatives wired
 
 **Problem.** Three verbs' imperatives sat in `EXPECTED_GAPS` as
