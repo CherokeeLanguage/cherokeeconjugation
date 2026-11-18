@@ -34,7 +34,19 @@ abstract class VerbBaseSpec extends Specification {
         return VerbBookEngineHarness.getEngineSyllabary(verbName, tense, english, [conjugations: conjugations])
     }
 
-     static def conjugateVerb(String verbName, Map details, String subj, String obj, String tense, String expected) {
+    // tio 18Nov26: every call registers this verb's lexical flags (glottalInitial,
+    // quvCoalescing, impersonal, surfaceOverrides) into a per-call VerbRegistry
+    // scope, so they apply to this conjugation only. Without the scope the
+    // registrations stayed global: Gahneha and Ganeha share the SG3 citation
+    // ᎦᏁᎭ, so whichever spec ran first leaked its SG1 surfaces into the other
+    // (order-dependent; 10 Gahneha cells in a bulk run).
+    static def conjugateVerb(String verbName, Map details, String subj, String obj, String tense, String expected) {
+        return net.cherokeedictionary.verb.metadata.VerbRegistry.withVerbScope {
+            conjugateVerbInScope(verbName, details, subj, obj, tense, expected)
+        }
+    }
+
+    private static def conjugateVerbInScope(String verbName, Map details, String subj, String obj, String tense, String expected) {
         def conjugations = details.conjugations ?: []
         def thirdPersonRow = conjugations.find { it.subject == "SG3" }
         def firstPersonRow = conjugations.find { it.subject == "SG1" }

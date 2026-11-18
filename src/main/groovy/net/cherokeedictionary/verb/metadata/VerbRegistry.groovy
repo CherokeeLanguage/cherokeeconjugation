@@ -26,6 +26,68 @@ class VerbRegistry {
         wiInsertionStems.clear()
     }
 
+    // tio 18Nov26: PER-CONJUGATION REGISTRATION SCOPE (collision hardening).
+    //
+    // Every per-verb registration below is keyed on the verb's SG3 present
+    // citation (present3rd) and matched contained-in. That key is NOT unique:
+    // Gahneha "hold (flexible)" and Ganeha "hold (long)" both print ᎦᏁᎭ, so a
+    // registration made for one verb used to stay in the global sets/maps and
+    // be picked up by the other. The failure was order-dependent (whichever
+    // verb registered last won) and surfaced in bulk runs only -- 10 Gahneha
+    // SG1 cells returned Ganeha's jinea/jineoi/jinevi/jinei.
+    //
+    // The registry therefore supports an optional scope: while one is open,
+    // registrations go to the scope instead of the global collections, and
+    // lookups consult the scope first, then the global seeds (VerbRegistryInitializer).
+    // VerbBaseSpec.conjugateVerb opens one per call, so a spec's data can
+    // influence exactly one conjugation and never leak to another verb.
+    private static final ThreadLocal<VerbScope> activeScope = new ThreadLocal<VerbScope>()
+
+    /** Registrations private to one conjugation call; discarded on close. -- tio 18Nov26 */
+    private static final class VerbScope {
+        final Map<String, Map<String, String>> verbOverrides = [:]
+        final Map<String, String> compoundPrefixOverrides = [:]
+        final Set<String> stemIIISyncopeStems = []
+        final Set<String> fivSg3WStems = []
+        final Set<String> iivSg3WStems = []
+        final Set<String> glottalInitialStems = []
+        final Set<String> quvCoalescingStems = []
+        final Set<String> impersonalStems = []
+        final Set<String> unifiedSg3PresentStems = []
+        final Set<String> wiInsertionStems = []
+        final Map<String, String> subjectSurfaceOverrides = [:]
+    }
+
+    /**
+     * Runs {@code body} with an empty registration scope: registrations made
+     * inside are visible only inside, and global seeds remain visible. Nests
+     * safely (the previous scope is restored). -- tio 18Nov26
+     */
+    static def withVerbScope(Closure body) {
+        VerbScope previous = activeScope.get()
+        activeScope.set(new VerbScope())
+        try {
+            return body.call()
+        } finally {
+            if (previous == null) {
+                activeScope.remove()
+            } else {
+                activeScope.set(previous)
+            }
+        }
+    }
+
+    /**
+     * Contained-in flag lookup: scope registrations win, then the global seed
+     * sets. {@code scoped} may be null when no scope is open. -- tio 18Nov26
+     */
+    private static boolean flag(Set<String> global, Set<String> scoped, String probe) {
+        if (scoped != null && scoped.find { probe.contains(it) } != null) {
+            return true
+        }
+        return global.find { probe.contains(it) } != null
+    }
+
     // Map of root to list of categories
     private static final Map<String, List<VerbCategory>> verbCategories = [:]
 
@@ -135,20 +197,26 @@ class VerbRegistry {
     }
 
     static void registerOverride(String root, String tense, String conjugation) {
-        if (!verbOverrides.containsKey(root)) {
-            verbOverrides[root] = [:]
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        Map<String, Map<String, String>> target = scope ? scope.verbOverrides : verbOverrides
+        if (!target.containsKey(root)) {
+            target[root] = [:]
         }
-        verbOverrides[root][tense] = conjugation
+        target[root][tense] = conjugation
     }
 
     static String getOverride(String root, String tense) {
         if (root == null) return null
-        return verbOverrides.get(root)?.get(tense)
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        String scoped = scope?.verbOverrides?.get(root)?.get(tense)
+        return scoped != null ? scoped : verbOverrides.get(root)?.get(tense)
     }
 
     /** Registers a per-verb compound-prefix cell override. -- tio 12Nov26 */
     static void registerCompoundOverride(String verbPrefix, String stem, String preConsonant) {
-        compoundPrefixOverrides.put("${verbPrefix}|${stem}" as String, preConsonant)
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.compoundPrefixOverrides : compoundPrefixOverrides)
+                .put("${verbPrefix}|${stem}" as String, preConsonant)
     }
 
     /**
@@ -157,17 +225,24 @@ class VerbRegistry {
      */
     static String getCompoundOverride(String verbPrefix, String stem) {
         if (!verbPrefix || !stem) return null
-        return compoundPrefixOverrides.get("${verbPrefix}|${stem}" as String)
+        String key = "${verbPrefix}|${stem}" as String
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        String scoped = scope?.compoundPrefixOverrides?.get(key)
+        return scoped != null ? scoped : compoundPrefixOverrides.get(key)
     }
 
     /** Registers a routed-stem prefix whose i syncopates in past/future forms. -- tio 12Nov26 */
     static void registerStemIIISyncope(String stemPrefix) {
-        stemIIISyncopeStems.add(stemPrefix)
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.stemIIISyncopeStems : stemIIISyncopeStems).add(stemPrefix)
     }
 
     /** True when this routed stem belongs to an -its/-is-class Stem III. -- tio 12Nov26 */
     static boolean isStemIIISyncopeStem(String stem) {
         if (!stem) return false
+        // prefix match (startsWith), not contained-in -- see registration site
+        Set<String> scoped = activeScope.get()?.stemIIISyncopeStems // -- tio 18Nov26
+        if (scoped != null && scoped.find { stem.startsWith(it) } != null) return true
         return stemIIISyncopeStems.find { stem.startsWith(it) } != null
     }
 
@@ -184,7 +259,9 @@ class VerbRegistry {
 
     /** Registers a verb (by present3rd stem) whose FIV sg3 row prints wa-. -- tio 15Nov26 */
     static void registerFivSg3W(String present3rd) {
-        if (present3rd) fivSg3WStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.fivSg3WStems : fivSg3WStems).add(present3rd)
     }
 
     /** True when this verb's FUTURE_IMPERATIVE_VOLATIVE sg3 row prints wa-. -- tio 15Nov26 */
@@ -196,7 +273,7 @@ class VerbRegistry {
         // ᎠᏍᎦᎶᎦ) AND/OR a tense suffix after the stem (To See "agowtiha"
         // ᎠᎪᏩᏘᎭ = Ꭰ + ᎪᏩᏘ + -Ꭽ), so neither a whole-citation nor a
         // suffix match survives both shapes.
-        return fivSg3WStems.find { present3rd.contains(it) } != null
+        return flag(fivSg3WStems, activeScope.get()?.fivSg3WStems, present3rd)
     }
 
     // tio 17Nov26: GLOTTAL-INITIAL stems take the ji- allomorph of the SG1
@@ -213,13 +290,15 @@ class VerbRegistry {
 
     /** Registers a verb (by present3rd citation) whose SG1 rows print ji-. -- tio 17Nov26 */
     static void registerGlottalInitial(String present3rd) {
-        if (present3rd) glottalInitialStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.glottalInitialStems : glottalInitialStems).add(present3rd)
     }
 
     /** True when this verb's SG1 Set-A rows print ji- instead of agi-. -- tio 17Nov26 */
     static boolean isGlottalInitial(String present3rd) {
         if (!present3rd) return false
-        return glottalInitialStems.find { present3rd.contains(it) } != null
+        return flag(glottalInitialStems, activeScope.get()?.glottalInitialStems, present3rd)
     }
 
     // tio 17Nov26: QU-SERIES V-COALESCING (D7 verdict, 2012 book Adlvkwsga
@@ -239,13 +318,15 @@ class VerbRegistry {
 
     /** Registers a verb (by present3rd citation) whose qu-series v coalesces before vowel-initial suffixes. -- tio 17Nov26 */
     static void registerQuvCoalescing(String present3rd) {
-        if (present3rd) quvCoalescingStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.quvCoalescingStems : quvCoalescingStems).add(present3rd)
     }
 
     /** True when this verb's qu-series v coalesces before vowel-initial suffixes (ᏋᏍ -> ᏆᏍ). -- tio 17Nov26 */
     static boolean isQuvCoalescing(String present3rd) {
         if (!present3rd) return false
-        return quvCoalescingStems.find { present3rd.contains(it) } != null
+        return flag(quvCoalescingStems, activeScope.get()?.quvCoalescingStems, present3rd)
     }
 
     // tio 17Nov26: IMPERSONAL verbs -- weather/nature/impersonal "it is ..." verbs
@@ -261,13 +342,15 @@ class VerbRegistry {
 
     /** Registers a verb (by present3rd citation) as impersonal -- no imperative exists. -- tio 17Nov26 */
     static void registerImpersonal(String present3rd) {
-        if (present3rd) impersonalStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.impersonalStems : impersonalStems).add(present3rd)
     }
 
     /** True when this verb is impersonal and its imperative is impermissible. -- tio 17Nov26 */
     static boolean isImpersonal(String present3rd) {
         if (!present3rd) return false
-        return impersonalStems.find { present3rd.contains(it) } != null
+        return flag(impersonalStems, activeScope.get()?.impersonalStems, present3rd)
     }
 
     // tio 15Nov26: IMMEDIATE imperative/volative sibling of the FIV flag. The
@@ -283,14 +366,16 @@ class VerbRegistry {
 
     /** Registers a verb (by present3rd stem) whose IIV sg3 row prints wa-. -- tio 15Nov26 */
     static void registerIivSg3W(String present3rd) {
-        if (present3rd) iivSg3WStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.iivSg3WStems : iivSg3WStems).add(present3rd)
     }
 
     /** True when this verb's IMMEDIATE imperative/volative sg3 row prints wa-. -- tio 15Nov26 */
     static boolean hasIivSg3W(String present3rd) {
         if (!present3rd) return false
         // contained-in match, same rationale as hasFivSg3W above
-        return iivSg3WStems.find { present3rd.contains(it) } != null
+        return flag(iivSg3WStems, activeScope.get()?.iivSg3WStems, present3rd)
     }
 
     // tio 15Nov26: per-(verb, tense, subject) whole-form surface overrides.
@@ -312,18 +397,29 @@ class VerbRegistry {
      */
     static void registerSubjectSurface(String present3rdStem, String tense, String subject, String obj, String form) {
         if (present3rdStem && tense && subject && form) {
-            subjectSurfaceOverrides.put("${present3rdStem}|${tense}|${subject}|${obj ?: 'NONE'}" as String, form)
+            VerbScope scope = activeScope.get() // -- tio 18Nov26
+            Map<String, String> target = scope ? scope.subjectSurfaceOverrides : subjectSurfaceOverrides
+            target.put("${present3rdStem}|${tense}|${subject}|${obj ?: 'NONE'}" as String, form)
         }
     }
 
     /** Whole-form surface for this verb/tense/subject/object, or null to compose normally. -- tio 15Nov26 */
     static String getSubjectSurface(String present3rd, String tense, String subject, String obj) {
         if (!present3rd || !tense || !subject) return null
-        // contained-in stem match, same rationale as hasFivSg3W above (the
-        // citation row may carry a baked sg3 prefix and/or a tense suffix).
-        // obj "NONE" rows match every object reading; named-object rows match
-        // only that object. -- tio 16Nov26
-        return subjectSurfaceOverrides.find { key, val ->
+        // tio 18Nov26: scope first (this conjugation's own registrations),
+        // then the global seeds -- same contained-in stem match as before.
+        VerbScope scope = activeScope.get()
+        String scoped = scope ? findSurface(scope.subjectSurfaceOverrides, present3rd, tense, subject, obj) : null
+        if (scoped != null) return scoped
+        return findSurface(subjectSurfaceOverrides, present3rd, tense, subject, obj)
+    }
+
+    /**
+     * Contained-in surface lookup in one map. obj "NONE" rows match every
+     * object reading; named-object rows match only that object. -- tio 16Nov26
+     */
+    private static String findSurface(Map<String, String> surfaces, String present3rd, String tense, String subject, String obj) {
+        return surfaces.find { key, val ->
             def parts = key.split("\\|")
             def keyObj = parts.length > 3 ? parts[3] : "NONE"
             present3rd.contains(parts[0]) && parts[1] == tense && parts[2] == subject && (keyObj == "NONE" || keyObj == (obj ?: "NONE"))
@@ -341,13 +437,15 @@ class VerbRegistry {
 
     /** Registers a verb whose single sg3 present row covers both object readings. -- tio 15Nov26 */
     static void registerUnifiedSg3PresentRow(String present3rd) {
-        if (present3rd) unifiedSg3PresentStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.unifiedSg3PresentStems : unifiedSg3PresentStems).add(present3rd)
     }
 
     /** True when the sg3 present citation covers the SG3AN object reading too. -- tio 15Nov26 */
     static boolean hasUnifiedSg3PresentRow(String present3rd) {
         if (!present3rd) return false
-        return unifiedSg3PresentStems.find { present3rd.contains(it) } != null
+        return flag(unifiedSg3PresentStems, activeScope.get()?.unifiedSg3PresentStems, present3rd)
     }
 
     // tio 15Nov26: the generic IIV/FIV w-insertion triggers (vowel-initial
@@ -361,13 +459,15 @@ class VerbRegistry {
 
     /** Registers a verb whose composed vowel-initial imperative rows take wi-. -- tio 15Nov26 */
     static void registerWiInsertionTrigger(String present3rd) {
-        if (present3rd) wiInsertionStems.add(present3rd)
+        if (!present3rd) return
+        VerbScope scope = activeScope.get() // -- tio 18Nov26
+        (scope ? scope.wiInsertionStems : wiInsertionStems).add(present3rd)
     }
 
     /** True when this verb's composed imperative forms take the wi- initial prefix. -- tio 15Nov26 */
     static boolean hasWiInsertionTrigger(String present3rd) {
         if (!present3rd) return false
-        return wiInsertionStems.find { present3rd.contains(it) } != null
+        return flag(wiInsertionStems, activeScope.get()?.wiInsertionStems, present3rd)
     }
 
     // Iterates through categories and applies rules

@@ -1,7 +1,7 @@
-# VRB engine debt -- regenerated 2026-11-17 (D15 transcription pass + D15a SyllabaryUtil fix)
+# VRB engine debt -- regenerated 2026-11-18 (D16 residue cleared + registry scope fix)
 # 0 failing vrb cells (was 111 at session start; 34 after the D15 book transcription; 1 after D15a; 0 after D16).
-# Default suite: green. WSL manual harness: vrb 19,031 tests, 0 composition failures
-# (10 GahnehaSpec bulk-run failures are a pre-existing VerbRegistry key collision -- see below).
+# Default suite: green. ./gradlew test -PincludeVrb: 23,413 tests (19,033 vrb), 0 failures/errors
+# (the 10 GahnehaSpec bulk-run failures were a VerbRegistry citation-key collision -- FIXED 2026-11-18, see below).
 #
 # FIXED 2026-11-17 (DISCREPANCIES.md D15a) -- NOT a composition-rescue problem:
 # - hgw family (Kanehgwoa 25 + Kanegwoga 3): replace() maps gwo->quo BEFORE the
@@ -17,13 +17,15 @@
 # Nigvnhdiha, Nigvnhdea, Kdiha, Gvjahlvsga, Gvhnisdiha, Gvhniha, Degvdiyea,
 # PluralObjectSpec). Stem-internal rule 3 (hn+vowel->n+vowel, nhs/nht pins)
 # untouched; the scoped unhni->unvhni boundary rule stays.
-# WSL harness: SyllabaryTest 15/15; default suite 4,354 green; vrb suite
-# 19,031 tests, 0 composition failures. 10 remaining bulk-run failures are
-# PRE-EXISTING order artifacts: GahnehaSpec vs GanehaSpec register conflicting
-# state under the same citation key ᎦᏁᎭ in the global VerbRegistry (Gahneha
-# passes 20/20 in isolation; reproduced with the old RuleVtoA). Test-infra
-# item: give the two ganeha-cited verbs distinct registry keys or fork per
-# spec.
+# WSL harness: SyllabaryTest 15/15; default suite green; vrb suite green.
+# RESOLVED 2026-11-18: the 10 GahnehaSpec/GanehaSpec bulk-run failures were an
+# order artifact -- both verbs print the same SG3 present citation ᎦᏁᎭ, and
+# VerbBaseSpec's per-verb registrations (Ganeha's SG1 surfaceOverrides) were
+# global, so whichever spec ran first leaked into the other. VerbRegistry now
+# supports a per-conjugation scope (withVerbScope); VerbBaseSpec opens one per
+# conjugateVerb call, and lookups consult the scope before the global seeds.
+# Pinned by vrb/VerbRegistryScopeSpec (both orders) + VerbRegistryTest (scope
+# visibility, nesting, no leak). No spec keys were changed.
 #
 # ALSO DROPPED from assertions (not counted above):
 # RESOLVED 2026-11-17 (D15b): k+eouvw->g rule added; Uwekaha 3 SG3 INF cells

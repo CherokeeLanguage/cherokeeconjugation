@@ -107,4 +107,70 @@ class VerbRegistryTest extends Specification {
         noExceptionThrown()
         VerbRegistry.resolveRoot("x") == null
     }
+
+    // tio 18Nov26: per-conjugation registration scope (collision hardening).
+    // Two verbs can share an SG3 present citation (Gahneha/Ganeha both print
+    // ᎦᏁᎭ), and the per-verb flags are keyed on it, so a registration must not
+    // outlive the conjugation that made it.
+    def "withVerbScope keeps registrations private to the call"() {
+        given: "a probe no other test or seed uses"
+        def probe = "ᏣᏣᏣᏣ"
+
+        expect: "the registry knows nothing about it outside a scope"
+        !VerbRegistry.isImpersonal(probe)
+        !VerbRegistry.isGlottalInitial(probe)
+
+        when:
+        def inside = VerbRegistry.withVerbScope {
+            VerbRegistry.registerImpersonal(probe)
+            VerbRegistry.registerGlottalInitial(probe)
+            [VerbRegistry.isImpersonal(probe), VerbRegistry.isGlottalInitial(probe)]
+        }
+
+        then: "both flags are visible inside the scope"
+        inside == [true, true]
+
+        and: "and neither leaked into the global sets afterwards"
+        !VerbRegistry.isImpersonal(probe)
+        !VerbRegistry.isGlottalInitial(probe)
+    }
+
+    def "scoped surface overrides win inside the scope and vanish after it"() {
+        given:
+        def probe = "ᏣᏣᏣᏣ"
+
+        when: "a scope registers a surface for the probe stem"
+        def inside = VerbRegistry.withVerbScope {
+            VerbRegistry.registerSubjectSurface(probe, "PRESENT", "SG1", "NONE", "ᎠᎠᎠᎠ")
+            VerbRegistry.getSubjectSurface(probe, "PRESENT", "SG1", null)
+        }
+
+        then:
+        inside == "ᎠᎠᎠᎠ"
+        VerbRegistry.getSubjectSurface(probe, "PRESENT", "SG1", null) == null
+    }
+
+    def "nested scopes restore the enclosing scope"() {
+        given:
+        def probe = "ᏣᏣᏣᏣ"
+
+        when:
+        def result = VerbRegistry.withVerbScope {
+            VerbRegistry.registerImpersonal(probe)
+            def outer = VerbRegistry.isImpersonal(probe)
+            def inner = VerbRegistry.withVerbScope {
+                VerbRegistry.registerQuvCoalescing(probe)
+                // inner scope must not see the outer registration
+                [VerbRegistry.isImpersonal(probe), VerbRegistry.isQuvCoalescing(probe)]
+            }
+            [outer, inner, VerbRegistry.isImpersonal(probe)]
+        }
+
+        then:
+        result[0]                          // outer sees its own flag
+        result[1] == [false, true]         // inner is isolated from outer
+        result[2]                          // outer scope is restored afterwards
+        !VerbRegistry.isImpersonal(probe)  // nothing escaped to the globals
+        !VerbRegistry.isQuvCoalescing(probe)
+    }
 }

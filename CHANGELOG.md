@@ -8,6 +8,41 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — test infra: per-conjugation VerbRegistry scope (collision fix)
+
+**Symptom.** In a bulk vrb run, `GahnehaSpec` (hold flexible) failed 10 SG1
+cells, returning `jinea / jineoi / jinevi / jinei` — the rows of `GanehaSpec`
+(hold long). `GahnehaSpec` passed 20/20 when run alone, and the failure
+depended on class order (Ganeha-then-Gahneha failed, the reverse passed).
+
+**Root cause.** Both verbs print the same SG3 present citation `ᎦᏁᎭ`. Every
+lexical flag `VerbBaseSpec.conjugateVerb` registers (`glottalInitial`,
+`quvCoalescing`, `impersonal`, `surfaceOverrides`) is keyed on that citation
+and matched contained-in, and the registrations went into the **global**
+`VerbRegistry`. Ganeha's SG1 `surfaceOverrides` therefore survived into
+Gahneha's conjugations. Production had the same latent hazard for any two
+lexemes sharing a present3rd citation.
+
+**Fix.** `VerbRegistry` gained a per-conjugation registration scope:
+
+- `withVerbScope { ... }` opens a `ThreadLocal` scope; registration methods
+  write to the scope instead of the global sets/maps while it is open.
+- Lookups consult the scope first, then the global seeds
+  (`VerbRegistryInitializer`), so bootstrapped data stays visible.
+- `VerbBaseSpec.conjugateVerb` wraps registration + composition in one scope,
+  so a spec's data influences exactly one conjugation and cannot leak.
+- Scope is nest-safe and thread-safe; `clearOverrides()` semantics unchanged.
+
+**Tests.** New `vrb/VerbRegistryScopeSpec` pins both class orders using the real
+`GahnehaSpec`/`GanehaSpec` details (fails before the fix with `ᏥᏁᎠ` vs
+`ᏥᏁᎭ`). `VerbRegistryTest` adds mechanism tests: scope visibility, no leak
+after close, scoped surface precedence, and nested-scope isolation.
+
+**Verified.** `./gradlew test -PincludeVrb` → **23,413 tests (19,033 vrb), 0
+failures, 0 errors**.
+
+---
+
 ## 2026-11-18 — build ops: `./gradlew` works under WSL again
 
 **Symptom.** Every build died with `The first result from the daemon was empty`
