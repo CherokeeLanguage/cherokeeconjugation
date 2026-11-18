@@ -15,7 +15,12 @@ class UnaaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'aginaa'],
             [subject: 'SG1', object: '', present: 'aginaa', habitual: 'aginaoi', remote_past: 'aginavi', imperative: 'aginaesdi', infinitive: 'aginvdi'],
             [subject: 'SG2', object: '', present: 'janaa', habitual: 'janaoi', remote_past: 'janavi', imperative: 'janaesdi', infinitive: 'janvdi'],
-            [subject: 'SG3', object: '', habitual: 'unaoi', imperative: 'janaesdi', infinitive: '----', present: 'unaa', remote_past: 'unavi'],
+            // tio 18Nov26: SG3 infinitive 'unvdi' wired -- the 2012 book (Una'a Have
+            // (flexible) p.83) ATTESTS the infinitive column (aginvdi / janvdi /
+            // unvdi / uninvdi, no x); the '----' was the stale no-anchor gap, the
+            // last of its class. SG3 imperative corrected from the SG2 copy
+            // artifact 'janaesdi' to the book row una'esdi -> 'unaesdi'.
+            [subject: 'SG3', object: '', habitual: 'unaoi', imperative: 'unaesdi', infinitive: 'unvdi', present: 'unaa', remote_past: 'unavi'],
             [subject: 'PL3', object: '', present: 'uninaa', habitual: 'uninaoi', remote_past: 'uninavi', imperative: 'uninaesdi', infinitive: 'uninvdi']
         ]
     ]

@@ -274,7 +274,6 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Ukvhada|INFINITIVE",
         "Ulogila|INFINITIVE",
         "Ulsihga|INFINITIVE",
-        "Unaa|INFINITIVE",
         "Uneguja|INFINITIVE",
         "Unhta|INFINITIVE",
         "Uwohiyuha|INFINITIVE",

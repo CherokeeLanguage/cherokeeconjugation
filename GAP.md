@@ -1,6 +1,6 @@
 # GAP.md — vrb stem-coverage data gaps
 
-**2026-11-17; last count 2026-11-18 (glottal audit).** These are the 46 verb|tense entries the yaml data cannot attempt
+**2026-11-17; last count 2026-11-18 (glottal + no-anchor audits).** These are the 45 verb|tense entries the yaml data cannot attempt
 because **the 2012 VRB itself does not attest the form** — not engine limitations.
 The live list is `EXPECTED_GAPS` in
 `src/test/groovy/net/cherokeedictionary/conjugation/vrb/VrbStemCoverageMetaSpec.groovy`;
@@ -38,8 +38,16 @@ prints x / has no column — the gaps below).
 | Class | Count | Meaning |
 |---|---|---|
 | Book prints x / column absent | 33 | The book prints literal `x` in the remote-past or infinitive column, or the box has no such column |
-| No CED syllabary anchor / footnote-governed alternants | 1 | The book attests a form but CED carries no anchor to derive a parse-back citation from, or the form is footnote-governed (two-vs-3+ alternant pairs) |
 | Glottal-apostrophe yaml rows (cleaned) | 12 | The verbs EXIST in the 2012 book — the yaml dropped the glottal apostrophes between dual vowels (Nani'a → "Nania", A'i → "Ai", Aja'vsga → "Ajavsga") and leaked header text into stem fields; the corrupted rows were cleaned from the specs 2026-11-18 and the remaining gaps are the book's genuine x / no-column cells (user correction 2026-11-18: "they do exist in the VRB — try dual vowels with an apostrophe between them") |
+
+**The "No CED syllabary anchor / footnote-governed alternants" class is now
+EMPTY (closed 2026-11-18):** Ahili/Anidonaa/Anina imperatives were wired from
+the VRB processed-md; the last entry, `Unaa|INFINITIVE`, turned out to be a
+STALE GAP — the book (Una'a Have (flexible) p.83) ATTESTS the infinitive
+column (aginvdi / janvdi / unvdi / uninvdi, no x) and the spec already asserts
+all five cells through the deverbal-infinitive derivation; the SG3 stem
+`unvdi` is now wired and the gap deleted. Every remaining gap is a genuine
+book-x / no-column cell. -- tio 18Nov26
 
 ## IMPERATIVE gaps (6) — IMMEDIATE_COMMAND
 
@@ -81,11 +89,10 @@ row per the D1 convention, so an unattested remote blocks both):
 
 The book prints `x` in the infinitive column, or the box has no infinitive column:
 
-- Ai · Anagaliha · Anidonaa · Anina · Galiga · Ganatlaa (Have a Pet, p.74)
-- Ganohili (Flying, p.27) · Gata (Hanging, p.75) · Ganesoysga (Hailing, p.78)
+- Ai · Anagaliha · Anidonaa · Anina · Galiga · Ganatlaa (Have a Pet, p.74)- Ganohili (Flying, p.27) · Gata (Hanging, p.75) · Ganesoysga (Hailing, p.78)
 - Ganela · Ganhga · Gadoga · Eha · Nania · Udvnvisdi (Getting Ready-impersonal)
 - Uhnalvha · Uhniha (In Bed, p.59) · Ujaa · Ukvhada (Foggy, p.78) · Ulogila
-- Ulsihga (Dark, p.78) · Unaa (Have Flexible, p.83) · Uneguja (Mean, p.40)
+- Ulsihga (Dark, p.78) · Uneguja (Mean, p.40)
 - Unhta · Uwohiyuha · Uwotla (Sitting, p.71) · Wakti (Going, p.11)
 
 ## Notes

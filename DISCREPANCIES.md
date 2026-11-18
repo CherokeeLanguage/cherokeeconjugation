@@ -388,8 +388,11 @@ the three-way cell classification. -- tio 17Nov26
   wa-epenthesis ONLY in the agw-/jv- 1sg/2sg rows (agwvdisdi / jvdisdi), not in
   SG3/PL3 (udisdi / unvdisdi). The engine composes uwadisdi (the Ꭴw preVowel
   fusion keeps the stem's wa); the book form is asserted via a whole-form
-  surface override. The structural fusion fix is deferred -- touching it risks
-  the 224-cell infinitive-guard work. The harness composes from the FIRST SG3
+  surface override. The structural fusion fix is DEFERRED (user ruling
+  2026-11-18: "keep parked; if there are any future issues, we tackle them
+  then" -- trigger = any future verb/cell surfacing the same Ꭴw-fusion
+  pattern). Touching it risks the 224-cell infinitive-guard work. The harness
+  composes from the FIRST SG3
   row, so the unvya alternant's attested unvdisdi cannot be distinguished by
   the single-row engine path.
 - **Asvga (Smells, p.75) SG3 remote past: `asvgv'i` (a- prefix) is CORRECT --
@@ -403,7 +406,7 @@ the three-way cell classification. -- tio 17Nov26
 
 With these two, every open question in the D15 block is closed. -- tio 17Nov26
 
-## D18. Gutiha infinitive suffix: CED -hdi vs VRB grid -di (2026-11-18, documented variance)
+## D18. Gutiha infinitive suffix: CED -hdi vs VRB grid -di (2026-11-18, RESOLVED -- documented variance, user verdict)
 
 The VRB's weather-verb grid (processed-md ~line 4399, "Verb : Gutiha /
 Snowing") prints the infinitive as `uwutodi`; CED cedEntries.csv id 73286
@@ -416,3 +419,13 @@ shorter -di shape may be a transcription artifact rather than a genuine
 allomorph. NOT auto-patched (open-question convention); the CED anchor is
 kept. The same grid is also the authority for the impersonal cohort's
 paradigms -- no other variances surfaced in the audit. -- tio 18Nov26
+
+**D18 RESOLVED (2026-11-18, user verdict): "the intrusive 'h' makes no
+difference to conjugation -- the h needs to be removed for conjugation, and
+the VRB does so while the CED keeps it. The h can go."** The variance is
+cosmetic-only: CED's own syllabary ᎤᏭᏙᏗ carries NO h glyph (u-wu-to-di), so
+both romanizations compose to identical glyphs and the conjugation is
+unaffected either way. GutihaSpec stays as-is (asserts the CED romanization
+per the parse-back rule); no code or data change. CED-vs-VRB romanization
+differences of this class (silent/intrusive h before a consonant onset) are
+documented variance, not discrepancies. -- tio 18Nov26
