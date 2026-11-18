@@ -1,8 +1,14 @@
 package net.cherokeedictionary.conjugation
 
-import net.cherokeedictionary.proposed.ConjugationRequest
-import net.cherokeedictionary.proposed.VerbConjugationFacade
+import net.cherokeedictionary.conjugation.ConjugationRequest
+import net.cherokeedictionary.conjugation.VerbConjugationFacade
 
+// tio 18Nov26: LEGACY secondary path -- the primary one-in-one-out entry point is
+// VerbConjugationFacade. Kept per user decision ("keep the current unused sections,
+// we'll revisit these later"); NOT removed. Its analyze() is a lexicon lookup, not
+// the promised deconstruction feature (backlog: deconstruct → approximate
+// interlinear breakdown).
+@Deprecated
 class ConjugationService {
 
     /**

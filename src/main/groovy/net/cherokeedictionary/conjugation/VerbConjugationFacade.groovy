@@ -1,7 +1,24 @@
-package net.cherokeedictionary.proposed
+package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.core.Verb
 
+/**
+ * The primary one-in-one-out API: conjugate(ConjugationRequest) -> Verb.
+ *
+ * ERROR CONTRACT (user ruling 2026-11-18: "if composition fails then it
+ * fails" -- no exceptions, matching 11 years of existing behavior):
+ *   - Missing stems are NOT an error. ConjugationContext.buildBaseVerb maps
+ *     only the non-null request stems, and the engine's Stemmer derives the
+ *     missing tenses from the cited ones where possible (e.g. FUTURE_COMMAND
+ *     from the remote row per the D1 convention).
+ *   - When a required stem is genuinely absent and cannot be derived, the
+ *     failure surfaces AS TEXT IN THE OUTPUT WORD -- "MISSING_ENTRY..." (see
+ *     VerbConjugationProcessor) or transliteration residue like "not a valid
+ *     letter" -- never an exception and never a null return. Callers that
+ *     need to detect failure should check the returned surface for those
+ *     markers (the vrb coverage gate does exactly this).
+ * -- tio 18Nov26
+ */
 class VerbConjugationFacade {
     boolean isDebug = true;
 

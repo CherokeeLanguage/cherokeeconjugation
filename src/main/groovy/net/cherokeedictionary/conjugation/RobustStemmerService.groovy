@@ -1,4 +1,4 @@
-package net.cherokeedictionary.proposed
+package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.stemmer.DefinitionLine

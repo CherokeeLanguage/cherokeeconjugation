@@ -15,8 +15,8 @@
 package net.cherokeedictionary.conjugation.vrb
 
 import net.cherokeedictionary.conjugation.VerbBaseSpec
-import net.cherokeedictionary.proposed.ConjugationRequest
-import net.cherokeedictionary.proposed.VerbConjugationFacade
+import net.cherokeedictionary.conjugation.ConjugationRequest
+import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.verb.metadata.VerbLexemeFlagLoader
 import net.cherokeedictionary.verb.metadata.VerbRegistry
 import spock.lang.Unroll

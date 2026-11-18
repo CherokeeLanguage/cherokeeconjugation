@@ -1,8 +1,8 @@
 package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
-import net.cherokeedictionary.proposed.ConjugationRequest
-import net.cherokeedictionary.proposed.VerbConjugationFacade
+import net.cherokeedictionary.conjugation.ConjugationRequest
+import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import spock.lang.Specification
 

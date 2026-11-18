@@ -9,15 +9,19 @@ import net.cherokeedictionary.verb.conjugation.Conjugate
 class VerbFactory {
     //todo: this isn't really a verb factory - it's more of a conjugateAndGetDisplayValue kind of thing
     // Overloaded method supporting the new ConjugationRequest architecture while keeping Map backward compatibility
-    static Verb createVerbFromParameters(net.cherokeedictionary.proposed.ConjugationRequest request) {
-        def facade = new net.cherokeedictionary.proposed.VerbConjugationFacade()
-        def context = new net.cherokeedictionary.proposed.ConjugationContext(request)
+    // tio 18Nov26: LEGACY secondary path -- the primary one-in-one-out entry point is
+    // net.cherokeedictionary.conjugation.VerbConjugationFacade. Kept per user decision
+    // ("keep the current unused sections, we'll revisit these later"); NOT removed.
+    @Deprecated
+    static Verb createVerbFromParameters(net.cherokeedictionary.conjugation.ConjugationRequest request) {
+        def facade = new net.cherokeedictionary.conjugation.VerbConjugationFacade()
+        def context = new net.cherokeedictionary.conjugation.ConjugationContext(request)
         context.buildBaseVerb()
         return context.verb
     }
 
-    static Verb createVerbFromParametersAndConjugate(net.cherokeedictionary.proposed.ConjugationRequest request) {
-        def facade = new net.cherokeedictionary.proposed.VerbConjugationFacade()
+    static Verb createVerbFromParametersAndConjugate(net.cherokeedictionary.conjugation.ConjugationRequest request) {
+        def facade = new net.cherokeedictionary.conjugation.VerbConjugationFacade()
         return facade.conjugate(request)
     }
 
