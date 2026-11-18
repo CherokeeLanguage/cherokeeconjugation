@@ -8,3 +8,4 @@ src/.DS_Store
 #transliteration
 docs
 grammar
+.zcode/

@@ -8,6 +8,39 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — footnote-gap verbs closed: Ahili / Anidonaa / Anina imperatives wired
+
+**Problem.** Three verbs' imperatives sat in `EXPECTED_GAPS` as
+"book-attested-but-no-CED-anchor": the 2012 VRB prints the forms but CED marks
+the imperative column `-----`, so no parse-back citation could be built and the
+rows were never wired. Ahili additionally needed "vision-OCR of the book page"
+per the earlier assessment.
+
+**Discovery.** The processed-md text layer of the VRB
+(`docs/processed/VRB Didehloqwasgi 2012.md`) already carries the attested
+romanizations — **no OCR was needed**. Ahili's Ahi'li box (p.10) attests all
+five imperative rows; Anidona'a (p.56 group) and Ani'na (p.71 group) each
+attest four congregation imperative rows and are themselves the 3+ alternants
+of the VRB pp.18 footnote pairs (/Danidoga/ two vs /anidona'a/ 3+ standing;
+/Dunotla/ two vs /ani'na/ 3+ sitting) — no separate lexeme modeling required,
+the existing AnidonaaSpec/AninaSpec already model those lexemes.
+
+**Wiring.** All rows registered as whole-form `surfaceOverrides` (the D14/D15
+pattern): raw composition mangled Ahili's glottal-initial allomorphy
+(ji- + hi-luga → jihiluga vs book ji'i'luga; ga- echo on SG3), and the
+congregation boxes have **no SG3 row at all**, so there is no SG3 imperative
+stem to compose from. Ahili's SG3 stem `ahiluga` is wired into the spec
+details for the coverage gate. The three lexemes also joined
+`verbLexemes.json` (data↔spec sync, caught by `VerbLexemeFlagMetaSpec`).
+
+**Gate.** `VrbStemCoverageMetaSpec.actualGaps` exempts tenses whose cells are
+attested via surfaceOverrides while the SG3 row cites no stem
+(`coveredByOverrides`) — data-complete, not a gap, and not gate-attempted.
+Three `EXPECTED_GAPS` entries deleted (50 → 47). GAP.md imperative section
+updated (no-anchor class 4 → 1). Combined suite 23,519 green.
+
+---
+
 ## 2026-11-18 — lexeme-flag generalization: data-driven per-lexeme flags for library consumers
 
 **Problem.** The per-verb lexeme flags (`glottalInitial`, `quvCoalescing`,

@@ -1,6 +1,6 @@
 # GAP.md — vrb stem-coverage data gaps
 
-**2026-11-17.** These are the 50 verb|tense entries the yaml data cannot attempt
+**2026-11-17; last count 2026-11-18.** These are the 47 verb|tense entries the yaml data cannot attempt
 because **the 2012 VRB itself does not attest the form** — not engine limitations.
 The live list is `EXPECTED_GAPS` in
 `src/test/groovy/net/cherokeedictionary/conjugation/vrb/VrbStemCoverageMetaSpec.groovy`;
@@ -38,7 +38,7 @@ prints x / has no column — the gaps below).
 | Class | Count | Meaning |
 |---|---|---|
 | Book prints x / column absent | 33 | The book prints literal `x` in the remote-past or infinitive column, or the box has no such column |
-| No CED syllabary anchor / footnote-governed alternants | 4 | The book attests a form but CED carries no anchor to derive a parse-back citation from, or the form is footnote-governed (two-vs-3+ alternant pairs) |
+| No CED syllabary anchor / footnote-governed alternants | 1 | The book attests a form but CED carries no anchor to derive a parse-back citation from, or the form is footnote-governed (two-vs-3+ alternant pairs) |
 | yaml junk entry | 13 | The verb is absent from (or corrupted in) the 2012 book — Nania wholesale; Ai/Ajavsga-style junk rows |
 
 ## IMPERATIVE gaps (6) — IMMEDIATE_COMMAND
@@ -49,16 +49,24 @@ prints x / has no column — the gaps below).
 - Ai (p.9-ish, imperative x)
 
 **Book ATTESTS the imperative, but no CED anchor / footnote-governed alternants
-(user-adjudicated 2026-11-17):**
-- Ahili (Driving, p.10: the BOOK attests `ji'i'luga / hihi'luga / ahi'luga /
-  anihi'luga / idihi'luga` — but CED marks the imperative empty (`-----`), so a
-  CED-derived parse-back citation cannot be built; the book has the value)
-- Anidonaa (Standing: VRB pp.18 footnote — */Danidoga/* if only two are
-  standing, */anidona/* if three or more. The imperative (`widanidogesdi`,
-  inside the Gadoga box p.56) belongs to the two-vs-3+ alternant pair, not a
-  single stem)
-- Anina (Sitting: VRB pp.18 footnote — */Dunotla/* if only two are sitting,
-  */ani'na/* if three or more. The imperative lives inside the Uwotla box p.71)
+(user-adjudicated 2026-11-17; Ahili/Anidonaa/Anina CLOSED 2026-11-18 — the VRB
+processed-md text layer carried the attested romanizations, no OCR needed; 3 of
+the original 4 in this class remain open as INFINITIVE/other gaps):**
+- ~~Ahili (Driving, p.10: the BOOK attests `ji'i'luga / hihi'luga / ahi'luga /
+  anihi'luga / idihi'luga` — but CED marks the imperative empty (`-----`))~~
+  CLOSED: all five rows wired as book-final surfaceOverrides in AhiliSpec (raw
+  composition mangled the glottal-initial allomorphy, ji- + hi-luga → jihiluga
+  vs book ji'i'luga); the SG3 imperative stem `ahiluga` is in the spec details.
+- ~~Anidonaa (Standing: VRB pp.18 footnote — */Danidoga/* if only two are
+  standing, */anidona/* if three or more)~~ CLOSED: Anidona'a IS the 3+
+  alternant lexeme; its own box (VRB p.56 group) attests four congregation
+  imperatives (ojidona'esdi / ijidona'esdi / ididona'esdi / anidona'esdi — the
+  box has NO SG3 row) — wired as surfaceOverrides in AnidonaaSpec.
+- ~~Anina (Sitting: VRB pp.18 footnote — */Dunotla/* if only two are sitting,
+  */ani'na/* if three or more)~~ CLOSED: Ani'na IS the 3+ alternant lexeme; its
+  own box (VRB p.71 group) attests four congregation imperatives (ojinesdi /
+  ijinesdi / idinesdi / aninesdi — no SG3 row) — wired as surfaceOverrides in
+  AninaSpec.
 
 ## REMOTE_PAST / FUTURE_COMMAND gaps (16)
 

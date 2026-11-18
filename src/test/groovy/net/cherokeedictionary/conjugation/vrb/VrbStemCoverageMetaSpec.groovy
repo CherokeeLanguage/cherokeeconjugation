@@ -105,6 +105,18 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         return cleaned && cleaned != "----" && cleaned != "x" && cleaned != "X" && cleaned != "/" && cleaned != "X]"
     }
 
+    /**
+     * tio 18Nov26: True when the tense's cells are DATA-COMPLETE through
+     * whole-form surfaceOverrides even though the SG3 row cites no stem — the
+     * Anidona'a/Ani'na congregation boxes have NO SG3 row, yet attest the
+     * imperative column for SG1/SG2/PL1INCL/PL3 (registered as book-final
+     * surfaces). Such a verb|tense is neither a gap nor gate-attempted (there
+     * is no SG3 stem to compose from). -- tio 18Nov26
+     */
+    static boolean coveredByOverrides(Map details, String tense) {
+        return (details.surfaceOverrides ?: []).any { it.tense == tense }
+    }
+
     /** [verbName, tense, subject] rows the data can attempt. */
     static List<List> compositionRows() {
         def rows = []
@@ -137,6 +149,9 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         discoverVrbSpecs().each { spec ->
             TENSES.each { String tense ->
                 if (tense == "IMMEDIATE_COMMAND" && spec.details.impersonal) return
+                // tio 18Nov26: cells attested via whole-form surfaceOverrides with
+                // no SG3 stem (Anidonaa/Anina imperatives) are data-complete, not gaps.
+                if (coveredByOverrides(spec.details, tense) && !hasStemRow(spec.details, tense)) return
                 if (!hasStemRow(spec.details, tense)) {
                     gaps << "${spec.name}|${tense}"
                 }
@@ -272,20 +287,16 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         // (details.impersonal), asserted by the NO_IMPERATIVE sentinel test. Remaining:
         //  - Atihneha/Ahileha/Ai: the book prints x in the imperative column (correct --
         //    no attested form);
-        //  - Ahili: the book ATTESTS the imperative (ji'i'luga / hihi'luga / ahi'luga /
-        //    anihi'luga / idihi'luga, p.10) but CED marks it empty (-----) -- the BOOK
-        //    has the value while CED does not, so a CED-derived parse-back citation
-        //    cannot be built;
-        //  - Anidonaa: the book footnote governs the form (VRB pp.18, Gadoga box):
-        //    /Danidoga/ if only two are standing, /anidona/ if three or more -- the
-        //    imperative belongs to the two-vs-3+ alternant pair, not a single stem;
-        //  - Anina: same footnote pattern (VRB pp.18, Uwotla box): /Dunotla/ if only
-        //    two are sitting, /ani'na/ if three or more.
+        //  tio 18Nov26: Ahili/Anidonaa/Anina CLOSED -- the VRB processed-md text
+        //  layer carries the attested imperative romanizations (no OCR needed):
+        //  Ahili's Ahi'li box (p.10) attests all five rows (SG3 stem ahi'luga wired
+        //  into details, composition path); Anidonaa/Anina's congregation boxes
+        //  (pp.56/71) attest four rows each with no SG3 row -- wired as whole-form
+        //  surfaceOverrides. The pp.18 footnote alternants are lexeme-scoped:
+        //  /Danidoga/=/anidona'a/ (two vs 3+ standing), /Dunotla/=/ani'na/ (two vs
+        //  3+ sitting) -- AnidonaaSpec/AninaSpec ARE the 3+ alternant lexemes.
         "Ahileha|IMMEDIATE_COMMAND",
-        "Ahili|IMMEDIATE_COMMAND",
         "Ai|IMMEDIATE_COMMAND",
-        "Anidonaa|IMMEDIATE_COMMAND",
-        "Anina|IMMEDIATE_COMMAND",
         "Atihneha|IMMEDIATE_COMMAND",
     ]
 }

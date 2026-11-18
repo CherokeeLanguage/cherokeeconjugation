@@ -116,6 +116,37 @@
       "surfaceOverrides": [
         { "tense": "INFINITIVE", "subject": "SG3", "obj": "NONE", "form": "udisdi" }
       ]
+    },
+    "Ahili": {
+      "citation": "ahili",
+      "note": "Ahi'li 'Driving' (2012 book p.10) -- the imperative column is ATTESTED in the book but CED marks it empty (-----), so the rows are Feeling's romanization (laryngeal apostrophes unwritten in syllabary); raw composition mangled the glottal-initial allomorphy, so the five rows are book-final surfaces. The SG3 imperative stem is wired into the spec details for the coverage gate. -- tio 18Nov26",
+      "surfaceOverrides": [
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "jiiluga" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG2", "obj": "NONE", "form": "hihiluga" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "ahiluga" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL3", "obj": "NONE", "form": "anihiluga" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL1INCL", "obj": "NONE", "form": "idihiluga" }
+      ]
+    },
+    "Anidonaa": {
+      "citation": "anidonaa",
+      "note": "Anidona'a 'Standing, They Are (Congregation)' (2012 book p.56 group) -- the 3+ alternant of the pp.18 footnote pair (/Danidoga/ if only two, /anidona/ if three or more). The box ATTESTS the imperative column for its four congregation rows but has NO SG3 row, so there is no SG3 imperative stem to compose from -- the rows are book-final surfaces. -- tio 18Nov26",
+      "surfaceOverrides": [
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "ojidonaesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG2", "obj": "NONE", "form": "ijidonaesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL1INCL", "obj": "NONE", "form": "ididonaesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL3", "obj": "NONE", "form": "anidonaesdi" }
+      ]
+    },
+    "Anina": {
+      "citation": "anina",
+      "note": "Ani'na 'Sitting, They Are (Congregation)' (2012 book p.71 group) -- the 3+ alternant of the pp.18 footnote pair (/Dunotla/ if only two, /ani'na/ if three or more). The box ATTESTS the imperative column for its four congregation rows but has NO SG3 row, so the rows are book-final surfaces. -- tio 18Nov26",
+      "surfaceOverrides": [
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "ojinesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "SG2", "obj": "NONE", "form": "ijinesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL1INCL", "obj": "NONE", "form": "idinesdi" },
+        { "tense": "IMMEDIATE_COMMAND", "subject": "PL3", "obj": "NONE", "form": "aninesdi" }
+      ]
     }
   }
 }

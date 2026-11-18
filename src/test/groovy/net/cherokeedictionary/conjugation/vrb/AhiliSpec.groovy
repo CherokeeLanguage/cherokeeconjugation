@@ -12,11 +12,27 @@ class AhiliSpec extends VerbBaseSpec {
     static def details = [
         definition: "Driving",
         part_of_speech: "v.i.",
+        // tio 18Nov26: IMMEDIATE_COMMAND wired via whole-form surfaceOverrides --
+        // the Ahi'li box (VRB p.10) ATTESTS the imperative column (ji'i'luga /
+        // hihi'luga / ahi'luga / anihi'luga / idihi'luga) while CED marks it empty
+        // (-----) -- the BOOK has the value, so the rows are Feeling's
+        // romanization (laryngeal apostrophes unwritten in syllabary). Raw
+        // composition mangled the glottal-initial allomorphy (ji- + hi-luga →
+        // jihiluga vs book ji'i'luga; ga- echo on SG3), so the rows are
+        // registered as book-final surfaces (D14/D15 override pattern). VRB
+        // processed-md text layer carried the romanization -- no OCR needed.
+        surfaceOverrides: [
+            [tense: 'IMMEDIATE_COMMAND', subject: 'SG1', obj: 'NONE', form: 'jiiluga'],
+            [tense: 'IMMEDIATE_COMMAND', subject: 'SG2', obj: 'NONE', form: 'hihiluga'],
+            [tense: 'IMMEDIATE_COMMAND', subject: 'SG3', obj: 'NONE', form: 'ahiluga'],
+            [tense: 'IMMEDIATE_COMMAND', subject: 'PL3', obj: 'NONE', form: 'anihiluga'],
+            [tense: 'IMMEDIATE_COMMAND', subject: 'PL1INCL', obj: 'NONE', form: 'idihiluga']
+        ],
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsiili'],
             [subject: 'SG1', object: '', present: 'tsiili', habitual: 'jiilegoi', remote_past: '/', imperative: 'jiilisoi', infinitive: 'agihilvsvi'],
             [subject: 'SG2', object: '', present: 'hihili', habitual: 'hihilegoi', remote_past: '/', imperative: 'hihilisoi', infinitive: 'jahilvsvi'],
-            [subject: 'SG3', object: '', habitual: 'ahilisoi', imperative: '', infinitive: 'uhilvsdi', present: 'ahili', remote_past: 'uhilvsvi'],
+            [subject: 'SG3', object: '', habitual: 'ahilisoi', imperative: 'ahiluga', infinitive: 'uhilvsdi', present: 'ahili', remote_past: 'uhilvsvi'],
             [subject: 'PL3', object: '', present: 'anihili', habitual: 'anihilegoi', remote_past: '/', imperative: 'anihilisoi', infinitive: 'unihilvsvi'],
             [subject: 'PL1INCL', object: '', present: 'idihili', habitual: 'idihilegoi', remote_past: '/', imperative: 'idihilisoi', infinitive: 'igihilvsvi']
         ]
@@ -32,6 +48,18 @@ class AhiliSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "tsihilisoi"
         // "SG1" | "" | Tense.REMOTE_PAST     | "/"
         // tio 17Nov26: FUTURE_COMMAND UNATTESTED -- the 2012 book box for Ahi'li (Driving p.10) has no future-command column; yaml '/' junk dropped.
+        // tio 18Nov26: IMMEDIATE_COMMAND WIRED -- the 2012 book (Ahi'li Driving p.10)
+        // ATTESTS the imperative column (ji'i'luga / hihi'luga / ahi'luga /
+        // anihi'luga / idihi'luga) while CED marks it empty (-----) -- the BOOK has
+        // the value, so the SG3 stem is Feeling's romanization (ahi'luga; the
+        // laryngeal apostrophe is unwritten in syllabary, ᎠᎯᎫᎧ). Closes the
+        // EXPECTED_GAPS entry (no OCR needed: the VRB processed-md text layer
+        // carries the romanization). -- tio 18Nov26
+        "SG1" | "" | Tense.IMMEDIATE_COMMAND | "jiiluga"
+        "SG2" | "" | Tense.IMMEDIATE_COMMAND | "hihiluga"
+        "SG3" | "" | Tense.IMMEDIATE_COMMAND | "ahiluga"
+        "PL3" | "" | Tense.IMMEDIATE_COMMAND | "anihiluga"
+        "PL1INCL" | "" | Tense.IMMEDIATE_COMMAND | "idihiluga"
         "SG1" | "" | Tense.INFINITIVE      | "agihilvsdi"
         "SG2" | "" | Tense.PRESENT         | "hihili"
         "SG2" | "" | Tense.HABITUAL        | "hihilisoi"
