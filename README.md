@@ -22,6 +22,7 @@ and the conjugation engine will build and place the subsequent jar in your local
 ## Project documents
 
 - [CHANGELOG.md](CHANGELOG.md) — dated record of engine/validation work (comments tagged `-- tio <DDMMMYY>` trace to it)
-- [DISCREPANCIES.md](DISCREPANCIES.md) — D1–D16 discrepancy ledger, each with a citation and verdict
-- [GAP.md](GAP.md) — the 67 book-unattested stem gaps tracked by VrbStemCoverageMetaSpec
-- Validation: `./gradlew test` (default suite) · `./gradlew test -PincludeVrb` (adds the 405-spec vrb package + the 10,177-row composition gate)
+- [DISCREPANCIES.md](DISCREPANCIES.md) — D1–D18 discrepancy ledger, each with a citation and verdict
+- [GAP.md](GAP.md) — the 45 book-unattested stem gaps tracked by VrbStemCoverageMetaSpec (gap classes + closing protocol)
+- Validation: `./gradlew test` (default suite) · `./gradlew test -PincludeVrb` (adds the 405-spec vrb package + the composition gate)
+- Public API: `net.cherokeedictionary.conjugation.VerbConjugationFacade` — one-in-one-out (`conjugate(ConjugationRequest) -> Verb`); syllabary-only contract for stems (roman tolerated via the `VerbInputNormalizer` input gate); per-lexeme flags in `src/main/resources/data/verbLexemes.json` applied via `ConjugationRequest.lexeme`

@@ -8,6 +8,25 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — pre-backlog review: D18 resolved, D15 parked, Unaa stale gap closed
+
+**D18 RESOLVED (user verdict):** the intrusive-h variance (VRB `uwutodi` vs
+CED `uwutohdi`) makes no difference to conjugation — CED's own syllabary
+ᎤᏭᏙᏗ carries no h glyph, so both compose identically; "the h can go."
+Documented variance; GutihaSpec unchanged.
+
+**D15 parked with a trigger condition (user verdict):** "keep parked; if
+there are any future issues, we tackle them then" — trigger = any future
+verb/cell surfacing the Ꭴw-fusion pattern.
+
+**GAP.md no-anchor audit:** all 46 gaps verified against the VRB boxes.
+Finding: `Unaa|INFINITIVE` was a STALE GAP — Una'a (Have flexible, p.83)
+attests the infinitive column (aginvdi / janvdi / unvdi / uninvdi) and the
+spec already asserted all five cells via the deverbal-infinitive derivation.
+SG3 stem `unvdi` wired (+ SG3 imperative corrected from the SG2 copy artifact
+to `unaesdi`); gap deleted (46 → 45). **The "No CED syllabary anchor" class
+is now EMPTY** — every remaining gap is a genuine book-x / no-column cell.
+
 ## 2026-11-18 — input gate: VerbInputNormalizer on the conjugation path
 
 **User decisions.** The dictionary passes SYLLABARY only. Specs stay untouched
@@ -388,7 +407,7 @@ work; D1–D17 all carry verdicts.
 
 - `-- tio <DDMMMYY>` — every substantive code comment ends with this tag; grep
   `tio 17Nov26` to find all changes from a given day.
-- DISCREPANCIES.md — D1–D17 ledger. Each item: discrepancy, citation (book
+- DISCREPANCIES.md — D1–D18 ledger. Each item: discrepancy, citation (book
   page / CED id), verdict, and whether it is implemented, characterized, or an
   open question.
 - GAP.md — the book-unattested stem gaps (mirrors
@@ -408,23 +427,7 @@ work; D1–D17 all carry verdicts.
    Feeling's raw romanization — the plain transliterator handles them exactly.
 5. In-place perl with `\x{...}` escapes on UTF-8 docs has corrupted encodings
    twice — prefer the Write/Edit tools for document files.
-
-## 2026-11-18 — pre-backlog review: D18 resolved, D15 parked, Unaa stale gap closed
-
-**D18 RESOLVED (user verdict):** the intrusive-h variance (VRB `uwutodi` vs
-CED `uwutohdi`) makes no difference to conjugation — CED's own syllabary
-ᎤᏭᏙᏗ carries no h glyph, so both compose identically; "the h can go."
-Documented variance; GutihaSpec unchanged.
-
-**D15 parked with a trigger condition (user verdict):** "keep parked; if
-there are any future issues, we tackle them then" — trigger = any future
-verb/cell surfacing the Ꭴw-fusion pattern.
-
-**GAP.md no-anchor audit:** all 46 gaps verified against the VRB boxes.
-Finding: `Unaa|INFINITIVE` was a STALE GAP — Una'a (Have flexible, p.83)
-attests the infinitive column (aginvdi / janvdi / unvdi / uninvdi) and the
-spec already asserted all five cells via the deverbal-infinitive derivation.
-SG3 stem `unvdi` wired (+ SG3 imperative corrected from the SG2 copy artifact
-to `unaesdi`); gap deleted (46 → 45). **The "No CED syllabary anchor" class
-is now EMPTY** — every remaining gap is a genuine book-x / no-column cell.
+6. Search book sources for table-EMBEDDED headers too (`| Verb : X |` inside
+   grid rows) -- the impersonal-weather cohort was missed by line-start-only
+   extraction (2026-11-18 glottal audit).
 
