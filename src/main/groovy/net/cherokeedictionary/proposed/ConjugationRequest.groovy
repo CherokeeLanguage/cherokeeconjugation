@@ -15,6 +15,16 @@ class ConjugationRequest {
     String remotepast
     String immediatepast
 
+    // tio 18Nov26: optional lexeme name (verbLexemes.json key) for verbs whose
+    // lexical flags (glottalInitial, quvCoalescing, impersonal,
+    // surfaceOverrides) must be registered for this conjugation. Needed
+    // because the present3rd citation is NOT lexeme-unique (Gahneha and
+    // Ganeha both print ᎦᏁᎭ), so the name is the only discriminator.
+    // VerbConjugationFacade opens a per-conjugation VerbRegistry scope and
+    // applies the lexeme's flags -- the same isolation the test harness gets
+    // from VerbBaseSpec. -- tio 18Nov26
+    String lexeme
+
     // Initial prefixes flags / values
     String yi
     String ji
@@ -33,6 +43,7 @@ class ConjugationRequest {
             object       : object,
             verbTense    : verbTense,
             partofspeechc: partOfSpeech,
+            lexeme       : lexeme,
             habitual     : habitual,
             imperative   : imperative,
             infinitive   : infinitive,

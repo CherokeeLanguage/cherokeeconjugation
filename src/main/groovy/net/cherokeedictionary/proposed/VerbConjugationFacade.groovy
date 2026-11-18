@@ -12,6 +12,24 @@ class VerbConjugationFacade {
 
     Verb conjugate(ConjugationRequest request) {
         if (isDebug) println "DEBUG: Starting conjugation for subject: ${request.subject}, object: ${request.object}, tense: ${request.verbTense}"
+        // tio 18Nov26: lexeme-flag application (lexeme-flag generalization).
+        // When the request names a lexeme (verbLexemes.json key), open a
+        // per-conjugation VerbRegistry scope and apply that lexeme's flags --
+        // the library-consumer path for glottalInitial / quvCoalescing /
+        // impersonal / surfaceOverrides, identical to how VerbBaseSpec scopes
+        // the test specs. A closed scope restores the pre-scope behavior for
+        // every other caller. Unknown lexeme names are ignored silently here;
+        // the meta-spec asserts data/spec agreement.
+        if (request.lexeme) {
+            return net.cherokeedictionary.verb.metadata.VerbRegistry.withVerbScope {
+                net.cherokeedictionary.verb.metadata.VerbLexemeFlagLoader.apply(request.lexeme)
+                conjugateInPipeline(request)
+            }
+        }
+        return conjugateInPipeline(request)
+    }
+
+    private Verb conjugateInPipeline(ConjugationRequest request) {
         def context = new ConjugationContext(request)
         context.buildBaseVerb()
 

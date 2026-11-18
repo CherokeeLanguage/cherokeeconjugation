@@ -1,0 +1,121 @@
+{
+  "_comment": "Data-driven per-lexeme flags (lexeme-flag generalization, 2026-11-18). Keyed by LEXEME NAME (unique) -- not by present3rd citation -- because citation keys are NOT lexeme-unique: Gahneha 'hold (flexible)' and Ganeha 'hold (long)' both print SG3 present ᎦᏁᎭ (ganeha), so citation-keyed GLOBAL seeding of surfaceOverrides would leak one lexeme's SG1 rows into the other (the exact pre-scope bug the withVerbScope mechanism fixed). A library consumer supplies request.lexeme = the lexeme name; VerbConjugationFacade opens a per-conjugation VerbRegistry scope and applies this entry's flags -- identical isolation to the test harness. Citations/forms are book-romanization (converted with tsalagiToSyllabaryCed + the ow->owa / hl->lo book-normalization at load time, mirroring VerbBaseSpec.toSyll). Provenance notes keep the project's missing-data-visibility rule. -- tio 18Nov26",
+  "lexemes": {
+    "Ahyeha": {
+      "citation": "ayeha",
+      "note": "Ahyeha 'grow' SG1 ji- allomorph (2012 book p.84; yaml dropped the glottal apostrophes) -- D14",
+      "glottalInitial": true
+    },
+    "Gahneha": {
+      "citation": "ganeha",
+      "note": "Gahneha 'Have With / Hold in Hand (flexible)' -- CED cedEntries.csv id 73035, 2012 book p.84; shares citation ᎦᏁᎭ with Ganeha -- D14 glottalInitial",
+      "glottalInitial": true
+    },
+    "Ganeha": {
+      "citation": "ganeha",
+      "note": "Ganeha 'Have With / Hold in Hand (long)' -- CED cedEntries.csv id 73109, 2012 book p.84; shares citation ᎦᏁᎭ with Gahneha -- D14 glottalInitial; the book drops the stem's h after the ji- allomorph on the LONG verb only (lexeme-level laryngeal variance, D14 follow-up)",
+      "glottalInitial": true,
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "SG1", "obj": "NONE", "form": "jinea" },
+        { "tense": "HABITUAL", "subject": "SG1", "obj": "NONE", "form": "jineoi" },
+        { "tense": "REMOTE_PAST", "subject": "SG1", "obj": "NONE", "form": "jinevi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "jinevi" },
+        { "tense": "INFINITIVE", "subject": "SG1", "obj": "NONE", "form": "jinei" }
+      ]
+    },
+    "Ganhjeha": {
+      "citation": "ganhjeha",
+      "note": "Ganhjeha 'Have With / Hold in Hand (liquid)' -- 2012 book p.84; D14 glottalInitial + SG1 surfaces (the liquid citation's nhj undergoes the engine's laryngeal naj- composition that the book's SG1 row spells through)",
+      "glottalInitial": true,
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "SG1", "obj": "NONE", "form": "jinejeha" },
+        { "tense": "HABITUAL", "subject": "SG1", "obj": "NONE", "form": "jinejehoi" },
+        { "tense": "REMOTE_PAST", "subject": "SG1", "obj": "NONE", "form": "jinejehvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "jinejehvi" },
+        { "tense": "INFINITIVE", "subject": "SG1", "obj": "NONE", "form": "jinejehi" }
+      ]
+    },
+    "Adlvkwsga": {
+      "citation": "adlvkwsga",
+      "note": "Adlvkwsga 'Bragging' (2012 book p.68) -- D7 qu-series v-coalescing (ᏋᏍ -> ᏆᏍ before vowel-initial suffixes)",
+      "quvCoalescing": true
+    },
+    "Adaleniha": { "citation": "adaleniha", "note": "It Is Beginning (2012 book p.76) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Agaliha": { "citation": "agaliha", "note": "Moon/Sun Shining (2012 book p.77) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Aganawosga": { "citation": "aganawosga", "note": "Warming (2012 book p.77) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Agasga": { "citation": "agasga", "note": "Growing (2012 book p.23) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Ahliilidoha": { "citation": "ahliilidoha", "note": "Taking Time (2012 book p.76) -- no imperative ON PURPOSE, user verdict 2026-11-17 -- D17 impersonal", "impersonal": true },
+    "Ahyahtvhvsga": { "citation": "ahyahtvhvsga", "note": "Frosting (2012 book p.11) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Ahyvdagwaloa": { "citation": "ahyvdagwaloa", "note": "Thundering (2012 book p.78) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Alidliha": { "citation": "alidliha", "note": "Boiling (2012 book p.39) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Alsgwadia": { "citation": "alsgwadia", "note": "Ending (2012 book p.76) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Anagaliha": { "citation": "anagaliha", "note": "Lightning (2012 book p.78) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Asvga": {
+      "citation": "asvga",
+      "note": "Smelling (2012 book p.75) -- D17 impersonal: imperative impermissible; SG3 remote asvgvi is a BOOK-ONLY FORM (CED does not list it -- because the book has it, that is the form we say exists, user instruction; engine composes table-default usvgvi, cf. sibling Galiga ulijv'i) -- D15",
+      "impersonal": true,
+      "surfaceOverrides": [
+        { "tense": "REMOTE_PAST", "subject": "SG3", "obj": "NONE", "form": "asvgvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "asvgvi" }
+      ]
+    },
+    "Galiga": { "citation": "galiga", "note": "Burning (2012 book p.75) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Ganesoysga": { "citation": "ganesosga", "note": "Hailing (2012 book p.78) -- D17 impersonal: imperative impermissible; Feeling glide-y dropped per the Ayogi CED precedent", "impersonal": true },
+    "Gutiha": { "citation": "gutiha", "note": "Snowing (2012 book p.78) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Nigalstanvsga": { "citation": "nigalstanvsga", "note": "Happening (2012 book p.75) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Uhyvdla": { "citation": "uyvdla", "note": "Cold (2012 book p.77) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Ulogila": { "citation": "ulogila", "note": "Cloudy (2012 book p.78) -- D17 impersonal: imperative impermissible", "impersonal": true },
+    "Adansini": {
+      "citation": "adansini",
+      "note": "Adansini 'have as pet / carry on pole' (2012 book p.67) -- D5: laryngeal in the ns cluster is UNWRITTEN (a-epenthesis, lexeme-level; Gansane'a shows i-epenthesis, so no global rule); whole book-paradigm surface overrides -- tio 17Nov26",
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "SG1", "obj": "NONE", "form": "gadanasini" },
+        { "tense": "HABITUAL", "subject": "SG1", "obj": "NONE", "form": "gadanasinegoi" },
+        { "tense": "REMOTE_PAST", "subject": "SG1", "obj": "NONE", "form": "aquadanasinvsvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG1", "obj": "NONE", "form": "gadanasinvsvi" },
+        { "tense": "INFINITIVE", "subject": "SG1", "obj": "NONE", "form": "aquadanasinvsdi" },
+        { "tense": "PRESENT", "subject": "SG2", "obj": "NONE", "form": "hadanasini" },
+        { "tense": "HABITUAL", "subject": "SG2", "obj": "NONE", "form": "hadanasinegoi" },
+        { "tense": "REMOTE_PAST", "subject": "SG2", "obj": "NONE", "form": "tsadanasinvsvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG2", "obj": "NONE", "form": "hadanasinvsvi" },
+        { "tense": "INFINITIVE", "subject": "SG2", "obj": "NONE", "form": "tsadanasinvsdi" },
+        { "tense": "PRESENT", "subject": "SG3", "obj": "NONE", "form": "adanasini" },
+        { "tense": "HABITUAL", "subject": "SG3", "obj": "NONE", "form": "adanasinegoi" },
+        { "tense": "REMOTE_PAST", "subject": "SG3", "obj": "NONE", "form": "udanasinvsvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "adanasinvsvi" },
+        { "tense": "INFINITIVE", "subject": "SG3", "obj": "NONE", "form": "udanasinvsdi" },
+        { "tense": "PRESENT", "subject": "PL3", "obj": "NONE", "form": "anadanasini" },
+        { "tense": "HABITUAL", "subject": "PL3", "obj": "NONE", "form": "anadanasinegoi" },
+        { "tense": "REMOTE_PAST", "subject": "PL3", "obj": "NONE", "form": "unadanasinvsvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "PL3", "obj": "NONE", "form": "anadanasinvsvi" },
+        { "tense": "INFINITIVE", "subject": "PL3", "obj": "NONE", "form": "unadanasinvsdi" },
+        { "tense": "PRESENT", "subject": "PL1INCL", "obj": "NONE", "form": "idadanasini" },
+        { "tense": "HABITUAL", "subject": "PL1INCL", "obj": "NONE", "form": "idadanasinegoi" },
+        { "tense": "REMOTE_PAST", "subject": "PL1INCL", "obj": "NONE", "form": "igadanasinvsvi" },
+        { "tense": "FUTURE_COMMAND", "subject": "PL1INCL", "obj": "NONE", "form": "idadanasinvsvi" },
+        { "tense": "INFINITIVE", "subject": "PL1INCL", "obj": "NONE", "form": "igadanasinvsdi" }
+      ]
+    },
+    "Adiha": {
+      "citation": "adiha",
+      "note": "Adiha 'drink' (2012 book p.6) -- D6: SG1 surfaces the laryngeal as a GLOTTAL (gadia; the yaml romanization was right, the -a cells were noise); SG2/SG3 keep -ha (engine was correct); lexeme-level (uduliha keeps agwaduliha, so NO blanket SG1 h-elision) -- tio 17Nov26",
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "SG1", "obj": "NONE", "form": "gadia" }
+      ]
+    },
+    "Adidiha": {
+      "citation": "adidiha",
+      "note": "Adidiha 'drink (incremental)' (2012 book p.73) -- D6: same SG1 glottal-surface verdict as Adiha -- tio 17Nov26",
+      "surfaceOverrides": [
+        { "tense": "PRESENT", "subject": "SG1", "obj": "NONE", "form": "gadidia" }
+      ]
+    },
+    "Uwaya": {
+      "citation": "uwaya",
+      "note": "Uwaya 'eat (flexible)' -- D15: SG3 infinitive udisdi (Feeling Dictionary-verified; the book's infinitive column carries wa-epenthesis ONLY in agwv-/jv- 1sg/2sg rows, not SG3/PL3); the structural Ꭴw-fusion fix is deferred (224-cell infinitive guard risk) -- tio 17Nov26",
+      "surfaceOverrides": [
+        { "tense": "INFINITIVE", "subject": "SG3", "obj": "NONE", "form": "udisdi" }
+      ]
+    }
+  }
+}

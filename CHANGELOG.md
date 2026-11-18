@@ -8,6 +8,47 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — lexeme-flag generalization: data-driven per-lexeme flags for library consumers
+
+**Problem.** The per-verb lexeme flags (`glottalInitial`, `quvCoalescing`,
+`impersonal`, `surfaceOverrides`) lived only in test-spec `details` maps and
+were registered per-conjugation by `VerbBaseSpec.conjugateVerb` inside a
+`withVerbScope`. A library consumer of `VerbConjugationFacade` got none of
+them — the engine jar's global seeds (`VerbRegistryInitializer`) carry no
+vrb-package flags — so the engine was not "done as a library" for these
+properties.
+
+**Design.** New resource `src/main/resources/data/verbLexemes.json`, keyed by
+**lexeme name** (not citation): the present3rd citation is NOT lexeme-unique
+(Gahneha and Ganeha both print `ᎦᏁᎭ`), so citation-keyed global seeding of
+`surfaceOverrides` would re-create the collision the scope mechanism fixed;
+the name is the only discriminator. Data covers 25 lexemes: 4 `glottalInitial`
+(Ahyeha, Gahneha, Ganeha, Ganhjeha), 1 `quvCoalescing` (Adlvkwsga), 17
+`impersonal` (the D17 cohort), 7 with `surfaceOverrides` (40 rows: Adansini's
+full 25-cell book paradigm, Adiha/Adidiha D6 glottals, Asvga BOOK-ONLY FORM,
+Uwaya D15 infinitive, Ganeha/Ganhjeha SG1 rows). Each entry carries a
+provenance note (book page / CED id / D-item), keeping the
+missing-data-visibility rule. JSON (not YAML) chosen to avoid a new
+dependency: Groovy's bundled `JsonSlurper`.
+
+**Engine.** `VerbLexemeFlagLoader` loads the data, converts citations/forms
+through the same `toSyll` pipeline as `VerbBaseSpec` (`tsalagiToSyllabaryCed`
++ book-romanization normalization), and applies a lexeme's flags into the
+current registration context. `ConjugationRequest` gained `lexeme`;
+`VerbConjugationFacade.conjugate` opens a per-conjugation `withVerbScope` and
+applies the named lexeme's flags when set — identical isolation to the test
+harness. No other caller behavior changes.
+
+**Tests.** New `vrb/VerbLexemeFlagMetaSpec` keeps data and specs in sync
+(GAP.md convention): every flag-declaring spec must have a same-name entry
+with matching citation, flags, and override set; every data entry must be
+consumed by a spec (no orphans); the citation-sharing twins conjugate their
+own SG1 surfaces through the lexeme path in BOTH orders; every lexeme's flags
+register and answer in a fresh scope. Combined suite 23,492 green (was
+23,413).
+
+---
+
 ## 2026-11-18 — test infra: per-conjugation VerbRegistry scope (collision fix)
 
 **Symptom.** In a bulk vrb run, `GahnehaSpec` (hold flexible) failed 10 SG1
