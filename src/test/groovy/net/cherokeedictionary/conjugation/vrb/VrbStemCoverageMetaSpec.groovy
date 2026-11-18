@@ -240,7 +240,6 @@ class VrbStemCoverageMetaSpec extends VerbBaseSpec {
         "Ahileha|FUTURE_COMMAND",
         "Ahileha|REMOTE_PAST",
         "Ai|INFINITIVE",
-        "Ajavsga|INFINITIVE",
         "Anagaliha|INFINITIVE",
         "Anidonaa|INFINITIVE",
         "Anina|INFINITIVE",

@@ -8,6 +8,36 @@ book-unattested stem gaps).
 
 ---
 
+## 2026-11-18 — glottal-class audit: Aja'vsga found, infinitive wired; impersonal-grid discovery; D18
+
+**Audit.** Cross-checked all 407 vrb specs against every `Verb :` entry in the
+VRB processed-md with apostrophes normalized — every spec matches a VRB entry
+(no hidden absent verbs). Then scanned specs for residual junk artifacts and
+absence claims. Findings:
+
+1. **AjavsgaSpec's "ABSENT from the 2012 book" claim was WRONG** (same class as
+   the Nania correction): Aja'vsga is Verb p.57 with a FULL box whose
+   infinitive column IS attested (agwajodi / jajodi / ujodi / unajodi /
+   igajodi) — the yaml had dropped the glottal apostrophe. SG3 infinitive
+   `ujodi` wired; all five INFINITIVE cells asserted; `Ajavsga|INFINITIVE`
+   deleted from `EXPECTED_GAPS` (47 → 46). The spec's ts-shapes stay: CED id
+   72429 carries ᎠᏣᎥᏍᎦ (atsavsga) where Feeling's book writes ja'-/jv —
+   orthography variance, parse-back convention keeps CED.
+2. **The impersonal cohort DOES appear in the VRB** — in a multi-verb weather
+   grid (~line 4333+) whose `Verb :` headers are inside table cells, which is
+   why the line-start extraction missed them. Their paradigm forms match the
+   specs.
+3. **D18 (DISCREPANCIES.md):** the grid prints Gutiha's infinitive as
+   `uwutodi`; CED id 73286 carries `uwutohdi` (ᎤᏭᏙᏗ). Spec keeps the CED
+   form (parse-back rule); documented, not auto-patched. No other variances
+   surfaced in the grid.
+
+All other "junk"-comment specs correctly cite book-x / no-column cells — no
+further false-absence cases. GAP.md glottal-class count 13 → 12. Combined
+suite green.
+
+---
+
 ## 2026-11-18 — "yaml junk" class corrected: Nani'a / A'i exist in the VRB (glottal apostrophes dropped)
 
 **User correction.** The "yaml junk entry" gap class claimed Nania was

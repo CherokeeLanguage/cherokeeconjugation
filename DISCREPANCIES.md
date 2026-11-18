@@ -402,3 +402,17 @@ the three-way cell classification. -- tio 17Nov26
   surface-override mechanism is for.
 
 With these two, every open question in the D15 block is closed. -- tio 17Nov26
+
+## D18. Gutiha infinitive suffix: CED -hdi vs VRB grid -di (2026-11-18, documented variance)
+
+The VRB's weather-verb grid (processed-md ~line 4399, "Verb : Gutiha /
+Snowing") prints the infinitive as `uwutodi`; CED cedEntries.csv id 73286
+carries `uwutohdi` (ᎤᏭᏙᏗ). GutihaSpec asserts the CED form per the
+parse-back-citations ops rule. The VRB grid is a multi-verb transcription
+table (different format from the per-verb boxes; the same grid section is
+where the impersonal cohort lives -- these verbs were missed by the
+line-start `Verb :` extraction for exactly this reason), so the grid's
+shorter -di shape may be a transcription artifact rather than a genuine
+allomorph. NOT auto-patched (open-question convention); the CED anchor is
+kept. The same grid is also the authority for the impersonal cohort's
+paradigms -- no other variances surfaced in the audit. -- tio 18Nov26

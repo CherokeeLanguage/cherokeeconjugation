@@ -16,7 +16,7 @@ class AjavsgaSpec extends VerbBaseSpec {
                 [subject: 'SG1', object: '', present: 'gatsavsga'],
             [subject: 'SG1', object: '', present: 'gatsavsga', habitual: 'gajavsgoi', remote_past: 'agwajanvi', imperative: 'gajavga', infinitive: 'agwajodi'],
             [subject: 'SG2', object: '', present: 'hajavsga', habitual: 'hajavsgoi', remote_past: 'jajanvi', imperative: 'hajavga', infinitive: 'jajodi'],
-            [subject: 'SG3', object: '', habitual: 'atsavsgoi', imperative: 'hatsavga', infinitive: '', present: 'atsavsga', remote_past: 'utsanvi'],
+            [subject: 'SG3', object: '', habitual: 'atsavsgoi', imperative: 'hatsavga', infinitive: 'ujodi', present: 'atsavsga', remote_past: 'utsanvi'],
             [subject: 'PL3', object: '', present: 'anajavsga', habitual: 'anajavsgoi', remote_past: 'unajanvi', imperative: 'anajavga', infinitive: 'unajodi'],
             [subject: 'PL1INCL', object: '', present: 'idajavsga', habitual: 'idajavsgoi', remote_past: 'igajanvi', imperative: 'idajavga', infinitive: 'igajodi']
         ]
@@ -32,27 +32,34 @@ class AjavsgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.HABITUAL        | "gatsavsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquatsanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatsanvi"
-        // tio 17Nov26: Ajavsga is ABSENT from the 2012 book (index and body); the yaml infinitive rows carry a different stem (-tsodi vs the -janv/-jodi citations) with no citation source. Dropped.
-        // "SG1" | "" | Tense.INFINITIVE      | "aquatsodi"
+        // tio 18Nov26: INFINITIVE WIRED -- the earlier "ABSENT from the 2012
+        // book" reading was WRONG (user glottal-apostrophe ruling): Aja'vsga is
+        // Verb p.57 ("S/he is Getting in a Car, Box, Etc.") with a full box
+        // whose infinitive column IS attested (agwajodi / jajodi / ujodi /
+        // unajodi / igajodi); the yaml had dropped the glottal apostrophe
+        // (aja'vsga -> "ajavsga"). The spec keeps the CED-canonical ts-shapes
+        // (id 72429 ᎠᏣᎥᏍᎦ = atsavsga; Feeling's book writes ja'-/jv where CED
+        // writes tsa -- orthography variance, parse-back convention keeps CED).
+        "SG1" | "" | Tense.INFINITIVE      | "agwajodi"
         "SG2" | "" | Tense.PRESENT         | "hatsavsga"
         "SG2" | "" | Tense.HABITUAL        | "hatsavsgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "tsatsanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatsanvi"
-        // "SG2" | "" | Tense.INFINITIVE      | "tsatsodi"
+        "SG2" | "" | Tense.INFINITIVE      | "jajodi"
         "SG3" | "" | Tense.PRESENT         | "atsavsga"
         "SG3" | "" | Tense.HABITUAL        | "atsavsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utsanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atsanvi"
-        // "SG3" | "" | Tense.INFINITIVE      | "utsodi"
+        "SG3" | "" | Tense.INFINITIVE      | "ujodi"
         "PL3" | "" | Tense.PRESENT         | "anatsavsga"
         "PL3" | "" | Tense.HABITUAL        | "anatsavsgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unatsanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatsanvi"
-        // "PL3" | "" | Tense.INFINITIVE      | "unatsodi"
+        "PL3" | "" | Tense.INFINITIVE      | "unajodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idatsavsga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idatsavsgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatsanvi"
-        // "PL1INCL" | "" | Tense.INFINITIVE      | "igatsodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igajodi"
     }
 }

@@ -1,6 +1,6 @@
 # GAP.md — vrb stem-coverage data gaps
 
-**2026-11-17; last count 2026-11-18.** These are the 47 verb|tense entries the yaml data cannot attempt
+**2026-11-17; last count 2026-11-18 (glottal audit).** These are the 46 verb|tense entries the yaml data cannot attempt
 because **the 2012 VRB itself does not attest the form** — not engine limitations.
 The live list is `EXPECTED_GAPS` in
 `src/test/groovy/net/cherokeedictionary/conjugation/vrb/VrbStemCoverageMetaSpec.groovy`;
@@ -39,7 +39,7 @@ prints x / has no column — the gaps below).
 |---|---|---|
 | Book prints x / column absent | 33 | The book prints literal `x` in the remote-past or infinitive column, or the box has no such column |
 | No CED syllabary anchor / footnote-governed alternants | 1 | The book attests a form but CED carries no anchor to derive a parse-back citation from, or the form is footnote-governed (two-vs-3+ alternant pairs) |
-| Glottal-apostrophe yaml rows (cleaned) | 13 | The verbs EXIST in the 2012 book — the yaml dropped the glottal apostrophes between dual vowels (Nani'a → "Nania", A'i → "Ai") and leaked header text into stem fields; the corrupted rows were cleaned from the specs 2026-11-18 and the remaining gaps are the book's genuine x / no-column cells (user correction 2026-11-18: "they do exist in the VRB — try dual vowels with an apostrophe between them") |
+| Glottal-apostrophe yaml rows (cleaned) | 12 | The verbs EXIST in the 2012 book — the yaml dropped the glottal apostrophes between dual vowels (Nani'a → "Nania", A'i → "Ai", Aja'vsga → "Ajavsga") and leaked header text into stem fields; the corrupted rows were cleaned from the specs 2026-11-18 and the remaining gaps are the book's genuine x / no-column cells (user correction 2026-11-18: "they do exist in the VRB — try dual vowels with an apostrophe between them") |
 
 ## IMPERATIVE gaps (6) — IMMEDIATE_COMMAND
 
@@ -81,7 +81,7 @@ row per the D1 convention, so an unattested remote blocks both):
 
 The book prints `x` in the infinitive column, or the box has no infinitive column:
 
-- Ai · Ajavsga · Anagaliha · Anidonaa · Anina · Galiga · Ganatlaa (Have a Pet, p.74)
+- Ai · Anagaliha · Anidonaa · Anina · Galiga · Ganatlaa (Have a Pet, p.74)
 - Ganohili (Flying, p.27) · Gata (Hanging, p.75) · Ganesoysga (Hailing, p.78)
 - Ganela · Ganhga · Gadoga · Eha · Nania · Udvnvisdi (Getting Ready-impersonal)
 - Uhnalvha · Uhniha (In Bed, p.59) · Ujaa · Ukvhada (Foggy, p.78) · Ulogila
