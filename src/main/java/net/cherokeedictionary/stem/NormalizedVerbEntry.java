@@ -14,6 +14,12 @@ public class NormalizedVerbEntry {
 	public String habit;
 	public String imp;
 	public String inf;
+	// tio 19Nov26: one-shot guard for the d-family sg3-u strip in
+	// generateVowelStems -- the stem generators can run more than once on the
+	// same entry (a3rd/ga3rd/ka3rd fallback chain) and a second strip would
+	// eat a stem consonant (ᏚᏑᏫᏒᎢ -> ᏫᏒᎢ, lost Ꮡ).
+	public boolean daUStripped = false;
+
 	public List<String> getEntries(){
 		List<String> list = new ArrayList<String>();
 		list.add(pres3);
@@ -214,8 +220,49 @@ public class NormalizedVerbEntry {
 			}
 		}
 	}
-	public static void removeᏕprefix(NormalizedVerbEntry e) {
-		
+	public static void removeᏕprefix(NormalizedVerbEntry e, boolean daFamily) {
+
+		// tio 19Nov26: open-spelled da- initial prefix (guide rules 61-62).
+		// The citation spells da+u WITHOUT the Ꮪ fusion (ᏓᏳᎶᏒᎯ dayulohsvhi
+		// "he is from"): strip da- and restore the bare set-B sg3 u- (Ꭴ)
+		// exactly like the fused Ꮪ->Ꭴ rule; Stemmer captures the open
+		// spelling so PrefixDa re-fuses the same open style at composition.
+		// pres1 Ꮫ is the da+a fusion (da+agi -> ᏛᎩ dvgi): strip da- and
+		// restore the fused Ꭰ (ᏛᎩᎶᏒᎯ -> ᎠᎩᎶᏒᎯ agilohsvhi). imp Ꮣ is
+		// da + ja- (set-B 2sg imperative, cf. ᏣᏚᎳ jadvla): chop the da-.
+		if (e.pres3.startsWith("ᏓᏳ")) {
+			e.pres3 = "Ꭴ" + e.pres3.substring(2);
+		}
+		if (e.habit.startsWith("ᏓᏳ")) {
+			e.habit = "Ꭴ" + e.habit.substring(2);
+		}
+		if (e.past.startsWith("ᏓᏳ")) {
+			e.past = "Ꭴ" + e.past.substring(2);
+		}
+		if (e.imm != null && e.imm.startsWith("ᏓᏳ")) {
+			e.imm = "Ꭴ" + e.imm.substring(2);
+		}
+		if (e.inf != null && e.inf.startsWith("ᏓᏳ")) {
+			e.inf = "Ꭴ" + e.inf.substring(2);
+		}
+		if (e.pres1.startsWith("Ꮫ")) {
+			e.pres1 = newPrefix("Ꭰ", e.pres1);
+		}
+		if (e.imp.startsWith("Ꮣ")) {
+			e.imp = chop(e.imp);
+		}
+		// tio 19Nov26: da/di-family imperative h-contraction heads (snoring
+		// ᏘᏆᎳᎩᏣ = da+h->t, barking ᏔᏑᏫ twa-variant). Restore the contracted
+		// 2sg set-A h- prefix as Ꭿ (da + ᎯᏍᏆ... -> ᏘᏍᏆ... at composition via
+		// PrefixDa's h-branch) instead of chopping bare -- the stem-derivation
+		// pass (generateConsonentStems) chops one person-prefix glyph itself,
+		// so a bare chop would eat the stem's first consonant (ᏘᏍᏆᎵᏓ ->
+		// ᏘᏆᎵᏓ, lost Ꮝ). Gated to family verbs -- a bare Ꮨ/Ꮤ imp head on a
+		// non-family verb is a stem-initial ti-, not a contraction.
+		if (daFamily && (e.imp.startsWith("Ꮨ") || e.imp.startsWith("Ꮤ"))) {
+			e.imp = newPrefix("Ꭿ", e.imp);
+		}
+
 		//you all
 		if (e.imp.startsWith("ᏗᏥ")){
 			e.imp="Ꭲ"+chop(e.imp);

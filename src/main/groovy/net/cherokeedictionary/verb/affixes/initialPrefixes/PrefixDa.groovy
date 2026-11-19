@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.affixes.initialPrefixes
 
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.util.StringUtility
+import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.Affix
 
 /**
@@ -49,11 +50,49 @@ class PrefixDa implements Affix {
                     //    ᏚᎸ...) and e keeps de (Ꮥ): no book counter-evidence.
                     if (charAtZero == 'Ꭳ') {
                         baseReturnValue = "ᏓᏲ" + baseReturnValue.substring(1)
+                    } else if (charAtZero == 'Ꭴ' && word.stemmer?.normalizedDaOpenU) {
+                        // tio 19Nov26: open-spelled da+u citation (ᏓᏳᎶᏒᎯ
+                        // dayulohsvhi "he is from") keeps the unfused
+                        // two-glyph form ᏓᏳ (y-epenthesis) instead of the
+                        // fused Ꮪ the WI-33 To Work spelling uses; the
+                        // citation itself disambiguates the two conventions.
+                        baseReturnValue = "ᏓᏳ" + baseReturnValue.substring(1)
+                    } else if (charAtZero == 'Ꭴ' && word.tense == Tense.INFINITIVE
+                            && word.stemmer?.normalizedDaInitialPrefix) {
+                        // tio 19Nov26: the dictionary spells the FUSED du of
+                        // the INFINITIVE with the J-glyph Ꮷ (work ᏧᎸᏫᏍᏓᏁᏗ,
+                        // run ᏧᏍᏆᎵᏙᏗ, bark ᏧᏑᏫᏍᏗ) while every other tense
+                        // spells it Ꮪ (work past ᏚᎸᏫᏍᏓᏁᎸᎢ); open-u verbs
+                        // keep the two-glyph ᏓᏳ in the infinitive too
+                        // (ᏓᏳᎶᎯᏍᏗ). Same fusion, per-tense spelling.
+                        baseReturnValue = "Ꮷ" + baseReturnValue.substring(1)
+                    } else if (charAtZero == 'Ꭰ' && word.stemmer?.normalizedDaInitialPrefix
+                            && !word.stemmer?.normalizedDaFuseA) {
+                        // tio 19Nov26: a-drop da+a style (To Work ᏓᎩᎸᏫᏍᏓᏁᎭ
+                        // dagilvhwisdaneha): the stem-initial Ꭰ (of agi-/
+                        // agw-) deletes and da- prepends, unlike the fused
+                        // ᏛᎩ (He Is From) the guide D-map renders.
+                        baseReturnValue = "Ꮣ" + baseReturnValue.substring(1)
                     } else {
                         baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮫ', 'Ꮥ', 'Ꮣ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                     }
                 } else {
-                    baseReturnValue = "Ꮣ" + baseReturnValue
+                    // tio 19Nov26: three citation-driven consonant-branch
+                    // spellings of the d-morpheme: de- distributive family
+                    // renders Ꮥ (running ᏕᏥᏍᏆᎵᏗᎭ = de + tsi-, guide hold2
+                    // ᏕᏥᎪᏩᏘᎭ pattern); di-family renders Ꮧ (sneezing
+                    // ᏗᏣᏴᏍᏙᏯᏣ, To Work ᏗᏣᎸᏫᏍᏓᏏ -- di + ja-); the
+                    // cislocative da- family renders Ꮣ ("he is from"
+                    // ᏓᏣᎶᎯ -- da + ja-). The remaining allomorphs are
+                    // shared (a-drop ᏓᎩ, fused Ꮪ, t-contraction Ꮨ), so
+                    // only this branch splits.
+                    def consonantAllomorph = "Ꮣ"
+                    if (word.stemmer?.normalizedDeStyle) {
+                        consonantAllomorph = "Ꮥ"
+                    } else if (word.stemmer?.normalizedDiStyle) {
+                        consonantAllomorph = "Ꮧ"
+                    }
+                    baseReturnValue = consonantAllomorph + baseReturnValue
                 }
             }
         }

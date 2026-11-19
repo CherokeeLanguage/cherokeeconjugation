@@ -1,0 +1,69 @@
+package net.cherokeedictionary.conjugation.intransitive
+
+import net.cherokeedictionary.stemmer.DefinitionLine
+import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.util.PartOfSpeech
+import net.cherokeedictionary.util.PrefixTableSubject
+import net.cherokeedictionary.verb.conjugation.Conjugate
+
+class TheWindIsBlowingIntransitivePartOfSpeechStringSpec extends GroovyTestCase {
+
+	static def verbName = new Stemmer()
+
+	static {
+		verbName.habitual = new DefinitionLine(syllabary: "ᎦᏃᎸᎥᏍᎪᎢ")
+		verbName.imperative = new DefinitionLine(syllabary: "ᏫᎦᏃᎸᎦ")
+		verbName.infinitive = new DefinitionLine(syllabary: "ᎤᏃᎸᏗ")
+		verbName.present1st = new DefinitionLine(syllabary: "-")
+		verbName.present3rd = new DefinitionLine(syllabary: "ᎦᏃᎸᎥᏍᎦ")
+		verbName.remotepast = new DefinitionLine(syllabary: "ᎤᏃᎸᏅᎢ")
+	}
+
+
+	private String conj(String subject) {
+		def verb = Conjugate.createVerbToConjugate(subject, "SG3AN", verbName,
+		"PRESENT", PartOfSpeech.VERB_INTRANSITIVE.toString(), false)
+		return Conjugate.conjugate(verb).wholeWord
+	}
+
+	void testSG1IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᏥᏃᎸᎥᏍᎦ"
+	}
+
+	void testSG2IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᎯᏃᎸᎥᏍᎦ"
+	}
+
+	void testSG3IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.SG3.toString())) == "ᎦᏃᎸᎥᏍᎦ"
+	}
+
+	void testDL1INCLIntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.DL1INCL.toString())) == "ᎢᏂᏃᎸᎥᏍᎦ"
+	}
+
+	void testDL1EXCLIntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.DL1EXCL.toString())) == "ᎣᏍᏗᏃᎸᎥᏍᎦ"
+	}
+
+	void testPL1INCLIntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.PL1INCL.toString())) == "ᎢᏗᏃᎸᎥᏍᎦ"
+	}
+
+	void testPL1EXCLIntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.PL1EXCL.toString())) == "ᎣᏥᏃᎸᎥᏍᎦ"
+	}
+
+	void testDL2IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.DL2.toString())) == "ᏍᏗᏃᎸᎥᏍᎦ"
+	}
+
+	void testPL2IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.PL2.toString())) == "ᎢᏥᏃᎸᎥᏍᎦ"
+	}
+
+	void testPL3IntransitivePresent() {
+		assert conj(String.valueOf(PrefixTableSubject.PL3.toString())) == "ᎠᏂᏃᎸᎥᏍᎦ"
+	}
+
+}

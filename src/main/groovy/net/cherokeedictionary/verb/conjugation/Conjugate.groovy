@@ -8,6 +8,7 @@ import net.cherokeedictionary.util.PartOfSpeech
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.util.VerbSet
 import net.cherokeedictionary.verb.affixes.PrefixProcessor
 import net.cherokeedictionary.verb.metadata.VerbRegistry
 import net.cherokeedictionary.verb.conjugation.VerbConjugationProcessor
@@ -86,10 +87,32 @@ class Conjugate {
             // whether da- extends to other persons of these verbs once more
             // book rows are attested.
             if (verb.stemmer?.normalizedDaInitialPrefix
-                    && verb.subject == PrefixTableSubject.SG3
                     && (verb.object == PrefixTableObject.SG3AN
                         || verb.object == PrefixTableObject.SG3IN)) {
-                verb.initialPrefixHolder.da = true
+                // tio 19Nov26: SG3 gate widened to ALL subjects. The
+                // original WI-33 SG3-only scope was a RECHECK item: the
+                // book attests da- for every person of the open-spelled
+                // verbs (ᏓᏳᎶᏒᎯ "he is from" -- SG1 ᏛᎩᎶᏒᎯ = da+agi), and
+                // guide rules 61-62 are person-independent. The PL3-OBJECT
+                // guard is unchanged (du- rows carry their own d-).
+                // EXCEPT the sg3 citation-echo cells: the set-A sg3 PRESENT
+                // (SG3SG3IN) and any sg3 HABITUAL (SG3SG3AN/SG3SG3IN)
+                // short-circuits in VerbConjugationProcessor return the raw
+                // citation, which already carries the da- (running
+                // ᏓᏍᏆᎵᏗᎭ) -- re-declaring da doubles it (ᏓᏓᏍᏆᎵᏗᎭ).
+                // Set-B sg3 present composes from stems and NEEDS da
+                // (ᏓᏳᎶᏒᎯ), so the B compounds are not suppressed.
+                boolean sg3CitationEcho = (
+                        verb.subject == PrefixTableSubject.SG3
+                        && (verb.compoundPrefix == CompoundPrefixes.SG3SG3IN
+                            || verb.compoundPrefix == CompoundPrefixes.SG3SG3AN)
+                        && ((verb.tense == Tense.PRESENT
+                                && verb.verbset == VerbSet.A
+                                && verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
+                            || verb.tense == Tense.HABITUAL))
+                if (!sg3CitationEcho) {
+                    verb.initialPrefixHolder.da = true
+                }
             }
 
             verb.wholeWord = PrefixProcessor.process(verb)

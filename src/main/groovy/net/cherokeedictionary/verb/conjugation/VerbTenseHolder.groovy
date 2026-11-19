@@ -78,7 +78,12 @@ class VerbTenseHolder {
         // SG3 composes the book's exact ᎤᏪᏓᏍᏗ from the chop) keep the chop --
         // the Deverbal stem triggers a UW-rule Ꮽ insertion there.
         def rawInfSyllabary = stemmer?.infinitive?.syllabary
-        infinitive = rawInfSyllabary ? rawInfSyllabary.substring(1) : ''
+        // tio 19Nov26: the open-spelled da- citation (ᏓᏳᎶᎯᏍᏗ "to be from")
+        // chops TWO glyphs (da- + yu), not one like the fused Ꮪ spelling --
+        // otherwise the chop leaves the bare yu- (ᏳᎶᎯᏍᏗ) and SG3 composes
+        // ᎤᏳᎶᎯᏍᏗ -> ᏓᏳᏳᎶᎯᏍᏗ (duplicated Ᏻ).
+        boolean openDaInf = stemmer?.normalizedDaInitialPrefix && rawInfSyllabary?.startsWith("ᏓᏳ")
+        infinitive = rawInfSyllabary ? (openDaInf ? rawInfSyllabary.substring(2) : rawInfSyllabary.substring(1)) : ''
         if (deverbal && rawInfSyllabary && rawInfSyllabary.size() > 1) {
             String chopped = rawInfSyllabary.substring(1)
             char rawFirst = rawInfSyllabary.charAt(0)

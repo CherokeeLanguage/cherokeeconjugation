@@ -55,6 +55,52 @@ public class Stemmer {
     public boolean normalizedDaInitialPrefix = false;
 
     /**
+     * tio 19Nov26: companion to normalizedDaInitialPrefix for OPEN-spelled
+     * da+u citations (ᏓᏳᎶᏒᎯ dayulohsvhi "he is from" — no Ꮪ fusion).
+     * When true, PrefixDa renders da+u as the two-glyph open form ᏓᏳ
+     * (y-epenthesis) instead of the fused Ꮪ (WI-33 To Work spelling);
+     * the citation itself disambiguates the two book conventions.
+     */
+    public boolean normalizedDaOpenU = false;
+
+    /**
+     * tio 19Nov26: the da+a allomorph style, read from the sg1 citation
+     * BEFORE normalization strips it: ᏛᎩ (Ꮫ = da+a fusion, "he is from"
+     * ᏛᎩᎶᏒᎯ dvgilohsvhi) -> true; ᏓᎩ (a-drop, "to work" ᏓᎩᎸᏫᏍᏓᏁᎭ
+     * dagilvhwisdaneha) -> false. Default true (guide ex. 63a da+a -> dv)
+     * when the citation is missing. Independent of normalizedDaOpenU --
+     * the two book conventions vary per verb ("to work": u fused Ꮪ, a
+     * dropped; "he is from": u open ᏓᏳ, a fused Ꮫ).
+     */
+    public boolean normalizedDaFuseA = true;
+
+    /**
+     * tio 19Nov26: the da/di consonant-branch allomorph, read from the
+     * citation: sneezing ᏗᏣᏴᏍᏙᏯᏣ and To Work ᏗᏣᎸᏫᏍᏓᏏ (imperative, di +
+     * ja-) show the Ꮧ family (di + consonant -> Ꮧ), while "he is from"
+     * ᏓᏣᎶᎯ (da + ja- -> Ꮣ) shows the Ꮣ family. The rest of the allomorph
+     * set is shared (di+agi a-drop -> ᏓᎩ, di+u fused -> Ꮪ, both like da),
+     * so only the consonant branch differs. Only consulted when
+     * normalizedDaInitialPrefix is set.
+     */
+    public boolean normalizedDiStyle = false;
+
+    /**
+     * tio 19Nov26: the de- (distributive/plural) spelling family, read from
+     * the sg1 citation: running ᏕᏥᏍᏆᎵᏗᎭ / barking ᏕᎦᏑᏫᏍᎦ / snoring
+     * ᏕᏥᏆᎳᎩᎠ / kneeling ᏕᎦᎵᏂᏆᏅᎥᏍᎦ = de + tsi-/ga- (1sg set A). The guide
+     * itself prints this pattern (hold2 ex.: ᏕᏥᎪᏩᏘᎭ deji-gowhtiha "I see
+     * them (distributive)"; Scancarelli: "certain verbs idiosyncratically
+     * require a distributive prefix"). de- allomorphs before consonants =
+     * Ꮥ (de+tsi -> ᏕᏥ); before vowels = d- + vowel (de+a -> ᏓᏍᏆ d-agswa
+     * epenthetic-a; de+u -> Ꮪ du; inf du -> Ꮷ); de+h -> t-contraction
+     * (ᏘᏍᏆᎵᏓ; the book's Ꮤ variant glyph is documented variance).
+     * Rendered by PrefixDa when normalizedDeStyle is set (the d-morpheme
+     * composition machinery is shared).
+     */
+    public boolean normalizedDeStyle = false;
+
+    /**
      * tio 12Nov26: WI-35 — the printed sg3-subject dative-benefactive present
      * surface, when the verb has one attested (el flag set). Montgomery-Anderson
      * Table 14.1 (Cherokee Reference Grammar, p.400): the applicative attaches
@@ -405,10 +451,46 @@ public class Stemmer {
         // glyph Ꮪ (removeᏕprefix rewrites it to Ꭴ), remember the fused da- so
         // composition can re-declare it. pres3-scoped for now; RECHECK whether
         // habit/imm-fused entries need the same flag.
-        boolean pres3DaFused = e.pres3.startsWith("Ꮪ")
-        NormalizedVerbEntry.removeᏕprefix(e);
-        if (pres3DaFused && e.pres3.startsWith("Ꭴ")) {
+        // tio 19Nov26: verb-level da/di-family evidence -- ANY citation entry
+        // in the family's spellings, not just pres3. The book mixes spellings
+        // across tenses of the same verb (snoring: present ᏓᏆᎳᎩᎠ but remote
+        // past ᏚᏆᎳᎩᏒᎢ; sneezing: pres3 ᏚᏴ but pres1 ᏓᎩ), so a pres3-scoped
+        // probe misses verbs whose pres3 alone is ambiguous. Evidence heads:
+        // Ꮪ/Ꮷ (fused du), ᏓᏳ (open dayu) on the stem entries, and Ꮫ/Ꮥ on
+        // the sg1 entry (fused dva / de-distributive). Bare Ꮣ heads are NOT
+        // evidence: the D-transitive class (Dakanehiha ᏓᎧᏁᎯᎭ, Dalehisiha)
+        // carries pres3/pres1 Ꮣ heads whose da- status is not book-verified,
+        // and re-declaring da there regressed ~29 vrb classes. imp is
+        // excluded from FAMILY evidence (instrumental-di verbs carry imp Ꮧ
+        // heads with no da- initial prefix) but IS consulted for the
+        // di-style flag.
+        def familyProbe = { String s -> s && (s.startsWith("Ꮪ") || s.startsWith("Ꮷ")
+                || s.startsWith("ᏓᏳ")) }
+        boolean daFamily = ([e.pres3, e.past, e.habit, e.imm, e.inf].any(familyProbe)
+                || e.pres1?.startsWith("Ꮫ") || e.pres1?.startsWith("Ꮥ"))
+        boolean pres1DaFuseA = e.pres1?.startsWith("Ꮫ")
+        boolean pres1DaDropA = e.pres1?.startsWith("Ꮣ")
+        // tio 19Nov26: pres1 Ꮥ head = de- distributive spelling family
+        // (de + tsi/ga -> ᏕᏥ/ᏕᎦ, guide hold2 ᏕᏥᎪᏩᏘᏂha pattern)
+        boolean pres1DeStyle = e.pres1?.startsWith("Ꮥ")
+        boolean anyOpenU = [e.pres3, e.past, e.habit, e.imm, e.inf].any { it?.startsWith("ᏓᏳ") }
+        boolean anyFusedU = [e.pres3, e.past, e.habit, e.imm, e.inf].any { it?.startsWith("Ꮪ") || it?.startsWith("Ꮷ") }
+        boolean anyDiConsonant = [e.pres3, e.past, e.habit, e.imm, e.inf, e.imp].any { it?.startsWith("Ꮧ") }
+        NormalizedVerbEntry.removeᏕprefix(e, daFamily);
+        if (daFamily) {
             normalizedDaInitialPrefix = true
+            normalizedDaOpenU = anyOpenU && !anyFusedU
+            if (pres1DeStyle) {
+                // tio 19Nov26: de- distributive family -- consonant branch
+                // renders Ꮥ (de + tsi -> ᏕᏥ), and the a-branch is
+                // a-DELETION (d- + vowel: de+agi -> ᏓᎩ), not the da+a
+                // fusion ᏛᎩ the cislocative da- shows (He Is From ᏛᎩᎶᏒᎯ).
+                normalizedDeStyle = true
+                normalizedDaFuseA = false
+            } else if (pres1DaFuseA || pres1DaDropA) {
+                normalizedDaFuseA = pres1DaFuseA
+            }
+            normalizedDiStyle = anyDiConsonant
         }
         /*
      * String Ꭲ- (again) prefix if easy to identify
@@ -736,6 +818,19 @@ public class Stemmer {
         }
         if (e.imm != null && e.imm.startsWith("Ꮻ")) {
 			e.imm=discardPrefix(e.imm);
+        }
+        // tio 19Nov26: d-morpheme family verbs routed through vowel-stems keep
+        // the sg3 u- their past/habitual/infinitive citations baked in
+        // (barking past ᏚᏑᏫᏒᎢ -> normalized ᎤᏑᏫᏒᎢ), so 1sg remote composed
+        // the spurious agw- reading (ᏓᏆᏑᏫᏒᎢ). For family verbs that Ꭴ is the
+        // sg3 PREFIX (de/da+u -> du), not a stem vowel like the forget-class
+        // uw- stems, so strip it and let composition re-supply u- per person.
+        if (normalizedDaInitialPrefix && !e.daUStripped) {
+            e.daUStripped = true
+            if (e.past.startsWith("Ꭴ")) { e.past = discardPrefix(e.past); }
+            if (e.habit.startsWith("Ꭴ")) { e.habit = discardPrefix(e.habit); }
+            if (e.inf.startsWith("Ꭴ")) { e.inf = discardPrefix(e.inf); }
+            if (e.imm != null && e.imm.startsWith("Ꭴ")) { e.imm = discardPrefix(e.imm); }
         }
         List<StemEntry> list = new ArrayList<StemEntry>();
         list.add(new StemEntry(newPrefix(vowel, e.pres3), StemType.PresentContinous));

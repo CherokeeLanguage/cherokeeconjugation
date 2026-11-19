@@ -4,7 +4,15 @@ import net.cherokeedictionary.core.Verb
 
 class ConjugationHelper {
     public static void determinePartOfSpeech(Verb verb, partOfSpeech) {
-        verb.partOfSpeech = (partOfSpeech == 'v.i.' || partOfSpeech == 'vi')
+        // tio 19Nov26: accept every spelling the API callers use -- the
+        // dictionary's 'v.i.', the legacy 'vi', the enum name
+        // PartOfSpeech.VERB_INTRANSITIVE.toString(), and a bare
+        // 'intransitive'. "VERB_INTRANSITIVE" previously fell through to
+        // VERB_TRANSITIVE, so a caller-supplied object (e.g. SG3AN) survived
+        // and transitive compound prefixes were composed for intransitive
+        // verbs (SG1 ᏥᏯᏓᏩᏛᎯᏙᎭ / SG3 ᎠᎦᏓᏩᏛᎯᏙᎭ instead of Ꭶ-/Ꭰ-).
+        def pos = partOfSpeech?.toString()?.trim()?.toLowerCase()?.replace('_', '')
+        verb.partOfSpeech = (pos in ['v.i.', 'vi', 'verbintransitive', 'intransitive'])
                                 ? PartOfSpeech.VERB_INTRANSITIVE
                                 : PartOfSpeech.VERB_TRANSITIVE
     }
@@ -73,11 +81,15 @@ class ConjugationHelper {
         // through the present3rd check below.
 
         // if du,nu,u,wu in 3rd sing present then Set B rest are Set A
+        // tio 19Nov26: ᏓᏳ added -- the open-spelled da+u citation
+        // (ᏓᏳᎶᏒᎯ dayulohsvhi "he is from") hides the set-B sg3 u- behind
+        // the da- initial prefix; only the fused Ꮪ spelling was detected.
         def tempPresent3rd = verb.stemmer?.present3rd?.syllabary
         if (tempPresent3rd && (tempPresent3rd.startsWith("Ꮪ")
                 || tempPresent3rd.startsWith("Ꮔ")
                 || tempPresent3rd.startsWith("Ꭴ")
-                || tempPresent3rd.startsWith("Ꮽ"))) {
+                || tempPresent3rd.startsWith("Ꮽ")
+                || tempPresent3rd.startsWith("ᏓᏳ"))) {
             verbset = VerbSet.B
         }
 

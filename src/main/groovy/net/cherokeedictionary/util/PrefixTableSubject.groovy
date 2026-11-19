@@ -11,14 +11,14 @@ public enum PrefixTableSubject {
     DL2("Second Dual"),
     PL2("Second Plural"),
     PL3("Third Plural"),
-    DL2INCL("Second Dual Inclusive"),
-    DL2EXCL("Second Dual Exclusive"),
-    PL2INCL("Second Plural Inclusive"),
-    PL2EXCL("Second Plural Exclusive"),
-    DL3INCL("Third Dual Inclusive"),
-    DL3EXCL("Third Dual Exclusive"),
-    PL3INCL("Third Plural Inclusive"),
-    PL3EXCL("Third Plural Exclusive");
+//    DL2INCL("Second Dual Inclusive"),
+//    DL2EXCL("Second Dual Exclusive"),
+//    PL2INCL("Second Plural Inclusive"),
+//    PL2EXCL("Second Plural Exclusive"),
+//    DL3INCL("Third Dual Inclusive"),
+//    DL3EXCL("Third Dual Exclusive"),
+//    PL3INCL("Third Plural Inclusive"),
+//    PL3EXCL("Third Plural Exclusive");
 
     private final String readableName;
 
