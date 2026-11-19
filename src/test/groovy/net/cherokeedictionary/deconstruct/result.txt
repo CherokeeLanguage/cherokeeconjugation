@@ -1,0 +1,8 @@
+--- analysis 1 ---
+Ꭰ [PRONOMINAL_PREFIX: He/she -> Me [fused letter 'gw' merges with the stem's first syllable]
+They (more than two) -> Him/her [fused letter 'n' merges with the stem's first syllable]
+They (more than two) -> It [fused letter 'n' merges with the stem's first syllable]
+I -> It (Set B: d/ts/s-initial stems) [fused letter 'gw' merges with the stem's first syllable]
+They (more than two) -> Him/her (Set B: d/ts/s-initial stems) [fused letter 'n' merges with the stem's first syllable]]
+stem: ᎪᏩᏘᎭ
+

@@ -429,3 +429,44 @@ unaffected either way. GutihaSpec stays as-is (asserts the CED romanization
 per the parse-back rule); no code or data change. CED-vs-VRB romanization
 differences of this class (silent/intrusive h before a consonant onset) are
 documented variance, not discrepancies. -- tio 18Nov26
+
+## D19. Deconstructor v1 meaning labels: approximate readings, peel approximations (2026-11-19, DOCUMENTED -- open for refinement)
+
+The deconstruct backlog item (outside-in interlinear breakdown,
+Deconstructor.groovy) ships v1 with these documented approximations; NOT
+auto-patched (open-question convention):
+
+- **Final-suffix meaning labels** (FINAL_SUFFIX_MEANINGS): confident readings
+  cited (gwu "also, too", sgo dubitative, ju "just/even", na contrastive, hv
+  question, idi "together/mutually", a/i stem tails); the remaining endings
+  (esdi, si, svi, vi, oi, ei, di, dv, ke, isi, dina) are labeled "final
+  particle" pending Feeling-dictionary citation for each. Surface candidates
+  come from FinalSuffixProcessor.lstEndings, so hypothesis enumeration never
+  drifts from the conjugation side.
+- **Non-final suffix surfaces** (NONFINAL_CANDIDATES): Feeling 1975 p.282
+  Figure-1 order (-ilo-, -dan-, -ohn-, -el-, -idol-, -e/-ihl-, -g-) with v1
+  glyph approximations; the real allomorphy is latin-insertion via
+  NonFinalSuffixProcessor.insertBeforeTail and is NOT fully inverted in v1.
+- **Initial-prefix surface sets** (INITIAL_PREFIX_SURFACES): head glyphs
+  harvested from the affix classes' own prepend sites (PrefixYi's
+  y-vowel map, PrefixDa's Ꮣ/Ꮨ/Ꮫ, PrefixDe/PrefixDi Ꮧ/Ꮩ, PrefixJi Ꮵ/Ꮸ,
+  PrefixWi Ꮻ, PrefixNi Ꮒ); allomorphy annotated in the meaning text rather
+  than enumerated exhaustively.
+- **Pronominal peel matches preConsonant + preVowel glyph heads** against
+  CompoundPrefixes.prefixes; the fused-letter caveat (trailing latin y/gw/g/
+  G/h/... merges with the stem's first syllable) is annotated on each hit,
+  and Set-A/B ambiguity is kept as separate readings (user ruling 2026-11-19:
+  return all analyses, ambiguity kept, never pruned).
+- **Meanings for pronominal readings** come from
+  CompoundPrefixPlainEnglishMapper (promoted test-side -> main this commit;
+  BY_PAIR keys now String-coerced -- GString keys silently failed HashMap
+  lookups).
+
+Input goes through the VerbInputNormalizer gate (roman converts, glyphs
+byte-identical); forms carrying transliteration residue ("not a valid
+letter") return a single UNPARSED analysis per the facade error contract
+(no exceptions, never empty). -- tio 19Nov26
+
+## D20. Set B empty twins with SG3AN objects: bare stem vs Set A fallback (2026-11-19, RESOLVED -- Set A fallback applied)
+
+**Resolution.** Guide Figure 4 (hold1.html §I-B) covers ONLY the 3sg.in and 3pl.in object columns. DL1INCLSG3ANB and the other SG3AN-object empty twins are NOT Figure-4 combos, so per §I-B they take the Set A prefix. VerbConjugationProcessor.resolveLookupPrefix exclusion set narrowed to SG3IN/PL3IN (FIGURE4_OBJECT_COLUMNS); SG3AN/PL3AN-object twins now fall back to Set A data. Verified: DL1INCL SG3AN remote past = ᎡᏂᎪᎲᎢ (Set A ᎡᏂ, matching the present ᎡᏂᎪᏩᏘᎭ family); SG3IN sibling unchanged at ᎩᏂᎪᎲᎢ (real Set-B gin-, Figure 4). SG2SG3AN remote = ᎯᎪᎲᎢ (Set A hi-). NOTE: no spec or test asserts any DL1INCL cell (only one spec mentions DL1INCL at all, as a comment; the coverage meta-gate exercises SG1/SG2/SG3/PL3/PL1INCL only) -- DL1INCL/DL2/PL2 remote-past cells are UNATTESTED in the spec corpus, engine behavior is guide-derived, not book-asserted. Full suite green. -- tio 19Nov26

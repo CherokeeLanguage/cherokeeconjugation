@@ -69,6 +69,19 @@ class VerbConjugationFacade {
 
     ConjugationContext analyze(ConjugationRequest request) {
         if (isDebug) println "DEBUG: Analyzing subject: ${request.subject}, object: ${request.object}, tense: ${request.verbTense}"
+
+        // tio 19Nov26: DECONSTRUCT PATH -- when the request carries a surface
+        // form, run the outside-in Deconstructor (all analyses, ambiguity
+        // kept) and skip the conjugation pipeline entirely; error contract
+        // preserved (no exceptions, never empty). When no form is given the
+        // legacy reverse-step behavior applies unchanged.
+        if (request.form) {
+            def context = new ConjugationContext(request)
+            context.deconstructions = Deconstructor.deconstruct(request.form)
+            context.log("Deconstructed form outside in: ${context.deconstructions.size()} analysis(es)")
+            return context
+        }
+
         def context = new ConjugationContext(request)
         context.buildBaseVerb()
 
@@ -79,5 +92,15 @@ class VerbConjugationFacade {
         }
 
         return context
+    }
+
+    /**
+     * Convenience overload (deconstruct backlog, 2026-11-19): deconstruct a
+     * fully conjugated surface form straight from a string.
+     * -- tio 19Nov26
+     */
+    ConjugationContext analyze(String form) {
+        def request = new ConjugationRequest(form: form)
+        return analyze(request)
     }
 }

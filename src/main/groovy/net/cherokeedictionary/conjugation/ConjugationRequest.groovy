@@ -25,6 +25,11 @@ class ConjugationRequest {
     // from VerbBaseSpec. -- tio 18Nov26
     String lexeme
 
+    // tio 19Nov26: deconstruct input -- a fully conjugated verb surface form
+    // for the analyze() path. When set, VerbConjugationFacade.analyze runs
+    // the outside-in Deconstructor instead of the conjugation pipeline.
+    String form
+
     // Initial prefixes flags / values
     String yi
     String ji
@@ -44,6 +49,7 @@ class ConjugationRequest {
             verbTense    : verbTense,
             partofspeechc: partOfSpeech,
             lexeme       : lexeme,
+            form         : form,
             habitual     : habitual,
             imperative   : imperative,
             infinitive   : infinitive,

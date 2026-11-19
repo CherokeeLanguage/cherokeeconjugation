@@ -18,6 +18,8 @@ import net.cherokeedictionary.verb.containers.NonFinalSuffixProcessor
  * Created by torr on 8/20/2015.
  */
 class Conjugate {
+    static boolean isDebug = false
+
     static def createVerbToConjugate(final String subject,
                                      final String object,
                                      final Stemmer stemmer,
@@ -65,7 +67,7 @@ class Conjugate {
             return verb
         }
 
-        println "DEBUG: conjugating verb=${verb.root} tense=${verb.tense} set=${verb.verbset} prefix=${verb.compoundPrefix}"
+        if (isDebug) println "DEBUG: conjugating verb=${verb.root} tense=${verb.tense} set=${verb.verbset} prefix=${verb.compoundPrefix}"
 
         // tio 12Nov26: reset per-conjugation so a reused Verb never carries a
         // stale variantWord from an earlier conjugation (WI-28B).

@@ -24,6 +24,37 @@ import net.cherokeedictionary.verb.rules.RuleVtoA
  * Created by torr on 8/23/2015.
  */
 class VerbConjugationProcessor {
+    static boolean isDebug = false
+
+    // tio 19Nov26: guide §I-B (hold1.html): "Figure 4 shows those Set B
+    // subject-object prefix combinations which DIFFER from the corresponding
+    // Set A prefixes in Figure 3" -- and Figure 4's columns are ONLY 3sg.in
+    // and 3pl.in (the worked example "the prefix used in ᎠᎩᎸᏆᏗ agilvquadi
+    // 'I like it' is also used in ᎠᎩᎪᎲᎢ agigohv'i 'I saw it'" routes the
+    // remote-past SG1SG3IN cell through the Set A form). So a declared-empty
+    // Set B twin in any column NOT covered by Figure 4 falls back to its
+    // Set A data instead of surfacing a prefix-less bare stem. The excluded
+    // columns are exactly the two Figure-4 ones (SG3IN/PL3IN -- where real B
+    // data exists anyway, e.g. DL1INCLSG3INB ᎩᏂ gin- vs Set A ᎢᏂ in-): the
+    // Set A allomorphs are wrong there (Feeling guide P8 -- timo 10Nov26).
+    // The SG3AN/PL3AN columns are NOT Figure-4 columns -- their empty twins
+    // (DL1INCLSG3ANB and siblings) take the Set A form (ᎢᏂ -> ᎢᏂᎪᎲᎢ), same
+    // as the present-tense ᎡᏂᎪᏩᏘᎭ family.
+    private static final Set<PrefixTableObject> FIGURE4_OBJECT_COLUMNS = [
+            PrefixTableObject.SG3IN, PrefixTableObject.PL3IN] as Set
+
+    private static boolean isDeclaredEmptyPrefix(Prefix p) {
+        return p != null && !p.preVowel && !p.preConsonant && !p.other
+    }
+
+    private static String resolveLookupPrefix(String verbPrefix, PrefixTableObject obj, VerbSet verbset) {
+        if (verbset == VerbSet.B && obj && !FIGURE4_OBJECT_COLUMNS.contains(obj)
+                && isDeclaredEmptyPrefix((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))) {
+            return verbPrefix.substring(0, verbPrefix.size() - 1) // strip the B
+        }
+        return verbPrefix
+    }
+
     static void log(prints) {
         // tio 15Nov26: TEMP debug (ToHear wiring) — revert to false after use.
         boolean isDebug = Boolean.getBoolean("cherokee.conj.debug");
@@ -90,7 +121,10 @@ class VerbConjugationProcessor {
 
         if (it != null && StringUtility.startsWithVowelSyllabary(it)) {
             //get the prefix from the table
-            def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+            // tio 19Nov26: empty-B-twin Set A fallback, guide §I-B (see
+            // resolveLookupPrefix). Override keys stay on the original B key.
+            def lookupPrefix = resolveLookupPrefix(verbPrefix, pref?.prefix2, verbset)
+            def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(lookupPrefix))
 
             // timo 10Nov26: key-absent vs declared-empty are now distinguished.
             // A key absent from the map (either set) surfaces as MISSING_ENTRY so
@@ -212,7 +246,10 @@ class VerbConjugationProcessor {
             // bare stem instead of falling into MISSING_ENTRY, and an absent key
             // (either set) surfaces as MISSING_ENTRY:
             //returnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))?.preConsonant
-            def entry = ((Prefix) CompoundPrefixes.prefixes.get(verbPrefix))
+            // tio 19Nov26: empty-B-twin Set A fallback on the preConsonant
+            // branch too (guide §I-B; see resolveLookupPrefix)
+            def entry = ((Prefix) CompoundPrefixes.prefixes.get(
+                    resolveLookupPrefix(verbPrefix, pref?.prefix2, verbset)))
             returnPrefix = entry?.preConsonant
             if (!entry) {
                 return "MISSING_ENTRY" + (it ?: "")
@@ -620,7 +657,7 @@ class VerbConjugationProcessor {
                 verb.compoundPrefix?.prefix1?.name(),
                 verb.compoundPrefix?.prefix2?.name())
         if (subjectSurface) {
-            println "DEBUG: subjectSurface=${subjectSurface}"
+            if (isDebug) println "DEBUG: subjectSurface=${subjectSurface}"
             // The registered surface is book-final (it already carries da-
             // where the book prints it). The da- initial-prefix flag set above
             // must be cleared, or PrefixProcessor glues a second Ꮣ onto the

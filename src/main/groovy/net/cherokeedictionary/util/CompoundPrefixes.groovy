@@ -280,6 +280,7 @@ class CompoundPrefixes {
     static final def PL3PL1EXCLB = new CompoundPrefix(prefix1: PrefixTableSubject.PL3, prefix2: PrefixTableObject.PL1EXCL)
     static final def PL3DL2B = new CompoundPrefix(prefix1: PrefixTableSubject.PL3, prefix2: PrefixTableObject.DL2)
     static final def PL3PL2B = new CompoundPrefix(prefix1: PrefixTableSubject.PL3, prefix2: PrefixTableObject.PL2)
+
     static {
 //        prefixes.put("SG1SG1", new Prefix(preVowel: '', preConsonant: '', other: ''))//blank
         prefixes.put("SG1SG2", new Prefix(preVowel: 'Ꭼy', preConsonant: 'Ꭼ', other: ''))

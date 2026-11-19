@@ -10,6 +10,10 @@ class ConjugationContext {
     ConjugationRequest request
     List<String> auditTrail = []
 
+    // tio 19Nov26: deconstruct outputs -- filled by the analyze() path when
+    // the request carries a surface form (see Deconstructor).
+    List<Deconstruction> deconstructions = []
+
     ConjugationContext(ConjugationRequest request) {
         this.request = request
     }
