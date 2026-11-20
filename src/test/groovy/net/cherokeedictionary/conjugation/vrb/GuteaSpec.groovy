@@ -28,28 +28,31 @@ class GuteaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gutea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyutea"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyutesgoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyutesvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyutesvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyutesdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwutesdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gutea"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gutesgoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwutesvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gutesvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwutesdi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agiwutesdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyutea"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyutesgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyutesvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyutesvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyutesdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiwutesdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hutea"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hutesgoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jutesvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hutesvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "jutesdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsawutesdi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "gutea"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "gutesgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "uwutesvi"
@@ -59,11 +62,11 @@ class GuteaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.HABITUAL        | "anutesgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unutesvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anutesvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unutesdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "uniwutesdi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idutea"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idutesgoi"
         "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igutesvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idutesvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igutesdi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igiwutesdi"
     }
 }

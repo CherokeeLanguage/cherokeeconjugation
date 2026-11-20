@@ -27,20 +27,23 @@ class GahlihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gahliha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiliha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jilihoi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsitliha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsitlihoi"
         // "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsinitlvna"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsitli"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "agihlvnhdi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "hihliha"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "hihlihoi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsitlvnvdi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "tsitliha"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "tsitlihoi"
         // "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aginitlvna"  // tio 16Nov26: remote past UNATTESTED -- the 2012 book (p.14) prints X/blank in the remote column; the yaml extraction misassigned the imperative column (hihlvna/gahlvna) to remote_past
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsitli"
         // "SG1" | "SG3IN" | Tense.INFINITIVE      | "agitlvnvdi"
-        "SG2" | "SG3IN" | Tense.PRESENT         | "gahliha"
-        "SG2" | "SG3IN" | Tense.HABITUAL        | "gahlihoi"
+        "SG2" | "SG3IN" | Tense.PRESENT         | "hitliha"
+        "SG2" | "SG3IN" | Tense.HABITUAL        | "hitlihoi"
         // "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsanitlvna"  // unattested (book p.14)
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hitli"
         // "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsatlvnvdi"

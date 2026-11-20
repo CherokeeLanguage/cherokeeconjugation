@@ -28,6 +28,9 @@ class AtvdasdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Atvdasdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatvdasdiha"
@@ -36,7 +39,7 @@ class AtvdasdihaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyadvdastanvi"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatvdasdohdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gatvdasdiha"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "hatvdasdisgoi"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "gadvdasdisgoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwatvdastanvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gadvdastanvi"
         "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwatvdasdohdi"

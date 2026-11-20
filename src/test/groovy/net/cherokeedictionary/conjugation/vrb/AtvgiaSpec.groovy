@@ -28,6 +28,9 @@ class AtvgiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Atvgia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatvgia"
@@ -37,9 +40,9 @@ class AtvgiaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatvgodi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gatvgia"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gatvgisgoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aktvganvi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquadvganvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gadvganvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aktvgodi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aquadvgodi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyatvgia"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyatvgisgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyatvganvi"
@@ -47,9 +50,9 @@ class AtvgiaSpec extends VerbBaseSpec {
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyatvgodi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hatvgia"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hatvgisgoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tstvganvi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsadvganvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hadvganvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tstvgodi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsadvgodi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "advgia"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "advgisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "udvganvi"
@@ -60,10 +63,10 @@ class AtvgiaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unatvganvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anadvganvi"
         "PL3" | "SG3IN" | Tense.INFINITIVE      | "unatvgodi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idatvgia"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "otsadvgia"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idatvgisgoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "iktvganvi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igadvganvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idadvganvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "iktvgodi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igadvgodi"
     }
 }

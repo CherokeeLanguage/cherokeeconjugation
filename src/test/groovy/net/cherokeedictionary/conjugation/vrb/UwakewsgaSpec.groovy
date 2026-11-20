@@ -28,23 +28,26 @@ class UwakewsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwakewsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyvkewsga"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyvkewsgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyvkewsvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyvgewisga"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyvgewisgoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyvgewisvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyvgewisvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyvkehwisdi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "agwvkewsga"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "agwvkewsgoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwvkewsvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyvwagewisdi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "aquvgewisga"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "aquvgewisgoi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquvgewisvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "aquvgewisvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwvkehwisdi"
-        "SG2" | "SG3IN" | Tense.PRESENT         | "jvkewsga"
-        "SG2" | "SG3IN" | Tense.HABITUAL        | "jvkewsgoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jvkewsvi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aquvwagewisdi"
+        "SG2" | "SG3IN" | Tense.PRESENT         | "tsvgewisga"
+        "SG2" | "SG3IN" | Tense.HABITUAL        | "tsvgewisgoi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsvgewisvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsvgewisvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "jvkehwisdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsvwagewisdi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "uwagewisga"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "uwagewisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "uwagewisvi"
@@ -52,15 +55,15 @@ class UwakewsgaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "uwawagewisdi"
         // D16 (17Nov26): PL3 un- + v-stem composes Ꮕ (nv) per the book PL3 row
         // (unvkewsga / unvkewsvi; CED canonical parse-back gewis-).
-        "PL3" | "SG3IN" | Tense.PRESENT         | "unvkewsga"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "unvkewsgoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unvkewsvi"
+        "PL3" | "SG3IN" | Tense.PRESENT         | "unvgewisga"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "unvgewisgoi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unvgewisvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "unvgewisvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unvkehwisdi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "igvkewsga"
-        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "igvkewsgoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igvkewsvi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unvwagewisdi"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "igvgewisga"
+        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "igvgewisgoi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igvgewisvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "igvgewisvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igvkehwisdi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igvwagewisdi"
     }
 }

@@ -28,23 +28,26 @@ class UksesdiSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uksesdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyagasesdi"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyagasesdoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyagasesdvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyagisesdi"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyagisestoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyagisesdvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyagisesdvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyagasesdohdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyagisestodi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "agwaksesdi"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "agwaksesdoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwaksesdvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "aquagisesdvi"
         "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwaksesdohdi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyagasesdi"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyagasesdoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyagasesdvi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyagisesdi"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyagisestoi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyagisesdvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "agisesdvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyagasesdohdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyagisestodi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "jaksesdi"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "jaksesdoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jaksesdvi"

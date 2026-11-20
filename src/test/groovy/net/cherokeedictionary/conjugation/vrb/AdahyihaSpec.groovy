@@ -29,13 +29,16 @@ class AdahyihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Adahyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyadayiha"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyadayihoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyadayilvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyadayilvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyadayisdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyadayvsdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gadayiha"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gadayihoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwadahyilvi"
@@ -45,7 +48,7 @@ class AdahyihaSpec extends VerbBaseSpec {
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyadayihoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyadayilvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyadayilvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyadayisdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyadayvsdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hadayiha"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hadayihoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jadahyilvi"

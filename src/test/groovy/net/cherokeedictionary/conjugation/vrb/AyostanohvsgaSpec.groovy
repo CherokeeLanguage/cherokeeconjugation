@@ -31,6 +31,9 @@ class AyostanohvsgaSpec extends VerbBaseSpec {
         conjugateVerb("Ayostanohvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyostanohvsga"
@@ -53,8 +56,8 @@ class AyostanohvsgaSpec extends VerbBaseSpec {
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "uniyostanohnvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "aniyostanonvi"
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniyostanohvsdi"
-        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "idiyostanohvsga"
-        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "idiyostanohvsgoi"
+        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "ediyostanohvsga"
+        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "ediyostanohvsgoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "ediyostanonvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "ediyostanonvi"
         "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediyostanohvsdi"

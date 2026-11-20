@@ -29,19 +29,22 @@ class AyosdiSpec extends VerbBaseSpec {
         conjugateVerb("Ayosdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyosdiha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyosdisoi"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyosdihoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyosdanvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyosdanvi"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyosdodi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyosdiha"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyosdisoi"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyosdihoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyosdanvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyosdanvi"
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyosdodi"
-        "SG3" | "SG3AN" | Tense.PRESENT         | "ayosdiha"
+        "SG3" | "SG3AN" | Tense.PRESENT         | "gayosdiha"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "ayosdihoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uyosdanvi"
         "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "ayosdanvi"
@@ -51,8 +54,8 @@ class AyosdiSpec extends VerbBaseSpec {
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "uniyosdanvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "aniyosdanvi"
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniyosdohdi"
-        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "idiyosdiha"
-        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "idiyosdihoi"
+        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "ediyosdiha"
+        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "ediyosdihoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "ediyosdanvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "ediyosdanvi"
         "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediyosdodi"

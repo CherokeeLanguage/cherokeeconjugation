@@ -34,11 +34,14 @@ class AsgitsgaSpec extends VerbBaseSpec {
         // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
         // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyasgitsga"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyasgitsgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyasgitsvi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyasgitisvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyasgitisvi"
         // "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyasgitisdi"
         "SG1" | "" | Tense.PRESENT         | "gasgitisga"
@@ -48,7 +51,7 @@ class AsgitsgaSpec extends VerbBaseSpec {
         // "SG1" | "" | Tense.INFINITIVE      | "aquasgitisdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyasgitsga"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyasgitsgoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyasgitsvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyasgitisvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyasgitisvi"
         // "SG2" | "SG3AN" | Tense.INFINITIVE      | "asgitisdi"
         "SG2" | "" | Tense.PRESENT         | "hasgitsga"

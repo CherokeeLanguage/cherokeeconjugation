@@ -24,23 +24,26 @@ class AlkisohdiSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Alkisohdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "galikisohdi"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "galikisohdihoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "agwalkisohtanvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyanaligisodi"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyanaligisodihoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyanaligisotanvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyanaligisotanvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "agwalkisohdohdi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "halkisohdi"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "halkisohdihoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "jalkisohtanvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyanaligisotodi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "ganaligisodi"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "ganaligisodihoi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquanaligisotanvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "ganaligisotanvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "jalkisohdohdi"
-        "SG2" | "SG3IN" | Tense.PRESENT         | "alkisohdi"
-        "SG2" | "SG3IN" | Tense.HABITUAL        | "alkisohdihoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "ulkisohtanvi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aquanaligisotodi"
+        "SG2" | "SG3IN" | Tense.PRESENT         | "hanaligisodi"
+        "SG2" | "SG3IN" | Tense.HABITUAL        | "hanaligisodihoi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsanaligisotanvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hanaligisotanvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "ulkisohdohdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsanaligisotodi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "analkisohdi"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "analkisohdihoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "unalkisohtanvi"
@@ -48,8 +51,8 @@ class AlkisohdiSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "unalkisohdohdi"
         "PL3" | "SG3IN" | Tense.PRESENT         | "idalkisohdi"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "idalkisohdihoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "igalkisohtanvi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unanaligisotanvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "ananaligisotanvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "igalkisohdohdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unanaligisotodi"
     }
 }

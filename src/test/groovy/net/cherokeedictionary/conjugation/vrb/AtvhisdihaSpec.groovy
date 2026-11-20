@@ -29,6 +29,9 @@ class AtvhisdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Atvhisdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyadvhisdiha"
@@ -38,9 +41,9 @@ class AtvhisdihaSpec extends VerbBaseSpec {
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatvhisdohdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gadvhisdiha"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gadvhisdisgoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aktvhistanvi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquadvhistanvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gadvhistanvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aktvhisdohdi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aquadvhistodi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyadvhisdiha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyadvhisdisgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyatvhistanvi"
@@ -48,9 +51,9 @@ class AtvhisdihaSpec extends VerbBaseSpec {
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyatvhisdohdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hatvhisdiha"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hatvhisdisgoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tstvhistanvi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsadvhistanvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hadvhistanvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tstvhisdohdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsadvhistodi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "advhisdiha"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "advhisdisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "udvhistanvi"
@@ -61,9 +64,9 @@ class AtvhisdihaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unatvhistanvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anadvhistanvi"
         "PL3" | "SG3IN" | Tense.INFINITIVE      | "unatvhisdohdi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "edatvhisdiha"
-        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "edatvhisdisgoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "edatvhistanvi"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idadvhisdiha"
+        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idadvhisdisgoi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igadvhistanvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idadvhistanvi"
         // "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "/"
     }

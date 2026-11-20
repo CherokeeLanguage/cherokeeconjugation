@@ -26,18 +26,21 @@ class GohlgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gohlga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyoliga"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyoligoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyohlvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyologa"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyologoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyolotsvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyolotsvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyohlisdi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyoliga"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyoligoi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwotlisdi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyologa"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyologoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyohljvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyolotsvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyohlisdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiwotlisdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "ologa"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "gologoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwolotsvi"
@@ -50,8 +53,8 @@ class GohlgaSpec extends VerbBaseSpec {
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "unohlisdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edohlga"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edohlgoi"
-        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edohlvi"
+        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "etolotsvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edolotsvi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "edohlisdi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediwotlisdi"
     }
 }

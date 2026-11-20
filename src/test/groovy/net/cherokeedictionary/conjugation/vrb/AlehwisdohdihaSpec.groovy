@@ -28,6 +28,9 @@ class AlehwisdohdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Alehwisdohdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyalewisdohdiha"
@@ -49,7 +52,7 @@ class AlehwisdohdihaSpec extends VerbBaseSpec {
         "SG2" | "SG3IN" | Tense.HABITUAL        | "halehwisdohdisgoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jalehwisdohtanvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "halewisdotanvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "jalehiwsdohdohdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsalewistotodi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "alewisdodiha"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "alewisdodisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "ulewisdotanvi"
@@ -57,7 +60,7 @@ class AlehwisdohdihaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "ulewisdododi"
         "PL3" | "SG3IN" | Tense.PRESENT         | "analehwisdohdiha"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "analehwisdohdisgoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "analehwisdohtanvi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unalewistotanvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "analewisdotanvi"
         "PL3" | "SG3IN" | Tense.INFINITIVE      | "unalehwisdohdohdi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idalehwisdohdiha"

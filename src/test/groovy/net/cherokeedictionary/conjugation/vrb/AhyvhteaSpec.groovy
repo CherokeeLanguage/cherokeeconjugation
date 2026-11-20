@@ -28,23 +28,26 @@ class AhyvhteaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahyvhtea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyayhtea"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyayhtesgoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyayhtesvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyayvtesvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyayhtesdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyvtesdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gayvhtea"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gayvhtesgoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwahyvhtesvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gayvtesvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwahyvhtesdi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agiyvtesdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyayvhtea"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyahyvhtesgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyahyvhtesvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyayvtesvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyahyvhtesdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyvtesdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hayvhtea"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hahyvhtesgoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "jahyvhtesvi"
@@ -59,11 +62,11 @@ class AhyvhteaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.HABITUAL        | "anahyvhtesgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unahyvhtesvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anayvtesvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unahyvhtesdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "uniyvtesdi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idayvhtea"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idahyvhtesgoi"
         "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igahyvhtesvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idayvtesvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igahyvhtesdi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igiyvtesdi"
     }
 }

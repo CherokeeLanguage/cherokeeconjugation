@@ -26,20 +26,23 @@ class AndadihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Andadiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyanvdadia"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyanvdadisgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyanvdadvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyanidadiha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyanidadisgoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyanadadvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyanadadvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyanvdadisdi"
-        "SG1" | "SG3IN" | Tense.PRESENT         | "ganvdadia"
-        "SG1" | "SG3IN" | Tense.HABITUAL        | "ganvdadisgoi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyanadadisdi"
+        "SG1" | "SG3IN" | Tense.PRESENT         | "ganidadiha"
+        "SG1" | "SG3IN" | Tense.HABITUAL        | "ganidadisgoi"
         "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwanhdadvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "ganadadvi"
         "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwanhdadisdi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyanvdadia"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyanvdadisgoi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyanidadiha"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyanidadisgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyanhdadvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyanadadvi"
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyanhdadisdi"

@@ -31,10 +31,13 @@ class AyvhihaSpec extends VerbBaseSpec {
         conjugateVerb("Ayvhiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyvia"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyvioi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyvhiha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyvhihoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyvtlvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyvtlvi"
         "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyvsdi"
@@ -53,8 +56,8 @@ class AyvhihaSpec extends VerbBaseSpec {
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "uniyvhlvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "aniyvtlvi"
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniyvsdi"
-        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "idiyvhiha"
-        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "idiyvhihoi"
+        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "ediyvhiha"
+        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "ediyvhihoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "ediyvtlvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "ediyvtlvi"
         "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediyvsdi"

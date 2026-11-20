@@ -29,28 +29,31 @@ class GaniyihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganiyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiniyiha"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiniyisgoi"
         "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiniyvhvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiniyvhvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiniyhdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiniyidi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "jiniyiha"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "jiniyisgoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agiyvhvi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aginiyvhvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "tsiniyvhvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aginiyhdi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "aginiyidi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiniyiha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiniyisgoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiniyvhvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiniyvhvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiniyhdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiniyidi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hiniyiha"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hiniyisgoi"
         "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "janiyvhvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hiniyvhvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "janiyhdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsaniyidi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "ganiyiha"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "ganiyisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "uniyvhvi"
@@ -58,13 +61,13 @@ class GaniyihaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "uniyidi"
         "PL3" | "SG3IN" | Tense.PRESENT         | "aniniyiha"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "aniniyisgoi"
-        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uniniyvsvi"
+        "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uniniyvhvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "aniniyvhvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "uniniyhdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "uniniyidi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idiniyiha"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idiniyisgoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "iginiyvsvi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "iginiyvhvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idiniyvhvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "iginiyhdi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "iginiyidi"
     }
 }

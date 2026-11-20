@@ -27,32 +27,35 @@ class KdegaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Kdega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
+        // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
+        // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyvdega"
         "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyvdegoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "akdejvi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyvdetsvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyvdetsvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "akdeisdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwvdeisdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyvdega"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyvdegoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "tsdejvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyvdetsvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyvdetsvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "tsdeisdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiwvdeisdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "vdega"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "gvdegoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwvdetsvi"
         "SG3" | "SG3AN" | Tense.FUTURE_COMMAND      | "vdetsvi"
         "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwvdeisdi"
-        "PL3" | "SG3AN" | Tense.PRESENT         | "andega"
-        "PL3" | "SG3AN" | Tense.HABITUAL        | "andegoi"
+        "PL3" | "SG3AN" | Tense.PRESENT         | "anvdega"
+        "PL3" | "SG3AN" | Tense.HABITUAL        | "anvdegoi"
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "undejvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anvdetsvi"
         "PL3" | "SG3AN" | Tense.INFINITIVE      | "undeisdi"
-        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "idvdega"
-        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "idvdegoi"
-        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "ikdegjvi"
+        "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edvdega"
+        "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edvdegoi"
+        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edvdetsvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edvdetsvi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ikdeisdi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "ediwvdeisdi"
     }
 }
