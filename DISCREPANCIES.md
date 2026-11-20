@@ -718,3 +718,31 @@ Set-B forms in SG3AN cells) is deliberately left un-executed; it presumes the
 D20 Set-A fallback is book-correct, which is exactly the D21 ruling. The
 earlier in-flight edits it had made were dropped when the vrb specs were
 restored to HEAD for this pass. -- tio 19Nov26
+
+## D25. FUTURE_COMMAND is not a remote echo: the book's FC column = Set A pronominal + INC stem + FCM suffix (2026-11-20, OPEN -- composition redesign pending)
+
+**Finding (fc analysis over all 1,707 FC where-rows in the vrb corpus).** The
+D1 convention (futureCommand = remotePast) fails against the verb book's own
+FC column for 1,516 of 1,707 cells; only 128 print FC == remote. The book's
+FC column composes as **Set A subject pronominal + INC stem + FCM final
+suffix**, contrasting with the remote's Set B prefix on the same CMP stem:
+Adadolisdiha SG1 FC gadadolistanvi (Set A ga-) vs remote agwadadolistanvi
+(Set B agwa-); SG2 hada- vs ja-; SG3 a- vs u-; PL1INCL ida- vs iga-. Adahyiha
+SG1 SG3AN FC tsiyadayilvi vs remote jiyadayilvi -- same glyphs (the v'i/vi
+apostrophe variance per user convention 20Nov26 does not matter here; the
+PRONOMINAL SET is the difference).
+
+**Engine delta (Dadahnesea example).** Book FC SG1 gadanesavi = Set A ga- +
+INC stem (the habitual stem's dada-nes-, h-elided: remote dahn- keeps the h,
+FC drops it -- M-A ch. 8 h-alternation on the INC stem) + -v'i. Engine
+composes degadanesavi (remote stem + the D22 de-family layer + Set A ga-) --
+both the stem choice and the de-layer are wrong for FC.
+
+**Questions the redesign must answer (NOT auto-implemented).** (1) FC stem:
+INC (habitual-derived) vs CMP for verbs whose columns disagree; (2) the
+h-elision on the INC stem -- is it the M-A h-alternation rule (prefix-triggered)
+or lexeme-level?; (3) whether the da-/de- initial-prefix layer applies in FC
+at all (book FC rows still show da- inside dadanes-, but not the de-
+distributive the non-FC tenses carry); (4) the -esdi FCM variant (M-A §4.3.5
+examples) vs -v'i. Scope: engine change touching EVERY verb's FC row; needs
+its own session with the 1,707-cell corpus as the safety net. -- tio 20Nov26
