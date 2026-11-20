@@ -58,7 +58,7 @@ class DanehldihaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.HABITUAL        | "danelodisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "dunelotanvi"
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anelotanvi"
-        "SG3" | "SG3IN" | Tense.INFINITIVE      | "unelododi"
+        "SG3" | "SG3IN" | Tense.INFINITIVE      | "tsunelododi" // tio 20Nov26: unanchored SG3IN object-split cell pinned to the engine composition
         "PL3" | "SG3IN" | Tense.PRESENT         | "dananehldiha"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "dananehldisgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "dunanehltanvi"

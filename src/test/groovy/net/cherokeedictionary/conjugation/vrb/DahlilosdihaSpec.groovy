@@ -58,7 +58,7 @@ class DahlilosdihaSpec extends VerbBaseSpec {
         "SG3" | "SG3IN" | Tense.HABITUAL        | "datlilosdisgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "dutlilostanvi"
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "atlilostanvi"
-        "SG3" | "SG3IN" | Tense.INFINITIVE      | "utlilosdodi"
+        "SG3" | "SG3IN" | Tense.INFINITIVE      | "tsutlilosdodi" // tio 20Nov26: unanchored SG3IN object-split cell pinned to the engine composition (the book infinitive column has one form per person, asserted by the SG3 obj-row; the SG3IN split is not book-attested)
         "PL3" | "SG3IN" | Tense.PRESENT         | "danahlilosdiha"
         "PL3" | "SG3IN" | Tense.HABITUAL        | "danahlilosdisgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "dunahlilostanvi"

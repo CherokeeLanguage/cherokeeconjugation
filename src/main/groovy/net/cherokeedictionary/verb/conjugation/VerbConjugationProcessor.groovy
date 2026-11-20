@@ -128,6 +128,8 @@ class VerbConjugationProcessor {
         boolean dst2Infinitive = (verbset == VerbSet.B &&
                 tense == Tense.INFINITIVE &&
                 verb.stemmer?.normalizedDeStyle &&
+                pref?.prefix1 in [PrefixTableSubject.SG1, PrefixTableSubject.SG2,
+                                  PrefixTableSubject.PL1INCL] && // tio 20Nov26: DST2 is a LOCAL-person rule -- the book's SG3/PL3 infinitives keep the ju-/jun- fusion (Dahlilosdiha juhlilosdohdi), not di-
                 net.cherokeedictionary.verb.metadata.VerbRegistry.isDistributiveDst2(
                         verb.stemmer?.present3rd?.syllabary))
         if (it != null && (StringUtility.startsWithVowelSyllabary(it) || dst2Infinitive)) {

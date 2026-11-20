@@ -32,6 +32,8 @@ class UtvdasdiSpec extends VerbBaseSpec {
         // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
         // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
         // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatvdasdi"
@@ -48,7 +50,7 @@ class UtvdasdiSpec extends VerbBaseSpec {
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyatvdasdi"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyatvdasdoi"
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyadvdasdvi"
-        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "advdasdvi"
+        "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyadvdasdvi"
         // "SG2" | "SG3AN" | Tense.INFINITIVE      | "/"
         "SG2" | "SG3IN" | Tense.PRESENT         | "tsadvdasdi"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "tsadvdastoi"

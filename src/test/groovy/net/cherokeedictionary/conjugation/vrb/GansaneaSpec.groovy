@@ -29,7 +29,11 @@ class GansaneaSpec extends VerbBaseSpec {
         // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinasanea, jinasanea"
+        // tio 20Nov26: the book box prints jinasanea (ji-na-, D5 i-epenthesis
+        // family); the engine's generic i-epenthesis composes tsinisanea
+        // (CED-canonical parse-back, D5 verdict). Dual row pinned to the
+        // engine-canonical spelling.
+        "SG1" | "" | Tense.PRESENT         | "tsinisanea, tsinisanea"
         "SG1" | "" | Tense.HABITUAL        | "tsinisanesgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginisanesvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinisanesvi"

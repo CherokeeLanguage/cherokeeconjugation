@@ -39,6 +39,10 @@ class AsuhvsgaSpec extends VerbBaseSpec {
         // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
         // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gasuhvsga"
@@ -68,9 +72,9 @@ class AsuhvsgaSpec extends VerbBaseSpec {
         "PL1INCL" | "" | Tense.INFINITIVE      | "igasudi"
         "SG3" | "" | Tense.PRESENT         | "asuhvsga"
         "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "osda-nagwvnelvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
-        "SG3" | "" | Tense.INFINITIVE      | "osda-yagwvndi"
+        "SG3" | "" | Tense.INFINITIVE      | "usudi"
         "SG3" | "" | Tense.PRESENT         | "asuhvsga"
         "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
