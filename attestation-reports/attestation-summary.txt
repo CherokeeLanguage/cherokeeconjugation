@@ -1,0 +1,24 @@
+=== Phase-1 attestation matrix report (tio 20Nov26)
+wired verbs: 404
+total cells: 84210
+composed (non-sentinel): 83100
+attested (exact match in NT or CORPUS): 3853
+  matched in NT: 3287
+  matched in CORPUS: 3819
+  matched in both sources: -3253
+
+by tense (attested/composed):
+  tense=COMPLETED_FUTURE          191 /   6015  (3.2%)
+  tense=COMPLETIVE_FUTURE         205 /   6015  (3.4%)
+  tense=FUTURE_COMMAND            207 /   6015  (3.4%)
+  tense=FUTURE_EXPECTED           230 /   6015  (3.8%)
+  tense=FUTURE_IMPERATIVE_VOLATIVE    201 /   6015  (3.3%)
+  tense=HABITUAL                  230 /   6015  (3.8%)
+  tense=IMMEDIATE_COMMAND         394 /   6015  (6.6%)
+  tense=IMMEDIATE_PAST            391 /   6015  (6.5%)
+  tense=INFINITIVE                417 /   6015  (6.9%)
+  tense=PRESENT                   394 /   6015  (6.6%)
+  tense=PROGRESSIVE_FUTURE        108 /   6015  (1.8%)
+  tense=PROGRESSIVE_PAST          122 /   6015  (2.0%)
+  tense=RECENT_PAST_IMPERATIVE    394 /   6015  (6.6%)
+  tense=REMOTE_PAST               369 /   6015  (6.1%)
