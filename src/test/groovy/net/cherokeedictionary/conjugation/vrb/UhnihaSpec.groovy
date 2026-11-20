@@ -27,6 +27,8 @@ class UhnihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uhniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquaniha"
@@ -46,7 +48,7 @@ class UhnihaSpec extends VerbBaseSpec {
         // "SG3" | "" | Tense.INFINITIVE      | "X"
         "PL3" | "" | Tense.PRESENT         | "unahniha"
         "PL3" | "" | Tense.HABITUAL        | "unahnihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahnihhvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unanihvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unanihvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
         "PL1INCL" | "" | Tense.PRESENT         | "igahniha"

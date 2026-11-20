@@ -25,13 +25,15 @@ class AhvaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiva"
-        "SG1" | "" | Tense.HABITUAL        | "jivsgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsihva"
+        "SG1" | "" | Tense.HABITUAL        | "tsihvsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agihvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "akvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agihvsdi"
         "SG2" | "" | Tense.PRESENT         | "hihva"
         "SG2" | "" | Tense.HABITUAL        | "hihvsgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jahvsvi"
@@ -44,7 +46,7 @@ class AhvaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uhvsdi"
         "PL3" | "" | Tense.PRESENT         | "anihva"
         "PL3" | "" | Tense.HABITUAL        | "anihvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unihvsi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anihvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihvsdi"
     }

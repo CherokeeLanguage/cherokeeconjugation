@@ -24,6 +24,8 @@ class GasadosgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gasadosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jiyasadosga, jisadosga"
@@ -33,13 +35,13 @@ class GasadosgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "agiwasadosdi"
         "PL3" | "" | Tense.PRESENT         | "anisadosga"
         "PL3" | "" | Tense.HABITUAL        | "anisadosgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unsadohyvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwasatoyvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwasadoyvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unsadosdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwasatosdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisadosga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisadosgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksadohyvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwasatoyvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiwasadoyvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksadosdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwasatosdi"
     }
 }

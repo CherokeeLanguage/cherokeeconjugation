@@ -26,16 +26,18 @@ class AjvstvsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ajvstvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jijvstvsga"
         "SG1" | "" | Tense.HABITUAL        | "jijvstvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agijvstvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitsvstanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitsvstanvi"
         "SG1" | "" | Tense.INFINITIVE      | "agijvstvsdi"
         "SG2" | "" | Tense.PRESENT         | "hijvstvsga"
         "SG2" | "" | Tense.HABITUAL        | "hijvstvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jajvstvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsvstanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hitsvstanvi"
         "SG2" | "" | Tense.INFINITIVE      | "jajvstvsdi"
         "SG3" | "" | Tense.PRESENT         | "ajvstvsga"

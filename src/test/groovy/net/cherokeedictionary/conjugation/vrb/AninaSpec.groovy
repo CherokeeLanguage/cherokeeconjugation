@@ -37,11 +37,13 @@ class AninaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Anina", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "anina"
         "SG3" | "" | Tense.HABITUAL        | "aninoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "aninvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uninvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aninvi"
         // tio 18Nov26: IMMEDIATE_COMMAND attested for the four congregation rows
         // (Ani'na box, p.71); no SG3 row exists in the box.

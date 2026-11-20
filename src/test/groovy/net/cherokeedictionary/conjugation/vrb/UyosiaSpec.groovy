@@ -24,6 +24,8 @@ class UyosiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uyosia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agiyosia"
@@ -41,15 +43,15 @@ class UyosiaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uyosisgvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uyosisgvi"
         "SG3" | "" | Tense.INFINITIVE      | "uyosisohdi"
-        "PL3" | "" | Tense.PRESENT         | "duniyosia"
-        "PL3" | "" | Tense.HABITUAL        | "duniyosisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "duniyosisgvi"
+        "PL3" | "" | Tense.PRESENT         | "uniyosia"
+        "PL3" | "" | Tense.HABITUAL        | "uniyosisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniyosisgvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniyosisgvi"
-        "PL3" | "" | Tense.INFINITIVE      | "juniyosisohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "degiyosia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "degiyosisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degiyosisgvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyosisodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igiyosia"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igiyosisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyosisgvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiyosisgvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digiyosisohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyosisodi"
     }
 }

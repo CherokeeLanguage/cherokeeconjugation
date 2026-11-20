@@ -24,6 +24,8 @@ class AsdwadegaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Asdwadega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jisdawadega"
@@ -33,9 +35,9 @@ class AsdwadegaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "aksdawadvsdi"
         "SG2" | "" | Tense.PRESENT         | "hisdawadega"
         "SG2" | "" | Tense.HABITUAL        | "hisdawadegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsdawadvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasdawadvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisdawadvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsdawadvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasdawadvsdi"
         "SG3" | "" | Tense.PRESENT         | "asdawadega"
         "SG3" | "" | Tense.HABITUAL        | "asdawadegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usdawadvsvi"

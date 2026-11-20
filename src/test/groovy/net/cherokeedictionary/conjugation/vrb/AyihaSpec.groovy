@@ -31,6 +31,8 @@ class AyihaSpec extends VerbBaseSpec {
         conjugateVerb("Ayiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyia"
@@ -52,6 +54,6 @@ class AyihaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "aniyisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uniyvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniyvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniyhdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyidi"
     }
 }

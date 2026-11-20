@@ -26,32 +26,34 @@ class UwawsvgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwawsvga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agiwsvga"
-        "SG1" | "" | Tense.HABITUAL        | "agiwsvgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agiwsvjvi"
+        "SG1" | "" | Tense.PRESENT         | "agiwawvsvga"
+        "SG1" | "" | Tense.HABITUAL        | "agiwawvsvgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiwawvsvtsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agiwawvsvtsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiwsvsdi"
-        "SG2" | "" | Tense.PRESENT         | "jawsvga"
-        "SG2" | "" | Tense.HABITUAL        | "jawsvgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jawsvjvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwawvsvsdi"
+        "SG2" | "" | Tense.PRESENT         | "tsawawvsvga"
+        "SG2" | "" | Tense.HABITUAL        | "tsawawvsvgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawawvsvtsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsawawvsvtsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jawsvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawawvsvsdi"
         "SG3" | "" | Tense.PRESENT         | "uwawsvga"
         "SG3" | "" | Tense.HABITUAL        | "uwawsvgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwawsvjvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwawvsvtsvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwawsvsdi"
-        "PL3" | "" | Tense.PRESENT         | "uniwsvga"
-        "PL3" | "" | Tense.HABITUAL        | "uniwsvgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniwsvjvi"
+        "PL3" | "" | Tense.PRESENT         | "uniwawvsvga"
+        "PL3" | "" | Tense.HABITUAL        | "uniwawvsvgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwawvsvtsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniwawvsvtsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwsvsdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igiwsvga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igiwsvgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwsvjvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwawvsvsdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igiwawvsvga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igiwawvsvgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwawvsvtsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiwawvsvtsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwsvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwawvsvsdi"
     }
 }

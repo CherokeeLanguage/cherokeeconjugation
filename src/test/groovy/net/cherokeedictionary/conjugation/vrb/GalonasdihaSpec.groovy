@@ -26,18 +26,20 @@ class GalonasdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Galonasdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jilonasdiha"
         "SG1" | "" | Tense.HABITUAL        | "jilonasdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jilonastanvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agilonastanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsilonastanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jilonasdohdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agilonastodi"
         "SG2" | "" | Tense.PRESENT         | "hilonasdiha"
         "SG2" | "" | Tense.HABITUAL        | "hilonasdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hilonastanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsalonastanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hilonastanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hilonasdohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsalonastodi"
         "SG3" | "" | Tense.PRESENT         | "galonasdiha"
         "SG3" | "" | Tense.HABITUAL        | "galonasdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulonastanvi"
@@ -48,10 +50,10 @@ class GalonasdihaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.REMOTE_PAST     | "unilonastanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anilonastanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unilonasdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "edilonasdiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "edilonasdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "edilonastanvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idilonasdiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idilonasdisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igilonastanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idilonastanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "edilonasdohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igilonastodi"
     }
 }

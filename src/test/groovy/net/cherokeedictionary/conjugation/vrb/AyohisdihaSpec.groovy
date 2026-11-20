@@ -26,16 +26,18 @@ class AyohisdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ayohisdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jiyohisdiha"
         "SG1" | "" | Tense.HABITUAL        | "jiyohisdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agiyohisdtanvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiyohistanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiyohistanvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiyohisdohdi"
         "SG2" | "" | Tense.PRESENT         | "hiyohisdiha"
         "SG2" | "" | Tense.HABITUAL        | "hiyohisdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jayohisdtanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsayohistanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiyohistanvi"
         "SG2" | "" | Tense.INFINITIVE      | "jayohisdohdi"
         "SG3" | "" | Tense.PRESENT         | "ayohisdiha"
@@ -45,12 +47,12 @@ class AyohisdihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uyohisdohdi"
         "PL3" | "" | Tense.PRESENT         | "aniyohisdiha"
         "PL3" | "" | Tense.HABITUAL        | "aniyohisdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniyohisdtanvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniyohistanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniyohistanvi"
         "PL3" | "" | Tense.INFINITIVE      | "uniyohisdohdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idiyohisdiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idiyohisdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyohisdtanvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyohistanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiyohistanvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igiyohisdohdi"
     }

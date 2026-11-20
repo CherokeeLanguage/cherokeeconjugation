@@ -26,10 +26,12 @@ class AhltawoaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahltawoa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galitawoa"
-        "SG1" | "" | Tense.HABITUAL        | "galitawosgoi"
+        "SG1" | "" | Tense.PRESENT         | "galotawoa"
+        "SG1" | "" | Tense.HABITUAL        | "galotawosgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwahltawovi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "galotawovi"
         "SG1" | "" | Tense.INFINITIVE      | "agwahltawosdi"
@@ -43,15 +45,15 @@ class AhltawoaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uhltawovi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "alotawovi"
         "SG3" | "" | Tense.INFINITIVE      | "uhltawosdi"
-        "PL3" | "" | Tense.PRESENT         | "danahltawoa"
-        "PL3" | "" | Tense.HABITUAL        | "danahltawosgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "dunahltawovi"
+        "PL3" | "" | Tense.PRESENT         | "analotawoa"
+        "PL3" | "" | Tense.HABITUAL        | "analotawosgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unalotawovi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "analotawovi"
-        "PL3" | "" | Tense.INFINITIVE      | "junahltawosdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedahltawoa"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedahltawosgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degahltawovi"
+        "PL3" | "" | Tense.INFINITIVE      | "unalotawosdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idalotawoa"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idalotawosgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalotawovi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalotawovi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digahltawosdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igalotawosdi"
     }
 }

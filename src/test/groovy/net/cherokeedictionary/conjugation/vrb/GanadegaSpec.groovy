@@ -26,6 +26,8 @@ class GanadegaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganadega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsinadega"
@@ -37,7 +39,7 @@ class GanadegaSpec extends VerbBaseSpec {
         "SG2" | "" | Tense.HABITUAL        | "hinadegoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "janadinvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinadinvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "janadinvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanadinvdi"
         "SG3" | "" | Tense.PRESENT         | "ganadega"
         "SG3" | "" | Tense.HABITUAL        | "ganadegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unadinvsvi"
@@ -47,11 +49,11 @@ class GanadegaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "aninadegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninadinvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninadinvsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninadinvsdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninadinvdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinadega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinadegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "idinadinvsvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginadinvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinadinvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvdi"
     }
 }

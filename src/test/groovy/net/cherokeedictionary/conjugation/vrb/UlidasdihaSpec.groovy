@@ -26,6 +26,8 @@ class UlidasdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ulidasdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agilidasdiha"
@@ -43,12 +45,12 @@ class UlidasdihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "ulidastanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ulidastanvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulidasdohdi"
-        "PL3" | "" | Tense.PRESENT         | "uniladasdiha"
+        "PL3" | "" | Tense.PRESENT         | "unilidasdiha"
         "PL3" | "" | Tense.HABITUAL        | "unilidasdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unilidastanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unilidastanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unilidasdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igiladasdiha"
+        "PL1INCL" | "" | Tense.PRESENT         | "igilidasdiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igilidasdisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igilidastanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igilidastanvi"

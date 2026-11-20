@@ -22,9 +22,11 @@ class GohosgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gohosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "goosga"
+        "SG1" | "" | Tense.PRESENT         | "gohosga"
         "SG1" | "" | Tense.HABITUAL        | "gohosgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquohosvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gohosvi"

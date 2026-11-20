@@ -26,6 +26,8 @@ class AhligiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahligia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadligia"
@@ -49,9 +51,9 @@ class AhligiaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatligisvi"
         "PL3" | "" | Tense.INFINITIVE      | "unahligisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idahligia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idahligi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "sgoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idatligisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatligisvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatligisvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "idahligi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igatligisdi"
     }
 }

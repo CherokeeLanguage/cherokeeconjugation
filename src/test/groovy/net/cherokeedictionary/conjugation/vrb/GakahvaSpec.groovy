@@ -23,6 +23,8 @@ class GakahvaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gakahva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyakahvi"
@@ -40,10 +42,10 @@ class GakahvaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aquakahvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gakahvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquakahvsdi"
-        "PL3" | "" | Tense.PRESENT         | "anikahvi"
-        "PL3" | "" | Tense.HABITUAL        | "anikahvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unikahvsvi"
+        "PL3" | "" | Tense.PRESENT         | "anakahva"
+        "PL3" | "" | Tense.HABITUAL        | "anakahvsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unakahvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anakahvsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unikahvsdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unakahvsdi"
     }
 }

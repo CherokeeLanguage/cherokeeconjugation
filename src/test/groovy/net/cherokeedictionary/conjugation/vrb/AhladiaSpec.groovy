@@ -23,18 +23,20 @@ class AhladiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahladia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jiladia"
-        "SG1" | "" | Tense.HABITUAL        | "jiladisgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsitladia"
+        "SG1" | "" | Tense.HABITUAL        | "tsitladisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "akhladvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitladvi"
         "SG1" | "" | Tense.INFINITIVE      | "akhladisdi"
         "SG2" | "" | Tense.PRESENT         | "hihladia"
         "SG2" | "" | Tense.HABITUAL        | "hihladisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tshladvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatladvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hitladvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tshladisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatladisdi"
         "SG3" | "" | Tense.PRESENT         | "ahladia"
         "SG3" | "" | Tense.HABITUAL        | "ahladisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhladvi"

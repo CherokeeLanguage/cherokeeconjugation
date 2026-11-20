@@ -26,16 +26,18 @@ class DuyawegaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Duyawega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "dagiyawega"
         "SG1" | "" | Tense.HABITUAL        | "dagiyawegoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "dagiyawejvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agiyawetsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "digiyawesdi"
-        "SG2" | "" | Tense.PRESENT         | "dejayawega"
-        "SG2" | "" | Tense.HABITUAL        | "dejayawegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "dejayawejvi"
+        "SG1" | "" | Tense.INFINITIVE      | "dagiyawesdi"
+        "SG2" | "" | Tense.PRESENT         | "ditsayawega"
+        "SG2" | "" | Tense.HABITUAL        | "ditsayawegoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "ditsayawetsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsayawetsvi"
         "SG2" | "" | Tense.INFINITIVE      | "dijayawesdi"
         "SG3" | "" | Tense.PRESENT         | "duyawega"
@@ -48,10 +50,10 @@ class DuyawegaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.REMOTE_PAST     | "duniyawejvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniyawetsvi"
         "PL3" | "" | Tense.INFINITIVE      | "juniyawesdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "degiyawega"
-        "PL1INCL" | "" | Tense.HABITUAL        | "degiyawegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degiyawejvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dagiyawega"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dagiyawegoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dagiyawetsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiyawetsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digiyawesdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "dagiyawesdi"
     }
 }

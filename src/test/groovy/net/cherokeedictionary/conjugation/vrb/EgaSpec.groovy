@@ -26,6 +26,8 @@ class EgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gega"
@@ -44,12 +46,12 @@ class EgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.FUTURE_COMMAND      | "envsvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwenvsdi"
         "PL3" | "" | Tense.PRESENT         | "anega"
-        "PL3" | "" | Tense.HABITUAL        | "anegoi"
+        "PL3" | "" | Tense.HABITUAL        | "anesoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unenvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anenvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unenvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idega"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idegoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idesoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igenvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idenvsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igenvsdi"

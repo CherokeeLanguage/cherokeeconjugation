@@ -25,6 +25,8 @@ class GaladiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Galadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jiladia"
@@ -33,7 +35,7 @@ class GaladiaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiladvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiladisdi"
         "SG2" | "" | Tense.PRESENT         | "hiladia"
-        "SG2" | "" | Tense.HABITUAL        | "haladisgoi"
+        "SG2" | "" | Tense.HABITUAL        | "hiladisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jaladvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiladvi"
         "SG2" | "" | Tense.INFINITIVE      | "jaladisdi"

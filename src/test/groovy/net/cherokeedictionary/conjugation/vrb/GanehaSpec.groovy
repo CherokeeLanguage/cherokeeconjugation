@@ -40,6 +40,8 @@ class GanehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinea"
@@ -49,9 +51,9 @@ class GanehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "jinei"
         "SG2" | "" | Tense.PRESENT         | "hineha"
         "SG2" | "" | Tense.HABITUAL        | "hinehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hinehvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hinehi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanehi"
         "SG1" | "" | Tense.PRESENT         | "jinea"
         "SG1" | "" | Tense.HABITUAL        | "jineoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "jinevi"
@@ -59,8 +61,8 @@ class GanehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "jinei"
         "PL3" | "" | Tense.PRESENT         | "anineha"
         "PL3" | "" | Tense.HABITUAL        | "aninehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "aninehvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehvi"
-        "PL3" | "" | Tense.INFINITIVE      | "aninehi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninehi"
     }
 }

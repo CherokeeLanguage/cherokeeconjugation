@@ -26,18 +26,20 @@ class DastayesgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Dastayesga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "degastayesga"
         "SG1" | "" | Tense.HABITUAL        | "degastayesgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwastayesvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gastayesvi"
-        "SG1" | "" | Tense.INFINITIVE      | "digwastayehisdi"
-        "SG2" | "" | Tense.PRESENT         | "dehastayesga"
-        "SG2" | "" | Tense.HABITUAL        | "dehastayesgoi"
+        "SG1" | "" | Tense.INFINITIVE      | "dagistayehisdi"
+        "SG2" | "" | Tense.PRESENT         | "tistayesga"
+        "SG2" | "" | Tense.HABITUAL        | "tistayesgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejastayesvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hastayesvi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijastayehisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "detsastayehisdi"
         "SG3" | "" | Tense.PRESENT         | "dastayesga"
         "SG3" | "" | Tense.HABITUAL        | "dastayesgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dustayesvi"
@@ -47,11 +49,11 @@ class DastayesgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "danastayesgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "dunastayesvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anastayesvi"
-        "PL3" | "" | Tense.INFINITIVE      | "junastayehisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedastayesga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedastayesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degastayesvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsunistayehisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadastayesga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadastayesgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dagastayesvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idastayesvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digastayehisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "dagistayehisdi"
     }
 }

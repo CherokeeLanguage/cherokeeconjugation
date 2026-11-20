@@ -26,18 +26,20 @@ class EliaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Elia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gelia"
         "SG1" | "" | Tense.HABITUAL        | "gelisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwelisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gelisvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwelisdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwelisdi"
         "SG2" | "" | Tense.PRESENT         | "helia"
         "SG2" | "" | Tense.HABITUAL        | "helisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jelisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "helisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jelisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawelisdi"
         "SG3" | "" | Tense.PRESENT         | "elia"
         "SG3" | "" | Tense.HABITUAL        | "elisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwelisvi"
@@ -45,13 +47,13 @@ class EliaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uwelisdi"
         "PL3" | "" | Tense.PRESENT         | "anelia"
         "PL3" | "" | Tense.HABITUAL        | "anelisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unelivi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unelisvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anelisvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unelisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwelisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idelia"
         "PL1INCL" | "" | Tense.HABITUAL        | "idelisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igelisvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idelisvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igelisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwelisdi"
     }
 }

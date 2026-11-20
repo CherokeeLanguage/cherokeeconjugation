@@ -26,10 +26,12 @@ class AliheligaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Aliheliga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galieliga"
-        "SG1" | "" | Tense.HABITUAL        | "galieligoi"
+        "SG1" | "" | Tense.PRESENT         | "galiheliga"
+        "SG1" | "" | Tense.HABITUAL        | "galiheligoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwalihelijvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "galihelitsvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwalihelisdi"
@@ -45,12 +47,12 @@ class AliheligaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "ulihelisdi"
         "PL3" | "" | Tense.PRESENT         | "analiheliga"
         "PL3" | "" | Tense.HABITUAL        | "analiheligoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahelijvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unalihelitsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "analihelitsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unalihelisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idaliheliga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idaliheligoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igahelijvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalihelitsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalihelitsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igalihelisdi"
     }

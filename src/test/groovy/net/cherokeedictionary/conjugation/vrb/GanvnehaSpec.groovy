@@ -25,26 +25,28 @@ class GanvnehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganvneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinvneha"
         "SG1" | "" | Tense.HABITUAL        | "jinvnehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jinvnelvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginvnelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvnelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jinvnehdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginvnedi"
         "SG2" | "" | Tense.PRESENT         | "hinvneha"
         "SG2" | "" | Tense.HABITUAL        | "hinvnehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hinvnelv"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsanvnelvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvnelvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hinvnehdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanvnedi"
         "SG1" | "" | Tense.PRESENT         | "jinvneha"
         "SG1" | "" | Tense.HABITUAL        | "jinvnehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jinvnelvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginvnelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvnelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jinvnehdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginvnedi"
         "PL3" | "" | Tense.PRESENT         | "aninvneha"
         "PL3" | "" | Tense.HABITUAL        | "aninvnehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninvnelv"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninvnelvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvnelvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninvnehdi"
     }

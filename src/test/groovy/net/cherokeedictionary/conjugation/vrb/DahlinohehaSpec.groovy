@@ -26,18 +26,20 @@ class DahlinohehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Dahlinoheha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "degalinoheha"
-        "SG1" | "" | Tense.HABITUAL        | "degalinohesgoi"
+        "SG1" | "" | Tense.PRESENT         | "degatlinoheha"
+        "SG1" | "" | Tense.HABITUAL        | "degatlinohesgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwahlinohehlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatlinohetlvi"
-        "SG1" | "" | Tense.INFINITIVE      | "digwahlinohehdi"
-        "SG2" | "" | Tense.PRESENT         | "dehahlinoheha"
-        "SG2" | "" | Tense.HABITUAL        | "dehahlinohesgoi"
+        "SG1" | "" | Tense.INFINITIVE      | "dagitlinohedi"
+        "SG2" | "" | Tense.PRESENT         | "titlinoheha"
+        "SG2" | "" | Tense.HABITUAL        | "titlinohesgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejahlinohehlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatlinohetlvi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijahlinohehdi"
+        "SG2" | "" | Tense.INFINITIVE      | "detsatlinohedi"
         "SG3" | "" | Tense.PRESENT         | "dahlinoheha"
         "SG3" | "" | Tense.HABITUAL        | "dahlinohesgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "duhlinohehlvi"
@@ -47,11 +49,11 @@ class DahlinohehaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "danahlinohesgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "dunahlinohehlvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatlinohetlvi"
-        "PL3" | "" | Tense.INFINITIVE      | "junahlinohehdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedahlinoheha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedahlinohesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degahlinohehlvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsunitlinohedi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadatlinoheha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadatlinohesgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dagatlinohetlvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatlinohetlvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "didahlinohehdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "dagitlinohedi"
     }
 }

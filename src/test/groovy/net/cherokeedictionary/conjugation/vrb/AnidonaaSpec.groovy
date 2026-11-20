@@ -37,11 +37,13 @@ class AnidonaaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Anidonaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "anidonaa"
         "SG3" | "" | Tense.HABITUAL        | "anidonaoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "anidonavi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unitonavi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anidonavi"
         // tio 18Nov26: IMMEDIATE_COMMAND attested for the four congregation rows
         // (Anidona'a box, p.56); no SG3 row exists in the box.

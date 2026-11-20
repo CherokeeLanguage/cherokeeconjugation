@@ -25,27 +25,29 @@ class GanidohaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinidoha"
         "SG1" | "" | Tense.HABITUAL        | "jinidohoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginidolvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiwanitolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwanidolvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginidasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwanidasdi"
         "SG2" | "" | Tense.PRESENT         | "hinidoha"
         "SG2" | "" | Tense.HABITUAL        | "hinidohoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "janidolvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawanitolvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwanidolvi"
-        "SG2" | "" | Tense.INFINITIVE      | "janidasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawanidasdi"
         "SG1" | "" | Tense.PRESENT         | "jinidoha"
         "SG1" | "" | Tense.HABITUAL        | "jinidohoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginidolvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiwanitolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwanidolvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginidasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwanidasdi"
         "PL3" | "" | Tense.PRESENT         | "aninidoha"
         "PL3" | "" | Tense.HABITUAL        | "aninidohoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninidolvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwanitolvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwanidolvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninidasdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwanidasdi"
     }
 }

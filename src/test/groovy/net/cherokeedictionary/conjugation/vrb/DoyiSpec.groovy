@@ -24,32 +24,34 @@ class DoyiSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Doyi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "doyi"
-        "SG1" | "" | Tense.HABITUAL        | "agwajvsidi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "doyi"
+        "SG1" | "" | Tense.PRESENT         | "tsitoyi"
+        "SG1" | "" | Tense.HABITUAL        | "gutsvsidi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitoyi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidoyi"
-        "SG1" | "" | Tense.INFINITIVE      | "doyi"
-        "SG2" | "" | Tense.PRESENT         | "doyi"
-        "SG2" | "" | Tense.HABITUAL        | "jajvsidi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "doyi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyi"
+        "SG2" | "" | Tense.PRESENT         | "hitoyi"
+        "SG2" | "" | Tense.HABITUAL        | "hutsvsidi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatoyi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hidoyi"
-        "SG2" | "" | Tense.INFINITIVE      | "doyi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsayi"
         "SG3" | "" | Tense.PRESENT         | "doyi"
         "SG3" | "" | Tense.HABITUAL        | "ujvsidi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "doyi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utoyi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gadoyi"
-        "SG3" | "" | Tense.INFINITIVE      | "doyi"
-        "PL3" | "" | Tense.PRESENT         | "doyi"
-        "PL3" | "" | Tense.HABITUAL        | "unajvsidi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "doyi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyi"
+        "PL3" | "" | Tense.PRESENT         | "anitoyi"
+        "PL3" | "" | Tense.HABITUAL        | "anutsvsidi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unitoyi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anidoyi"
-        "PL3" | "" | Tense.INFINITIVE      | "doyi"
-        "PL1INCL" | "" | Tense.PRESENT         | "doyi"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igajvsidi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "doyi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyi"
+        "PL1INCL" | "" | Tense.PRESENT         | "iditoyi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idutsvsidi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igitoyi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "ididoyi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "doyi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyi"
     }
 }

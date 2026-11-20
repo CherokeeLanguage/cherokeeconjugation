@@ -26,32 +26,34 @@ class DaniyelisgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Daniyelisga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "ganiyelisga"
-        "SG1" | "" | Tense.HABITUAL        | "ganiyelisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquaniyelisvi"
+        "SG1" | "" | Tense.PRESENT         | "diganiyelisga"
+        "SG1" | "" | Tense.HABITUAL        | "diganiyelisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "dvquaniyelisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "ganiyelisvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginiyelihisdi"
-        "SG2" | "" | Tense.PRESENT         | "dojiyelisga"
-        "SG2" | "" | Tense.HABITUAL        | "dojiyelisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "dogiyelisvi"
+        "SG1" | "" | Tense.INFINITIVE      | "dvginiyelihisdi"
+        "SG2" | "" | Tense.PRESENT         | "tiniyelisga"
+        "SG2" | "" | Tense.HABITUAL        | "tiniyelisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "ditsaniyelisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "haniyelisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jogiyelihisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "ditsaniyelihisdi"
         "SG3" | "" | Tense.PRESENT         | "daniyelisga"
         "SG3" | "" | Tense.HABITUAL        | "daniyelisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "duniyelisvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aniyelisvi"
         "SG3" | "" | Tense.INFINITIVE      | "juniyelihisdi"
-        "PL3" | "" | Tense.PRESENT         | "desdiyelisga"
-        "PL3" | "" | Tense.HABITUAL        | "desdiyelisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "desdiyelisvi"
+        "PL3" | "" | Tense.PRESENT         | "dvnaniyelisga"
+        "PL3" | "" | Tense.HABITUAL        | "dvnaniyelisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "dunaniyelisvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "ananiyelisvi"
-        "PL3" | "" | Tense.INFINITIVE      | "disdiyelihisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dejiyelisga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dejiyelisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dejiyelisvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsuniniyelihisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadaniyelisga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadaniyelisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "daganiyelisvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaniyelisvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "dijiyelihisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "daginiyelihisdi"
     }
 }

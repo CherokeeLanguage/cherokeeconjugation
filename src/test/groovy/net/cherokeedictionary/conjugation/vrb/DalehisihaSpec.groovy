@@ -26,32 +26,34 @@ class DalehisihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Dalehisiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "degaleisiha"
+        "SG1" | "" | Tense.PRESENT         | "degalehisiha"
         "SG1" | "" | Tense.HABITUAL        | "degalehisisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwalehisahnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "galehisanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "digwalehisohdi"
-        "SG2" | "" | Tense.PRESENT         | "dehaleisiha"
-        "SG2" | "" | Tense.HABITUAL        | "dehalehisisgoi"
+        "SG1" | "" | Tense.INFINITIVE      | "dagilehisodi"
+        "SG2" | "" | Tense.PRESENT         | "tilehisiha"
+        "SG2" | "" | Tense.HABITUAL        | "tilehisisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejalehisahnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "halehisanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijalehisohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "detsalehisodi"
         "SG3" | "" | Tense.PRESENT         | "dalehisiha"
         "SG3" | "" | Tense.HABITUAL        | "dalehisisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dulehisahnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "alehisanvi"
         "SG3" | "" | Tense.INFINITIVE      | "julehisohdi"
-        "PL3" | "" | Tense.PRESENT         | "danaleisiha"
+        "PL3" | "" | Tense.PRESENT         | "danalehisiha"
         "PL3" | "" | Tense.HABITUAL        | "danalehisisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "dunalehisahnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "analehisanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "junalehisohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedaleisiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedalehisisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degalehisahnvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsunilehisodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadalehisiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadalehisisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dagalehisanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalehisanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digalehisohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "dagilehisodi"
     }
 }

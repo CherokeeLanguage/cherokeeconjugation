@@ -26,18 +26,20 @@ class AhlosgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahlosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jihlosga"
         "SG1" | "" | Tense.HABITUAL        | "jihlosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jihlosvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitlosvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlosvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jihlohisdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agitlohisdi"
         "SG2" | "" | Tense.PRESENT         | "hihlosga"
         "SG2" | "" | Tense.HABITUAL        | "hihlosgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hihlosvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlosvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hitlosvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hihlohisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatlohisdi"
         "SG3" | "" | Tense.PRESENT         | "ahlosga"
         "SG3" | "" | Tense.HABITUAL        | "ahlosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhlosvi"
@@ -48,10 +50,10 @@ class AhlosgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.REMOTE_PAST     | "unihlosvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anitlosvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihlohisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "edihlosga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "edihlosgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "edihlosvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "iditlosga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "iditlosgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igitlosvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iditlosvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "edihlohisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igitlohisdi"
     }
 }

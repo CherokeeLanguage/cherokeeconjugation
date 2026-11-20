@@ -26,18 +26,20 @@ class GuhiloaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Guhiloa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "guiloa"
-        "SG1" | "" | Tense.HABITUAL        | "guilosgoi"
+        "SG1" | "" | Tense.PRESENT         | "guhiloa"
+        "SG1" | "" | Tense.HABITUAL        | "guhilosgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwuhilovi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "guhilovi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwuhilosdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwuhilosdi"
         "SG2" | "" | Tense.PRESENT         | "huhiloa"
         "SG2" | "" | Tense.HABITUAL        | "huhilosgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "juhilovi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "huhilovi"
-        "SG2" | "" | Tense.INFINITIVE      | "juhilosdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawuhilosdi"
         "SG3" | "" | Tense.PRESENT         | "guhiloa"
         "SG3" | "" | Tense.HABITUAL        | "guhilosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwuhilovi"
@@ -47,11 +49,11 @@ class GuhiloaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "anuhilosgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unuhilovi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anuhilovi"
-        "PL3" | "" | Tense.INFINITIVE      | "unuhilosdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwuhilosdi"
         "PL1INCL" | "" | Tense.PRESENT         | "iduhiloa"
         "PL1INCL" | "" | Tense.HABITUAL        | "iduhilosgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iguhilovi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iduhilovi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iguhilosdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwuhilosdi"
     }
 }

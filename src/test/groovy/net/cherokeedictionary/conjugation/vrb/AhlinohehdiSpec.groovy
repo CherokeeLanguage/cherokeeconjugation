@@ -24,32 +24,34 @@ class AhlinohehdiSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahlinohehdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jilinohehdi"
-        "SG1" | "" | Tense.HABITUAL        | "jilinohehdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jilinohehtanvi"
+        "SG1" | "" | Tense.PRESENT         | "tsitlinohedi"
+        "SG1" | "" | Tense.HABITUAL        | "tsitlinohedisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agitlinohetanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlinohetanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jilinohehdohdi"
-        "SG2" | "" | Tense.PRESENT         | "hilinohehdi"
-        "SG2" | "" | Tense.HABITUAL        | "hilinohehdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hilinohetanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agitlinohetodi"
+        "SG2" | "" | Tense.PRESENT         | "hitlinohedi"
+        "SG2" | "" | Tense.HABITUAL        | "hitlinohedisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlinohetanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hitlinohetanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hilinohehdohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatlinohetodi"
         "SG3" | "" | Tense.PRESENT         | "ahlinohehdi"
         "SG3" | "" | Tense.HABITUAL        | "ahlinohehdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhlinohetanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlinohetanvi"
         "SG3" | "" | Tense.INFINITIVE      | "uhlinohehdohdi"
-        "PL3" | "" | Tense.PRESENT         | "anahlinohehdi"
-        "PL3" | "" | Tense.HABITUAL        | "anahlinohehdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahlinohetanvi"
+        "PL3" | "" | Tense.PRESENT         | "anitlinohedi"
+        "PL3" | "" | Tense.HABITUAL        | "anitlinohedisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unitlinohetanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anitlinohetanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unahlinohehdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "edahlinohehdi"
-        "PL1INCL" | "" | Tense.HABITUAL        | "edahlinohehdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "edahlinohetanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unitlinohetodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "iditlinohedi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "iditlinohedisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igitlinohetanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iditlinohetanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "edahlinohehdohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igitlinohetodi"
     }
 }

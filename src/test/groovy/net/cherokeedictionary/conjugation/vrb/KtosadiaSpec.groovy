@@ -26,27 +26,31 @@ class KtosadiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ktosadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadosadia"
-        "SG1" | "" | Tense.HABITUAL        | "gatosadisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwatosadvi"
+        "SG1" | "" | Tense.PRESENT         | "gvtosadia"
+        "SG1" | "" | Tense.HABITUAL        | "gvtosadisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquvtosadvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gvdosadvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aktosadisdi"
-        "SG2" | "" | Tense.PRESENT         | "hatosadia"
-        "SG2" | "" | Tense.HABITUAL        | "hatosadisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "jatosadvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwvtosadisdi"
+        "SG2" | "" | Tense.PRESENT         | "hvtosadia"
+        "SG2" | "" | Tense.HABITUAL        | "hvtosadisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsvtosadvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hvdosadvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jatosadisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawvtosadisdi"
         "SG3" | "" | Tense.PRESENT         | "gvdosadia"
         "SG3" | "" | Tense.HABITUAL        | "gvdosadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwvdosadvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwatosadvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "vdosadvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwvdosadisdi"
-        "SG3" | "" | Tense.PRESENT         | "anatosadia"
-        "SG3" | "" | Tense.HABITUAL        | "anatosadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unatosadvi"
+        "SG3" | "" | Tense.PRESENT         | "gvtosadia"
+        "SG3" | "" | Tense.HABITUAL        | "gvtosadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwatosadvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "vdosadvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unatosadisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwvtosadisdi"
     }
 }

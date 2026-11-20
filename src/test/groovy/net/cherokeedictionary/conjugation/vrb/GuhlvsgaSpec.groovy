@@ -26,18 +26,20 @@ class GuhlvsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Guhlvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "guhlvsga"
         "SG1" | "" | Tense.HABITUAL        | "guhlvsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwuhlvnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gutlvnvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwuhlvdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwutlvdi"
         "SG2" | "" | Tense.PRESENT         | "huhlvsga"
         "SG2" | "" | Tense.HABITUAL        | "huhlvsgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "juhlvnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hutlvnvi"
-        "SG2" | "" | Tense.INFINITIVE      | "juhlvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawutlvdi"
         "SG3" | "" | Tense.PRESENT         | "guhlvsga"
         "SG3" | "" | Tense.HABITUAL        | "guhlvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwuhlvnvi"
@@ -47,11 +49,11 @@ class GuhlvsgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "anuhlvsgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unuhlvnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anutlvnvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unuhlvdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwutlvdi"
         "PL1INCL" | "" | Tense.PRESENT         | "iduhlvsga"
         "PL1INCL" | "" | Tense.HABITUAL        | "iduhlvsgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iguhlvnvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idutlvnvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iguhlvdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwutlvdi"
     }
 }

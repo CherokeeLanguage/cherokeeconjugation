@@ -25,6 +25,8 @@ class AdisiyaaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Adisiyaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jidisiyaa"
@@ -34,16 +36,16 @@ class AdisiyaaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "akdisiyasdi"
         "SG2" | "" | Tense.PRESENT         | "hidisiyaa"
         "SG2" | "" | Tense.HABITUAL        | "hidisiyasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsdisiyvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadisiyvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hidisiyvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsdisiyasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadisiyasdi"
         "SG3" | "" | Tense.PRESENT         | "adisiyaa"
         "SG3" | "" | Tense.HABITUAL        | "adisiyasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udisiyvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adisiyvi"
         "SG3" | "" | Tense.INFINITIVE      | "udisiyasdi"
         "PL3" | "" | Tense.PRESENT         | "anidisiyaa"
-        "PL3" | "" | Tense.HABITUAL        | "anidisaysgoi"
+        "PL3" | "" | Tense.HABITUAL        | "anidisiyasgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unidisiyvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anidisiyvi"
         "PL3" | "" | Tense.INFINITIVE      | "unidisiyasdi"

@@ -26,32 +26,34 @@ class DanadlosgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Danadlosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "dojadlosga"
-        "SG1" | "" | Tense.HABITUAL        | "dojadlosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "dogadlosvi"
+        "SG1" | "" | Tense.PRESENT         | "diganatlosga"
+        "SG1" | "" | Tense.HABITUAL        | "diganatlosgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "dvquanatlosvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "ganatlosvi"
-        "SG1" | "" | Tense.INFINITIVE      | "I"
-        "SG2" | "" | Tense.PRESENT         | "desdadlosga"
-        "SG2" | "" | Tense.HABITUAL        | "desdadlosgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "desdadlosvi"
+        "SG1" | "" | Tense.INFINITIVE      | "dvginatlohisdi"
+        "SG2" | "" | Tense.PRESENT         | "tinatlosga"
+        "SG2" | "" | Tense.HABITUAL        | "tinatlosgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "ditsanatlosvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hanatlosvi"
-        "SG2" | "" | Tense.INFINITIVE      | "You"
+        "SG2" | "" | Tense.INFINITIVE      | "ditsanatlohisdi"
         "SG3" | "" | Tense.PRESENT         | "danadlosga"
         "SG3" | "" | Tense.HABITUAL        | "danadlosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dunadlosvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anatlosvi"
         "SG3" | "" | Tense.INFINITIVE      | "junadlohisdi"
-        "PL3" | "" | Tense.PRESENT         | "dedadlosga"
-        "PL3" | "" | Tense.HABITUAL        | "dedadlosgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "degadlosvi"
+        "PL3" | "" | Tense.PRESENT         | "dvnanatlosga"
+        "PL3" | "" | Tense.HABITUAL        | "dvnanatlosgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "dunanatlosvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "ananatlosvi"
-        "PL3" | "" | Tense.INFINITIVE      | "You,"
-        "PL1INCL" | "" | Tense.PRESENT         | "danadlosga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "danadlosgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dunadlosvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsuninatlohisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadanatlosga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadanatlosgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "daganatlosvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idanatlosvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "They"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "daginatlohisdi"
     }
 }

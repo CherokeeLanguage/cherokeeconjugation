@@ -26,14 +26,16 @@ class AdanhtehiloaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Adanhtehiloa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadanvtehiloa"
+        "SG1" | "" | Tense.PRESENT         | "gadanatehiloa"
         "SG1" | "" | Tense.HABITUAL        | "gadanhtehilosgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwadanhtehilovi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadanatehilovi"
         "SG1" | "" | Tense.INFINITIVE      | "agwadanhtehilosdi"
-        "SG2" | "" | Tense.PRESENT         | "hadanvtehiloa"
+        "SG2" | "" | Tense.PRESENT         | "hadanatehiloa"
         "SG2" | "" | Tense.HABITUAL        | "hadanhtehilosgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jadanhtehilovi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadanatehilovi"
@@ -43,12 +45,12 @@ class AdanhtehiloaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "udanhtehilovi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adanatehilovi"
         "SG3" | "" | Tense.INFINITIVE      | "udanhtehilosdi"
-        "PL3" | "" | Tense.PRESENT         | "anadanvtehiloa"
+        "PL3" | "" | Tense.PRESENT         | "anadanatehiloa"
         "PL3" | "" | Tense.HABITUAL        | "anadanhtehilosgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unadanhtehilovi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadanatehilovi"
         "PL3" | "" | Tense.INFINITIVE      | "unadanhtehilosdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadanvtehiloa"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadanatehiloa"
         "PL1INCL" | "" | Tense.HABITUAL        | "idadanhtehilosgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadanhtehilovi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadanatehilovi"

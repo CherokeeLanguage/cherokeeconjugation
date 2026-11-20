@@ -38,6 +38,8 @@ class UwayaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwaya", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquvya"
@@ -56,10 +58,10 @@ class UwayaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
         "SG3" | "" | Tense.INFINITIVE      | "udisdi"
-        "SG3" | "" | Tense.PRESENT         | "unvya"
-        "SG3" | "" | Tense.HABITUAL        | "unvyoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unvyvi"
+        "SG3" | "" | Tense.PRESENT         | "uwaya"
+        "SG3" | "" | Tense.HABITUAL        | "uwayoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unvdisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
     }
 }

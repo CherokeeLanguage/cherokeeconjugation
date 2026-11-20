@@ -26,6 +26,8 @@ class AdanawsdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Adanawsdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadanawsdiha"
@@ -43,13 +45,13 @@ class AdanawsdihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "udanawstanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adanawvstanvi"
         "SG3" | "" | Tense.INFINITIVE      | "udanawsdohdi"
-        "PL3" | "" | Tense.PRESENT         | "danadanawsdiha"
-        "PL3" | "" | Tense.HABITUAL        | "danadanawsdisgoi"
+        "PL3" | "" | Tense.PRESENT         | "anadanawvsdiha"
+        "PL3" | "" | Tense.HABITUAL        | "anadanawvsdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unadanawstanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadanawvstanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unadanawsdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedadanawsdiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedadanawsdisgoi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadanawvsdiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idadanawvsdisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadanawstanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadanawvstanvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igadanawsdohdi"

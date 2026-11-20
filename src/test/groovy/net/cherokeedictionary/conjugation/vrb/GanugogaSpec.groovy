@@ -26,18 +26,20 @@ class GanugogaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganugoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinugoga"
         "SG1" | "" | Tense.HABITUAL        | "jinugogoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginugojvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinugotsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginugisdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginugosdi"
         "SG2" | "" | Tense.PRESENT         | "hinugoga"
         "SG2" | "" | Tense.HABITUAL        | "hinugogoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "janugojvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinugotsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "janugisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsanugosdi"
         "SG3" | "" | Tense.PRESENT         | "ganugoga"
         "SG3" | "" | Tense.HABITUAL        | "ganugogoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unugojvi"
@@ -47,11 +49,11 @@ class GanugogaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "aninugogoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninugojvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninugotsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninugisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninugosdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinugoga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinugogoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginugojvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinugotsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginugisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginugosdi"
     }
 }

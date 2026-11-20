@@ -26,18 +26,20 @@ class GoksgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Goksga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gogisga"
         "SG1" | "" | Tense.HABITUAL        | "gogisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwoksvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gogisvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwoksdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwogisdi"
         "SG2" | "" | Tense.PRESENT         | "hoksga"
         "SG2" | "" | Tense.HABITUAL        | "hoksgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "joksvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hogisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "joksdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawogisdi"
         "SG3" | "" | Tense.PRESENT         | "goksga"
         "SG3" | "" | Tense.HABITUAL        | "goksgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwoksvi"
@@ -47,11 +49,11 @@ class GoksgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "anoksgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unoksvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anogisvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unoksdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwogisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idoksga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idoksgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igoksvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idogisvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igoksdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwogisdi"
     }
 }

@@ -27,13 +27,15 @@ class AkwiyihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Akwiyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gaquiyiha"
         "SG1" | "" | Tense.HABITUAL        | "gagwiyisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "akikwiyvhvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquaquiyvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gaquiyvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "akikwiyhdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquaquiyvdi"
         "SG2" | "" | Tense.PRESENT         | "hakwiyiha"
         "SG2" | "" | Tense.HABITUAL        | "hakwiyisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jakwiyvhvi"
@@ -46,12 +48,12 @@ class AkwiyihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uquiyvdi"
         "PL3" | "" | Tense.PRESENT         | "anakwiyiha"
         "PL3" | "" | Tense.HABITUAL        | "anakwiyisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unikwiyvhvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unaquiyvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anaquiyvhvi"
         "PL3" | "" | Tense.INFINITIVE      | "unakwiyhdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idakwiyiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idakwiyisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igikwiyvhvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaquiyvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaquiyvhvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igakwiyhdi"
     }

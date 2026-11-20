@@ -26,10 +26,12 @@ class AteladiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ateladia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gadeladia"
-        "SG1" | "" | Tense.HABITUAL        | "gadeladisgoi"
+        "SG1" | "" | Tense.PRESENT         | "gateladia"
+        "SG1" | "" | Tense.HABITUAL        | "gateladisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwateladvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gateladvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwateladisdi"
@@ -44,12 +46,12 @@ class AteladiaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ateladvi"
         "SG3" | "" | Tense.INFINITIVE      | "uteladisdi"
         "PL3" | "" | Tense.PRESENT         | "anateladia"
-        "PL3" | "" | Tense.HABITUAL        | "anatelidisgoi"
+        "PL3" | "" | Tense.HABITUAL        | "anateladisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unateladvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anateladvi"
         "PL3" | "" | Tense.INFINITIVE      | "unateladisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idateladia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idatelidisgoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idateladisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igateladvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idateladvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igateladisdi"

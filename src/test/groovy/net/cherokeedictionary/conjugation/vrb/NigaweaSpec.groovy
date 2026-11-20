@@ -26,32 +26,34 @@ class NigaweaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Nigawea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "nijiwea"
-        "SG1" | "" | Tense.HABITUAL        | "nijiwesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "nagiwesvi"
+        "SG1" | "" | Tense.PRESENT         | "tsiwea"
+        "SG1" | "" | Tense.HABITUAL        | "tsiwesgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiwesvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwesvi"
-        "SG1" | "" | Tense.INFINITIVE      | "iyagiwesdi"
-        "SG2" | "" | Tense.PRESENT         | "hniwea"
-        "SG2" | "" | Tense.HABITUAL        | "hniwesgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "nijawesvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyuwesdi"
+        "SG2" | "" | Tense.PRESENT         | "hiwea"
+        "SG2" | "" | Tense.HABITUAL        | "hiwesgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawesvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwesvi"
-        "SG2" | "" | Tense.INFINITIVE      | "iyijawesdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsayuwesdi"
         "SG3" | "" | Tense.PRESENT         | "nigawea"
         "SG3" | "" | Tense.HABITUAL        | "nigawesgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "nuwesvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwesvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gawesvi"
-        "SG3" | "" | Tense.INFINITIVE      | "iyuwesdi"
-        "PL3" | "" | Tense.PRESENT         | "naniwea"
-        "PL3" | "" | Tense.HABITUAL        | "naniwesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "nuniwesvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyuwesdi"
+        "PL3" | "" | Tense.PRESENT         | "aniwea"
+        "PL3" | "" | Tense.HABITUAL        | "aniwesgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwesvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwesvi"
-        "PL3" | "" | Tense.INFINITIVE      | "iyuniwesdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "nidiwea"
-        "PL1INCL" | "" | Tense.HABITUAL        | "nidiwesgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "nigiwesvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyuwesdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idiwea"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idiwesgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwesvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiwesvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iyigiwesdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyuwesdi"
     }
 }

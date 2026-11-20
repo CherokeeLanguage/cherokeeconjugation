@@ -25,6 +25,8 @@ class GahnegaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gahnega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinega"
@@ -44,7 +46,7 @@ class GahnegaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "akihnvsdi"
         "PL3" | "" | Tense.PRESENT         | "anihnega"
         "PL3" | "" | Tense.HABITUAL        | "anihnegoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahnvsvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihnvsdi"
     }

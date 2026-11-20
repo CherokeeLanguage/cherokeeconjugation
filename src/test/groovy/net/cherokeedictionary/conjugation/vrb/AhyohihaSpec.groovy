@@ -23,6 +23,8 @@ class AhyohihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ahyohiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jiyohiha"
@@ -31,7 +33,7 @@ class AhyohihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiyotlvi"
         "SG1" | "" | Tense.INFINITIVE      | "akiyohisdi"
         "SG2" | "" | Tense.PRESENT         | "hihyohiha"
-        "SG2" | "" | Tense.HABITUAL        | "hihyohihoo"
+        "SG2" | "" | Tense.HABITUAL        | "hiyohihoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jahyohlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiyotlvi"
         "SG2" | "" | Tense.INFINITIVE      | "jahyohisdi"

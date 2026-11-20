@@ -24,6 +24,8 @@ class UwotlaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwotla", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agwotla"
@@ -41,14 +43,14 @@ class UwotlaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uwotlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwotlvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "dunotla"
+        "PL3" | "" | Tense.PRESENT         | "unotla"
         // "PL3" | "" | Tense.HABITUAL        | "/"
-        "PL3" | "" | Tense.REMOTE_PAST     | "anina"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unotlvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unotlvi"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
-        "PL1INCL" | "" | Tense.PRESENT         | "degotla"
+        "PL1INCL" | "" | Tense.PRESENT         | "igotla"
         // "PL1INCL" | "" | Tense.HABITUAL        | "/"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "idina"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igotlvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igotlvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "/"
     }

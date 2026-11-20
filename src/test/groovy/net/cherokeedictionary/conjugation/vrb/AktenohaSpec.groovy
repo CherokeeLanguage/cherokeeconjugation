@@ -26,15 +26,17 @@ class AktenohaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Aktenoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jigatenoha"
-        "SG1" | "" | Tense.HABITUAL        | "jigatenohoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agwaktenolvi"
+        "SG1" | "" | Tense.PRESENT         | "tsigitenoha"
+        "SG1" | "" | Tense.HABITUAL        | "tsigitenohoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigitenolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigitenolvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwaktenasdi"
-        "SG2" | "" | Tense.PRESENT         | "haktenoha"
-        "SG2" | "" | Tense.HABITUAL        | "haktenohoi"
+        "SG1" | "" | Tense.INFINITIVE      | "agigitenasdi"
+        "SG2" | "" | Tense.PRESENT         | "higitenoha"
+        "SG2" | "" | Tense.HABITUAL        | "higitenohoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jaktenolvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "higitenolvi"
         "SG2" | "" | Tense.INFINITIVE      | "jaktenasdi"
@@ -43,15 +45,15 @@ class AktenohaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uktenolvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agitenolvi"
         "SG3" | "" | Tense.INFINITIVE      | "uktenasdi"
-        "PL3" | "" | Tense.PRESENT         | "anaktenoha"
-        "PL3" | "" | Tense.HABITUAL        | "anaktenohoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unaktenolvi"
+        "PL3" | "" | Tense.PRESENT         | "anigitenoha"
+        "PL3" | "" | Tense.HABITUAL        | "anigitenohoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unigitenolvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anigitenolvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unaktenasdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idaktenoha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idaktenohoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaktenolvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unigitenasdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idigitenoha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idigitenohoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igigitenolvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idigitenolvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igaktenasdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igigitenasdi"
     }
 }

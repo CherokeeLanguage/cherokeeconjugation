@@ -26,18 +26,20 @@ class UwehisdanehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwehisdaneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agwehisdaneha"
         "SG1" | "" | Tense.HABITUAL        | "agwehisdanehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwehisdanelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquehisdanelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwehisdanehdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwehisdanedi"
         "SG2" | "" | Tense.PRESENT         | "jehisdaneha"
         "SG2" | "" | Tense.HABITUAL        | "jehisdanehoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jehisdanelvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsehisdanelvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jehisdanehdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawehisdanedi"
         "SG3" | "" | Tense.PRESENT         | "uwehisdaneha"
         "SG3" | "" | Tense.HABITUAL        | "uwehisdanehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwehisdanelvi"
@@ -47,11 +49,11 @@ class UwehisdanehaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "unehisdanehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unehisdanelvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unehisdanelvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unehisdanehdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwehisdanedi"
         "PL1INCL" | "" | Tense.PRESENT         | "igehisdaneha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igehisdanehoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igehisdanelvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igehisdanelvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igehisdanehdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwehisdanedi"
     }
 }

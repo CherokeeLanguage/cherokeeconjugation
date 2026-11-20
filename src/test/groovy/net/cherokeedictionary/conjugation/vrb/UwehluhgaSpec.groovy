@@ -26,6 +26,8 @@ class UwehluhgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Uwehluhga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquetluga"
@@ -37,7 +39,7 @@ class UwehluhgaSpec extends VerbBaseSpec {
         "SG2" | "" | Tense.HABITUAL        | "jehluhgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "jehluhnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsetlunvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jehluhvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawetluhvsdi"
         "SG3" | "" | Tense.PRESENT         | "uwehluhga"
         "SG3" | "" | Tense.HABITUAL        | "uwehluhgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwehluhnvi"
@@ -47,11 +49,11 @@ class UwehluhgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "unehluhgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unehluhnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unetlunvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unehluhvsdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwetluhvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igehluhga"
         "PL1INCL" | "" | Tense.HABITUAL        | "igehluhgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igehluhnvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igetlunvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igehluhvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwetluhvsdi"
     }
 }

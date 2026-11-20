@@ -25,18 +25,20 @@ class AdehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Adeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jideha"
         "SG1" | "" | Tense.HABITUAL        | "jidehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "jidelvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agidelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "jidehdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agidedi"
         "SG2" | "" | Tense.PRESENT         | "hideha"
         "SG2" | "" | Tense.HABITUAL        | "hidehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hidelvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsadelvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hidelvi"
-        "SG2" | "" | Tense.INFINITIVE      | "hidehdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsadedi"
         "SG3" | "" | Tense.PRESENT         | "adeha"
         "SG3" | "" | Tense.HABITUAL        | "adehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udelvi"

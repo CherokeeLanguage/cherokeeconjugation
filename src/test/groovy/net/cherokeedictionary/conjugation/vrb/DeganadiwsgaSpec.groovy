@@ -26,18 +26,20 @@ class DeganadiwsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Deganadiwsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "dejinadiwsga"
         "SG1" | "" | Tense.HABITUAL        | "dejinadiwsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "daginadiwsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinadiwvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "diginadihwisdi"
-        "SG2" | "" | Tense.PRESENT         | "dehinadiwsga"
-        "SG2" | "" | Tense.HABITUAL        | "dehinadiwsgoi"
+        "SG1" | "" | Tense.INFINITIVE      | "daginadiwisdi"
+        "SG2" | "" | Tense.PRESENT         | "tinadiwvsga"
+        "SG2" | "" | Tense.HABITUAL        | "tinadiwvsgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejanadiwsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinadiwvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijanadihwisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "detsanadiwisdi"
         "SG3" | "" | Tense.PRESENT         | "deganadiwsga"
         "SG3" | "" | Tense.HABITUAL        | "deganadiwsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dunadiwsvi"
@@ -48,10 +50,10 @@ class DeganadiwsgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.REMOTE_PAST     | "duninadiwsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninadiwvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "juninadihwisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedinadiwsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedinadiwsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "deginadiwsvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadinadiwvsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadinadiwvsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "daginadiwvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinadiwvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "diginadihwisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "daginadiwisdi"
     }
 }

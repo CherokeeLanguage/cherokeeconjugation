@@ -24,6 +24,8 @@ class AdvnvsdiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Advnvsdia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadvnvsdia"
@@ -43,7 +45,7 @@ class AdvnvsdiaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "udvnvsdohdi"
         "PL3" | "" | Tense.PRESENT         | "anadvnvsdia"
         "PL3" | "" | Tense.HABITUAL        | "anadvnvsdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "anadvnvstanvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadvnvstanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadvnvstanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unadvnvsdohdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idadvnvsdia"

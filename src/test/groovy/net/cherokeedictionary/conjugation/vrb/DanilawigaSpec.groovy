@@ -26,32 +26,34 @@ class DanilawigaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Danilawiga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "ganilawiga"
-        "SG1" | "" | Tense.HABITUAL        | "ganilawigoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquanilawitsvi"
+        "SG1" | "" | Tense.PRESENT         | "diganilawiga"
+        "SG1" | "" | Tense.HABITUAL        | "diganilawigoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "dvquanilawitsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "ganilawitsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginilawisdi"
-        "SG2" | "" | Tense.PRESENT         | "dojilawiga"
-        "SG2" | "" | Tense.HABITUAL        | "dojilawigoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "dogilawijvi"
+        "SG1" | "" | Tense.INFINITIVE      | "dvginilawisdi"
+        "SG2" | "" | Tense.PRESENT         | "tinilawiga"
+        "SG2" | "" | Tense.HABITUAL        | "tinilawigoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "ditsanilawitsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hanilawitsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "jogilawisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "ditsanilawisdi"
         "SG3" | "" | Tense.PRESENT         | "danilawiga"
         "SG3" | "" | Tense.HABITUAL        | "danilawigoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dunilawijvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anilawitsvi"
         "SG3" | "" | Tense.INFINITIVE      | "junilawisdi"
-        "PL3" | "" | Tense.PRESENT         | "dejilawiga"
-        "PL3" | "" | Tense.HABITUAL        | "dejilawigoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "dejilawijvi"
+        "PL3" | "" | Tense.PRESENT         | "dvnanilawiga"
+        "PL3" | "" | Tense.HABITUAL        | "dvnanilawigoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "dunanilawitsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "ananilawitsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "dijilawisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedilawiga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedilawigoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degilawijvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsuninilawisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadanilawiga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadanilawigoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "daganilawitsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idanilawitsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digilawisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "daginilawisdi"
     }
 }

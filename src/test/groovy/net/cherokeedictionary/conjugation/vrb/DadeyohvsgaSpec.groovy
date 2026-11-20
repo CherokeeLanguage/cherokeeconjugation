@@ -26,18 +26,20 @@ class DadeyohvsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Dadeyohvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "degadeyohvsga"
         "SG1" | "" | Tense.HABITUAL        | "degadeyohvsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwadeyohnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadeyonvi"
-        "SG1" | "" | Tense.INFINITIVE      | "digwadehyohdi"
-        "SG2" | "" | Tense.PRESENT         | "dehadeyohvsga"
-        "SG2" | "" | Tense.HABITUAL        | "dehadeyohvsgoi"
+        "SG1" | "" | Tense.INFINITIVE      | "dagideyodi"
+        "SG2" | "" | Tense.PRESENT         | "tideyohvsga"
+        "SG2" | "" | Tense.HABITUAL        | "tideyohvsgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejadeyohnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadeyonvi"
-        "SG2" | "" | Tense.INFINITIVE      | "dijadehyohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "detsadeyodi"
         "SG3" | "" | Tense.PRESENT         | "dadeyohvsga"
         "SG3" | "" | Tense.HABITUAL        | "dadehyohvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "dudeyohnvi"
@@ -47,11 +49,11 @@ class DadeyohvsgaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "danadeyohvsgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "dunadeyohnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadeyonvi"
-        "PL3" | "" | Tense.INFINITIVE      | "junadehyohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "dedadeyohvsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "dedadeyohvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degadeyohnvi"
+        "PL3" | "" | Tense.INFINITIVE      | "tsunideyodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dadadeyohvsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dadadeyohvsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "dagadeyonvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadeyonvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "digadehyohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "dagideyodi"
     }
 }

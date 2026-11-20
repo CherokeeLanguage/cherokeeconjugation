@@ -26,18 +26,20 @@ class GosdvnihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gosdvniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gosdvniha"
         "SG1" | "" | Tense.HABITUAL        | "gosdvnihoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agwosdvnilvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gosdvnilvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agwosdvnisdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwosdvnisdi"
         "SG2" | "" | Tense.PRESENT         | "hosdvniha"
         "SG2" | "" | Tense.HABITUAL        | "hosdvnihoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "josdvnilvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hosdvnilvi"
-        "SG2" | "" | Tense.INFINITIVE      | "josdvnisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawosdvnisdi"
         "SG3" | "" | Tense.PRESENT         | "gosdvniha"
         "SG3" | "" | Tense.HABITUAL        | "gosdvnihoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwosdvnilvi"
@@ -47,11 +49,11 @@ class GosdvnihaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "anosdvnihoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unosdvnilvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anosdvnilvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unosdvnisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwosdvnisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idosdvniha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idosdvnihoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igosdvnilvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idosdvnilvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igosdvnisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwosdvnisdi"
     }
 }

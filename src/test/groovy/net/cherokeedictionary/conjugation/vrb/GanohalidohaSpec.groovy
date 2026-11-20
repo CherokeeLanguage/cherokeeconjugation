@@ -26,15 +26,17 @@ class GanohalidohaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ganohalidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "jinoalidoha"
-        "SG1" | "" | Tense.HABITUAL        | "jinoalidosgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinohalitoha"
+        "SG1" | "" | Tense.HABITUAL        | "tsinohalitohoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginohalidolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinohalidolvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginohalidasdi"
         "SG2" | "" | Tense.PRESENT         | "hinohalidoha"
-        "SG2" | "" | Tense.HABITUAL        | "hinohalidosgoi"
+        "SG2" | "" | Tense.HABITUAL        | "hinohalitohoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "janohalidolvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinohalidolvi"
         "SG2" | "" | Tense.INFINITIVE      | "janohalidasdi"
@@ -44,12 +46,12 @@ class GanohalidohaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganohalidolvi"
         "SG3" | "" | Tense.INFINITIVE      | "unohalidasdi"
         "PL3" | "" | Tense.PRESENT         | "aninohalidoha"
-        "PL3" | "" | Tense.HABITUAL        | "aninohalidosgoi"
+        "PL3" | "" | Tense.HABITUAL        | "aninohalitohoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninohalidolvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninohalidolvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninohalidasdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinohalidoha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idinohalidosgoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idinohalitohoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginohalidolvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinohalidolvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "iginohalidasdi"

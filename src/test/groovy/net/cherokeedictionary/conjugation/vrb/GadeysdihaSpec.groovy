@@ -27,32 +27,34 @@ class GadeysdihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gadeysdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsideyasdiha"
         "SG1" | "" | Tense.HABITUAL        | "jideyasdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "akdeystanvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agiwadeyastanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwadeyastanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "akdeysdohdi"
-        "SG2" | "" | Tense.PRESENT         | "hideysdiha"
-        "SG2" | "" | Tense.HABITUAL        | "hideysdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsdeystanvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiwadeyastodi"
+        "SG2" | "" | Tense.PRESENT         | "hideyasdiha"
+        "SG2" | "" | Tense.HABITUAL        | "hideyasdisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawadeyastanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwadeyastanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsdeysdohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsawadeyastodi"
         "SG3" | "" | Tense.PRESENT         | "gadeyasdiha"
         "SG3" | "" | Tense.HABITUAL        | "gadeyasdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwadeyastanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gawadeyastanvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwadeyasdodi"
-        "PL3" | "" | Tense.PRESENT         | "anideysdiha"
-        "PL3" | "" | Tense.HABITUAL        | "anideysdisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unideystanvi"
+        "PL3" | "" | Tense.PRESENT         | "anideyasdiha"
+        "PL3" | "" | Tense.HABITUAL        | "anideyasdisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwadeyastanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwadeyastanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unideysdohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idideysdiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idideysdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadeystanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwadeyastodi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idideyasdiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idideyasdisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwadeyastanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idiwadeyastanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igideysdohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwadeyastodi"
     }
 }

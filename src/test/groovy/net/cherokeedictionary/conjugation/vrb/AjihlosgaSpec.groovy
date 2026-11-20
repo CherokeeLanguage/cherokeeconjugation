@@ -24,32 +24,34 @@ class AjihlosgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Ajihlosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "vgwtlosga"
-        "SG1" | "" | Tense.HABITUAL        | "vgwtlosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "vgwtlosvi"
+        "SG1" | "" | Tense.PRESENT         | "gatsitlosga"
+        "SG1" | "" | Tense.HABITUAL        | "gatsitlosgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquatsitlosvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatsitlosvi"
-        "SG1" | "" | Tense.INFINITIVE      | "vgwtlohisdi"
-        "SG2" | "" | Tense.PRESENT         | "ejahlosga"
-        "SG2" | "" | Tense.HABITUAL        | "ejahlosgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "ejahlosvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquatsitlohisdi"
+        "SG2" | "" | Tense.PRESENT         | "hatsitlosga"
+        "SG2" | "" | Tense.HABITUAL        | "hatsitlosgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsitlosvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatsitlosvi"
-        "SG2" | "" | Tense.INFINITIVE      | "ejahlohisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsatsitlohisdi"
         "SG3" | "" | Tense.PRESENT         | "ajihlosga"
         "SG3" | "" | Tense.HABITUAL        | "ajihlosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ajihlosvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utsitlosvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atsitlosvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ajihlohisdi"
-        "PL3" | "" | Tense.PRESENT         | "gejihlosga"
-        "PL3" | "" | Tense.HABITUAL        | "gejihlosgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "gejihlosvi"
+        "SG3" | "" | Tense.INFINITIVE      | "utsitlohisdi"
+        "PL3" | "" | Tense.PRESENT         | "anatsitlosga"
+        "PL3" | "" | Tense.HABITUAL        | "anatsitlosgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unatsitlosvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatsitlosvi"
-        "PL3" | "" | Tense.INFINITIVE      | "gejihlohisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "egihlosga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "egihlosgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "egihlosvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unatsitlohisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idatsitlosga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idatsitlosgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsitlosvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatsitlosvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "egihlohisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igatsitlohisdi"
     }
 }

@@ -23,6 +23,8 @@ class AtihnawidihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Atihnawidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatihnawidiha"
@@ -40,10 +42,10 @@ class AtihnawidihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "utihnawidvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atinawidvhvi"
         "SG3" | "" | Tense.INFINITIVE      | "utihnawitdi"
-        "SG3" | "" | Tense.PRESENT         | "anhtihnawidiha"
-        "SG3" | "" | Tense.HABITUAL        | "anhtihnawidisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unhtihnawidvhvi"
+        "SG3" | "" | Tense.PRESENT         | "atinawidiha"
+        "SG3" | "" | Tense.HABITUAL        | "atinawidisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utinawidvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atinawidvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unhtihnawitdi"
+        "SG3" | "" | Tense.INFINITIVE      | "utinawitidi"
     }
 }

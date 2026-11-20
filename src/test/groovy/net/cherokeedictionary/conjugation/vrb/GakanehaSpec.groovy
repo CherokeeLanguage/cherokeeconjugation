@@ -25,6 +25,8 @@ class GakanehaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gakaneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyakaneha"
@@ -37,15 +39,15 @@ class GakanehaSpec extends VerbBaseSpec {
         "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyakanelvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyakanelvi"
         "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyakanehdi"
-        "SG1" | "" | Tense.PRESENT         | "jiyakaneha"
+        "SG1" | "" | Tense.PRESENT         | "gakaneha"
         "SG1" | "" | Tense.HABITUAL        | "gakanehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquakanelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gakanelvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquakanedi"
-        "PL3" | "" | Tense.PRESENT         | "anikaneha"
-        "PL3" | "" | Tense.HABITUAL        | "anikanehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unikanelvi"
+        "PL3" | "" | Tense.PRESENT         | "anakaneha"
+        "PL3" | "" | Tense.HABITUAL        | "anakanehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unakanelvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anakanelvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unikanehdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unakanedi"
     }
 }

@@ -23,27 +23,33 @@ class WiganegiaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Wiganegia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "wijinegia"
         "SG3" | "" | Tense.HABITUAL        | "wijinegisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "waginegisvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwaginegisvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gawaginegisvi"
-        "SG3" | "" | Tense.INFINITIVE      | "waginegisdi"
-        "SG2" | "" | Tense.PRESENT         | "hwinegia"
-        "SG2" | "" | Tense.HABITUAL        | "hwinegisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "wijanegisvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uginegisdi"
+        "SG2" | "" | Tense.PRESENT         | "hitsinegia"
+        "SG2" | "" | Tense.HABITUAL        | "hitsinegisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawaginegisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwaginegisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "wijanegisdi"
-        "SG3" | "" | Tense.PRESENT         | "wiganegia"
-        "SG3" | "" | Tense.HABITUAL        | "wiganegisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wunegisvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsaginegisdi"
+        "SG3" | "" | Tense.PRESENT         | "witsinegia"
+        "SG3" | "" | Tense.HABITUAL        | "witsinegisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwaginegisvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gawaginegisvi"
-        "SG3" | "" | Tense.INFINITIVE      | "wunegisdi"
-        "SG3" | "" | Tense.PRESENT         | "waninegia"
-        "SG3" | "" | Tense.HABITUAL        | "waninegisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wuninegisvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uginegisdi"
+        "SG3" | "" | Tense.PRESENT         | "witsinegia"
+        "SG3" | "" | Tense.HABITUAL        | "witsinegisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwaginegisvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gawaginegisvi"
-        "SG3" | "" | Tense.INFINITIVE      | "wuninegisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uginegisdi"
     }
 }

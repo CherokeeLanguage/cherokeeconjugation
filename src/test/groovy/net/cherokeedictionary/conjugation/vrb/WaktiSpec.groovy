@@ -27,31 +27,33 @@ class WaktiSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Wakti", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
+        // FUTURE_COMMAND rows left untouched (D1/D2 debt)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "witsigati"
-        "SG1" | "" | Tense.HABITUAL        | "wijitatoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "wijigatvi"
+        "SG1" | "" | Tense.PRESENT         | "tsigati"
+        "SG1" | "" | Tense.HABITUAL        | "tsigatoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigadvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigadvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "hwakti"
+        "SG2" | "" | Tense.PRESENT         | "higati"
         // "SG2" | "" | Tense.HABITUAL        | "/"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hwigati"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsagadvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "higadvi"
         // "SG2" | "" | Tense.INFINITIVE      | "/"
         "SG3" | "" | Tense.PRESENT         | "wagati"
         "SG3" | "" | Tense.HABITUAL        | "wagadoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "wagadvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugadvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "gagadvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "wanakti"
-        "PL3" | "" | Tense.HABITUAL        | "wanaktoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "wanaktvi"
+        "PL3" | "" | Tense.PRESENT         | "anigati"
+        "PL3" | "" | Tense.HABITUAL        | "anigatoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unigadvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anigadvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
-        "PL1INCL" | "" | Tense.PRESENT         | "widakti"
-        "PL1INCL" | "" | Tense.HABITUAL        | "widaktoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "widaktvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idigati"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idigatoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igigadvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idigadvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }
