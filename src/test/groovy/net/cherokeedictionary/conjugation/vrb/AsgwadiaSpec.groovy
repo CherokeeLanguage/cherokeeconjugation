@@ -12,7 +12,7 @@ class AsgwadiaSpec extends VerbBaseSpec {
         definition: "Finishing",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jisgwadia'],
+            [subject: 'SG1', object: '', present: 'jisgwadia'],
             [subject: 'SG1', object: '', present: 'jisgwadia', habitual: 'jisgwadisgoi', remote_past: 'aksgwadvi', imperative: 'jisgwada', infinitive: 'aksgwadisdi'],
             [subject: 'SG2', object: '', present: 'hisgwadia', habitual: 'hisgwadisgoi', remote_past: 'tsgwadvi', imperative: 'hisgwada', infinitive: 'tsgwadisdi'],
             [subject: 'SG3', object: '', habitual: 'asgwadisgoi', imperative: 'hisgwada', infinitive: 'usgwadisdi', present: 'asgwadia', remote_past: 'usgwadvi'],

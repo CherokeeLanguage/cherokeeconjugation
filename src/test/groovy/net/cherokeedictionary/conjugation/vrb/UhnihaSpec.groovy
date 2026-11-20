@@ -17,7 +17,7 @@ class UhnihaSpec extends VerbBaseSpec {
             [subject: 'SG1', object: '', present: 'aquaniha', habitual: 'agwahnihoi', remote_past: 'agwahnihvi', imperative: 'agwahnihesdi', infinitive: 'x'],
             [subject: 'SG2', object: '', present: 'jahniha', habitual: 'jahnihoi', remote_past: 'jahnihvi', imperative: 'jahnihesdi', infinitive: ''],
             [subject: 'SG3', object: '', habitual: 'unihoi', imperative: 'tsanihesdi', infinitive: '', present: 'uniha', remote_past: 'unihvi'],
-            [subject: 'PL3', object: '', present: 'unahniha', habitual: 'unahnihoi', remote_past: 'unahnihhvi', imperative: 'unahnihesdi', infinitive: ''],
+            [subject: 'PL3', object: '', present: 'unahniha', habitual: 'unahnihoi', remote_past: 'unahnihvi', imperative: 'unahnihesdi', infinitive: ''],
             [subject: 'PL1INCL', object: '', present: 'igahniha', habitual: 'igahnihoi', remote_past: 'igahnihvi', imperative: 'igahnihesdi', infinitive: '']
         ]
     ]

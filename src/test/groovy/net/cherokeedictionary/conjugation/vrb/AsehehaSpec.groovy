@@ -13,7 +13,7 @@ class AsehehaSpec extends VerbBaseSpec {
         part_of_speech: "v.t.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'jiyaseheha'],
-            [subject: 'SG1', object: 'SG3AN', present: 'jiyaseheha', habitual: 'jiyasehehoi', remote_past: 'jiyasehelvi', imperative: 'jiysehisi', infinitive: 'jiyasehehdi'],
+            [subject: 'SG1', object: 'SG3AN', present: 'jiyaseheha', habitual: 'jiyasehehoi', remote_past: 'jiyasehelvi', imperative: 'jiyasehisi', infinitive: 'jiyasehehdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyaseheha', habitual: 'hiyasehehoi', remote_past: 'hiyasehelvi', imperative: 'hiyasehisi', infinitive: 'hiyasehehdi'],
             [subject: 'SG3', object: '', habitual: 'asehehoi', imperative: 'hiyasehisi', infinitive: 'usehehdi', present: 'aseheha', remote_past: 'usehelvi'],
             [subject: 'PL3', object: 'SG3AN', present: 'anaseheha', habitual: 'anasehehoi', remote_past: 'unasehelvi', imperative: 'anasehisi', infinitive: 'unasehehdi'],

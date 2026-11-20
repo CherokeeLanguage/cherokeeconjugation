@@ -12,9 +12,9 @@ class UhyohaSpec extends VerbBaseSpec {
         definition: "Looking for It",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'agihyoha'],
+            [subject: 'SG1', object: '', present: 'agihyoha'],
             [subject: 'SG1', object: '', present: 'agihyoha', habitual: 'agihyohoi', remote_past: 'agiyolvi', imperative: 'agiyhga', infinitive: 'agiyosdi'],
-            [subject: 'SG2', object: '', present: 'jahyhoha', habitual: 'jahyohoi', remote_past: 'jayolvi', imperative: 'jayhga', infinitive: 'jayosdi'],
+            [subject: 'SG2', object: '', present: 'jahyoha', habitual: 'jahyohoi', remote_past: 'jayolvi', imperative: 'jayhga', infinitive: 'jayosdi'],
             [subject: 'SG3', object: '', habitual: 'uhyohoi', imperative: 'jayhga', infinitive: 'uhyosdi', present: 'uhyoha', remote_past: 'uhyolvi'],
             [subject: 'PL3', object: '', present: 'unihyoha', habitual: 'unihyohoi', remote_past: 'uniyolvi', imperative: 'uniyhga', infinitive: 'uniyosdi'],
             [subject: 'PL1INCL', object: '', present: 'igihyoha', habitual: 'igihyohoi', remote_past: 'igiyolvi', imperative: 'igiyhga', infinitive: 'igiyosdi']

@@ -14,11 +14,11 @@ class AhyohaSpec extends VerbBaseSpec {
         part_of_speech: "v.t.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsiyoha'],
-            [subject: 'SG1', object: 'SG3AN', present: 'jiyoha', habitual: 'jiyohoi', remote_past: 'jiyalvi', imperative: 'jiyga', infinitive: 'jiysdi'],
-            [subject: 'SG2', object: 'SG3AN', present: 'hihyoha', habitual: 'hihyohoi', remote_past: 'hiyalvi', imperative: 'hiyhga', infinitive: 'hiysdi'],
+            [subject: 'SG1', object: 'SG3AN', present: 'jiyoha', habitual: 'jiyohoi', remote_past: 'jiyalvi', imperative: 'jiyoga', infinitive: 'jiyasdi'],
+            [subject: 'SG2', object: 'SG3AN', present: 'hihyoha', habitual: 'hihyohoi', remote_past: 'hiyalvi', imperative: 'hiyohga', infinitive: 'hiyasdi'],
             [subject: 'SG3', object: '', habitual: 'ayohoi', imperative: 'hiyoga', infinitive: 'uyasdi', present: 'ayoha', remote_past: 'uyalvi'],
-            [subject: 'PL3', object: 'SG3AN', present: 'anihyoha', habitual: 'anihyohoi', remote_past: 'unihyalvi', imperative: 'aniyhga', infinitive: 'uniysdi'],
-            [subject: 'PL1INCL', object: 'SG3AN', present: 'edihyoha', habitual: 'edihyohoi', remote_past: 'edihyalvi', imperative: 'ediyhga', infinitive: 'ediysdi']
+            [subject: 'PL3', object: 'SG3AN', present: 'anihyoha', habitual: 'anihyohoi', remote_past: 'unihyalvi', imperative: 'aniyoga', infinitive: 'uniyasdi'],
+            [subject: 'PL1INCL', object: 'SG3AN', present: 'edihyoha', habitual: 'edihyohoi', remote_past: 'edihyalvi', imperative: 'ediyoga', infinitive: 'ediyasdi']
         ]
     ]
 

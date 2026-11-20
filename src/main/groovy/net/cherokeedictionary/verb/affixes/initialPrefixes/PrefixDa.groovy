@@ -32,8 +32,22 @@ class PrefixDa implements Affix {
                 def charAtZero = baseReturnValue.charAt(0)
 
                 if (['Ꭽ', 'Ꭾ', 'Ꭿ', 'Ꮀ', 'Ꮁ', 'Ꮂ'].contains(String.valueOf(charAtZero))) {
-                    // da- + h- contracts to t-: the d and h merge and the a drops
-                    baseReturnValue = "Ꮨ" + baseReturnValue.substring(1)
+                    // tio 20Nov26: the d+h contraction to t- is the da-family rule
+                    // (guide pp. 247-248: da + higowhtiha -> ᏘᎪᏩᏘᎭ). The de-
+                    // DISTRIBUTIVE family (DST, M-A §10.1; guide hold1 61a/117a
+                    // ᏕᎯᎪᏩᏘᎭ de²hị³gowh²tị³ha "you see them", 718 ᏕᏥᏯᎸᎢᎭ
+                    // de+jiya, 731 ᏕᎯᏯᎸᎢᎭ de+hiya) KEEPS its e before the
+                    // h-initial pronominal compounds: de + ᎯᏯ -> ᏕᎯᏯ (Dahlilosdiha
+                    // SG2 SG3AN present dehiyadlilosdiha). The di-family DOES
+                    // contract (Danehldiha SG2 imperatives ᏘᏯᏁᎲᏓ tiyanehlda =
+                    // di + hiya -> t+iya, "tahlilosda" = di + ha -> ta).
+                    if (word.stemmer?.normalizedDeStyle) {
+                        // de- keeps its e AND the h-glyph: de + ᎯᏯ -> ᏕᎯᏯ
+                        // (the Ꮨ contraction absorbs the h into "ti"; Ꮥ cannot)
+                        baseReturnValue = "Ꮥ" + baseReturnValue
+                    } else {
+                        baseReturnValue = "Ꮨ" + baseReturnValue.substring(1)
+                    }
                 } else if (StringUtility.startsWithVowelSyllabary(baseReturnValue)) {
                     // tio 12Nov26: future da- allomorphy, book-verified:
                     //  - da + a- -> dv (Ꮫ): guide ex. 63a ᏛᏟ dvtli "he/it's

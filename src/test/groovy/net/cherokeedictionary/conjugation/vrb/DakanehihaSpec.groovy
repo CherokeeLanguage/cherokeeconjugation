@@ -28,6 +28,8 @@ class DakanehihaSpec extends VerbBaseSpec {
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
         // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "detsikanehiha"
@@ -35,8 +37,8 @@ class DakanehihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "dagikanehlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsikanetlvi"
         "SG1" | "" | Tense.INFINITIVE      | "dagikanesdi"
-        "SG2" | "" | Tense.PRESENT         | "tikanehiha"
-        "SG2" | "" | Tense.HABITUAL        | "tikanehihoi"
+        "SG2" | "" | Tense.PRESENT         | "dehikanehiha"
+        "SG2" | "" | Tense.HABITUAL        | "dehikanehihoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejakanehlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hikanetlvi"
         "SG2" | "" | Tense.INFINITIVE      | "detsakanesdi"

@@ -31,7 +31,7 @@ class HeIsBecomingBlindIntransitivePartOfSpeechStringSpec extends GroovyTestCase
 	}
 
 	void testSG2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏘᎨᏬᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏕᎯᎨᏬᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23) // tio 20Nov26: re-pinned post-DST h-branch fix (de-style keeps the e before h-glyphs, guide 61a/117a)
 	}
 
 	void testSG3IntransitivePresent() {

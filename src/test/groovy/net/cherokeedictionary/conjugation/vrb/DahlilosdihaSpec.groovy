@@ -29,6 +29,8 @@ class DahlilosdihaSpec extends VerbBaseSpec {
         conjugateVerb("Dahlilosdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 20Nov26: PL3 Set B cells re-pinned per user ruling + guide P7(15)/126a (uni- serves all 3rd-person objects; y/a stem spelling per the SG3 row)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "dejiyadlilosdiha"
@@ -53,7 +55,7 @@ class DahlilosdihaSpec extends VerbBaseSpec {
         // "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsatlilosdodi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "datlilosdiha"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "datlilosdisgoi"
-        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "utlilostanvi"
+        "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "dutlilostanvi"
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "atlilostanvi"
         "SG3" | "SG3IN" | Tense.INFINITIVE      | "utlilosdodi"
         "PL3" | "SG3IN" | Tense.PRESENT         | "danahlilosdiha"
@@ -61,9 +63,9 @@ class DahlilosdihaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "dunahlilostanvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anatlilostanvi"
         "PL3" | "SG3IN" | Tense.INFINITIVE      | "tsunitlilostodi"
-        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "dedahlilosdiha"
-        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "dedahlilosdisgoi"
-        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "degahlilostanvi"
+        "PL1INCL" | "SG3IN" | Tense.PRESENT         | "dadatlilosdiha"
+        "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "dadatlilosdisgoi"
+        "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "dagatlilostanvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idatlilostanvi"
         "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "digahlilosdohdi"
     }

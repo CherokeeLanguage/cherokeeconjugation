@@ -28,6 +28,8 @@ class DegukdihaSpec extends VerbBaseSpec {
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
         // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "degugidiha"
@@ -35,8 +37,8 @@ class DegukdihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwuktanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gugitanvi"
         "SG1" | "" | Tense.INFINITIVE      | "dagiwugitodi"
-        "SG2" | "" | Tense.PRESENT         | "tigidiha"
-        "SG2" | "" | Tense.HABITUAL        | "tigidisgoi"
+        "SG2" | "" | Tense.PRESENT         | "dehugidiha"
+        "SG2" | "" | Tense.HABITUAL        | "dehugidisgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejuktanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hugitanvi"
         "SG2" | "" | Tense.INFINITIVE      | "detsawugitodi"

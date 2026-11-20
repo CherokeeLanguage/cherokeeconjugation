@@ -12,12 +12,12 @@ class AlihelichehaSpec extends VerbBaseSpec {
         definition: "S/hes Appreciative/Thanking Him/Her",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyalielicheha'],
+            [subject: 'SG1', object: '', present: 'jiyalielicheha'],
             [subject: 'SG1', object: 'SG3AN', present: 'jiyalielicheha', habitual: 'jiyalielichehoi', remote_past: 'jiyalielichelvi', imperative: 'jiyalielichisi', infinitive: 'jiyalielichedi'],
-            [subject: 'SG2', object: 'SG3AN', present: 'hiyalihelicheha', habitual: 'hiyalihelichehoi', remote_past: 'hiyalihelichelvi', imperative: 'hiyalielichisi', infinitive: 'hiyalihelichehdi'],
+            [subject: 'SG2', object: 'SG3AN', present: 'hiyalihelicheha', habitual: 'hiyalihelichehoi', remote_past: 'hiyalihelichelvi', imperative: 'hiyalielichisi', infinitive: 'hiyalihelichedi'],
             [subject: 'SG3', object: '', habitual: 'alihelichehoi', imperative: 'hiyalielichisi', infinitive: 'ulihelichehdi', present: 'alihelicheha', remote_past: 'ulihelichelvi'],
-            [subject: 'PL3', object: 'SG3AN', present: 'analihelicheha', habitual: 'analihelichehoi', remote_past: 'unalihelichelvi', imperative: 'analielichisi', infinitive: 'unalihelichehdi'],
-            [subject: 'PL1INCL', object: 'SG3AN', present: 'edalihelicheha', habitual: 'edalihelichehoi', remote_past: 'edalihelichelvi', imperative: 'edalielichisi', infinitive: 'edalihelichechdi']
+            [subject: 'PL3', object: 'SG3AN', present: 'analihelicheha', habitual: 'analihelichehoi', remote_past: 'unalihelichelvi', imperative: 'analielichisi', infinitive: 'unalihelichedi'],
+            [subject: 'PL1INCL', object: 'SG3AN', present: 'edalihelicheha', habitual: 'edalihelichehoi', remote_past: 'edalihelichelvi', imperative: 'edalielichisi', infinitive: 'edalihelichedi']
         ]
     ]
 

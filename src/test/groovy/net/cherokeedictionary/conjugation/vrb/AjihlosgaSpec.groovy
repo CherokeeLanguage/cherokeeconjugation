@@ -11,7 +11,7 @@ class AjihlosgaSpec extends VerbBaseSpec {
         definition: "S/he Losing (A Game) / Being Beaten (Game)",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'vgwtlosga', habitual: 'vgwtlosgoi', remote_past: 'vgwtlosvi', imperative: 'vgwtlohi', infinitive: 'vgwtlohisdi'],
+            [subject: 'SG1', object: '', present: 'vgwatlosga', habitual: 'vgwatlosgoi', remote_past: 'vgwatlosvi', imperative: 'vgwatlohi', infinitive: 'vgwatlohisdi'],
             [subject: 'SG2', object: '', present: 'ejahlosga', habitual: 'ejahlosgoi', remote_past: 'ejahlosvi', imperative: 'ejahlohi', infinitive: 'ejahlohisdi'],
             [subject: 'SG3', object: '', present: 'ajihlosga', habitual: 'ajihlosgoi', remote_past: 'ajihlosvi', imperative: 'ajihlohi', infinitive: 'ajihlohisdi'],
             [subject: 'PL3', object: '', present: 'gejihlosga', habitual: 'gejihlosgoi', remote_past: 'gejihlosvi', imperative: 'gejihlohi', infinitive: 'gejihlohisdi'],

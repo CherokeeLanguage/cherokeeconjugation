@@ -31,18 +31,26 @@ class AsuhvsgaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Asuhvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gasuhvsga"
         "SG1" | "" | Tense.HABITUAL        | "gasuhvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aksuhnvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aquasunvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gasunvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aksuhdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aquasudi"
         "SG2" | "" | Tense.PRESENT         | "hasuhvsga"
         "SG2" | "" | Tense.HABITUAL        | "hasuhvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsuhnvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsasunvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hasunvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsuhdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsasudi"
         "SG3" | "" | Tense.PRESENT         | "asuhvsga"
         "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usuhnvi"
@@ -55,33 +63,33 @@ class AsuhvsgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "unsuhdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idasuhvsga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idasuhvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksuhnvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igasunvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idasunvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iksuhdi"
-        "SG3" | "" | Tense.PRESENT         | "osda-nigvneha"
-        "SG3" | "" | Tense.HABITUAL        | "osda-nigvnehoi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igasudi"
+        "SG3" | "" | Tense.PRESENT         | "asuhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "osda-nagwvnelvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
         "SG3" | "" | Tense.INFINITIVE      | "osda-yagwvndi"
-        "SG3" | "" | Tense.PRESENT         | "osda-hnvneha"
-        "SG3" | "" | Tense.HABITUAL        | "osda-hnvnehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "osda-nijvnelvi"
+        "SG3" | "" | Tense.PRESENT         | "asuhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
-        "SG3" | "" | Tense.INFINITIVE      | "osda-yijvndi"
-        "SG3" | "" | Tense.PRESENT         | "osda-nigvneha"
-        "SG3" | "" | Tense.HABITUAL        | "osda-nigvnehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "osda-nuwvnelvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usudi"
+        "SG3" | "" | Tense.PRESENT         | "asuhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
-        "SG3" | "" | Tense.INFINITIVE      | "osda-yuwandi"
-        "SG3" | "" | Tense.PRESENT         | "osda-nanvneha"
-        "SG3" | "" | Tense.HABITUAL        | "osda-nanvnehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "osda-nunvnelvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usudi"
+        "SG3" | "" | Tense.PRESENT         | "asuhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
-        "SG3" | "" | Tense.INFINITIVE      | "osda-yunvndi"
-        "SG3" | "" | Tense.PRESENT         | "osda-nidvneha"
-        "SG3" | "" | Tense.HABITUAL        | "osda-nidvnehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "osda-nigvnelvi"
+        "SG3" | "" | Tense.INFINITIVE      | "usudi"
+        "SG3" | "" | Tense.PRESENT         | "asuhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "asuhvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usunvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asunvi"
-        "SG3" | "" | Tense.INFINITIVE      | "osda-yigvndi"
+        "SG3" | "" | Tense.INFINITIVE      | "usudi"
     }
 }

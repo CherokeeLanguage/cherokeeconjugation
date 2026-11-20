@@ -20,7 +20,7 @@ class UgeyuhaSpec extends VerbBaseSpec {
             [subject: 'SG2', object: 'SG3IN', present: 'jageyuha', habitual: 'jageyusoi', remote_past: 'jageyusvi', imperative: 'jageyusesdi', infinitive: 'jageyhdi'],
             [subject: 'SG3', object: '', habitual: 'ugeyusoi', imperative: 'higeyusesdi, tsageyusesdi', infinitive: 'ugeyudi', present: 'ugeyuha', remote_past: 'ugeyusvi'],
             [subject: 'PL3', object: 'SG3IN', present: 'unigeyuha', habitual: 'unigeyusoi', remote_past: 'unigeyusvi', imperative: 'unigeyusesdi', infinitive: 'unigeyhdi'],
-            [subject: 'PL1INCL', object: 'SG3IN', present: 'edigeyuhah', habitual: 'edigeyusoi', remote_past: 'edigeyusvi', imperative: 'edigeyusesdi', infinitive: 'edigeyhdi']
+            [subject: 'PL1INCL', object: 'SG3IN', present: 'edigeyuha', habitual: 'edigeyusoi', remote_past: 'edigeyusvi', imperative: 'edigeyusesdi', infinitive: 'edigeyhdi']
         ]
     ]
 

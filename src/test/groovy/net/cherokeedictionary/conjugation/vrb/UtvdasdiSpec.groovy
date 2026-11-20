@@ -20,7 +20,7 @@ class UtvdasdiSpec extends VerbBaseSpec {
             [subject: 'SG2', object: 'SG3IN', present: 'tstvdasdi', habitual: 'tstvdasdoi', remote_past: 'tstvdastanvi', imperative: 'tstvdasdesdi', infinitive: 'tstvdasdohdi'],
             [subject: 'SG3', object: '', habitual: 'udvdasdoi', imperative: 'hiyadvdasdesdi, tsadvdasdesdi', infinitive: 'udvdasdodi', present: 'udvdasdi', remote_past: 'udvdasdvi'],
             [subject: 'PL3', object: 'SG3IN', present: 'untvdasdi', habitual: 'untvdasdoi', remote_past: 'untvdastanvi', imperative: 'untvdasdesdi', infinitive: 'unvtvdasdohdi'],
-            [subject: 'PL1INCL', object: 'SG3IN', present: 'iktvdasdi', habitual: 'iktvdasdoi', remote_past: 'iktvdastan', imperative: 'vi', infinitive: 'iktvdasdesdi']
+            [subject: 'PL1INCL', object: 'SG3IN', present: 'iktvdasdi', habitual: 'iktvdasdoi', remote_past: 'iktvdastanvi', imperative: 'iktvdasdesdi', infinitive: 'iktvdasdohdi']
         ]
     ]
 

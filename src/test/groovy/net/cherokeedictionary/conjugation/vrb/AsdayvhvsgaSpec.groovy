@@ -11,11 +11,11 @@ class AsdayvhvsgaSpec extends VerbBaseSpec {
         definition: "S/he is Cooking Him/Her a Meal",
         part_of_speech: "v.i.",
         conjugations: [
-            [subject: 'SG1', object: '', present: 'jisdayvhvsga', habitual: 'jisdayvhvsgoi', remote_past: 'jisdayvhnvi', imperative: 'jisdayvhvga', infinitive: 'jisdaydi'],
-            [subject: 'SG2', object: '', present: 'hisdayvhvsga', habitual: 'hisdayvhvsgoi', remote_past: 'hisdayvhnvi', imperative: 'hisdayvhvga', infinitive: 'hisdayhdi'],
-            [subject: 'SG3', object: '', present: 'asdayvhvsga', habitual: 'asdayvhvsgoi', remote_past: 'usdayvhnvi', imperative: 'asdayvhvga', infinitive: 'usdayhdi'],
-            [subject: 'PL3', object: '', present: 'anisdayvhvsga', habitual: 'anisdayvhvsgoi', remote_past: 'unisdayvhnvi', imperative: 'anisdayvhvga', infinitive: 'unisdayhdi'],
-            [subject: 'PL1INCL', object: '', present: 'edisdayvhvsga', habitual: 'edisdayvhvsgoi', remote_past: 'edisdayvhnvi', imperative: 'edisdayvhvga', infinitive: 'edisdayhdi']
+            [subject: 'SG1', object: '', present: 'jisdayvhvsga', habitual: 'jisdayvhvsgoi', remote_past: 'jisdayvhnvi', imperative: 'jisdayvhvga', infinitive: 'jisdayvdi'],
+            [subject: 'SG2', object: '', present: 'hisdayvhvsga', habitual: 'hisdayvhvsgoi', remote_past: 'hisdayvhnvi', imperative: 'hisdayvhvga', infinitive: 'hisdayvhdi'],
+            [subject: 'SG3', object: '', present: 'asdayvhvsga', habitual: 'asdayvhvsgoi', remote_past: 'usdayvhnvi', imperative: 'asdayvhvga', infinitive: 'usdayvhdi'],
+            [subject: 'PL3', object: '', present: 'anisdayvhvsga', habitual: 'anisdayvhvsgoi', remote_past: 'unisdayvhnvi', imperative: 'anisdayvhvga', infinitive: 'unisdayvhdi'],
+            [subject: 'PL1INCL', object: '', present: 'edisdayvhvsga', habitual: 'edisdayvhvsgoi', remote_past: 'edisdayvhnvi', imperative: 'edisdayvhvga', infinitive: 'edisdayvhdi']
         ]
     ]
 

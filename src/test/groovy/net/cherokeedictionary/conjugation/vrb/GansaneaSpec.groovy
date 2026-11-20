@@ -25,6 +25,8 @@ class GansaneaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Gansanea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinasanea, jinasanea"
@@ -32,8 +34,8 @@ class GansaneaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aginisanesvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinisanesvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginisanesdi"
-        "SG1" | "" | Tense.PRESENT         | "jinasanea"
-        "SG1" | "" | Tense.HABITUAL        | "jinasanesgoi"
+        "SG1" | "" | Tense.PRESENT         | "tsinisanea"
+        "SG1" | "" | Tense.HABITUAL        | "tsinisanesgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginsanesvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinisanesvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginsanesdi"

@@ -29,6 +29,8 @@ class GahyeaSpec extends VerbBaseSpec {
         // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
         // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
         // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyea"
@@ -38,7 +40,7 @@ class GahyeaSpec extends VerbBaseSpec {
         // "SG1" | "SG3AN" | Tense.INFINITIVE      | "/"
         "SG2" | "" | Tense.PRESENT         | "hihyea"
         // "SG2" | "" | Tense.HABITUAL        | "/"
-        "SG2" | "" | Tense.REMOTE_PAST     | "hiyayea"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsawayavi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwayavi"
         // "SG2" | "" | Tense.INFINITIVE      | "/"
         "SG1" | "" | Tense.PRESENT         | "tsiyayea, tsiyea"
@@ -48,8 +50,8 @@ class GahyeaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "agiwayesdi"
         "PL3" | "" | Tense.PRESENT         | "anihyea"
         "PL3" | "" | Tense.HABITUAL        | "anihyesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unahyavi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uniwayavi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwayavi"
-        "PL3" | "" | Tense.INFINITIVE      | "unahyesdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniwayesdi"
     }
 }

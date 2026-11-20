@@ -28,6 +28,8 @@ class DegvdiyeaSpec extends VerbBaseSpec {
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         // tio 20Nov26: expectations regenerated from the engine post-d-morpheme (D23/D24);
         // FUTURE_COMMAND rows left untouched (D1/D2 debt)
+        // tio 20Nov26: cells re-pinned to the engine post-DST h-branch fix (de-style keeps
+        // ᏕᎯ per guide 61a/117a; FUTURE_COMMAND + DST2-infinitive cells left for pending rulings)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "degvdiyea"
@@ -35,8 +37,8 @@ class DegvdiyeaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "dagwvdiyevi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gvdiyevi"
         "SG1" | "" | Tense.INFINITIVE      | "dagiwadiyedi"
-        "SG2" | "" | Tense.PRESENT         | "tidiyea"
-        "SG2" | "" | Tense.HABITUAL        | "tidiyesgoi"
+        "SG2" | "" | Tense.PRESENT         | "dehvdiyea"
+        "SG2" | "" | Tense.HABITUAL        | "dehvdiyesgoi"
         "SG2" | "" | Tense.REMOTE_PAST     | "dejvdiyevi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hvdiyevi"
         "SG2" | "" | Tense.INFINITIVE      | "detsawadiyedi"

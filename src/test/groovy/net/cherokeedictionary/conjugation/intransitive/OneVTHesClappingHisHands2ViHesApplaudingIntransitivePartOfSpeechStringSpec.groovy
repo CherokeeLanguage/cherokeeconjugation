@@ -31,7 +31,7 @@ class OneVTHesClappingHisHands2ViHesApplaudingIntransitivePartOfSpeechStringSpec
 	}
 
 	void testSG2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏘᏏᏛᏂᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏕᎭᏏᏛᏂᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23) // tio 20Nov26: re-pinned post-DST h-branch fix (de-style keeps the e before h-glyphs, guide 61a/117a)
 	}
 
 	void testSG3IntransitivePresent() {

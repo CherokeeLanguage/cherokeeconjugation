@@ -12,8 +12,8 @@ class GakahiyaaSpec extends VerbBaseSpec {
         definition: "Leave Behind (living)",
         part_of_speech: "v.t.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'jiyakahiyaa'],
-            [subject: 'SG1', object: 'SG3AN', present: 'jiyakahiyaa', habitual: 'jiyakahiyasgoi', remote_past: 'jiyakahiyvi', imperative: 'jiyakhiya', infinitive: 'jiyakahiyasdi'],
+            [subject: 'SG1', object: '', present: 'jiyakahiyaa'],
+            [subject: 'SG1', object: 'SG3AN', present: 'jiyakahiyaa', habitual: 'jiyakahiyasgoi', remote_past: 'jiyakahiyvi', imperative: 'jiyakahiya', infinitive: 'jiyakahiyasdi'],
             [subject: 'SG2', object: 'SG3AN', present: 'hiyakahiyaa', habitual: 'hiyakahiyasgoi', remote_past: 'hiyakahiyvi', imperative: 'hiyakahiya', infinitive: 'hiyakahiyasdi'],
             [subject: 'SG3', object: '', habitual: 'gakahiyasgoi', imperative: 'hiyakahiya', infinitive: 'uwakahiyasdi', present: 'gakahiyaa', remote_past: 'uwakahiyvi'],
             [subject: 'PL3', object: '', present: 'anikahiyaa', habitual: 'anikahiyasgoi', remote_past: 'unikahiyvi', imperative: 'anikahiya', infinitive: 'unikahiyasdi']

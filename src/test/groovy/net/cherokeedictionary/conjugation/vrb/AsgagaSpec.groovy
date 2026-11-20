@@ -14,11 +14,11 @@ class AsgagaSpec extends VerbBaseSpec {
         part_of_speech: "v.i.",
         conjugations: [
                 [subject: 'SG1', object: '', present: 'tsisgaga'],
-            [subject: 'SG1', object: '', present: 'tsisgaga', habitual: 'jisgagoi', remote_past: 'jisgajvi', imperative: 'jisgagi', infinitive: 'jisgaysdi'],
+            [subject: 'SG1', object: '', present: 'tsisgaga', habitual: 'jisgagoi', remote_past: 'jisgajvi', imperative: 'jisgagi', infinitive: 'jisgasdi'],
             [subject: 'SG2', object: '', present: 'hisgaga', habitual: 'hisgagoi', remote_past: 'hisgajvi', imperative: 'hisgagi', infinitive: '/'],
             [subject: 'SG3', object: '', habitual: 'asgagoi', imperative: 'hisgagi, hisgagi', infinitive: 'usgasdi', present: 'asgaga', remote_past: 'usgatsvi'],
-            [subject: 'PL3', object: '', present: 'anisgaga', habitual: 'anisgagoi', remote_past: 'unisgajvi', imperative: 'anisgagi', infinitive: 'unisgaysdi'],
-            [subject: 'PL1INCL', object: '', present: 'edisgaga', habitual: 'edisgagoi', remote_past: 'edisgajvi', imperative: 'edisgagi', infinitive: 'edisgaysdi']
+            [subject: 'PL3', object: '', present: 'anisgaga', habitual: 'anisgagoi', remote_past: 'unisgajvi', imperative: 'anisgagi', infinitive: 'unisgasdi'],
+            [subject: 'PL1INCL', object: '', present: 'edisgaga', habitual: 'edisgagoi', remote_past: 'edisgajvi', imperative: 'edisgagi', infinitive: 'edisgasdi']
         ]
     ]
 

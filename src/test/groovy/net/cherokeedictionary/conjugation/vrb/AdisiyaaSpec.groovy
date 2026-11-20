@@ -16,7 +16,7 @@ class AdisiyaaSpec extends VerbBaseSpec {
             [subject: 'SG1', object: '', present: 'jidisiyaa', habitual: 'jidisiyasgoi', remote_past: 'akdisiyvi', imperative: 'jidisiya', infinitive: 'akdisiyasdi'],
             [subject: 'SG2', object: '', present: 'hidisiyaa', habitual: 'hidisiyasgoi', remote_past: 'tsdisiyvi', imperative: 'hidisiya', infinitive: 'tsdisiyasdi'],
             [subject: 'SG3', object: '', habitual: 'adisiyasgoi', imperative: 'hidisiya', infinitive: 'udisiyasdi', present: 'adisiyaa', remote_past: 'udisiyvi'],
-            [subject: 'PL3', object: '', present: 'anidisiyaa', habitual: 'anidisaysgoi', remote_past: 'unidisiyvi', imperative: 'anidisiya', infinitive: 'unidisiyasdi']
+            [subject: 'PL3', object: '', present: 'anidisiyaa', habitual: 'anidisyasgoi', remote_past: 'unidisiyvi', imperative: 'anidisiya', infinitive: 'unidisiyasdi']
         ]
     ]
 
