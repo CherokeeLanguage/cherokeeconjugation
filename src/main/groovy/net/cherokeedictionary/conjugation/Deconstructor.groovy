@@ -56,7 +56,7 @@ class Deconstructor {
         'ji': ['Ꮵ', 'Ꮸ'],
         'wi': ['Ꮻ', 'Ꮼ', 'Ꮺ', 'Ꮽ', 'Ꮾ'],
         'ni': ['Ꮒ', 'Ꮓ', 'Ꮔ'],
-        'de': ['Ꮧ', 'Ꮩ', 'Ꮪ', 'Ꮷ', 'Ꮸ'],
+        'de': ['Ꮥ', 'Ꮧ', 'Ꮩ', 'Ꮪ', 'Ꮷ', 'Ꮸ'],
         'da': ['Ꮣ', 'Ꮨ', 'Ꮫ', 'Ꮩ'],
         'di': ['Ꮧ', 'Ꮣ', 'Ꮵ'],
         'i' : ['Ꭲ'],
@@ -289,11 +289,41 @@ class Deconstructor {
                 }
             }
         }
-        return bySurface.collect { surface, mg ->
+        def hits = bySurface.collect { surface, mg ->
             new AffixHit(surface: surface, layer: L_PRONOMINAL,
                     meanings: mg.meanings, glosses: mg.glosses)
         }.sort { -it.surface.size() }
+        // tio 20Nov26: D19 -- merge the synthetic 3sg-actor reading into the
+        // Ꭰ head's hit (ambiguity inside one hit per the all-analyses ruling).
+        if (base.startsWith('Ꭰ') && base.size() > 1) {
+            def aHit = hits.find { it.surface == 'Ꭰ' }
+            if (aHit) {
+                if (!aHit.meanings.contains(SG3_ACTOR_HIT.meanings[0])) {
+                    aHit.meanings << SG3_ACTOR_HIT.meanings[0]
+                    aHit.glosses << SG3_ACTOR_HIT.glosses[0]
+                }
+            } else {
+                hits << new AffixHit(surface: 'Ꭰ', layer: L_PRONOMINAL,
+                        meanings: new ArrayList(SG3_ACTOR_HIT.meanings),
+                        glosses: new ArrayList(SG3_ACTOR_HIT.glosses))
+                hits = hits.sort { -it.surface.size() }
+            }
+        }
+        return hits
     }
+
+    /**
+     * tio 20Nov26: D19 refinement -- the plain 3sg-actor reading. The Set A
+     * "he/she -> it" prefix (Ꭰ-, the citation-echo form) is composed UPSTREAM
+     * of the CompoundPrefixes table (SG3SG3IN carries only the Ꭶ- ga- allomorph),
+     * so the peel never saw it and a-initial forms lost their most common
+     * reading. Offered here as a synthetic candidate whenever the base starts
+     * with Ꭰ; ambiguity stays inside the hit per the all-analyses ruling.
+     */
+    private static final AffixHit SG3_ACTOR_HIT = new AffixHit(
+            surface: 'Ꭰ', layer: L_PRONOMINAL,
+            meanings: ['3rd person singular actor -> it (Set A citation-echo form Ꭰ-, composed upstream of the compound-prefix table)'],
+            glosses: ['SG3SG3IN (A)'])
 
     /** English reading for one prefixes-map key ("SG1SG2" / "SG1SG2B"). -- tio 19Nov26 */
     private static String pronominalMeaning(String key, Object prefix) {
