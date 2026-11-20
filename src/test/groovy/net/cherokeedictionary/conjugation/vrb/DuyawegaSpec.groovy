@@ -11,6 +11,11 @@ class DuyawegaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Tired/Not Well",
         part_of_speech: "v.i.",
+        // tio 20Nov26: D25 -- the u-fused da-verbs' SG3 FC column keeps the
+        // du- layer (duyawetsvi); per-verb variance, pinned here.
+        surfaceOverrides: [
+            [tense: 'FUTURE_COMMAND', subject: 'SG3', obj: 'NONE', form: 'duyawetsvi']
+        ],
         conjugations: [
                 [subject: 'SG1', object: '', present: 'dagiyawega'],
             [subject: 'SG1', object: '', present: 'dagiyawega', habitual: 'dagiyawegoi', remote_past: 'dagiyawejvi', imperative: 'digiyawegi', infinitive: 'digiyawesdi'],

@@ -10,6 +10,12 @@ class DuksesdiSpec extends VerbBaseSpec {
     static def details = [
         definition: "Studying",
         part_of_speech: "v.i.",
+        // tio 20Nov26: D25 -- the u-fused da-verbs' SG3 FC column keeps the
+        // du- layer (dugisestanvi) even though the engine's FC path drops the
+        // da-layer for the whole family; per-verb variance, pinned here.
+        surfaceOverrides: [
+            [tense: 'FUTURE_COMMAND', subject: 'SG3', obj: 'NONE', form: 'dugisestanvi']
+        ],
         conjugations: [
             [subject: 'SG1', object: '', present: 'dagwaksesdi', habitual: 'dagwaksesdoi', remote_past: 'dagwaksestanvi', imperative: 'digaksesda', infinitive: 'digwaksesdohdi'],
             [subject: 'SG2', object: '', present: 'dejaksesdi', habitual: 'dejaksesdoi', remote_past: 'dejaksestanvi', imperative: 'taksesda', infinitive: 'dijaksesdohdi'],

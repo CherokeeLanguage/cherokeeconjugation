@@ -87,6 +87,7 @@ class Conjugate {
             // whether da- extends to other persons of these verbs once more
             // book rows are attested.
             if (verb.stemmer?.normalizedDaInitialPrefix
+                    && verb.tense != Tense.FUTURE_COMMAND // tio 20Nov26: D25 -- the book's FC column carries NO da/de layer for ~all da-family verbs (Dadahnesea FC gadanesavi, Dekgiloa FC ugilovi even though its remote carries du-); the three u-fused exceptions (Duksesdi/Dulvwisdaneha/Duyawega SG3 FC keep du-) are pinned via details.surfaceOverrides, per-verb variance
                     && (verb.object == PrefixTableObject.SG3AN
                         || verb.object == PrefixTableObject.SG3IN)) {
                 // tio 19Nov26: SG3 gate widened to ALL subjects. The

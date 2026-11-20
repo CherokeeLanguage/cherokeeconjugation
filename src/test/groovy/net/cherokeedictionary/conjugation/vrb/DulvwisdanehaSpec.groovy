@@ -10,6 +10,11 @@ class DulvwisdanehaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Working",
         part_of_speech: "v.i.",
+        // tio 20Nov26: D25 -- the u-fused da-verbs' SG3 FC column keeps the
+        // du- layer (dulvwisdanelvi); per-verb variance, pinned here.
+        surfaceOverrides: [
+            [tense: 'FUTURE_COMMAND', subject: 'SG3', obj: 'NONE', form: 'dulvwisdanelvi']
+        ],
         conjugations: [
             [subject: 'SG1', object: '', present: 'dagilvwisdaneha', habitual: 'dagilvwisdanehoi', remote_past: 'dagilvwisdanelvi', imperative: 'digilvwisdasi', infinitive: 'digilvhwisdanehdi'],
             [subject: 'SG2', object: '', present: 'dejalvwisdaneha', habitual: 'dejalvwisdanehoi', remote_past: 'dejalvwisdanelvi', imperative: 'dijalvwisdasi', infinitive: 'dijalvhwisdanehdi'],

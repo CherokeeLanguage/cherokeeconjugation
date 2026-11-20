@@ -40,6 +40,27 @@
       "note": "Dahlilosdiha 'Drawing / Taking a Picture' -- de- distributive (DST, M-A section 10.1) whose infinitive uses the DST2 di- form (dijiyadlilosda/diga- rows) -- tio 20Nov26",
       "distributiveDst2": true
     },
+    "Duksesdi": {
+      "citation": "duksesdi",
+      "note": "Duksesdi 'Studying' -- u-fused da-verb whose SG3 FC column keeps the du- layer (D25 per-verb variance) -- tio 20Nov26",
+      "surfaceOverrides": [
+        { "tense": "FUTURE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "dugisestanvi" }
+      ]
+    },
+    "Dulvwisdaneha": {
+      "citation": "dulvwisdaneha",
+      "note": "Dulvwisdaneha 'Working' -- u-fused da-verb whose SG3 FC column keeps the du- layer (D25 per-verb variance) -- tio 20Nov26",
+      "surfaceOverrides": [
+        { "tense": "FUTURE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "dulvwisdanelvi" }
+      ]
+    },
+    "Duyawega": {
+      "citation": "duyawega",
+      "note": "Duyawega 'Tired/Not Well' -- u-fused da-verb whose SG3 FC column keeps the du- layer (D25 per-verb variance) -- tio 20Nov26",
+      "surfaceOverrides": [
+        { "tense": "FUTURE_COMMAND", "subject": "SG3", "obj": "NONE", "form": "duyawetsvi" }
+      ]
+    },
     "Danehldiha": {
       "citation": "danehldiha",
       "note": "Danehldiha 'Playing (with Him/It)' -- de- distributive (DST, M-A section 10.1) whose infinitive uses the DST2 di- form (dijiyanehldohdi/digwanehldohdi rows) -- tio 20Nov26",

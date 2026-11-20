@@ -86,6 +86,16 @@ public class Stemmer {
     public boolean normalizedDiStyle = false;
 
     /**
+     * tio 20Nov26: the citation carries a FUSED-u da- head (Ꮪ/Ꮷ on any stem
+     * entry -- To Work ᏚᎸᏫ, Duksesdi ᏚᎩᏍᏕ). Companion to
+     * normalizedDaOpenU/normalizedDaInitialPrefix: D25 needs it because the
+     * de-family's FUTURE_COMMAND drops the da-layer (Dadahnesea FC
+     * gadanesavi) while the u-fused da-verbs' SG3 FC keeps du- (Duksesdi
+     * FC dugisestanvi).
+     */
+    public boolean normalizedDaFuseU = false;
+
+    /**
      * tio 19Nov26: the de- (distributive/plural) spelling family, read from
      * the sg1 citation: running ᏕᏥᏍᏆᎵᏗᎭ / barking ᏕᎦᏑᏫᏍᎦ / snoring
      * ᏕᏥᏆᎳᎩᎠ / kneeling ᏕᎦᎵᏂᏆᏅᎥᏍᎦ = de + tsi-/ga- (1sg set A). The guide
@@ -480,6 +490,7 @@ public class Stemmer {
         if (daFamily) {
             normalizedDaInitialPrefix = true
             normalizedDaOpenU = anyOpenU && !anyFusedU
+            normalizedDaFuseU = anyFusedU // tio 20Nov26: D25 FC discriminator (see field javadoc)
             if (pres1DeStyle) {
                 // tio 19Nov26: de- distributive family -- consonant branch
                 // renders Ꮥ (de + tsi -> ᏕᏥ), and the a-branch is
