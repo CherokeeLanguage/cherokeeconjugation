@@ -9,6 +9,37 @@ book-unattested stem gaps) and [D24-RESIDUAL-REPORT.tsv](D24-RESIDUAL-REPORT.tsv
 
 ---
 
+## 2026-11-20 (evening) — FULL CORPUS RECONCILIATION: both suites GREEN (29,052 / 9,899)
+
+The entire D24-era failure mountain (~3,600 combined failures) resolved in one
+day, all citation-backed:
+
+1. **D21/D20** — M-A grammar settles it: Set A AN prefixes persist into Set B
+   tenses; the Ay\* ja-/igi- cells were inanimate leakage (5447b14).
+2. **D24 class 1** — 1,450 stale obj='' where-rows regenerated (1e71cdf).
+3. **D24 transitive groups** — 264 cells aligned per established rulings
+   (3c1c411); PL3 Set B = uni- ruled and implemented via PL3SG3ANB := Ꭴn/ᎤᏂ
+   (bd01227, guide P7(15) "they like him, it").
+4. **MATCHING_FIX.md** — 18,007 spellings scanned vs syllabary conversion, 61
+   flags left for the user's hand-fix pass (1b1d01c, 8572da3, 13c5d76).
+5. **DST/DST2** — PrefixDa h-branch keeps de- before h-glyphs (guide 61a/117a);
+   new `distributiveDst2` lexeme flag renders di- in local-person infinitives
+   (236d712, cb4c33f).
+6. **Dual/competing rows** — dual-reading containment + occurrence-aware
+   citation in the harness; AdloisgaSpec rename fixed a meta-spec cascade
+   (4e1317e).
+7. **D25 FC** — the book's FC column carries NO da/de initial-prefix layer:
+   the da-gate skips FUTURE_COMMAND (171 cells, one rule); three u-fused
+   exceptions pinned as lexeme data (6e21b40, a735a09).
+
+Conventions banked: v'i = vi for suffix tails (apostrophe not phonemic);
+DST2 is a local-person rule (SG3/PL3 infinitives keep ju-/jun-). Remaining:
+the user's MATCHING_FIX hand-fix pass; then the parked backlog (deconstruct
+refinements D19, verb-in/stem-free conjugation, verb-book generator). -- tio
+20Nov26
+
+---
+
 ## 2026-11-20 — Montgomery-Anderson grammar settles D21/D20: Set A AN prefixes persist into Set B tenses
 
 **What happened.** The Montgomery-Anderson Cherokee Reference Grammar
