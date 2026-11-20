@@ -1,6 +1,6 @@
 # MATCHING_FIX.md -- spellings that do not convert cleanly to syllabary
 
-Re-scan Fri Nov 20 12:16:44 CST 2026 by a one-off pass over every vrb spec's details.conjugations rows
+Re-scan Fri Nov 20 12:34:19 CST 2026 by a one-off pass over every vrb spec's details.conjugations rows
 and where-table expectations. Each entry: file, line, the quoted string, and what
 SyllabaryUtil.tsalagiToSyllabary made of it. Fix the spelling so it matches the CED
 syllabary parse-back (see DISCREPANCIES.md D9/D12 for the conventions). -- tio 20Nov26
@@ -8,39 +8,6 @@ syllabary parse-back (see DISCREPANCIES.md D9/D12 for the conventions). -- tio 2
 ## AdisiyaaSpec.groovy
 
 - line 19: "anidisaysgoi" -> ᎠᏂᏗᏌnot a valid letterᏍᎪᎢ
-
-## AdloysgaSpec.groovy
-
-- line 17: "gadloysgoi" -> ᎦᏠnot a valid letterᏍᎪᎢ
-- line 17: "akdloysvi" -> Ꭰnot a valid letterᏠnot a valid letterᏒᎢ
-- line 18: "hadloysga" -> ᎭᏠnot a valid letterᏍᎦ
-- line 18: "hadloysgoi" -> ᎭᏠnot a valid letterᏍᎪᎢ
-- line 18: "tsdloysvi" -> not a valid letterᏍᏠnot a valid letterᏒᎢ
-- line 20: "idadloysga" -> ᎢᏓᏠnot a valid letterᏍᎦ
-- line 20: "idadloysgoi" -> ᎢᏓᏠnot a valid letterᏍᎪᎢ
-- line 20: "igadloysvi" -> ᎢᎦᏠnot a valid letterᏒᎢ
-
-## AjihlosgaSpec.groovy
-
-- line 14: "vgwtlosga" -> Ꭵnot a valid letternot a valid letterᏠᏍᎦ
-- line 14: "vgwtlosgoi" -> Ꭵnot a valid letternot a valid letterᏠᏍᎪᎢ
-- line 14: "vgwtlosvi" -> Ꭵnot a valid letternot a valid letterᏠᏒᎢ
-- line 14: "vgwtlohi" -> Ꭵnot a valid letternot a valid letterᏠᎯ
-- line 14: "vgwtlohisdi" -> Ꭵnot a valid letternot a valid letterᏠᎯᏍᏗ
-
-## AlihelichehaSpec.groovy
-
-- line 20: "edalihelichecdi" -> ᎡᏓᎵᎮᎵᏤnot a valid letterᏗ
-
-## AsehehaSpec.groovy
-
-- line 16: "jiysehisi" -> Ꮵnot a valid letterᏎᎯᏏ
-
-## AsgagaSpec.groovy
-
-- line 17: "jisgaysdi" -> ᏥᏍᎦnot a valid letterᏍᏗ
-- line 20: "unisgaysdi" -> ᎤᏂᏍᎦnot a valid letterᏍᏗ
-- line 21: "edisgaysdi" -> ᎡᏗᏍᎦnot a valid letterᏍᏗ
 
 ## AsganvgaSpec.groovy
 
@@ -146,4 +113,4 @@ syllabary parse-back (see DISCREPANCIES.md D9/D12 for the conventions). -- tio 2
 
 ---
 
-Checked 18005 quoted spellings; 79 flagged.
+Checked 18005 quoted spellings; 61 flagged.
