@@ -719,7 +719,7 @@ D20 Set-A fallback is book-correct, which is exactly the D21 ruling. The
 earlier in-flight edits it had made were dropped when the vrb specs were
 restored to HEAD for this pass. -- tio 19Nov26
 
-## D25. FUTURE_COMMAND is not a remote echo: the book's FC column = Set A pronominal + INC stem + FCM suffix (2026-11-20, OPEN -- composition redesign pending)
+## D25. FUTURE_COMMAND is not a remote echo: the book's FC column = Set A pronominal + INC stem + FCM suffix (2026-11-20, RESOLVED EMPIRICALLY -- da-layer exclusion)
 
 **Finding (fc analysis over all 1,707 FC where-rows in the vrb corpus).** The
 D1 convention (futureCommand = remotePast) fails against the verb book's own
@@ -746,3 +746,20 @@ at all (book FC rows still show da- inside dadanes-, but not the de-
 distributive the non-FC tenses carry); (4) the -esdi FCM variant (M-A §4.3.5
 examples) vs -v'i. Scope: engine change touching EVERY verb's FC row; needs
 its own session with the 1,707-cell corpus as the safety net. -- tio 20Nov26
+
+**RESOLUTION tio 20Nov26 (commit 6e21b40).** The redesign collapsed to ONE
+rule: the book's FC column carries NO da/de initial-prefix layer. Conjugate's
+da-gate now skips FUTURE_COMMAND entirely -- 171 FC cells fixed in one change
+(Dadahnesea degadanesavi -> gadanesavi; Dekgiloa's FC drops to ugilovi even
+though its REMOTE carries du-). The three u-fused exceptions (Duksesdi
+dugisestanvi, Dulvwisdaneha dulvwisdanelvi, Duyawega duyawetsvi -- SG3 FC
+keeps du-) are per-verb variance pinned via details.surfaceOverrides +
+verbLexemes.json. The questions listed above resolved as: (1) stem = the
+remote-echo stem the engine already uses (only the layer was wrong); (2) the
+h-elision cases were downstream of the layer, not a separate rule; (3) NO
+da/de layer in FC for ~all verbs, du- exceptions are lexeme data; (4)
+-esdi/-v'i: untouched -- the engine's existing FC suffix convention held.
+normalizedDaFuseU added to Stemmer as a documented (non-load-bearing)
+discriminator. Remaining: 4 bare-stem SG2 SG3AN FC where-cells (Ugeyuha/
+Uksesdi/Ulvkwdi/Utvdasdi -- likely truncated rows) for user eyeball. -- tio
+20Nov26
