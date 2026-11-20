@@ -30,6 +30,7 @@ class AhyohaSpec extends VerbBaseSpec {
         // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
         // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
         // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
+        // tio 20Nov26: PL3 Set B cells re-pinned per user ruling + guide P7(15)/126a (uni- serves all 3rd-person objects; y/a stem spelling per the SG3 row)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyoha"
@@ -51,7 +52,7 @@ class AhyohaSpec extends VerbBaseSpec {
         "PL3" | "SG3AN" | Tense.HABITUAL        | "anihyohoi"
         "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unihyalvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "aniyalvi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniysdi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniyasdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edihyoha"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edihyohoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edihyalvi"

@@ -28,6 +28,7 @@ class DanehldihaSpec extends VerbBaseSpec {
         expect:
         conjugateVerb("Danehldiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
         // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
+        // tio 20Nov26: PL3 Set B cells re-pinned per user ruling + guide P7(15)/126a (uni- serves all 3rd-person objects; y/a stem spelling per the SG3 row)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "dejiyanehldiha"
@@ -59,7 +60,7 @@ class DanehldihaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.HABITUAL        | "dananehldisgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "dunanehltanvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "ananelotanvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "junanehldohdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "tsuninelotodi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "dedanehldiha"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "dedanehldisgoi"
         "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "deganehltanvi"

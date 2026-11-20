@@ -30,6 +30,7 @@ class GahlihaSpec extends VerbBaseSpec {
         // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
         // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
         // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
+        // tio 20Nov26: PL3 Set B cells re-pinned per user ruling + guide P7(15)/126a (uni- serves all 3rd-person objects; y/a stem spelling per the SG3 row)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "tsitliha"
@@ -52,8 +53,8 @@ class GahlihaSpec extends VerbBaseSpec {
         // "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "unitlvna"  // unattested (book p.14)
         "SG3" | "SG3IN" | Tense.FUTURE_COMMAND      | "gatli"
         // "SG3" | "SG3IN" | Tense.INFINITIVE      | "utlvnvdi"
-        "PL3" | "SG3IN" | Tense.PRESENT         | "idihliha"
-        "PL3" | "SG3IN" | Tense.HABITUAL        | "idihlihoi"
+        "PL3" | "SG3IN" | Tense.PRESENT         | "anitliha"
+        "PL3" | "SG3IN" | Tense.HABITUAL        | "anitlihoi"
         // "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "uninitlvna"  // unattested (book p.14)
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anitli"
         // "PL3" | "SG3IN" | Tense.INFINITIVE      | "unitlvnvdi"

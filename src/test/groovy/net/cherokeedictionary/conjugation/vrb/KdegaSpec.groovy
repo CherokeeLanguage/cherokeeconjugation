@@ -30,6 +30,7 @@ class KdegaSpec extends VerbBaseSpec {
         // tio 20Nov26: transitive cells re-pinned to the engine per established rulings
         // (CED-canonical parse-back D9/D12, intrusive-h droppable D18, i-epenthesis D16,
         // a-drop; de/da + PL3 Set-B questions left for explicit adjudication)
+        // tio 20Nov26: PL3 Set B cells re-pinned per user ruling + guide P7(15)/126a (uni- serves all 3rd-person objects; y/a stem spelling per the SG3 row)
         where:
         subj      | obj | tense             | expected
         "SG1" | "SG3AN" | Tense.PRESENT         | "jiyvdega"
@@ -49,9 +50,9 @@ class KdegaSpec extends VerbBaseSpec {
         "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwvdeisdi"
         "PL3" | "SG3AN" | Tense.PRESENT         | "anvdega"
         "PL3" | "SG3AN" | Tense.HABITUAL        | "anvdegoi"
-        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "undejvi"
+        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unvdetsvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anvdetsvi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "undeisdi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "uniwvdeisdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edvdega"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edvdegoi"
         "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edvdetsvi"

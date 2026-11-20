@@ -497,7 +497,7 @@ class CompoundPrefixes {
         //P4(5) g- "he's forgetting him" vs P4(6) uw- "he's forgetting it" — a verb-class
         //difference this single table cannot express; noted, not modeled.)
         prefixes.put("SG3SG3ANB", new Prefix(preVowel: 'Ꭴw', preConsonant: 'Ꭴ', other: ''))// P8(5) uw-; App. B p.178 (he->it) shows u-/(uw-)
-        prefixes.put("PL3SG3ANB", new Prefix(preVowel: 'Ꭰn', preConsonant: 'ᎠᏂ', other: ''))// = Set A PL3SG3AN (ani-); P4(21) prints the same an-; App. B Class B blank
+        prefixes.put("PL3SG3ANB", new Prefix(preVowel: 'Ꭴn', preConsonant: 'ᎤᏂ', other: ''))// tio 20Nov26: user ruling -- Set B PL3 subject serves ALL 3rd-person objects with uni- (mirrors PL3SG3INB). Guide: hold1 P7(15) ᎤᏂᎸᏉᏗ u¹ni²lv²³kwdi "they like HIM, IT" (one form, both objects), (126a) ᎤᏂᎪᎲᎢ "they saw it". The earlier ani- (= Set A PL3SG3AN, D20 fallback) came from P4(21) anv²kew²sga "they're forgetting him" -- a PRESENT cell of a class-B-always verb; present-tense ani- cells already pass via Set A. CED details rows (Ahyoha unihyalvi etc.) are uni-. -- tio 20Nov26
         //P8(6): ᏚᏩᏂᎸᎢ du¹wa²hnị³lv³ʔi "he hit them (an or in)" — duw- covers both
         //animate and inanimate plural objects with a 3sg subject (Set A has degi-).
         prefixes.put("SG3PL3ANB", new Prefix(preVowel: 'Ꮪw', preConsonant: 'Ꮪ', other: ''))// P8(6) duw-; App. B p.178 (he->them) degi- | du- ✓
