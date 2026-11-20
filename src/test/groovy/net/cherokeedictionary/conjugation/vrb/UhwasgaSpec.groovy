@@ -25,6 +25,7 @@ class UhwasgaSpec extends VerbBaseSpec {
     def "conjugating Uhwasga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uhwasga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agiwasga"
@@ -32,25 +33,25 @@ class UhwasgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "agiwasvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agiwasvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiwahisdi"
-        "SG2" | "" | Tense.PRESENT         | "tsawasga"
-        "SG2" | "" | Tense.HABITUAL        | "tsawasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsawasvi"
+        "SG2" | "" | Tense.PRESENT         | "jahwasga"
+        "SG2" | "" | Tense.HABITUAL        | "jahwasgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahwasvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsawasvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawahisdi"
-        "SG3" | "" | Tense.PRESENT         | "uwasga"
-        "SG3" | "" | Tense.HABITUAL        | "uwasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwasvi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahwahisdi"
+        "SG3" | "" | Tense.PRESENT         | "uhwasga"
+        "SG3" | "" | Tense.HABITUAL        | "uhwasgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhwasvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwasvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwahisdi"
-        "PL3" | "" | Tense.PRESENT         | "uniwasga"
-        "PL3" | "" | Tense.HABITUAL        | "uniwasgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniwasvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhwahisdi"
+        "PL3" | "" | Tense.PRESENT         | "unihwasga"
+        "PL3" | "" | Tense.HABITUAL        | "unihwasgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihwasvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniwasvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwahisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igiwasga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igiwasgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiwasvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unihwahisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igihwasga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igihwasgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igihwasvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiwasvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwahisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igihwahisdi"
     }
 }

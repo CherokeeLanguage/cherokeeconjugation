@@ -24,27 +24,28 @@ class AditasgaSpec extends VerbBaseSpec {
     def "conjugating Aditasga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Aditasga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gaditasga"
         "SG1" | "" | Tense.HABITUAL        | "gaditasgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquaditahvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwaditahvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gaditahvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquaditasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwaditasdi"
         "SG2" | "" | Tense.PRESENT         | "haditasga"
         "SG2" | "" | Tense.HABITUAL        | "haditasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsaditahvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jaditahvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "haditahvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsaditasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jaditasdi"
         "SG3" | "" | Tense.PRESENT         | "aditasga"
         "SG3" | "" | Tense.HABITUAL        | "aditasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uditahvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aditahvi"
         "SG3" | "" | Tense.INFINITIVE      | "uditasdi"
-        "SG3" | "" | Tense.PRESENT         | "aditasga"
-        "SG3" | "" | Tense.HABITUAL        | "aditasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uditahvi"
+        "SG3" | "" | Tense.PRESENT         | "anaditasga"
+        "SG3" | "" | Tense.HABITUAL        | "anaditasgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unaditahvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aditahvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uditasdi"
+        "SG3" | "" | Tense.INFINITIVE      | "unaditasdi"
     }
 }

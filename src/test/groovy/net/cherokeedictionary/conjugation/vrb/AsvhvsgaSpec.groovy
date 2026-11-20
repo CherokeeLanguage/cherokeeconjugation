@@ -25,32 +25,33 @@ class AsvhvsgaSpec extends VerbBaseSpec {
     def "conjugating Asvhvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asvhvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsisvhvsga"
-        "SG1" | "" | Tense.HABITUAL        | "tsisvhvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisvnvi"
+        "SG1" | "" | Tense.PRESENT         | "jisvhvsga"
+        "SG1" | "" | Tense.HABITUAL        | "jisvhvsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksvhnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisvnvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisvhvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksvhvsdi"
         "SG2" | "" | Tense.PRESENT         | "hisvhvsga"
         "SG2" | "" | Tense.HABITUAL        | "hisvhvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasvnvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsvhnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisvnvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasvhvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsvhvsdi"
         "SG3" | "" | Tense.PRESENT         | "asvhvsga"
         "SG3" | "" | Tense.HABITUAL        | "asvhvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usvnvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usvhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asvnvi"
         "SG3" | "" | Tense.INFINITIVE      | "usvhvsdi"
         "PL3" | "" | Tense.PRESENT         | "anisvhvsga"
         "PL3" | "" | Tense.HABITUAL        | "anisvhvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisvnvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisvhnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anisvnvi"
         "PL3" | "" | Tense.INFINITIVE      | "unisvhvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisvhvsga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisvhvsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisvnvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksvhnvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisvnvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisvhvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iksvhvsdi"
     }
 }

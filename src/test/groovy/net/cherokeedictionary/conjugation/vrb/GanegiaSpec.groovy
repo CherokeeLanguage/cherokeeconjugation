@@ -24,26 +24,27 @@ class GanegiaSpec extends VerbBaseSpec {
     def "conjugating Ganegia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganegia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinegia"
-        "SG1" | "" | Tense.HABITUAL        | "tsinegisgoi"
+        "SG1" | "" | Tense.PRESENT         | "jinegia"
+        "SG1" | "" | Tense.HABITUAL        | "jinegisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginegisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinegisvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginegisdi"
         "SG2" | "" | Tense.PRESENT         | "hinegia"
         "SG2" | "" | Tense.HABITUAL        | "hinegisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanegisvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janegisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinegisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanegisdi"
-        "SG1" | "" | Tense.PRESENT         | "tsinegia"
-        "SG1" | "" | Tense.HABITUAL        | "tsinegisgoi"
+        "SG2" | "" | Tense.INFINITIVE      | "janegisdi"
+        "SG1" | "" | Tense.PRESENT         | "jinegia"
+        "SG1" | "" | Tense.HABITUAL        | "jinegisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginegisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinegisvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginegisdi"
         "PL3" | "" | Tense.PRESENT         | "aninegia"
         "PL3" | "" | Tense.HABITUAL        | "aninegisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninegisvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uningegisvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninegisvi"
         "PL3" | "" | Tense.INFINITIVE      | "uninegisdi"
     }

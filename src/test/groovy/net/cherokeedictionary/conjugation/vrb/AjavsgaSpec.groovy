@@ -26,11 +26,12 @@ class AjavsgaSpec extends VerbBaseSpec {
     def "conjugating Ajavsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ajavsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gatsavsga"
-        "SG1" | "" | Tense.HABITUAL        | "gatsavsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquatsanvi"
+        "SG1" | "" | Tense.HABITUAL        | "gajavsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwajanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatsanvi"
         // tio 18Nov26: INFINITIVE WIRED -- the earlier "ABSENT from the 2012
         // book" reading was WRONG (user glottal-apostrophe ruling): Aja'vsga is
@@ -41,9 +42,9 @@ class AjavsgaSpec extends VerbBaseSpec {
         // (id 72429 ᎠᏣᎥᏍᎦ = atsavsga; Feeling's book writes ja'-/jv where CED
         // writes tsa -- orthography variance, parse-back convention keeps CED).
         "SG1" | "" | Tense.INFINITIVE      | "agwajodi"
-        "SG2" | "" | Tense.PRESENT         | "hatsavsga"
-        "SG2" | "" | Tense.HABITUAL        | "hatsavsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsanvi"
+        "SG2" | "" | Tense.PRESENT         | "hajavsga"
+        "SG2" | "" | Tense.HABITUAL        | "hajavsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jajanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatsanvi"
         "SG2" | "" | Tense.INFINITIVE      | "jajodi"
         "SG3" | "" | Tense.PRESENT         | "atsavsga"
@@ -51,14 +52,14 @@ class AjavsgaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "utsanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atsanvi"
         "SG3" | "" | Tense.INFINITIVE      | "ujodi"
-        "PL3" | "" | Tense.PRESENT         | "anatsavsga"
-        "PL3" | "" | Tense.HABITUAL        | "anatsavsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatsanvi"
+        "PL3" | "" | Tense.PRESENT         | "anajavsga"
+        "PL3" | "" | Tense.HABITUAL        | "anajavsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unajanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatsanvi"
         "PL3" | "" | Tense.INFINITIVE      | "unajodi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idatsavsga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idatsavsgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsanvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idajavsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idajavsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igajanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatsanvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igajodi"
     }

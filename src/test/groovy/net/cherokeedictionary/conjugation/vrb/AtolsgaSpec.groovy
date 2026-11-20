@@ -25,6 +25,7 @@ class AtolsgaSpec extends VerbBaseSpec {
     def "conjugating Atolsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Atolsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadolisga"
@@ -32,25 +33,25 @@ class AtolsgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aquadolisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadolisvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquadotlisdi"
-        "SG2" | "" | Tense.PRESENT         | "hadolisga"
-        "SG2" | "" | Tense.HABITUAL        | "hadolisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadolisvi"
+        "SG2" | "" | Tense.PRESENT         | "hatolsga"
+        "SG2" | "" | Tense.HABITUAL        | "hatolsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jatolsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadolisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadotlisdi"
-        "SG3" | "" | Tense.PRESENT         | "adolisga"
-        "SG3" | "" | Tense.HABITUAL        | "adolisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udolisvi"
+        "SG2" | "" | Tense.INFINITIVE      | "jatohlisdi"
+        "SG3" | "" | Tense.PRESENT         | "atolsga"
+        "SG3" | "" | Tense.HABITUAL        | "atolsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utolsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adolisvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udotlisdi"
-        "PL3" | "" | Tense.PRESENT         | "anadolisga"
-        "PL3" | "" | Tense.HABITUAL        | "anadolisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadolisvi"
+        "SG3" | "" | Tense.INFINITIVE      | "utohlisdi"
+        "PL3" | "" | Tense.PRESENT         | "anatolsga"
+        "PL3" | "" | Tense.HABITUAL        | "anatolsgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unatolsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadolisvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadotlisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadolisga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idadolisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadolisvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unatohlisdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idatolsga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idatolsgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatolsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadolisvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadotlisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igatohlisdi"
     }
 }

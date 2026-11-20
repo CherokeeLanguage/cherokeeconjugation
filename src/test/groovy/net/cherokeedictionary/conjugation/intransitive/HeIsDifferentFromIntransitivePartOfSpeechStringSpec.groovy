@@ -27,11 +27,11 @@ class HeIsDifferentFromIntransitivePartOfSpeechStringSpec extends GroovyTestCase
 	}
 
 	void testSG1IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᎦᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᏕᎦᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᎭᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏘᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG3IntransitivePresent() {
@@ -39,31 +39,31 @@ class HeIsDifferentFromIntransitivePartOfSpeechStringSpec extends GroovyTestCase
 	}
 
 	void testDL1INCLIntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.DL1INCL.toString())) == "ᎢᎾᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.DL1INCL.toString())) == "ᏓᎾᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testDL1EXCLIntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.DL1EXCL.toString())) == "ᎣᏍᏓᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.DL1EXCL.toString())) == "ᏓᏲᏍᏓᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testPL1INCLIntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.PL1INCL.toString())) == "ᎢᏓᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.PL1INCL.toString())) == "ᏓᏓᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testPL1EXCLIntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.PL1EXCL.toString())) == "ᎣᏣᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.PL1EXCL.toString())) == "ᏓᏲᏣᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testDL2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.DL2.toString())) == "ᏍᏓᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.DL2.toString())) == "ᏕᏍᏓᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testPL2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.PL2.toString())) == "ᎢᏣᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.PL2.toString())) == "ᏓᏣᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testPL3IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.PL3.toString())) == "ᎠᎾᏓᎴᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.PL3.toString())) == "ᏓᎾᏓᎴᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 }

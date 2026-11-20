@@ -23,12 +23,13 @@ class AhyahtvhvsgaSpec extends VerbBaseSpec {
     def "conjugating Ahyahtvhvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahyahtvhvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ayadvhvsga"
-        "SG3" | "" | Tense.HABITUAL        | "ayadvhvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyadvnvi"
+        "SG3" | "" | Tense.PRESENT         | "ahyahtvhvsga"
+        "SG3" | "" | Tense.HABITUAL        | "ahyahtvhvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhyahtvhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayadvnvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyadvtidi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhyahtvtdi"
     }
 }

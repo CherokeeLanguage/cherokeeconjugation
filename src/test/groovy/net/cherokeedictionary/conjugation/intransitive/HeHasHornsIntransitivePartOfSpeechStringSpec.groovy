@@ -27,11 +27,11 @@ class HeHasHornsIntransitivePartOfSpeechStringSpec extends GroovyTestCase {
 	}
 
 	void testSG1IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᎠᎩᎷᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᏓᎩᎷᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏣᎷᎦ"
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏓᏣᎷᎦ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG3IntransitivePresent() {

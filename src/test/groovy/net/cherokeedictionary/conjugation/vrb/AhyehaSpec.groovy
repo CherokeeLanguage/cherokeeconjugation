@@ -31,6 +31,7 @@ class AhyehaSpec extends VerbBaseSpec {
     def "conjugating Ahyeha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahyeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jiyeha"
@@ -39,20 +40,20 @@ class AhyehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "jiyehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "jiyehvi"
         "SG1" | "" | Tense.INFINITIVE      | "jiyehi"
-        "SG2" | "" | Tense.PRESENT         | "hiyeha"
-        "SG2" | "" | Tense.HABITUAL        | "hiyehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsayehvi"
+        "SG2" | "" | Tense.PRESENT         | "hihyeha"
+        "SG2" | "" | Tense.HABITUAL        | "hihyehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hihyehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiyehvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsayehi"
+        "SG2" | "" | Tense.INFINITIVE      | "hihyehi"
         "SG3" | "" | Tense.PRESENT         | "ayeha"
         "SG3" | "" | Tense.HABITUAL        | "ayehoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyehvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ayehvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayehvi"
         "SG3" | "" | Tense.INFINITIVE      | "uyehi"
-        "PL3" | "" | Tense.PRESENT         | "aniyeha"
-        "PL3" | "" | Tense.HABITUAL        | "aniyehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniyehvi"
+        "PL3" | "" | Tense.PRESENT         | "anihyeha"
+        "PL3" | "" | Tense.HABITUAL        | "anihyehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "anihyehvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniyehvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniyehi"
+        "PL3" | "" | Tense.INFINITIVE      | "anihyehi"
     }
 }

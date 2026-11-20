@@ -24,27 +24,28 @@ class AhvsgaSpec extends VerbBaseSpec {
     def "conjugating Ahvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsihvsga"
-        "SG1" | "" | Tense.HABITUAL        | "tsihvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginvi"
+        "SG1" | "" | Tense.PRESENT         | "jivsga"
+        "SG1" | "" | Tense.HABITUAL        | "jivsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agihnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agidi"
+        "SG1" | "" | Tense.INFINITIVE      | "agihdi"
         "SG2" | "" | Tense.PRESENT         | "hihvsga"
         "SG2" | "" | Tense.HABITUAL        | "hihvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahdi"
         "SG3" | "" | Tense.PRESENT         | "ahvsga"
         "SG3" | "" | Tense.HABITUAL        | "ahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhdi"
         "PL3" | "" | Tense.PRESENT         | "anihvsga"
         "PL3" | "" | Tense.HABITUAL        | "anihvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unidi"
+        "PL3" | "" | Tense.INFINITIVE      | "unihdi"
     }
 }

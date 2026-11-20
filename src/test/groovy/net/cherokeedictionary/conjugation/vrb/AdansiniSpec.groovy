@@ -57,38 +57,39 @@ class AdansiniSpec extends VerbBaseSpec {
     def "conjugating Adansini (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adansini", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadanasini"
         "SG1" | "" | Tense.HABITUAL        | "gadanasinegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadanasinvsvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadansinvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadanasinvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquadanasinvsdi"
-        "SG2" | "" | Tense.PRESENT         | "hadanasini"
-        "SG2" | "" | Tense.HABITUAL        | "hadanasinegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadanasinvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwadansinvsdi"
+        "SG2" | "" | Tense.PRESENT         | "hadansini"
+        "SG2" | "" | Tense.HABITUAL        | "hadansinegoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadansinvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadanasinvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadanasinvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadansinvsdi"
         // tio 17Nov26: the SG3 PRESENT cell short-circuits to the stemmer's normalized
         // citation upstream of the surface-override check, so the book form (adanasini,
         // ᎠᏓᎾᏏᏂ) cannot be overridden here -- the engine re-derives the root as
         // adansini and applies the generic i-epenthesis (ᎠᏓᏂᏏᏂ). Characterized to
         // engine output; the a-epenthesis verdict stands per the book p.67 forms
         // asserted on every other cell. -- tio 17Nov26
-        "SG3" | "" | Tense.PRESENT         | "adanisini"
-        "SG3" | "" | Tense.HABITUAL        | "adanisinegoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udanasinvsvi"
+        "SG3" | "" | Tense.PRESENT         | "adansini"
+        "SG3" | "" | Tense.HABITUAL        | "adansinegoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udansinvsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adanasinvsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udanasinvsdi"
-        "PL3" | "" | Tense.PRESENT         | "anadanasini"
-        "PL3" | "" | Tense.HABITUAL        | "anadanasinegoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadanasinvsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udansinvsdi"
+        "PL3" | "" | Tense.PRESENT         | "anadansini"
+        "PL3" | "" | Tense.HABITUAL        | "anadansinegoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadansinvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadanasinvsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadanasinvsdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadanasini"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idadanasinegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadanasinvsvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadansinvsdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadansini"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idadansinegoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadansinvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadanasinvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadanasinvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadansinvsdi"
     }
 }

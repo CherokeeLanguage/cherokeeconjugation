@@ -22,27 +22,28 @@ class GanehvsgaSpec extends VerbBaseSpec {
     def "conjugating Ganehvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganehvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinehvsga"
-        "SG1" | "" | Tense.HABITUAL        | "tsinehvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginenvi"
+        "SG1" | "" | Tense.PRESENT         | "jinevsga"
+        "SG1" | "" | Tense.HABITUAL        | "jinevsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginehnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinenvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginedi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginehdi"
         "SG2" | "" | Tense.PRESENT         | "hinehvsga"
         "SG2" | "" | Tense.HABITUAL        | "hinehvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanenvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janehnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinenvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanedi"
-        "SG1" | "" | Tense.PRESENT         | "tsinehvsga"
-        "SG1" | "" | Tense.HABITUAL        | "tsinehvsgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginenvi"
+        "SG2" | "" | Tense.INFINITIVE      | "janehdi"
+        "SG1" | "" | Tense.PRESENT         | "jinevsga"
+        "SG1" | "" | Tense.HABITUAL        | "jinevsgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginehnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinenvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginedi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginehdi"
         "PL3" | "" | Tense.PRESENT         | "aninehvsga"
         "PL3" | "" | Tense.HABITUAL        | "aninehvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninenvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninehnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninenvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninedi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninehdi"
     }
 }

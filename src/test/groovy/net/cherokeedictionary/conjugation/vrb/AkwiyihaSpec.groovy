@@ -26,32 +26,33 @@ class AkwiyihaSpec extends VerbBaseSpec {
     def "conjugating Akwiyiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Akwiyiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gaquiyiha"
-        "SG1" | "" | Tense.HABITUAL        | "gaquiyisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquaquiyvhvi"
+        "SG1" | "" | Tense.HABITUAL        | "gagwiyisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "akikwiyvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gaquiyvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquaquiyvdi"
-        "SG2" | "" | Tense.PRESENT         | "haquiyiha"
-        "SG2" | "" | Tense.HABITUAL        | "haquiyisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsaquiyvhvi"
+        "SG1" | "" | Tense.INFINITIVE      | "akikwiyhdi"
+        "SG2" | "" | Tense.PRESENT         | "hakwiyiha"
+        "SG2" | "" | Tense.HABITUAL        | "hakwiyisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jakwiyvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "haquiyvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsaquiyvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jakwiyhdi"
         "SG3" | "" | Tense.PRESENT         | "aquiyiha"
         "SG3" | "" | Tense.HABITUAL        | "aquiyisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uquiyvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "aquiyvhvi"
         "SG3" | "" | Tense.INFINITIVE      | "uquiyvdi"
-        "PL3" | "" | Tense.PRESENT         | "anaquiyiha"
-        "PL3" | "" | Tense.HABITUAL        | "anaquiyisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unaquiyvhvi"
+        "PL3" | "" | Tense.PRESENT         | "anakwiyiha"
+        "PL3" | "" | Tense.HABITUAL        | "anakwiyisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unikwiyvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anaquiyvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unaquiyvdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idaquiyiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idaquiyisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaquiyvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unakwiyhdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idakwiyiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idakwiyisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igikwiyvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idaquiyvhvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igaquiyvdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igakwiyhdi"
     }
 }

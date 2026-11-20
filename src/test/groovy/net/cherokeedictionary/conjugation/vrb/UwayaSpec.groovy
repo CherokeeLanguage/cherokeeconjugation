@@ -37,11 +37,12 @@ class UwayaSpec extends VerbBaseSpec {
     def "conjugating Uwaya (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uwaya", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquvya"
-        "SG1" | "" | Tense.HABITUAL        | "aquvyoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquvyvi"
+        "SG1" | "" | Tense.HABITUAL        | "agwvyoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwvyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquvyvi"
         // tio 17Nov26: infinitives supplied from the 2012 book p.83 (agwvdisdi/jvdisdi/udisdi/unvdisdi). DIVERGENCE (D15): the engine composes the SG3 infinitive with a wa-epenthesis (uwadisdi) where the book prints udisdi -- characterized to engine output.
         "SG1" | "" | Tense.INFINITIVE      | "agwvdisdi"
@@ -55,10 +56,10 @@ class UwayaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
         "SG3" | "" | Tense.INFINITIVE      | "udisdi"
-        "SG3" | "" | Tense.PRESENT         | "uwaya"
-        "SG3" | "" | Tense.HABITUAL        | "uwayoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwayvi"
+        "SG3" | "" | Tense.PRESENT         | "unvya"
+        "SG3" | "" | Tense.HABITUAL        | "unvyoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unvyvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwayvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "unvdisdi"
     }
 }

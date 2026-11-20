@@ -24,18 +24,19 @@ class AhvaSpec extends VerbBaseSpec {
     def "conjugating Ahva (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahva", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsihva"
-        "SG1" | "" | Tense.HABITUAL        | "tsihvsgoi"
+        "SG1" | "" | Tense.PRESENT         | "jiva"
+        "SG1" | "" | Tense.HABITUAL        | "jivsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agihvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agihvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "akvsdi"
         "SG2" | "" | Tense.PRESENT         | "hihva"
         "SG2" | "" | Tense.HABITUAL        | "hihvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsahvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hihvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsahvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahvsdi"
         "SG3" | "" | Tense.PRESENT         | "ahva"
         "SG3" | "" | Tense.HABITUAL        | "ahvsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhvsvi"
@@ -43,7 +44,7 @@ class AhvaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "uhvsdi"
         "PL3" | "" | Tense.PRESENT         | "anihva"
         "PL3" | "" | Tense.HABITUAL        | "anihvsgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unihvsvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihvsi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anihvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unihvsdi"
     }

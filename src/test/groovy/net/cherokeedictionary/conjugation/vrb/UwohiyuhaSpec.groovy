@@ -26,16 +26,17 @@ class UwohiyuhaSpec extends VerbBaseSpec {
     def "conjugating Uwohiyuha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uwohiyuha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquohiyuha"
-        "SG1" | "" | Tense.HABITUAL        | "aquohiyusoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquohiyusvi"
+        "SG1" | "" | Tense.HABITUAL        | "agwohiyusoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwohiyusvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquohiyusvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "tsohiyuha"
-        "SG2" | "" | Tense.HABITUAL        | "tsohiyusoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsohiyusvi"
+        "SG2" | "" | Tense.PRESENT         | "johiyuha"
+        "SG2" | "" | Tense.HABITUAL        | "johiyusoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "johiyusvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsohiyusvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "uwohiyuha"

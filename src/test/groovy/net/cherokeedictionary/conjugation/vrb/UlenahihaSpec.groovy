@@ -25,31 +25,32 @@ class UlenahihaSpec extends VerbBaseSpec {
     def "conjugating Ulenahiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ulenahiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aqualenahiha"
-        "SG1" | "" | Tense.HABITUAL        | "aqualenahihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aqualenatlvi"
+        "SG1" | "" | Tense.PRESENT         | "agwalenahiha"
+        "SG1" | "" | Tense.HABITUAL        | "agwalenahihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwalenahlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aqualenatlvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aqualenasdi"
-        "SG2" | "" | Tense.PRESENT         | "tsalenahiha"
-        "SG2" | "" | Tense.HABITUAL        | "tsalenahihoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsalenatlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwalenasdi"
+        "SG2" | "" | Tense.PRESENT         | "jalenahiha"
+        "SG2" | "" | Tense.HABITUAL        | "jalenahihoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jalenahlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsalenatlvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsalenasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jalenasdi"
         "SG3" | "" | Tense.PRESENT         | "ulenahiha"
         "SG3" | "" | Tense.HABITUAL        | "ulenahihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulenatlvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulenahlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ulenatlvi"
         "SG3" | "" | Tense.INFINITIVE      | "ulenasdi"
         "PL3" | "" | Tense.PRESENT         | "unalenahiha"
         "PL3" | "" | Tense.HABITUAL        | "unalenahihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unalenatlvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unalenahlvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unalenatlvi"
         "PL3" | "" | Tense.INFINITIVE      | "unalenasdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igalenahiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igalenahihoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalenatlvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalenahlvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igalenatlvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igalenasdi"
     }

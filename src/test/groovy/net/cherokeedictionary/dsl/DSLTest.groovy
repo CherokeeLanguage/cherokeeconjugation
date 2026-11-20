@@ -6,6 +6,8 @@ import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.conjugation.Conjugate
+import net.cherokeedictionary.conjugation.ConjugateBase
 
 show = { println it }
 square_root = { Math.sqrt(it) }
@@ -61,3 +63,4 @@ assert verb.stemmer == verb1.stemmer
 assert verb.tense == verb1.tense
 assert verb.subject == verb1.subject
 assert verb.object == verb1.object
+

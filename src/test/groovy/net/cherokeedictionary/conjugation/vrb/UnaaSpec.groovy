@@ -29,6 +29,7 @@ class UnaaSpec extends VerbBaseSpec {
     def "conjugating Unaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Unaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aginaa"
@@ -36,11 +37,11 @@ class UnaaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aginavi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aginavi"
         "SG1" | "" | Tense.INFINITIVE      | "aginvdi"
-        "SG2" | "" | Tense.PRESENT         | "tsanaa"
-        "SG2" | "" | Tense.HABITUAL        | "tsanaoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanavi"
+        "SG2" | "" | Tense.PRESENT         | "janaa"
+        "SG2" | "" | Tense.HABITUAL        | "janaoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janavi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanavi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "janvdi"
         "SG3" | "" | Tense.PRESENT         | "unaa"
         "SG3" | "" | Tense.HABITUAL        | "unaoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unavi"

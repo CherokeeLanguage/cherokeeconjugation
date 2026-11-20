@@ -24,27 +24,28 @@ class AdehaSpec extends VerbBaseSpec {
     def "conjugating Adeha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsideha"
-        "SG1" | "" | Tense.HABITUAL        | "tsidehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agidelvi"
+        "SG1" | "" | Tense.PRESENT         | "jideha"
+        "SG1" | "" | Tense.HABITUAL        | "jidehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "jidelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agidedi"
+        "SG1" | "" | Tense.INFINITIVE      | "jidehdi"
         "SG2" | "" | Tense.PRESENT         | "hideha"
         "SG2" | "" | Tense.HABITUAL        | "hidehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadelvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hidelvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hidelvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadedi"
+        "SG2" | "" | Tense.INFINITIVE      | "hidehdi"
         "SG3" | "" | Tense.PRESENT         | "adeha"
         "SG3" | "" | Tense.HABITUAL        | "adehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udelvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adelvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udedi"
+        "SG3" | "" | Tense.INFINITIVE      | "udehdi"
         "PL3" | "" | Tense.PRESENT         | "anideha"
         "PL3" | "" | Tense.HABITUAL        | "anidehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unidelvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anidelvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unidedi"
+        "PL3" | "" | Tense.INFINITIVE      | "unidehdi"
     }
 }

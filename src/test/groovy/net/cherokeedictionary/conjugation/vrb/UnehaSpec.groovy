@@ -24,27 +24,28 @@ class UnehaSpec extends VerbBaseSpec {
     def "conjugating Uneha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agineha"
         "SG1" | "" | Tense.HABITUAL        | "aginehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aginehvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginedi"
-        "SG2" | "" | Tense.PRESENT         | "tsaneha"
-        "SG2" | "" | Tense.HABITUAL        | "tsanehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginehdi"
+        "SG2" | "" | Tense.PRESENT         | "janeha"
+        "SG2" | "" | Tense.HABITUAL        | "janehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanehvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanedi"
+        "SG2" | "" | Tense.INFINITIVE      | "janehdi"
         "SG3" | "" | Tense.PRESENT         | "uneha"
         "SG3" | "" | Tense.HABITUAL        | "unehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unehvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "unehvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unedi"
+        "SG3" | "" | Tense.INFINITIVE      | "unehdi"
         "PL3" | "" | Tense.PRESENT         | "unineha"
         "PL3" | "" | Tense.HABITUAL        | "uninehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uninehvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninedi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninehdi"
     }
 }

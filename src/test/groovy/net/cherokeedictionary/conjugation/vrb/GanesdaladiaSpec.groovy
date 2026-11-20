@@ -21,9 +21,10 @@ class GanesdaladiaSpec extends VerbBaseSpec {
     def "conjugating Ganesdaladia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganesdaladia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinesdaladia"
+        "SG1" | "" | Tense.PRESENT         | "jinesdaladia"
         "SG1" | "" | Tense.HABITUAL        | "tsinesdaladisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginesdaladvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinesdaladvi"

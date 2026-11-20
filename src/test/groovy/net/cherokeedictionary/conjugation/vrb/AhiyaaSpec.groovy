@@ -24,18 +24,19 @@ class AhiyaaSpec extends VerbBaseSpec {
     def "conjugating Ahiyaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahiyaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsihiyaa"
-        "SG1" | "" | Tense.HABITUAL        | "tsihiyasgoi"
+        "SG1" | "" | Tense.PRESENT         | "jiiyaa"
+        "SG1" | "" | Tense.HABITUAL        | "jiiyasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agihiyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihiyvi"
         "SG1" | "" | Tense.INFINITIVE      | "agihiyasdi"
         "SG2" | "" | Tense.PRESENT         | "hihiyaa"
         "SG2" | "" | Tense.HABITUAL        | "hihiyasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsahiyvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahiyvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hihiyvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsahiyasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahiyasdi"
         "SG3" | "" | Tense.PRESENT         | "ahiyaa"
         "SG3" | "" | Tense.HABITUAL        | "ahiyasgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uhiyvi"

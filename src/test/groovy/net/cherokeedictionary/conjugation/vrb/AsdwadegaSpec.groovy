@@ -23,18 +23,19 @@ class AsdwadegaSpec extends VerbBaseSpec {
     def "conjugating Asdwadega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asdwadega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsisdawadega"
-        "SG1" | "" | Tense.HABITUAL        | "tsisdawadegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisdawadvsvi"
+        "SG1" | "" | Tense.PRESENT         | "jisdawadega"
+        "SG1" | "" | Tense.HABITUAL        | "jisdawadegoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksdawadvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisdawadvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisdawadvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksdawadvsdi"
         "SG2" | "" | Tense.PRESENT         | "hisdawadega"
         "SG2" | "" | Tense.HABITUAL        | "hisdawadegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasdawadvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsdawadvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisdawadvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasdawadvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsdawadvsdi"
         "SG3" | "" | Tense.PRESENT         | "asdawadega"
         "SG3" | "" | Tense.HABITUAL        | "asdawadegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usdawadvsvi"
@@ -47,8 +48,8 @@ class AsdwadegaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.INFINITIVE      | "unisdawadvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisdawadega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisdawadegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisdawadvsvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksdawadvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisdawadvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisdawadvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iksdawadvsdi"
     }
 }

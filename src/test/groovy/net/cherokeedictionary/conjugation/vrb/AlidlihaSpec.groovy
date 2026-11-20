@@ -26,12 +26,13 @@ class AlidlihaSpec extends VerbBaseSpec {
         def syllabary = SyllabaryUtil.tsalagiToSyllabary(expected)
 
         conjugateVerb("Alidliha", details, subj, obj, tenz, expected) == syllabary
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "alitliha"
-        "SG3" | "" | Tense.HABITUAL        | "alitlisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulitlvhvi"
+        "SG3" | "" | Tense.PRESENT         | "alidliha"
+        "SG3" | "" | Tense.HABITUAL        | "alidlisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulidlvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "alitlvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulilodi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulihldi"
     }
 }

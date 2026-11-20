@@ -25,18 +25,19 @@ class AsinegaSpec extends VerbBaseSpec {
     def "conjugating Asinega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asinega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gasinega"
         "SG1" | "" | Tense.HABITUAL        | "gasinegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquasinvsvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwasinvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gasinvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquasinvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwasinvsdi"
         "SG2" | "" | Tense.PRESENT         | "hasinega"
         "SG2" | "" | Tense.HABITUAL        | "hasinegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasinvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jasinvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hasinvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasinvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jasinvsdi"
         "SG3" | "" | Tense.PRESENT         | "asinega"
         "SG3" | "" | Tense.HABITUAL        | "asinegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usinvsvi"

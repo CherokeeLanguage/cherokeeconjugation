@@ -21,22 +21,23 @@ class AtihnegaSpec extends VerbBaseSpec {
     def "conjugating Atihnega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Atihnega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyatinega"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyatinegoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyatinvsvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyatihnega"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyatihnegoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyatihnvsvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyatinvsvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyatinvsdi"
-        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyatinega"
-        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyatinegoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "atinvsvi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyatihnvsdi"
+        "SG2" | "SG3AN" | Tense.PRESENT         | "hiyatihnega"
+        "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyatihnegoi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyatihnvsvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyatinvsvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "atinvsdi"
-        "SG3" | "" | Tense.PRESENT         | "atinega"
-        "SG3" | "" | Tense.HABITUAL        | "atinegoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "utinvsvi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyatihnvsdi"
+        "SG3" | "" | Tense.PRESENT         | "atihnega"
+        "SG3" | "" | Tense.HABITUAL        | "atihnegoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "utihnvsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atinvsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utinvsdi"
+        "SG3" | "" | Tense.INFINITIVE      | "utihnvsdi"
     }
 }

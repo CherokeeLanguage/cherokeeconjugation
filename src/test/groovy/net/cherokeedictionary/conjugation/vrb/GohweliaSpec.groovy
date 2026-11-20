@@ -25,6 +25,7 @@ class GohweliaSpec extends VerbBaseSpec {
     def "conjugating Gohwelia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gohwelia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gowelia"
@@ -32,25 +33,25 @@ class GohweliaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aquowelanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gowelanvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiwowelodi"
-        "SG2" | "" | Tense.PRESENT         | "howelia"
-        "SG2" | "" | Tense.HABITUAL        | "howelisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsowelanvi"
+        "SG2" | "" | Tense.PRESENT         | "dehowelia"
+        "SG2" | "" | Tense.HABITUAL        | "dehohwelisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "johwelanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "howelanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawowelodi"
-        "SG3" | "" | Tense.PRESENT         | "gowelia"
-        "SG3" | "" | Tense.HABITUAL        | "gowelisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwowelanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "johwelohdi"
+        "SG3" | "" | Tense.PRESENT         | "gohwelia"
+        "SG3" | "" | Tense.HABITUAL        | "gohwelisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwohwelanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "owelanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwowelodi"
-        "PL3" | "" | Tense.PRESENT         | "anowelia"
-        "PL3" | "" | Tense.HABITUAL        | "anowelisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unowelanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uwohwelodi"
+        "PL3" | "" | Tense.PRESENT         | "danohwelia"
+        "PL3" | "" | Tense.HABITUAL        | "danohwelisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "dunohwelanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anowelanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwowelodi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idowelia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idowelisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igowelanvi"
+        "PL3" | "" | Tense.INFINITIVE      | "junohwelohdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dedohwelia"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dedohwelisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degohwelanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idowelanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwowelodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "digohwelohdi"
     }
 }

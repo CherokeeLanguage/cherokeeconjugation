@@ -25,18 +25,19 @@ class GawonihaSpec extends VerbBaseSpec {
     def "conjugating Gawoniha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gawoniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsiwoniha"
-        "SG1" | "" | Tense.HABITUAL        | "tsiwonisgoi"
+        "SG1" | "" | Tense.PRESENT         | "jiwoniha"
+        "SG1" | "" | Tense.HABITUAL        | "jiwonisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiwonisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwonisvi"
         "SG1" | "" | Tense.INFINITIVE      | "agiwonihisdi"
         "SG2" | "" | Tense.PRESENT         | "hiwoniha"
         "SG2" | "" | Tense.HABITUAL        | "hiwonisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsawonisvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jawonisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwonisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawonihisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jawonihisdi"
         "SG3" | "" | Tense.PRESENT         | "gawoniha"
         "SG3" | "" | Tense.HABITUAL        | "gawonisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwonisvi"

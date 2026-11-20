@@ -19,12 +19,13 @@ class KanegwogaSpec extends VerbBaseSpec {
     def "conjugating Kanegwoga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Kanegwoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "kanequoga"
-        "SG3" | "" | Tense.HABITUAL        | "kanequogoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unequotsvi"
+        "SG3" | "" | Tense.PRESENT         | "kanegwoga"
+        "SG3" | "" | Tense.HABITUAL        | "kanegwogoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhnehgwojvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganequotsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unequoisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhnehgwoisdi"
     }
 }

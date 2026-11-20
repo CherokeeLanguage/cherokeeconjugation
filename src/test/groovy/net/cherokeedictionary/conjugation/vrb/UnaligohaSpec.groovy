@@ -27,6 +27,7 @@ class UnaligohaSpec extends VerbBaseSpec {
     def "conjugating Unaligoha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Unaligoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aginaligoha"
@@ -34,25 +35,25 @@ class UnaligohaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aginaligosvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aginaligosvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginadalisohdi"
-        "SG2" | "" | Tense.PRESENT         | "tsanaligoha"
-        "SG2" | "" | Tense.HABITUAL        | "tsanaligosoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanaligosvi"
+        "SG2" | "" | Tense.PRESENT         | "ogaligoha"
+        "SG2" | "" | Tense.HABITUAL        | "ogaligosoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "ogaligosvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanaligosvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanadalisohdi"
+        "SG2" | "" | Tense.INFINITIVE      | "ogadalisohdi"
         "SG3" | "" | Tense.PRESENT         | "unaligoha"
         "SG3" | "" | Tense.HABITUAL        | "unaligosoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unaligosvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "unaligosvi"
         "SG3" | "" | Tense.INFINITIVE      | "unadalisohdi"
-        "PL3" | "" | Tense.PRESENT         | "uninaligoha"
-        "PL3" | "" | Tense.HABITUAL        | "uninaligosoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninaligosvi"
+        "PL3" | "" | Tense.PRESENT         | "ijaligoha"
+        "PL3" | "" | Tense.HABITUAL        | "ijaligosoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "ijaligosvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uninaligosvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninadalisohdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "iginaligoha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "iginaligosoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginaligosvi"
+        "PL3" | "" | Tense.INFINITIVE      | "ijadalisohdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igaligoha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igaligosoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaligosvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iginaligosvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadalisohdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadalisohdi"
     }
 }

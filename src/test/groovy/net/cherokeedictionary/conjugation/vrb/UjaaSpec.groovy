@@ -26,16 +26,17 @@ class UjaaSpec extends VerbBaseSpec {
     def "conjugating Ujaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ujaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquatsaa"
-        "SG1" | "" | Tense.HABITUAL        | "aquatsaoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquatsavi"
+        "SG1" | "" | Tense.HABITUAL        | "agwajaoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwajavi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquatsavi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "tsatsaa"
-        "SG2" | "" | Tense.HABITUAL        | "tsatsaoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsavi"
+        "SG2" | "" | Tense.PRESENT         | "jajaa"
+        "SG2" | "" | Tense.HABITUAL        | "jajaoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jajavi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsatsavi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "utsaa"
@@ -43,14 +44,14 @@ class UjaaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "utsavi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "utsavi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "unatsaa"
-        "PL3" | "" | Tense.HABITUAL        | "unatsaoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatsavi"
+        "PL3" | "" | Tense.PRESENT         | "unajaa"
+        "PL3" | "" | Tense.HABITUAL        | "unajaoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unajavi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unatsavi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
-        "PL1INCL" | "" | Tense.PRESENT         | "igatsaa"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igatsaoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsavi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igajaa"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igajaoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igajavi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igatsavi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }

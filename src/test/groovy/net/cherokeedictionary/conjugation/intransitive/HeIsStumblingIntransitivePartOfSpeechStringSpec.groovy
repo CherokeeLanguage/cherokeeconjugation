@@ -27,11 +27,11 @@ class HeIsStumblingIntransitivePartOfSpeechStringSpec extends GroovyTestCase {
 	}
 
 	void testSG1IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᎠᏆᏙᎨᎯᏙᎭ"
+		assert conj(String.valueOf(PrefixTableSubject.SG1.toString())) == "ᏓᏆᏙᎨᎯᏙᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏣᏙᎨᎯᏙᎭ"
+		assert conj(String.valueOf(PrefixTableSubject.SG2.toString())) == "ᏗᏣᏙᎨᎯᏙᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testSG3IntransitivePresent() {
@@ -39,7 +39,7 @@ class HeIsStumblingIntransitivePartOfSpeechStringSpec extends GroovyTestCase {
 	}
 
 	void testDL1INCLIntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.DL1INCL.toString())) == "ᏓᎩᎾᏙᎨᎯᏙᎭ"
+		assert conj(String.valueOf(PrefixTableSubject.DL1INCL.toString())) == "ᏗᎩᎾᏙᎨᎯᏙᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testDL1EXCLIntransitivePresent() {
@@ -55,7 +55,7 @@ class HeIsStumblingIntransitivePartOfSpeechStringSpec extends GroovyTestCase {
 	}
 
 	void testDL2IntransitivePresent() {
-		assert conj(String.valueOf(PrefixTableSubject.DL2.toString())) == "ᏓᏍᏓᏙᎨᎯᏙᎭ"
+		assert conj(String.valueOf(PrefixTableSubject.DL2.toString())) == "ᏗᏍᏓᏙᎨᎯᏙᎭ" // tio 19Nov26: regenerated post-d-morpheme fix (D23)
 	}
 
 	void testPL2IntransitivePresent() {

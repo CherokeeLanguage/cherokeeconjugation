@@ -29,10 +29,11 @@ class AhilehaSpec extends VerbBaseSpec {
     def "conjugating Ahileha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahileha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsihileha"
-        "SG1" | "" | Tense.HABITUAL        | "tsihilehoi"
+        "SG1" | "" | Tense.PRESENT         | "tsiileha"
+        "SG1" | "" | Tense.HABITUAL        | "jiilehoi"
         // tio 17Nov26: REMOTE_PAST UNATTESTED -- yaml junk value dropped.
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsihile"
         "SG1" | "" | Tense.INFINITIVE      | "agihilvsdi"

@@ -23,12 +23,13 @@ class AdalenihaSpec extends VerbBaseSpec {
     def "conjugating Adaleniha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adaleniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "adaleniha"
         "SG3" | "" | Tense.HABITUAL        | "adalenisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udalenvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adalenvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udalenadi"
+        "SG3" | "" | Tense.INFINITIVE      | "udalenhdi"
     }
 }

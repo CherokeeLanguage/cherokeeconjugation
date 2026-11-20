@@ -25,6 +25,7 @@ class GanadegaSpec extends VerbBaseSpec {
     def "conjugating Ganadega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganadega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsinadega"
@@ -34,9 +35,9 @@ class GanadegaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "aginadinvdi"
         "SG2" | "" | Tense.PRESENT         | "hinadega"
         "SG2" | "" | Tense.HABITUAL        | "hinadegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanadinvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janadinvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinadinvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanadinvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "janadinvsdi"
         "SG3" | "" | Tense.PRESENT         | "ganadega"
         "SG3" | "" | Tense.HABITUAL        | "ganadegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unadinvsvi"
@@ -46,11 +47,11 @@ class GanadegaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "aninadegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninadinvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninadinvsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninadinvdi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninadinvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinadega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinadegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginadinvsvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "idinadinvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinadinvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iginadinvsdi"
     }
 }

@@ -26,16 +26,17 @@ class UhnihaSpec extends VerbBaseSpec {
     def "conjugating Uhniha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uhniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquaniha"
-        "SG1" | "" | Tense.HABITUAL        | "aquanihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquanihvi"
+        "SG1" | "" | Tense.HABITUAL        | "agwahnihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwahnihvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquanihvi"
         // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book (Uhniha, In Bed) prints x in the infinitive column.
-        "SG2" | "" | Tense.PRESENT         | "tsaniha"
-        "SG2" | "" | Tense.HABITUAL        | "tsanihoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanihvi"
+        "SG2" | "" | Tense.PRESENT         | "jahniha"
+        "SG2" | "" | Tense.HABITUAL        | "jahnihoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahnihvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanihvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "uniha"
@@ -43,14 +44,14 @@ class UhnihaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "unihvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "unihvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "unaniha"
-        "PL3" | "" | Tense.HABITUAL        | "unanihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unanihvi"
+        "PL3" | "" | Tense.PRESENT         | "unahniha"
+        "PL3" | "" | Tense.HABITUAL        | "unahnihoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unahnihhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unanihvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
-        "PL1INCL" | "" | Tense.PRESENT         | "iganiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "iganihoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iganihvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igahniha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igahnihoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igahnihvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iganihvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }

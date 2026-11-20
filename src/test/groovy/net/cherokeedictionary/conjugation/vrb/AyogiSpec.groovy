@@ -19,11 +19,12 @@ class AyogiSpec extends VerbBaseSpec {
     def "conjugating Ayogi (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ayogi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "ayogi"
         "SG3" | "" | Tense.HABITUAL        | "ayogoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyotsvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uyojvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayotsvi"
         "SG3" | "" | Tense.INFINITIVE      | "uyosdi"
     }

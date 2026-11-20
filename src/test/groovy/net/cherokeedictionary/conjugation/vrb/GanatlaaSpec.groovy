@@ -23,16 +23,17 @@ class GanatlaaSpec extends VerbBaseSpec {
     def "conjugating Ganatlaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganatlaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinatlaa"
-        "SG1" | "" | Tense.HABITUAL        | "tsinatlaoi"
+        "SG1" | "" | Tense.PRESENT         | "jinatlaa"
+        "SG1" | "" | Tense.HABITUAL        | "jinatlaoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginatlavi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinatlavi"
         // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book (Ganatla'a p.74) prints x in the infinitive column.
         "SG2" | "" | Tense.PRESENT         | "hinatlaa"
         "SG2" | "" | Tense.HABITUAL        | "hinatlaoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanatlavi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janatlavi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinatlavi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "ganatlaa"

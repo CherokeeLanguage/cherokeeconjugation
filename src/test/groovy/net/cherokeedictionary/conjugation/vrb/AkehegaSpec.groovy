@@ -24,6 +24,7 @@ class AkehegaSpec extends VerbBaseSpec {
     def "conjugating Akehega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Akehega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsigehega"
@@ -31,15 +32,15 @@ class AkehegaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "agigehvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigehvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "agigehvsdi"
-        "PL3" | "" | Tense.PRESENT         | "anigehega"
-        "PL3" | "" | Tense.HABITUAL        | "anigehegoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unigehvsvi"
+        "PL3" | "" | Tense.PRESENT         | "anikehega"
+        "PL3" | "" | Tense.HABITUAL        | "anikehegoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unikehvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anigehvsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unigehvsdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idigehega"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idigehegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igigehvsvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unikehvsdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idikehega"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idikehegoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igikehvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idigehvsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igigehvsdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igikehvsdi"
     }
 }

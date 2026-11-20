@@ -25,18 +25,19 @@ class GalegaSpec extends VerbBaseSpec {
     def "conjugating Galega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Galega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsilega"
-        "SG1" | "" | Tense.HABITUAL        | "tsilegoi"
+        "SG1" | "" | Tense.PRESENT         | "jilega"
+        "SG1" | "" | Tense.HABITUAL        | "jilegoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agilvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsilvsvi"
         "SG1" | "" | Tense.INFINITIVE      | "agilvsdi"
         "SG2" | "" | Tense.PRESENT         | "hilega"
         "SG2" | "" | Tense.HABITUAL        | "hilegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsalvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jalvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hilvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsalvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jalvsdi"
         "SG3" | "" | Tense.PRESENT         | "galega"
         "SG3" | "" | Tense.HABITUAL        | "galegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulvsvi"

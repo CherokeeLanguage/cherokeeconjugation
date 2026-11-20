@@ -26,16 +26,17 @@ class AsgagaSpec extends VerbBaseSpec {
     def "conjugating Asgaga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asgaga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsisgaga"
-        "SG1" | "" | Tense.HABITUAL        | "tsisgagoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisgatsvi"
+        "SG1" | "" | Tense.HABITUAL        | "jisgagoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "jisgajvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisgatsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisgasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "jisgaysdi"
         "SG2" | "" | Tense.PRESENT         | "hisgaga"
         "SG2" | "" | Tense.HABITUAL        | "hisgagoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasgatsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hisgajvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisgatsvi"
         // "SG2" | "" | Tense.INFINITIVE      | "/"
         "SG3" | "" | Tense.PRESENT         | "asgaga"
@@ -45,13 +46,13 @@ class AsgagaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "usgasdi"
         "PL3" | "" | Tense.PRESENT         | "anisgaga"
         "PL3" | "" | Tense.HABITUAL        | "anisgagoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisgatsvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisgajvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anisgatsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unisgasdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idisgaga"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idisgagoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisgatsvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unisgaysdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "edisgaga"
+        "PL1INCL" | "" | Tense.HABITUAL        | "edisgagoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "edisgajvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisgatsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisgasdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "edisgaysdi"
     }
 }

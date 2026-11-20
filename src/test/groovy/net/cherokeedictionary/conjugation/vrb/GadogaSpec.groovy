@@ -24,6 +24,7 @@ class GadogaSpec extends VerbBaseSpec {
     def "conjugating Gadoga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gadoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsidoga"
@@ -34,12 +35,12 @@ class GadogaSpec extends VerbBaseSpec {
         // "SG1" | "" | Tense.REMOTE_PAST     | "x"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsido"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "anidoga"
+        "PL3" | "" | Tense.PRESENT         | "danidoga"
         // "PL3" | "" | Tense.HABITUAL        | "/"
         // "PL3" | "" | Tense.REMOTE_PAST     | "anidonaa"  // unattested (book prints x; anidona'a is the 3+-standing PRESENT alternate)
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anido"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
-        "PL1INCL" | "" | Tense.PRESENT         | "ididoga"
+        "PL1INCL" | "" | Tense.PRESENT         | "dedidoga"
         // "PL1INCL" | "" | Tense.HABITUAL        | "/"
         // "PL1INCL" | "" | Tense.REMOTE_PAST     | "ididonaa"  // unattested (book prints x; ididona'a is the 3+-standing PRESENT alternate)
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idido"

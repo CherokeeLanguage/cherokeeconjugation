@@ -33,33 +33,34 @@ class AdihaSpec extends VerbBaseSpec {
     def "conjugating Adiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         // tio 17Nov26: SG1 present re-aligned to the book glottal form (D6).
         "SG1" | "" | Tense.PRESENT         | "gadia"
         "SG1" | "" | Tense.HABITUAL        | "gadisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadvnvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadvhnvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadvnvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquatidi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwatdi"
         "SG2" | "" | Tense.PRESENT         | "hadiha"
         "SG2" | "" | Tense.HABITUAL        | "hadisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvnvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadvhnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadvnvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsatidi"
+        "SG2" | "" | Tense.INFINITIVE      | "jatdi"
         "SG3" | "" | Tense.PRESENT         | "adiha"
         "SG3" | "" | Tense.HABITUAL        | "adisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udvnvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udvhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "advnvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utidi"
+        "SG3" | "" | Tense.INFINITIVE      | "utdi"
         "PL3" | "" | Tense.PRESENT         | "anadiha"
         "PL3" | "" | Tense.HABITUAL        | "anadisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadvnvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadvhnvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadvnvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unatidi"
+        "PL3" | "" | Tense.INFINITIVE      | "unatdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idadiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idadisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadvnvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadvhnvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadvnvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igatidi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igatdi"
     }
 }

@@ -24,18 +24,19 @@ class AdiaSpec extends VerbBaseSpec {
     def "conjugating Adia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsidia"
-        "SG1" | "" | Tense.HABITUAL        | "tsidisgoi"
+        "SG1" | "" | Tense.PRESENT         | "jidia"
+        "SG1" | "" | Tense.HABITUAL        | "jidisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agidvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsidvi"
         "SG1" | "" | Tense.INFINITIVE      | "agidisdi"
         "SG2" | "" | Tense.PRESENT         | "hidia"
         "SG2" | "" | Tense.HABITUAL        | "hidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hidvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadisdi"
         "SG3" | "" | Tense.PRESENT         | "adia"
         "SG3" | "" | Tense.HABITUAL        | "adisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udvi"

@@ -1,0 +1,2068 @@
+# D24-RESIDUAL-REPORT.tsv -- vrb expectations vs engine, tio 19Nov26
+# Generated from ./gradlew test -PincludeVrb --tests "net.cherokeedictionary.conjugation.vrb.*"
+# after the corrected align_where.pl pass (D24). Regenerate the same way; do not hand-edit.
+# NOTE: expected_book is the spec's own detail row (book/CED transcription).
+#       engine_actual is the first Cherokee token in the Spock failure output (best effort).
+#       Differences may be ORTHOGRAPHIC (j-/ts-, v-/i-, written/unwritten h) or STRUCTURAL
+#       (prefix set A/B, d-prefix, distributive) -- adjudicate per D21/D22; do not bulk-rewrite.
+#
+# totals: vrb tests 19140, failures 2034
+#   exposed-by-alignment (expectation == this spec's single unambiguous detail row): 1847
+#   not-caused-by-pass (expectation unchanged from HEAD): 187
+#   left untouched by the pass: 87 ambiguous (competing detail rows), 181 no-details,
+#                              1777 FUTURE_COMMAND (D1/D2 debt, never synthesized)
+#
+# specs aligned: 382 (5,004 cells)
+#
+# exposed failures by subject/object:
+#    378  SG2      obj=''
+#    329  PL1INCL  obj=''
+#    319  SG1      obj=''
+#    233  PL3      obj=''
+#    217  SG3      obj=''
+#     83  SG1      obj='SG3AN'
+#     60  SG2      obj='SG3AN'
+#     47  PL1INCL  obj='SG3AN'
+#     44  PL3      obj='SG3AN'
+#     38  PL1INCL  obj='SG3IN'
+#     35  SG2      obj='SG3IN'
+#     33  SG1      obj='SG3IN'
+#     28  PL3      obj='SG3IN'
+#      3  SG3      obj='SG3AN'
+# exposed failures by tense: INFINITIVE=597, REMOTE_PAST=487, HABITUAL=382, PRESENT=381
+#
+spec	subj	obj	tense	expected_book	engine_actual	category
+AdahyihaSpec	SG1	SG3AN	INFINITIVE	jiyadayisdi	ᏥᏯᏓᏴᏍᏗ	exposed-by-alignment
+AdahyihaSpec	SG2	SG3AN	INFINITIVE	hiyadayisdi	ᎯᏯᏓᏴᏍᏗ	exposed-by-alignment
+AdanawsdihaSpec	PL1INCL		HABITUAL	dedadanawsdisgoi	ᎢᏓᏓᎾᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+AdanawsdihaSpec	PL1INCL		PRESENT	dedadanawsdiha	ᎢᏓᏓᎾᏮᏍᏗᎭ	exposed-by-alignment
+AdanawsdihaSpec	PL3		HABITUAL	danadanawsdisgoi	ᎠᎾᏓᎾᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+AdanawsdihaSpec	PL3		PRESENT	danadanawsdiha	ᎠᎾᏓᎾᏮᏍᏗᎭ	exposed-by-alignment
+AdanhtehiloaSpec	PL1INCL		PRESENT	idadanvtehiloa	ᎢᏓᏓᎾᏖᎯᎶᎠ	exposed-by-alignment
+AdanhtehiloaSpec	PL3		PRESENT	anadanvtehiloa	ᎠᎾᏓᎾᏖᎯᎶᎠ	exposed-by-alignment
+AdanhtehiloaSpec	SG1		PRESENT	gadanvtehiloa	ᎦᏓᎾᏖᎯᎶᎠ	exposed-by-alignment
+AdanhtehiloaSpec	SG2		PRESENT	hadanvtehiloa	ᎭᏓᎾᏖᎯᎶᎠ	exposed-by-alignment
+AdansiniSpec	PL1INCL		HABITUAL	idadansinegoi	ᎢᏓᏓᎾᏏᏁᎪᎢ	exposed-by-alignment
+AdansiniSpec	PL1INCL		INFINITIVE	igadansinvsdi	ᎢᎦᏓᎾᏏᏅᏍᏗ	exposed-by-alignment
+AdansiniSpec	PL1INCL		PRESENT	idadansini	ᎢᏓᏓᎾᏏᏂ	exposed-by-alignment
+AdansiniSpec	PL1INCL		REMOTE_PAST	igadansinvsvi	ᎢᎦᏓᎾᏏᏅᏒᎢ	exposed-by-alignment
+AdansiniSpec	PL3		HABITUAL	anadansinegoi	ᎠᎾᏓᎾᏏᏁᎪᎢ	exposed-by-alignment
+AdansiniSpec	PL3		INFINITIVE	unadansinvsdi	ᎤᎾᏓᎾᏏᏅᏍᏗ	exposed-by-alignment
+AdansiniSpec	PL3		PRESENT	anadansini	ᎠᎾᏓᎾᏏᏂ	exposed-by-alignment
+AdansiniSpec	PL3		REMOTE_PAST	unadansinvsvi	ᎤᎾᏓᎾᏏᏅᏒᎢ	exposed-by-alignment
+AdansiniSpec	SG1		INFINITIVE	agwadansinvsdi	ᎠᏆᏓᎾᏏᏅᏍᏗ	exposed-by-alignment
+AdansiniSpec	SG1		REMOTE_PAST	agwadansinvsvi	ᎠᏆᏓᎾᏏᏅᏒᎢ	exposed-by-alignment
+AdansiniSpec	SG2		HABITUAL	hadansinegoi	ᎭᏓᎾᏏᏁᎪᎢ	exposed-by-alignment
+AdansiniSpec	SG2		INFINITIVE	jadansinvsdi	ᏣᏓᎾᏏᏅᏍᏗ	exposed-by-alignment
+AdansiniSpec	SG2		PRESENT	hadansini	ᎭᏓᎾᏏᏂ	exposed-by-alignment
+AdansiniSpec	SG2		REMOTE_PAST	jadansinvsvi	ᏣᏓᎾᏏᏅᏒᎢ	exposed-by-alignment
+AdansiniSpec	SG3		INFINITIVE	udansinvsdi	ᎤᏓᎾᏏᏅᏍᏗ	exposed-by-alignment
+AdansiniSpec	SG3		REMOTE_PAST	udansinvsvi	ᎤᏓᎾᏏᏅᏒᎢ	exposed-by-alignment
+AdantehaSpec	SG1		HABITUAL	gadanvtesgoi	ᎦᏓᏂᏖᏍᎪᎢ	exposed-by-alignment
+AdantehaSpec	SG1		PRESENT	gadanvteha	ᎦᏓᏂᏖᎭ	exposed-by-alignment
+AdehaSpec	SG1		INFINITIVE	jidehdi	ᎠᎩᏕᏗ	exposed-by-alignment
+AdehaSpec	SG1		REMOTE_PAST	jidelvi	ᎠᎩᏕᎸᎢ	exposed-by-alignment
+AdehaSpec	SG2		INFINITIVE	hidehdi	ᏣᏕᏗ	exposed-by-alignment
+AdehaSpec	SG2		REMOTE_PAST	hidelvi	ᏣᏕᎸᎢ	exposed-by-alignment
+AdehloqwaaSpec	SG1		HABITUAL	gadeloqwasgoi	ᎦᏕᏠᏆᏍᎪᎢ	exposed-by-alignment
+AdehloqwaaSpec	SG1		PRESENT	gadeloqwaa	ᎦᏕᏠᏆᎠ	exposed-by-alignment
+AdehosgaSpec	SG1		HABITUAL	gadeosgoi	ᎦᏕᎰᏍᎪᎢ	exposed-by-alignment
+AdehosgaSpec	SG1		PRESENT	gadeosga	ᎦᏕᎰᏍᎦ	exposed-by-alignment
+AdehvsgaSpec	SG1		HABITUAL	gadevsgoi	ᎦᏕᎲᏍᎪᎢ	exposed-by-alignment
+AdehvsgaSpec	SG1		PRESENT	gadevsga	ᎦᏕᎲᏍᎦ	exposed-by-alignment
+AdisiyaaSpec	PL3		HABITUAL	anidisaysgoi	ᎠᏂᏗᏏᏯᏍᎪᎢ	exposed-by-alignment
+AdisiyaaSpec	SG2		INFINITIVE	tsdisiyasdi	ᏣᏗᏏᏯᏍᏗ	exposed-by-alignment
+AdisiyaaSpec	SG2		REMOTE_PAST	tsdisiyvi	ᏣᏗᏏᏴᎢ	exposed-by-alignment
+AditasgaSpec	SG3		HABITUAL	anaditasgoi	ᎠᏗᏔᏍᎪᎢ	exposed-by-alignment
+AditasgaSpec	SG3		INFINITIVE	unaditasdi	ᎤᏗᏔᏍᏗ	exposed-by-alignment
+AditasgaSpec	SG3		PRESENT	anaditasga	ᎠᏗᏔᏍᎦ	exposed-by-alignment
+AditasgaSpec	SG3		REMOTE_PAST	unaditahvi	ᎤᏗᏔᎲᎢ	exposed-by-alignment
+AdloysgaSpec	PL1INCL		HABITUAL	idadloysgoi	ᎢᏓᏠᎢᏍᎪᎢ	exposed-by-alignment
+AdloysgaSpec	PL1INCL		PRESENT	idadloysga	ᎢᏓᏠᎢᏍᎦ	exposed-by-alignment
+AdloysgaSpec	PL1INCL		REMOTE_PAST	igadloysvi	ᎢᎦᏠᎢᏒᎢ	exposed-by-alignment
+AdloysgaSpec	SG1		HABITUAL	gadloysgoi	ᎦᏠᎢᏍᎪᎢ	exposed-by-alignment
+AdloysgaSpec	SG1		INFINITIVE	akdlohisdi	ᎠᏆᏠᎯᏍᏗ	exposed-by-alignment
+AdloysgaSpec	SG1		REMOTE_PAST	akdloysvi	ᎠᏆᏠᎢᏒᎢ	exposed-by-alignment
+AdloysgaSpec	SG2		HABITUAL	hadloysgoi	ᎭᏠᎢᏍᎪᎢ	exposed-by-alignment
+AdloysgaSpec	SG2		INFINITIVE	tsdlohisdi	ᏣᏠᎯᏍᏗ	exposed-by-alignment
+AdloysgaSpec	SG2		PRESENT	hadloysga	ᎭᏠᎢᏍᎦ	exposed-by-alignment
+AdloysgaSpec	SG2		REMOTE_PAST	tsdloysvi	ᏣᏠᎢᏒᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG1		INFINITIVE	akdlvkwisdi	ᎠᏆᏢᏈᏍᏗ	exposed-by-alignment
+AdlvkwsgaSpec	SG1		REMOTE_PAST	akdlvkwsvi	ᎠᏆᏢᏋᏒᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG2		HABITUAL	hadlvkwsgoi	ᎭᏢᏆᏍᎪᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG2		INFINITIVE	tsdlvkwisdi	ᏣᏢᏈᏍᏗ	exposed-by-alignment
+AdlvkwsgaSpec	SG2		PRESENT	hadlvkwsga	ᎭᏢᏆᏍᎦ	exposed-by-alignment
+AdlvkwsgaSpec	SG2		REMOTE_PAST	tsdlvkwsvi	ᏣᏢᏋᏒᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		HABITUAL	idadlvkwsgoi	ᎠᏢᏆᏍᎪᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		HABITUAL	idadlvkwsgoi	ᎠᏢᏆᏍᎪᎢ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		INFINITIVE	igadlvkwisdi	ᎤᏢᏈᏍᏗ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		PRESENT	idadlvkwsga	ᎠᏢᏆᏍᎦ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		PRESENT	idadlvkwsga	ᎠᏢᏆᏍᎦ	exposed-by-alignment
+AdlvkwsgaSpec	SG3		REMOTE_PAST	igadlvkwsvi	ᎤᏢᏋᏒᎢ	exposed-by-alignment
+AdvnvsdiaSpec	PL3		REMOTE_PAST	anadvnvstanvi	ᎤᎾᏛᏅᏍᏔᏅᎢ	exposed-by-alignment
+AganawadihaSpec	SG1		HABITUAL	jiganawodisgoi	ᏥᎦᎾᏩᏗᏍᎪᎢ	exposed-by-alignment
+AganawadihaSpec	SG1		PRESENT	jiganawodiha	ᏥᎦᎾᏩᏗᎭ	exposed-by-alignment
+AgiaSpec	PL3		INFINITIVE	anigisdi	ᎤᏂᎩᏍᏗ	exposed-by-alignment
+AgiaSpec	PL3		REMOTE_PAST	unigvi	ᎤᏂᎩᏒᎢ	exposed-by-alignment
+AgiaSpec	SG1		REMOTE_PAST	agigvi	ᎠᎩᎩᏒᎢ	exposed-by-alignment
+AgiaSpec	SG1		REMOTE_PAST	agigvi	ᎠᎩᎩᏒᎢ	exposed-by-alignment
+AgiaSpec	SG2		REMOTE_PAST	jagvi	ᏣᎩᏒᎢ	exposed-by-alignment
+AgowatihaSpec	PL1INCL		HABITUAL	idigowatisgoi	ᎢᏓᎪᏩᏘᏍᎪᎢ	exposed-by-alignment
+AgowatihaSpec	PL1INCL		INFINITIVE	igigowatvhdi	ᎢᎦᎪᏩᏛᏗ	exposed-by-alignment
+AgowatihaSpec	PL1INCL		PRESENT	idigowatiha	ᎢᏓᎪᏩᏘᎭ	exposed-by-alignment
+AgowatihaSpec	PL1INCL		REMOTE_PAST	igigohvi	ᎢᎦᎪᎲᎢ	exposed-by-alignment
+AgowatihaSpec	PL3		HABITUAL	anigowatisgoi	ᎠᎾᎪᏩᏘᏍᎪᎢ	exposed-by-alignment
+AgowatihaSpec	PL3		INFINITIVE	unigowatvhdi	ᎤᎾᎪᏩᏛᏗ	exposed-by-alignment
+AgowatihaSpec	PL3		PRESENT	anigowatiha	ᎠᎾᎪᏩᏘᎭ	exposed-by-alignment
+AgowatihaSpec	PL3		REMOTE_PAST	unigohvi	ᎤᎾᎪᎲᎢ	exposed-by-alignment
+AgowatvhdihaSpec	PL1INCL		HABITUAL	edigowatvhdisgoi	ᎢᏗᎪᏩᏛᏗᏍᎪᎢ	exposed-by-alignment
+AgowatvhdihaSpec	PL1INCL		INFINITIVE	edigowatvhdohdi	ᎢᎩᎪᏩᏛᏙᏗ	exposed-by-alignment
+AgowatvhdihaSpec	PL1INCL		PRESENT	edigowatvhdiha	ᎢᏗᎪᏩᏛᏗᎭ	exposed-by-alignment
+AgowatvhdihaSpec	PL1INCL		REMOTE_PAST	edigowatvhtanvi	ᎢᎩᎪᏩᏛᏔᏅᎢ	exposed-by-alignment
+AgowatvhdihaSpec	SG1		INFINITIVE	jigowatvhdohdi	ᎠᎩᎪᏩᏛᏙᏗ	exposed-by-alignment
+AgowatvhdihaSpec	SG1		REMOTE_PAST	jigowatvhtanvi	ᎠᎩᎪᏩᏛᏔᏅᎢ	exposed-by-alignment
+AgowatvhdihaSpec	SG2		INFINITIVE	higowatvhdohdi	ᏣᎪᏩᏛᏙᏗ	exposed-by-alignment
+AgowatvhdihaSpec	SG2		REMOTE_PAST	higowatvhtanvi	ᏣᎪᏩᏛᏔᏅᎢ	exposed-by-alignment
+AgvhalihaSpec	PL1INCL		INFINITIVE	idigvhahldi	ᎢᎩᎬᎭᎶᏗ	exposed-by-alignment
+AgvhalihaSpec	SG1		HABITUAL	jigvalisgoi	ᏥᎬᎭᎵᏍᎪᎢ	exposed-by-alignment
+AgvhalihaSpec	SG1		PRESENT	jigvaliha	ᏥᎬᎭᎵᎭ	exposed-by-alignment
+AhidohaSpec	SG1		HABITUAL	jiidohoi	ᏥᎯᏙᎰᎢ	exposed-by-alignment
+AhidohaSpec	SG1		PRESENT	jiidoha	ᏥᎯᏙᎭ	exposed-by-alignment
+AhilehaSpec	SG1		HABITUAL	jiilehoi	ᏥᎯᎴᎰᎢ	exposed-by-alignment
+AhilehaSpec	SG1		PRESENT	tsiileha	ᏥᎯᎴᎭ	exposed-by-alignment
+AhiliSpec	PL1INCL		HABITUAL	idihilegoi	ᎢᏗᎯᎵᏐᎢ	exposed-by-alignment
+AhiliSpec	PL1INCL		INFINITIVE	igihilvsvi	ᎢᎩᎯᎸᏍᏗ	exposed-by-alignment
+AhiliSpec	PL3		HABITUAL	anihilegoi	ᎠᏂᎯᎵᏐᎢ	exposed-by-alignment
+AhiliSpec	PL3		INFINITIVE	unihilvsvi	ᎤᏂᎯᎸᏍᏗ	exposed-by-alignment
+AhiliSpec	SG1		HABITUAL	jiilegoi	ᏥᎯᎵᏐᎢ	exposed-by-alignment
+AhiliSpec	SG1		INFINITIVE	agihilvsvi	ᎠᎩᎯᎸᏍᏗ	exposed-by-alignment
+AhiliSpec	SG1		PRESENT	tsiili	ᏥᎯᎵ	exposed-by-alignment
+AhiliSpec	SG2		HABITUAL	hihilegoi	ᎯᎯᎵᏐᎢ	exposed-by-alignment
+AhiliSpec	SG2		INFINITIVE	jahilvsvi	ᏣᎯᎸᏍᏗ	exposed-by-alignment
+AhiyaaSpec	SG1		HABITUAL	jiiyasgoi	ᏥᎯᏯᏍᎪᎢ	exposed-by-alignment
+AhiyaaSpec	SG1		PRESENT	jiiyaa	ᏥᎯᏯᎠ	exposed-by-alignment
+AhladiaSpec	SG1		HABITUAL	jiladisgoi	ᏥᏝᏗᏍᎪᎢ	exposed-by-alignment
+AhladiaSpec	SG1		PRESENT	jiladia	ᏥᏝᏗᎠ	exposed-by-alignment
+AhladiaSpec	SG2		INFINITIVE	tshladisdi	ᏣᏝᏗᏍᏗ	exposed-by-alignment
+AhladiaSpec	SG2		REMOTE_PAST	tshladvi	ᏣᏝᏛᎢ	exposed-by-alignment
+AhlahvsgaSpec	SG2		INFINITIVE	tshlodi	ᏣᏠᏗ	exposed-by-alignment
+AhlahvsgaSpec	SG2		REMOTE_PAST	tshlanvi	ᏣᏝᏅᎢ	exposed-by-alignment
+AhlahvsgaSpec	SG3		HABITUAL	anahlahvsgoi	ᎠᏝᎲᏍᎪᎢ	exposed-by-alignment
+AhlahvsgaSpec	SG3		INFINITIVE	unihlodi	ᎤᏠᏗ	exposed-by-alignment
+AhlahvsgaSpec	SG3		PRESENT	anahlahvsga	ᎠᏝᎲᏍᎦ	exposed-by-alignment
+AhlahvsgaSpec	SG3		REMOTE_PAST	unihlanvi	ᎤᏝᏅᎢ	exposed-by-alignment
+AhligiaSpec	PL1INCL		HABITUAL	idahligi	ᎢᏓᏟᎩᏍᎪᎢ	exposed-by-alignment
+AhligiaSpec	PL1INCL		INFINITIVE	idahligi	ᎢᎦᏟᎩᏍᏗ	exposed-by-alignment
+AhligiaSpec	PL1INCL		REMOTE_PAST	sgoi	ᎢᎦᏟᎩᏒᎢ	exposed-by-alignment
+AhlinohehdiSpec	PL1INCL		HABITUAL	edahlinohehdisgoi	ᎢᏗᏟᏃᎮᏗᏍᎪᎢ	exposed-by-alignment
+AhlinohehdiSpec	PL1INCL		INFINITIVE	edahlinohehdohdi	ᎢᎩᏟᏃᎮᏙᏗ	exposed-by-alignment
+AhlinohehdiSpec	PL1INCL		PRESENT	edahlinohehdi	ᎢᏗᏟᏃᎮᏗ	exposed-by-alignment
+AhlinohehdiSpec	PL1INCL		REMOTE_PAST	edahlinohetanvi	ᎢᎩᏟᏃᎮᏔᏅᎢ	exposed-by-alignment
+AhlinohehdiSpec	PL3		HABITUAL	anahlinohehdisgoi	ᎠᏂᏟᏃᎮᏗᏍᎪᎢ	exposed-by-alignment
+AhlinohehdiSpec	PL3		INFINITIVE	unahlinohehdohdi	ᎤᏂᏟᏃᎮᏙᏗ	exposed-by-alignment
+AhlinohehdiSpec	PL3		PRESENT	anahlinohehdi	ᎠᏂᏟᏃᎮᏗ	exposed-by-alignment
+AhlinohehdiSpec	PL3		REMOTE_PAST	unahlinohetanvi	ᎤᏂᏟᏃᎮᏔᏅᎢ	exposed-by-alignment
+AhlinohehdiSpec	SG1		HABITUAL	jilinohehdisgoi	ᏥᏟᏃᎮᏗᏍᎪᎢ	exposed-by-alignment
+AhlinohehdiSpec	SG1		INFINITIVE	jilinohehdohdi	ᎠᎩᏟᏃᎮᏙᏗ	exposed-by-alignment
+AhlinohehdiSpec	SG1		PRESENT	jilinohehdi	ᏥᏟᏃᎮᏗ	exposed-by-alignment
+AhlinohehdiSpec	SG1		REMOTE_PAST	jilinohehtanvi	ᎠᎩᏟᏃᎮᏔᏅᎢ	exposed-by-alignment
+AhlinohehdiSpec	SG2		HABITUAL	hilinohehdisgoi	ᎯᏟᏃᎮᏗᏍᎪᎢ	exposed-by-alignment
+AhlinohehdiSpec	SG2		INFINITIVE	hilinohehdohdi	ᏣᏟᏃᎮᏙᏗ	exposed-by-alignment
+AhlinohehdiSpec	SG2		PRESENT	hilinohehdi	ᎯᏟᏃᎮᏗ	exposed-by-alignment
+AhlinohehdiSpec	SG2		REMOTE_PAST	hilinohetanvi	ᏣᏟᏃᎮᏔᏅᎢ	exposed-by-alignment
+AhljadohvsgaSpec	SG1		HABITUAL	galijadohvsgoi	ᎦᎶᏣᏙᎲᏍᎪᎢ	exposed-by-alignment
+AhljadohvsgaSpec	SG1		PRESENT	galijadohvsga	ᎦᎶᏣᏙᎲᏍᎦ	exposed-by-alignment
+AhlosgaSpec	PL1INCL		HABITUAL	edihlosgoi	ᎢᏗᏠᏍᎪᎢ	exposed-by-alignment
+AhlosgaSpec	PL1INCL		INFINITIVE	edihlohisdi	ᎢᎩᏠᎯᏍᏗ	exposed-by-alignment
+AhlosgaSpec	PL1INCL		PRESENT	edihlosga	ᎢᏗᏠᏍᎦ	exposed-by-alignment
+AhlosgaSpec	PL1INCL		REMOTE_PAST	edihlosvi	ᎢᎩᏠᏒᎢ	exposed-by-alignment
+AhlosgaSpec	SG1		INFINITIVE	jihlohisdi	ᎠᎩᏠᎯᏍᏗ	exposed-by-alignment
+AhlosgaSpec	SG1		REMOTE_PAST	jihlosvi	ᎠᎩᏠᏒᎢ	exposed-by-alignment
+AhlosgaSpec	SG2		INFINITIVE	hihlohisdi	ᏣᏠᎯᏍᏗ	exposed-by-alignment
+AhlosgaSpec	SG2		REMOTE_PAST	hihlosvi	ᏣᏠᏒᎢ	exposed-by-alignment
+AhltawoaSpec	PL1INCL		HABITUAL	dedahltawosgoi	ᎢᏓᎶᏔᏬᏍᎪᎢ	exposed-by-alignment
+AhltawoaSpec	PL1INCL		INFINITIVE	digahltawosdi	ᎢᎦᎶᏔᏬᏍᏗ	exposed-by-alignment
+AhltawoaSpec	PL1INCL		PRESENT	dedahltawoa	ᎢᏓᎶᏔᏬᎠ	exposed-by-alignment
+AhltawoaSpec	PL1INCL		REMOTE_PAST	degahltawovi	ᎢᎦᎶᏔᏬᎥᎢ	exposed-by-alignment
+AhltawoaSpec	PL3		HABITUAL	danahltawosgoi	ᎠᎾᎶᏔᏬᏍᎪᎢ	exposed-by-alignment
+AhltawoaSpec	PL3		INFINITIVE	junahltawosdi	ᎤᎾᎶᏔᏬᏍᏗ	exposed-by-alignment
+AhltawoaSpec	PL3		PRESENT	danahltawoa	ᎠᎾᎶᏔᏬᎠ	exposed-by-alignment
+AhltawoaSpec	PL3		REMOTE_PAST	dunahltawovi	ᎤᎾᎶᏔᏬᎥᎢ	exposed-by-alignment
+AhltawoaSpec	SG1		HABITUAL	galitawosgoi	ᎦᎶᏔᏬᏍᎪᎢ	exposed-by-alignment
+AhltawoaSpec	SG1		PRESENT	galitawoa	ᎦᎶᏔᏬᎠ	exposed-by-alignment
+AhlvsgaSpec	SG1		HABITUAL	jilvsgoi	ᏥᏢᏍᎪᎢ	exposed-by-alignment
+AhlvsgaSpec	SG1		PRESENT	jilvsga	ᏥᏢᏍᎦ	exposed-by-alignment
+AhlvsgaSpec	SG2		INFINITIVE	tshlvdi	ᏣᏢᏗ	exposed-by-alignment
+AhlvsgaSpec	SG2		REMOTE_PAST	tshlvnvi	ᏣᏢᏅᎢ	exposed-by-alignment
+AhnehaSpec	SG1		INFINITIVE	jinehdi	ᎠᎩᏁᏗ	exposed-by-alignment
+AhnehaSpec	SG1		REMOTE_PAST	jinelvi	ᎠᎩᏁᎸᎢ	exposed-by-alignment
+AhnehaSpec	SG2		INFINITIVE	hihnehdi	ᏣᏁᏗ	exposed-by-alignment
+AhnehaSpec	SG2		REMOTE_PAST	hihnelvi	ᏣᏁᎸᎢ	exposed-by-alignment
+AhnehldiaSpec	SG1		PRESENT	ganehldiha	ᎦᏁᎶᏗᎠ	exposed-by-alignment
+AhvaSpec	PL3		REMOTE_PAST	unihvsi	ᎤᏂᎲᏒᎢ	exposed-by-alignment
+AhvaSpec	SG1		HABITUAL	jivsgoi	ᏥᎲᏍᎪᎢ	exposed-by-alignment
+AhvaSpec	SG1		INFINITIVE	akvsdi	ᎠᎩᎲᏍᏗ	exposed-by-alignment
+AhvaSpec	SG1		PRESENT	jiva	ᏥᎲᎠ	exposed-by-alignment
+AhvsgaSpec	SG1		HABITUAL	jivsgoi	ᏥᎲᏍᎪᎢ	exposed-by-alignment
+AhvsgaSpec	SG1		PRESENT	jivsga	ᏥᎲᏍᎦ	exposed-by-alignment
+AhwahtvhidohaSpec	PL1INCL		HABITUAL	edihwahtvhidohoi	ᎢᏗᏩᏛᎯᏙᎰᎢ	exposed-by-alignment
+AhwahtvhidohaSpec	PL1INCL		INFINITIVE	edihwahtvhidasdi	ᎢᎩᏩᏛᎯᏓᏍᏗ	exposed-by-alignment
+AhwahtvhidohaSpec	PL1INCL		PRESENT	edihwahtvhidoha	ᎢᏗᏩᏛᎯᏙᎭ	exposed-by-alignment
+AhwahtvhidohaSpec	PL1INCL		REMOTE_PAST	edihwahtvhidolvi	ᎢᎩᏩᏛᎯᏙᎸᎢ	exposed-by-alignment
+AhwahtvhidohaSpec	SG1		INFINITIVE	jiwahtvhidasdi	ᎠᎩᏩᏛᎯᏓᏍᏗ	exposed-by-alignment
+AhwahtvhidohaSpec	SG1		REMOTE_PAST	jiwahtvhidolvi	ᎠᎩᏩᏛᎯᏙᎸᎢ	exposed-by-alignment
+AhwahtvhidohaSpec	SG2		INFINITIVE	hihwahtvhidasdi	ᏣᏩᏛᎯᏓᏍᏗ	exposed-by-alignment
+AhwahtvhidohaSpec	SG2		REMOTE_PAST	hihwahtvhidolvi	ᏣᏩᏛᎯᏙᎸᎢ	exposed-by-alignment
+AhyanihaSpec	SG1		INFINITIVE	jiyanhdi	ᎠᎩᏯᎾᏗ	exposed-by-alignment
+AhyanihaSpec	SG1		REMOTE_PAST	jiyanvhvi	ᎠᎩᏯᏅᎲᎢ	exposed-by-alignment
+AhyanihaSpec	SG2		INFINITIVE	hihyanhdi	ᏣᏯᎾᏗ	exposed-by-alignment
+AhyanihaSpec	SG2		REMOTE_PAST	hihyanvhvi	ᏣᏯᏅᎲᎢ	exposed-by-alignment
+AhyehaSpec	PL3		INFINITIVE	anihyehi	ᎤᏂᏰᎯ	exposed-by-alignment
+AhyehaSpec	PL3		REMOTE_PAST	anihyehvi	ᎤᏂᏰᎲᎢ	exposed-by-alignment
+AhyehaSpec	SG2		INFINITIVE	hihyehi	ᏣᏰᎯ	exposed-by-alignment
+AhyehaSpec	SG2		REMOTE_PAST	hihyehvi	ᏣᏰᎲᎢ	exposed-by-alignment
+AhyehaSpec	SG3		REMOTE_PAST	ayehvi	ᎤᏰᎲᎢ	exposed-by-alignment
+AhyohaSpec	PL1INCL	SG3AN	INFINITIVE	ediysdi	ᎡᏗᏯᏍᏗ	exposed-by-alignment
+AhyohaSpec	PL3	SG3AN	INFINITIVE	uniysdi	ᎠᏂᏯᏍᏗ	exposed-by-alignment
+AhyohaSpec	PL3	SG3AN	REMOTE_PAST	unihyalvi	ᎠᏂᏯᎸᎢ	exposed-by-alignment
+AhyohaSpec	SG1	SG3AN	INFINITIVE	jiysdi	ᏥᏯᏍᏗ	exposed-by-alignment
+AhyohaSpec	SG2	SG3AN	INFINITIVE	hiysdi	ᎯᏯᏍᏗ	exposed-by-alignment
+AhyohihaSpec	SG2		HABITUAL	hihyohihoo	ᎯᏲᎯᎰᎢ	exposed-by-alignment
+AhyvhteaSpec	PL1INCL	SG3IN	INFINITIVE	igahyvhtesdi	ᎢᎩᏴᏖᏍᏗ	exposed-by-alignment
+AhyvhteaSpec	PL3	SG3IN	INFINITIVE	unahyvhtesdi	ᎤᏂᏴᏖᏍᏗ	exposed-by-alignment
+AhyvhteaSpec	SG1	SG3AN	INFINITIVE	jiyayhtesdi	ᏥᏴᏖᏍᏗ	exposed-by-alignment
+AhyvhteaSpec	SG1	SG3IN	INFINITIVE	agwahyvhtesdi	ᎠᎩᏴᏖᏍᏗ	exposed-by-alignment
+AhyvhteaSpec	SG2	SG3AN	INFINITIVE	hiyahyvhtesdi	ᎯᏴᏖᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	PL1INCL		HABITUAL	egihlosgoi	ᎢᏓᏥᏠᏍᎪᎢ	exposed-by-alignment
+AjihlosgaSpec	PL1INCL		INFINITIVE	egihlohisdi	ᎢᎦᏥᏠᎯᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	PL1INCL		PRESENT	egihlosga	ᎢᏓᏥᏠᏍᎦ	exposed-by-alignment
+AjihlosgaSpec	PL1INCL		REMOTE_PAST	egihlosvi	ᎢᎦᏥᏠᏒᎢ	exposed-by-alignment
+AjihlosgaSpec	PL3		HABITUAL	gejihlosgoi	ᎠᎾᏥᏠᏍᎪᎢ	exposed-by-alignment
+AjihlosgaSpec	PL3		INFINITIVE	gejihlohisdi	ᎤᎾᏥᏠᎯᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	PL3		PRESENT	gejihlosga	ᎠᎾᏥᏠᏍᎦ	exposed-by-alignment
+AjihlosgaSpec	PL3		REMOTE_PAST	gejihlosvi	ᎤᎾᏥᏠᏒᎢ	exposed-by-alignment
+AjihlosgaSpec	SG1		HABITUAL	vgwtlosgoi	ᎦᏥᏠᏍᎪᎢ	exposed-by-alignment
+AjihlosgaSpec	SG1		INFINITIVE	vgwtlohisdi	ᎠᏆᏥᏠᎯᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	SG1		PRESENT	vgwtlosga	ᎦᏥᏠᏍᎦ	exposed-by-alignment
+AjihlosgaSpec	SG1		REMOTE_PAST	vgwtlosvi	ᎠᏆᏥᏠᏒᎢ	exposed-by-alignment
+AjihlosgaSpec	SG2		HABITUAL	ejahlosgoi	ᎭᏥᏠᏍᎪᎢ	exposed-by-alignment
+AjihlosgaSpec	SG2		INFINITIVE	ejahlohisdi	ᏣᏥᏠᎯᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	SG2		PRESENT	ejahlosga	ᎭᏥᏠᏍᎦ	exposed-by-alignment
+AjihlosgaSpec	SG2		REMOTE_PAST	ejahlosvi	ᏣᏥᏠᏒᎢ	exposed-by-alignment
+AjihlosgaSpec	SG3		INFINITIVE	ajihlohisdi	ᎤᏥᏠᎯᏍᏗ	exposed-by-alignment
+AjihlosgaSpec	SG3		REMOTE_PAST	ajihlosvi	ᎤᏥᏠᏒᎢ	exposed-by-alignment
+AjvstvsgaSpec	SG1		REMOTE_PAST	agijvstvsgoi	ᎠᎩᏨᏍᏔᏅᎢ	exposed-by-alignment
+AjvstvsgaSpec	SG2		REMOTE_PAST	jajvstvsgoi	ᏣᏨᏍᏔᏅᎢ	exposed-by-alignment
+AktahvaSpec	SG1		HABITUAL	gagatahvsgoi	ᎦᎩᏔᎲᏍᎪᎢ	exposed-by-alignment
+AktahvaSpec	SG1		PRESENT	gagatahva	ᎦᎩᏔᎲᎠ	exposed-by-alignment
+AktenohaSpec	PL1INCL		HABITUAL	idaktenohoi	ᎢᏗᎩᏖᏃᎰᎢ	exposed-by-alignment
+AktenohaSpec	PL1INCL		INFINITIVE	igaktenasdi	ᎢᎩᎩᏖᎾᏍᏗ	exposed-by-alignment
+AktenohaSpec	PL1INCL		PRESENT	idaktenoha	ᎢᏗᎩᏖᏃᎭ	exposed-by-alignment
+AktenohaSpec	PL1INCL		REMOTE_PAST	igaktenolvi	ᎢᎩᎩᏖᏃᎸᎢ	exposed-by-alignment
+AktenohaSpec	PL3		HABITUAL	anaktenohoi	ᎠᏂᎩᏖᏃᎰᎢ	exposed-by-alignment
+AktenohaSpec	PL3		INFINITIVE	unaktenasdi	ᎤᏂᎩᏖᎾᏍᏗ	exposed-by-alignment
+AktenohaSpec	PL3		PRESENT	anaktenoha	ᎠᏂᎩᏖᏃᎭ	exposed-by-alignment
+AktenohaSpec	PL3		REMOTE_PAST	unaktenolvi	ᎤᏂᎩᏖᏃᎸᎢ	exposed-by-alignment
+AktenohaSpec	SG1		HABITUAL	jigatenohoi	ᏥᎩᏖᏃᎰᎢ	exposed-by-alignment
+AktenohaSpec	SG1		INFINITIVE	agwaktenasdi	ᎠᎩᎩᏖᎾᏍᏗ	exposed-by-alignment
+AktenohaSpec	SG1		PRESENT	jigatenoha	ᏥᎩᏖᏃᎭ	exposed-by-alignment
+AktenohaSpec	SG1		REMOTE_PAST	agwaktenolvi	ᎠᎩᎩᏖᏃᎸᎢ	exposed-by-alignment
+AktenohaSpec	SG2		HABITUAL	haktenohoi	ᎯᎩᏖᏃᎰᎢ	exposed-by-alignment
+AktenohaSpec	SG2		PRESENT	haktenoha	ᎯᎩᏖᏃᎭ	exposed-by-alignment
+AktiyaSpec	PL1INCL		HABITUAL	idaktiyoi	ᎢᏗᎦᏘᏲᎢ	exposed-by-alignment
+AktiyaSpec	PL1INCL		INFINITIVE	igaktidisdi	ᎢᎩᎦᏘᏗᏍᏗ	exposed-by-alignment
+AktiyaSpec	PL1INCL		PRESENT	idaktiya	ᎢᏗᎦᏘᏯ	exposed-by-alignment
+AktiyaSpec	PL1INCL		REMOTE_PAST	igaktidvi	ᎢᎩᎦᏘᏛᎢ	exposed-by-alignment
+AktiyaSpec	SG2	SG3AN	REMOTE_PAST	hiktiya	ᎯᎦᏘᏛᎢ	exposed-by-alignment
+AktosdiSpec	PL1INCL	SG3IN	HABITUAL	idigatosdisgoi	ᎢᏓᎩᏙᏍᏗᏍᎪᎢ	exposed-by-alignment
+AktosdiSpec	PL1INCL	SG3IN	PRESENT	idigatosdi	ᎢᏓᎩᏙᏍᏗ	exposed-by-alignment
+AktosdiSpec	SG1	SG3AN	HABITUAL	jigatosdisgoi	ᏥᏯᎩᏙᏍᏗᏍᎪᎢ	exposed-by-alignment
+AktosdiSpec	SG1	SG3AN	INFINITIVE	jigatosdohdi	ᏥᏯᎩᏙᏍᏙᏗ	exposed-by-alignment
+AktosdiSpec	SG1	SG3AN	PRESENT	jigatosdi	ᏥᏯᎩᏙᏍᏗ	exposed-by-alignment
+AktosdiSpec	SG1	SG3AN	REMOTE_PAST	jigatostanvi	ᏥᏯᎩᏙᏍᏔᏅᎢ	exposed-by-alignment
+AktosdiSpec	SG2	SG3AN	HABITUAL	higatosdisgoi	ᎯᏯᎩᏙᏍᏗᏍᎪᎢ	exposed-by-alignment
+AktosdiSpec	SG2	SG3AN	INFINITIVE	higatosdohdi	ᎯᏯᎩᏙᏍᏙᏗ	exposed-by-alignment
+AktosdiSpec	SG2	SG3AN	PRESENT	higatosdi	ᎯᏯᎩᏙᏍᏗ	exposed-by-alignment
+AktosdiSpec	SG2	SG3AN	REMOTE_PAST	higatostanvi	ᎯᏯᎩᏙᏍᏔᏅᎢ	exposed-by-alignment
+AktosdiSpec	SG2	SG3IN	HABITUAL	jaktosdisgoi	ᎭᎩᏙᏍᏗᏍᎪᎢ	exposed-by-alignment
+AktosdiSpec	SG2	SG3IN	PRESENT	jaktosdi	ᎭᎩᏙᏍᏗ	exposed-by-alignment
+AkwiyihaSpec	PL1INCL		REMOTE_PAST	igikwiyvhvi	ᎢᎦᏈᏴᎲᎢ	exposed-by-alignment
+AkwiyihaSpec	PL3		REMOTE_PAST	unikwiyvhvi	ᎤᎾᏈᏴᎲᎢ	exposed-by-alignment
+AkwiyihaSpec	SG1		INFINITIVE	akikwiyhdi	ᎠᏆᏈᏴᏗ	exposed-by-alignment
+AkwiyihaSpec	SG1		REMOTE_PAST	akikwiyvhvi	ᎠᏆᏈᏴᎲᎢ	exposed-by-alignment
+AkwiyvehaSpec	PL1INCL	SG3AN	INFINITIVE	egakwiyvehdi	ᎡᏓᏈᏴᎡᏗ	exposed-by-alignment
+AkwiyvehaSpec	PL3	SG3AN	INFINITIVE	unakwiyvehdi	ᎠᎾᏈᏴᎡᏗ	exposed-by-alignment
+AkwiyvehaSpec	PL3	SG3AN	REMOTE_PAST	unakwiyvelvi	ᎠᎾᏈᏴᎡᎸᎢ	exposed-by-alignment
+AlehvsgaSpec	SG1		HABITUAL	galevsgoi	ᎦᎴᎲᏍᎪᎢ	exposed-by-alignment
+AlehvsgaSpec	SG1		PRESENT	galevsga	ᎦᎴᎲᏍᎦ	exposed-by-alignment
+AlehwisdohdihaSpec	PL3	SG3IN	REMOTE_PAST	analehwisdohtanvi	ᎤᎾᎴᏫᏍᏙᏔᏅᎢ	exposed-by-alignment
+AlehwisdohdihaSpec	SG2	SG3IN	INFINITIVE	jalehiwsdohdohdi	ᏣᎴᏫᏍᏙᏙᏗ	exposed-by-alignment
+AlenihaSpec	SG1		PRESENT	galenia	ᎦᎴᏂᎭ	exposed-by-alignment
+AlihelichehaSpec	PL1INCL	SG3AN	INFINITIVE	edalihelichechdi	ᎡᏓᎵᎮᎵᏤᏗ	exposed-by-alignment
+AlihelichehaSpec	PL3	SG3AN	INFINITIVE	unalihelichehdi	ᎠᎾᎵᎮᎵᏤᏗ	exposed-by-alignment
+AlihelichehaSpec	PL3	SG3AN	REMOTE_PAST	unalihelichelvi	ᎠᎾᎵᎮᎵᏤᎸᎢ	exposed-by-alignment
+AlihelichehaSpec	SG1	SG3AN	HABITUAL	jiyalielichehoi	ᏥᏯᎵᎮᎵᏤᎰᎢ	exposed-by-alignment
+AlihelichehaSpec	SG1	SG3AN	INFINITIVE	jiyalielichedi	ᏥᏯᎵᎮᎵᏤᏗ	exposed-by-alignment
+AlihelichehaSpec	SG1	SG3AN	PRESENT	jiyalielicheha	ᏥᏯᎵᎮᎵᏤᎭ	exposed-by-alignment
+AlihelichehaSpec	SG1	SG3AN	REMOTE_PAST	jiyalielichelvi	ᏥᏯᎵᎮᎵᏤᎸᎢ	exposed-by-alignment
+AliheligaSpec	PL1INCL		REMOTE_PAST	igahelijvi	ᎢᎦᎵᎮᎵᏨᎢ	exposed-by-alignment
+AliheligaSpec	PL3		REMOTE_PAST	unahelijvi	ᎤᎾᎵᎮᎵᏨᎢ	exposed-by-alignment
+AliheligaSpec	SG1		HABITUAL	galieligoi	ᎦᎵᎮᎵᎪᎢ	exposed-by-alignment
+AliheligaSpec	SG1		PRESENT	galieliga	ᎦᎵᎮᎵᎦ	exposed-by-alignment
+AlkisohdiSpec	PL3	SG3IN	HABITUAL	idalkisohdihoi	ᎠᎾᎾᎵᎩᏐᏗᎰᎢ	exposed-by-alignment
+AlkisohdiSpec	PL3	SG3IN	INFINITIVE	igalkisohdohdi	ᎤᎾᎾᎵᎩᏐᏙᏗ	exposed-by-alignment
+AlkisohdiSpec	PL3	SG3IN	PRESENT	idalkisohdi	ᎠᎾᎾᎵᎩᏐᏗ	exposed-by-alignment
+AlkisohdiSpec	PL3	SG3IN	REMOTE_PAST	igalkisohtanvi	ᎤᎾᎾᎵᎩᏐᏔᏅᎢ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3AN	HABITUAL	galikisohdihoi	ᏥᏯᎾᎵᎩᏐᏗᎰᎢ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3AN	INFINITIVE	agwalkisohdohdi	ᏥᏯᎾᎵᎩᏐᏙᏗ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3AN	PRESENT	galikisohdi	ᏥᏯᎾᎵᎩᏐᏗ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3AN	REMOTE_PAST	agwalkisohtanvi	ᏥᏯᎾᎵᎩᏐᏔᏅᎢ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3IN	HABITUAL	halkisohdihoi	ᎦᎾᎵᎩᏐᏗᎰᎢ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3IN	INFINITIVE	jalkisohdohdi	ᎠᏆᎾᎵᎩᏐᏙᏗ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3IN	PRESENT	halkisohdi	ᎦᎾᎵᎩᏐᏗ	exposed-by-alignment
+AlkisohdiSpec	SG1	SG3IN	REMOTE_PAST	jalkisohtanvi	ᎠᏆᎾᎵᎩᏐᏔᏅᎢ	exposed-by-alignment
+AlkisohdiSpec	SG2	SG3IN	HABITUAL	alkisohdihoi	ᎭᎾᎵᎩᏐᏗᎰᎢ	exposed-by-alignment
+AlkisohdiSpec	SG2	SG3IN	INFINITIVE	ulkisohdohdi	ᏣᎾᎵᎩᏐᏙᏗ	exposed-by-alignment
+AlkisohdiSpec	SG2	SG3IN	PRESENT	alkisohdi	ᎭᎾᎵᎩᏐᏗ	exposed-by-alignment
+AlkisohdiSpec	SG2	SG3IN	REMOTE_PAST	ulkisohtanvi	ᏣᎾᎵᎩᏐᏔᏅᎢ	exposed-by-alignment
+AlsdelihaSpec	SG1		REMOTE_PAST	agwalsdelvhvi	ᏥᏍᏕᎸᎲᎢ	exposed-by-alignment
+AlsgohldanehaSpec	PL1INCL	SG3AN	REMOTE_PAST	edgalsgohldanelvi	ᎡᏓᎵᏍᎪᎶᏓᏁᎸᎢ	exposed-by-alignment
+AlsgohldanehaSpec	PL3	SG3AN	INFINITIVE	unalsgohldanehdi	ᎠᎾᎵᏍᎪᎶᏓᏁᏗ	exposed-by-alignment
+AlsgohldanehaSpec	PL3	SG3AN	REMOTE_PAST	unalsgohldanelvi	ᎠᎾᎵᏍᎪᎶᏓᏁᎸᎢ	exposed-by-alignment
+AnadahlisihaSpec	PL1INCL		HABITUAL	idadahlisisgoi	ᎢᏓᎾᏓᏟᏏᏍᎪᎢ	exposed-by-alignment
+AnadahlisihaSpec	PL1INCL		INFINITIVE	igadahlisohdi	ᎢᎦᎾᏓᏟᏐᏗ	exposed-by-alignment
+AnadahlisihaSpec	PL1INCL		PRESENT	idadahlisiha	ᎢᏓᎾᏓᏟᏏᎭ	exposed-by-alignment
+AnadahlisihaSpec	PL1INCL		REMOTE_PAST	igadahlisahnvi	ᎢᎦᎾᏓᏟᏌᏅᎢ	exposed-by-alignment
+AnadahlisihaSpec	PL3		HABITUAL	ojadahlisisgoi	ᎠᎾᎾᏓᏟᏏᏍᎪᎢ	exposed-by-alignment
+AnadahlisihaSpec	PL3		INFINITIVE	ogadahlisohdi	ᎤᎾᎾᏓᏟᏐᏗ	exposed-by-alignment
+AnadahlisihaSpec	PL3		PRESENT	ojadahlisiha	ᎠᎾᎾᏓᏟᏏᎭ	exposed-by-alignment
+AnadahlisihaSpec	PL3		REMOTE_PAST	ogadahlisahnvi	ᎤᎾᎾᏓᏟᏌᏅᎢ	exposed-by-alignment
+AnadahlisihaSpec	SG2		HABITUAL	ijadahlisisgoi	ᎭᎾᏓᏟᏏᏍᎪᎢ	exposed-by-alignment
+AnadahlisihaSpec	SG2		INFINITIVE	ijadahlisohdi	ᏣᎾᏓᏟᏐᏗ	exposed-by-alignment
+AnadahlisihaSpec	SG2		PRESENT	ijadahlisiha	ᎭᎾᏓᏟᏏᎭ	exposed-by-alignment
+AnadahlisihaSpec	SG2		REMOTE_PAST	ijadahlisahnvi	ᏣᎾᏓᏟᏌᏅᎢ	exposed-by-alignment
+AndadihaSpec	SG1	SG3AN	HABITUAL	jiyanvdadisgoi	ᏥᏯᏂᏓᏗᏍᎪᎢ	exposed-by-alignment
+AndadihaSpec	SG1	SG3AN	INFINITIVE	jiyanvdadisdi	ᏥᏯᎾᏓᏗᏍᏗ	exposed-by-alignment
+AndadihaSpec	SG1	SG3AN	PRESENT	jiyanvdadia	ᏥᏯᏂᏓᏗᎭ	exposed-by-alignment
+AndadihaSpec	SG1	SG3AN	REMOTE_PAST	jiyanvdadvi	ᏥᏯᎾᏓᏛᎢ	exposed-by-alignment
+AndadihaSpec	SG1	SG3IN	HABITUAL	ganvdadisgoi	ᎦᏂᏓᏗᏍᎪᎢ	exposed-by-alignment
+AndadihaSpec	SG1	SG3IN	PRESENT	ganvdadia	ᎦᏂᏓᏗᎭ	exposed-by-alignment
+AndadihaSpec	SG2	SG3AN	HABITUAL	hiyanvdadisgoi	ᎯᏯᏂᏓᏗᏍᎪᎢ	exposed-by-alignment
+AndadihaSpec	SG2	SG3AN	PRESENT	hiyanvdadia	ᎯᏯᏂᏓᏗᎭ	exposed-by-alignment
+AnidonaaSpec	SG3		REMOTE_PAST	anidonavi	ᎤᏂᏙᎾᎥᎢ	exposed-by-alignment
+AninaSpec	SG3		REMOTE_PAST	aninvi	ᎤᏂᏅᎢ	exposed-by-alignment
+AsaladiaSpec	SG2		INFINITIVE	tsaladodi	ᏣᏌᎳᏙᏗ	exposed-by-alignment
+AsaladiaSpec	SG2		REMOTE_PAST	tsaladanvi	ᏣᏌᎳᏓᏅᎢ	exposed-by-alignment
+AsdayvhvsgaSpec	PL1INCL		HABITUAL	edisdayvhvsgoi	ᎢᏗᏍᏓᏴᎲᏍᎪᎢ	exposed-by-alignment
+AsdayvhvsgaSpec	PL1INCL		INFINITIVE	edisdayhdi	ᎢᎩᏍᏓᏴᏗ	exposed-by-alignment
+AsdayvhvsgaSpec	PL1INCL		PRESENT	edisdayvhvsga	ᎢᏗᏍᏓᏴᎲᏍᎦ	exposed-by-alignment
+AsdayvhvsgaSpec	PL1INCL		REMOTE_PAST	edisdayvhnvi	ᎢᎩᏍᏓᏴᏅᎢ	exposed-by-alignment
+AsdayvhvsgaSpec	SG1		INFINITIVE	jisdaydi	ᎠᎩᏍᏓᏴᏗ	exposed-by-alignment
+AsdayvhvsgaSpec	SG1		REMOTE_PAST	jisdayvhnvi	ᎠᎩᏍᏓᏴᏅᎢ	exposed-by-alignment
+AsdayvhvsgaSpec	SG2		INFINITIVE	hisdayhdi	ᏣᏍᏓᏴᏗ	exposed-by-alignment
+AsdayvhvsgaSpec	SG2		REMOTE_PAST	hisdayvhnvi	ᏣᏍᏓᏴᏅᎢ	exposed-by-alignment
+AsdelihaSpec	PL1INCL		HABITUAL	edisdelisgoi	ᎢᏗᏍᏕᎵᏍᎪᎢ	exposed-by-alignment
+AsdelihaSpec	PL1INCL		INFINITIVE	edisdehldi	ᎢᎩᏍᏕᎶᏗ	exposed-by-alignment
+AsdelihaSpec	PL1INCL		PRESENT	edisdeliha	ᎢᏗᏍᏕᎵᎭ	exposed-by-alignment
+AsdelihaSpec	PL1INCL		REMOTE_PAST	edisdelvhvi	ᎢᎩᏍᏕᎸᎲᎢ	exposed-by-alignment
+AsdelihaSpec	SG1		INFINITIVE	jisdehldi	ᎠᎩᏍᏕᎶᏗ	exposed-by-alignment
+AsdelihaSpec	SG2		INFINITIVE	hisdehldi	ᏣᏍᏕᎶᏗ	exposed-by-alignment
+AsdelihaSpec	SG2		REMOTE_PAST	hisdelvhvi	ᏣᏍᏕᎸᎲᎢ	exposed-by-alignment
+AsdigiaSpec	SG2		INFINITIVE	tsdigisdi	ᏣᏍᏗᎩᏍᏗ	exposed-by-alignment
+AsdigiaSpec	SG2		REMOTE_PAST	tsdigvi	ᏣᏍᏗᎬᎢ	exposed-by-alignment
+AsduhvsgaSpec	SG2		INFINITIVE	tsdudi	ᏣᏍᏚᏗ	exposed-by-alignment
+AsduhvsgaSpec	SG2		REMOTE_PAST	tsduhnvi	ᏣᏍᏚᏅᎢ	exposed-by-alignment
+AsduiaSpec	SG2		INFINITIVE	tsduisdi	ᏣᏍᏚᎢᏍᏗ	exposed-by-alignment
+AsduiaSpec	SG2		REMOTE_PAST	tsduisvi	ᏣᏍᏚᎢᏒᎢ	exposed-by-alignment
+AsdwadegaSpec	SG2		INFINITIVE	tsdawadvsdi	ᏣᏍᏓᏩᏛᏍᏗ	exposed-by-alignment
+AsdwadegaSpec	SG2		REMOTE_PAST	tsdawadvsvi	ᏣᏍᏓᏩᏛᏒᎢ	exposed-by-alignment
+AsehehaSpec	PL3	SG3AN	INFINITIVE	unasehehdi	ᎠᎾᏎᎮᏗ	exposed-by-alignment
+AsehehaSpec	PL3	SG3AN	REMOTE_PAST	unasehelvi	ᎠᎾᏎᎮᎸᎢ	exposed-by-alignment
+AsgagaSpec	PL1INCL		HABITUAL	edisgagoi	ᎢᏗᏍᎦᎪᎢ	exposed-by-alignment
+AsgagaSpec	PL1INCL		INFINITIVE	edisgaysdi	ᎢᎩᏍᎦᏍᏗ	exposed-by-alignment
+AsgagaSpec	PL1INCL		PRESENT	edisgaga	ᎢᏗᏍᎦᎦ	exposed-by-alignment
+AsgagaSpec	PL1INCL		REMOTE_PAST	edisgajvi	ᎢᎩᏍᎦᏨᎢ	exposed-by-alignment
+AsgagaSpec	PL3		INFINITIVE	unisgaysdi	ᎤᏂᏍᎦᏍᏗ	exposed-by-alignment
+AsgagaSpec	SG1		INFINITIVE	jisgaysdi	ᎠᎩᏍᎦᏍᏗ	exposed-by-alignment
+AsgagaSpec	SG1		REMOTE_PAST	jisgajvi	ᎠᎩᏍᎦᏨᎢ	exposed-by-alignment
+AsgagaSpec	SG2		REMOTE_PAST	hisgajvi	ᏣᏍᎦᏨᎢ	exposed-by-alignment
+AsgahlgaSpec	PL1INCL		HABITUAL	idisgahlgoi	ᎢᏗᏍᎦᏟᎪᎢ	exposed-by-alignment
+AsgahlgaSpec	PL1INCL		PRESENT	idisgahlga	ᎢᏗᏍᎦᏟᎦ	exposed-by-alignment
+AsgahlgaSpec	PL1INCL		REMOTE_PAST	igisgahljvi	ᎢᎩᏍᎦᏟᏨᎢ	exposed-by-alignment
+AsgahlgaSpec	PL3		HABITUAL	anisgahlgoi	ᎠᏂᏍᎦᏟᎪᎢ	exposed-by-alignment
+AsgahlgaSpec	PL3		PRESENT	anisgahlga	ᎠᏂᏍᎦᏟᎦ	exposed-by-alignment
+AsgahlgaSpec	PL3		REMOTE_PAST	unisgahljvi	ᎤᏂᏍᎦᏟᏨᎢ	exposed-by-alignment
+AsgahlgaSpec	SG1		HABITUAL	jisgahlgoi	ᏥᏍᎦᏟᎪᎢ	exposed-by-alignment
+AsgahlgaSpec	SG1		REMOTE_PAST	aksgahljvi	ᎠᎩᏍᎦᏟᏨᎢ	exposed-by-alignment
+AsgahlgaSpec	SG2		HABITUAL	hisgahlgoi	ᎯᏍᎦᏟᎪᎢ	exposed-by-alignment
+AsgahlgaSpec	SG2		PRESENT	hisgahlga	ᎯᏍᎦᏟᎦ	exposed-by-alignment
+AsgahlgaSpec	SG2		REMOTE_PAST	tsgahljvi	ᏣᏍᎦᏟᏨᎢ	exposed-by-alignment
+AsgaiSpec	SG2		INFINITIVE	tsgasdi	ᏣᏍᎦᏍᏗ	exposed-by-alignment
+AsgaiSpec	SG2		REMOTE_PAST	tsgalvi	ᏣᏍᎦᎸᎢ	exposed-by-alignment
+AsganvgaSpec	PL1INCL		INFINITIVE	igisganvysdi	ᎢᎩᏍᎦᏅᎢᏍᏗ	exposed-by-alignment
+AsganvgaSpec	PL3		INFINITIVE	unisganvysdi	ᎤᏂᏍᎦᏅᎢᏍᏗ	exposed-by-alignment
+AsganvgaSpec	SG1		INFINITIVE	aksganvysdi	ᎠᎩᏍᎦᏅᎢᏍᏗ	exposed-by-alignment
+AsganvgaSpec	SG2		INFINITIVE	tsganvysdi	ᏣᏍᎦᏅᎢᏍᏗ	exposed-by-alignment
+AsganvgaSpec	SG2		REMOTE_PAST	tsganvjvi	ᏣᏍᎦᏅᏨᎢ	exposed-by-alignment
+AsgitsgaSpec	PL1INCL		REMOTE_PAST	igasgitsvi	ᎢᎦᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgitsgaSpec	SG1	SG3AN	REMOTE_PAST	jiyasgitsvi	ᏥᏯᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgitsgaSpec	SG2		REMOTE_PAST	jasgitsvi	ᏣᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgitsgaSpec	SG2	SG3AN	REMOTE_PAST	hiyasgitsvi	ᎯᏯᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgitsgaSpec	SG3		HABITUAL	edasgitsgoi	ᎠᏍᎩᏘᏍᎪᎢ	exposed-by-alignment
+AsgitsgaSpec	SG3		HABITUAL	edasgitsgoi	ᎠᏍᎩᏘᏍᎪᎢ	exposed-by-alignment
+AsgitsgaSpec	SG3		INFINITIVE	unasgitsdi	ᎤᏍᎩᏘᏍᏗ	exposed-by-alignment
+AsgitsgaSpec	SG3		PRESENT	edasgitsga	ᎠᏍᎩᏘᏍᎦ	exposed-by-alignment
+AsgitsgaSpec	SG3		PRESENT	edasgitsga	ᎠᏍᎩᏘᏍᎦ	exposed-by-alignment
+AsgitsgaSpec	SG3		REMOTE_PAST	edasgitsvi	ᎤᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgitsgaSpec	SG3		REMOTE_PAST	edasgitsvi	ᎤᏍᎩᏘᏒᎢ	exposed-by-alignment
+AsgwadiaSpec	SG2		INFINITIVE	tsgwadisdi	ᏣᏍᏆᏗᏍᏗ	exposed-by-alignment
+AsgwadiaSpec	SG2		REMOTE_PAST	tsgwadvi	ᏣᏍᏆᏛᎢ	exposed-by-alignment
+AsgwahleaSpec	SG2		INFINITIVE	tsgwahlesdi	ᏣᏍᏆᏞᏍᏗ	exposed-by-alignment
+AsgwahleaSpec	SG2		REMOTE_PAST	tsgwahlesvi	ᏣᏍᏆᏞᏒᎢ	exposed-by-alignment
+AsgwanigosgaSpec	SG2		INFINITIVE	tsgwanigohisdi	ᏣᏍᏆᏂᎪᎯᏍᏗ	exposed-by-alignment
+AsgwanigosgaSpec	SG2		REMOTE_PAST	tsgwanigosvi	ᏣᏍᏆᏂᎪᏒᎢ	exposed-by-alignment
+AsuhvsgaSpec	PL1INCL		INFINITIVE	iksuhdi	ᎢᎦᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	PL1INCL		REMOTE_PAST	iksuhnvi	ᎢᎦᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG1		INFINITIVE	aksuhdi	ᎠᏆᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG1		REMOTE_PAST	aksuhnvi	ᎠᏆᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG2		INFINITIVE	tsuhdi	ᏣᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG2		REMOTE_PAST	tsuhnvi	ᏣᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		HABITUAL	osda-nidvnehoi	ᎠᏑᎲᏍᎪᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		INFINITIVE	osda-yigvndi	ᎤᏑᏗ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		PRESENT	osda-nidvneha	ᎠᏑᎲᏍᎦ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuhvsgaSpec	SG3		REMOTE_PAST	osda-nigvnelvi	ᎤᏑᏅᎢ	exposed-by-alignment
+AsuligogaSpec	SG2		INFINITIVE	tsuligosdi	ᏣᏑᎵᎪᏍᏗ	exposed-by-alignment
+AsuligogaSpec	SG2		REMOTE_PAST	tsuligojvi	ᏣᏑᎵᎪᏨᎢ	exposed-by-alignment
+AsvhvsgaSpec	SG2		INFINITIVE	tsvhvsdi	ᏣᏒᎲᏍᏗ	exposed-by-alignment
+AsvhvsgaSpec	SG2		REMOTE_PAST	tsvhnvi	ᏣᏒᏅᎢ	exposed-by-alignment
+AtawedovsgaSpec	PL1INCL		HABITUAL	ididawedovsgoi	ᎢᏗᏔᏪᏙᎥᏍᎪᎢ	exposed-by-alignment
+AtawedovsgaSpec	PL1INCL		INFINITIVE	igidawedodi	ᎢᎩᏔᏪᏙᏗ	exposed-by-alignment
+AtawedovsgaSpec	PL1INCL		PRESENT	ididawedovsga	ᎢᏗᏔᏪᏙᎥᏍᎦ	exposed-by-alignment
+AtawedovsgaSpec	PL1INCL		REMOTE_PAST	igidawedonvi	ᎢᎩᏔᏪᏙᏅᎢ	exposed-by-alignment
+AtawedovsgaSpec	PL3		HABITUAL	anidawedovsgoi	ᎠᏂᏔᏪᏙᎥᏍᎪᎢ	exposed-by-alignment
+AtawedovsgaSpec	PL3		INFINITIVE	unidawedodi	ᎤᏂᏔᏪᏙᏗ	exposed-by-alignment
+AtawedovsgaSpec	PL3		PRESENT	anidawedovsga	ᎠᏂᏔᏪᏙᎥᏍᎦ	exposed-by-alignment
+AtawedovsgaSpec	PL3		REMOTE_PAST	unidawedonvi	ᎤᏂᏔᏪᏙᏅᎢ	exposed-by-alignment
+AtawedovsgaSpec	SG1		HABITUAL	jidawedovsga	ᏥᏔᏪᏙᎥᏍᎪᎢ	exposed-by-alignment
+AtawedovsgaSpec	SG1		INFINITIVE	agidawedodi	ᎠᎩᏔᏪᏙᏗ	exposed-by-alignment
+AtawedovsgaSpec	SG1		PRESENT	jidawedovsga	ᏥᏔᏪᏙᎥᏍᎦ	exposed-by-alignment
+AtawedovsgaSpec	SG1		REMOTE_PAST	agidawedonvi	ᎠᎩᏔᏪᏙᏅᎢ	exposed-by-alignment
+AtawedovsgaSpec	SG2		HABITUAL	hidawedovsgoi	ᎯᏔᏪᏙᎥᏍᎪᎢ	exposed-by-alignment
+AtawedovsgaSpec	SG2		INFINITIVE	jadawedodi	ᏣᏔᏪᏙᏗ	exposed-by-alignment
+AtawedovsgaSpec	SG2		PRESENT	hidawedovsga	ᎯᏔᏪᏙᎥᏍᎦ	exposed-by-alignment
+AtawedovsgaSpec	SG2		REMOTE_PAST	jadawedonvi	ᏣᏔᏪᏙᏅᎢ	exposed-by-alignment
+AteladiaSpec	PL1INCL		HABITUAL	idatelidisgoi	ᎢᏓᏖᎳᏗᏍᎪᎢ	exposed-by-alignment
+AteladiaSpec	PL3		HABITUAL	anatelidisgoi	ᎠᎾᏖᎳᏗᏍᎪᎢ	exposed-by-alignment
+AteladiaSpec	SG1		HABITUAL	gadeladisgoi	ᎦᏖᎳᏗᏍᎪᎢ	exposed-by-alignment
+AteladiaSpec	SG1		PRESENT	gadeladia	ᎦᏖᎳᏗᎠ	exposed-by-alignment
+AtihnawidihaSpec	SG3		HABITUAL	anhtihnawidisgoi	ᎠᏘᎾᏫᏗᏍᎪᎢ	exposed-by-alignment
+AtihnawidihaSpec	SG3		INFINITIVE	unhtihnawitdi	ᎤᏘᎾᏫᏘᏗ	exposed-by-alignment
+AtihnawidihaSpec	SG3		PRESENT	anhtihnawidiha	ᎠᏘᎾᏫᏗᎭ	exposed-by-alignment
+AtihnawidihaSpec	SG3		REMOTE_PAST	unhtihnawidvhvi	ᎤᏘᎾᏫᏛᎲᎢ	exposed-by-alignment
+AtihnohihaSpec	SG3		HABITUAL	anatihnohihoi	ᎠᏘᏃᎯᎰᎢ	exposed-by-alignment
+AtihnohihaSpec	SG3		INFINITIVE	unatihnohisdi	ᎤᏘᏃᎯᏍᏗ	exposed-by-alignment
+AtihnohihaSpec	SG3		PRESENT	anatihnohiha	ᎠᏘᏃᎯᎭ	exposed-by-alignment
+AtihnohihaSpec	SG3		REMOTE_PAST	unatihnohihlvi	ᎤᏘᏃᎯᏢᎢ	exposed-by-alignment
+AtiyohihaSpec	SG1		HABITUAL	gadiyohihoi	ᎦᏘᏲᎯᎰᎢ	exposed-by-alignment
+AtiyohihaSpec	SG1		PRESENT	gadiyohiha	ᎦᏘᏲᎯᎭ	exposed-by-alignment
+AtkohvsgaSpec	SG1		HABITUAL	jigatohvsgoi	ᏥᎩᏙᎲᏍᎪᎢ	exposed-by-alignment
+AtkohvsgaSpec	SG1		PRESENT	jigatohvsga	ᏥᎩᏙᎲᏍᎦ	exposed-by-alignment
+AtlihaSpec	PL1INCL		REMOTE_PAST	igvtlilvi	ᎢᎦᏟᎸᎢ	exposed-by-alignment
+AtlihaSpec	PL3		REMOTE_PAST	unvtlilvi	ᎤᎾᏟᎸᎢ	exposed-by-alignment
+AtlihaSpec	SG1		INFINITIVE	agwalhsdi	ᎠᏆᎶᏍᏗ	exposed-by-alignment
+AtlihaSpec	SG1		REMOTE_PAST	agwvtlilvi	ᎠᏆᏟᎸᎢ	exposed-by-alignment
+AtlihaSpec	SG2		REMOTE_PAST	jvtlilvi	ᏣᏟᎸᎢ	exposed-by-alignment
+AtolsdihaSpec	PL1INCL	SG3AN	HABITUAL	idatolsdisgoi	ᎡᏓᏙᎵᏍᏗᏍᎪᎢ	exposed-by-alignment
+AtolsdihaSpec	PL1INCL	SG3AN	INFINITIVE	igatolsdohdi	ᎡᏓᏙᎵᏍᏙᏗ	exposed-by-alignment
+AtolsdihaSpec	PL1INCL	SG3AN	PRESENT	idatolsdiha	ᎡᏓᏙᎵᏍᏗᎭ	exposed-by-alignment
+AtolsdihaSpec	PL1INCL	SG3AN	REMOTE_PAST	igatolstanvi	ᎡᏓᏙᎵᏍᏔᏅᎢ	exposed-by-alignment
+AtolsdihaSpec	PL3	SG3AN	INFINITIVE	unatolsdohdi	ᎠᎾᏙᎵᏍᏙᏗ	exposed-by-alignment
+AtolsdihaSpec	PL3	SG3AN	REMOTE_PAST	unatolstanvi	ᎠᎾᏙᎵᏍᏔᏅᎢ	exposed-by-alignment
+AtsdeaSpec	SG1		HABITUAL	gajisdesgoi	ᎦᏥᏕᏍᎪᎢ	exposed-by-alignment
+AtsdeaSpec	SG1		PRESENT	gajisdea	ᎦᏥᏕᎠ	exposed-by-alignment
+AtsgovsgaSpec	PL1INCL		HABITUAL	idatsgovsgoi	ᎢᏓᏥᎪᎥᏍᎪᎢ	exposed-by-alignment
+AtsgovsgaSpec	PL1INCL		INFINITIVE	igatsgodi	ᎢᎦᏥᎪᏗ	exposed-by-alignment
+AtsgovsgaSpec	PL1INCL		PRESENT	idatsgovsga	ᎢᏓᏥᎪᎥᏍᎦ	exposed-by-alignment
+AtsgovsgaSpec	PL1INCL		REMOTE_PAST	igatsgonvi	ᎢᎦᏥᎪᏅᎢ	exposed-by-alignment
+AtsgovsgaSpec	PL3		HABITUAL	anatsgovsgoi	ᎠᎾᏥᎪᎥᏍᎪᎢ	exposed-by-alignment
+AtsgovsgaSpec	PL3		INFINITIVE	unatsgodi	ᎤᎾᏥᎪᏗ	exposed-by-alignment
+AtsgovsgaSpec	PL3		PRESENT	anatsgovsga	ᎠᎾᏥᎪᎥᏍᎦ	exposed-by-alignment
+AtsgovsgaSpec	PL3		REMOTE_PAST	unatsgonvi	ᎤᎾᏥᎪᏅᎢ	exposed-by-alignment
+AtsgovsgaSpec	SG1		HABITUAL	gajisgovsgoi	ᎦᏥᎪᎥᏍᎪᎢ	exposed-by-alignment
+AtsgovsgaSpec	SG1		INFINITIVE	agwatsgodi	ᎠᏆᏥᎪᏗ	exposed-by-alignment
+AtsgovsgaSpec	SG1		PRESENT	gatsisgovsga	ᎦᏥᎪᎥᏍᎦ	exposed-by-alignment
+AtsgovsgaSpec	SG1		REMOTE_PAST	agwatsgonvi	ᎠᏆᏥᎪᏅᎢ	exposed-by-alignment
+AtsgovsgaSpec	SG2		HABITUAL	hatsgovsgoi	ᎭᏥᎪᎥᏍᎪᎢ	exposed-by-alignment
+AtsgovsgaSpec	SG2		INFINITIVE	jatsgodi	ᏣᏥᎪᏗ	exposed-by-alignment
+AtsgovsgaSpec	SG2		PRESENT	hatsgovsga	ᎭᏥᎪᎥᏍᎦ	exposed-by-alignment
+AtsgovsgaSpec	SG2		REMOTE_PAST	jatsgonvi	ᏣᏥᎪᏅᎢ	exposed-by-alignment
+AtuisdihaSpec	SG2		INFINITIVE	tstuisdohdi	ᏣᏚᎢᏍᏙᏗ	exposed-by-alignment
+AtuisdihaSpec	SG2		REMOTE_PAST	tstuistanvi	ᏣᏚᎢᏍᏔᏅᎢ	exposed-by-alignment
+AtvdasdihaSpec	SG1	SG3IN	HABITUAL	hatvdasdisgoi	ᎦᏛᏓᏍᏗᏍᎪᎢ	exposed-by-alignment
+AtvgiaSpec	PL1INCL	SG3IN	INFINITIVE	iktvgodi	ᎢᎦᏛᎪᏗ	exposed-by-alignment
+AtvgiaSpec	PL1INCL	SG3IN	PRESENT	idatvgia	ᎣᏣᏛᎩᎠ	exposed-by-alignment
+AtvgiaSpec	PL1INCL	SG3IN	REMOTE_PAST	iktvganvi	ᎢᎦᏛᎦᏅᎢ	exposed-by-alignment
+AtvgiaSpec	SG1	SG3IN	INFINITIVE	aktvgodi	ᎠᏆᏛᎪᏗ	exposed-by-alignment
+AtvgiaSpec	SG1	SG3IN	REMOTE_PAST	aktvganvi	ᎠᏆᏛᎦᏅᎢ	exposed-by-alignment
+AtvgiaSpec	SG2	SG3IN	INFINITIVE	tstvgodi	ᏣᏛᎪᏗ	exposed-by-alignment
+AtvgiaSpec	SG2	SG3IN	REMOTE_PAST	tstvganvi	ᏣᏛᎦᏅᎢ	exposed-by-alignment
+AtvhisdihaSpec	PL1INCL	SG3IN	HABITUAL	edatvhisdisgoi	ᎢᏓᏛᎯᏍᏗᏍᎪᎢ	exposed-by-alignment
+AtvhisdihaSpec	PL1INCL	SG3IN	PRESENT	edatvhisdiha	ᎢᏓᏛᎯᏍᏗᎭ	exposed-by-alignment
+AtvhisdihaSpec	PL1INCL	SG3IN	REMOTE_PAST	edatvhistanvi	ᎢᎦᏛᎯᏍᏔᏅᎢ	exposed-by-alignment
+AtvhisdihaSpec	SG1	SG3IN	INFINITIVE	aktvhisdohdi	ᎠᏆᏛᎯᏍᏙᏗ	exposed-by-alignment
+AtvhisdihaSpec	SG1	SG3IN	REMOTE_PAST	aktvhistanvi	ᎠᏆᏛᎯᏍᏔᏅᎢ	exposed-by-alignment
+AtvhisdihaSpec	SG2	SG3IN	INFINITIVE	tstvhisdohdi	ᏣᏛᎯᏍᏙᏗ	exposed-by-alignment
+AtvhisdihaSpec	SG2	SG3IN	REMOTE_PAST	tstvhistanvi	ᏣᏛᎯᏍᏔᏅᎢ	exposed-by-alignment
+AyegaSpec	PL1INCL	SG3AN	HABITUAL	idiyegoi	ᎡᏗᏰᎪᎢ	exposed-by-alignment
+AyegaSpec	PL1INCL	SG3AN	INFINITIVE	igiyeisdi	ᎡᏗᏰᎢᏍᏗ	exposed-by-alignment
+AyegaSpec	PL1INCL	SG3AN	PRESENT	idiyega	ᎡᏗᏰᎦ	exposed-by-alignment
+AyegaSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyejvi	ᎡᏗᏰᏨᎢ	exposed-by-alignment
+AyegaSpec	PL3	SG3AN	INFINITIVE	uniyeisdi	ᎠᏂᏰᎢᏍᏗ	exposed-by-alignment
+AyegaSpec	PL3	SG3AN	REMOTE_PAST	uniyejvi	ᎠᏂᏰᏨᎢ	exposed-by-alignment
+AyegaSpec	SG1	SG3AN	INFINITIVE	agiyeisdi	ᏥᏰᎢᏍᏗ	exposed-by-alignment
+AyegaSpec	SG1	SG3AN	REMOTE_PAST	agiyejvi	ᏥᏰᏨᎢ	exposed-by-alignment
+AyegaSpec	SG2	SG3AN	INFINITIVE	jayeisdi	ᎯᏰᎢᏍᏗ	exposed-by-alignment
+AyegaSpec	SG2	SG3AN	REMOTE_PAST	jayejvi	ᎯᏰᏨᎢ	exposed-by-alignment
+AyesdihaSpec	PL1INCL	SG3AN	HABITUAL	edayesdisgoi	ᎡᏗᏰᏍᏗᏍᎪᎢ	exposed-by-alignment
+AyesdihaSpec	PL1INCL	SG3AN	INFINITIVE	edayesdohdi	ᎡᏗᏰᏍᏙᏗ	exposed-by-alignment
+AyesdihaSpec	PL1INCL	SG3AN	PRESENT	edayesdiha	ᎡᏗᏰᏍᏗᎭ	exposed-by-alignment
+AyesdihaSpec	PL1INCL	SG3AN	REMOTE_PAST	edayestanvi	ᎡᏗᏰᏍᏔᏅᎢ	exposed-by-alignment
+AyesdihaSpec	PL3	SG3AN	HABITUAL	anayesdisgoi	ᎠᏂᏰᏍᏗᏍᎪᎢ	exposed-by-alignment
+AyesdihaSpec	PL3	SG3AN	INFINITIVE	unayesdohdi	ᎠᏂᏰᏍᏙᏗ	exposed-by-alignment
+AyesdihaSpec	PL3	SG3AN	PRESENT	anayesdiha	ᎠᏂᏰᏍᏗᎭ	exposed-by-alignment
+AyesdihaSpec	PL3	SG3AN	REMOTE_PAST	unayestanvi	ᎠᏂᏰᏍᏔᏅᎢ	exposed-by-alignment
+AyesdihaSpec	SG3	SG3AN	PRESENT	ayesdiha	ᎦᏰᏍᏗᎭ	exposed-by-alignment
+AyhwidihaSpec	SG1	SG3AN	INFINITIVE	agiyvhwitdi	ᏥᏴᏫᏘᏗ	exposed-by-alignment
+AyhwidihaSpec	SG1	SG3AN	REMOTE_PAST	agiyvhwidvhvi	ᏥᏴᏫᏛᎲᎢ	exposed-by-alignment
+AyhwidihaSpec	SG2	SG3AN	INFINITIVE	jayvhwitdi	ᎯᏴᏫᏘᏗ	exposed-by-alignment
+AyhwidihaSpec	SG2	SG3AN	REMOTE_PAST	jayvhwidvhvi	ᎯᏴᏫᏛᎲᎢ	exposed-by-alignment
+AyihaSpec	PL3		INFINITIVE	uniyhdi	ᎤᏂᏱᏗ	exposed-by-alignment
+AyihaSpec	SG1	SG3AN	INFINITIVE	agiyhdi	ᏥᏱᏗ	exposed-by-alignment
+AyihaSpec	SG1	SG3AN	PRESENT	jiyia	ᏥᏱᎭ	exposed-by-alignment
+AyihaSpec	SG1	SG3AN	REMOTE_PAST	agiyvhvi	ᏥᏴᎲᎢ	exposed-by-alignment
+AyihaSpec	SG2	SG3AN	INFINITIVE	jayhdi	ᎯᏱᏗ	exposed-by-alignment
+AyihaSpec	SG2	SG3AN	REMOTE_PAST	jayvhvi	ᎯᏴᎲᎢ	exposed-by-alignment
+AyohihaSpec	PL1INCL	SG3AN	HABITUAL	idiyohihoi	ᎡᏗᏲᎯᎰᎢ	exposed-by-alignment
+AyohihaSpec	PL1INCL	SG3AN	INFINITIVE	igiyosdi	ᎡᏗᏲᏍᏗ	exposed-by-alignment
+AyohihaSpec	PL1INCL	SG3AN	PRESENT	idiyohiha	ᎡᏗᏲᎯᎭ	exposed-by-alignment
+AyohihaSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyohlvi	ᎡᏗᏲᏢᎢ	exposed-by-alignment
+AyohihaSpec	PL3	SG3AN	INFINITIVE	uniyosdi	ᎠᏂᏲᏍᏗ	exposed-by-alignment
+AyohihaSpec	PL3	SG3AN	REMOTE_PAST	uniyohlvi	ᎠᏂᏲᏢᎢ	exposed-by-alignment
+AyohihaSpec	SG1	SG3AN	HABITUAL	jiyoihoi	ᏥᏲᎯᎰᎢ	exposed-by-alignment
+AyohihaSpec	SG1	SG3AN	INFINITIVE	agiyosdi	ᏥᏲᏍᏗ	exposed-by-alignment
+AyohihaSpec	SG1	SG3AN	PRESENT	jiyoiha	ᏥᏲᎯᎭ	exposed-by-alignment
+AyohihaSpec	SG1	SG3AN	REMOTE_PAST	agiyohlvi	ᏥᏲᏢᎢ	exposed-by-alignment
+AyohihaSpec	SG2	SG3AN	REMOTE_PAST	jayohlvi	ᎯᏲᏢᎢ	exposed-by-alignment
+AyohisdihaSpec	PL1INCL		REMOTE_PAST	igiyohisdtanvi	ᎢᎩᏲᎯᏍᏔᏅᎢ	exposed-by-alignment
+AyohisdihaSpec	PL3		REMOTE_PAST	uniyohisdtanvi	ᎤᏂᏲᎯᏍᏔᏅᎢ	exposed-by-alignment
+AyohisdihaSpec	SG1		REMOTE_PAST	agiyohisdtanvi	ᎠᎩᏲᎯᏍᏔᏅᎢ	exposed-by-alignment
+AyohisdihaSpec	SG2		REMOTE_PAST	jayohisdtanvi	ᏣᏲᎯᏍᏔᏅᎢ	exposed-by-alignment
+AyohusgaSpec	PL1INCL	SG3AN	HABITUAL	idiyohusgoi	ᎡᏗᏲᎱᏍᎪᎢ	exposed-by-alignment
+AyohusgaSpec	PL1INCL	SG3AN	INFINITIVE	igiyohusdi	ᎡᏗᏲᎱᎯᏍᏗ	exposed-by-alignment
+AyohusgaSpec	PL1INCL	SG3AN	PRESENT	idiyohusga	ᎡᏗᏲᎱᏍᎦ	exposed-by-alignment
+AyohusgaSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyohusvi	ᎡᏗᏲᎱᏒᎢ	exposed-by-alignment
+AyohusgaSpec	PL3	SG3AN	INFINITIVE	uniyohusdi	ᎠᏂᏲᎱᎯᏍᏗ	exposed-by-alignment
+AyohusgaSpec	PL3	SG3AN	REMOTE_PAST	uniyohusvi	ᎠᏂᏲᎱᏒᎢ	exposed-by-alignment
+AyohusgaSpec	SG1	SG3AN	HABITUAL	jiyousgoi	ᏥᏲᎱᏍᎪᎢ	exposed-by-alignment
+AyohusgaSpec	SG1	SG3AN	INFINITIVE	agiyohuhisdi	ᏥᏲᎱᎯᏍᏗ	exposed-by-alignment
+AyohusgaSpec	SG1	SG3AN	PRESENT	jiyousga	ᏥᏲᎱᏍᎦ	exposed-by-alignment
+AyohusgaSpec	SG1	SG3AN	REMOTE_PAST	jiyousvi	ᏥᏲᎱᏒᎢ	exposed-by-alignment
+AyohusgaSpec	SG2	SG3AN	INFINITIVE	jayohuhisdi	ᎯᏲᎱᎯᏍᏗ	exposed-by-alignment
+AyolihaSpec	PL3	SG3AN	INFINITIVE	uniyolisdi	ᎠᏂᏲᎵᏍᏗ	exposed-by-alignment
+AyolihaSpec	PL3	SG3AN	REMOTE_PAST	uniyolilvi	ᎠᏂᏲᎵᎸᎢ	exposed-by-alignment
+AyosdiSpec	PL1INCL	SG3AN	HABITUAL	idiyosdihoi	ᎡᏗᏲᏍᏗᎰᎢ	exposed-by-alignment
+AyosdiSpec	PL1INCL	SG3AN	INFINITIVE	igiyosdohdi	ᎡᏗᏲᏍᏙᏗ	exposed-by-alignment
+AyosdiSpec	PL1INCL	SG3AN	PRESENT	idiyosdiha	ᎡᏗᏲᏍᏗᎭ	exposed-by-alignment
+AyosdiSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyosdanvi	ᎡᏗᏲᏍᏓᏅᎢ	exposed-by-alignment
+AyosdiSpec	PL3	SG3AN	INFINITIVE	uniyosdohdi	ᎠᏂᏲᏍᏙᏗ	exposed-by-alignment
+AyosdiSpec	PL3	SG3AN	REMOTE_PAST	uniyosdanvi	ᎠᏂᏲᏍᏓᏅᎢ	exposed-by-alignment
+AyosdiSpec	SG1	SG3AN	HABITUAL	jiyosdisoi	ᏥᏲᏍᏗᎰᎢ	exposed-by-alignment
+AyosdiSpec	SG1	SG3AN	INFINITIVE	agiyosdohdi	ᏥᏲᏍᏙᏗ	exposed-by-alignment
+AyosdiSpec	SG1	SG3AN	REMOTE_PAST	agiyosdanvi	ᏥᏲᏍᏓᏅᎢ	exposed-by-alignment
+AyosdiSpec	SG2	SG3AN	HABITUAL	hiyosdisoi	ᎯᏲᏍᏗᎰᎢ	exposed-by-alignment
+AyosdiSpec	SG2	SG3AN	INFINITIVE	jayosdohdi	ᎯᏲᏍᏙᏗ	exposed-by-alignment
+AyosdiSpec	SG2	SG3AN	REMOTE_PAST	jayosdanvi	ᎯᏲᏍᏓᏅᎢ	exposed-by-alignment
+AyosdiSpec	SG3	SG3AN	PRESENT	ayosdiha	ᎦᏲᏍᏗᎭ	exposed-by-alignment
+AyostanohvsgaSpec	PL1INCL	SG3AN	HABITUAL	idiyostanohvsgoi	ᎡᏗᏲᏍᏔᏃᎲᏍᎪᎢ	exposed-by-alignment
+AyostanohvsgaSpec	PL1INCL	SG3AN	INFINITIVE	igiyostanohvsdi	ᎡᏗᏲᏍᏔᏃᎲᏍᏗ	exposed-by-alignment
+AyostanohvsgaSpec	PL1INCL	SG3AN	PRESENT	idiyostanohvsga	ᎡᏗᏲᏍᏔᏃᎲᏍᎦ	exposed-by-alignment
+AyostanohvsgaSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyostanohnvi	ᎡᏗᏲᏍᏔᏃᏅᎢ	exposed-by-alignment
+AyostanohvsgaSpec	PL3	SG3AN	INFINITIVE	uniyostanohvsdi	ᎠᏂᏲᏍᏔᏃᎲᏍᏗ	exposed-by-alignment
+AyostanohvsgaSpec	PL3	SG3AN	REMOTE_PAST	uniyostanohnvi	ᎠᏂᏲᏍᏔᏃᏅᎢ	exposed-by-alignment
+AyostanohvsgaSpec	SG1	SG3AN	INFINITIVE	agiyostanohvsdi	ᏥᏲᏍᏔᏃᎲᏍᏗ	exposed-by-alignment
+AyostanohvsgaSpec	SG1	SG3AN	REMOTE_PAST	agiyostanohnvi	ᏥᏲᏍᏔᏃᏅᎢ	exposed-by-alignment
+AyostanohvsgaSpec	SG2	SG3AN	INFINITIVE	jayostanohvsdi	ᎯᏲᏍᏔᏃᎲᏍᏗ	exposed-by-alignment
+AyostanohvsgaSpec	SG2	SG3AN	REMOTE_PAST	jayostanohnvi	ᎯᏲᏍᏔᏃᏅᎢ	exposed-by-alignment
+AyvhihaSpec	PL1INCL	SG3AN	HABITUAL	idiyvhihoi	ᎡᏗᏴᎯᎰᎢ	exposed-by-alignment
+AyvhihaSpec	PL1INCL	SG3AN	INFINITIVE	igiyvsdi	ᎡᏗᏴᏍᏗ	exposed-by-alignment
+AyvhihaSpec	PL1INCL	SG3AN	PRESENT	idiyvhiha	ᎡᏗᏴᎯᎭ	exposed-by-alignment
+AyvhihaSpec	PL1INCL	SG3AN	REMOTE_PAST	igiyvhlvi	ᎡᏗᏴᏢᎢ	exposed-by-alignment
+AyvhihaSpec	PL3	SG3AN	INFINITIVE	uniyvsdi	ᎠᏂᏴᏍᏗ	exposed-by-alignment
+AyvhihaSpec	PL3	SG3AN	REMOTE_PAST	uniyvhlvi	ᎠᏂᏴᏢᎢ	exposed-by-alignment
+AyvhihaSpec	SG1	SG3AN	HABITUAL	jiyvioi	ᏥᏴᎯᎰᎢ	exposed-by-alignment
+AyvhihaSpec	SG1	SG3AN	INFINITIVE	agiyvsdi	ᏥᏴᏍᏗ	exposed-by-alignment
+AyvhihaSpec	SG1	SG3AN	PRESENT	jiyvia	ᏥᏴᎯᎭ	exposed-by-alignment
+AyvhihaSpec	SG1	SG3AN	REMOTE_PAST	agiyvhlvi	ᏥᏴᏢᎢ	exposed-by-alignment
+AyvhihaSpec	SG2	SG3AN	INFINITIVE	jayvsdi	ᎯᏴᏍᏗ	exposed-by-alignment
+AyvhihaSpec	SG2	SG3AN	REMOTE_PAST	jayvhlvi	ᎯᏴᏢᎢ	exposed-by-alignment
+AyvhwahtihaSpec	SG1	SG3AN	INFINITIVE	agiyvhwahtvhdi	ᏥᏴᏩᏛᏗ	exposed-by-alignment
+AyvhwahtihaSpec	SG1	SG3AN	REMOTE_PAST	agiyvhwahtvhvi	ᏥᏴᏩᏛᎲᎢ	exposed-by-alignment
+AyvhwahtihaSpec	SG2	SG3AN	INFINITIVE	jayvhwahtvhdi	ᎯᏴᏩᏛᏗ	exposed-by-alignment
+AyvhwahtihaSpec	SG2	SG3AN	REMOTE_PAST	jayvhwahtvhvi	ᎯᏴᏩᏛᎲᎢ	exposed-by-alignment
+DadahneseaSpec	PL1INCL		FUTURE_COMMAND	idadanesavi	ᏓᏓᏓᏁᏌᎥᎢ	not-caused-by-pass
+DadahneseaSpec	PL1INCL		HABITUAL	dedadahnesesgoi	ᏓᏓᏓᏁᏎᏍᎪᎢ	exposed-by-alignment
+DadahneseaSpec	PL1INCL		INFINITIVE	digadahnesesdi	ᏓᎩᏓᏁᏎᏍᏗ	exposed-by-alignment
+DadahneseaSpec	PL1INCL		PRESENT	dedadahnesea	ᏓᏓᏓᏁᏎᎠ	exposed-by-alignment
+DadahneseaSpec	PL1INCL		REMOTE_PAST	degadahnesavi	ᏓᎦᏓᏁᏌᎥᎢ	exposed-by-alignment
+DadahneseaSpec	PL3		FUTURE_COMMAND	anadanesavi	ᏓᎾᏓᏁᏌᎥᎢ	not-caused-by-pass
+DadahneseaSpec	PL3		INFINITIVE	junadahnesesdi	ᏧᏂᏓᏁᏎᏍᏗ	exposed-by-alignment
+DadahneseaSpec	SG1		FUTURE_COMMAND	gadanesavi	ᏕᎦᏓᏁᏌᎥᎢ	not-caused-by-pass
+DadahneseaSpec	SG1		INFINITIVE	digwadahnesesdi	ᏓᎩᏓᏁᏎᏍᏗ	exposed-by-alignment
+DadahneseaSpec	SG2		FUTURE_COMMAND	hadanesavi	ᏘᏓᏁᏌᎥᎢ	not-caused-by-pass
+DadahneseaSpec	SG2		HABITUAL	dehadahnesesgoi	ᏘᏓᏁᏎᏍᎪᎢ	exposed-by-alignment
+DadahneseaSpec	SG2		INFINITIVE	dijadahnesesdi	ᏕᏣᏓᏁᏎᏍᏗ	exposed-by-alignment
+DadahneseaSpec	SG2		PRESENT	dehadahnesea	ᏘᏓᏁᏎᎠ	exposed-by-alignment
+DadahneseaSpec	SG3		FUTURE_COMMAND	adanesavi	ᏓᏓᏁᏌᎥᎢ	not-caused-by-pass
+DadayosgaSpec	PL1INCL		FUTURE_COMMAND	idadayosvi	ᏓᏓᏓᏲᏒᎢ	not-caused-by-pass
+DadayosgaSpec	PL1INCL		HABITUAL	dedadayosgoi	ᏓᏓᏓᏲᏍᎪᎢ	exposed-by-alignment
+DadayosgaSpec	PL1INCL		INFINITIVE	digadayohisdi	ᏓᎩᏓᏲᎯᏍᏗ	exposed-by-alignment
+DadayosgaSpec	PL1INCL		PRESENT	dedadayosga	ᏓᏓᏓᏲᏍᎦ	exposed-by-alignment
+DadayosgaSpec	PL1INCL		REMOTE_PAST	degadayosvi	ᏓᎦᏓᏲᏒᎢ	exposed-by-alignment
+DadayosgaSpec	PL3		FUTURE_COMMAND	anadayosvi	ᏓᎾᏓᏲᏒᎢ	not-caused-by-pass
+DadayosgaSpec	PL3		INFINITIVE	junadayohisdi	ᏧᏂᏓᏲᎯᏍᏗ	exposed-by-alignment
+DadayosgaSpec	SG1		FUTURE_COMMAND	gadayosvi	ᏕᎦᏓᏲᏒᎢ	not-caused-by-pass
+DadayosgaSpec	SG1		INFINITIVE	digwadayohisdi	ᏓᎩᏓᏲᎯᏍᏗ	exposed-by-alignment
+DadayosgaSpec	SG2		FUTURE_COMMAND	hadayosvi	ᏘᏓᏲᏒᎢ	not-caused-by-pass
+DadayosgaSpec	SG2		HABITUAL	dehadayosgoi	ᏘᏓᏲᏍᎪᎢ	exposed-by-alignment
+DadayosgaSpec	SG2		INFINITIVE	dijadayohisdi	ᏕᏣᏓᏲᎯᏍᏗ	exposed-by-alignment
+DadayosgaSpec	SG2		PRESENT	dahadayosga	ᏘᏓᏲᏍᎦ	exposed-by-alignment
+DadayosgaSpec	SG3		FUTURE_COMMAND	adayosvi	ᏓᏓᏲᏒᎢ	not-caused-by-pass
+DadeyohvsgaSpec	PL1INCL		FUTURE_COMMAND	idadeyonvi	ᏓᏓᏕᏲᏅᎢ	not-caused-by-pass
+DadeyohvsgaSpec	PL1INCL		HABITUAL	dedadeyohvsgoi	ᏓᏓᏕᏲᎲᏍᎪᎢ	exposed-by-alignment
+DadeyohvsgaSpec	PL1INCL		INFINITIVE	digadehyohdi	ᏓᎩᏕᏲᏗ	exposed-by-alignment
+DadeyohvsgaSpec	PL1INCL		PRESENT	dedadeyohvsga	ᏓᏓᏕᏲᎲᏍᎦ	exposed-by-alignment
+DadeyohvsgaSpec	PL1INCL		REMOTE_PAST	degadeyohnvi	ᏓᎦᏕᏲᏅᎢ	exposed-by-alignment
+DadeyohvsgaSpec	PL3		FUTURE_COMMAND	anadeyonvi	ᏓᎾᏕᏲᏅᎢ	not-caused-by-pass
+DadeyohvsgaSpec	PL3		INFINITIVE	junadehyohdi	ᏧᏂᏕᏲᏗ	exposed-by-alignment
+DadeyohvsgaSpec	SG1		FUTURE_COMMAND	gadeyonvi	ᏕᎦᏕᏲᏅᎢ	not-caused-by-pass
+DadeyohvsgaSpec	SG1		INFINITIVE	digwadehyohdi	ᏓᎩᏕᏲᏗ	exposed-by-alignment
+DadeyohvsgaSpec	SG2		FUTURE_COMMAND	hadeyonvi	ᏘᏕᏲᏅᎢ	not-caused-by-pass
+DadeyohvsgaSpec	SG2		HABITUAL	dehadeyohvsgoi	ᏘᏕᏲᎲᏍᎪᎢ	exposed-by-alignment
+DadeyohvsgaSpec	SG2		INFINITIVE	dijadehyohdi	ᏕᏣᏕᏲᏗ	exposed-by-alignment
+DadeyohvsgaSpec	SG2		PRESENT	dehadeyohvsga	ᏘᏕᏲᎲᏍᎦ	exposed-by-alignment
+DadeyohvsgaSpec	SG3		FUTURE_COMMAND	adeyonvi	ᏓᏕᏲᏅᎢ	not-caused-by-pass
+DagachvsdihaSpec	SG2		FUTURE_COMMAND	hagatsvstanvi	ᏘᎦᏨᏍᏔᏅᎢ	not-caused-by-pass
+DagachvsdihaSpec	SG2		HABITUAL	dejachvsdisgoi	ᏘᎦᏨᏍᏗᏍᎪᎢ	exposed-by-alignment
+DagachvsdihaSpec	SG2		INFINITIVE	dijachvsdohdi	ᏓᏣᎦᏨᏍᏙᏗ	exposed-by-alignment
+DagachvsdihaSpec	SG2		PRESENT	dejachsvsdiha	ᏘᎦᏨᏍᏗᎭ	exposed-by-alignment
+DagachvsdihaSpec	SG2		REMOTE_PAST	dejachvstanvi	ᏓᏣᎦᏨᏍᏔᏅᎢ	exposed-by-alignment
+DagachvsdihaSpec	SG3		FUTURE_COMMAND	agatsvstanvi	ᏛᎦᏨᏍᏔᏅᎢ	not-caused-by-pass
+DagachvsdihaSpec	SG3		FUTURE_COMMAND	agatsvstanvi	ᏛᎦᏨᏍᏔᏅᎢ	not-caused-by-pass
+DagachvsdihaSpec	SG3		FUTURE_COMMAND	agatsvstanvi	ᏛᎦᏨᏍᏔᏅᎢ	not-caused-by-pass
+DagachvsdihaSpec	SG3		HABITUAL	degegachvsdisgoi	ᏓᎦᏨᏍᏗᏍᎪᎢ	exposed-by-alignment
+DagachvsdihaSpec	SG3		INFINITIVE	jigegachvsdohdi	ᏧᎦᏨᏍᏙᏗ	exposed-by-alignment
+DagachvsdihaSpec	SG3		INFINITIVE	jigegachvsdohdi	ᏧᎦᏨᏍᏙᏗ	exposed-by-alignment
+DagachvsdihaSpec	SG3		INFINITIVE	jigegachvsdohdi	ᏧᎦᏨᏍᏙᏗ	exposed-by-alignment
+DagachvsdihaSpec	SG3		PRESENT	degegachvsdiha	ᏓᎦᏨᏍᏗᎭ	exposed-by-alignment
+DagachvsdihaSpec	SG3		REMOTE_PAST	degegachvstanvi	ᏚᎦᏨᏍᏔᏅᎢ	exposed-by-alignment
+DagachvsdihaSpec	SG3		REMOTE_PAST	degegachvstanvi	ᏚᎦᏨᏍᏔᏅᎢ	exposed-by-alignment
+DagachvsdihaSpec	SG3		REMOTE_PAST	degegachvstanvi	ᏚᎦᏨᏍᏔᏅᎢ	exposed-by-alignment
+DahlihgehaSpec	PL1INCL		FUTURE_COMMAND	idatligehvi	ᏓᏓᏟᎨᎲᎢ	not-caused-by-pass
+DahlihgehaSpec	PL1INCL		HABITUAL	dedahlihgesgoi	ᏓᏓᏟᎨᏍᎪᎢ	exposed-by-alignment
+DahlihgehaSpec	PL1INCL		INFINITIVE	digahlihgehdi	ᏓᎩᏟᎨᏗ	exposed-by-alignment
+DahlihgehaSpec	PL1INCL		PRESENT	dedahlihgeha	ᏓᏓᏟᎨᎭ	exposed-by-alignment
+DahlihgehaSpec	PL1INCL		REMOTE_PAST	degahlihgehvi	ᏓᎦᏟᎨᎲᎢ	exposed-by-alignment
+DahlihgehaSpec	PL3		FUTURE_COMMAND	anatligehvi	ᏓᎾᏟᎨᎲᎢ	not-caused-by-pass
+DahlihgehaSpec	PL3		INFINITIVE	junahlihgehdi	ᏧᏂᏟᎨᏗ	exposed-by-alignment
+DahlihgehaSpec	SG1		FUTURE_COMMAND	gatligehvi	ᏕᎦᏟᎨᎲᎢ	not-caused-by-pass
+DahlihgehaSpec	SG1		HABITUAL	degalihgesgoi	ᏕᎦᏟᎨᏍᎪᎢ	exposed-by-alignment
+DahlihgehaSpec	SG1		INFINITIVE	digwahlihgehdi	ᏓᎩᏟᎨᏗ	exposed-by-alignment
+DahlihgehaSpec	SG1		PRESENT	degalihgeha	ᏕᎦᏟᎨᎭ	exposed-by-alignment
+DahlihgehaSpec	SG2		FUTURE_COMMAND	hatligehvi	ᏘᏟᎨᎲᎢ	not-caused-by-pass
+DahlihgehaSpec	SG2		HABITUAL	dehahlihgesgoi	ᏘᏟᎨᏍᎪᎢ	exposed-by-alignment
+DahlihgehaSpec	SG2		INFINITIVE	dijahlihgehdi	ᏕᏣᏟᎨᏗ	exposed-by-alignment
+DahlihgehaSpec	SG2		PRESENT	dehahlihgeha	ᏘᏟᎨᎭ	exposed-by-alignment
+DahlihgehaSpec	SG3		FUTURE_COMMAND	atligehvi	ᏓᏟᎨᎲᎢ	not-caused-by-pass
+DahlilosdihaSpec	PL1INCL	SG3IN	FUTURE_COMMAND	idatlilostanvi	ᏓᏓᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	PL1INCL	SG3IN	HABITUAL	dedahlilosdisgoi	ᏓᏓᏟᎶᏍᏗᏍᎪᎢ	exposed-by-alignment
+DahlilosdihaSpec	PL1INCL	SG3IN	INFINITIVE	digahlilosdohdi	ᏓᎩᏟᎶᏍᏙᏗ	exposed-by-alignment
+DahlilosdihaSpec	PL1INCL	SG3IN	PRESENT	dedahlilosdiha	ᏓᏓᏟᎶᏍᏗᎭ	exposed-by-alignment
+DahlilosdihaSpec	PL1INCL	SG3IN	REMOTE_PAST	degahlilostanvi	ᏓᎦᏟᎶᏍᏔᏅᎢ	exposed-by-alignment
+DahlilosdihaSpec	PL3	SG3IN	FUTURE_COMMAND	anatlilostanvi	ᏓᎾᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	PL3	SG3IN	INFINITIVE	junahlilosdohdi	ᏧᏂᏟᎶᏍᏙᏗ	exposed-by-alignment
+DahlilosdihaSpec	SG1	SG3AN	FUTURE_COMMAND	tsiyatlilostanvi	ᏕᏥᏯᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	SG1	SG3IN	FUTURE_COMMAND	gatlilostanvi	ᏕᎦᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	SG2	SG3AN	FUTURE_COMMAND	hiyatlilostanvi	ᏘᏯᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	SG2	SG3AN	HABITUAL	dehiyadlilosdisgoi	ᏘᏯᏟᎶᏍᏗᏍᎪᎢ	exposed-by-alignment
+DahlilosdihaSpec	SG2	SG3AN	PRESENT	dehiyadlilosdiha	ᏘᏯᏟᎶᏍᏗᎭ	exposed-by-alignment
+DahlilosdihaSpec	SG2	SG3AN	REMOTE_PAST	dehiyahlilostanvi	ᏘᏯᏟᎶᏍᏔᏅᎢ	exposed-by-alignment
+DahlilosdihaSpec	SG2	SG3IN	FUTURE_COMMAND	hatlilostanvi	ᏘᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	SG2	SG3IN	HABITUAL	dehahlilosdisgoi	ᏘᏟᎶᏍᏗᏍᎪᎢ	exposed-by-alignment
+DahlilosdihaSpec	SG2	SG3IN	PRESENT	dehahlilosdiha	ᏘᏟᎶᏍᏗᎭ	exposed-by-alignment
+DahlilosdihaSpec	SG3	SG3IN	FUTURE_COMMAND	atlilostanvi	ᏓᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlilosdihaSpec	SG3	SG3IN	INFINITIVE	utlilosdodi	ᏧᏟᎶᏍᏙᏗ	not-caused-by-pass
+DahlilosdihaSpec	SG3	SG3IN	REMOTE_PAST	utlilostanvi	ᏚᏟᎶᏍᏔᏅᎢ	not-caused-by-pass
+DahlinohehaSpec	PL1INCL		FUTURE_COMMAND	idatlinohetlvi	ᏓᏓᏟᏃᎮᏢᎢ	not-caused-by-pass
+DahlinohehaSpec	PL1INCL		HABITUAL	dedahlinohesgoi	ᏓᏓᏟᏃᎮᏍᎪᎢ	exposed-by-alignment
+DahlinohehaSpec	PL1INCL		INFINITIVE	didahlinohehdi	ᏓᎩᏟᏃᎮᏗ	exposed-by-alignment
+DahlinohehaSpec	PL1INCL		PRESENT	dedahlinoheha	ᏓᏓᏟᏃᎮᎭ	exposed-by-alignment
+DahlinohehaSpec	PL1INCL		REMOTE_PAST	degahlinohehlvi	ᏓᎦᏟᏃᎮᏢᎢ	exposed-by-alignment
+DahlinohehaSpec	PL3		FUTURE_COMMAND	anatlinohetlvi	ᏓᎾᏟᏃᎮᏢᎢ	not-caused-by-pass
+DahlinohehaSpec	PL3		INFINITIVE	junahlinohehdi	ᏧᏂᏟᏃᎮᏗ	exposed-by-alignment
+DahlinohehaSpec	SG1		FUTURE_COMMAND	gatlinohetlvi	ᏕᎦᏟᏃᎮᏢᎢ	not-caused-by-pass
+DahlinohehaSpec	SG1		HABITUAL	degalinohesgoi	ᏕᎦᏟᏃᎮᏍᎪᎢ	exposed-by-alignment
+DahlinohehaSpec	SG1		INFINITIVE	digwahlinohehdi	ᏓᎩᏟᏃᎮᏗ	exposed-by-alignment
+DahlinohehaSpec	SG1		PRESENT	degalinoheha	ᏕᎦᏟᏃᎮᎭ	exposed-by-alignment
+DahlinohehaSpec	SG2		FUTURE_COMMAND	hatlinohetlvi	ᏘᏟᏃᎮᏢᎢ	not-caused-by-pass
+DahlinohehaSpec	SG2		HABITUAL	dehahlinohesgoi	ᏘᏟᏃᎮᏍᎪᎢ	exposed-by-alignment
+DahlinohehaSpec	SG2		INFINITIVE	dijahlinohehdi	ᏕᏣᏟᏃᎮᏗ	exposed-by-alignment
+DahlinohehaSpec	SG2		PRESENT	dehahlinoheha	ᏘᏟᏃᎮᎭ	exposed-by-alignment
+DahlinohehaSpec	SG3		FUTURE_COMMAND	atlinohetlvi	ᏓᏟᏃᎮᏢᎢ	not-caused-by-pass
+DahyvgiaSpec	PL1INCL		HABITUAL	dedihyvgisgoi	ᏓᏗᏴᎩᏍᎪᎢ	exposed-by-alignment
+DahyvgiaSpec	PL1INCL		INFINITIVE	degihyvgvi	ᏓᎩᏴᎩᏍᏗ	exposed-by-alignment
+DahyvgiaSpec	PL1INCL		PRESENT	dedihyvgia	ᏓᏗᏴᎩᎠ	exposed-by-alignment
+DahyvgiaSpec	PL1INCL		REMOTE_PAST	dedihyvgvi	ᏓᎩᏴᎬᎢ	exposed-by-alignment
+DahyvgiaSpec	PL3		FUTURE_COMMAND	aniyvgvi	ᏓᏂᏴᎬᎢ	not-caused-by-pass
+DahyvgiaSpec	SG1		INFINITIVE	dakihyvgvi	ᏓᎩᏴᎩᏍᏗ	exposed-by-alignment
+DahyvgiaSpec	SG1		REMOTE_PAST	dejiyvgvi	ᏓᎩᏴᎬᎢ	exposed-by-alignment
+DahyvgiaSpec	SG2		HABITUAL	dehihyvgisgoi	ᏘᏴᎩᏍᎪᎢ	exposed-by-alignment
+DahyvgiaSpec	SG2		INFINITIVE	dejahyvgvi	ᏕᏣᏴᎩᏍᏗ	exposed-by-alignment
+DahyvgiaSpec	SG2		PRESENT	dehihyvgia	ᏘᏴᎩᎠ	exposed-by-alignment
+DahyvgiaSpec	SG2		REMOTE_PAST	dehihyvgvi	ᏕᏣᏴᎬᎢ	exposed-by-alignment
+DahyvgiaSpec	SG3		FUTURE_COMMAND	gayvgvi	ᏕᎦᏴᎬᎢ	not-caused-by-pass
+DakanedliyvaSpec	PL1INCL		FUTURE_COMMAND	idikanetliyvsvi	ᏓᏗᎧᏁᏟᏴᏒᎢ	not-caused-by-pass
+DakanedliyvaSpec	PL1INCL		HABITUAL	dedikanedliyvsgoi	ᏓᏗᎧᏁᏟᏴᏍᎪᎢ	exposed-by-alignment
+DakanedliyvaSpec	PL1INCL		INFINITIVE	digikanehyohdi	ᏓᎩᎧᏁᏲᏗ	exposed-by-alignment
+DakanedliyvaSpec	PL1INCL		PRESENT	dedikanedliyva	ᏓᏗᎧᏁᏟᏴᎠ	exposed-by-alignment
+DakanedliyvaSpec	PL1INCL		REMOTE_PAST	degikanedlihyvsvi	ᏓᎩᎧᏁᏟᏴᏒᎢ	exposed-by-alignment
+DakanedliyvaSpec	PL3		FUTURE_COMMAND	anikanetliyvsvi	ᏓᏂᎧᏁᏟᏴᏒᎢ	not-caused-by-pass
+DakanedliyvaSpec	PL3		INFINITIVE	dunikanehyohdi	ᏧᏂᎧᏁᏲᏗ	exposed-by-alignment
+DakanedliyvaSpec	SG1		FUTURE_COMMAND	tsikanetliyvsvi	ᏕᏥᎧᏁᏟᏴᏒᎢ	not-caused-by-pass
+DakanedliyvaSpec	SG1		HABITUAL	dejiganedliyvsgoi	ᏕᏥᎧᏁᏟᏴᏍᎪᎢ	exposed-by-alignment
+DakanedliyvaSpec	SG1		INFINITIVE	digikanehyohdi	ᏓᎩᎧᏁᏲᏗ	exposed-by-alignment
+DakanedliyvaSpec	SG1		PRESENT	dejiganedliyva	ᏕᏥᎧᏁᏟᏴᎠ	exposed-by-alignment
+DakanedliyvaSpec	SG2		FUTURE_COMMAND	hikanetliyvsvi	ᏘᎧᏁᏟᏴᏒᎢ	not-caused-by-pass
+DakanedliyvaSpec	SG2		HABITUAL	dehikanedliyvsgoi	ᏘᎧᏁᏟᏴᏍᎪᎢ	exposed-by-alignment
+DakanedliyvaSpec	SG2		INFINITIVE	dijakanehyohdi	ᏕᏣᎧᏁᏲᏗ	exposed-by-alignment
+DakanedliyvaSpec	SG2		PRESENT	dehikanedliyva	ᏘᎧᏁᏟᏴᎠ	exposed-by-alignment
+DakanedliyvaSpec	SG3		FUTURE_COMMAND	gakanetliyvsvi	ᏕᎦᎧᏁᏟᏴᏒᎢ	not-caused-by-pass
+DakanehihaSpec	PL1INCL		FUTURE_COMMAND	idikanetlvi	ᏓᏗᎧᏁᏢᎢ	not-caused-by-pass
+DakanehihaSpec	PL1INCL		HABITUAL	dedikanehihoi	ᏓᏗᎧᏁᎯᎰᎢ	exposed-by-alignment
+DakanehihaSpec	PL1INCL		INFINITIVE	digijihlusdi	ᏓᎩᎧᏁᏍᏗ	exposed-by-alignment
+DakanehihaSpec	PL1INCL		PRESENT	dedikanehiha	ᏓᏗᎧᏁᎯᎭ	exposed-by-alignment
+DakanehihaSpec	PL1INCL		REMOTE_PAST	degikanehlvi	ᏓᎩᎧᏁᏢᎢ	exposed-by-alignment
+DakanehihaSpec	PL3		FUTURE_COMMAND	anikanetlvi	ᏓᏂᎧᏁᏢᎢ	not-caused-by-pass
+DakanehihaSpec	PL3		INFINITIVE	junijihlusdi	ᏧᏂᎧᏁᏍᏗ	exposed-by-alignment
+DakanehihaSpec	SG1		FUTURE_COMMAND	tsikanetlvi	ᏕᏥᎧᏁᏢᎢ	not-caused-by-pass
+DakanehihaSpec	SG1		HABITUAL	dejiganehihoi	ᏕᏥᎧᏁᎯᎰᎢ	exposed-by-alignment
+DakanehihaSpec	SG1		INFINITIVE	digijihlusdi	ᏓᎩᎧᏁᏍᏗ	exposed-by-alignment
+DakanehihaSpec	SG1		PRESENT	dejiganehiha	ᏕᏥᎧᏁᎯᎭ	exposed-by-alignment
+DakanehihaSpec	SG2		FUTURE_COMMAND	hikanetlvi	ᏘᎧᏁᏢᎢ	not-caused-by-pass
+DakanehihaSpec	SG2		HABITUAL	deihikanehihoi	ᏘᎧᏁᎯᎰᎢ	exposed-by-alignment
+DakanehihaSpec	SG2		INFINITIVE	dijajihlusdi	ᏕᏣᎧᏁᏍᏗ	exposed-by-alignment
+DakanehihaSpec	SG2		PRESENT	dehikanehiha	ᏘᎧᏁᎯᎭ	exposed-by-alignment
+DakanehihaSpec	SG3		FUTURE_COMMAND	gakanetlvi	ᏕᎦᎧᏁᏢᎢ	not-caused-by-pass
+DaksvsdihaSpec	PL1INCL		FUTURE_COMMAND	idigisvstanvi	ᏓᏗᎩᏒᏍᏔᏅᎢ	not-caused-by-pass
+DaksvsdihaSpec	PL1INCL		HABITUAL	dediksvsdisgoi	ᏓᏗᎩᏒᏍᏗᏍᎪᎢ	exposed-by-alignment
+DaksvsdihaSpec	PL1INCL		INFINITIVE	digiksvsdohdi	ᏓᎩᎩᏒᏍᏙᏗ	exposed-by-alignment
+DaksvsdihaSpec	PL1INCL		PRESENT	dediksvsdiha	ᏓᏗᎩᏒᏍᏗᎭ	exposed-by-alignment
+DaksvsdihaSpec	PL1INCL		REMOTE_PAST	degiksvstanvi	ᏓᎩᎩᏒᏍᏔᏅᎢ	exposed-by-alignment
+DaksvsdihaSpec	PL3		FUTURE_COMMAND	anigisvstanvi	ᏓᏂᎩᏒᏍᏔᏅᎢ	not-caused-by-pass
+DaksvsdihaSpec	SG1		FUTURE_COMMAND	tsigisvstanvi	ᏕᏥᎩᏒᏍᏔᏅᎢ	not-caused-by-pass
+DaksvsdihaSpec	SG1		HABITUAL	dejigasvsdisgoi	ᏕᏥᎩᏒᏍᏗᏍᎪᎢ	exposed-by-alignment
+DaksvsdihaSpec	SG1		INFINITIVE	digiksvsdohdi	ᏓᎩᎩᏒᏍᏙᏗ	exposed-by-alignment
+DaksvsdihaSpec	SG1		PRESENT	dejigasvsdiha	ᏕᏥᎩᏒᏍᏗᎭ	exposed-by-alignment
+DaksvsdihaSpec	SG2		FUTURE_COMMAND	higisvstanvi	ᏘᎩᏒᏍᏔᏅᎢ	not-caused-by-pass
+DaksvsdihaSpec	SG2		HABITUAL	dehiksvsdisgoi	ᏘᎩᏒᏍᏗᏍᎪᎢ	exposed-by-alignment
+DaksvsdihaSpec	SG2		INFINITIVE	dijaksvsdohdi	ᏕᏣᎩᏒᏍᏙᏗ	exposed-by-alignment
+DaksvsdihaSpec	SG2		PRESENT	dehiksvsdiha	ᏘᎩᏒᏍᏗᎭ	exposed-by-alignment
+DaksvsdihaSpec	SG3		FUTURE_COMMAND	gagisvstanvi	ᏕᎦᎩᏒᏍᏔᏅᎢ	not-caused-by-pass
+DalehisihaSpec	PL1INCL		FUTURE_COMMAND	idalehisanvi	ᏓᏓᎴᎯᏌᏅᎢ	not-caused-by-pass
+DalehisihaSpec	PL1INCL		HABITUAL	dedalehisisgoi	ᏓᏓᎴᎯᏏᏍᎪᎢ	exposed-by-alignment
+DalehisihaSpec	PL1INCL		INFINITIVE	digalehisohdi	ᏓᎩᎴᎯᏐᏗ	exposed-by-alignment
+DalehisihaSpec	PL1INCL		PRESENT	dedaleisiha	ᏓᏓᎴᎯᏏᎭ	exposed-by-alignment
+DalehisihaSpec	PL1INCL		REMOTE_PAST	degalehisahnvi	ᏓᎦᎴᎯᏌᏅᎢ	exposed-by-alignment
+DalehisihaSpec	PL3		FUTURE_COMMAND	analehisanvi	ᏓᎾᎴᎯᏌᏅᎢ	not-caused-by-pass
+DalehisihaSpec	PL3		INFINITIVE	junalehisohdi	ᏧᏂᎴᎯᏐᏗ	exposed-by-alignment
+DalehisihaSpec	PL3		PRESENT	danaleisiha	ᏓᎾᎴᎯᏏᎭ	exposed-by-alignment
+DalehisihaSpec	SG1		FUTURE_COMMAND	galehisanvi	ᏕᎦᎴᎯᏌᏅᎢ	not-caused-by-pass
+DalehisihaSpec	SG1		INFINITIVE	digwalehisohdi	ᏓᎩᎴᎯᏐᏗ	exposed-by-alignment
+DalehisihaSpec	SG1		PRESENT	degaleisiha	ᏕᎦᎴᎯᏏᎭ	exposed-by-alignment
+DalehisihaSpec	SG2		FUTURE_COMMAND	halehisanvi	ᏘᎴᎯᏌᏅᎢ	not-caused-by-pass
+DalehisihaSpec	SG2		HABITUAL	dehalehisisgoi	ᏘᎴᎯᏏᏍᎪᎢ	exposed-by-alignment
+DalehisihaSpec	SG2		INFINITIVE	dijalehisohdi	ᏕᏣᎴᎯᏐᏗ	exposed-by-alignment
+DalehisihaSpec	SG2		PRESENT	dehaleisiha	ᏘᎴᎯᏏᎭ	exposed-by-alignment
+DalehisihaSpec	SG3		FUTURE_COMMAND	alehisanvi	ᏓᎴᎯᏌᏅᎢ	not-caused-by-pass
+DalehvsgaSpec	PL1INCL		FUTURE_COMMAND	idalenvi	ᏓᏓᎴᏅᎢ	not-caused-by-pass
+DalehvsgaSpec	PL1INCL		HABITUAL	dedalehvsgoi	ᏓᏓᎴᎲᏍᎪᎢ	exposed-by-alignment
+DalehvsgaSpec	PL1INCL		INFINITIVE	digalehdi	ᏓᎩᎴᏗ	exposed-by-alignment
+DalehvsgaSpec	PL1INCL		PRESENT	dedalehvsga	ᏓᏓᎴᎲᏍᎦ	exposed-by-alignment
+DalehvsgaSpec	PL1INCL		REMOTE_PAST	degalehnvi	ᏓᎦᎴᏅᎢ	exposed-by-alignment
+DalehvsgaSpec	PL3		FUTURE_COMMAND	analenvi	ᏓᎾᎴᏅᎢ	not-caused-by-pass
+DalehvsgaSpec	PL3		INFINITIVE	junalehdi	ᏧᏂᎴᏗ	exposed-by-alignment
+DalehvsgaSpec	SG1		FUTURE_COMMAND	galenvi	ᏕᎦᎴᏅᎢ	not-caused-by-pass
+DalehvsgaSpec	SG1		HABITUAL	degalevsgoi	ᏕᎦᎴᎲᏍᎪᎢ	exposed-by-alignment
+DalehvsgaSpec	SG1		INFINITIVE	digwalehdi	ᏓᎩᎴᏗ	exposed-by-alignment
+DalehvsgaSpec	SG1		PRESENT	degalevsga	ᏕᎦᎴᎲᏍᎦ	exposed-by-alignment
+DalehvsgaSpec	SG2		FUTURE_COMMAND	halenvi	ᏘᎴᏅᎢ	not-caused-by-pass
+DalehvsgaSpec	SG2		HABITUAL	dehalehvsgoi	ᏘᎴᎲᏍᎪᎢ	exposed-by-alignment
+DalehvsgaSpec	SG2		INFINITIVE	dijalehdi	ᏕᏣᎴᏗ	exposed-by-alignment
+DalehvsgaSpec	SG2		PRESENT	dehalehvsga	ᏘᎴᎲᏍᎦ	exposed-by-alignment
+DalehvsgaSpec	SG3		FUTURE_COMMAND	alenvi	ᏓᎴᏅᎢ	not-caused-by-pass
+DaltadegaSpec	PL1INCL		FUTURE_COMMAND	idalotadinvsvi	ᏓᏓᎶᏔᏗᏅᏒᎢ	not-caused-by-pass
+DaltadegaSpec	PL1INCL		HABITUAL	dedaltadegoi	ᏓᏓᎵᏔᏕᎪᎢ	exposed-by-alignment
+DaltadegaSpec	PL1INCL		INFINITIVE	digahltadinvdi	ᏓᎩᎶᏔᏗᏅᏗ	exposed-by-alignment
+DaltadegaSpec	PL1INCL		PRESENT	dedaltadega	ᏓᏓᎵᏔᏕᎦ	exposed-by-alignment
+DaltadegaSpec	PL1INCL		REMOTE_PAST	degahltadinvsvi	ᏓᎦᎶᏔᏗᏅᏒᎢ	exposed-by-alignment
+DaltadegaSpec	PL3		FUTURE_COMMAND	analotadinvsvi	ᏓᎾᎶᏔᏗᏅᏒᎢ	not-caused-by-pass
+DaltadegaSpec	PL3		INFINITIVE	junahltadinvdi	ᏧᏂᎶᏔᏗᏅᏗ	exposed-by-alignment
+DaltadegaSpec	SG1		FUTURE_COMMAND	galotadinvsvi	ᏕᎦᎶᏔᏗᏅᏒᎢ	not-caused-by-pass
+DaltadegaSpec	SG1		INFINITIVE	digwahltadinvdi	ᏓᎩᎶᏔᏗᏅᏗ	exposed-by-alignment
+DaltadegaSpec	SG2		FUTURE_COMMAND	halotadinvsvi	ᏘᎶᏔᏗᏅᏒᎢ	not-caused-by-pass
+DaltadegaSpec	SG2		HABITUAL	dehaltadegoi	ᏘᎵᏔᏕᎪᎢ	exposed-by-alignment
+DaltadegaSpec	SG2		INFINITIVE	dijahltadinvdi	ᏕᏣᎶᏔᏗᏅᏗ	exposed-by-alignment
+DaltadegaSpec	SG2		PRESENT	dehaltadega	ᏘᎵᏔᏕᎦ	exposed-by-alignment
+DaltadegaSpec	SG3		FUTURE_COMMAND	alotadinvsvi	ᏓᎶᏔᏗᏅᏒᎢ	not-caused-by-pass
+DanadlosgaSpec	PL1INCL		FUTURE_COMMAND	idanatlosvi	ᏓᏓᎾᏠᏒᎢ	not-caused-by-pass
+DanadlosgaSpec	PL1INCL		HABITUAL	danadlosgoi	ᏓᏓᎾᏠᏍᎪᎢ	exposed-by-alignment
+DanadlosgaSpec	PL1INCL		INFINITIVE	They	ᏓᎩᎾᏠᎯᏍᏗ	exposed-by-alignment
+DanadlosgaSpec	PL1INCL		PRESENT	danadlosga	ᏓᏓᎾᏠᏍᎦ	exposed-by-alignment
+DanadlosgaSpec	PL1INCL		REMOTE_PAST	dunadlosvi	ᏓᎦᎾᏠᏒᎢ	exposed-by-alignment
+DanadlosgaSpec	PL3		FUTURE_COMMAND	ananatlosvi	ᏛᎾᎾᏠᏒᎢ	not-caused-by-pass
+DanadlosgaSpec	PL3		HABITUAL	dedadlosgoi	ᏛᎾᎾᏠᏍᎪᎢ	exposed-by-alignment
+DanadlosgaSpec	PL3		INFINITIVE	You,	ᏧᏂᎾᏠᎯᏍᏗ	exposed-by-alignment
+DanadlosgaSpec	PL3		PRESENT	dedadlosga	ᏛᎾᎾᏠᏍᎦ	exposed-by-alignment
+DanadlosgaSpec	PL3		REMOTE_PAST	degadlosvi	ᏚᎾᎾᏠᏒᎢ	exposed-by-alignment
+DanadlosgaSpec	SG1		FUTURE_COMMAND	ganatlosvi	ᏗᎦᎾᏠᏒᎢ	not-caused-by-pass
+DanadlosgaSpec	SG1		HABITUAL	dojadlosgoi	ᏗᎦᎾᏠᏍᎪᎢ	exposed-by-alignment
+DanadlosgaSpec	SG1		INFINITIVE	I	ᏛᎩᎾᏠᎯᏍᏗ	exposed-by-alignment
+DanadlosgaSpec	SG1		PRESENT	dojadlosga	ᏗᎦᎾᏠᏍᎦ	exposed-by-alignment
+DanadlosgaSpec	SG1		REMOTE_PAST	dogadlosvi	ᏛᏆᎾᏠᏒᎢ	exposed-by-alignment
+DanadlosgaSpec	SG2		FUTURE_COMMAND	hanatlosvi	ᏘᎾᏠᏒᎢ	not-caused-by-pass
+DanadlosgaSpec	SG2		HABITUAL	desdadlosgoi	ᏘᎾᏠᏍᎪᎢ	exposed-by-alignment
+DanadlosgaSpec	SG2		INFINITIVE	You	ᏗᏣᎾᏠᎯᏍᏗ	exposed-by-alignment
+DanadlosgaSpec	SG2		PRESENT	desdadlosga	ᏘᎾᏠᏍᎦ	exposed-by-alignment
+DanadlosgaSpec	SG2		REMOTE_PAST	desdadlosvi	ᏗᏣᎾᏠᏒᎢ	exposed-by-alignment
+DanadlosgaSpec	SG3		FUTURE_COMMAND	anatlosvi	ᏛᎾᏠᏒᎢ	not-caused-by-pass
+DanagalenihaSpec	PL1INCL		FUTURE_COMMAND	idanagalenvhvi	ᏓᏓᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanagalenihaSpec	PL1INCL		HABITUAL	dedagalenisgoi	ᏓᏓᎾᎦᎴᏂᏍᎪᎢ	exposed-by-alignment
+DanagalenihaSpec	PL1INCL		INFINITIVE	didagalenhdi	ᏓᎩᎾᎦᎴᎾᏗ	exposed-by-alignment
+DanagalenihaSpec	PL1INCL		PRESENT	dedagaleniha	ᏓᏓᎾᎦᎴᏂᎭ	exposed-by-alignment
+DanagalenihaSpec	PL1INCL		REMOTE_PAST	degagalenvhvi	ᏓᎦᎾᎦᎴᏅᎲᎢ	exposed-by-alignment
+DanagalenihaSpec	PL3		FUTURE_COMMAND	ananagalenvhvi	ᏛᎾᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanagalenihaSpec	PL3		HABITUAL	dejagalenisgoi	ᏛᎾᎾᎦᎴᏂᏍᎪᎢ	exposed-by-alignment
+DanagalenihaSpec	PL3		INFINITIVE	dijagalenhdi	ᏧᏂᎾᎦᎴᎾᏗ	exposed-by-alignment
+DanagalenihaSpec	PL3		PRESENT	dejagaleniha	ᏛᎾᎾᎦᎴᏂᎭ	exposed-by-alignment
+DanagalenihaSpec	PL3		REMOTE_PAST	dejagalenvhvi	ᏚᎾᎾᎦᎴᏅᎲᎢ	exposed-by-alignment
+DanagalenihaSpec	SG1		FUTURE_COMMAND	ganagalenvhvi	ᏗᎦᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanagalenihaSpec	SG1		HABITUAL	ganagalenisgoi	ᏗᎦᎾᎦᎴᏂᏍᎪᎢ	not-caused-by-pass
+DanagalenihaSpec	SG1		INFINITIVE	aginagalenadi	ᏛᎩᎾᎦᎴᎾᏗ	not-caused-by-pass
+DanagalenihaSpec	SG1		PRESENT	ganagaleniha	ᏗᎦᎾᎦᎴᏂᎭ	not-caused-by-pass
+DanagalenihaSpec	SG1		REMOTE_PAST	aquanagalenvhvi	ᏛᏆᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanagalenihaSpec	SG2		FUTURE_COMMAND	hanagalenvhvi	ᏘᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanagalenihaSpec	SG2		HABITUAL	dojagalenisgoi	ᏘᎾᎦᎴᏂᏍᎪᎢ	exposed-by-alignment
+DanagalenihaSpec	SG2		INFINITIVE	jojagalenhdi	ᏗᏣᎾᎦᎴᎾᏗ	exposed-by-alignment
+DanagalenihaSpec	SG2		PRESENT	dojagaleniha	ᏘᎾᎦᎴᏂᎭ	exposed-by-alignment
+DanagalenihaSpec	SG2		REMOTE_PAST	doganagalenvhvi	ᏗᏣᎾᎦᎴᏅᎲᎢ	exposed-by-alignment
+DanagalenihaSpec	SG3		FUTURE_COMMAND	anagalenvhvi	ᏛᎾᎦᎴᏅᎲᎢ	not-caused-by-pass
+DanehldihaSpec	PL1INCL	SG3IN	FUTURE_COMMAND	idanelotanvi	ᏓᏓᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	PL1INCL	SG3IN	HABITUAL	dedanehldisgoi	ᏓᏓᏁᎶᏗᏍᎪᎢ	exposed-by-alignment
+DanehldihaSpec	PL1INCL	SG3IN	INFINITIVE	diganehldohdi	ᏓᎩᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	PL1INCL	SG3IN	PRESENT	dedanehldiha	ᏓᏓᏁᎶᏗᎭ	exposed-by-alignment
+DanehldihaSpec	PL1INCL	SG3IN	REMOTE_PAST	deganehltanvi	ᏓᎦᏁᎶᏔᏅᎢ	exposed-by-alignment
+DanehldihaSpec	PL3	SG3IN	FUTURE_COMMAND	ananelotanvi	ᏓᎾᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	PL3	SG3IN	INFINITIVE	junanehldohdi	ᏧᏂᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	SG1	SG3AN	FUTURE_COMMAND	tsiyanelotanvi	ᏕᏥᏯᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	SG1	SG3AN	INFINITIVE	dijiyanehldohdi	ᏕᏥᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	SG1	SG3IN	FUTURE_COMMAND	ganelotanvi	ᏕᎦᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	SG1	SG3IN	INFINITIVE	digwanehldohdi	ᏓᎩᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3AN	FUTURE_COMMAND	hiyanelotanvi	ᏘᏯᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	SG2	SG3AN	HABITUAL	dehiyanehldisgoi	ᏘᏯᏁᎶᏗᏍᎪᎢ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3AN	INFINITIVE	tiyanehldohdi	ᏘᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3AN	PRESENT	dehiyanehldiha	ᏘᏯᏁᎶᏗᎭ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3AN	REMOTE_PAST	dehiyanehltanvi	ᏘᏯᏁᎶᏔᏅᎢ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3IN	FUTURE_COMMAND	hanelotanvi	ᏘᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	SG2	SG3IN	HABITUAL	dehanehldisgoi	ᏘᏁᎶᏗᏍᎪᎢ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3IN	INFINITIVE	dijanehldohdi	ᏕᏣᏁᎶᏙᏗ	exposed-by-alignment
+DanehldihaSpec	SG2	SG3IN	PRESENT	dehanehldiha	ᏘᏁᎶᏗᎭ	exposed-by-alignment
+DanehldihaSpec	SG3	SG3IN	FUTURE_COMMAND	anelotanvi	ᏓᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanehldihaSpec	SG3	SG3IN	INFINITIVE	unelododi	ᏧᏁᎶᏙᏗ	not-caused-by-pass
+DanehldihaSpec	SG3	SG3IN	REMOTE_PAST	unelotanvi	ᏚᏁᎶᏔᏅᎢ	not-caused-by-pass
+DanelohvsgaSpec	PL1INCL		FUTURE_COMMAND	idanelonvi	ᏓᏓᏁᎶᏅᎢ	not-caused-by-pass
+DanelohvsgaSpec	PL1INCL		HABITUAL	dedanelohvsgoi	ᏓᏓᏁᎶᎲᏍᎪᎢ	exposed-by-alignment
+DanelohvsgaSpec	PL1INCL		INFINITIVE	diganehldi	ᏓᎩᏁᎶᏗ	exposed-by-alignment
+DanelohvsgaSpec	PL1INCL		PRESENT	dedanelohvsga	ᏓᏓᏁᎶᎲᏍᎦ	exposed-by-alignment
+DanelohvsgaSpec	PL1INCL		REMOTE_PAST	deganelohnvi	ᏓᎦᏁᎶᏅᎢ	exposed-by-alignment
+DanelohvsgaSpec	PL3		FUTURE_COMMAND	ananelonvi	ᏓᎾᏁᎶᏅᎢ	not-caused-by-pass
+DanelohvsgaSpec	PL3		INFINITIVE	junanehldi	ᏧᏂᏁᎶᏗ	exposed-by-alignment
+DanelohvsgaSpec	SG1		FUTURE_COMMAND	ganelonvi	ᏕᎦᏁᎶᏅᎢ	not-caused-by-pass
+DanelohvsgaSpec	SG1		INFINITIVE	digwanehldi	ᏓᎩᏁᎶᏗ	exposed-by-alignment
+DanelohvsgaSpec	SG2		FUTURE_COMMAND	hanelonvi	ᏘᏁᎶᏅᎢ	not-caused-by-pass
+DanelohvsgaSpec	SG2		HABITUAL	dehanelohvsgoi	ᏘᏁᎶᎲᏍᎪᎢ	exposed-by-alignment
+DanelohvsgaSpec	SG2		INFINITIVE	dijanehldi	ᏕᏣᏁᎶᏗ	exposed-by-alignment
+DanelohvsgaSpec	SG2		PRESENT	dehanelohvsga	ᏘᏁᎶᎲᏍᎦ	exposed-by-alignment
+DanelohvsgaSpec	SG3		FUTURE_COMMAND	anelonvi	ᏓᏁᎶᏅᎢ	not-caused-by-pass
+DanilawigaSpec	PL1INCL		FUTURE_COMMAND	idanilawitsvi	ᏓᏓᏂᎳᏫᏨᎢ	not-caused-by-pass
+DanilawigaSpec	PL1INCL		HABITUAL	dedilawigoi	ᏓᏓᏂᎳᏫᎪᎢ	exposed-by-alignment
+DanilawigaSpec	PL1INCL		INFINITIVE	digilawisdi	ᏓᎩᏂᎳᏫᏍᏗ	exposed-by-alignment
+DanilawigaSpec	PL1INCL		PRESENT	dedilawiga	ᏓᏓᏂᎳᏫᎦ	exposed-by-alignment
+DanilawigaSpec	PL1INCL		REMOTE_PAST	degilawijvi	ᏓᎦᏂᎳᏫᏨᎢ	exposed-by-alignment
+DanilawigaSpec	PL3		FUTURE_COMMAND	ananilawitsvi	ᏛᎾᏂᎳᏫᏨᎢ	not-caused-by-pass
+DanilawigaSpec	PL3		HABITUAL	dejilawigoi	ᏛᎾᏂᎳᏫᎪᎢ	exposed-by-alignment
+DanilawigaSpec	PL3		INFINITIVE	dijilawisdi	ᏧᏂᏂᎳᏫᏍᏗ	exposed-by-alignment
+DanilawigaSpec	PL3		PRESENT	dejilawiga	ᏛᎾᏂᎳᏫᎦ	exposed-by-alignment
+DanilawigaSpec	PL3		REMOTE_PAST	dejilawijvi	ᏚᎾᏂᎳᏫᏨᎢ	exposed-by-alignment
+DanilawigaSpec	SG1		FUTURE_COMMAND	ganilawitsvi	ᏗᎦᏂᎳᏫᏨᎢ	not-caused-by-pass
+DanilawigaSpec	SG1		HABITUAL	ganilawigoi	ᏗᎦᏂᎳᏫᎪᎢ	not-caused-by-pass
+DanilawigaSpec	SG1		INFINITIVE	aginilawisdi	ᏛᎩᏂᎳᏫᏍᏗ	not-caused-by-pass
+DanilawigaSpec	SG1		PRESENT	ganilawiga	ᏗᎦᏂᎳᏫᎦ	not-caused-by-pass
+DanilawigaSpec	SG1		REMOTE_PAST	aquanilawitsvi	ᏛᏆᏂᎳᏫᏨᎢ	not-caused-by-pass
+DanilawigaSpec	SG2		FUTURE_COMMAND	hanilawitsvi	ᏘᏂᎳᏫᏨᎢ	not-caused-by-pass
+DanilawigaSpec	SG2		HABITUAL	dojilawigoi	ᏘᏂᎳᏫᎪᎢ	exposed-by-alignment
+DanilawigaSpec	SG2		INFINITIVE	jogilawisdi	ᏗᏣᏂᎳᏫᏍᏗ	exposed-by-alignment
+DanilawigaSpec	SG2		PRESENT	dojilawiga	ᏘᏂᎳᏫᎦ	exposed-by-alignment
+DanilawigaSpec	SG2		REMOTE_PAST	dogilawijvi	ᏗᏣᏂᎳᏫᏨᎢ	exposed-by-alignment
+DanilawigaSpec	SG3		FUTURE_COMMAND	anilawitsvi	ᏛᏂᎳᏫᏨᎢ	not-caused-by-pass
+DaniyelisgaSpec	PL1INCL		FUTURE_COMMAND	idaniyelisvi	ᏓᏓᏂᏰᎵᏒᎢ	not-caused-by-pass
+DaniyelisgaSpec	PL1INCL		HABITUAL	dejiyelisgoi	ᏓᏓᏂᏰᎵᏍᎪᎢ	exposed-by-alignment
+DaniyelisgaSpec	PL1INCL		INFINITIVE	dijiyelihisdi	ᏓᎩᏂᏰᎵᎯᏍᏗ	exposed-by-alignment
+DaniyelisgaSpec	PL1INCL		PRESENT	dejiyelisga	ᏓᏓᏂᏰᎵᏍᎦ	exposed-by-alignment
+DaniyelisgaSpec	PL1INCL		REMOTE_PAST	dejiyelisvi	ᏓᎦᏂᏰᎵᏒᎢ	exposed-by-alignment
+DaniyelisgaSpec	PL3		FUTURE_COMMAND	ananiyelisvi	ᏛᎾᏂᏰᎵᏒᎢ	not-caused-by-pass
+DaniyelisgaSpec	PL3		HABITUAL	desdiyelisgoi	ᏛᎾᏂᏰᎵᏍᎪᎢ	exposed-by-alignment
+DaniyelisgaSpec	PL3		INFINITIVE	disdiyelihisdi	ᏧᏂᏂᏰᎵᎯᏍᏗ	exposed-by-alignment
+DaniyelisgaSpec	PL3		PRESENT	desdiyelisga	ᏛᎾᏂᏰᎵᏍᎦ	exposed-by-alignment
+DaniyelisgaSpec	PL3		REMOTE_PAST	desdiyelisvi	ᏚᎾᏂᏰᎵᏒᎢ	exposed-by-alignment
+DaniyelisgaSpec	SG1		FUTURE_COMMAND	ganiyelisvi	ᏗᎦᏂᏰᎵᏒᎢ	not-caused-by-pass
+DaniyelisgaSpec	SG1		HABITUAL	ganiyelisgoi	ᏗᎦᏂᏰᎵᏍᎪᎢ	not-caused-by-pass
+DaniyelisgaSpec	SG1		INFINITIVE	aginiyelihisdi	ᏛᎩᏂᏰᎵᎯᏍᏗ	not-caused-by-pass
+DaniyelisgaSpec	SG1		PRESENT	ganiyelisga	ᏗᎦᏂᏰᎵᏍᎦ	not-caused-by-pass
+DaniyelisgaSpec	SG1		REMOTE_PAST	aquaniyelisvi	ᏛᏆᏂᏰᎵᏒᎢ	not-caused-by-pass
+DaniyelisgaSpec	SG2		FUTURE_COMMAND	haniyelisvi	ᏘᏂᏰᎵᏒᎢ	not-caused-by-pass
+DaniyelisgaSpec	SG2		HABITUAL	dojiyelisgoi	ᏘᏂᏰᎵᏍᎪᎢ	exposed-by-alignment
+DaniyelisgaSpec	SG2		INFINITIVE	jogiyelihisdi	ᏗᏣᏂᏰᎵᎯᏍᏗ	exposed-by-alignment
+DaniyelisgaSpec	SG2		PRESENT	dojiyelisga	ᏘᏂᏰᎵᏍᎦ	exposed-by-alignment
+DaniyelisgaSpec	SG2		REMOTE_PAST	dogiyelisvi	ᏗᏣᏂᏰᎵᏒᎢ	exposed-by-alignment
+DaniyelisgaSpec	SG3		FUTURE_COMMAND	aniyelisvi	ᏛᏂᏰᎵᏒᎢ	not-caused-by-pass
+DasdayohihaSpec	PL1INCL		FUTURE_COMMAND	idisdayotlvi	ᏓᏗᏍᏓᏲᏢᎢ	not-caused-by-pass
+DasdayohihaSpec	PL1INCL		HABITUAL	dedisdayohihoi	ᏓᏗᏍᏓᏲᎯᎰᎢ	exposed-by-alignment
+DasdayohihaSpec	PL1INCL		INFINITIVE	diksdayosdi	ᏓᎩᏍᏓᏲᏍᏗ	exposed-by-alignment
+DasdayohihaSpec	PL1INCL		PRESENT	dedisdayohiha	ᏓᏗᏍᏓᏲᎯᎭ	exposed-by-alignment
+DasdayohihaSpec	PL1INCL		REMOTE_PAST	deksdayohlvi	ᏓᎩᏍᏓᏲᏢᎢ	exposed-by-alignment
+DasdayohihaSpec	PL3		FUTURE_COMMAND	anisdayotlvi	ᏓᏂᏍᏓᏲᏢᎢ	not-caused-by-pass
+DasdayohihaSpec	SG1		FUTURE_COMMAND	tsisdayotlvi	ᏕᏥᏍᏓᏲᏢᎢ	not-caused-by-pass
+DasdayohihaSpec	SG1		INFINITIVE	diksdayosdi	ᏓᎩᏍᏓᏲᏍᏗ	exposed-by-alignment
+DasdayohihaSpec	SG2		FUTURE_COMMAND	hisdayotlvi	ᏘᏍᏓᏲᏢᎢ	not-caused-by-pass
+DasdayohihaSpec	SG2		HABITUAL	dehisdayohihoi	ᏘᏍᏓᏲᎯᎰᎢ	exposed-by-alignment
+DasdayohihaSpec	SG2		INFINITIVE	ditsdayosdi	ᏕᏣᏍᏓᏲᏍᏗ	exposed-by-alignment
+DasdayohihaSpec	SG2		PRESENT	deihisdayohiha	ᏘᏍᏓᏲᎯᎭ	exposed-by-alignment
+DasdayohihaSpec	SG2		REMOTE_PAST	detsdayohlvi	ᏕᏣᏍᏓᏲᏢᎢ	exposed-by-alignment
+DasdayohihaSpec	SG3		FUTURE_COMMAND	gasdayotlvi	ᏕᎦᏍᏓᏲᏢᎢ	not-caused-by-pass
+DasehihaSpec	PL1INCL		FUTURE_COMMAND	idasetlvi	ᏓᏓᏎᏢᎢ	not-caused-by-pass
+DasehihaSpec	PL1INCL		HABITUAL	dedasehihoi	ᏓᏓᏎᎯᎰᎢ	exposed-by-alignment
+DasehihaSpec	PL1INCL		INFINITIVE	digasesdi	ᏓᎩᏎᏍᏗ	exposed-by-alignment
+DasehihaSpec	PL1INCL		PRESENT	dedasehiha	ᏓᏓᏎᎯᎭ	exposed-by-alignment
+DasehihaSpec	PL1INCL		REMOTE_PAST	degasehlvi	ᏓᎦᏎᏢᎢ	exposed-by-alignment
+DasehihaSpec	PL3		FUTURE_COMMAND	anasetlvi	ᏓᎾᏎᏢᎢ	not-caused-by-pass
+DasehihaSpec	PL3		INFINITIVE	junasesdi	ᏧᏂᏎᏍᏗ	exposed-by-alignment
+DasehihaSpec	SG1		FUTURE_COMMAND	gasetlvi	ᏕᎦᏎᏢᎢ	not-caused-by-pass
+DasehihaSpec	SG1		INFINITIVE	digwasesdi	ᏓᎩᏎᏍᏗ	exposed-by-alignment
+DasehihaSpec	SG2		FUTURE_COMMAND	hasetlvi	ᏘᏎᏢᎢ	not-caused-by-pass
+DasehihaSpec	SG2		HABITUAL	dehasehihoi	ᏘᏎᎯᎰᎢ	exposed-by-alignment
+DasehihaSpec	SG2		INFINITIVE	dijasesdi	ᏕᏣᏎᏍᏗ	exposed-by-alignment
+DasehihaSpec	SG2		PRESENT	dehasehiha	ᏘᏎᎯᎭ	exposed-by-alignment
+DasehihaSpec	SG3		FUTURE_COMMAND	asetlvi	ᏓᏎᏢᎢ	not-caused-by-pass
+DastayesgaSpec	PL1INCL		FUTURE_COMMAND	idastayesvi	ᏓᏓᏍᏔᏰᏒᎢ	not-caused-by-pass
+DastayesgaSpec	PL1INCL		HABITUAL	dedastayesgoi	ᏓᏓᏍᏔᏰᏍᎪᎢ	exposed-by-alignment
+DastayesgaSpec	PL1INCL		INFINITIVE	digastayehisdi	ᏓᎩᏍᏔᏰᎯᏍᏗ	exposed-by-alignment
+DastayesgaSpec	PL1INCL		PRESENT	dedastayesga	ᏓᏓᏍᏔᏰᏍᎦ	exposed-by-alignment
+DastayesgaSpec	PL1INCL		REMOTE_PAST	degastayesvi	ᏓᎦᏍᏔᏰᏒᎢ	exposed-by-alignment
+DastayesgaSpec	PL3		FUTURE_COMMAND	anastayesvi	ᏓᎾᏍᏔᏰᏒᎢ	not-caused-by-pass
+DastayesgaSpec	PL3		INFINITIVE	junastayehisdi	ᏧᏂᏍᏔᏰᎯᏍᏗ	exposed-by-alignment
+DastayesgaSpec	SG1		FUTURE_COMMAND	gastayesvi	ᏕᎦᏍᏔᏰᏒᎢ	not-caused-by-pass
+DastayesgaSpec	SG1		INFINITIVE	digwastayehisdi	ᏓᎩᏍᏔᏰᎯᏍᏗ	exposed-by-alignment
+DastayesgaSpec	SG2		FUTURE_COMMAND	hastayesvi	ᏘᏍᏔᏰᏒᎢ	not-caused-by-pass
+DastayesgaSpec	SG2		HABITUAL	dehastayesgoi	ᏘᏍᏔᏰᏍᎪᎢ	exposed-by-alignment
+DastayesgaSpec	SG2		INFINITIVE	dijastayehisdi	ᏕᏣᏍᏔᏰᎯᏍᏗ	exposed-by-alignment
+DastayesgaSpec	SG2		PRESENT	dehastayesga	ᏘᏍᏔᏰᏍᎦ	exposed-by-alignment
+DastayesgaSpec	SG3		FUTURE_COMMAND	astayesvi	ᏓᏍᏔᏰᏒᎢ	not-caused-by-pass
+DasuleaSpec	PL1INCL		FUTURE_COMMAND	idasulehvi	ᏓᏓᏑᎴᎲᎢ	not-caused-by-pass
+DasuleaSpec	PL1INCL		HABITUAL	dedasulesgvi	ᏓᏓᏑᎴᏍᎬᎢ	exposed-by-alignment
+DasuleaSpec	PL1INCL		INFINITIVE	digasuhldi	ᏓᎩᏑᎶᏗ	exposed-by-alignment
+DasuleaSpec	PL1INCL		PRESENT	dedasulea	ᏓᏓᏑᎴᎠ	exposed-by-alignment
+DasuleaSpec	PL1INCL		REMOTE_PAST	degasulehvi	ᏓᎦᏑᎴᎲᎢ	exposed-by-alignment
+DasuleaSpec	PL3		FUTURE_COMMAND	anasulehvi	ᏓᎾᏑᎴᎲᎢ	not-caused-by-pass
+DasuleaSpec	SG1		FUTURE_COMMAND	gasulehvi	ᏕᎦᏑᎴᎲᎢ	not-caused-by-pass
+DasuleaSpec	SG1		INFINITIVE	diksuhldi	ᏓᎩᏑᎶᏗ	exposed-by-alignment
+DasuleaSpec	SG2		FUTURE_COMMAND	hasulehvi	ᏘᏑᎴᎲᎢ	not-caused-by-pass
+DasuleaSpec	SG2		HABITUAL	dehasulesgvi	ᏘᏑᎴᏍᎬᎢ	exposed-by-alignment
+DasuleaSpec	SG2		INFINITIVE	ditsuhldi	ᏕᏣᏑᎶᏗ	exposed-by-alignment
+DasuleaSpec	SG2		PRESENT	dehasulea	ᏘᏑᎴᎠ	exposed-by-alignment
+DasuleaSpec	SG3		FUTURE_COMMAND	asulehvi	ᏓᏑᎴᎲᎢ	not-caused-by-pass
+DasvsdihaSpec	PL1INCL		FUTURE_COMMAND	idisvstanvi	ᏓᏗᏒᏍᏔᏅᎢ	not-caused-by-pass
+DasvsdihaSpec	PL1INCL		HABITUAL	dedisvsdisgoi	ᏓᏗᏒᏍᏗᏍᎪᎢ	exposed-by-alignment
+DasvsdihaSpec	PL1INCL		INFINITIVE	digisvsdohdi	ᏓᎩᏒᏍᏙᏗ	exposed-by-alignment
+DasvsdihaSpec	PL1INCL		PRESENT	dedisvsdiha	ᏓᏗᏒᏍᏗᎭ	exposed-by-alignment
+DasvsdihaSpec	PL1INCL		REMOTE_PAST	degisvstanvi	ᏓᎩᏒᏍᏔᏅᎢ	exposed-by-alignment
+DasvsdihaSpec	PL3		FUTURE_COMMAND	anisvstanvi	ᏓᏂᏒᏍᏔᏅᎢ	not-caused-by-pass
+DasvsdihaSpec	SG1		FUTURE_COMMAND	tsisvstanvi	ᏕᏥᏒᏍᏔᏅᎢ	not-caused-by-pass
+DasvsdihaSpec	SG1		INFINITIVE	diksvsdohdi	ᏓᎩᏒᏍᏙᏗ	exposed-by-alignment
+DasvsdihaSpec	SG2		FUTURE_COMMAND	hisvstanvi	ᏘᏒᏍᏔᏅᎢ	not-caused-by-pass
+DasvsdihaSpec	SG2		HABITUAL	dehisvsdisgoi	ᏘᏒᏍᏗᏍᎪᎢ	exposed-by-alignment
+DasvsdihaSpec	SG2		INFINITIVE	ditsvsdohdi	ᏕᏣᏒᏍᏙᏗ	exposed-by-alignment
+DasvsdihaSpec	SG2		PRESENT	dehisvsdiha	ᏘᏒᏍᏗᎭ	exposed-by-alignment
+DasvsdihaSpec	SG2		REMOTE_PAST	detsvstanvi	ᏕᏣᏒᏍᏔᏅᎢ	exposed-by-alignment
+DasvsdihaSpec	SG3		FUTURE_COMMAND	gasvstanvi	ᏕᎦᏒᏍᏔᏅᎢ	not-caused-by-pass
+DeganadiwsgaSpec	PL1INCL		FUTURE_COMMAND	idinadiwvsvi	ᏓᏗᎾᏗᏮᏒᎢ	not-caused-by-pass
+DeganadiwsgaSpec	PL1INCL		HABITUAL	dedinadiwsgoi	ᏓᏗᎾᏗᏮᏍᎪᎢ	exposed-by-alignment
+DeganadiwsgaSpec	PL1INCL		INFINITIVE	diginadihwisdi	ᏓᎩᎾᏗᏫᏍᏗ	exposed-by-alignment
+DeganadiwsgaSpec	PL1INCL		PRESENT	dedinadiwsga	ᏓᏗᎾᏗᏮᏍᎦ	exposed-by-alignment
+DeganadiwsgaSpec	PL1INCL		REMOTE_PAST	deginadiwsvi	ᏓᎩᎾᏗᏮᏒᎢ	exposed-by-alignment
+DeganadiwsgaSpec	PL3		FUTURE_COMMAND	aninadiwvsvi	ᏓᏂᎾᏗᏮᏒᎢ	not-caused-by-pass
+DeganadiwsgaSpec	SG1		FUTURE_COMMAND	tsinadiwvsvi	ᏕᏥᎾᏗᏮᏒᎢ	not-caused-by-pass
+DeganadiwsgaSpec	SG1		INFINITIVE	diginadihwisdi	ᏓᎩᎾᏗᏫᏍᏗ	exposed-by-alignment
+DeganadiwsgaSpec	SG2		FUTURE_COMMAND	hinadiwvsvi	ᏘᎾᏗᏮᏒᎢ	not-caused-by-pass
+DeganadiwsgaSpec	SG2		HABITUAL	dehinadiwsgoi	ᏘᎾᏗᏮᏍᎪᎢ	exposed-by-alignment
+DeganadiwsgaSpec	SG2		INFINITIVE	dijanadihwisdi	ᏕᏣᎾᏗᏫᏍᏗ	exposed-by-alignment
+DeganadiwsgaSpec	SG2		PRESENT	dehinadiwsga	ᏘᎾᏗᏮᏍᎦ	exposed-by-alignment
+DeganadiwsgaSpec	SG3		FUTURE_COMMAND	ganadiwvsvi	ᏕᎦᎾᏗᏮᏒᎢ	not-caused-by-pass
+DegukdihaSpec	PL1INCL		FUTURE_COMMAND	idugitanvi	ᏓᏚᎩᏔᏅᎢ	not-caused-by-pass
+DegukdihaSpec	PL1INCL		HABITUAL	dedukdisgoi	ᏓᏚᎩᏗᏍᎪᎢ	exposed-by-alignment
+DegukdihaSpec	PL1INCL		INFINITIVE	digukdohdi	ᏓᎩᏭᎩᏙᏗ	exposed-by-alignment
+DegukdihaSpec	PL1INCL		PRESENT	dedukdiha	ᏓᏚᎩᏗᎭ	exposed-by-alignment
+DegukdihaSpec	PL1INCL		REMOTE_PAST	deguktanvi	ᏓᎫᎩᏔᏅᎢ	exposed-by-alignment
+DegukdihaSpec	PL3		FUTURE_COMMAND	anugitanvi	ᏓᏄᎩᏔᏅᎢ	not-caused-by-pass
+DegukdihaSpec	PL3		INFINITIVE	junukdohdi	ᏧᏂᏭᎩᏙᏗ	exposed-by-alignment
+DegukdihaSpec	SG1		FUTURE_COMMAND	gugitanvi	ᏕᎫᎩᏔᏅᎢ	not-caused-by-pass
+DegukdihaSpec	SG1		HABITUAL	degugodisgoi	ᏕᎫᎩᏗᏍᎪᎢ	exposed-by-alignment
+DegukdihaSpec	SG1		INFINITIVE	digwukdohdi	ᏓᎩᏭᎩᏙᏗ	exposed-by-alignment
+DegukdihaSpec	SG1		PRESENT	degugodiha	ᏕᎫᎩᏗᎭ	exposed-by-alignment
+DegukdihaSpec	SG2		FUTURE_COMMAND	hugitanvi	ᏘᎩᏔᏅᎢ	not-caused-by-pass
+DegukdihaSpec	SG2		HABITUAL	dehugodisgoi	ᏘᎩᏗᏍᎪᎢ	exposed-by-alignment
+DegukdihaSpec	SG2		INFINITIVE	dijukdohdi	ᏕᏣᏭᎩᏙᏗ	exposed-by-alignment
+DegukdihaSpec	SG2		PRESENT	dehugodiha	ᏘᎩᏗᎭ	exposed-by-alignment
+DegukdihaSpec	SG3		FUTURE_COMMAND	ugitanvi	ᏚᎩᏔᏅᎢ	not-caused-by-pass
+DegvdiyeaSpec	PL1INCL		FUTURE_COMMAND	idvdiyevi	ᏓᏛᏗᏰᎥᎢ	not-caused-by-pass
+DegvdiyeaSpec	PL1INCL		HABITUAL	dedvdiyesgoi	ᏓᏛᏗᏰᏍᎪᎢ	exposed-by-alignment
+DegvdiyeaSpec	PL1INCL		INFINITIVE	digvdiyedi	ᏓᎩᏩᏗᏰᏗ	exposed-by-alignment
+DegvdiyeaSpec	PL1INCL		PRESENT	dedvdiyea	ᏓᏛᏗᏰᎠ	exposed-by-alignment
+DegvdiyeaSpec	PL1INCL		REMOTE_PAST	degvdiyevi	ᏓᎬᏗᏰᎥᎢ	exposed-by-alignment
+DegvdiyeaSpec	PL3		FUTURE_COMMAND	anvdiyevi	ᏓᏅᏗᏰᎥᎢ	not-caused-by-pass
+DegvdiyeaSpec	PL3		INFINITIVE	junvdiyedi	ᏧᏂᏩᏗᏰᏗ	exposed-by-alignment
+DegvdiyeaSpec	SG1		FUTURE_COMMAND	gvdiyevi	ᏕᎬᏗᏰᎥᎢ	not-caused-by-pass
+DegvdiyeaSpec	SG1		INFINITIVE	digwvdiyedi	ᏓᎩᏩᏗᏰᏗ	exposed-by-alignment
+DegvdiyeaSpec	SG2		FUTURE_COMMAND	hvdiyevi	ᏘᏗᏰᎥᎢ	not-caused-by-pass
+DegvdiyeaSpec	SG2		HABITUAL	dehvdiyesgoi	ᏘᏗᏰᏍᎪᎢ	exposed-by-alignment
+DegvdiyeaSpec	SG2		INFINITIVE	dijvdiyedi	ᏕᏣᏩᏗᏰᏗ	exposed-by-alignment
+DegvdiyeaSpec	SG2		PRESENT	dehvdiyea	ᏘᏗᏰᎠ	exposed-by-alignment
+DegvdiyeaSpec	SG3		FUTURE_COMMAND	vdiyevi	ᏛᏗᏰᎥᎢ	not-caused-by-pass
+DekanogiaSpec	PL1INCL		FUTURE_COMMAND	idinogisvi	ᏓᏗᏃᎩᏒᎢ	not-caused-by-pass
+DekanogiaSpec	PL1INCL		HABITUAL	dedihnogisgoi	ᏓᏗᏃᎩᏍᎪᎢ	exposed-by-alignment
+DekanogiaSpec	PL1INCL		INFINITIVE	digihnogisdi	ᏓᎩᏃᎩᏍᏗ	exposed-by-alignment
+DekanogiaSpec	PL1INCL		PRESENT	dedihnogia	ᏓᏗᏃᎩᎠ	exposed-by-alignment
+DekanogiaSpec	PL1INCL		REMOTE_PAST	degihnogisvi	ᏓᎩᏃᎩᏒᎢ	exposed-by-alignment
+DekanogiaSpec	PL3		FUTURE_COMMAND	aninogisvi	ᏓᏂᏃᎩᏒᎢ	not-caused-by-pass
+DekanogiaSpec	SG1		FUTURE_COMMAND	tsinogisvi	ᏕᏥᏃᎩᏒᎢ	not-caused-by-pass
+DekanogiaSpec	SG1		INFINITIVE	dikihnogisdi	ᏓᎩᏃᎩᏍᏗ	exposed-by-alignment
+DekanogiaSpec	SG2		FUTURE_COMMAND	hinogisvi	ᏘᏃᎩᏒᎢ	not-caused-by-pass
+DekanogiaSpec	SG2		HABITUAL	dehihnogisgoi	ᏘᏃᎩᏍᎪᎢ	exposed-by-alignment
+DekanogiaSpec	SG2		INFINITIVE	dijahnogisdi	ᏕᏣᏃᎩᏍᏗ	exposed-by-alignment
+DekanogiaSpec	SG2		PRESENT	dehihnogia	ᏘᏃᎩᎠ	exposed-by-alignment
+DekanogiaSpec	SG3		FUTURE_COMMAND	ganogisvi	ᏕᎦᏃᎩᏒᎢ	not-caused-by-pass
+DekanogisdihaSpec	PL1INCL		FUTURE_COMMAND	idinogistanvi	ᏓᏗᏃᎩᏍᏔᏅᎢ	not-caused-by-pass
+DekanogisdihaSpec	PL1INCL		HABITUAL	dedihnogisdisgoi	ᏓᏗᏃᎩᏍᏗᏍᎪᎢ	exposed-by-alignment
+DekanogisdihaSpec	PL1INCL		INFINITIVE	digihnogisdohdi	ᏓᎩᏃᎩᏍᏙᏗ	exposed-by-alignment
+DekanogisdihaSpec	PL1INCL		PRESENT	dedihnogisdiha	ᏓᏗᏃᎩᏍᏗᎭ	exposed-by-alignment
+DekanogisdihaSpec	PL1INCL		REMOTE_PAST	degihnogistanvi	ᏓᎩᏃᎩᏍᏔᏅᎢ	exposed-by-alignment
+DekanogisdihaSpec	PL3		FUTURE_COMMAND	aninogistanvi	ᏓᏂᏃᎩᏍᏔᏅᎢ	not-caused-by-pass
+DekanogisdihaSpec	SG1		FUTURE_COMMAND	tsinogistanvi	ᏕᏥᏃᎩᏍᏔᏅᎢ	not-caused-by-pass
+DekanogisdihaSpec	SG1		INFINITIVE	dikihnogisdohdi	ᏓᎩᏃᎩᏍᏙᏗ	exposed-by-alignment
+DekanogisdihaSpec	SG2		FUTURE_COMMAND	hinogistanvi	ᏘᏃᎩᏍᏔᏅᎢ	not-caused-by-pass
+DekanogisdihaSpec	SG2		HABITUAL	dehihnogisdisgoi	ᏘᏃᎩᏍᏗᏍᎪᎢ	exposed-by-alignment
+DekanogisdihaSpec	SG2		INFINITIVE	dichanogisdohdi	ᏕᏣᏃᎩᏍᏙᏗ	exposed-by-alignment
+DekanogisdihaSpec	SG2		PRESENT	dehihnogisdiha	ᏘᏃᎩᏍᏗᎭ	exposed-by-alignment
+DekanogisdihaSpec	SG3		FUTURE_COMMAND	ganogistanvi	ᏕᎦᏃᎩᏍᏔᏅᎢ	not-caused-by-pass
+DekgiloaSpec	PL1INCL		FUTURE_COMMAND	idugilovi	ᏓᏚᎩᎶᎥᎢ	not-caused-by-pass
+DekgiloaSpec	PL1INCL		HABITUAL	dedvgilosgoi	ᏓᏗᎩᎩᎶᏍᎪᎢ	exposed-by-alignment
+DekgiloaSpec	PL1INCL		INFINITIVE	digvgilosdi	ᏓᎩᎩᎶᏍᏗ	exposed-by-alignment
+DekgiloaSpec	PL1INCL		PRESENT	dedvgiloa	ᏓᏗᎩᎩᎶᎠ	exposed-by-alignment
+DekgiloaSpec	PL1INCL		REMOTE_PAST	degvgilovi	ᏓᎫᎩᎶᎥᎢ	exposed-by-alignment
+DekgiloaSpec	PL3		FUTURE_COMMAND	anugilovi	ᏓᏄᎩᎶᎥᎢ	not-caused-by-pass
+DekgiloaSpec	PL3		HABITUAL	danvgilosgoi	ᏓᏂᎩᎩᎶᏍᎪᎢ	exposed-by-alignment
+DekgiloaSpec	PL3		INFINITIVE	junhgilosdi	ᏧᏂᎩᎶᏍᏗ	exposed-by-alignment
+DekgiloaSpec	PL3		PRESENT	danvgiloa	ᏓᏂᎩᎩᎶᎠ	exposed-by-alignment
+DekgiloaSpec	PL3		REMOTE_PAST	dunvgilovi	ᏚᏄᎩᎶᎥᎢ	exposed-by-alignment
+DekgiloaSpec	SG1		FUTURE_COMMAND	gugilovi	ᏕᎫᎩᎶᎥᎢ	not-caused-by-pass
+DekgiloaSpec	SG1		HABITUAL	degvgilosgoi	ᏕᏥᎩᎩᎶᏍᎪᎢ	exposed-by-alignment
+DekgiloaSpec	SG1		INFINITIVE	digwvgilosdi	ᏓᎩᎩᎶᏍᏗ	exposed-by-alignment
+DekgiloaSpec	SG1		PRESENT	degvgiloa	ᏕᏥᎩᎩᎶᎠ	exposed-by-alignment
+DekgiloaSpec	SG1		REMOTE_PAST	dagwvgilovi	ᏓᏊᎩᎶᎥᎢ	exposed-by-alignment
+DekgiloaSpec	SG2		FUTURE_COMMAND	hugilovi	ᏘᎩᎶᎥᎢ	not-caused-by-pass
+DekgiloaSpec	SG2		HABITUAL	dehvgilosgoi	ᏘᎩᎩᎶᏍᎪᎢ	exposed-by-alignment
+DekgiloaSpec	SG2		INFINITIVE	dijvgilosdi	ᏕᏣᎩᎶᏍᏗ	exposed-by-alignment
+DekgiloaSpec	SG2		PRESENT	dehvgiloa	ᏘᎩᎩᎶᎠ	exposed-by-alignment
+DekgiloaSpec	SG2		REMOTE_PAST	dejvgilovi	ᏕᏧᎩᎶᎥᎢ	exposed-by-alignment
+DekgiloaSpec	SG3		FUTURE_COMMAND	ugilovi	ᏚᎩᎶᎥᎢ	not-caused-by-pass
+DekgiloaSpec	SG3		REMOTE_PAST	duhgilovi	ᏚᏭᎩᎶᎥᎢ	exposed-by-alignment
+DoyiSpec	PL1INCL		HABITUAL	igajvsidi	ᎢᏚᏨᏏᏗ	exposed-by-alignment
+DoyiSpec	PL1INCL		INFINITIVE	doyi	ᎢᎩᏱ	exposed-by-alignment
+DoyiSpec	PL1INCL		PRESENT	doyi	ᎢᏗᏙᏱ	exposed-by-alignment
+DoyiSpec	PL1INCL		REMOTE_PAST	doyi	ᎢᎩᏙᏱ	exposed-by-alignment
+DoyiSpec	PL3		HABITUAL	unajvsidi	ᎠᏄᏨᏏᏗ	exposed-by-alignment
+DoyiSpec	PL3		INFINITIVE	doyi	ᎤᏂᏱ	exposed-by-alignment
+DoyiSpec	PL3		PRESENT	doyi	ᎠᏂᏙᏱ	exposed-by-alignment
+DoyiSpec	PL3		REMOTE_PAST	doyi	ᎤᏂᏙᏱ	exposed-by-alignment
+DoyiSpec	SG1		HABITUAL	agwajvsidi	ᎫᏨᏏᏗ	exposed-by-alignment
+DoyiSpec	SG1		INFINITIVE	doyi	ᎠᎩᏱ	exposed-by-alignment
+DoyiSpec	SG1		PRESENT	doyi	ᏥᏙᏱ	exposed-by-alignment
+DoyiSpec	SG1		REMOTE_PAST	doyi	ᎠᎩᏙᏱ	exposed-by-alignment
+DoyiSpec	SG2		HABITUAL	jajvsidi	ᎱᏨᏏᏗ	exposed-by-alignment
+DoyiSpec	SG2		INFINITIVE	doyi	ᏣᏱ	exposed-by-alignment
+DoyiSpec	SG2		PRESENT	doyi	ᎯᏙᏱ	exposed-by-alignment
+DoyiSpec	SG2		REMOTE_PAST	doyi	ᏣᏙᏱ	exposed-by-alignment
+DoyiSpec	SG3		INFINITIVE	doyi	ᎤᏱ	exposed-by-alignment
+DoyiSpec	SG3		REMOTE_PAST	doyi	ᎤᏙᏱ	exposed-by-alignment
+DuksesdiSpec	PL1INCL		FUTURE_COMMAND	igagisestanvi	ᏓᎦᎩᏎᏍᏔᏅᎢ	not-caused-by-pass
+DuksesdiSpec	PL1INCL		HABITUAL	degaksesdoi	ᏓᎦᎩᏎᏍᏙᎢ	exposed-by-alignment
+DuksesdiSpec	PL1INCL		INFINITIVE	digaksesdohdi	ᏓᎩᎩᏎᏍᏙᏗ	exposed-by-alignment
+DuksesdiSpec	PL1INCL		PRESENT	degaksesdi	ᏓᎦᎩᏎᏍᏗ	exposed-by-alignment
+DuksesdiSpec	PL1INCL		REMOTE_PAST	degaksestanvi	ᏓᎦᎩᏎᏍᏔᏅᎢ	exposed-by-alignment
+DuksesdiSpec	PL3		FUTURE_COMMAND	unagisestanvi	ᏚᎾᎩᏎᏍᏔᏅᎢ	not-caused-by-pass
+DuksesdiSpec	PL3		HABITUAL	dunakesdoi	ᏚᎾᎩᏎᏍᏙᎢ	exposed-by-alignment
+DuksesdiSpec	PL3		INFINITIVE	junaksesdohdi	ᏧᏂᎩᏎᏍᏙᏗ	exposed-by-alignment
+DuksesdiSpec	PL3		REMOTE_PAST	dunakestanvi	ᏚᎾᎩᏎᏍᏔᏅᎢ	exposed-by-alignment
+DuksesdiSpec	SG1		FUTURE_COMMAND	aquagisestanvi	ᏓᏆᎩᏎᏍᏔᏅᎢ	not-caused-by-pass
+DuksesdiSpec	SG1		INFINITIVE	digwaksesdohdi	ᏓᎩᎩᏎᏍᏙᏗ	exposed-by-alignment
+DuksesdiSpec	SG2		FUTURE_COMMAND	tsagisestanvi	ᏗᏣᎩᏎᏍᏔᏅᎢ	not-caused-by-pass
+DuksesdiSpec	SG2		HABITUAL	dejaksesdoi	ᏗᏣᎩᏎᏍᏙᎢ	exposed-by-alignment
+DuksesdiSpec	SG2		PRESENT	dejaksesdi	ᏗᏣᎩᏎᏍᏗ	exposed-by-alignment
+DuksesdiSpec	SG2		REMOTE_PAST	dejaksestanvi	ᏗᏣᎩᏎᏍᏔᏅᎢ	exposed-by-alignment
+DulvwisdanehaSpec	PL1INCL		FUTURE_COMMAND	igilvwisdanelvi	ᏓᎩᎸᏫᏍᏓᏁᎸᎢ	not-caused-by-pass
+DulvwisdanehaSpec	PL1INCL		HABITUAL	degilvwisdanehoi	ᏓᎩᎸᏫᏍᏓᏁᎰᎢ	exposed-by-alignment
+DulvwisdanehaSpec	PL1INCL		INFINITIVE	digilvhwisdanehdi	ᏓᎩᎸᏫᏍᏓᏁᏗ	exposed-by-alignment
+DulvwisdanehaSpec	PL1INCL		PRESENT	degilvwisdaneha	ᏓᎩᎸᏫᏍᏓᏁᎭ	exposed-by-alignment
+DulvwisdanehaSpec	PL1INCL		REMOTE_PAST	degilvwisdanelvi	ᏓᎩᎸᏫᏍᏓᏁᎸᎢ	exposed-by-alignment
+DulvwisdanehaSpec	PL3		FUTURE_COMMAND	unilvwisdanelvi	ᏚᏂᎸᏫᏍᏓᏁᎸᎢ	not-caused-by-pass
+DulvwisdanehaSpec	SG1		FUTURE_COMMAND	agilvwisdanelvi	ᏓᎩᎸᏫᏍᏓᏁᎸᎢ	not-caused-by-pass
+DulvwisdanehaSpec	SG1		INFINITIVE	digilvhwisdanehdi	ᏓᎩᎸᏫᏍᏓᏁᏗ	exposed-by-alignment
+DulvwisdanehaSpec	SG2		FUTURE_COMMAND	tsalvwisdanelvi	ᏓᏣᎸᏫᏍᏓᏁᎸᎢ	not-caused-by-pass
+DulvwisdanehaSpec	SG2		HABITUAL	dejalvwisdanehoi	ᏓᏣᎸᏫᏍᏓᏁᎰᎢ	exposed-by-alignment
+DulvwisdanehaSpec	SG2		INFINITIVE	dijalvhwisdanehdi	ᏓᏣᎸᏫᏍᏓᏁᏗ	exposed-by-alignment
+DulvwisdanehaSpec	SG2		PRESENT	dejalvwisdaneha	ᏓᏣᎸᏫᏍᏓᏁᎭ	exposed-by-alignment
+DulvwisdanehaSpec	SG2		REMOTE_PAST	dejalvwisdanelvi	ᏓᏣᎸᏫᏍᏓᏁᎸᎢ	exposed-by-alignment
+DuyawegaSpec	PL1INCL		FUTURE_COMMAND	igiyawetsvi	ᏓᎩᏯᏪᏨᎢ	not-caused-by-pass
+DuyawegaSpec	PL1INCL		HABITUAL	degiyawegoi	ᏓᎩᏯᏪᎪᎢ	exposed-by-alignment
+DuyawegaSpec	PL1INCL		INFINITIVE	digiyawesdi	ᏓᎩᏯᏪᏍᏗ	exposed-by-alignment
+DuyawegaSpec	PL1INCL		PRESENT	degiyawega	ᏓᎩᏯᏪᎦ	exposed-by-alignment
+DuyawegaSpec	PL1INCL		REMOTE_PAST	degiyawejvi	ᏓᎩᏯᏪᏨᎢ	exposed-by-alignment
+DuyawegaSpec	PL3		FUTURE_COMMAND	uniyawetsvi	ᏚᏂᏯᏪᏨᎢ	not-caused-by-pass
+DuyawegaSpec	SG1		FUTURE_COMMAND	agiyawetsvi	ᏓᎩᏯᏪᏨᎢ	not-caused-by-pass
+DuyawegaSpec	SG1		INFINITIVE	digiyawesdi	ᏓᎩᏯᏪᏍᏗ	exposed-by-alignment
+DuyawegaSpec	SG2		FUTURE_COMMAND	tsayawetsvi	ᏗᏣᏯᏪᏨᎢ	not-caused-by-pass
+DuyawegaSpec	SG2		HABITUAL	dejayawegoi	ᏗᏣᏯᏪᎪᎢ	exposed-by-alignment
+DuyawegaSpec	SG2		PRESENT	dejayawega	ᏗᏣᏯᏪᎦ	exposed-by-alignment
+DuyawegaSpec	SG2		REMOTE_PAST	dejayawejvi	ᏗᏣᏯᏪᏨᎢ	exposed-by-alignment
+EdoaSpec	PL1INCL		HABITUAL	idedosgoi	ᎢᏕᏍᎪᎢ	exposed-by-alignment
+EdoaSpec	PL1INCL		INFINITIVE	igedasdi	ᎢᎩᏪᏓᏍᏗ	exposed-by-alignment
+EdoaSpec	PL3		HABITUAL	anedosgoi	ᎠᏁᏍᎪᎢ	exposed-by-alignment
+EdoaSpec	PL3		INFINITIVE	unedasdi	ᎤᏂᏪᏓᏍᏗ	exposed-by-alignment
+EdoaSpec	SG1		HABITUAL	gedosgoi	ᎨᏍᎪᎢ	exposed-by-alignment
+EdoaSpec	SG1		INFINITIVE	agwedasdi	ᎠᎩᏪᏓᏍᏗ	exposed-by-alignment
+EdoaSpec	SG2		HABITUAL	hedosgoi	ᎮᏍᎪᎢ	exposed-by-alignment
+EdoaSpec	SG2		INFINITIVE	jedasdi	ᏣᏪᏓᏍᏗ	exposed-by-alignment
+EgaSpec	PL1INCL		HABITUAL	idegoi	ᎢᏕᏐᎢ	exposed-by-alignment
+EgaSpec	PL3		HABITUAL	anegoi	ᎠᏁᏐᎢ	exposed-by-alignment
+EhaSpec	SG1		PRESENT	gea	ᎨᎭ	exposed-by-alignment
+EliaSpec	PL1INCL		INFINITIVE	igelisdi	ᎢᎩᏪᎵᏍᏗ	exposed-by-alignment
+EliaSpec	PL3		INFINITIVE	unelisdi	ᎤᏂᏪᎵᏍᏗ	exposed-by-alignment
+EliaSpec	PL3		REMOTE_PAST	unelivi	ᎤᏁᎵᏒᎢ	exposed-by-alignment
+EliaSpec	SG1		INFINITIVE	agwelisdi	ᎠᎩᏪᎵᏍᏗ	exposed-by-alignment
+EliaSpec	SG2		INFINITIVE	jelisdi	ᏣᏪᎵᏍᏗ	exposed-by-alignment
+GadeysdihaSpec	PL1INCL		HABITUAL	idideysdisgoi	ᎢᏗᏕᏯᏍᏗᏍᎪᎢ	exposed-by-alignment
+GadeysdihaSpec	PL1INCL		INFINITIVE	igideysdohdi	ᎢᎩᏩᏕᏯᏍᏙᏗ	exposed-by-alignment
+GadeysdihaSpec	PL1INCL		PRESENT	idideysdiha	ᎢᏗᏕᏯᏍᏗᎭ	exposed-by-alignment
+GadeysdihaSpec	PL1INCL		REMOTE_PAST	igadeystanvi	ᎢᎩᏩᏕᏯᏍᏔᏅᎢ	exposed-by-alignment
+GadeysdihaSpec	PL3		HABITUAL	anideysdisgoi	ᎠᏂᏕᏯᏍᏗᏍᎪᎢ	exposed-by-alignment
+GadeysdihaSpec	PL3		INFINITIVE	unideysdohdi	ᎤᏂᏩᏕᏯᏍᏙᏗ	exposed-by-alignment
+GadeysdihaSpec	PL3		PRESENT	anideysdiha	ᎠᏂᏕᏯᏍᏗᎭ	exposed-by-alignment
+GadeysdihaSpec	PL3		REMOTE_PAST	unideystanvi	ᎤᏂᏩᏕᏯᏍᏔᏅᎢ	exposed-by-alignment
+GadeysdihaSpec	SG1		INFINITIVE	akdeysdohdi	ᎠᎩᏩᏕᏯᏍᏙᏗ	exposed-by-alignment
+GadeysdihaSpec	SG1		REMOTE_PAST	akdeystanvi	ᎠᎩᏩᏕᏯᏍᏔᏅᎢ	exposed-by-alignment
+GadeysdihaSpec	SG2		HABITUAL	hideysdisgoi	ᎯᏕᏯᏍᏗᏍᎪᎢ	exposed-by-alignment
+GadeysdihaSpec	SG2		INFINITIVE	tsdeysdohdi	ᏣᏩᏕᏯᏍᏙᏗ	exposed-by-alignment
+GadeysdihaSpec	SG2		PRESENT	hideysdiha	ᎯᏕᏯᏍᏗᎭ	exposed-by-alignment
+GadeysdihaSpec	SG2		REMOTE_PAST	tsdeystanvi	ᏣᏩᏕᏯᏍᏔᏅᎢ	exposed-by-alignment
+GadogaSpec	PL1INCL		PRESENT	dedidoga	ᎢᏗᏙᎦ	exposed-by-alignment
+GadogaSpec	PL3		PRESENT	danidoga	ᎠᏂᏙᎦ	exposed-by-alignment
+GahlihaSpec	PL3	SG3IN	HABITUAL	idihlihoi	ᎠᏂᏟᎰᎢ	exposed-by-alignment
+GahlihaSpec	PL3	SG3IN	PRESENT	idihliha	ᎠᏂᏟᎭ	exposed-by-alignment
+GahlihaSpec	SG1	SG3AN	HABITUAL	jilihoi	ᏥᏟᎰᎢ	exposed-by-alignment
+GahlihaSpec	SG1	SG3AN	INFINITIVE	agihlvnhdi	ᏥᏢᏅᏗ	exposed-by-alignment
+GahlihaSpec	SG1	SG3AN	PRESENT	jiliha	ᏥᏟᎭ	exposed-by-alignment
+GahlihaSpec	SG1	SG3IN	HABITUAL	hihlihoi	ᏥᏟᎰᎢ	exposed-by-alignment
+GahlihaSpec	SG1	SG3IN	PRESENT	hihliha	ᏥᏟᎭ	exposed-by-alignment
+GahlihaSpec	SG2	SG3IN	HABITUAL	gahlihoi	ᎯᏟᎰᎢ	exposed-by-alignment
+GahlihaSpec	SG2	SG3IN	PRESENT	gahliha	ᎯᏟᎭ	exposed-by-alignment
+GahlisihaSpec	PL1INCL		INFINITIVE	igihlisohdi	ᎢᎩᏩᏟᏐᏗ	exposed-by-alignment
+GahlisihaSpec	PL1INCL		REMOTE_PAST	igihlisahnvi	ᎢᎩᏩᏟᏌᏅᎢ	exposed-by-alignment
+GahlisihaSpec	PL3		INFINITIVE	unihlisohdi	ᎤᏂᏩᏟᏐᏗ	exposed-by-alignment
+GahlisihaSpec	PL3		REMOTE_PAST	unihlisahnvi	ᎤᏂᏩᏟᏌᏅᎢ	exposed-by-alignment
+GahlisihaSpec	SG1		INFINITIVE	akihlisohdi	ᎠᎩᏩᏟᏐᏗ	exposed-by-alignment
+GahlisihaSpec	SG1		REMOTE_PAST	akihlisahnvi	ᎠᎩᏩᏟᏌᏅᎢ	exposed-by-alignment
+GahlisihaSpec	SG2		INFINITIVE	jahlisohdi	ᏣᏩᏟᏐᏗ	exposed-by-alignment
+GahlisihaSpec	SG2		PRESENT	hihlvisiha	ᎯᏟᏏᎭ	exposed-by-alignment
+GahlisihaSpec	SG2		REMOTE_PAST	jahlisahnvi	ᏣᏩᏟᏌᏅᎢ	exposed-by-alignment
+GahlvsgaSpec	PL3		INFINITIVE	unihldi	ᎤᏂᏢᎾᏗ	exposed-by-alignment
+GahlvsgaSpec	PL3		REMOTE_PAST	unihlanvi	ᎤᏂᏢᏅᎢ	exposed-by-alignment
+GahlvsgaSpec	SG1		HABITUAL	jilvsgoi	ᏥᏢᏍᎪᎢ	exposed-by-alignment
+GahlvsgaSpec	SG1		HABITUAL	jilvsgoi	ᏥᏢᏍᎪᎢ	exposed-by-alignment
+GahlvsgaSpec	SG1		INFINITIVE	agihldi	ᎠᎩᏢᎾᏗ	exposed-by-alignment
+GahlvsgaSpec	SG1		INFINITIVE	agihldi	ᎠᎩᏢᎾᏗ	exposed-by-alignment
+GahlvsgaSpec	SG1		PRESENT	jilvsga	ᏥᏢᏍᎦ	exposed-by-alignment
+GahlvsgaSpec	SG1		PRESENT	jilvsga	ᏥᏢᏍᎦ	exposed-by-alignment
+GahlvsgaSpec	SG1		REMOTE_PAST	agihlvanvi	ᎠᎩᏢᏅᎢ	exposed-by-alignment
+GahlvsgaSpec	SG1		REMOTE_PAST	agihlvanvi	ᎠᎩᏢᏅᎢ	exposed-by-alignment
+GahlvsgaSpec	SG2		INFINITIVE	jahldi	ᏣᏢᎾᏗ	exposed-by-alignment
+GahlvsgaSpec	SG2		REMOTE_PAST	jahlanvi	ᏣᏢᏅᎢ	exposed-by-alignment
+GahnegaSpec	PL3		REMOTE_PAST	unahnvsvi	ᎤᏂᏅᏒᎢ	exposed-by-alignment
+GahnehaSpec	PL3		INFINITIVE	anihnehi	ᎤᏂᏁᎯ	exposed-by-alignment
+GahnehaSpec	PL3		REMOTE_PAST	anihnehvi	ᎤᏂᏁᎲᎢ	exposed-by-alignment
+GahnehaSpec	SG2		INFINITIVE	hihnehi	ᏣᏁᎯ	exposed-by-alignment
+GahnehaSpec	SG2		REMOTE_PAST	hihnehvi	ᏣᏁᎲᎢ	exposed-by-alignment
+GahyeaSpec	PL3		INFINITIVE	unahyesdi	ᎤᏂᏩᏰᏍᏗ	exposed-by-alignment
+GahyeaSpec	PL3		REMOTE_PAST	unahyavi	ᎤᏂᏩᏯᎥᎢ	exposed-by-alignment
+GahyeaSpec	SG1		PRESENT	tsiyayea, tsiyea	ᏥᏰᎠ	exposed-by-alignment
+GahyeaSpec	SG1	SG3AN	REMOTE_PAST	jiyayea	ᏥᏩᏯᎥᎢ	exposed-by-alignment
+GahyeaSpec	SG2		REMOTE_PAST	hiyayea	ᏣᏩᏯᎥᎢ	exposed-by-alignment
+GakahiyaaSpec	PL3		HABITUAL	anikahiyasgoi	ᎠᎾᎧᎯᏯᏍᎪᎢ	exposed-by-alignment
+GakahiyaaSpec	PL3		INFINITIVE	unikahiyasdi	ᎤᎾᎧᎯᏯᏍᏗ	exposed-by-alignment
+GakahiyaaSpec	PL3		PRESENT	anikahiyaa	ᎠᎾᎧᎯᏯᎠ	exposed-by-alignment
+GakahiyaaSpec	PL3		REMOTE_PAST	unikahiyvi	ᎤᎾᎧᎯᏴᎢ	exposed-by-alignment
+GakahiyaaSpec	SG1		PRESENT	jiyakahiyaa	ᎦᎧᎯᏯᎠ	exposed-by-alignment
+GakahvaSpec	PL3		HABITUAL	anikahvsgoi	ᎠᎾᎧᎲᏍᎪᎢ	exposed-by-alignment
+GakahvaSpec	PL3		INFINITIVE	unikahvsdi	ᎤᎾᎧᎲᏍᏗ	exposed-by-alignment
+GakahvaSpec	PL3		PRESENT	anikahvi	ᎠᎾᎧᎲᎠ	exposed-by-alignment
+GakahvaSpec	PL3		REMOTE_PAST	unikahvsvi	ᎤᎾᎧᎲᏒᎢ	exposed-by-alignment
+GakahvaSpec	SG1	SG3AN	PRESENT	jiyakahvi	ᏥᏯᎧᎲᎠ	exposed-by-alignment
+GakahvaSpec	SG2	SG3AN	PRESENT	hiyakahvi	ᎯᏯᎧᎲᎠ	exposed-by-alignment
+GakanehaSpec	PL3		HABITUAL	anikanehoi	ᎠᎾᎧᏁᎰᎢ	exposed-by-alignment
+GakanehaSpec	PL3		INFINITIVE	unikanehdi	ᎤᎾᎧᏁᏗ	exposed-by-alignment
+GakanehaSpec	PL3		PRESENT	anikaneha	ᎠᎾᎧᏁᎭ	exposed-by-alignment
+GakanehaSpec	PL3		REMOTE_PAST	unikanelvi	ᎤᎾᎧᏁᎸᎢ	exposed-by-alignment
+GakanehaSpec	SG1		PRESENT	jiyakaneha	ᎦᎧᏁᎭ	exposed-by-alignment
+GaladiaSpec	SG2		HABITUAL	haladisgoi	ᎯᎳᏗᏍᎪᎢ	exposed-by-alignment
+GalonasdihaSpec	PL1INCL		HABITUAL	edilonasdisgoi	ᎢᏗᎶᎾᏍᏗᏍᎪᎢ	exposed-by-alignment
+GalonasdihaSpec	PL1INCL		INFINITIVE	edilonasdohdi	ᎢᎩᎶᎾᏍᏙᏗ	exposed-by-alignment
+GalonasdihaSpec	PL1INCL		PRESENT	edilonasdiha	ᎢᏗᎶᎾᏍᏗᎭ	exposed-by-alignment
+GalonasdihaSpec	PL1INCL		REMOTE_PAST	edilonastanvi	ᎢᎩᎶᎾᏍᏔᏅᎢ	exposed-by-alignment
+GalonasdihaSpec	SG1		INFINITIVE	jilonasdohdi	ᎠᎩᎶᎾᏍᏙᏗ	exposed-by-alignment
+GalonasdihaSpec	SG1		REMOTE_PAST	jilonastanvi	ᎠᎩᎶᎾᏍᏔᏅᎢ	exposed-by-alignment
+GalonasdihaSpec	SG2		INFINITIVE	hilonasdohdi	ᏣᎶᎾᏍᏙᏗ	exposed-by-alignment
+GalonasdihaSpec	SG2		REMOTE_PAST	hilonastanvi	ᏣᎶᎾᏍᏔᏅᎢ	exposed-by-alignment
+GalonuhehaSpec	SG1		HABITUAL	jilonuesgoi	ᏥᎶᏄᎮᏍᎪᎢ	exposed-by-alignment
+GalonuhehaSpec	SG1		PRESENT	jilonueha	ᏥᎶᏄᎮᎭ	exposed-by-alignment
+GalulogaSpec	PL1INCL		HABITUAL	idilugoi	ᎢᏗᎷᎶᎪᎢ	exposed-by-alignment
+GalvsgaSpec	PL1INCL		INFINITIVE	igihlvnhdi	ᎢᎩᎸᏗ	exposed-by-alignment
+GalvsgaSpec	PL1INCL		REMOTE_PAST	igihlvhnvi	ᎢᎩᎸᏅᎢ	exposed-by-alignment
+GalvsgaSpec	PL3		INFINITIVE	unihlvnhdi	ᎤᏂᎸᏗ	exposed-by-alignment
+GalvsgaSpec	SG1		INFINITIVE	agihlvnhdi	ᎠᎩᎸᏗ	exposed-by-alignment
+GalvsgaSpec	SG1		REMOTE_PAST	agihlvhnvi	ᎠᎩᎸᏅᎢ	exposed-by-alignment
+GalvsgaSpec	SG2		INFINITIVE	jahlvnhdi	ᏣᎸᏗ	exposed-by-alignment
+GalvsgaSpec	SG2		REMOTE_PAST	jahlvhnvi	ᏣᎸᏅᎢ	exposed-by-alignment
+GanadegaSpec	PL1INCL		INFINITIVE	iginadinvsdi	ᎢᎩᎾᏗᏅᏗ	exposed-by-alignment
+GanadegaSpec	PL1INCL		REMOTE_PAST	idinadinvsvi	ᎢᎩᎾᏗᏅᏒᎢ	exposed-by-alignment
+GanadegaSpec	PL3		INFINITIVE	uninadinvsdi	ᎤᏂᎾᏗᏅᏗ	exposed-by-alignment
+GanadegaSpec	SG2		INFINITIVE	janadinvsdi	ᏣᎾᏗᏅᏗ	exposed-by-alignment
+GanahlvsgaSpec	PL1INCL		HABITUAL	edinahlvsgoi	ᎢᏗᎾᏢᏍᎪᎢ	exposed-by-alignment
+GanahlvsgaSpec	PL1INCL		INFINITIVE	edinahlvdi	ᎢᎩᎾᏢᏗ	exposed-by-alignment
+GanahlvsgaSpec	PL1INCL		PRESENT	edinahlvsga	ᎢᏗᎾᏢᏍᎦ	exposed-by-alignment
+GanahlvsgaSpec	PL1INCL		REMOTE_PAST	edinahlvnvi	ᎢᎩᎾᏢᏅᎢ	exposed-by-alignment
+GanahlvsgaSpec	PL3		REMOTE_PAST	aninahlvnvi	ᎤᏂᎾᏢᏅᎢ	exposed-by-alignment
+GanahlvsgaSpec	SG1		INFINITIVE	jinahlvdi	ᎠᎩᎾᏢᏗ	exposed-by-alignment
+GanahlvsgaSpec	SG1		REMOTE_PAST	jinahlvnvi	ᎠᎩᎾᏢᏅᎢ	exposed-by-alignment
+GanahlvsgaSpec	SG2		INFINITIVE	hinahlvdi	ᏣᎾᏢᏗ	exposed-by-alignment
+GanahlvsgaSpec	SG2		REMOTE_PAST	hinahlvnvi	ᏣᎾᏢᏅᎢ	exposed-by-alignment
+GanawidihaSpec	SG1		PRESENT	jinawidiha	ᏥᎾᏫᏗᎭ	exposed-by-alignment
+GaneaSpec	SG1		PRESENT	jinea	ᏥᏁᎠ	exposed-by-alignment
+GanegaSpec	PL3		INFINITIVE	unanvsdi	ᎤᏂᏩᏅᏍᏗ	exposed-by-alignment
+GanegaSpec	PL3		REMOTE_PAST	unanvsvi	ᎤᏂᏩᏅᏒᎢ	exposed-by-alignment
+GanegaSpec	SG1		INFINITIVE	agwanvsdi	ᎠᎩᏩᏅᏍᏗ	exposed-by-alignment
+GanegaSpec	SG1		INFINITIVE	agwanvsdi	ᎠᎩᏩᏅᏍᏗ	exposed-by-alignment
+GanegaSpec	SG1		REMOTE_PAST	agwanvsvi	ᎠᎩᏩᏅᏒᎢ	exposed-by-alignment
+GanegaSpec	SG1		REMOTE_PAST	agwanvsvi	ᎠᎩᏩᏅᏒᎢ	exposed-by-alignment
+GanegaSpec	SG2		INFINITIVE	janvsdi	ᏣᏩᏅᏍᏗ	exposed-by-alignment
+GanegaSpec	SG2		REMOTE_PAST	janvsvi	ᏣᏩᏅᏒᎢ	exposed-by-alignment
+GanegiaSpec	PL3		REMOTE_PAST	uningegisvi	ᎤᏂᏁᎩᏒᎢ	exposed-by-alignment
+GanehaSpec	PL3		INFINITIVE	aninehi	ᎤᏂᏁᎯ	exposed-by-alignment
+GanehaSpec	PL3		REMOTE_PAST	aninehvi	ᎤᏂᏁᎲᎢ	exposed-by-alignment
+GanehaSpec	SG2		INFINITIVE	hinehi	ᏣᏁᎯ	exposed-by-alignment
+GanehaSpec	SG2		REMOTE_PAST	hinehvi	ᏣᏁᎲᎢ	exposed-by-alignment
+GanehiyaaSpec	SG1		HABITUAL	jineiyasgoi	ᏥᏁᎯᏯᏍᎪᎢ	exposed-by-alignment
+GanehiyaaSpec	SG1		HABITUAL	jineiyasgoi	ᏥᏁᎯᏯᏍᎪᎢ	exposed-by-alignment
+GanehiyaaSpec	SG1		PRESENT	jineiyaa	ᏥᏁᎯᏯᎠ	exposed-by-alignment
+GanehiyaaSpec	SG1		PRESENT	jineiyaa	ᏥᏁᎯᏯᎠ	exposed-by-alignment
+GanehiyvaSpec	SG1		HABITUAL	jineiyvsgoi	ᏥᏁᎯᏴᏍᎪᎢ	exposed-by-alignment
+GanehiyvaSpec	SG1		HABITUAL	jineiyvsgoi	ᏥᏁᎯᏴᏍᎪᎢ	exposed-by-alignment
+GanehiyvaSpec	SG1		PRESENT	jineiyva	ᏥᏁᎯᏴᎠ	exposed-by-alignment
+GanehiyvaSpec	SG1		PRESENT	jineiyva	ᏥᏁᎯᏴᎠ	exposed-by-alignment
+GanehnehaSpec	PL3		INFINITIVE	unehnehdi	ᎤᏂᏁᏁᏗ	exposed-by-alignment
+GanehnehaSpec	SG1		INFINITIVE	jinehnehdi	ᎠᎩᏁᏁᏗ	exposed-by-alignment
+GanehnehaSpec	SG1		INFINITIVE	jinehnehdi	ᎠᎩᏁᏁᏗ	exposed-by-alignment
+GanehnehaSpec	SG1		REMOTE_PAST	jinehnelvi	ᎠᎩᏁᏁᎸᎢ	exposed-by-alignment
+GanehnehaSpec	SG1		REMOTE_PAST	jinehnelvi	ᎠᎩᏁᏁᎸᎢ	exposed-by-alignment
+GanehnehaSpec	SG2		INFINITIVE	hinehnehdi	ᏣᏁᏁᏗ	exposed-by-alignment
+GanehnehaSpec	SG2		REMOTE_PAST	hinehnelvi	ᏣᏁᏁᎸᎢ	exposed-by-alignment
+GanehvsgaSpec	SG1		HABITUAL	jinevsgoi	ᏥᏁᎲᏍᎪᎢ	exposed-by-alignment
+GanehvsgaSpec	SG1		HABITUAL	jinevsgoi	ᏥᏁᎲᏍᎪᎢ	exposed-by-alignment
+GanehvsgaSpec	SG1		PRESENT	jinevsga	ᏥᏁᎲᏍᎦ	exposed-by-alignment
+GanehvsgaSpec	SG1		PRESENT	jinevsga	ᏥᏁᎲᏍᎦ	exposed-by-alignment
+GanehwidihaSpec	SG2		REMOTE_PAST	jenehwidvhvi	ᏣᏁᏫᏛᎲᎢ	exposed-by-alignment
+GanhjegaSpec	SG1		HABITUAL	jinjegoi	ᏥᎾᏤᎪᎢ	exposed-by-alignment
+GanhjegaSpec	SG1		PRESENT	jinjega	ᏥᎾᏤᎦ	exposed-by-alignment
+GanhjegaSpec	SG1		PRESENT	jinjega	ᏥᎾᏤᎦ	exposed-by-alignment
+GanhjehaSpec	PL3		INFINITIVE	aninhjehi	ᎤᏂᎾᏤᎯ	exposed-by-alignment
+GanhjehaSpec	PL3		REMOTE_PAST	aninhjehvi	ᎤᏂᎾᏤᎲᎢ	exposed-by-alignment
+GanhjehaSpec	SG2		INFINITIVE	hinhjehi	ᏣᎾᏤᎯ	exposed-by-alignment
+GanhjehaSpec	SG2		REMOTE_PAST	hinhjehvi	ᏣᎾᏤᎲᎢ	exposed-by-alignment
+GanhjidohaSpec	SG1		HABITUAL	jinvjidohoi	ᏥᎾᏥᏙᎰᎢ	exposed-by-alignment
+GanhjidohaSpec	SG1		HABITUAL	jinvjidohoi	ᏥᎾᏥᏙᎰᎢ	exposed-by-alignment
+GanhjidohaSpec	SG1		PRESENT	jinvjidoha	ᏥᎾᏥᏙᎭ	exposed-by-alignment
+GanhjidohaSpec	SG1		PRESENT	jinvjidoha	ᏥᎾᏥᏙᎭ	exposed-by-alignment
+GanhjohihaSpec	SG1		HABITUAL	jinejohihoi	ᏥᎾᏦᎯᎰᎢ	exposed-by-alignment
+GanhjohihaSpec	SG1		HABITUAL	jinejohihoi	ᏥᎾᏦᎯᎰᎢ	exposed-by-alignment
+GanhjohihaSpec	SG1		PRESENT	jinejohiha	ᏥᎾᏦᎯᎭ	exposed-by-alignment
+GanhjohihaSpec	SG1		PRESENT	jinejohiha	ᏥᎾᏦᎯᎭ	exposed-by-alignment
+GanhjohihaSpec	SG2		HABITUAL	hiinhjohihoi	ᎯᎾᏦᎯᎰᎢ	exposed-by-alignment
+GanidohaSpec	PL3		INFINITIVE	uninidasdi	ᎤᏂᏩᏂᏓᏍᏗ	exposed-by-alignment
+GanidohaSpec	PL3		REMOTE_PAST	uninidolvi	ᎤᏂᏩᏂᏙᎸᎢ	exposed-by-alignment
+GanidohaSpec	SG1		INFINITIVE	aginidasdi	ᎠᎩᏩᏂᏓᏍᏗ	exposed-by-alignment
+GanidohaSpec	SG1		INFINITIVE	aginidasdi	ᎠᎩᏩᏂᏓᏍᏗ	exposed-by-alignment
+GanidohaSpec	SG1		REMOTE_PAST	aginidolvi	ᎠᎩᏩᏂᏙᎸᎢ	exposed-by-alignment
+GanidohaSpec	SG1		REMOTE_PAST	aginidolvi	ᎠᎩᏩᏂᏙᎸᎢ	exposed-by-alignment
+GanidohaSpec	SG2		INFINITIVE	janidasdi	ᏣᏩᏂᏓᏍᏗ	exposed-by-alignment
+GanidohaSpec	SG2		REMOTE_PAST	janidolvi	ᏣᏩᏂᏙᎸᎢ	exposed-by-alignment
+GaniyihaSpec	PL1INCL	SG3IN	INFINITIVE	iginiyhdi	ᎢᎩᏂᏱᏗ	exposed-by-alignment
+GaniyihaSpec	PL1INCL	SG3IN	REMOTE_PAST	iginiyvsvi	ᎢᎩᏂᏴᎲᎢ	exposed-by-alignment
+GaniyihaSpec	PL3	SG3IN	INFINITIVE	uniniyhdi	ᎤᏂᏂᏱᏗ	exposed-by-alignment
+GaniyihaSpec	PL3	SG3IN	REMOTE_PAST	uniniyvsvi	ᎤᏂᏂᏴᎲᎢ	exposed-by-alignment
+GaniyihaSpec	SG1	SG3AN	INFINITIVE	jiniyhdi	ᏥᏂᏱᏗ	exposed-by-alignment
+GaniyihaSpec	SG1	SG3IN	INFINITIVE	aginiyhdi	ᎠᎩᏂᏱᏗ	exposed-by-alignment
+GaniyihaSpec	SG1	SG3IN	REMOTE_PAST	agiyvhvi	ᎠᎩᏂᏴᎲᎢ	exposed-by-alignment
+GaniyihaSpec	SG2	SG3AN	INFINITIVE	hiniyhdi	ᎯᏂᏱᏗ	exposed-by-alignment
+GaniyihaSpec	SG2	SG3IN	INFINITIVE	janiyhdi	ᏣᏂᏱᏗ	exposed-by-alignment
+GanohalidohaSpec	PL1INCL		HABITUAL	idinohalidosgoi	ᎢᏗᏃᎭᎵᏙᎰᎢ	exposed-by-alignment
+GanohalidohaSpec	PL3		HABITUAL	aninohalidosgoi	ᎠᏂᏃᎭᎵᏙᎰᎢ	exposed-by-alignment
+GanohalidohaSpec	SG1		HABITUAL	jinoalidosgoi	ᏥᏃᎭᎵᏙᎰᎢ	exposed-by-alignment
+GanohalidohaSpec	SG1		PRESENT	jinoalidoha	ᏥᏃᎭᎵᏙᎭ	exposed-by-alignment
+GanohalidohaSpec	SG2		HABITUAL	hinohalidosgoi	ᎯᏃᎭᎵᏙᎰᎢ	exposed-by-alignment
+GanohihaSpec	PL3		INFINITIVE	uninohisdi	ᎤᏂᏩᏃᎯᏍᏗ	exposed-by-alignment
+GanohihaSpec	PL3		REMOTE_PAST	uninohlvi	ᎤᏂᏩᏃᏢᎢ	exposed-by-alignment
+GanohihaSpec	SG1		INFINITIVE	aginohisdi	ᎠᎩᏩᏃᎯᏍᏗ	exposed-by-alignment
+GanohihaSpec	SG1		INFINITIVE	aginohisdi	ᎠᎩᏩᏃᎯᏍᏗ	exposed-by-alignment
+GanohihaSpec	SG1		REMOTE_PAST	aginohlvi	ᎠᎩᏩᏃᏢᎢ	exposed-by-alignment
+GanohihaSpec	SG1		REMOTE_PAST	aginohlvi	ᎠᎩᏩᏃᏢᎢ	exposed-by-alignment
+GanohihaSpec	SG2		INFINITIVE	janohisdi	ᏣᏩᏃᎯᏍᏗ	exposed-by-alignment
+GanohihaSpec	SG2		REMOTE_PAST	janohlvi	ᏣᏩᏃᏢᎢ	exposed-by-alignment
+GanohiliSpec	PL1INCL		HABITUAL	idinohilegoi	ᎢᏗᏃᎯᎵᏐᎢ	exposed-by-alignment
+GanohiliSpec	PL3		HABITUAL	aninohilegoi	ᎠᏂᏃᎯᎵᏐᎢ	exposed-by-alignment
+GanohiliSpec	SG1		HABITUAL	jinoilegoi	ᏥᏃᎯᎵᏐᎢ	exposed-by-alignment
+GanohiliSpec	SG1		PRESENT	tsinoili	ᏥᏃᎯᎵ	exposed-by-alignment
+GanohiliSpec	SG2		HABITUAL	hinohilegoi	ᎯᏃᎯᎵᏐᎢ	exposed-by-alignment
+GanoseaSpec	PL1INCL		HABITUAL	edinosehoi	ᎢᏗᏃᏎᎰᎢ	exposed-by-alignment
+GanoseaSpec	PL1INCL		INFINITIVE	edinosehdi	ᎢᎩᏃᏎᏗ	exposed-by-alignment
+GanoseaSpec	PL1INCL		PRESENT	edinosea	ᎢᏗᏃᏎᎠ	exposed-by-alignment
+GanoseaSpec	PL1INCL		REMOTE_PAST	edinoselvi	ᎢᎩᏃᏎᎸᎢ	exposed-by-alignment
+GanoseaSpec	SG1		INFINITIVE	jinosehdi	ᎠᎩᏃᏎᏗ	exposed-by-alignment
+GanoseaSpec	SG1		REMOTE_PAST	jinoselvi	ᎠᎩᏃᏎᎸᎢ	exposed-by-alignment
+GanoseaSpec	SG2		INFINITIVE	hinosehdi	ᏣᏃᏎᏗ	exposed-by-alignment
+GanoseaSpec	SG2		REMOTE_PAST	hinoselvi	ᏣᏃᏎᎸᎢ	exposed-by-alignment
+GansaneaSpec	SG1		HABITUAL	jinasanesgoi	ᏥᏂᏌᏁᏍᎪᎢ	exposed-by-alignment
+GansaneaSpec	SG1		PRESENT	jinasanea	ᏥᏂᏌᏁᎠ	exposed-by-alignment
+GansaneaSpec	SG1		PRESENT	jinasanea	ᏥᏂᏌᏁᎠ	exposed-by-alignment
+GanugogaSpec	PL1INCL		INFINITIVE	iginugisdi	ᎢᎩᏄᎪᏍᏗ	exposed-by-alignment
+GanugogaSpec	PL3		INFINITIVE	uninugisdi	ᎤᏂᏄᎪᏍᏗ	exposed-by-alignment
+GanugogaSpec	SG1		INFINITIVE	aginugisdi	ᎠᎩᏄᎪᏍᏗ	exposed-by-alignment
+GanugogaSpec	SG2		INFINITIVE	janugisdi	ᏣᏄᎪᏍᏗ	exposed-by-alignment
+GanvdiaSpec	SG1		PRESENT	jinvdia, jinvdia	ᏥᏅᏗᎠ	exposed-by-alignment
+GanvgaSpec	PL1INCL		INFINITIVE	iginvsdi	ᎢᎩᏅᎢᏍᏗ	exposed-by-alignment
+GanvgaSpec	PL3		INFINITIVE	uninvsdi	ᎤᏂᏅᎢᏍᏗ	exposed-by-alignment
+GanvgaSpec	SG1		INFINITIVE	aginvsdi	ᎠᎩᏅᎢᏍᏗ	exposed-by-alignment
+GanvgaSpec	SG2		INFINITIVE	janvsdi	ᏣᏅᎢᏍᏗ	exposed-by-alignment
+GanvgalihaSpec	SG2		HABITUAL	hanvgalisgoi	ᎯᏅᎦᎵᏍᎪᎢ	exposed-by-alignment
+GanvnehaSpec	PL3		REMOTE_PAST	uninvnelv	ᎤᏂᏅᏁᎸᎢ	exposed-by-alignment
+GanvnehaSpec	SG1		INFINITIVE	jinvnehdi	ᎠᎩᏅᏁᏗ	exposed-by-alignment
+GanvnehaSpec	SG1		INFINITIVE	jinvnehdi	ᎠᎩᏅᏁᏗ	exposed-by-alignment
+GanvnehaSpec	SG1		REMOTE_PAST	jinvnelvi	ᎠᎩᏅᏁᎸᎢ	exposed-by-alignment
+GanvnehaSpec	SG1		REMOTE_PAST	jinvnelvi	ᎠᎩᏅᏁᎸᎢ	exposed-by-alignment
+GanvnehaSpec	SG2		INFINITIVE	hinvnehdi	ᏣᏅᏁᏗ	exposed-by-alignment
+GanvnehaSpec	SG2		REMOTE_PAST	hinvnelv	ᏣᏅᏁᎸᎢ	exposed-by-alignment
+GasadosgaSpec	PL1INCL		INFINITIVE	iksadosdi	ᎢᎩᏩᏌᏙᏍᏗ	exposed-by-alignment
+GasadosgaSpec	PL1INCL		REMOTE_PAST	iksadohyvi	ᎢᎩᏩᏌᏙᏴᎢ	exposed-by-alignment
+GasadosgaSpec	PL3		INFINITIVE	unsadosdi	ᎤᏂᏩᏌᏙᏍᏗ	exposed-by-alignment
+GasadosgaSpec	PL3		REMOTE_PAST	unsadohyvi	ᎤᏂᏩᏌᏙᏴᎢ	exposed-by-alignment
+GasadosgaSpec	SG1		PRESENT	jiyasadosga, jisadosga	ᏥᏌᏙᏍᎦ	exposed-by-alignment
+GatvsgaSpec	SG1		INFINITIVE	utdi	ᎠᏆᏘᏗ	exposed-by-alignment
+GatvsgaSpec	SG1		REMOTE_PAST	utanvi	ᎠᏆᏔᏅᎢ	exposed-by-alignment
+GawohiliyvaSpec	PL1INCL		INFINITIVE	igohiliyvsdi	ᎢᎩᏬᎯᎵᏴᏍᏗ	exposed-by-alignment
+GawohiliyvaSpec	PL3		INFINITIVE	unohiliyvsdi	ᎤᏂᏬᎯᎵᏴᏍᏗ	exposed-by-alignment
+GawohiliyvaSpec	SG1		HABITUAL	gawoiliyvsgoi	ᎦᏬᎯᎵᏴᏍᎪᎢ	exposed-by-alignment
+GawohiliyvaSpec	SG1		INFINITIVE	agwohiliyvsdi	ᎠᎩᏬᎯᎵᏴᏍᏗ	exposed-by-alignment
+GawohiliyvaSpec	SG1		PRESENT	gawoiliyva	ᎦᏬᎯᎵᏴᎠ	exposed-by-alignment
+GawohiliyvaSpec	SG2		INFINITIVE	johiliyvsdi	ᏣᏬᎯᎵᏴᏍᏗ	exposed-by-alignment
+GegehyohvsgaSpec	PL1INCL	SG3AN	HABITUAL	edehyohvsgoi	ᎡᏕᎨᏲᎲᏍᎪᎢ	exposed-by-alignment
+GegehyohvsgaSpec	PL1INCL	SG3AN	INFINITIVE	edehyohdi	ᎡᏗᏪᏲᏗ	exposed-by-alignment
+GegehyohvsgaSpec	PL1INCL	SG3AN	PRESENT	edehyohvsga	ᎡᏕᎨᏲᎲᏍᎦ	exposed-by-alignment
+GegehyohvsgaSpec	PL3	SG3AN	HABITUAL	anehyohvsgoi	ᎠᏁᎨᏲᎲᏍᎪᎢ	exposed-by-alignment
+GegehyohvsgaSpec	PL3	SG3AN	INFINITIVE	unehyohdi	ᎠᏂᏪᏲᏗ	exposed-by-alignment
+GegehyohvsgaSpec	PL3	SG3AN	PRESENT	anehyohvsga	ᎠᏁᎨᏲᎲᏍᎦ	exposed-by-alignment
+GegehyohvsgaSpec	PL3	SG3AN	REMOTE_PAST	unehyohnvi	ᎠᏁᏲᏅᎢ	exposed-by-alignment
+GegehyohvsgaSpec	SG1	SG3AN	HABITUAL	jiyeyohvsgoi	ᏥᏰᎨᏲᎲᏍᎪᎢ	exposed-by-alignment
+GegehyohvsgaSpec	SG1	SG3AN	INFINITIVE	jiyeyodi	ᏥᏪᏲᏗ	exposed-by-alignment
+GegehyohvsgaSpec	SG1	SG3AN	PRESENT	jiyeyohvsga	ᏥᏰᎨᏲᎲᏍᎦ	exposed-by-alignment
+GegehyohvsgaSpec	SG2	SG3AN	HABITUAL	hiyehyohvsgoi	ᎯᏰᎨᏲᎲᏍᎪᎢ	exposed-by-alignment
+GegehyohvsgaSpec	SG2	SG3AN	INFINITIVE	hiyehyohdi	ᎯᏪᏲᏗ	exposed-by-alignment
+GegehyohvsgaSpec	SG2	SG3AN	PRESENT	hiyehyohvsga	ᎯᏰᎨᏲᎲᏍᎦ	exposed-by-alignment
+GegehyohvsgaSpec	SG3	SG3AN	PRESENT	gegehyohvsga	ᎡᎨᏲᎲᏍᎦ	exposed-by-alignment
+GehlohaSpec	PL1INCL	SG3AN	INFINITIVE	edelasdi	ᎡᏗᏪᎵᏍᏗ	exposed-by-alignment
+GehlohaSpec	PL3	SG3AN	INFINITIVE	unelasdi	ᎠᏂᏪᎵᏍᏗ	exposed-by-alignment
+GehlohaSpec	PL3	SG3AN	REMOTE_PAST	unehlalvi	ᎠᏁᏝᎸᎢ	exposed-by-alignment
+GehlohaSpec	SG1	SG3AN	HABITUAL	jiyelohoi	ᏥᏰᏠᎰᎢ	exposed-by-alignment
+GehlohaSpec	SG1	SG3AN	INFINITIVE	jiyelasdi	ᏥᏪᎵᏍᏗ	exposed-by-alignment
+GehlohaSpec	SG1	SG3AN	PRESENT	jiyeloha	ᏥᏰᏠᎭ	exposed-by-alignment
+GehlohaSpec	SG1	SG3AN	REMOTE_PAST	jiyelalvi	ᏥᏰᏝᎸᎢ	exposed-by-alignment
+GehlohaSpec	SG2	SG3AN	HABITUAL	hiyelohoi	ᎯᏰᏠᎰᎢ	exposed-by-alignment
+GehlohaSpec	SG2	SG3AN	INFINITIVE	hiyelasdi	ᎯᏪᎵᏍᏗ	exposed-by-alignment
+GehlohaSpec	SG2	SG3AN	PRESENT	hiyeloha	ᎯᏰᏠᎭ	exposed-by-alignment
+GehlohaSpec	SG2	SG3AN	REMOTE_PAST	hiyelalvi	ᎯᏰᏝᎸᎢ	exposed-by-alignment
+GehluhvsgaSpec	PL1INCL		INFINITIVE	igehluhvsdi	ᎢᎩᏪᏡᎲᏍᏗ	exposed-by-alignment
+GehluhvsgaSpec	PL3		INFINITIVE	unehluhvsdi	ᎤᏂᏪᏡᎲᏍᏗ	exposed-by-alignment
+GehluhvsgaSpec	SG1		HABITUAL	geluhvsgoi	ᎨᏡᎲᏍᎪᎢ	exposed-by-alignment
+GehluhvsgaSpec	SG1		INFINITIVE	agwehluhvsdi	ᎠᎩᏪᏡᎲᏍᏗ	exposed-by-alignment
+GehluhvsgaSpec	SG1		PRESENT	geluhvsga	ᎨᏡᎲᏍᎦ	exposed-by-alignment
+GehluhvsgaSpec	SG2		INFINITIVE	jehluhvsdi	ᏣᏪᏡᎲᏍᏗ	exposed-by-alignment
+GohlgaSpec	PL1INCL	SG3AN	INFINITIVE	edohlisdi	ᎡᏗᏬᏟᏍᏗ	exposed-by-alignment
+GohlgaSpec	PL1INCL	SG3AN	REMOTE_PAST	edohlvi	ᎡᏙᎶᏨᎢ	exposed-by-alignment
+GohlgaSpec	PL3	SG3AN	INFINITIVE	unohlisdi	ᎠᏂᏬᏟᏍᏗ	exposed-by-alignment
+GohlgaSpec	PL3	SG3AN	REMOTE_PAST	unohlvi	ᎠᏃᎶᏨᎢ	exposed-by-alignment
+GohlgaSpec	SG1	SG3AN	HABITUAL	jiyoligoi	ᏥᏲᎶᎪᎢ	exposed-by-alignment
+GohlgaSpec	SG1	SG3AN	INFINITIVE	jiyohlisdi	ᏥᏬᏟᏍᏗ	exposed-by-alignment
+GohlgaSpec	SG1	SG3AN	PRESENT	jiyoliga	ᏥᏲᎶᎦ	exposed-by-alignment
+GohlgaSpec	SG1	SG3AN	REMOTE_PAST	jiyohlvi	ᏥᏲᎶᏨᎢ	exposed-by-alignment
+GohlgaSpec	SG2	SG3AN	HABITUAL	hiyoligoi	ᎯᏲᎶᎪᎢ	exposed-by-alignment
+GohlgaSpec	SG2	SG3AN	INFINITIVE	hiyohlisdi	ᎯᏬᏟᏍᏗ	exposed-by-alignment
+GohlgaSpec	SG2	SG3AN	PRESENT	hiyoliga	ᎯᏲᎶᎦ	exposed-by-alignment
+GohlvsgaSpec	PL1INCL		INFINITIVE	igohlvhisdi	ᎢᎩᏬᏢᎾᏗ	exposed-by-alignment
+GohlvsgaSpec	PL1INCL		REMOTE_PAST	igohlvsvi	ᎢᎪᏢᏅᎢ	exposed-by-alignment
+GohlvsgaSpec	PL3		INFINITIVE	unohlvhisdi	ᎤᏂᏬᏢᎾᏗ	exposed-by-alignment
+GohlvsgaSpec	PL3		REMOTE_PAST	unohlvsvi	ᎤᏃᏢᏅᎢ	exposed-by-alignment
+GohlvsgaSpec	SG2		INFINITIVE	johlvhisdi	ᏣᏬᏢᎾᏗ	exposed-by-alignment
+GohlvsgaSpec	SG2		REMOTE_PAST	johlvsvi	ᏦᏢᏅᎢ	exposed-by-alignment
+GohosgaSpec	SG1		PRESENT	goosga	ᎪᎰᏍᎦ	exposed-by-alignment
+GohweliaSpec	PL1INCL		HABITUAL	dedohwelisgoi	ᎢᏙᏪᎵᏍᎪᎢ	exposed-by-alignment
+GohweliaSpec	PL1INCL		INFINITIVE	digohwelohdi	ᎢᎩᏬᏪᎶᏗ	exposed-by-alignment
+GohweliaSpec	PL1INCL		PRESENT	dedohwelia	ᎢᏙᏪᎵᎠ	exposed-by-alignment
+GohweliaSpec	PL1INCL		REMOTE_PAST	degohwelanvi	ᎢᎪᏪᎳᏅᎢ	exposed-by-alignment
+GohweliaSpec	PL3		HABITUAL	danohwelisgoi	ᎠᏃᏪᎵᏍᎪᎢ	exposed-by-alignment
+GohweliaSpec	PL3		INFINITIVE	junohwelohdi	ᎤᏂᏬᏪᎶᏗ	exposed-by-alignment
+GohweliaSpec	PL3		PRESENT	danohwelia	ᎠᏃᏪᎵᎠ	exposed-by-alignment
+GohweliaSpec	PL3		REMOTE_PAST	dunohwelanvi	ᎤᏃᏪᎳᏅᎢ	exposed-by-alignment
+GohweliaSpec	SG2		HABITUAL	dehohwelisgoi	ᎰᏪᎵᏍᎪᎢ	exposed-by-alignment
+GohweliaSpec	SG2		INFINITIVE	johwelohdi	ᏣᏬᏪᎶᏗ	exposed-by-alignment
+GohweliaSpec	SG2		PRESENT	dehowelia	ᎰᏪᎵᎠ	exposed-by-alignment
+GoksgaSpec	PL1INCL		INFINITIVE	igoksdi	ᎢᎩᏬᎩᏍᏗ	exposed-by-alignment
+GoksgaSpec	PL3		INFINITIVE	unoksdi	ᎤᏂᏬᎩᏍᏗ	exposed-by-alignment
+GoksgaSpec	SG1		INFINITIVE	agwoksdi	ᎠᎩᏬᎩᏍᏗ	exposed-by-alignment
+GoksgaSpec	SG2		INFINITIVE	joksdi	ᏣᏬᎩᏍᏗ	exposed-by-alignment
+GosdvnihaSpec	PL1INCL		INFINITIVE	igosdvnisdi	ᎢᎩᏬᏍᏛᏂᏍᏗ	exposed-by-alignment
+GosdvnihaSpec	PL3		INFINITIVE	unosdvnisdi	ᎤᏂᏬᏍᏛᏂᏍᏗ	exposed-by-alignment
+GosdvnihaSpec	SG1		INFINITIVE	agwosdvnisdi	ᎠᎩᏬᏍᏛᏂᏍᏗ	exposed-by-alignment
+GosdvnihaSpec	SG2		INFINITIVE	josdvnisdi	ᏣᏬᏍᏛᏂᏍᏗ	exposed-by-alignment
+GosehaSpec	PL1INCL	SG3AN	INFINITIVE	edosehdi	ᎡᏗᏬᏎᏗ	exposed-by-alignment
+GosehaSpec	PL3	SG3AN	INFINITIVE	unosehdi	ᎠᏂᏬᏎᏗ	exposed-by-alignment
+GosehaSpec	PL3	SG3AN	REMOTE_PAST	unoselvi	ᎠᏃᏎᎸᎢ	exposed-by-alignment
+GosehaSpec	SG1	SG3AN	INFINITIVE	jiyosehdi	ᏥᏬᏎᏗ	exposed-by-alignment
+GosehaSpec	SG2	SG3AN	INFINITIVE	hiyosehdi	ᎯᏬᏎᏗ	exposed-by-alignment
+GudaleaSpec	PL1INCL	SG3IN	INFINITIVE	igudalesdi	ᎢᎩᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudaleaSpec	PL3	SG3IN	INFINITIVE	unudalesdi	ᎤᏂᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudaleaSpec	SG1	SG3AN	INFINITIVE	jiyudalesdi	ᏥᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudaleaSpec	SG1	SG3IN	INFINITIVE	agwudalesdi	ᎠᎩᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudaleaSpec	SG2	SG3AN	INFINITIVE	hiyudalesdi	ᎯᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudaleaSpec	SG2	SG3IN	INFINITIVE	judalesdi	ᏣᏭᏓᎴᏍᏗ	exposed-by-alignment
+GudalvsgaSpec	PL1INCL	SG3IN	INFINITIVE	igudalvdi	ᎢᎩᏭᏓᎸᏗ	exposed-by-alignment
+GudalvsgaSpec	PL3	SG3IN	INFINITIVE	unudalvdi	ᎤᏂᏭᏓᎸᏗ	exposed-by-alignment
+GudalvsgaSpec	SG1	SG3AN	INFINITIVE	jiyudalvdi	ᏥᏭᏓᎸᏗ	exposed-by-alignment
+GudalvsgaSpec	SG1	SG3IN	INFINITIVE	agwudalvdi	ᎠᎩᏭᏓᎸᏗ	exposed-by-alignment
+GudalvsgaSpec	SG2	SG3AN	INFINITIVE	hiyudalvdi	ᎯᏭᏓᎸᏗ	exposed-by-alignment
+GudalvsgaSpec	SG2	SG3IN	INFINITIVE	judalvdi	ᏣᏭᏓᎸᏗ	exposed-by-alignment
+GuhiloaSpec	PL1INCL		INFINITIVE	iguhilosdi	ᎢᎩᏭᎯᎶᏍᏗ	exposed-by-alignment
+GuhiloaSpec	PL3		INFINITIVE	unuhilosdi	ᎤᏂᏭᎯᎶᏍᏗ	exposed-by-alignment
+GuhiloaSpec	SG1		HABITUAL	guilosgoi	ᎫᎯᎶᏍᎪᎢ	exposed-by-alignment
+GuhiloaSpec	SG1		INFINITIVE	agwuhilosdi	ᎠᎩᏭᎯᎶᏍᏗ	exposed-by-alignment
+GuhiloaSpec	SG1		PRESENT	guiloa	ᎫᎯᎶᎠ	exposed-by-alignment
+GuhiloaSpec	SG2		INFINITIVE	juhilosdi	ᏣᏭᎯᎶᏍᏗ	exposed-by-alignment
+GuhlvsgaSpec	PL1INCL		INFINITIVE	iguhlvdi	ᎢᎩᏭᏢᏗ	exposed-by-alignment
+GuhlvsgaSpec	PL3		INFINITIVE	unuhlvdi	ᎤᏂᏭᏢᏗ	exposed-by-alignment
+GuhlvsgaSpec	SG1		INFINITIVE	agwuhlvdi	ᎠᎩᏭᏢᏗ	exposed-by-alignment
+GuhlvsgaSpec	SG2		INFINITIVE	juhlvdi	ᏣᏭᏢᏗ	exposed-by-alignment
+GuteaSpec	PL1INCL	SG3IN	INFINITIVE	igutesdi	ᎢᎩᏭᏖᏍᏗ	exposed-by-alignment
+GuteaSpec	PL3	SG3IN	INFINITIVE	unutesdi	ᎤᏂᏭᏖᏍᏗ	exposed-by-alignment
+GuteaSpec	SG1	SG3AN	INFINITIVE	jiyutesdi	ᏥᏭᏖᏍᏗ	exposed-by-alignment
+GuteaSpec	SG1	SG3IN	INFINITIVE	agwutesdi	ᎠᎩᏭᏖᏍᏗ	exposed-by-alignment
+GuteaSpec	SG2	SG3AN	INFINITIVE	hiyutesdi	ᎯᏭᏖᏍᏗ	exposed-by-alignment
+GuteaSpec	SG2	SG3IN	INFINITIVE	jutesdi	ᏣᏭᏖᏍᏗ	exposed-by-alignment
+GvhnihaSpec	SG1	SG3AN	INFINITIVE	jiyansdi	ᏥᏴᏂᏍᏗ	exposed-by-alignment
+GvjahlvsgaSpec	PL1INCL		INFINITIVE	igvjahldi	ᎢᎩᏮᏣᎶᏗ	exposed-by-alignment
+GvjahlvsgaSpec	PL3		INFINITIVE	unvjahldi	ᎤᏂᏮᏣᎶᏗ	exposed-by-alignment
+GvjahlvsgaSpec	SG1		INFINITIVE	agwvjahldi	ᎠᎩᏮᏣᎶᏗ	exposed-by-alignment
+GvjahlvsgaSpec	SG2		INFINITIVE	jvjahldi	ᏣᏮᏣᎶᏗ	exposed-by-alignment
+GvjahlvsgaSpec	SG3		REMOTE_PAST	uwvjahlanvi	ᎤᏩᏣᏝᏅᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		HABITUAL	iidiluhgoi	ᎢᎦᎷᎪᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		HABITUAL	iidiluhgoi	ᎢᎦᎷᎪᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		HABITUAL	iidiluhgoi	ᎢᎦᎷᎪᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		INFINITIVE	vigiluhisdi	ᎤᎷᎯᏍᏗ	exposed-by-alignment
+IgaluhgaSpec	SG3		INFINITIVE	vigiluhisdi	ᎤᎷᎯᏍᏗ	exposed-by-alignment
+IgaluhgaSpec	SG3		INFINITIVE	vigiluhisdi	ᎤᎷᎯᏍᏗ	exposed-by-alignment
+IgaluhgaSpec	SG3		PRESENT	iidiluhga	ᎢᎦᎷᎦ	exposed-by-alignment
+IgaluhgaSpec	SG3		PRESENT	iidiluhga	ᎢᎦᎷᎦ	exposed-by-alignment
+IgaluhgaSpec	SG3		PRESENT	iidiluhga	ᎢᎦᎷᎦ	exposed-by-alignment
+IgaluhgaSpec	SG3		REMOTE_PAST	vigiluhjvi	ᎤᎷᏨᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		REMOTE_PAST	vigiluhjvi	ᎤᎷᏨᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		REMOTE_PAST	vigiluhjvi	ᎤᎷᏨᎢ	exposed-by-alignment
+IgaluhgaSpec	SG3		REMOTE_PAST	vigiluhjvi	ᎤᎷᏨᎢ	exposed-by-alignment
+KaneisdihaSpec	PL1INCL		REMOTE_PAST	igihneistanvi	ᎢᎩᏁᎢᏍᏓᏅᎢ	exposed-by-alignment
+KaneisdihaSpec	PL3		REMOTE_PAST	unihneistanvi	ᎤᏂᏁᎢᏍᏓᏅᎢ	exposed-by-alignment
+KaneisdihaSpec	SG1		REMOTE_PAST	akineistanvi	ᎠᎩᏁᎢᏍᏓᏅᎢ	exposed-by-alignment
+KaneisdihaSpec	SG2		REMOTE_PAST	jahneistanvi	ᏣᏁᎢᏍᏓᏅᎢ	exposed-by-alignment
+KdegaSpec	PL1INCL	SG3AN	HABITUAL	idvdegoi	ᎡᏛᏕᎪᎢ	exposed-by-alignment
+KdegaSpec	PL1INCL	SG3AN	INFINITIVE	ikdeisdi	ᎡᏗᏮᏕᎢᏍᏗ	exposed-by-alignment
+KdegaSpec	PL1INCL	SG3AN	PRESENT	idvdega	ᎡᏛᏕᎦ	exposed-by-alignment
+KdegaSpec	PL1INCL	SG3AN	REMOTE_PAST	ikdegjvi	ᎡᏛᏕᏨᎢ	exposed-by-alignment
+KdegaSpec	PL3	SG3AN	HABITUAL	andegoi	ᎠᏅᏕᎪᎢ	exposed-by-alignment
+KdegaSpec	PL3	SG3AN	INFINITIVE	undeisdi	ᎠᏂᏮᏕᎢᏍᏗ	exposed-by-alignment
+KdegaSpec	PL3	SG3AN	PRESENT	andega	ᎠᏅᏕᎦ	exposed-by-alignment
+KdegaSpec	PL3	SG3AN	REMOTE_PAST	undejvi	ᎠᏅᏕᏨᎢ	exposed-by-alignment
+KdegaSpec	SG1	SG3AN	INFINITIVE	akdeisdi	ᏥᏮᏕᎢᏍᏗ	exposed-by-alignment
+KdegaSpec	SG1	SG3AN	REMOTE_PAST	akdejvi	ᏥᏴᏕᏨᎢ	exposed-by-alignment
+KdegaSpec	SG2	SG3AN	INFINITIVE	tsdeisdi	ᎯᏮᏕᎢᏍᏗ	exposed-by-alignment
+KdegaSpec	SG2	SG3AN	REMOTE_PAST	tsdejvi	ᎯᏴᏕᏨᎢ	exposed-by-alignment
+KdihaSpec	PL1INCL		INFINITIVE	ikhdohdi	ᎢᎩᏮᏙᏗ	exposed-by-alignment
+KdihaSpec	PL1INCL		REMOTE_PAST	iktanvi	ᎢᎬᏔᏅᎢ	exposed-by-alignment
+KdihaSpec	PL3		INFINITIVE	unvhdohdi	ᎤᏂᏮᏙᏗ	exposed-by-alignment
+KdihaSpec	SG1		INFINITIVE	akhdohdi	ᎠᎩᏮᏙᏗ	exposed-by-alignment
+KdihaSpec	SG1		REMOTE_PAST	aktanvi	ᎠᏋᏔᏅᎢ	exposed-by-alignment
+KdihaSpec	SG2		INFINITIVE	tstanvi	ᏣᏮᏙᏗ	exposed-by-alignment
+KdihaSpec	SG3		REMOTE_PAST	uwvtanvi	ᎤᏩᏔᏅᎢ	exposed-by-alignment
+KdladiaSpec	PL1INCL		HABITUAL	idvhdladisgoi	ᎢᏗᎩᏜᏗᏍᎪᎢ	exposed-by-alignment
+KdladiaSpec	PL1INCL		INFINITIVE	igvhdladisdi	ᎢᎫᏩᏜᏗᏍᏗ	exposed-by-alignment
+KdladiaSpec	PL1INCL		PRESENT	idvhdladia	ᎢᏗᎩᏜᏗᎠ	exposed-by-alignment
+KdladiaSpec	PL1INCL		REMOTE_PAST	igvhdladvi	ᎢᎫᏩᏜᏛᎢ	exposed-by-alignment
+KdladiaSpec	PL3		HABITUAL	anvhdladisgoi	ᎠᏂᎩᏜᏗᏍᎪᎢ	exposed-by-alignment
+KdladiaSpec	PL3		INFINITIVE	unhdladisdi	ᎤᏄᏩᏜᏗᏍᏗ	exposed-by-alignment
+KdladiaSpec	PL3		PRESENT	anvhdladia	ᎠᏂᎩᏜᏗᎠ	exposed-by-alignment
+KdladiaSpec	PL3		REMOTE_PAST	unhdladvi	ᎤᏄᏩᏜᏛᎢ	exposed-by-alignment
+KdladiaSpec	SG1		HABITUAL	gvdladisgoi	ᏥᎩᏜᏗᏍᎪᎢ	exposed-by-alignment
+KdladiaSpec	SG1		INFINITIVE	akdladisdi	ᎠᏊᏩᏜᏗᏍᏗ	exposed-by-alignment
+KdladiaSpec	SG1		PRESENT	gvdladia	ᏥᎩᏜᏗᎠ	exposed-by-alignment
+KdladiaSpec	SG1		REMOTE_PAST	akdladvi	ᎠᏊᏩᏜᏛᎢ	exposed-by-alignment
+KdladiaSpec	SG2		HABITUAL	hvhdladisgoi	ᎯᎩᏜᏗᏍᎪᎢ	exposed-by-alignment
+KdladiaSpec	SG2		INFINITIVE	tsdladisdi	ᏧᏩᏜᏗᏍᏗ	exposed-by-alignment
+KdladiaSpec	SG2		PRESENT	hvhdladia	ᎯᎩᏜᏗᎠ	exposed-by-alignment
+KdladiaSpec	SG2		REMOTE_PAST	tsdladvi	ᏧᏩᏜᏛᎢ	exposed-by-alignment
+KdladiaSpec	SG3		INFINITIVE	uwadladisdi	ᎤᏭᏩᏜᏗᏍᏗ	exposed-by-alignment
+KdladiaSpec	SG3		REMOTE_PAST	uwadladvi	ᎤᏭᏩᏜᏛᎢ	exposed-by-alignment
+KdlosgaSpec	SG3		HABITUAL	anvhdlosgoi	ᎬᏠᏍᎪᎢ	exposed-by-alignment
+KdlosgaSpec	SG3		INFINITIVE	unhdlohisdi	ᎤᏮᏠᎯᏍᏗ	exposed-by-alignment
+KdlosgaSpec	SG3		PRESENT	anvhdlosga	ᎬᏠᏍᎦ	exposed-by-alignment
+KdlosgaSpec	SG3		REMOTE_PAST	unhdlosvi	ᎤᏩᏠᏒᎢ	exposed-by-alignment
+KdlosgaSpec	SG3		REMOTE_PAST	unhdlosvi	ᎤᏩᏠᏒᎢ	exposed-by-alignment
+KtosadiaSpec	SG1		HABITUAL	gatosadisgoi	ᎬᏙᏌᏗᏍᎪᎢ	exposed-by-alignment
+KtosadiaSpec	SG1		INFINITIVE	aktosadisdi	ᎠᎩᏮᏙᏌᏗᏍᏗ	exposed-by-alignment
+KtosadiaSpec	SG1		PRESENT	gadosadia	ᎬᏙᏌᏗᎠ	exposed-by-alignment
+KtosadiaSpec	SG1		REMOTE_PAST	agwatosadvi	ᎠᏋᏙᏌᏛᎢ	exposed-by-alignment
+KtosadiaSpec	SG2		HABITUAL	hatosadisgoi	ᎲᏙᏌᏗᏍᎪᎢ	exposed-by-alignment
+KtosadiaSpec	SG2		INFINITIVE	jatosadisdi	ᏣᏮᏙᏌᏗᏍᏗ	exposed-by-alignment
+KtosadiaSpec	SG2		PRESENT	hatosadia	ᎲᏙᏌᏗᎠ	exposed-by-alignment
+KtosadiaSpec	SG2		REMOTE_PAST	jatosadvi	ᏨᏙᏌᏛᎢ	exposed-by-alignment
+KtosadiaSpec	SG3		HABITUAL	anatosadisgoi	ᎬᏙᏌᏗᏍᎪᎢ	exposed-by-alignment
+KtosadiaSpec	SG3		INFINITIVE	unatosadisdi	ᎤᏮᏙᏌᏗᏍᏗ	exposed-by-alignment
+KtosadiaSpec	SG3		PRESENT	anatosadia	ᎬᏙᏌᏗᎠ	exposed-by-alignment
+KtosadiaSpec	SG3		REMOTE_PAST	unatosadvi	ᎤᏩᏙᏌᏛᎢ	exposed-by-alignment
+KtosadiaSpec	SG3		REMOTE_PAST	unatosadvi	ᎤᏩᏙᏌᏛᎢ	exposed-by-alignment
+NadvnehaSpec	PL1INCL		HABITUAL	nidadvnehoi	ᎢᏓᏛᏁᎰᎢ	exposed-by-alignment
+NadvnehaSpec	PL1INCL		INFINITIVE	yigadvhdi	ᎢᎩᏛᏗ	exposed-by-alignment
+NadvnehaSpec	PL1INCL		PRESENT	nidadvneha	ᎢᏓᏛᏁᎭ	exposed-by-alignment
+NadvnehaSpec	PL1INCL		REMOTE_PAST	nigadvnelvi	ᎢᎦᏛᏁᎸᎢ	exposed-by-alignment
+NadvnehaSpec	PL3		HABITUAL	nandvnehoi	ᎠᎾᏛᏁᎰᎢ	exposed-by-alignment
+NadvnehaSpec	PL3		INFINITIVE	yunadvhdi	ᎤᏂᏛᏗ	exposed-by-alignment
+NadvnehaSpec	PL3		PRESENT	nandvneha	ᎠᎾᏛᏁᎭ	exposed-by-alignment
+NadvnehaSpec	PL3		REMOTE_PAST	nun(a)dvnelvi	ᎤᎾᏛᏁᎸᎢ	exposed-by-alignment
+NadvnehaSpec	SG1		HABITUAL	nigadvnehoi	ᎦᏛᏁᎰᎢ	exposed-by-alignment
+NadvnehaSpec	SG1		INFINITIVE	yagwadvhdi	ᎠᎩᏛᏗ	exposed-by-alignment
+NadvnehaSpec	SG1		PRESENT	nigadvneha	ᎦᏛᏁᎭ	exposed-by-alignment
+NadvnehaSpec	SG1		REMOTE_PAST	nagwadvnelvi	ᎠᏆᏛᏁᎸᎢ	exposed-by-alignment
+NadvnehaSpec	SG2		HABITUAL	hnadvnehoi	ᎭᏛᏁᎰᎢ	exposed-by-alignment
+NadvnehaSpec	SG2		INFINITIVE	yijadvhdi	ᏣᏛᏗ	exposed-by-alignment
+NadvnehaSpec	SG2		PRESENT	hnadvneha	ᎭᏛᏁᎭ	exposed-by-alignment
+NadvnehaSpec	SG2		REMOTE_PAST	nijadvnelvi	ᏣᏛᏁᎸᎢ	exposed-by-alignment
+NadvnehaSpec	SG3		INFINITIVE	yudvhdi	ᎤᏛᏗ	exposed-by-alignment
+NadvnehaSpec	SG3		REMOTE_PAST	nudvnelvi	ᎤᏛᏁᎸᎢ	exposed-by-alignment
+NigalstanvsgaSpec	SG3		INFINITIVE	nulstanvi	ᎤᎵᏍᏔᏅᎢ	exposed-by-alignment
+NigalstanvsgaSpec	SG3		REMOTE_PAST	nigalsda	ᎤᎦᎵᏍᏓ	exposed-by-alignment
+NigaweaSpec	PL1INCL		HABITUAL	nidiwesgoi	ᎢᏗᏪᏍᎪᎢ	exposed-by-alignment
+NigaweaSpec	PL1INCL		INFINITIVE	iyigiwesdi	ᎢᎩᏳᏪᏍᏗ	exposed-by-alignment
+NigaweaSpec	PL1INCL		PRESENT	nidiwea	ᎢᏗᏪᎠ	exposed-by-alignment
+NigaweaSpec	PL1INCL		REMOTE_PAST	nigiwesvi	ᎢᎩᏪᏒᎢ	exposed-by-alignment
+NigaweaSpec	PL3		HABITUAL	naniwesgoi	ᎠᏂᏪᏍᎪᎢ	exposed-by-alignment
+NigaweaSpec	PL3		INFINITIVE	iyuniwesdi	ᎤᏂᏳᏪᏍᏗ	exposed-by-alignment
+NigaweaSpec	PL3		PRESENT	naniwea	ᎠᏂᏪᎠ	exposed-by-alignment
+NigaweaSpec	PL3		REMOTE_PAST	nuniwesvi	ᎤᏂᏪᏒᎢ	exposed-by-alignment
+NigaweaSpec	SG1		HABITUAL	nijiwesgoi	ᏥᏪᏍᎪᎢ	exposed-by-alignment
+NigaweaSpec	SG1		INFINITIVE	iyagiwesdi	ᎠᎩᏳᏪᏍᏗ	exposed-by-alignment
+NigaweaSpec	SG1		PRESENT	nijiwea	ᏥᏪᎠ	exposed-by-alignment
+NigaweaSpec	SG1		REMOTE_PAST	nagiwesvi	ᎠᎩᏪᏒᎢ	exposed-by-alignment
+NigaweaSpec	SG2		HABITUAL	hniwesgoi	ᎯᏪᏍᎪᎢ	exposed-by-alignment
+NigaweaSpec	SG2		INFINITIVE	iyijawesdi	ᏣᏳᏪᏍᏗ	exposed-by-alignment
+NigaweaSpec	SG2		PRESENT	hniwea	ᎯᏪᎠ	exposed-by-alignment
+NigaweaSpec	SG2		REMOTE_PAST	nijawesvi	ᏣᏪᏒᎢ	exposed-by-alignment
+NigaweaSpec	SG3		INFINITIVE	iyuwesdi	ᎤᏳᏪᏍᏗ	exposed-by-alignment
+NigaweaSpec	SG3		REMOTE_PAST	nuwesvi	ᎤᏪᏒᎢ	exposed-by-alignment
+NigvnhdeaSpec	PL1INCL		HABITUAL	nidvnhdesgoi	ᎢᏛᎾᏕᏍᎪᎢ	exposed-by-alignment
+NigvnhdeaSpec	PL1INCL		INFINITIVE	iyigvnhdesdi	ᎢᎩᏳᏩᎾᏕᏍᏗ	exposed-by-alignment
+NigvnhdeaSpec	PL1INCL		PRESENT	nidvnhdea	ᎢᏛᎾᏕᎠ	exposed-by-alignment
+NigvnhdeaSpec	PL1INCL		REMOTE_PAST	nigvnhdesvi	ᎢᎬᎾᏕᏒᎢ	exposed-by-alignment
+NigvnhdeaSpec	PL3		HABITUAL	nanvnhdesgoi	ᎠᏅᎾᏕᏍᎪᎢ	exposed-by-alignment
+NigvnhdeaSpec	PL3		INFINITIVE	iyunvnhdesdi	ᎤᏂᏳᏩᎾᏕᏍᏗ	exposed-by-alignment
+NigvnhdeaSpec	PL3		PRESENT	nanvnhdea	ᎠᏅᎾᏕᎠ	exposed-by-alignment
+NigvnhdeaSpec	PL3		REMOTE_PAST	nunvnhdesvi	ᎤᏅᎾᏕᏒᎢ	exposed-by-alignment
+NigvnhdeaSpec	SG1		HABITUAL	nigvnhdesgoi	ᎬᎾᏕᏍᎪᎢ	exposed-by-alignment
+NigvnhdeaSpec	SG1		INFINITIVE	iyagwvnhdesdi	ᎠᎩᏳᏩᎾᏕᏍᏗ	exposed-by-alignment
+NigvnhdeaSpec	SG1		PRESENT	nigvnhdea	ᎬᎾᏕᎠ	exposed-by-alignment
+NigvnhdeaSpec	SG1		REMOTE_PAST	nagwvnhdesvi	ᎠᏋᎾᏕᏒᎢ	exposed-by-alignment
+NigvnhdeaSpec	SG2		HABITUAL	hnvnhdesgoi	ᎲᎾᏕᏍᎪᎢ	exposed-by-alignment
+NigvnhdeaSpec	SG2		INFINITIVE	iyijvnhdesdi	ᏣᏳᏩᎾᏕᏍᏗ	exposed-by-alignment
+NigvnhdeaSpec	SG2		PRESENT	hnvnhdea	ᎲᎾᏕᎠ	exposed-by-alignment
+NigvnhdeaSpec	SG2		REMOTE_PAST	nijvnhdesvi	ᏨᎾᏕᏒᎢ	exposed-by-alignment
+NigvnhdeaSpec	SG3		INFINITIVE	iyuwanhdesdi	ᎤᏳᏩᎾᏕᏍᏗ	exposed-by-alignment
+NigvnhdeaSpec	SG3		REMOTE_PAST	nuwanhdesvi	ᎤᏩᎾᏕᏒᎢ	exposed-by-alignment
+NigvnhdihaSpec	PL1INCL		HABITUAL	nidvnhdisgoi	ᎢᏛᎾᏗᏍᎪᎢ	exposed-by-alignment
+NigvnhdihaSpec	PL1INCL		INFINITIVE	iyigvnhdohdi	ᎢᎩᏳᏩᎾᏙᏗ	exposed-by-alignment
+NigvnhdihaSpec	PL1INCL		PRESENT	nidvnhdiha	ᎢᏛᎾᏗᎭ	exposed-by-alignment
+NigvnhdihaSpec	PL1INCL		REMOTE_PAST	nigvnhtanvi	ᎢᎬᎾᏔᏅᎢ	exposed-by-alignment
+NigvnhdihaSpec	PL3		HABITUAL	nanvnhdisgoi	ᎠᏅᎾᏗᏍᎪᎢ	exposed-by-alignment
+NigvnhdihaSpec	PL3		INFINITIVE	iyunvnhdohdi	ᎤᏂᏳᏩᎾᏙᏗ	exposed-by-alignment
+NigvnhdihaSpec	PL3		PRESENT	nanvnhdiha	ᎠᏅᎾᏗᎭ	exposed-by-alignment
+NigvnhdihaSpec	PL3		REMOTE_PAST	nunvnhtanvi	ᎤᏅᎾᏔᏅᎢ	exposed-by-alignment
+NigvnhdihaSpec	SG1		HABITUAL	nigvnhdisgoi	ᎬᎾᏗᏍᎪᎢ	exposed-by-alignment
+NigvnhdihaSpec	SG1		INFINITIVE	iyagwvnhdohdi	ᎠᎩᏳᏩᎾᏙᏗ	exposed-by-alignment
+NigvnhdihaSpec	SG1		PRESENT	nigvnhdiha	ᎬᎾᏗᎭ	exposed-by-alignment
+NigvnhdihaSpec	SG1		REMOTE_PAST	nagwvnhtanvi	ᎠᏋᎾᏔᏅᎢ	exposed-by-alignment
+NigvnhdihaSpec	SG2		HABITUAL	hnvnhdisgoi	ᎲᎾᏗᏍᎪᎢ	exposed-by-alignment
+NigvnhdihaSpec	SG2		INFINITIVE	iyijvnhdohdi	ᏣᏳᏩᎾᏙᏗ	exposed-by-alignment
+NigvnhdihaSpec	SG2		PRESENT	hnvnhdiha	ᎲᎾᏗᎭ	exposed-by-alignment
+NigvnhdihaSpec	SG2		REMOTE_PAST	nijvnhtanvi	ᏨᎾᏔᏅᎢ	exposed-by-alignment
+NigvnhdihaSpec	SG3		INFINITIVE	iyuwanhdohdi	ᎤᏳᏩᎾᏙᏗ	exposed-by-alignment
+NigvnhdihaSpec	SG3		REMOTE_PAST	nuwanhtanvi	ᎤᏩᎾᏔᏅᎢ	exposed-by-alignment
+UdlvgaSpec	PL1INCL		HABITUAL	degidlvgoi	ᎢᎩᏢᎪᎢ	exposed-by-alignment
+UdlvgaSpec	PL1INCL		INFINITIVE	digidlvisdi	ᎢᎩᏢᎢᏍᏗ	exposed-by-alignment
+UdlvgaSpec	PL1INCL		PRESENT	degidlvga	ᎢᎩᏢᎦ	exposed-by-alignment
+UdlvgaSpec	PL1INCL		REMOTE_PAST	degidlvgvi	ᎢᎩᏢᎬᎢ	exposed-by-alignment
+UdlvgaSpec	PL3		HABITUAL	dunidlvgoi	ᎤᏂᏢᎪᎢ	exposed-by-alignment
+UdlvgaSpec	PL3		INFINITIVE	junidlvisdi	ᎤᏂᏢᎢᏍᏗ	exposed-by-alignment
+UdlvgaSpec	PL3		PRESENT	dunidlvga	ᎤᏂᏢᎦ	exposed-by-alignment
+UdlvgaSpec	PL3		REMOTE_PAST	dunidlvgvi	ᎤᏂᏢᎬᎢ	exposed-by-alignment
+UdlvgaSpec	SG2		HABITUAL	tsdlvgoi	ᏣᏢᎪᎢ	exposed-by-alignment
+UdlvgaSpec	SG2		INFINITIVE	tsdlvisdi	ᏣᏢᎢᏍᏗ	exposed-by-alignment
+UdlvgaSpec	SG2		PRESENT	tsdlvga	ᏣᏢᎦ	exposed-by-alignment
+UdlvgaSpec	SG2		REMOTE_PAST	tsdlvgvi	ᏣᏢᎬᎢ	exposed-by-alignment
+UdulihaSpec	PL1INCL		HABITUAL	igadulihoi	ᎢᎦᏚᎵᏍᎪᎢ	exposed-by-alignment
+UdulihaSpec	PL1INCL		REMOTE_PAST	igadulihvi	ᎢᎦᏚᎸᎲᎢ	exposed-by-alignment
+UdulihaSpec	PL3		HABITUAL	unadulihoi	ᎤᎾᏚᎵᏍᎪᎢ	exposed-by-alignment
+UdulihaSpec	PL3		REMOTE_PAST	unadulihvi	ᎤᎾᏚᎸᎲᎢ	exposed-by-alignment
+UdulihaSpec	SG1		HABITUAL	agwadulihoi	ᎠᏆᏚᎵᏍᎪᎢ	exposed-by-alignment
+UdulihaSpec	SG1		REMOTE_PAST	agwadulihvi	ᎠᏆᏚᎸᎲᎢ	exposed-by-alignment
+UdulihaSpec	SG2		HABITUAL	jadulihoi	ᏣᏚᎵᏍᎪᎢ	exposed-by-alignment
+UdulihaSpec	SG2		REMOTE_PAST	jadulihvi	ᏣᏚᎸᎲᎢ	exposed-by-alignment
+UdvnvisdiSpec	PL1INCL		HABITUAL	igadvnisdoi	ᎢᎦᏛᏅᎢᏍᏙᎢ	exposed-by-alignment
+UgeyuhaSpec	PL1INCL	SG3IN	HABITUAL	edigeyusoi	ᎢᎩᎨᏳᏐᎢ	exposed-by-alignment
+UgeyuhaSpec	PL1INCL	SG3IN	INFINITIVE	edigeyhdi	ᎢᎩᎨᏳᏗ	exposed-by-alignment
+UgeyuhaSpec	PL1INCL	SG3IN	PRESENT	edigeyuhah	ᎢᎩᎨᏳᎭ	exposed-by-alignment
+UgeyuhaSpec	PL1INCL	SG3IN	REMOTE_PAST	edigeyusvi	ᎢᎩᎨᏳᏒᎢ	exposed-by-alignment
+UgeyuhaSpec	PL3	SG3IN	INFINITIVE	unigeyhdi	ᎤᏂᎨᏳᏗ	exposed-by-alignment
+UgeyuhaSpec	SG1	SG3AN	INFINITIVE	jigeyhdi	ᏥᎨᏳᏗ	exposed-by-alignment
+UgeyuhaSpec	SG1	SG3AN	PRESENT	jigeyua	ᏥᎨᏳᎭ	exposed-by-alignment
+UgeyuhaSpec	SG1	SG3IN	INFINITIVE	agigeyhdi	ᎠᎩᎨᏳᏗ	exposed-by-alignment
+UgeyuhaSpec	SG2	SG3AN	FUTURE_COMMAND	geyusvi	ᎯᎨᏳᏒᎢ	not-caused-by-pass
+UgeyuhaSpec	SG2	SG3AN	INFINITIVE	higeyhdi	ᎯᎨᏳᏗ	exposed-by-alignment
+UgeyuhaSpec	SG2	SG3IN	INFINITIVE	jageyhdi	ᏣᎨᏳᏗ	exposed-by-alignment
+UhnihaSpec	PL3		REMOTE_PAST	unahnihhvi	ᎤᎾᏂᎲᎢ	exposed-by-alignment
+UhyohaSpec	SG2		PRESENT	jahyhoha	ᏣᏲᎭ	exposed-by-alignment
+UhyvdlaSpec	PL1INCL		HABITUAL	iginiyiha	ᎢᎩᏴᏠᎢ	exposed-by-alignment
+UhyvdlaSpec	PL1INCL		INFINITIVE	uhyvdla	ᎢᎩᏂᏴᏗ	exposed-by-alignment
+UhyvdlaSpec	PL1INCL		PRESENT	uhyvdla	ᎢᎩᏴᏜ	exposed-by-alignment
+UhyvdlaSpec	PL1INCL		REMOTE_PAST	uhyvdla	ᎢᎩᏴᏢᎢ	exposed-by-alignment
+UhyvdlaSpec	PL3		HABITUAL	uniniyiha	ᎤᏂᏴᏠᎢ	exposed-by-alignment
+UhyvdlaSpec	PL3		INFINITIVE	uhyvdla	ᎤᏂᏂᏴᏗ	exposed-by-alignment
+UhyvdlaSpec	PL3		PRESENT	uhyvdla	ᎤᏂᏴᏜ	exposed-by-alignment
+UhyvdlaSpec	PL3		REMOTE_PAST	uhyvdla	ᎤᏂᏴᏢᎢ	exposed-by-alignment
+UhyvdlaSpec	SG1		HABITUAL	aginiyiha	ᎠᎩᏴᏠᎢ	exposed-by-alignment
+UhyvdlaSpec	SG1		INFINITIVE	uhyvdla	ᎠᎩᏂᏴᏗ	exposed-by-alignment
+UhyvdlaSpec	SG1		PRESENT	uhyvdla	ᎠᎩᏴᏜ	exposed-by-alignment
+UhyvdlaSpec	SG1		REMOTE_PAST	uhyvdla	ᎠᎩᏴᏢᎢ	exposed-by-alignment
+UhyvdlaSpec	SG2		HABITUAL	janiyiha	ᏣᏴᏠᎢ	exposed-by-alignment
+UhyvdlaSpec	SG2		INFINITIVE	uhyvdla	ᏣᏂᏴᏗ	exposed-by-alignment
+UhyvdlaSpec	SG2		PRESENT	uhyvdla	ᏣᏴᏜ	exposed-by-alignment
+UhyvdlaSpec	SG2		REMOTE_PAST	uhyvdla	ᏣᏴᏢᎢ	exposed-by-alignment
+UjetsdiSpec	PL1INCL		HABITUAL	igajetsdoi	ᎢᎦᏤᏥᏍᏙᎢ	exposed-by-alignment
+UjetsdiSpec	PL1INCL		PRESENT	igajetsdi	ᎢᎦᏤᏥᏍᏗ	exposed-by-alignment
+UjetsdiSpec	PL1INCL		REMOTE_PAST	igajetsdvi	ᎢᎦᏤᏥᏍᏛᎢ	exposed-by-alignment
+UjetsdiSpec	PL3		HABITUAL	unajetsdoi	ᎤᎾᏤᏥᏍᏙᎢ	exposed-by-alignment
+UjetsdiSpec	PL3		PRESENT	unajetsdi	ᎤᎾᏤᏥᏍᏗ	exposed-by-alignment
+UjetsdiSpec	PL3		REMOTE_PAST	unajetsdvi	ᎤᎾᏤᏥᏍᏛᎢ	exposed-by-alignment
+UjetsdiSpec	SG1		HABITUAL	agwajetsdoi	ᎠᏆᏤᏥᏍᏙᎢ	exposed-by-alignment
+UjetsdiSpec	SG1		INFINITIVE	agwajetsdohdi	ᎠᏆᏤᏥᏍᏙᏗ	exposed-by-alignment
+UjetsdiSpec	SG1		REMOTE_PAST	agwajetsdvi	ᎠᏆᏤᏥᏍᏛᎢ	exposed-by-alignment
+UjetsdiSpec	SG2		HABITUAL	jajetsdoi	ᏣᏤᏥᏍᏙᎢ	exposed-by-alignment
+UjetsdiSpec	SG2		PRESENT	jajetsdi	ᏣᏤᏥᏍᏗ	exposed-by-alignment
+UjetsdiSpec	SG2		REMOTE_PAST	jajetsdvi	ᏣᏤᏥᏍᏛᎢ	exposed-by-alignment
+UksesdiSpec	SG1	SG3AN	HABITUAL	jiyagasesdoi	ᏥᏯᎩᏎᏍᏙᎢ	exposed-by-alignment
+UksesdiSpec	SG1	SG3AN	INFINITIVE	jiyagasesdohdi	ᏥᏯᎩᏎᏍᏙᏗ	exposed-by-alignment
+UksesdiSpec	SG1	SG3AN	PRESENT	jiyagasesdi	ᏥᏯᎩᏎᏍᏗ	exposed-by-alignment
+UksesdiSpec	SG1	SG3AN	REMOTE_PAST	jiyagasesdvi	ᏥᏯᎩᏎᏍᏛᎢ	exposed-by-alignment
+UksesdiSpec	SG2	SG3AN	FUTURE_COMMAND	agisesdvi	ᎯᏯᎩᏎᏍᏛᎢ	not-caused-by-pass
+UksesdiSpec	SG2	SG3AN	HABITUAL	hiyagasesdoi	ᎯᏯᎩᏎᏍᏙᎢ	exposed-by-alignment
+UksesdiSpec	SG2	SG3AN	INFINITIVE	hiyagasesdohdi	ᎯᏯᎩᏎᏍᏙᏗ	exposed-by-alignment
+UksesdiSpec	SG2	SG3AN	PRESENT	hiyagasesdi	ᎯᏯᎩᏎᏍᏗ	exposed-by-alignment
+UksesdiSpec	SG2	SG3AN	REMOTE_PAST	hiyagasesdvi	ᎯᏯᎩᏎᏍᏛᎢ	exposed-by-alignment
+UlawsdiaSpec	PL1INCL		HABITUAL	digalawsdisgoi	ᎢᎩᎳᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+UlawsdiaSpec	PL1INCL		INFINITIVE	digalawsdohdi	ᎢᎩᎳᏮᏍᏙᏗ	exposed-by-alignment
+UlawsdiaSpec	PL1INCL		PRESENT	digalawsdia	ᎢᎩᎳᏮᏍᏗᎠ	exposed-by-alignment
+UlawsdiaSpec	PL1INCL		REMOTE_PAST	digalawstanvi	ᎢᎩᎳᏮᏍᏔᏅᎢ	exposed-by-alignment
+UlawsdiaSpec	PL3		HABITUAL	dunalawsdisgoi	ᎤᏂᎳᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+UlawsdiaSpec	PL3		INFINITIVE	junalawsdohdi	ᎤᏂᎳᏮᏍᏙᏗ	exposed-by-alignment
+UlawsdiaSpec	PL3		PRESENT	dunalawsdia	ᎤᏂᎳᏮᏍᏗᎠ	exposed-by-alignment
+UlawsdiaSpec	PL3		REMOTE_PAST	dunalawstanvi	ᎤᏂᎳᏮᏍᏔᏅᎢ	exposed-by-alignment
+UlawsdiaSpec	SG1		HABITUAL	jilawsdisgoi	ᎠᎩᎳᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+UlawsdiaSpec	SG1		INFINITIVE	jiyalawsdohdi	ᎠᎩᎳᏮᏍᏙᏗ	exposed-by-alignment
+UlawsdiaSpec	SG1		PRESENT	jilawsdia	ᎠᎩᎳᏮᏍᏗᎠ	exposed-by-alignment
+UlawsdiaSpec	SG1		REMOTE_PAST	jilawstanvi	ᎠᎩᎳᏮᏍᏔᏅᎢ	exposed-by-alignment
+UlawsdiaSpec	SG2		HABITUAL	hilawsdisgoi	ᏣᎳᏮᏍᏗᏍᎪᎢ	exposed-by-alignment
+UlawsdiaSpec	SG2		INFINITIVE	hiyalawsdohdi	ᏣᎳᏮᏍᏙᏗ	exposed-by-alignment
+UlawsdiaSpec	SG2		PRESENT	hilawsdia	ᏣᎳᏮᏍᏗᎠ	exposed-by-alignment
+UlawsdiaSpec	SG2		REMOTE_PAST	hilawstanvi	ᏣᎳᏮᏍᏔᏅᎢ	exposed-by-alignment
+UlidasdihaSpec	PL1INCL		PRESENT	igiladasdiha	ᎢᎩᎵᏓᏍᏗᎭ	exposed-by-alignment
+UlidasdihaSpec	PL3		PRESENT	uniladasdiha	ᎤᏂᎵᏓᏍᏗᎭ	exposed-by-alignment
+UlvkwdiSpec	PL1INCL	SG3IN	HABITUAL	igilvkwdoi	ᎢᎩᎸᏉᏙᎢ	exposed-by-alignment
+UlvkwdiSpec	PL1INCL	SG3IN	INFINITIVE	igilvkwdohdi	ᎢᎩᎸᏉᏙᏗ	exposed-by-alignment
+UlvkwdiSpec	PL1INCL	SG3IN	PRESENT	igilvkwdi	ᎢᎩᎸᏉᏗ	exposed-by-alignment
+UlvkwdiSpec	PL1INCL	SG3IN	REMOTE_PAST	igilvkwtanvi	ᎢᎩᎸᏉᏛᎢ	exposed-by-alignment
+UlvkwdiSpec	PL3	SG3IN	HABITUAL	unilvkwdoi	ᎤᏂᎸᏉᏙᎢ	exposed-by-alignment
+UlvkwdiSpec	PL3	SG3IN	INFINITIVE	unilvkwdohdi	ᎤᏂᎸᏉᏙᏗ	exposed-by-alignment
+UlvkwdiSpec	PL3	SG3IN	PRESENT	unilvkwdi	ᎤᏂᎸᏉᏗ	exposed-by-alignment
+UlvkwdiSpec	PL3	SG3IN	REMOTE_PAST	unilvkwtanvi	ᎤᏂᎸᏉᏛᎢ	exposed-by-alignment
+UlvkwdiSpec	SG1	SG3AN	REMOTE_PAST	jilvgwotanvi	ᏥᎸᏉᏛᎢ	exposed-by-alignment
+UlvkwdiSpec	SG1	SG3IN	HABITUAL	agilvkwdoi	ᎠᎩᎸᏉᏙᎢ	exposed-by-alignment
+UlvkwdiSpec	SG1	SG3IN	INFINITIVE	agilvkwdohdi	ᎠᎩᎸᏉᏙᏗ	exposed-by-alignment
+UlvkwdiSpec	SG1	SG3IN	PRESENT	agilvkwdi	ᎠᎩᎸᏉᏗ	exposed-by-alignment
+UlvkwdiSpec	SG1	SG3IN	REMOTE_PAST	agilvkwtanvi	ᎠᎩᎸᏉᏛᎢ	exposed-by-alignment
+UlvkwdiSpec	SG2	SG3AN	FUTURE_COMMAND	lvquodvi	ᎯᎸᏉᏛᎢ	not-caused-by-pass
+UlvkwdiSpec	SG2	SG3AN	REMOTE_PAST	hilvgwotanvi	ᎯᎸᏉᏛᎢ	exposed-by-alignment
+UlvkwdiSpec	SG2	SG3IN	HABITUAL	jalvkwdoi	ᏣᎸᏉᏙᎢ	exposed-by-alignment
+UlvkwdiSpec	SG2	SG3IN	INFINITIVE	jalvkwdohdi	ᏣᎸᏉᏙᏗ	exposed-by-alignment
+UlvkwdiSpec	SG2	SG3IN	PRESENT	jalvkwdi	ᏣᎸᏉᏗ	exposed-by-alignment
+UlvkwdiSpec	SG2	SG3IN	REMOTE_PAST	jalvkwtanvi	ᏣᎸᏉᏛᎢ	exposed-by-alignment
+UnaligohaSpec	PL1INCL		HABITUAL	igaligosoi	ᎢᎩᎾᎵᎪᏐᎢ	exposed-by-alignment
+UnaligohaSpec	PL1INCL		INFINITIVE	igadalisohdi	ᎢᎩᎾᏓᎵᏐᏗ	exposed-by-alignment
+UnaligohaSpec	PL1INCL		PRESENT	igaligoha	ᎢᎩᎾᎵᎪᎭ	exposed-by-alignment
+UnaligohaSpec	PL1INCL		REMOTE_PAST	igaligosvi	ᎢᎩᎾᎵᎪᏒᎢ	exposed-by-alignment
+UnaligohaSpec	PL3		HABITUAL	ijaligosoi	ᎤᏂᎾᎵᎪᏐᎢ	exposed-by-alignment
+UnaligohaSpec	PL3		INFINITIVE	ijadalisohdi	ᎤᏂᎾᏓᎵᏐᏗ	exposed-by-alignment
+UnaligohaSpec	PL3		PRESENT	ijaligoha	ᎤᏂᎾᎵᎪᎭ	exposed-by-alignment
+UnaligohaSpec	PL3		REMOTE_PAST	ijaligosvi	ᎤᏂᎾᎵᎪᏒᎢ	exposed-by-alignment
+UnaligohaSpec	SG2		HABITUAL	ogaligosoi	ᏣᎾᎵᎪᏐᎢ	exposed-by-alignment
+UnaligohaSpec	SG2		INFINITIVE	ogadalisohdi	ᏣᎾᏓᎵᏐᏗ	exposed-by-alignment
+UnaligohaSpec	SG2		PRESENT	ogaligoha	ᏣᎾᎵᎪᎭ	exposed-by-alignment
+UnaligohaSpec	SG2		REMOTE_PAST	ogaligosvi	ᏣᎾᎵᎪᏒᎢ	exposed-by-alignment
+UnhtaSpec	PL1INCL		HABITUAL	iganhtoi	ᎢᎦᏅᏙᎢ	exposed-by-alignment
+UnhtaSpec	PL1INCL		PRESENT	iganhta	ᎢᎦᏅᏔ	exposed-by-alignment
+UnhtaSpec	PL1INCL		REMOTE_PAST	iganhtvi	ᎢᎦᏅᏛᎢ	exposed-by-alignment
+UnhtaSpec	PL3		HABITUAL	unanhtoi	ᎤᎾᏅᏙᎢ	exposed-by-alignment
+UnhtaSpec	PL3		PRESENT	unanhta	ᎤᎾᏅᏔ	exposed-by-alignment
+UnhtaSpec	PL3		REMOTE_PAST	unanhtvi	ᎤᎾᏅᏛᎢ	exposed-by-alignment
+UnhtaSpec	SG1		HABITUAL	agwanhtoi	ᎠᏆᏅᏙᎢ	exposed-by-alignment
+UnhtaSpec	SG1		REMOTE_PAST	agwanhtvi	ᎠᏆᏅᏛᎢ	exposed-by-alignment
+UnhtaSpec	SG2		HABITUAL	janhtoi	ᏣᏅᏙᎢ	exposed-by-alignment
+UnhtaSpec	SG2		PRESENT	janhta	ᏣᏅᏔ	exposed-by-alignment
+UnhtaSpec	SG2		REMOTE_PAST	janhtvi	ᏣᏅᏛᎢ	exposed-by-alignment
+UsdvdiaSpec	SG2		HABITUAL	tsdvdisgoi	ᏣᏍᏛᏗᏍᎪᎢ	exposed-by-alignment
+UsdvdiaSpec	SG2		INFINITIVE	tsdvdisdi	ᏣᏍᏛᏗᏍᏗ	exposed-by-alignment
+UsdvdiaSpec	SG2		PRESENT	tsdvdia	ᏣᏍᏛᏗᎠ	exposed-by-alignment
+UsdvdiaSpec	SG2		REMOTE_PAST	tsdvdvi	ᏣᏍᏛᏛᎢ	exposed-by-alignment
+UsihwasgaSpec	SG2		HABITUAL	tsihwasgoi	ᏣᏏᏩᏍᎪᎢ	exposed-by-alignment
+UsihwasgaSpec	SG2		INFINITIVE	tsihwahisdi	ᏣᏏᏩᎯᏍᏗ	exposed-by-alignment
+UsihwasgaSpec	SG2		PRESENT	tsihwasga	ᏣᏏᏩᏍᎦ	exposed-by-alignment
+UsihwasgaSpec	SG2		REMOTE_PAST	tsihwahvi	ᏣᏏᏩᎲᎢ	exposed-by-alignment
+UsvhihaSpec	SG3		HABITUAL	iksvhihoi	ᎤᏒᎯᎰᎢ	exposed-by-alignment
+UsvhihaSpec	SG3		INFINITIVE	iksvsdi	ᎤᏒᏍᏗ	exposed-by-alignment
+UsvhihaSpec	SG3		PRESENT	iksvhiha	ᎤᏒᎯᎭ	exposed-by-alignment
+UsvhihaSpec	SG3		REMOTE_PAST	iksvhlvi	ᎤᏒᏢᎢ	exposed-by-alignment
+UtvdasdiSpec	PL1INCL	SG3IN	HABITUAL	iktvdasdoi	ᎢᎦᏛᏓᏍᏙᎢ	exposed-by-alignment
+UtvdasdiSpec	PL1INCL	SG3IN	INFINITIVE	iktvdasdesdi	ᎢᎦᏛᏓᏍᏙᏗ	exposed-by-alignment
+UtvdasdiSpec	PL1INCL	SG3IN	PRESENT	iktvdasdi	ᎢᎦᏛᏓᏍᏗ	exposed-by-alignment
+UtvdasdiSpec	PL1INCL	SG3IN	REMOTE_PAST	iktvdastan	ᎢᎦᏛᏓᏍᏛᎢ	exposed-by-alignment
+UtvdasdiSpec	PL3	SG3IN	HABITUAL	untvdasdoi	ᎤᎾᏛᏓᏍᏙᎢ	exposed-by-alignment
+UtvdasdiSpec	PL3	SG3IN	INFINITIVE	unvtvdasdohdi	ᎤᎾᏛᏓᏍᏙᏗ	exposed-by-alignment
+UtvdasdiSpec	PL3	SG3IN	PRESENT	untvdasdi	ᎤᎾᏛᏓᏍᏗ	exposed-by-alignment
+UtvdasdiSpec	PL3	SG3IN	REMOTE_PAST	untvdastanvi	ᎤᎾᏛᏓᏍᏛᎢ	exposed-by-alignment
+UtvdasdiSpec	SG1	SG3AN	REMOTE_PAST	jiyatvdastanvi	ᏥᏯᏛᏓᏍᏛᎢ	exposed-by-alignment
+UtvdasdiSpec	SG1	SG3IN	HABITUAL	aktvdasdoi	ᎠᏆᏛᏓᏍᏙᎢ	exposed-by-alignment
+UtvdasdiSpec	SG1	SG3IN	INFINITIVE	aktvdasdohdi	ᎠᏆᏛᏓᏍᏙᏗ	exposed-by-alignment
+UtvdasdiSpec	SG1	SG3IN	PRESENT	aktvdasdi	ᎠᏆᏛᏓᏍᏗ	exposed-by-alignment
+UtvdasdiSpec	SG1	SG3IN	REMOTE_PAST	aktvdastanvi	ᎠᏆᏛᏓᏍᏛᎢ	exposed-by-alignment
+UtvdasdiSpec	SG2	SG3AN	FUTURE_COMMAND	advdasdvi	ᎯᏯᏛᏓᏍᏛᎢ	not-caused-by-pass
+UtvdasdiSpec	SG2	SG3AN	REMOTE_PAST	hiyatvdastanvi	ᎯᏯᏛᏓᏍᏛᎢ	exposed-by-alignment
+UtvdasdiSpec	SG2	SG3IN	HABITUAL	tstvdasdoi	ᏣᏛᏓᏍᏙᎢ	exposed-by-alignment
+UtvdasdiSpec	SG2	SG3IN	INFINITIVE	tstvdasdohdi	ᏣᏛᏓᏍᏙᏗ	exposed-by-alignment
+UtvdasdiSpec	SG2	SG3IN	PRESENT	tstvdasdi	ᏣᏛᏓᏍᏗ	exposed-by-alignment
+UtvdasdiSpec	SG2	SG3IN	REMOTE_PAST	tstvdastanvi	ᏣᏛᏓᏍᏛᎢ	exposed-by-alignment
+UwakewsgaSpec	PL1INCL	SG3IN	HABITUAL	igvkewsgoi	ᎢᎬᎨᏫᏍᎪᎢ	exposed-by-alignment
+UwakewsgaSpec	PL1INCL	SG3IN	INFINITIVE	igvkehwisdi	ᎢᎬᏩᎨᏫᏍᏗ	exposed-by-alignment
+UwakewsgaSpec	PL1INCL	SG3IN	PRESENT	igvkewsga	ᎢᎬᎨᏫᏍᎦ	exposed-by-alignment
+UwakewsgaSpec	PL1INCL	SG3IN	REMOTE_PAST	igvkewsvi	ᎢᎬᎨᏫᏒᎢ	exposed-by-alignment
+UwakewsgaSpec	PL3	SG3IN	HABITUAL	unvkewsgoi	ᎤᏅᎨᏫᏍᎪᎢ	exposed-by-alignment
+UwakewsgaSpec	PL3	SG3IN	INFINITIVE	unvkehwisdi	ᎤᏅᏩᎨᏫᏍᏗ	exposed-by-alignment
+UwakewsgaSpec	PL3	SG3IN	PRESENT	unvkewsga	ᎤᏅᎨᏫᏍᎦ	exposed-by-alignment
+UwakewsgaSpec	PL3	SG3IN	REMOTE_PAST	unvkewsvi	ᎤᏅᎨᏫᏒᎢ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3AN	HABITUAL	jiyvkewsgoi	ᏥᏴᎨᏫᏍᎪᎢ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3AN	INFINITIVE	jiyvkehwisdi	ᏥᏴᏩᎨᏫᏍᏗ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3AN	PRESENT	jiyvkewsga	ᏥᏴᎨᏫᏍᎦ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3AN	REMOTE_PAST	jiyvkewsvi	ᏥᏴᎨᏫᏒᎢ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3IN	HABITUAL	agwvkewsgoi	ᎠᏋᎨᏫᏍᎪᎢ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3IN	INFINITIVE	agwvkehwisdi	ᎠᏋᏩᎨᏫᏍᏗ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3IN	PRESENT	agwvkewsga	ᎠᏋᎨᏫᏍᎦ	exposed-by-alignment
+UwakewsgaSpec	SG1	SG3IN	REMOTE_PAST	agwvkewsvi	ᎠᏋᎨᏫᏒᎢ	exposed-by-alignment
+UwakewsgaSpec	SG2	SG3IN	HABITUAL	jvkewsgoi	ᏨᎨᏫᏍᎪᎢ	exposed-by-alignment
+UwakewsgaSpec	SG2	SG3IN	INFINITIVE	jvkehwisdi	ᏨᏩᎨᏫᏍᏗ	exposed-by-alignment
+UwakewsgaSpec	SG2	SG3IN	PRESENT	jvkewsga	ᏨᎨᏫᏍᎦ	exposed-by-alignment
+UwakewsgaSpec	SG2	SG3IN	REMOTE_PAST	jvkewsvi	ᏨᎨᏫᏒᎢ	exposed-by-alignment
+UwanvgaSpec	PL1INCL		INFINITIVE	igvnvsdi	ᎢᎬᏩᏅᏍᏗ	exposed-by-alignment
+UwanvgaSpec	PL3		INFINITIVE	unvnvsdi	ᎤᏅᏩᏅᏍᏗ	exposed-by-alignment
+UwanvgaSpec	SG1		INFINITIVE	agwvnvsdi	ᎠᏋᏩᏅᏍᏗ	exposed-by-alignment
+UwanvgaSpec	SG2		INFINITIVE	jvnvsdi	ᏨᏩᏅᏍᏗ	exposed-by-alignment
+UwanvgaSpec	SG3		INFINITIVE	uwanvsdi	ᎤᏩᏩᏅᏍᏗ	exposed-by-alignment
+UwawsvgaSpec	PL1INCL		HABITUAL	igiwsvgoi	ᎢᎩᏩᏮᏒᎪᎢ	exposed-by-alignment
+UwawsvgaSpec	PL1INCL		INFINITIVE	igiwsvsdi	ᎢᎩᏩᏮᏒᏍᏗ	exposed-by-alignment
+UwawsvgaSpec	PL1INCL		PRESENT	igiwsvga	ᎢᎩᏩᏮᏒᎦ	exposed-by-alignment
+UwawsvgaSpec	PL1INCL		REMOTE_PAST	igiwsvjvi	ᎢᎩᏩᏮᏒᏨᎢ	exposed-by-alignment
+UwawsvgaSpec	PL3		HABITUAL	uniwsvgoi	ᎤᏂᏩᏮᏒᎪᎢ	exposed-by-alignment
+UwawsvgaSpec	PL3		INFINITIVE	uniwsvsdi	ᎤᏂᏩᏮᏒᏍᏗ	exposed-by-alignment
+UwawsvgaSpec	PL3		PRESENT	uniwsvga	ᎤᏂᏩᏮᏒᎦ	exposed-by-alignment
+UwawsvgaSpec	PL3		REMOTE_PAST	uniwsvjvi	ᎤᏂᏩᏮᏒᏨᎢ	exposed-by-alignment
+UwawsvgaSpec	SG1		HABITUAL	agiwsvgoi	ᎠᎩᏩᏮᏒᎪᎢ	exposed-by-alignment
+UwawsvgaSpec	SG1		INFINITIVE	agiwsvsdi	ᎠᎩᏩᏮᏒᏍᏗ	exposed-by-alignment
+UwawsvgaSpec	SG1		PRESENT	agiwsvga	ᎠᎩᏩᏮᏒᎦ	exposed-by-alignment
+UwawsvgaSpec	SG1		REMOTE_PAST	agiwsvjvi	ᎠᎩᏩᏮᏒᏨᎢ	exposed-by-alignment
+UwawsvgaSpec	SG2		HABITUAL	jawsvgoi	ᏣᏩᏮᏒᎪᎢ	exposed-by-alignment
+UwawsvgaSpec	SG2		INFINITIVE	jawsvsdi	ᏣᏩᏮᏒᏍᏗ	exposed-by-alignment
+UwawsvgaSpec	SG2		PRESENT	jawsvga	ᏣᏩᏮᏒᎦ	exposed-by-alignment
+UwawsvgaSpec	SG2		REMOTE_PAST	jawsvjvi	ᏣᏩᏮᏒᏨᎢ	exposed-by-alignment
+UwayaSpec	SG3		HABITUAL	unvyoi	ᎤᏩᏲᎢ	exposed-by-alignment
+UwayaSpec	SG3		INFINITIVE	unvdisdi	ᎤᏗᏍᏗ	exposed-by-alignment
+UwayaSpec	SG3		PRESENT	unvya	ᎤᏩᏯ	exposed-by-alignment
+UwayaSpec	SG3		REMOTE_PAST	unvyvi	ᎤᏩᏴᎢ	exposed-by-alignment
+UwehisdanehaSpec	PL1INCL		INFINITIVE	igehisdanehdi	ᎢᎩᏪᎯᏍᏓᏁᏗ	exposed-by-alignment
+UwehisdanehaSpec	PL3		INFINITIVE	unehisdanehdi	ᎤᏂᏪᎯᏍᏓᏁᏗ	exposed-by-alignment
+UwehisdanehaSpec	SG1		INFINITIVE	agwehisdanehdi	ᎠᎩᏪᎯᏍᏓᏁᏗ	exposed-by-alignment
+UwehisdanehaSpec	SG2		INFINITIVE	jehisdanehdi	ᏣᏪᎯᏍᏓᏁᏗ	exposed-by-alignment
+UwehluhgaSpec	PL1INCL		INFINITIVE	igehluhvsdi	ᎢᎩᏪᏡᎲᏍᏗ	exposed-by-alignment
+UwehluhgaSpec	PL3		INFINITIVE	unehluhvsdi	ᎤᏂᏪᏡᎲᏍᏗ	exposed-by-alignment
+UwehluhgaSpec	SG2		INFINITIVE	jehluhvsdi	ᏣᏪᏡᎲᏍᏗ	exposed-by-alignment
+UwekahaSpec	SG1		HABITUAL	agikahoi	ᏥᏤᎧᎰᎢ	exposed-by-alignment
+UwekahaSpec	SG1		PRESENT	agikaha	ᏥᏤᎧᎭ	exposed-by-alignment
+UwekahaSpec	SG1		REMOTE_PAST	agikahvi	ᎠᎩᏤᎧᎲᎢ	exposed-by-alignment
+UwekahaSpec	SG3		HABITUAL	unekahoi	ᏤᎧᎰᎢ	exposed-by-alignment
+UwekahaSpec	SG3		HABITUAL	unekahoi	ᏤᎧᎰᎢ	exposed-by-alignment
+UwekahaSpec	SG3		INFINITIVE	unekohdi	ᎤᏪᎪᏗ	exposed-by-alignment
+UwekahaSpec	SG3		PRESENT	unekaha	ᏤᎧᎭ	exposed-by-alignment
+UwekahaSpec	SG3		PRESENT	unekaha	ᏤᎧᎭ	exposed-by-alignment
+UwekahaSpec	SG3		REMOTE_PAST	unekahvi	ᎤᏤᎧᎲᎢ	exposed-by-alignment
+UwekahaSpec	SG3		REMOTE_PAST	unekahvi	ᎤᏤᎧᎲᎢ	exposed-by-alignment
+UwelihiaSpec	PL1INCL		INFINITIVE	igelihisdi	ᎢᎩᏪᎵᎯᏍᏗ	exposed-by-alignment
+UwelihiaSpec	PL3		INFINITIVE	unelihisdi	ᎤᏂᏪᎵᎯᏍᏗ	exposed-by-alignment
+UwelihiaSpec	SG1		INFINITIVE	agwelihisdi	ᎠᎩᏪᎵᎯᏍᏗ	exposed-by-alignment
+UwelihiaSpec	SG2		INFINITIVE	jelihisdi	ᏣᏪᎵᎯᏍᏗ	exposed-by-alignment
+UwotlaSpec	PL1INCL		PRESENT	degotla	ᎢᎪᏝ	exposed-by-alignment
+UwotlaSpec	PL1INCL		REMOTE_PAST	idina	ᎢᎪᏢᎢ	exposed-by-alignment
+UwotlaSpec	PL3		PRESENT	dunotla	ᎤᏃᏝ	exposed-by-alignment
+UwotlaSpec	PL3		REMOTE_PAST	anina	ᎤᏃᏢᎢ	exposed-by-alignment
+UyosiaSpec	PL1INCL		HABITUAL	degiyosisgoi	ᎢᎩᏲᏏᏍᎪᎢ	exposed-by-alignment
+UyosiaSpec	PL1INCL		INFINITIVE	digiyosisohdi	ᎢᎩᏲᏏᏐᏗ	exposed-by-alignment
+UyosiaSpec	PL1INCL		PRESENT	degiyosia	ᎢᎩᏲᏏᎠ	exposed-by-alignment
+UyosiaSpec	PL1INCL		REMOTE_PAST	degiyosisgvi	ᎢᎩᏲᏏᏍᎬᎢ	exposed-by-alignment
+UyosiaSpec	PL3		HABITUAL	duniyosisgoi	ᎤᏂᏲᏏᏍᎪᎢ	exposed-by-alignment
+UyosiaSpec	PL3		INFINITIVE	juniyosisohdi	ᎤᏂᏲᏏᏐᏗ	exposed-by-alignment
+UyosiaSpec	PL3		PRESENT	duniyosia	ᎤᏂᏲᏏᎠ	exposed-by-alignment
+UyosiaSpec	PL3		REMOTE_PAST	duniyosisgvi	ᎤᏂᏲᏏᏍᎬᎢ	exposed-by-alignment
+WadiaSpec	SG2		HABITUAL	hwidisgoi	ᎯᏗᏍᎪᎢ	exposed-by-alignment
+WadiaSpec	SG2		INFINITIVE	wijadisdi	ᏣᏗᏍᏗ	exposed-by-alignment
+WadiaSpec	SG2		PRESENT	hwidia	ᎯᏗᎠ	exposed-by-alignment
+WadiaSpec	SG2		REMOTE_PAST	wijadvi	ᏣᏛᎢ	exposed-by-alignment
+WadiaSpec	SG3		HABITUAL	wanidisgoi	ᏩᏗᏍᎪᎢ	exposed-by-alignment
+WadiaSpec	SG3		INFINITIVE	wunidisdi	ᎤᏗᏍᏗ	exposed-by-alignment
+WadiaSpec	SG3		INFINITIVE	wunidisdi	ᎤᏗᏍᏗ	exposed-by-alignment
+WadiaSpec	SG3		INFINITIVE	wunidisdi	ᎤᏗᏍᏗ	exposed-by-alignment
+WadiaSpec	SG3		PRESENT	wanidia	ᏩᏗᎠ	exposed-by-alignment
+WadiaSpec	SG3		REMOTE_PAST	wunidvi	ᎤᏛᎢ	exposed-by-alignment
+WadiaSpec	SG3		REMOTE_PAST	wunidvi	ᎤᏛᎢ	exposed-by-alignment
+WadiaSpec	SG3		REMOTE_PAST	wunidvi	ᎤᏛᎢ	exposed-by-alignment
+WagiaSpec	SG2		HABITUAL	hwigisgoi	ᎯᏥᏍᎪᎢ	exposed-by-alignment
+WagiaSpec	SG2		INFINITIVE	wijagisdi	ᏣᎩᎩᏍᏗ	exposed-by-alignment
+WagiaSpec	SG2		PRESENT	hwigia	ᎯᏥᎩᎠ	exposed-by-alignment
+WagiaSpec	SG2		REMOTE_PAST	wijagisvi	ᏣᏩᎩᎩᏒᎢ	exposed-by-alignment
+WagiaSpec	SG3		HABITUAL	wanigisgoi	ᏫᏥᏍᎪᎢ	exposed-by-alignment
+WagiaSpec	SG3		HABITUAL	wanigisgoi	ᏫᏥᏍᎪᎢ	exposed-by-alignment
+WagiaSpec	SG3		INFINITIVE	wunigisdi	ᎤᎩᎩᏍᏗ	exposed-by-alignment
+WagiaSpec	SG3		INFINITIVE	wunigisdi	ᎤᎩᎩᏍᏗ	exposed-by-alignment
+WagiaSpec	SG3		INFINITIVE	wunigisdi	ᎤᎩᎩᏍᏗ	exposed-by-alignment
+WagiaSpec	SG3		PRESENT	wanigia	ᏫᏥᎩᎠ	exposed-by-alignment
+WagiaSpec	SG3		PRESENT	wanigia	ᏫᏥᎩᎠ	exposed-by-alignment
+WagiaSpec	SG3		REMOTE_PAST	wunigisvi	ᎤᏩᎩᎩᏒᎢ	exposed-by-alignment
+WagiaSpec	SG3		REMOTE_PAST	wunigisvi	ᎤᏩᎩᎩᏒᎢ	exposed-by-alignment
+WagiaSpec	SG3		REMOTE_PAST	wunigisvi	ᎤᏩᎩᎩᏒᎢ	exposed-by-alignment
+WahvsgaSpec	SG2		HABITUAL	hwihvsgoi	ᎯᎲᏍᎪᎢ	exposed-by-alignment
+WahvsgaSpec	SG2		INFINITIVE	wijahdi	ᏣᏗ	exposed-by-alignment
+WahvsgaSpec	SG2		PRESENT	hwihvsga	ᎯᎲᏍᎦ	exposed-by-alignment
+WahvsgaSpec	SG2		REMOTE_PAST	wijahnvi	ᏣᏅᎢ	exposed-by-alignment
+WahvsgaSpec	SG3		HABITUAL	wanihvsgoi	ᏩᎲᏍᎪᎢ	exposed-by-alignment
+WahvsgaSpec	SG3		INFINITIVE	wunihdi	ᎤᏗ	exposed-by-alignment
+WahvsgaSpec	SG3		INFINITIVE	wunihdi	ᎤᏗ	exposed-by-alignment
+WahvsgaSpec	SG3		INFINITIVE	wunihdi	ᎤᏗ	exposed-by-alignment
+WahvsgaSpec	SG3		PRESENT	wanihvsga	ᏩᎲᏍᎦ	exposed-by-alignment
+WahvsgaSpec	SG3		REMOTE_PAST	wunihnvi	ᎤᏅᎢ	exposed-by-alignment
+WahvsgaSpec	SG3		REMOTE_PAST	wunihnvi	ᎤᏅᎢ	exposed-by-alignment
+WahvsgaSpec	SG3		REMOTE_PAST	wunihnvi	ᎤᏅᎢ	exposed-by-alignment
+WahyanihaSpec	SG2		HABITUAL	hwihyanisgoi	ᎯᏥᏯᏂᏍᎪᎢ	exposed-by-alignment
+WahyanihaSpec	SG2		INFINITIVE	hwihyanhdi	ᏣᏥᏯᎾᏗ	exposed-by-alignment
+WahyanihaSpec	SG2		PRESENT	hwihyaniha	ᎯᏥᏯᏂᎭ	exposed-by-alignment
+WahyanihaSpec	SG2		REMOTE_PAST	hwihyanvhvi	ᏣᏫᏥᏯᏅᎲᎢ	exposed-by-alignment
+WahyanihaSpec	SG3		HABITUAL	wanihyanisgoi	ᏫᏥᏯᏂᏍᎪᎢ	exposed-by-alignment
+WahyanihaSpec	SG3		HABITUAL	wanihyanisgoi	ᏫᏥᏯᏂᏍᎪᎢ	exposed-by-alignment
+WahyanihaSpec	SG3		INFINITIVE	wunihyanhdi	ᎤᏥᏯᎾᏗ	exposed-by-alignment
+WahyanihaSpec	SG3		INFINITIVE	wunihyanhdi	ᎤᏥᏯᎾᏗ	exposed-by-alignment
+WahyanihaSpec	SG3		INFINITIVE	wunihyanhdi	ᎤᏥᏯᎾᏗ	exposed-by-alignment
+WahyanihaSpec	SG3		PRESENT	wanihyaniha	ᏫᏥᏯᏂᎭ	exposed-by-alignment
+WahyanihaSpec	SG3		PRESENT	wanihyaniha	ᏫᏥᏯᏂᎭ	exposed-by-alignment
+WahyanihaSpec	SG3		REMOTE_PAST	wunihyanvhvi	ᎤᏫᏥᏯᏅᎲᎢ	exposed-by-alignment
+WahyanihaSpec	SG3		REMOTE_PAST	wunihyanvhvi	ᎤᏫᏥᏯᏅᎲᎢ	exposed-by-alignment
+WahyanihaSpec	SG3		REMOTE_PAST	wunihyanvhvi	ᎤᏫᏥᏯᏅᎲᎢ	exposed-by-alignment
+WaktiSpec	PL1INCL		HABITUAL	widaktoi	ᎢᏗᎦᏙᎢ	exposed-by-alignment
+WaktiSpec	PL1INCL		PRESENT	widakti	ᎢᏗᎦᏘ	exposed-by-alignment
+WaktiSpec	PL1INCL		REMOTE_PAST	widaktvi	ᎢᎩᎦᏛᎢ	exposed-by-alignment
+WaktiSpec	PL3		HABITUAL	wanaktoi	ᎠᏂᎦᏙᎢ	exposed-by-alignment
+WaktiSpec	PL3		PRESENT	wanakti	ᎠᏂᎦᏘ	exposed-by-alignment
+WaktiSpec	PL3		REMOTE_PAST	wanaktvi	ᎤᏂᎦᏛᎢ	exposed-by-alignment
+WaktiSpec	SG1		HABITUAL	wijitatoi	ᏥᎦᏙᎢ	exposed-by-alignment
+WaktiSpec	SG1		PRESENT	witsigati	ᏥᎦᏘ	exposed-by-alignment
+WaktiSpec	SG1		REMOTE_PAST	wijigatvi	ᎠᎩᎦᏛᎢ	exposed-by-alignment
+WaktiSpec	SG2		PRESENT	hwakti	ᎯᎦᏘ	exposed-by-alignment
+WaktiSpec	SG2		REMOTE_PAST	hwigati	ᏣᎦᏛᎢ	exposed-by-alignment
+WaktiSpec	SG3		REMOTE_PAST	wagadvi	ᎤᎦᏛᎢ	exposed-by-alignment
+WayihaSpec	SG2		HABITUAL	hwiyisgoi	ᎯᏥᏱᏍᎪᎢ	exposed-by-alignment
+WayihaSpec	SG2		INFINITIVE	wijayhdi	ᏣᎩᏴᏗ	exposed-by-alignment
+WayihaSpec	SG2		PRESENT	hwiyiha	ᎯᏥᏱᎠ	exposed-by-alignment
+WayihaSpec	SG2		REMOTE_PAST	wijayvhvi	ᏣᏩᎩᏴᎲᎢ	exposed-by-alignment
+WayihaSpec	SG3		HABITUAL	waniyisgoi	ᏫᏥᏱᏍᎪᎢ	exposed-by-alignment
+WayihaSpec	SG3		HABITUAL	waniyisgoi	ᏫᏥᏱᏍᎪᎢ	exposed-by-alignment
+WayihaSpec	SG3		INFINITIVE	wuniyhdi	ᎤᎩᏴᏗ	exposed-by-alignment
+WayihaSpec	SG3		INFINITIVE	wuniyhdi	ᎤᎩᏴᏗ	exposed-by-alignment
+WayihaSpec	SG3		INFINITIVE	wuniyhdi	ᎤᎩᏴᏗ	exposed-by-alignment
+WayihaSpec	SG3		PRESENT	waniyiha	ᏫᏥᏱᎠ	exposed-by-alignment
+WayihaSpec	SG3		PRESENT	waniyiha	ᏫᏥᏱᎠ	exposed-by-alignment
+WayihaSpec	SG3		REMOTE_PAST	wuniyvhvi	ᎤᏩᎩᏴᎲᎢ	exposed-by-alignment
+WayihaSpec	SG3		REMOTE_PAST	wuniyvhvi	ᎤᏩᎩᏴᎲᎢ	exposed-by-alignment
+WayihaSpec	SG3		REMOTE_PAST	wuniyvhvi	ᎤᏩᎩᏴᎲᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG2		HABITUAL	hwiyakahvsgoi	ᎭᎧᎲᏍᎪᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG2		INFINITIVE	hwiyakohdi	ᏣᏩᎪᏗ	exposed-by-alignment
+WigakahvsgaSpec	SG2		PRESENT	hwiyakahvsga	ᎭᎧᎲᏍᎦ	exposed-by-alignment
+WigakahvsgaSpec	SG2		REMOTE_PAST	hwiyakanvi	ᏣᎧᏅᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG3		HABITUAL	wanakahvsgoi	ᏫᎦᎧᎲᏍᎪᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG3		INFINITIVE	wunakohdi	ᎤᏩᎪᏗ	exposed-by-alignment
+WigakahvsgaSpec	SG3		INFINITIVE	wunakohdi	ᎤᏩᎪᏗ	exposed-by-alignment
+WigakahvsgaSpec	SG3		INFINITIVE	wunakohdi	ᎤᏩᎪᏗ	exposed-by-alignment
+WigakahvsgaSpec	SG3		PRESENT	wanakahvsga	ᏫᎦᎧᎲᏍᎦ	exposed-by-alignment
+WigakahvsgaSpec	SG3		REMOTE_PAST	wunakanvi	ᎤᎧᏅᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG3		REMOTE_PAST	wunakanvi	ᎤᎧᏅᎢ	exposed-by-alignment
+WigakahvsgaSpec	SG3		REMOTE_PAST	wunakanvi	ᎤᎧᏅᎢ	exposed-by-alignment
+WiganeaSpec	SG2		HABITUAL	hwinesgoi	ᎯᏥᏁᏍᎪᎢ	exposed-by-alignment
+WiganeaSpec	SG2		INFINITIVE	wijanesdi	ᏣᎩᏁᏍᏗ	exposed-by-alignment
+WiganeaSpec	SG2		PRESENT	hwinea	ᎯᏥᏁᎠ	exposed-by-alignment
+WiganeaSpec	SG2		REMOTE_PAST	wijanesvi	ᏣᏩᎩᏁᏒᎢ	exposed-by-alignment
+WiganeaSpec	SG3		HABITUAL	waninesgoi	ᏫᏥᏁᏍᎪᎢ	exposed-by-alignment
+WiganeaSpec	SG3		HABITUAL	waninesgoi	ᏫᏥᏁᏍᎪᎢ	exposed-by-alignment
+WiganeaSpec	SG3		INFINITIVE	wuninesdi	ᎤᎩᏁᏍᏗ	exposed-by-alignment
+WiganeaSpec	SG3		INFINITIVE	wuninesdi	ᎤᎩᏁᏍᏗ	exposed-by-alignment
+WiganeaSpec	SG3		INFINITIVE	wuninesdi	ᎤᎩᏁᏍᏗ	exposed-by-alignment
+WiganeaSpec	SG3		PRESENT	waninea	ᏫᏥᏁᎠ	exposed-by-alignment
+WiganeaSpec	SG3		PRESENT	waninea	ᏫᏥᏁᎠ	exposed-by-alignment
+WiganeaSpec	SG3		REMOTE_PAST	wuninesvi	ᎤᏩᎩᏁᏒᎢ	exposed-by-alignment
+WiganeaSpec	SG3		REMOTE_PAST	wuninesvi	ᎤᏩᎩᏁᏒᎢ	exposed-by-alignment
+WiganeaSpec	SG3		REMOTE_PAST	wuninesvi	ᎤᏩᎩᏁᏒᎢ	exposed-by-alignment
+WiganegiaSpec	SG2		HABITUAL	hwinegisgoi	ᎯᏥᏁᎩᏍᎪᎢ	exposed-by-alignment
+WiganegiaSpec	SG2		INFINITIVE	wijanegisdi	ᏣᎩᏁᎩᏍᏗ	exposed-by-alignment
+WiganegiaSpec	SG2		PRESENT	hwinegia	ᎯᏥᏁᎩᎠ	exposed-by-alignment
+WiganegiaSpec	SG2		REMOTE_PAST	wijanegisvi	ᏣᏩᎩᏁᎩᏒᎢ	exposed-by-alignment
+WiganegiaSpec	SG3		HABITUAL	waninegisgoi	ᏫᏥᏁᎩᏍᎪᎢ	exposed-by-alignment
+WiganegiaSpec	SG3		HABITUAL	waninegisgoi	ᏫᏥᏁᎩᏍᎪᎢ	exposed-by-alignment
+WiganegiaSpec	SG3		INFINITIVE	wuninegisdi	ᎤᎩᏁᎩᏍᏗ	exposed-by-alignment
+WiganegiaSpec	SG3		INFINITIVE	wuninegisdi	ᎤᎩᏁᎩᏍᏗ	exposed-by-alignment
+WiganegiaSpec	SG3		INFINITIVE	wuninegisdi	ᎤᎩᏁᎩᏍᏗ	exposed-by-alignment
+WiganegiaSpec	SG3		PRESENT	waninegia	ᏫᏥᏁᎩᎠ	exposed-by-alignment
+WiganegiaSpec	SG3		PRESENT	waninegia	ᏫᏥᏁᎩᎠ	exposed-by-alignment
+WiganegiaSpec	SG3		REMOTE_PAST	wuninegisvi	ᎤᏩᎩᏁᎩᏒᎢ	exposed-by-alignment
+WiganegiaSpec	SG3		REMOTE_PAST	wuninegisvi	ᎤᏩᎩᏁᎩᏒᎢ	exposed-by-alignment
+WiganegiaSpec	SG3		REMOTE_PAST	wuninegisvi	ᎤᏩᎩᏁᎩᏒᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG2		HABITUAL	hwinehvsgoi	ᎯᏁᎲᏍᎪᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG2		INFINITIVE	wijanehdi	ᏣᏁᏗ	exposed-by-alignment
+WiganehvsgaSpec	SG2		PRESENT	hwinehvsga	ᎯᏁᎲᏍᎦ	exposed-by-alignment
+WiganehvsgaSpec	SG2		REMOTE_PAST	wijanehnvi	ᏣᏁᏅᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG3		HABITUAL	waninehvsgoi	ᏫᎦᏁᎲᏍᎪᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG3		INFINITIVE	wunihehdi	ᎤᏁᏗ	exposed-by-alignment
+WiganehvsgaSpec	SG3		INFINITIVE	wunihehdi	ᎤᏁᏗ	exposed-by-alignment
+WiganehvsgaSpec	SG3		INFINITIVE	wunihehdi	ᎤᏁᏗ	exposed-by-alignment
+WiganehvsgaSpec	SG3		PRESENT	waninehvsga	ᏫᎦᏁᎲᏍᎦ	exposed-by-alignment
+WiganehvsgaSpec	SG3		REMOTE_PAST	wuninehnvi	ᎤᏁᏅᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG3		REMOTE_PAST	wuninehnvi	ᎤᏁᏅᎢ	exposed-by-alignment
+WiganehvsgaSpec	SG3		REMOTE_PAST	wuninehnvi	ᎤᏁᏅᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG2		HABITUAL	hwinvvsgoi	ᎯᏅᎥᏍᎪᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG2		INFINITIVE	wijanvdi	ᏣᏅᏗ	exposed-by-alignment
+WiganvvsgaSpec	SG2		PRESENT	hwinvvsga	ᎯᏅᎥᏍᎦ	exposed-by-alignment
+WiganvvsgaSpec	SG2		REMOTE_PAST	wijanvnvi	ᏣᏅᏅᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG3		HABITUAL	waninvvsgoi	ᏫᎦᏅᎥᏍᎪᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG3		INFINITIVE	wuninvdi	ᎤᏅᏗ	exposed-by-alignment
+WiganvvsgaSpec	SG3		INFINITIVE	wuninvdi	ᎤᏅᏗ	exposed-by-alignment
+WiganvvsgaSpec	SG3		INFINITIVE	wuninvdi	ᎤᏅᏗ	exposed-by-alignment
+WiganvvsgaSpec	SG3		PRESENT	waninvvsga	ᏫᎦᏅᎥᏍᎦ	exposed-by-alignment
+WiganvvsgaSpec	SG3		REMOTE_PAST	wuninvnvi	ᎤᏅᏅᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG3		REMOTE_PAST	wuninvnvi	ᎤᏅᏅᎢ	exposed-by-alignment
+WiganvvsgaSpec	SG3		REMOTE_PAST	wuninvnvi	ᎤᏅᏅᎢ	exposed-by-alignment
+YigiSpec	SG3		INFINITIVE	gesesdi	ᎤᏎᏍᏗ	exposed-by-alignment
+YigiSpec	SG3		REMOTE_PAST	gesoi	ᎤᎨᏐᎢ	exposed-by-alignment

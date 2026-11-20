@@ -25,18 +25,19 @@ class UsdvdiaSpec extends VerbBaseSpec {
     def "conjugating Usdvdia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Usdvdia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agisdvdia"
-        "SG1" | "" | Tense.HABITUAL        | "agisdvdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisdvdvi"
+        "SG1" | "" | Tense.PRESENT         | "aksdvdia"
+        "SG1" | "" | Tense.HABITUAL        | "aksdvdisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksdvdvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agisdvdvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisdvdisdi"
-        "SG2" | "" | Tense.PRESENT         | "tsasdvdia"
-        "SG2" | "" | Tense.HABITUAL        | "tsasdvdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasdvdvi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksdvdisdi"
+        "SG2" | "" | Tense.PRESENT         | "tsdvdia"
+        "SG2" | "" | Tense.HABITUAL        | "tsdvdisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsdvdvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsasdvdvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasdvdisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsdvdisdi"
         "SG3" | "" | Tense.PRESENT         | "usdvdia"
         "SG3" | "" | Tense.HABITUAL        | "usdvdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usdvdvi"

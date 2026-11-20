@@ -23,32 +23,33 @@ class EdoaSpec extends VerbBaseSpec {
     def "conjugating Edoa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Edoa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gedoa"
-        "SG1" | "" | Tense.HABITUAL        | "gesgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquedolvi"
+        "SG1" | "" | Tense.HABITUAL        | "gedosgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwedolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gedolvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiwedasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwedasdi"
         "SG2" | "" | Tense.PRESENT         | "hedoa"
-        "SG2" | "" | Tense.HABITUAL        | "hesgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsedolvi"
+        "SG2" | "" | Tense.HABITUAL        | "hedosgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jedolvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hedolvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawedasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jedasdi"
         "SG3" | "" | Tense.PRESENT         | "edoa"
         "SG3" | "" | Tense.HABITUAL        | "edosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwedolvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "edolvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwedasdi"
         "PL3" | "" | Tense.PRESENT         | "anedoa"
-        "PL3" | "" | Tense.HABITUAL        | "anesgoi"
+        "PL3" | "" | Tense.HABITUAL        | "anedosgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unedolvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anedolvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwedasdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unedasdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idedoa"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idesgoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idedosgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igedolvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idedolvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwedasdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igedasdi"
     }
 }

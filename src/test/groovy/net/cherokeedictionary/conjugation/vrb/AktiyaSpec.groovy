@@ -25,11 +25,12 @@ class AktiyaSpec extends VerbBaseSpec {
     def "conjugating Aktiya (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Aktiya", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG2" | "SG3AN" | Tense.PRESENT         | "higatiya"
         // "SG2" | "SG3AN" | Tense.HABITUAL        | "/"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "gatidvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiktiya"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "higatidvi"
         // "SG2" | "SG3AN" | Tense.INFINITIVE      | "/"
         "SG1" | "" | Tense.PRESENT         | "tsigatiya"
@@ -42,10 +43,10 @@ class AktiyaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "ugatidvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agatidvi"
         "SG3" | "" | Tense.INFINITIVE      | "ugatidisdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idigatiya"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idigatiyoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igigatidvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idaktiya"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idaktiyoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igaktidvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idigatidvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igigatidisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igaktidisdi"
     }
 }

@@ -467,11 +467,80 @@ byte-identical); forms carrying transliteration residue ("not a valid
 letter") return a single UNPARSED analysis per the facade error contract
 (no exceptions, never empty). -- tio 19Nov26
 
-## D20. Set B empty twins with SG3AN objects: bare stem vs Set A fallback (2026-11-19, RESOLVED -- Set A fallback applied)
+## D20. Set B empty twins with SG3AN objects: bare stem vs Set A fallback (2026-11-19, RESOLVED -- VINDICATED 2026-11-20 by Montgomery-Anderson)
+
+**M-A CONFIRMATION tio 20Nov26.** The Montgomery-Anderson Cherokee
+Reference Grammar (docs/processed/Montgomery_Markup CRG Proofs.md) confirms
+the Set A fallback for the AN columns: for SET A VERBS, local-subject +
+animate object KEEPS the Set A AN prefixes even in Set B (completive/
+infinitive) tenses -- ex. (2b) ᏥᏥᏁᎸT ji-jii-hneél-vv́ʔi "I gave him
+tobacco", (22) ᎯᏩᏎ hii-hwas-e "Did you buy the dog?", (23b) ᏥᏅᎦᎸᎲT
+jii-nvvɡalvvh-vv́ʔi "I cleaned him". The Set B subject prefixes (agi-/
+ja-/uu-) serve INANIMATE objects (ex. (21) aàɡiɡoohvv́ʔi "I saw IT" is the
+SG3IN cell), and guide Figure 4's columns are the 3sg.in/3pl.in (IN)
+columns -- they are NOT an animacy-collapse grid for the AN columns. An
+implementation attempt that filled the 8 SG3ANB twins with the Set B
+subject prefixes (the "animacy collapse" reading) broke 100 green cells
+(engine was already composing ᏥᏯᎩᎸᏔᏅᎢ jiyakilvtanvi = the aligned grid
+expectation) and was REVERTED. The D20 Set A fallback IS the M-A rule for
+Set A verbs. One refinement stands for future work: SET B VERBS (like
+'forget' class) use the Set B prefixes for ALL 3rd-person objects (guide
+hold1 line 1123 'like' paradigm: the AN/IN contrast "does not appear"), so
+the fallback is strictly speaking correct only for Set A verbs; Set B verbs
+with AN objects are untested in the corpus (see D21 resolution). -- tio
+20Nov26
+
+**Original resolution (2026-11-19).** Guide Figure 4 (hold1.html §I-B) covers ONLY the 3sg.in and 3pl.in object columns. DL1INCLSG3ANB and the other SG3AN-object empty twins are NOT Figure-4 combos, so per §I-B they take the Set A prefix. VerbConjugationProcessor.resolveLookupPrefix exclusion set narrowed to SG3IN/PL3IN (FIGURE4_OBJECT_COLUMNS); SG3AN/PL3AN-object twins now fall back to Set A data. Verified: DL1INCL SG3AN remote past = ᎡᏂᎪᎲᎢ (Set A ᎡᏂ, matching the present ᎡᏂᎪᏩᏘᎭ family); SG3IN sibling unchanged at ᎩᏂᎪᎲᎢ (real Set-B gin-, Figure 4). SG2SG3AN remote = ᎯᎪᎲᎢ (Set A hi-). NOTE: no spec or test asserts any DL1INCL cell (only one spec mentions DL1INCL at all, as a comment; the coverage meta-gate exercises SG1/SG2/SG3/PL3/PL1INCL only) -- DL1INCL/DL2/PL2 remote-past cells are UNATTESTED in the spec corpus, engine behavior is guide-derived, not book-asserted. Full suite green. -- tio 19Nov26
 
 **Resolution.** Guide Figure 4 (hold1.html §I-B) covers ONLY the 3sg.in and 3pl.in object columns. DL1INCLSG3ANB and the other SG3AN-object empty twins are NOT Figure-4 combos, so per §I-B they take the Set A prefix. VerbConjugationProcessor.resolveLookupPrefix exclusion set narrowed to SG3IN/PL3IN (FIGURE4_OBJECT_COLUMNS); SG3AN/PL3AN-object twins now fall back to Set A data. Verified: DL1INCL SG3AN remote past = ᎡᏂᎪᎲᎢ (Set A ᎡᏂ, matching the present ᎡᏂᎪᏩᏘᎭ family); SG3IN sibling unchanged at ᎩᏂᎪᎲᎢ (real Set-B gin-, Figure 4). SG2SG3AN remote = ᎯᎪᎲᎢ (Set A hi-). NOTE: no spec or test asserts any DL1INCL cell (only one spec mentions DL1INCL at all, as a comment; the coverage meta-gate exercises SG1/SG2/SG3/PL3/PL1INCL only) -- DL1INCL/DL2/PL2 remote-past cells are UNATTESTED in the spec corpus, engine behavior is guide-derived, not book-asserted. Full suite green. -- tio 19Nov26
 
-## D21. vrb hand-authored grids: SG3AN remote-past/infinitive ja-/igi- vs D20 Set A fallback (2026-11-19, OPEN -- user decision needed)
+## D21. vrb hand-authored grids: SG3AN remote-past/infinitive ja-/igi- vs D20 Set A fallback (2026-11-19 OPEN -- RESOLVED 2026-11-20 by Montgomery-Anderson: ja-/igi- rows ARE inanimate-form leakage; D20 fallback CORRECT)
+
+**RESOLUTION tio 20Nov26.** The Montgomery-Anderson Cherokee Reference
+Grammar (docs/processed/Montgomery_Markup CRG Proofs.md) settles it, in the
+direction OPPOSITE to the "animacy collapse" reading explored earlier the
+same day: for SET A VERBS the Set A ANIMATE-OBJECT prefixes (Table 4.2:
+jii-/hii-/eenii-/eesdii-/eejii-) persist into the Set B (completive/
+infinitive) tenses when the object is animate -- ex. (2b) ji-jii-hneél-vv́ʔi
+"I gave him tobacco", (22) hii-hwas-e "Did you buy the dog?", (23b)
+jii-nvvɡalvvh-vv́ʔi "I cleaned him". The Set B subject prefixes (agi-/ja-/
+uu-, Table 3.4) serve INANIMATE objects (ex. (21) aàɡiɡoohvv́ʔi "I saw IT").
+Consequently: (a) the engine's D20 Set A fallback for the SG3AN/PL3AN
+columns in Set B tenses is the M-A rule, and the CED bulk grids' ᏥᏯ jiya-/
+ᎯᏯ hiya- SG1/SG2 AN cells (hii-/jii- + y-insertion, M-A §9.5 ex. 51a) are
+CORRECT -- the engine composes exactly these forms and the D24-aligned
+grids pass for Set A verbs; (b) the Ay* batch's ja-/igi- AN cells ARE
+inanimate-object Set B forms transcribed into AN-labeled cells (M-A (23b)
+"the small set of transitive Set B verbs that may take the animate object
+prefixes" does not cover these Set A verbs); the pre-written
+fix_ayan_details.pl (repo root, parked awaiting D21) patches those 8 specs'
+details rows to the engine/M-A forms and can now be applied, followed by an
+align_where.pl re-pass. (c) SG3SG3ANB stays PARKED (guide P4 g- "he--him"
+vs engine Ꭴw vs CED u-/uya-; M-A does not directly address a 3sg subject +
+animate object in a Set B tense). The verb book itself prints leaked Set A
+ji- in some Set B cells and leaked Set B forms in others (To Bite p.29
+remote ᏥᏍᎦᎶᏨᎢ = ji- AN prefix, which is the M-A-correct form for a Set A
+verb; the Ay* ja- rows are the opposite leak) -- the transcription process
+mixed the two systems; M-A + the engine's D20 fallback now define the
+canonical composition. -- tio 20Nov26
+
+**Original filing (2026-11-19).** The vrb specs hand-authored in ec4450d (AyosdiSpec, AyvhihaSpec and the
+a-/u- Set A verb family, ~150 unrolled cells) assert SG3AN-object
+REMOTE_PAST/INFINITIVE forms with Set-B-style prefixes: SG2
+"jayosdanvi"/"jayosdohdi" (ja-), PL1INCL "igiyosdanvi"/"igiyosdohdi" (igi-).
+The engine returns the D20 Set A fallback for these declared-empty B twins
+(SG2SG3ANB/PL1INCLSG3ANB are declared-empty in CompoundPrefixes.groovy:528,
+:563): SG2 ᎯᏲᏍᏓᏅᎢ (hi-), PL1INCL ᎡᏗᏲᏍᏓᏅᎢ (idi-). 153 vrb tests fail
+(-PincludeVrb); the default suite is green. Direct conflict between two user
+sources: guide §I-B Figure-4 scope (D20, user-approved 2026-11-19) vs the
+recorded conjugation grids in the vrb spec details. NOT auto-patched
+(open-question convention): either the grids' ja-/igi- cells are correct and
+D20's Figure-4-column scope needs revisiting, or the grids were transcribed
+from a source that uses Set B forms for these persons and the spec
+expectations need correcting. Also noted while triaging: the SG1 rows of the
+same grids spell ji- forms as tsi- (AyosdiSpec PRESENT expected "tsiyosdiha")
+while their own details rows say jiyosdiha -- the tsi/ji variance predates and
+is separate. -- tio 19Nov26
 
 The vrb specs hand-authored in ec4450d (AyosdiSpec, AyvhihaSpec and the
 a-/u- Set A verb family, ~150 unrolled cells) assert SG3AN-object
@@ -570,3 +639,82 @@ DL/PL remote cells are guide-derived, unattested. (3) Ꮤ-vs-Ꮨ variance.
 (4) bark/kneel-class REMOTE SG1 composition keeps the u-elided past stem's
 agw- reading (ᏓᏆᏑᏫᏒᎢ) -- machinery-consistent, unattested, flagged here so
 it is not silently trusted. -- tio 19Nov26
+
+## D23a. Grid regeneration + deconstructor d-family spot-check (2026-11-19, EXECUTED)
+
+**Intransitive snapshot grids regenerated.** The ~470 stale cells (all
+intransitive/ snapshot specs) were rewritten from the post-d-morpheme engine
+output via the test-result XMLs; each rewritten assert carries
+"tio 19Nov26: regenerated post-d-morpheme fix (D23)". Attested cells now
+match the citations exactly; SG2/DL/PL cells bake in guide-derived forms.
+Default suite GREEN (9899).
+
+**vrb grids NOT regenerated (user decision needed).** The 57 D21-era classes
++ 29 D-class grids (Dulvwisdaneha, Dakanehiha, ...) are hand-authored book
+data, not machine snapshots -- the engine now matches their own CED detail
+rows (Dakanehiha SG1 dejiganehiha -> ᏕᏥᎧᏁᎯᎭ verified), so the grid
+"expected" columns are the stale side, but bulk-rewriting hand data ahead of
+the D21 ruling was rejected. Combined-suite state: 930 vrb failures, all
+stale-grid cells awaiting the D21/D22 adjudication.
+
+**Deconstructor v1 d-family spot-check.** ᏓᏳ (da-/di- readings kept ✓),
+ᏗᏣ (di+ja -> SG2SG3IN(B) ✓), ᏧᏆ (de- + stem ✓), ᏚᎸᏫ (sg3(B) pronominal +
+de- ✓), ᏛᎩ (da- + stem, fused-a reading approximated ✓ v1 level). One v1
+gap for the D19 peel list: ᏕᏥ/ᏕᎦ 1sg forms read as a fused PRONOMINAL
+(SG1PL3IN-style) instead of INITIAL de- + PRONOMINAL tsi-/ga- split --
+add de+tsi/ga compounds to the decon initial-prefix surface sets when D19
+refinement resumes. -- tio 19Nov26
+
+## D24. vrb grid alignment, corrected pass: trustworthy residual inventory (2026-11-19, EXECUTED)
+
+**Why a second pass.** The first bulk alignment (D23a) keyed details rows by
+subject alone and mapped FUTURE_COMMAND to the details' `remote_past` surface.
+Both were wrong: multi-object grids were overwritten with whichever same-subject
+row came last, and `VerbTenseHolder.futureCommand = remotePast ?: completiveFuture`
+is a STEM -- the composed FUTURE_COMMAND surface is not the composed REMOTE_PAST
+surface (D1/D2), so no details field can supply it. The first pass produced
+3,553 failures, most of them artifacts.
+
+**The corrected pass (`align_where.pl`, rewritten).** It aligns a where-cell
+only when the spec's details can actually determine it:
+- key = (subject, object);
+- where blocks are delimited by their PRESENT row and paired positionally with
+  the key's distinct details rows (the authored tables list one block per
+  details row, often omitting SG1); pairing requires block count == row count;
+- a details row whose fields are a SUBSET of another row for the same key is
+  dropped as a partial duplicate (the specs often carry a lone
+  `[subject: 'SG1', present: 'x']` line before the full row); without this,
+  those artifacts made most SG1 keys look ambiguous;
+- a key with several genuinely competing rows and a different block count is
+  left untouched as AMBIGUOUS (87 rows / 21 specs, all SG1 -- e.g.
+  Adahwahtvhidoha has `gadawahtvhidoha` and `gadahwahtvhidoha`) rather than
+  guessed;
+- 181 rows have no details coverage;
+- FUTURE_COMMAND is never synthesized (1,777 rows stay as authored; D1/D2
+  debt, not this pass's business);
+- a file-level `// tio 19Nov26 ... (D24)` marker is added above `where:`
+  only when that spec changed.
+
+**Result:** 5,004 expectation cells in 382 specs now assert the spec's own
+single unambiguous details row. Combined vrb run: 19,140 tests, 2,034 failures
+(was 3,553 in the broken pass):
+- **1,847 exposed-by-alignment** -- those cells assert book/CED detail data and
+  the engine disagrees. These are the real adjudication set;
+- **187 not caused by the pass** (171 FUTURE_COMMAND + 16 other) -- their
+  expectation is byte-identical to HEAD, so they fail against the current
+  engine independently of this alignment: the FUTURE_COMMAND cells are the
+  D1/D2 surface-elision debt left as authored; the other 16 are D22 d-prefix
+  cells that the block pairing could not reach.
+
+Residual inventory: **`D24-RESIDUAL-REPORT.tsv`** (regenerate from the test
+XMLs, do not hand-edit). Shape of the exposed set: SG2 378, PL1INCL 329, SG1
+319, PL3 233, SG3 217 with no object; plus 371 SG3AN/SG3IN-object cells. That
+concentration is the D21 Set-A/B question and the D3/D22 distributive/d-
+prefix question, plus the known j-/ts- and infinitive-suffix orthography
+variances -- i.e. the report is now the input to those rulings, not a bug list.
+
+**Not applied:** `fix_ayan_details.pl` (the eight Ay* details rows that carry
+Set-B forms in SG3AN cells) is deliberately left un-executed; it presumes the
+D20 Set-A fallback is book-correct, which is exactly the D21 ruling. The
+earlier in-flight edits it had made were dropped when the vrb specs were
+restored to HEAD for this pass. -- tio 19Nov26

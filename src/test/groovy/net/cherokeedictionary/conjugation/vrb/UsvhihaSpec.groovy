@@ -24,27 +24,28 @@ class UsvhihaSpec extends VerbBaseSpec {
     def "conjugating Usvhiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Usvhiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "agisvhiha"
-        "SG1" | "" | Tense.HABITUAL        | "agisvhihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisvtlvi"
+        "SG1" | "" | Tense.PRESENT         | "aksvhiha"
+        "SG1" | "" | Tense.HABITUAL        | "aksvhihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksvhlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agisvtlvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksvsdi"
         "SG3" | "" | Tense.PRESENT         | "usvhiha"
         "SG3" | "" | Tense.HABITUAL        | "usvhihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usvtlvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usvhlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "usvtlvi"
         "SG3" | "" | Tense.INFINITIVE      | "usvsdi"
         "SG3" | "" | Tense.PRESENT         | "usvhiha"
         "SG3" | "" | Tense.HABITUAL        | "usvhihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usvtlvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usvhlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "usvtlvi"
         "SG3" | "" | Tense.INFINITIVE      | "usvsdi"
-        "SG3" | "" | Tense.PRESENT         | "usvhiha"
-        "SG3" | "" | Tense.HABITUAL        | "usvhihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usvtlvi"
+        "SG3" | "" | Tense.PRESENT         | "iksvhiha"
+        "SG3" | "" | Tense.HABITUAL        | "iksvhihoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "iksvhlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "usvtlvi"
-        "SG3" | "" | Tense.INFINITIVE      | "usvsdi"
+        "SG3" | "" | Tense.INFINITIVE      | "iksvsdi"
     }
 }

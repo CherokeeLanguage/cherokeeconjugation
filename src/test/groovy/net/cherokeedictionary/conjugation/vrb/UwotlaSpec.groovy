@@ -23,16 +23,17 @@ class UwotlaSpec extends VerbBaseSpec {
     def "conjugating Uwotla (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uwotla", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aquotla"
-        "SG1" | "" | Tense.HABITUAL        | "aquotloi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquotlvi"
+        "SG1" | "" | Tense.PRESENT         | "agwotla"
+        "SG1" | "" | Tense.HABITUAL        | "agwotloi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwotlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquotlvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "tsotla"
-        "SG2" | "" | Tense.HABITUAL        | "tsotloi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsotlvi"
+        "SG2" | "" | Tense.PRESENT         | "jotla"
+        "SG2" | "" | Tense.HABITUAL        | "jotloi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jotlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsotlvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "uwotla"
@@ -40,14 +41,14 @@ class UwotlaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "uwotlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uwotlvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "unotla"
+        "PL3" | "" | Tense.PRESENT         | "dunotla"
         // "PL3" | "" | Tense.HABITUAL        | "/"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unotlvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "anina"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unotlvi"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
-        "PL1INCL" | "" | Tense.PRESENT         | "igotla"
+        "PL1INCL" | "" | Tense.PRESENT         | "degotla"
         // "PL1INCL" | "" | Tense.HABITUAL        | "/"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igotlvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "idina"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igotlvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "/"
     }

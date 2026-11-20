@@ -25,6 +25,7 @@ class AgoliyeaSpec extends VerbBaseSpec {
     def "conjugating Agoliyea (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Agoliyea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsigoliyea"
@@ -34,9 +35,9 @@ class AgoliyeaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "agigoliyedi"
         "SG2" | "" | Tense.PRESENT         | "higoliyea"
         "SG2" | "" | Tense.HABITUAL        | "higoliyesgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsagoliyevi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jagoliyevi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "higoliyevi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsagoliyedi"
+        "SG2" | "" | Tense.INFINITIVE      | "jagoliyedi"
         "SG3" | "" | Tense.PRESENT         | "agoliyea"
         "SG3" | "" | Tense.HABITUAL        | "agoliyesgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ugoliyevi"

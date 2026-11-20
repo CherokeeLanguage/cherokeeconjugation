@@ -28,10 +28,11 @@ class GanhgaSpec extends VerbBaseSpec {
     def "conjugating Ganhga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganhga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsinvga"
-        "SG1" | "" | Tense.HABITUAL        | "tsinvgoi"
+        "SG1" | "" | Tense.HABITUAL        | "jinvgoi"
         // tio 17Nov26: REMOTE_PAST UNATTESTED -- the 2012 book (Lying Down, Ganhga) prints x in the remote column for every subject row; yaml junk value dropped.
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinv"
         // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Ganhga has no infinitive column; yaml junk value dropped.

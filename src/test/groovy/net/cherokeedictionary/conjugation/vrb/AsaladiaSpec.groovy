@@ -25,6 +25,7 @@ class AsaladiaSpec extends VerbBaseSpec {
     def "conjugating Asaladia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asaladia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsisaladia"
@@ -34,9 +35,9 @@ class AsaladiaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "agisaladodi"
         "SG2" | "" | Tense.PRESENT         | "hisaladia"
         "SG2" | "" | Tense.HABITUAL        | "hisaladisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasaladanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsaladanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisaladanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasaladodi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsaladodi"
         "SG3" | "" | Tense.PRESENT         | "asaladia"
         "SG3" | "" | Tense.HABITUAL        | "asaladisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usaladanvi"
@@ -49,8 +50,8 @@ class AsaladiaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.INFINITIVE      | "unisaladodi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisaladia"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisaladisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisaladanvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksaladanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisaladanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisaladodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iksaladodi"
     }
 }

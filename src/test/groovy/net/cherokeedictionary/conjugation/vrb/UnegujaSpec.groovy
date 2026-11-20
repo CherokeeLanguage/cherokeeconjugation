@@ -26,16 +26,17 @@ class UnegujaSpec extends VerbBaseSpec {
     def "conjugating Uneguja (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uneguja", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aginegutsa"
-        "SG1" | "" | Tense.HABITUAL        | "aginegutsoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginegutsvi"
+        "SG1" | "" | Tense.HABITUAL        | "aginegujoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aginegujvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aginegutsvi"
         // tio 17Nov26: INFINITIVE UNATTESTED -- the 2012 book box for Uneguja has no infinitive column; yaml junk dropped.
-        "SG2" | "" | Tense.PRESENT         | "tsanegutsa"
-        "SG2" | "" | Tense.HABITUAL        | "tsanegutsoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanegutsvi"
+        "SG2" | "" | Tense.PRESENT         | "janeguja"
+        "SG2" | "" | Tense.HABITUAL        | "janegujoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janegujvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsanegutsvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "unegutsa"
@@ -43,14 +44,14 @@ class UnegujaSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "unegutsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "unegutsvi"
         // "SG3" | "" | Tense.INFINITIVE      | "X"
-        "PL3" | "" | Tense.PRESENT         | "uninegutsa"
-        "PL3" | "" | Tense.HABITUAL        | "uninegutsoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninegutsvi"
+        "PL3" | "" | Tense.PRESENT         | "unineguja"
+        "PL3" | "" | Tense.HABITUAL        | "uninegujoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "uninegujvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uninegutsvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
-        "PL1INCL" | "" | Tense.PRESENT         | "iginegutsa"
-        "PL1INCL" | "" | Tense.HABITUAL        | "iginegutsoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginegutsvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igineguja"
+        "PL1INCL" | "" | Tense.HABITUAL        | "iginegujoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginegujvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "iginegutsvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"
     }

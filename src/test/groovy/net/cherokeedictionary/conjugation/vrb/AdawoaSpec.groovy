@@ -25,18 +25,19 @@ class AdawoaSpec extends VerbBaseSpec {
     def "conjugating Adawoa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adawoa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadawoa"
         "SG1" | "" | Tense.HABITUAL        | "gadawosgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadawovi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadawovi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadawovi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquadawosdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwadawosdi"
         "SG2" | "" | Tense.PRESENT         | "hadawoa"
         "SG2" | "" | Tense.HABITUAL        | "hadawosgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadawovi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadawovi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadawovi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadawosdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadawosdi"
         "SG3" | "" | Tense.PRESENT         | "adawoa"
         "SG3" | "" | Tense.HABITUAL        | "adawosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udawovi"

@@ -25,18 +25,19 @@ class GosehaSpec extends VerbBaseSpec {
     def "conjugating Goseha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Goseha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyoseha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyosehoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyoselvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyoseha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyosehoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyoselvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyoselvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwosedi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyosehdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyoseha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyosehoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "oselvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyoselvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyoselvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "wosedi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyosehdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "oseha"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "gosehoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwoselvi"
@@ -44,13 +45,13 @@ class GosehaSpec extends VerbBaseSpec {
         "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwosedi"
         "PL3" | "SG3AN" | Tense.PRESENT         | "anoseha"
         "PL3" | "SG3AN" | Tense.HABITUAL        | "anosehoi"
-        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "anoselvi"
+        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unoselvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anoselvi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "aniwosedi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "unosehdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edoseha"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edosehoi"
-        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "oselvi"
+        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edoselvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edoselvi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "wosedi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "edosehdi"
     }
 }

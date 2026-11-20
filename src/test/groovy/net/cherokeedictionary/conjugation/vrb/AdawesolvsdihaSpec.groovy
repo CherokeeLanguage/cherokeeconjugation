@@ -25,32 +25,33 @@ class AdawesolvsdihaSpec extends VerbBaseSpec {
     def "conjugating Adawesolvsdiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adawesolvsdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadawesolvsdiha"
         "SG1" | "" | Tense.HABITUAL        | "gadawesolvsdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadawesolvstanvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadawesolvstanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadawesolvstanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquadawesolvsdodi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwadawesolvsdohdi"
         "SG2" | "" | Tense.PRESENT         | "hadawesolvsdiha"
         "SG2" | "" | Tense.HABITUAL        | "hadawesolvsdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadawesolvstanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadawesolvstanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadawesolvstanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadawesolvsdodi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadawesolvsdohdi"
         "SG3" | "" | Tense.PRESENT         | "adawesolvsdiha"
         "SG3" | "" | Tense.HABITUAL        | "adawesolvsdisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udawesolvstanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adawesolvstanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udawesolvsdodi"
+        "SG3" | "" | Tense.INFINITIVE      | "udawesolvsdohdi"
         "PL3" | "" | Tense.PRESENT         | "anadawesolvsdiha"
         "PL3" | "" | Tense.HABITUAL        | "anadawesolvsdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unadawesolvstanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadawesolvstanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadawesolvsdodi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadawesolvsdohdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idadawesolvsdiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idadawesolvsdisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadawesolvstanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadawesolvstanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadawesolvsdodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadawesolvsdohdi"
     }
 }

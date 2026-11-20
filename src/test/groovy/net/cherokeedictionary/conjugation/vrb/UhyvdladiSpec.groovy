@@ -19,12 +19,13 @@ class UhyvdladiSpec extends VerbBaseSpec {
     def "conjugating Uhyvdladi (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uhyvdladi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "uyvdladi"
-        "SG3" | "" | Tense.HABITUAL        | "uyvtloi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyvtlvi"
+        "SG3" | "" | Tense.PRESENT         | "uhyvdladi"
+        "SG3" | "" | Tense.HABITUAL        | "uhyvdloi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhyvdlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uyvtlvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyvdladisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhyvdladisdi"
     }
 }

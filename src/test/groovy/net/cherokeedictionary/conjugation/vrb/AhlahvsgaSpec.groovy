@@ -24,6 +24,7 @@ class AhlahvsgaSpec extends VerbBaseSpec {
     def "conjugating Ahlahvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahlahvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "tsitlahvsga"
@@ -31,20 +32,20 @@ class AhlahvsgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "agitlanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsitlanvi"
         "SG1" | "" | Tense.INFINITIVE      | "agitlodi"
-        "SG2" | "" | Tense.PRESENT         | "hitlahvsga"
-        "SG2" | "" | Tense.HABITUAL        | "hitlahvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlanvi"
+        "SG2" | "" | Tense.PRESENT         | "hihlahvsga"
+        "SG2" | "" | Tense.HABITUAL        | "hihlahvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tshlanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hitlanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsatlodi"
-        "SG3" | "" | Tense.PRESENT         | "atlahvsga"
-        "SG3" | "" | Tense.HABITUAL        | "atlahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "utlanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tshlodi"
+        "SG3" | "" | Tense.PRESENT         | "ahlahvsga"
+        "SG3" | "" | Tense.HABITUAL        | "ahlahvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhlahnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utlodi"
-        "SG3" | "" | Tense.PRESENT         | "atlahvsga"
-        "SG3" | "" | Tense.HABITUAL        | "atlahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "utlanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhlohdi"
+        "SG3" | "" | Tense.PRESENT         | "anahlahvsga"
+        "SG3" | "" | Tense.HABITUAL        | "anahlahvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unihlanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utlodi"
+        "SG3" | "" | Tense.INFINITIVE      | "unihlodi"
     }
 }

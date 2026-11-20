@@ -23,18 +23,19 @@ class AsgaiSpec extends VerbBaseSpec {
     def "conjugating Asgai (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asgai", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsisgai"
-        "SG1" | "" | Tense.HABITUAL        | "tsisgaoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisgalvi"
+        "SG1" | "" | Tense.PRESENT         | "jisgai"
+        "SG1" | "" | Tense.HABITUAL        | "jisgaoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksgalvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisgalvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisgasdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksgasdi"
         "SG2" | "" | Tense.PRESENT         | "hisgai"
         "SG2" | "" | Tense.HABITUAL        | "hisgaoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasgalvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsgalvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisgalvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasgasdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsgasdi"
         "SG3" | "" | Tense.PRESENT         | "asgai"
         "SG3" | "" | Tense.HABITUAL        | "asgaoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usgalvi"
@@ -42,13 +43,13 @@ class AsgaiSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.INFINITIVE      | "usgasdi"
         "PL3" | "" | Tense.PRESENT         | "anisgai"
         "PL3" | "" | Tense.HABITUAL        | "anisgaoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisgalvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unsgalvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anisgalvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unisgasdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unsgasdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisgai"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisgaoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisgalvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksgalvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisgalvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisgasdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iksgasdi"
     }
 }

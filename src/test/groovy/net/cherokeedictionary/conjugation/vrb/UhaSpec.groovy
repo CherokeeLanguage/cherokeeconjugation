@@ -25,6 +25,7 @@ class UhaSpec extends VerbBaseSpec {
     def "conjugating Uha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agiha"
@@ -32,9 +33,9 @@ class UhaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "agihvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agihvi"
         "SG1" | "" | Tense.INFINITIVE      | "agihdi"
-        "SG2" | "" | Tense.PRESENT         | "tsaha"
-        "SG2" | "" | Tense.HABITUAL        | "tsahoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsahvi"
+        "SG2" | "" | Tense.PRESENT         | "jaha"
+        "SG2" | "" | Tense.HABITUAL        | "jahoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsahvi"
         "SG2" | "" | Tense.INFINITIVE      | "jahdi"
         "SG3" | "" | Tense.PRESENT         | "uha"

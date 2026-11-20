@@ -24,27 +24,28 @@ class GakahiyaaSpec extends VerbBaseSpec {
     def "conjugating Gakahiyaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gakahiyaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyakahiyaa"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyakahiyasgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyakahiyvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyakahiyaa"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyakahiyasgoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyakahiyvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyakahiyvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyakahiyasdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyakahiyasdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyakahiyaa"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyakahiyasgoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "akahiyvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyakahiyvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyakahiyvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "akahiyasdi"
-        "SG1" | "" | Tense.PRESENT         | "gakahiyaa"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyakahiyasdi"
+        "SG1" | "" | Tense.PRESENT         | "jiyakahiyaa"
         "SG1" | "" | Tense.HABITUAL        | "gakahiyasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquakahiyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gakahiyvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquakahiyasdi"
-        "PL3" | "" | Tense.PRESENT         | "anakahiyaa"
-        "PL3" | "" | Tense.HABITUAL        | "anakahiyasgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unakahiyvi"
+        "PL3" | "" | Tense.PRESENT         | "anikahiyaa"
+        "PL3" | "" | Tense.HABITUAL        | "anikahiyasgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unikahiyvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anakahiyvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unakahiyasdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unikahiyasdi"
     }
 }

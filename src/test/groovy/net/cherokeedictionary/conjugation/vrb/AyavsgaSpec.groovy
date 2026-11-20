@@ -22,18 +22,19 @@ class AyavsgaSpec extends VerbBaseSpec {
     def "conjugating Ayavsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ayavsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyavsga"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyavsgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyanvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyavsga"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyavsgoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyanvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyanvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyodi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyodi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyavsga"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyavsgoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "yanvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyanvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyanvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "yodi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyodi"
         "SG3" | "" | Tense.PRESENT         | "ayavsga"
         "SG3" | "" | Tense.HABITUAL        | "ayavsgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uyanvi"

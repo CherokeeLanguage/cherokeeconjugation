@@ -25,6 +25,7 @@ class AdahwahtvhidohaSpec extends VerbBaseSpec {
     def "conjugating Adahwahtvhidoha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adahwahtvhidoha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadawadvhidoha"
@@ -32,25 +33,25 @@ class AdahwahtvhidohaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aquadawadvhidolvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gadawadvhidolvi"
         "SG1" | "" | Tense.INFINITIVE      | "aquadawadvhidasdi"
-        "SG2" | "" | Tense.PRESENT         | "hadawadvhidoha"
-        "SG2" | "" | Tense.HABITUAL        | "hadawadvhidohoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadawadvhidolvi"
+        "SG2" | "" | Tense.PRESENT         | "hadahwahtvhidoha"
+        "SG2" | "" | Tense.HABITUAL        | "hadahwahtvhidohoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadahwahtvhidolvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadawadvhidolvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadawadvhidasdi"
-        "SG3" | "" | Tense.PRESENT         | "adawadvhidoha"
-        "SG3" | "" | Tense.HABITUAL        | "adawadvhidohoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "udawadvhidolvi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadahwahtvhidasdi"
+        "SG3" | "" | Tense.PRESENT         | "adahwahtvhidoha"
+        "SG3" | "" | Tense.HABITUAL        | "adahwahtvhidohoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udahwahtvhidolvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "adawadvhidolvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udawadvhidasdi"
-        "PL3" | "" | Tense.PRESENT         | "anadawadvhidoha"
-        "PL3" | "" | Tense.HABITUAL        | "anadawadvhidohoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unadawadvhidolvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udahwahtvhidasdi"
+        "PL3" | "" | Tense.PRESENT         | "anadahwahtvhidoha"
+        "PL3" | "" | Tense.HABITUAL        | "anadahwahtvhidohoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unadahwahtvhidolvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anadawadvhidolvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadawadvhidasdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idadawadvhidoha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idadawadvhidohoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadawadvhidolvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadahwahtvhidasdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idadahwahtvhidoha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idadahwahtvhidohoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadahwahtvhidolvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idadawadvhidolvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadawadvhidasdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadahwahtvhidasdi"
     }
 }

@@ -39,6 +39,7 @@ class GanhjehaSpec extends VerbBaseSpec {
     def "conjugating Ganhjeha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganhjeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jinejeha"
@@ -46,20 +47,20 @@ class GanhjehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "jinejehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "jinejehvi"
         "SG1" | "" | Tense.INFINITIVE      | "jinejehi"
-        "SG2" | "" | Tense.PRESENT         | "hinatseha"
-        "SG2" | "" | Tense.HABITUAL        | "hinatsehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanatsehvi"
+        "SG2" | "" | Tense.PRESENT         | "hinhjeha"
+        "SG2" | "" | Tense.HABITUAL        | "hinhjehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hinhjehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinatsehvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanatsehi"
+        "SG2" | "" | Tense.INFINITIVE      | "hinhjehi"
         "SG1" | "" | Tense.PRESENT         | "jinejeha"
         "SG1" | "" | Tense.HABITUAL        | "jinejehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "jinejehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "jinejehvi"
         "SG1" | "" | Tense.INFINITIVE      | "jinejehi"
-        "PL3" | "" | Tense.PRESENT         | "aninatseha"
-        "PL3" | "" | Tense.HABITUAL        | "aninatsehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninatsehvi"
+        "PL3" | "" | Tense.PRESENT         | "aninhjeha"
+        "PL3" | "" | Tense.HABITUAL        | "aninhjehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "aninhjehvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninatsehvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninatsehi"
+        "PL3" | "" | Tense.INFINITIVE      | "aninhjehi"
     }
 }

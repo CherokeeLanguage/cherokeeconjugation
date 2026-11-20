@@ -27,28 +27,29 @@ class GudaleaSpec extends VerbBaseSpec {
     def "conjugating Gudalea (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gudalea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyudalea"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyudalesgoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyudalesvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyudalea"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyudalesgoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyudalesvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyudalesvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiwudalesdi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyudalesdi"
         "SG1" | "SG3IN" | Tense.PRESENT         | "gudalea"
         "SG1" | "SG3IN" | Tense.HABITUAL        | "gudalesgoi"
-        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "aquudalesvi"
+        "SG1" | "SG3IN" | Tense.REMOTE_PAST     | "agwudalesvi"
         "SG1" | "SG3IN" | Tense.FUTURE_COMMAND      | "gudalesvi"
-        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agiwudalesdi"
+        "SG1" | "SG3IN" | Tense.INFINITIVE      | "agwudalesdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyudalea"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyudalesgoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "udalesvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyudalesvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyudalesvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "wudalesdi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyudalesdi"
         "SG2" | "SG3IN" | Tense.PRESENT         | "hudalea"
         "SG2" | "SG3IN" | Tense.HABITUAL        | "hudalesgoi"
-        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "tsudalesvi"
+        "SG2" | "SG3IN" | Tense.REMOTE_PAST     | "judalesvi"
         "SG2" | "SG3IN" | Tense.FUTURE_COMMAND      | "hudalesvi"
-        "SG2" | "SG3IN" | Tense.INFINITIVE      | "tsawudalesdi"
+        "SG2" | "SG3IN" | Tense.INFINITIVE      | "judalesdi"
         "SG3" | "SG3IN" | Tense.PRESENT         | "gudalea"
         "SG3" | "SG3IN" | Tense.HABITUAL        | "gudalesgoi"
         "SG3" | "SG3IN" | Tense.REMOTE_PAST     | "uwudalesvi"
@@ -58,11 +59,11 @@ class GudaleaSpec extends VerbBaseSpec {
         "PL3" | "SG3IN" | Tense.HABITUAL        | "anudalesgoi"
         "PL3" | "SG3IN" | Tense.REMOTE_PAST     | "unudalesvi"
         "PL3" | "SG3IN" | Tense.FUTURE_COMMAND      | "anudalesvi"
-        "PL3" | "SG3IN" | Tense.INFINITIVE      | "uniwudalesdi"
+        "PL3" | "SG3IN" | Tense.INFINITIVE      | "unudalesdi"
         "PL1INCL" | "SG3IN" | Tense.PRESENT         | "idudalea"
         "PL1INCL" | "SG3IN" | Tense.HABITUAL        | "idudalesgoi"
         "PL1INCL" | "SG3IN" | Tense.REMOTE_PAST     | "igudalesvi"
         "PL1INCL" | "SG3IN" | Tense.FUTURE_COMMAND      | "idudalesvi"
-        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igiwudalesdi"
+        "PL1INCL" | "SG3IN" | Tense.INFINITIVE      | "igudalesdi"
     }
 }

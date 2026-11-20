@@ -23,12 +23,13 @@ class AgasgaSpec extends VerbBaseSpec {
     def "conjugating Agasga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Agasga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "agasga"
         "SG3" | "" | Tense.HABITUAL        | "agasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugananvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ugahnanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agananvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uganadi"
+        "SG3" | "" | Tense.INFINITIVE      | "uganhdi"
     }
 }

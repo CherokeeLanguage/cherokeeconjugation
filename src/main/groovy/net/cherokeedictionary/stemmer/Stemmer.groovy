@@ -819,19 +819,6 @@ public class Stemmer {
         if (e.imm != null && e.imm.startsWith("Ꮻ")) {
 			e.imm=discardPrefix(e.imm);
         }
-        // tio 19Nov26: d-morpheme family verbs routed through vowel-stems keep
-        // the sg3 u- their past/habitual/infinitive citations baked in
-        // (barking past ᏚᏑᏫᏒᎢ -> normalized ᎤᏑᏫᏒᎢ), so 1sg remote composed
-        // the spurious agw- reading (ᏓᏆᏑᏫᏒᎢ). For family verbs that Ꭴ is the
-        // sg3 PREFIX (de/da+u -> du), not a stem vowel like the forget-class
-        // uw- stems, so strip it and let composition re-supply u- per person.
-        if (normalizedDaInitialPrefix && !e.daUStripped) {
-            e.daUStripped = true
-            if (e.past.startsWith("Ꭴ")) { e.past = discardPrefix(e.past); }
-            if (e.habit.startsWith("Ꭴ")) { e.habit = discardPrefix(e.habit); }
-            if (e.inf.startsWith("Ꭴ")) { e.inf = discardPrefix(e.inf); }
-            if (e.imm != null && e.imm.startsWith("Ꭴ")) { e.imm = discardPrefix(e.imm); }
-        }
         List<StemEntry> list = new ArrayList<StemEntry>();
         list.add(new StemEntry(newPrefix(vowel, e.pres3), StemType.PresentContinous));
         list.add(new StemEntry(newPrefix(vowel, e.past), StemType.RemotePast));

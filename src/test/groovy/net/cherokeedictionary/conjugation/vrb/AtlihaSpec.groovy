@@ -23,32 +23,33 @@ class AtlihaSpec extends VerbBaseSpec {
     def "conjugating Atliha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Atliha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gatliha"
         "SG1" | "" | Tense.HABITUAL        | "gatlihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquatlilvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwvtlilvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatlilvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aqualosdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwalhsdi"
         "SG2" | "" | Tense.PRESENT         | "hatliha"
         "SG2" | "" | Tense.HABITUAL        | "hatlihoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlilvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jvtlilvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatlilvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsalosdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahlsdi"
         "SG3" | "" | Tense.PRESENT         | "atliha"
         "SG3" | "" | Tense.HABITUAL        | "atlihoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "utlilvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlilvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulosdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhlsdi"
         "PL3" | "" | Tense.PRESENT         | "anatliha"
         "PL3" | "" | Tense.HABITUAL        | "anatlihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatlilvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unvtlilvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anatlilvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unalosdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unahlsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idatliha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idatlihoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatlilvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igvtlilvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idatlilvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igalosdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igahlsdi"
     }
 }

@@ -21,22 +21,23 @@ class AgowatihaSpec extends VerbBaseSpec {
     def "conjugating Agowatiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Agowatiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "agowatiha"
         "SG3" | "" | Tense.HABITUAL        | "agowatisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ugohvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agohvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugowadvdi"
-        "PL3" | "" | Tense.PRESENT         | "anagowatiha"
-        "PL3" | "" | Tense.HABITUAL        | "anagowatisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unagohvi"
+        "SG3" | "" | Tense.INFINITIVE      | "ugowatvhdi"
+        "PL3" | "" | Tense.PRESENT         | "anigowatiha"
+        "PL3" | "" | Tense.HABITUAL        | "anigowatisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unigohvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anagohvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unagowadvdi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idagowatiha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idagowatisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igagohvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unigowatvhdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "idigowatiha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idigowatisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igigohvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idagohvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igagowadvdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igigowatvhdi"
     }
 }

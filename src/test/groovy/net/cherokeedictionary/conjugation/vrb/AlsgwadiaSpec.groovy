@@ -23,12 +23,13 @@ class AlsgwadiaSpec extends VerbBaseSpec {
     def "conjugating Alsgwadia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Alsgwadia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "alisquadia"
-        "SG3" | "" | Tense.HABITUAL        | "alisquadisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ulisquadvi"
+        "SG3" | "" | Tense.PRESENT         | "alsgwadia"
+        "SG3" | "" | Tense.HABITUAL        | "alsgwadisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "ulsgwadvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "alisquadvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulisquadisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulsgwadisdi"
     }
 }

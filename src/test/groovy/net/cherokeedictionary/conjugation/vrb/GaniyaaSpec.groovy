@@ -24,20 +24,21 @@ class GaniyaaSpec extends VerbBaseSpec {
     def "conjugating Ganiyaa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganiyaa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsiniyaa"
-        "SG1" | "" | Tense.HABITUAL        | "tsiniyasgoi"
+        "SG1" | "" | Tense.PRESENT         | "jiniyaa"
+        "SG1" | "" | Tense.HABITUAL        | "jiniyasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginiyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiniyvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginiyasdi"
         "SG2" | "" | Tense.PRESENT         | "hiniyaa"
         "SG2" | "" | Tense.HABITUAL        | "hiniyasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsaniyvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janiyvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiniyvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsaniyasdi"
-        "SG1" | "" | Tense.PRESENT         | "tsiniyaa"
-        "SG1" | "" | Tense.HABITUAL        | "tsiniyasgoi"
+        "SG2" | "" | Tense.INFINITIVE      | "janiyasdi"
+        "SG1" | "" | Tense.PRESENT         | "jiniyaa"
+        "SG1" | "" | Tense.HABITUAL        | "jiniyasgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginiyvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiniyvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginiyasdi"

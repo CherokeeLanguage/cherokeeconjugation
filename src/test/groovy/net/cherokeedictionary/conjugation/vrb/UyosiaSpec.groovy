@@ -23,32 +23,33 @@ class UyosiaSpec extends VerbBaseSpec {
     def "conjugating Uyosia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uyosia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agiyosia"
         "SG1" | "" | Tense.HABITUAL        | "agiyosisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiyosisgvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agiyosisgvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiyosisodi"
-        "SG2" | "" | Tense.PRESENT         | "tsayosia"
-        "SG2" | "" | Tense.HABITUAL        | "tsayosisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsayosisgvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyosisohdi"
+        "SG2" | "" | Tense.PRESENT         | "jayosia"
+        "SG2" | "" | Tense.HABITUAL        | "jayosisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jayosisgvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsayosisgvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsayosisodi"
+        "SG2" | "" | Tense.INFINITIVE      | "jayosisohdi"
         "SG3" | "" | Tense.PRESENT         | "uyosia"
         "SG3" | "" | Tense.HABITUAL        | "uyosisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uyosisgvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uyosisgvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyosisodi"
-        "PL3" | "" | Tense.PRESENT         | "uniyosia"
-        "PL3" | "" | Tense.HABITUAL        | "uniyosisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniyosisgvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyosisohdi"
+        "PL3" | "" | Tense.PRESENT         | "duniyosia"
+        "PL3" | "" | Tense.HABITUAL        | "duniyosisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "duniyosisgvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniyosisgvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniyosisodi"
-        "PL1INCL" | "" | Tense.PRESENT         | "igiyosia"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igiyosisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyosisgvi"
+        "PL3" | "" | Tense.INFINITIVE      | "juniyosisohdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "degiyosia"
+        "PL1INCL" | "" | Tense.HABITUAL        | "degiyosisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degiyosisgvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiyosisgvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyosisodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "digiyosisohdi"
     }
 }

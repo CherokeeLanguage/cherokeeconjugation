@@ -24,6 +24,7 @@ class GadvvsgaSpec extends VerbBaseSpec {
     def "conjugating Gadvvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gadvvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadvvsga"
@@ -33,9 +34,9 @@ class GadvvsgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "aquadvdi"
         "SG2" | "" | Tense.PRESENT         | "hadvvsga"
         "SG2" | "" | Tense.HABITUAL        | "hadvvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvnvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadvnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadvnvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadvdi"
         "SG1" | "" | Tense.PRESENT         | "gadvvsga"
         "SG1" | "" | Tense.HABITUAL        | "gadvvsgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aquadvnvi"

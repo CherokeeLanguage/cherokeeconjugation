@@ -23,12 +23,13 @@ class AhyvdagwaloaSpec extends VerbBaseSpec {
     def "conjugating Ahyvdagwaloa (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahyvdagwaloa", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "ayvdaqualoa"
-        "SG3" | "" | Tense.HABITUAL        | "ayvdaqualosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyvdaqualovi"
+        "SG3" | "" | Tense.PRESENT         | "ahyvdagwaloa"
+        "SG3" | "" | Tense.HABITUAL        | "ahyvdagwalosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhyvdagwalovi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayvdaqualovi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyvdaqualosdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhyvdagwalosdi"
     }
 }

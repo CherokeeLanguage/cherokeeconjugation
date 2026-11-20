@@ -21,9 +21,10 @@ class GalihwogaSpec extends VerbBaseSpec {
     def "conjugating Galihwoga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Galihwoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsiliwoga"
+        "SG1" | "" | Tense.PRESENT         | "jiliwoga"
         "SG1" | "" | Tense.HABITUAL        | "tsiliwogoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiliwotsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiliwotsvi"

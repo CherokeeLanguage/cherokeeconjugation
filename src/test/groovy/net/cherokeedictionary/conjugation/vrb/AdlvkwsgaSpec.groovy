@@ -30,27 +30,28 @@ class AdlvkwsgaSpec extends VerbBaseSpec {
     def "conjugating Adlvkwsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adlvkwsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "gatlvquasga"
-        "SG1" | "" | Tense.HABITUAL        | "gatlvquasgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquatlvquvsvi"
+        "SG1" | "" | Tense.PRESENT         | "gadlvgwasga"
+        "SG1" | "" | Tense.HABITUAL        | "gadlvgwasgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "akdlvkwsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gatlvquvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquatlvquisdi"
-        "SG2" | "" | Tense.PRESENT         | "hatlvquasga"
-        "SG2" | "" | Tense.HABITUAL        | "hatlvquasgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatlvquvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "akdlvkwisdi"
+        "SG2" | "" | Tense.PRESENT         | "hadlvkwsga"
+        "SG2" | "" | Tense.HABITUAL        | "hadlvkwsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsdlvkwsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hatlvquvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsatlvquisdi"
-        "SG3" | "" | Tense.PRESENT         | "atlvquasga"
-        "SG3" | "" | Tense.HABITUAL        | "atlvquasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "utlvquvsvi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsdlvkwisdi"
+        "SG3" | "" | Tense.PRESENT         | "adlvkwsga"
+        "SG3" | "" | Tense.HABITUAL        | "adlvkwsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "udlvkwsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvquvsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utlvquisdi"
-        "SG3" | "" | Tense.PRESENT         | "atlvquasga"
-        "SG3" | "" | Tense.HABITUAL        | "atlvquasgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "utlvquvsvi"
+        "SG3" | "" | Tense.INFINITIVE      | "udlvkwisdi"
+        "SG3" | "" | Tense.PRESENT         | "idadlvkwsga"
+        "SG3" | "" | Tense.HABITUAL        | "idadlvkwsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "igadlvkwsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "atlvquvsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "utlvquisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "igadlvkwisdi"
     }
 }

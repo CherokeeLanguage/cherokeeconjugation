@@ -22,27 +22,28 @@ class AhyohihaSpec extends VerbBaseSpec {
     def "conjugating Ahyohiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ahyohiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsiyohiha"
-        "SG1" | "" | Tense.HABITUAL        | "tsiyohihoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agiyotlvi"
+        "SG1" | "" | Tense.PRESENT         | "jiyohiha"
+        "SG1" | "" | Tense.HABITUAL        | "jiyohihoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agihyohlvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiyotlvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiyohisdi"
-        "SG2" | "" | Tense.PRESENT         | "hiyohiha"
-        "SG2" | "" | Tense.HABITUAL        | "hiyohihoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsayotlvi"
+        "SG1" | "" | Tense.INFINITIVE      | "akiyohisdi"
+        "SG2" | "" | Tense.PRESENT         | "hihyohiha"
+        "SG2" | "" | Tense.HABITUAL        | "hihyohihoo"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahyohlvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiyotlvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsayohisdi"
-        "SG3" | "" | Tense.PRESENT         | "ayohiha"
-        "SG3" | "" | Tense.HABITUAL        | "ayohihoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uyotlvi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahyohisdi"
+        "SG3" | "" | Tense.PRESENT         | "ahyohiha"
+        "SG3" | "" | Tense.HABITUAL        | "ahyohihoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhyohlvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ayotlvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyohisdi"
-        "PL3" | "" | Tense.PRESENT         | "aniyohiha"
-        "PL3" | "" | Tense.HABITUAL        | "aniyohihoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniyotlvi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhyohisdi"
+        "PL3" | "" | Tense.PRESENT         | "anihyohiha"
+        "PL3" | "" | Tense.HABITUAL        | "anihyohihoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihyohlvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniyotlvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniyohisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unihyohisdi"
     }
 }

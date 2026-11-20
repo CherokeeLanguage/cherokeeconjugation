@@ -25,6 +25,7 @@ class AdelohosgaSpec extends VerbBaseSpec {
     def "conjugating Adelohosga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Adelohosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gadelohosga"
@@ -34,9 +35,9 @@ class AdelohosgaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.INFINITIVE      | "aquadelohohisdi"
         "SG2" | "" | Tense.PRESENT         | "hadelohosga"
         "SG2" | "" | Tense.HABITUAL        | "hadelohosgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadelohosvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadelohosvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hadelohosvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadelohohisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadelohohisdi"
         "SG3" | "" | Tense.PRESENT         | "adelohosga"
         "SG3" | "" | Tense.HABITUAL        | "adelohosgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udelohosvi"

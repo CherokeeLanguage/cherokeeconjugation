@@ -25,18 +25,19 @@ class GanosgiaSpec extends VerbBaseSpec {
     def "conjugating Ganosgia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganosgia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinosgia"
-        "SG1" | "" | Tense.HABITUAL        | "tsinosgisgoi"
+        "SG1" | "" | Tense.PRESENT         | "jinosgia"
+        "SG1" | "" | Tense.HABITUAL        | "jinosgisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginosgisvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinosgisvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginosgisdi"
         "SG2" | "" | Tense.PRESENT         | "hinosgia"
         "SG2" | "" | Tense.HABITUAL        | "hinosgisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanosgisvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janosgisvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinosgisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanosgisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "janosgisdi"
         "SG3" | "" | Tense.PRESENT         | "ganosgia"
         "SG3" | "" | Tense.HABITUAL        | "ganosgisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "unosgisvi"

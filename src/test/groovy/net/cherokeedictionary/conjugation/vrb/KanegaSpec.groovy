@@ -25,32 +25,33 @@ class KanegaSpec extends VerbBaseSpec {
     def "conjugating Kanega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Kanega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinega"
-        "SG1" | "" | Tense.HABITUAL        | "tsinegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aginetsvi"
+        "SG1" | "" | Tense.PRESENT         | "jinega"
+        "SG1" | "" | Tense.HABITUAL        | "jinegoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "akinejvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinetsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginesdi"
+        "SG1" | "" | Tense.INFINITIVE      | "akihnesdi"
         "SG2" | "" | Tense.PRESENT         | "hinega"
         "SG2" | "" | Tense.HABITUAL        | "hinegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanetsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jahnejvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinetsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanesdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jahnesdi"
         "SG3" | "" | Tense.PRESENT         | "kanega"
         "SG3" | "" | Tense.HABITUAL        | "kanegoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unetsvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uhnejvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganetsvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unesdi"
+        "SG3" | "" | Tense.INFINITIVE      | "uhnesdi"
         "PL3" | "" | Tense.PRESENT         | "aninega"
         "PL3" | "" | Tense.HABITUAL        | "aninegoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninetsvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unihnejvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninetsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninesdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unihnesdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idinega"
         "PL1INCL" | "" | Tense.HABITUAL        | "idinegoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iginetsvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igihnejvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idinetsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginesdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igihnesdi"
     }
 }

@@ -25,18 +25,19 @@ class UdegaSpec extends VerbBaseSpec {
     def "conjugating Udega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Udega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aquadega"
-        "SG1" | "" | Tense.HABITUAL        | "aquadegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadinvsvi"
+        "SG1" | "" | Tense.PRESENT         | "agwadega"
+        "SG1" | "" | Tense.HABITUAL        | "agwadegoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadinvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadinvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquadinvdi"
-        "SG2" | "" | Tense.PRESENT         | "tsadega"
-        "SG2" | "" | Tense.HABITUAL        | "tsadegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadinvsvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwadinvdi"
+        "SG2" | "" | Tense.PRESENT         | "jadega"
+        "SG2" | "" | Tense.HABITUAL        | "jadegoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadinvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadinvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadinvdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadinvdi"
         "SG3" | "" | Tense.PRESENT         | "udega"
         "SG3" | "" | Tense.HABITUAL        | "udegoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udinvsvi"

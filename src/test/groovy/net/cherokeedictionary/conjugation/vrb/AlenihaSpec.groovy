@@ -25,32 +25,33 @@ class AlenihaSpec extends VerbBaseSpec {
     def "conjugating Aleniha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Aleniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "galeniha"
+        "SG1" | "" | Tense.PRESENT         | "galenia"
         "SG1" | "" | Tense.HABITUAL        | "galenisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aqualenvhvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwalenvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "galenvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aqualenadi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwalenhdi"
         "SG2" | "" | Tense.PRESENT         | "haleniha"
         "SG2" | "" | Tense.HABITUAL        | "halenisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsalenvhvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jalenvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "halenvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsalenadi"
+        "SG2" | "" | Tense.INFINITIVE      | "jalenhdi"
         "SG3" | "" | Tense.PRESENT         | "aleniha"
         "SG3" | "" | Tense.HABITUAL        | "alenisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "ulenvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "alenvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ulenadi"
+        "SG3" | "" | Tense.INFINITIVE      | "ulenhdi"
         "PL3" | "" | Tense.PRESENT         | "analeniha"
         "PL3" | "" | Tense.HABITUAL        | "analenisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unalenvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "analenvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unalenadi"
+        "PL3" | "" | Tense.INFINITIVE      | "unalenhdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idaleniha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idalenisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igalenvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idalenvhvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igalenadi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igalenhdi"
     }
 }

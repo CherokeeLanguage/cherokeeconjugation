@@ -23,32 +23,33 @@ class UyohuseaSpec extends VerbBaseSpec {
     def "conjugating Uyohusea (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uyohusea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "agiyohusea"
         "SG1" | "" | Tense.HABITUAL        | "agiyohusehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiyohuselvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "agiyohuselvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiyohusedi"
-        "SG2" | "" | Tense.PRESENT         | "tsayohusea"
-        "SG2" | "" | Tense.HABITUAL        | "tsayohusehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsayohuselvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agiyohusehdi"
+        "SG2" | "" | Tense.PRESENT         | "jayohusea"
+        "SG2" | "" | Tense.HABITUAL        | "jayohusehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jayohuselvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsayohuselvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsayohusedi"
+        "SG2" | "" | Tense.INFINITIVE      | "jayohusehdi"
         "SG3" | "" | Tense.PRESENT         | "uyohusea"
         "SG3" | "" | Tense.HABITUAL        | "uyohusehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uyohuselvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "uyohuselvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uyohusedi"
+        "SG3" | "" | Tense.INFINITIVE      | "uyohusehdi"
         "PL3" | "" | Tense.PRESENT         | "uniyohusea"
         "PL3" | "" | Tense.HABITUAL        | "uniyohusehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uniyohuselvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "uniyohuselvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniyohusedi"
+        "PL3" | "" | Tense.INFINITIVE      | "uniyohusehdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igiyohusea"
         "PL1INCL" | "" | Tense.HABITUAL        | "igiyohusehoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igiyohuselvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igiyohuselvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyohusedi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igiyohusehdi"
     }
 }

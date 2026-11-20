@@ -24,27 +24,28 @@ class WahvsgaSpec extends VerbBaseSpec {
     def "conjugating Wahvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Wahvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "wahvsga"
         "SG3" | "" | Tense.HABITUAL        | "wahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "wuhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udi"
-        "SG2" | "" | Tense.PRESENT         | "hihvsga"
-        "SG2" | "" | Tense.HABITUAL        | "hihvsgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "wuhdi"
+        "SG2" | "" | Tense.PRESENT         | "hwihvsga"
+        "SG2" | "" | Tense.HABITUAL        | "hwihvsgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "wijahnvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadi"
+        "SG2" | "" | Tense.INFINITIVE      | "wijahdi"
         "SG3" | "" | Tense.PRESENT         | "wahvsga"
         "SG3" | "" | Tense.HABITUAL        | "wahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "wuhnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udi"
-        "SG3" | "" | Tense.PRESENT         | "wahvsga"
-        "SG3" | "" | Tense.HABITUAL        | "wahvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unvi"
+        "SG3" | "" | Tense.INFINITIVE      | "wuhdi"
+        "SG3" | "" | Tense.PRESENT         | "wanihvsga"
+        "SG3" | "" | Tense.HABITUAL        | "wanihvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "wunihnvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "ganvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udi"
+        "SG3" | "" | Tense.INFINITIVE      | "wunihdi"
     }
 }

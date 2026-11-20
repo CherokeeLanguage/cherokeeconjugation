@@ -26,16 +26,17 @@ class UdvnvisdiSpec extends VerbBaseSpec {
     def "conjugating Udvnvisdi (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Udvnvisdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquadvnvisdi"
-        "SG1" | "" | Tense.HABITUAL        | "aquadvnvisdoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadvnvisdvi"
+        "SG1" | "" | Tense.HABITUAL        | "agwadvnvisdoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadvnvisdvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadvnvisdvi"
         // "SG1" | "" | Tense.INFINITIVE      | "X"
-        "SG2" | "" | Tense.PRESENT         | "tsadvnvisdi"
-        "SG2" | "" | Tense.HABITUAL        | "tsadvnvisdoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadvnvisdvi"
+        "SG2" | "" | Tense.PRESENT         | "jadvnvisdi"
+        "SG2" | "" | Tense.HABITUAL        | "jadvnvisdoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadvnvisdvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadvnvisdvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "udvnvisdi"
@@ -49,7 +50,7 @@ class UdvnvisdiSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unadvnvisdvi"
         // "PL3" | "" | Tense.INFINITIVE      | "X"
         "PL1INCL" | "" | Tense.PRESENT         | "igadvnvisdi"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igadvnvisdoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igadvnisdoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadvnvisdvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadvnvisdvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "X"

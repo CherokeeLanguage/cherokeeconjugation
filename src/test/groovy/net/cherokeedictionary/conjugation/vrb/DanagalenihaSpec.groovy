@@ -25,6 +25,7 @@ class DanagalenihaSpec extends VerbBaseSpec {
     def "conjugating Danagaleniha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Danagaleniha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "ganagaleniha"
@@ -32,25 +33,25 @@ class DanagalenihaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "aquanagalenvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "ganagalenvhvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginagalenadi"
-        "SG2" | "" | Tense.PRESENT         | "hanagaleniha"
-        "SG2" | "" | Tense.HABITUAL        | "hanagalenisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanagalenvhvi"
+        "SG2" | "" | Tense.PRESENT         | "dojagaleniha"
+        "SG2" | "" | Tense.HABITUAL        | "dojagalenisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "doganagalenvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hanagalenvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanagalenadi"
+        "SG2" | "" | Tense.INFINITIVE      | "jojagalenhdi"
         "SG3" | "" | Tense.PRESENT         | "danagaleniha"
         "SG3" | "" | Tense.HABITUAL        | "danagalenisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "unagalenvhvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "dunagalenvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "anagalenvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "unagalenadi"
-        "PL3" | "" | Tense.PRESENT         | "ananagaleniha"
-        "PL3" | "" | Tense.HABITUAL        | "ananagalenisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unanagalenvhvi"
+        "SG3" | "" | Tense.INFINITIVE      | "junagalenhdi"
+        "PL3" | "" | Tense.PRESENT         | "dejagaleniha"
+        "PL3" | "" | Tense.HABITUAL        | "dejagalenisgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "dejagalenvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "ananagalenvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninagalenadi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idanagaleniha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idanagalenisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iganagalenvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "dijagalenhdi"
+        "PL1INCL" | "" | Tense.PRESENT         | "dedagaleniha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "dedagalenisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "degagalenvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idanagalenvhvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "iginagalenadi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "didagalenhdi"
     }
 }

@@ -25,32 +25,33 @@ class AsuligogaSpec extends VerbBaseSpec {
     def "conjugating Asuligoga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asuligoga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsisuligoga"
-        "SG1" | "" | Tense.HABITUAL        | "tsisuligogoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agisuligotsvi"
+        "SG1" | "" | Tense.PRESENT         | "jisuligoga"
+        "SG1" | "" | Tense.HABITUAL        | "jisuligogoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aksuligojvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisuligotsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisuligosdi"
+        "SG1" | "" | Tense.INFINITIVE      | "aksuligosdi"
         "SG2" | "" | Tense.PRESENT         | "hisuligoga"
         "SG2" | "" | Tense.HABITUAL        | "hisuligogoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasuligotsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "tsuligojvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisuligotsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasuligosdi"
+        "SG2" | "" | Tense.INFINITIVE      | "tsuligosdi"
         "SG3" | "" | Tense.PRESENT         | "asuligoga"
         "SG3" | "" | Tense.HABITUAL        | "asuligogoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "usuligotsvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "usuligojvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asuligotsvi"
         "SG3" | "" | Tense.INFINITIVE      | "usuligosdi"
         "PL3" | "" | Tense.PRESENT         | "anisuligoga"
         "PL3" | "" | Tense.HABITUAL        | "anisuligogoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisuligotsvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unisuligojvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anisuligotsvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unisuligosdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unsuligosdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idisuligoga"
         "PL1INCL" | "" | Tense.HABITUAL        | "idisuligogoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisuligotsvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iksuligojvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisuligotsvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisuligosdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "iksuligosdi"
     }
 }

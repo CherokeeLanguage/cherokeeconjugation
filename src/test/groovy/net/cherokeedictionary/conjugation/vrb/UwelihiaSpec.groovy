@@ -25,18 +25,19 @@ class UwelihiaSpec extends VerbBaseSpec {
     def "conjugating Uwelihia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Uwelihia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aquelihia"
-        "SG1" | "" | Tense.HABITUAL        | "aquelihisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquelihisgvi"
+        "SG1" | "" | Tense.PRESENT         | "agwelihia"
+        "SG1" | "" | Tense.HABITUAL        | "agwelihisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwelihisgvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquelihisgvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiwelihisdi"
-        "SG2" | "" | Tense.PRESENT         | "tselihia"
-        "SG2" | "" | Tense.HABITUAL        | "tselihisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tselihisgvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwelihisdi"
+        "SG2" | "" | Tense.PRESENT         | "jelihia"
+        "SG2" | "" | Tense.HABITUAL        | "jelihisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jelihisgvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tselihisgvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawelihisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jelihisdi"
         "SG3" | "" | Tense.PRESENT         | "uwelihia"
         "SG3" | "" | Tense.HABITUAL        | "uwelihisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwelihisgvi"
@@ -46,11 +47,11 @@ class UwelihiaSpec extends VerbBaseSpec {
         "PL3" | "" | Tense.HABITUAL        | "unelihisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unelihisgvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unelihisgvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwelihisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unelihisdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igelihia"
         "PL1INCL" | "" | Tense.HABITUAL        | "igelihisgoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igelihisgvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igelihisgvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwelihisdi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igelihisdi"
     }
 }

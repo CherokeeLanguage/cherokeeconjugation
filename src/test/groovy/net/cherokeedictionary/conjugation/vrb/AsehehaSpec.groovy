@@ -25,18 +25,19 @@ class AsehehaSpec extends VerbBaseSpec {
     def "conjugating Aseheha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Aseheha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyaseheha"
-        "SG1" | "SG3AN" | Tense.HABITUAL        | "tsiyasehehoi"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiyasehelvi"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyaseheha"
+        "SG1" | "SG3AN" | Tense.HABITUAL        | "jiyasehehoi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyasehelvi"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiyasehelvi"
-        "SG1" | "SG3AN" | Tense.INFINITIVE      | "tsiyasehedi"
+        "SG1" | "SG3AN" | Tense.INFINITIVE      | "jiyasehehdi"
         "SG2" | "SG3AN" | Tense.PRESENT         | "hiyaseheha"
         "SG2" | "SG3AN" | Tense.HABITUAL        | "hiyasehehoi"
-        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "asehelvi"
+        "SG2" | "SG3AN" | Tense.REMOTE_PAST     | "hiyasehelvi"
         "SG2" | "SG3AN" | Tense.FUTURE_COMMAND      | "hiyasehelvi"
-        "SG2" | "SG3AN" | Tense.INFINITIVE      | "asehedi"
+        "SG2" | "SG3AN" | Tense.INFINITIVE      | "hiyasehehdi"
         "SG3" | "SG3AN" | Tense.PRESENT         | "agaseheha"
         "SG3" | "SG3AN" | Tense.HABITUAL        | "asehehoi"
         "SG3" | "SG3AN" | Tense.REMOTE_PAST     | "uwasehelvi"
@@ -44,13 +45,13 @@ class AsehehaSpec extends VerbBaseSpec {
         "SG3" | "SG3AN" | Tense.INFINITIVE      | "uwasehedi"
         "PL3" | "SG3AN" | Tense.PRESENT         | "anaseheha"
         "PL3" | "SG3AN" | Tense.HABITUAL        | "anasehehoi"
-        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "anasehelvi"
+        "PL3" | "SG3AN" | Tense.REMOTE_PAST     | "unasehelvi"
         "PL3" | "SG3AN" | Tense.FUTURE_COMMAND      | "anasehelvi"
-        "PL3" | "SG3AN" | Tense.INFINITIVE      | "anasehedi"
+        "PL3" | "SG3AN" | Tense.INFINITIVE      | "unasehehdi"
         "PL1INCL" | "SG3AN" | Tense.PRESENT         | "edaseheha"
         "PL1INCL" | "SG3AN" | Tense.HABITUAL        | "edasehehoi"
-        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "asehelvi"
+        "PL1INCL" | "SG3AN" | Tense.REMOTE_PAST     | "edasehelvi"
         "PL1INCL" | "SG3AN" | Tense.FUTURE_COMMAND      | "edasehelvi"
-        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "asehedi"
+        "PL1INCL" | "SG3AN" | Tense.INFINITIVE      | "edasehehdi"
     }
 }

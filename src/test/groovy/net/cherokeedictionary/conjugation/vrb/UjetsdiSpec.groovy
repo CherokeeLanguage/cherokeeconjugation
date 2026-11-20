@@ -26,16 +26,17 @@ class UjetsdiSpec extends VerbBaseSpec {
     def "conjugating Ujetsdi (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ujetsdi", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "aquatsetsisdi"
-        "SG1" | "" | Tense.HABITUAL        | "aquatsetsisdoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquatsetsisdvi"
+        "SG1" | "" | Tense.HABITUAL        | "agwajetsdoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwajetsdvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquatsetsisdvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquatsetsisdodi"
-        "SG2" | "" | Tense.PRESENT         | "tsatsetsisdi"
-        "SG2" | "" | Tense.HABITUAL        | "tsatsetsisdoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsatsetsisdvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwajetsdohdi"
+        "SG2" | "" | Tense.PRESENT         | "jajetsdi"
+        "SG2" | "" | Tense.HABITUAL        | "jajetsdoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jajetsdvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsatsetsisdvi"
         // "SG2" | "" | Tense.INFINITIVE      | "/"
         "SG3" | "" | Tense.PRESENT         | "utsetsisdi"
@@ -43,14 +44,14 @@ class UjetsdiSpec extends VerbBaseSpec {
         "SG3" | "" | Tense.REMOTE_PAST     | "utsetsisdvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "utsetsisdvi"
         // "SG3" | "" | Tense.INFINITIVE      | "/"
-        "PL3" | "" | Tense.PRESENT         | "unatsetsisdi"
-        "PL3" | "" | Tense.HABITUAL        | "unatsetsisdoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unatsetsisdvi"
+        "PL3" | "" | Tense.PRESENT         | "unajetsdi"
+        "PL3" | "" | Tense.HABITUAL        | "unajetsdoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unajetsdvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unatsetsisdvi"
         // "PL3" | "" | Tense.INFINITIVE      | "/"
-        "PL1INCL" | "" | Tense.PRESENT         | "igatsetsisdi"
-        "PL1INCL" | "" | Tense.HABITUAL        | "igatsetsisdoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igatsetsisdvi"
+        "PL1INCL" | "" | Tense.PRESENT         | "igajetsdi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "igajetsdoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igajetsdvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igatsetsisdvi"
         // "PL1INCL" | "" | Tense.INFINITIVE      | "/"
     }

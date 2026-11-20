@@ -23,9 +23,10 @@ class GanvdiaSpec extends VerbBaseSpec {
     def "conjugating Ganvdia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganvdia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinvdia"
+        "SG1" | "" | Tense.PRESENT         | "jinvdia, jinvdia"
         "SG1" | "" | Tense.HABITUAL        | "tsinvdisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginvdvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinvdvi"

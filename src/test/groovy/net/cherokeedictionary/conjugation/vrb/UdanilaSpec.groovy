@@ -23,16 +23,17 @@ class UdanilaSpec extends VerbBaseSpec {
     def "conjugating Udanila (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Udanila", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aquadanila"
-        "SG1" | "" | Tense.HABITUAL        | "aquadaniloi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadanilvi"
+        "SG1" | "" | Tense.PRESENT         | "agwadanila"
+        "SG1" | "" | Tense.HABITUAL        | "agwadaniloi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadanilvi"
         // "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadanilvi"
         "SG1" | "" | Tense.INFINITIVE      | "agwadanilvsdi"
-        "SG2" | "" | Tense.PRESENT         | "tsadanila"
-        "SG2" | "" | Tense.HABITUAL        | "tsadaniloi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadanilvi"
+        "SG2" | "" | Tense.PRESENT         | "jadanila"
+        "SG2" | "" | Tense.HABITUAL        | "jadaniloi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadanilvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadanilvi"
         // "SG2" | "" | Tense.INFINITIVE      | "X"
         "SG3" | "" | Tense.PRESENT         | "udanila"

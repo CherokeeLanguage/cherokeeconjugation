@@ -23,18 +23,19 @@ class AliidihaSpec extends VerbBaseSpec {
     def "conjugating Aliidiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Aliidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "galiidia"
         "SG1" | "" | Tense.HABITUAL        | "galiidisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aqualiidvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwaliidvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "galiidvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aqualiidisdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwaliidisdi"
         "SG2" | "" | Tense.PRESENT         | "haliidia"
         "SG2" | "" | Tense.HABITUAL        | "haliidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsaliidvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jaliidvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "haliidvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsaliidisdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jaliidisdi"
         "SG3" | "" | Tense.PRESENT         | "aliidia"
         "SG3" | "" | Tense.HABITUAL        | "aliidisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uliidvi"

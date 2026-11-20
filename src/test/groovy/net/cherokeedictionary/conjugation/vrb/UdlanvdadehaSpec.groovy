@@ -25,32 +25,33 @@ class UdlanvdadehaSpec extends VerbBaseSpec {
     def "conjugating Udlanvdadeha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Udlanvdadeha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "aquadlanvdadeha"
-        "SG1" | "" | Tense.HABITUAL        | "aquadlanvdadehoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquadlanvdadelvi"
+        "SG1" | "" | Tense.PRESENT         | "agwadlanvdadeha"
+        "SG1" | "" | Tense.HABITUAL        | "agwadlanvdadehoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwadlanvdadelvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "aquadlanvdadelvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquadlanvdadedi"
-        "SG2" | "" | Tense.PRESENT         | "tsadlanvdadeha"
-        "SG2" | "" | Tense.HABITUAL        | "tsadlanvdadehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsadlanvdadelvi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwadlanvdadehdi"
+        "SG2" | "" | Tense.PRESENT         | "jadlanvdadeha"
+        "SG2" | "" | Tense.HABITUAL        | "jadlanvdadehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jadlanvdadelvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "tsadlanvdadelvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsadlanvdadedi"
+        "SG2" | "" | Tense.INFINITIVE      | "jadlanvdadehdi"
         "SG3" | "" | Tense.PRESENT         | "udlanvdadeha"
         "SG3" | "" | Tense.HABITUAL        | "udlanvdadehoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "udlanvdadelvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "udlanvdadelvi"
-        "SG3" | "" | Tense.INFINITIVE      | "udlanvdadedi"
+        "SG3" | "" | Tense.INFINITIVE      | "udlanvdadehdi"
         "PL3" | "" | Tense.PRESENT         | "unadlanvdadeha"
         "PL3" | "" | Tense.HABITUAL        | "unadlanvdadehoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unadlanvdadelvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "unadlanvdadelvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unadlanvdadedi"
+        "PL3" | "" | Tense.INFINITIVE      | "unadlanvdadehdi"
         "PL1INCL" | "" | Tense.PRESENT         | "igadlanvdadeha"
         "PL1INCL" | "" | Tense.HABITUAL        | "igadlanvdadehoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igadlanvdadelvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "igadlanvdadelvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igadlanvdadedi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "igadlanvdadehdi"
     }
 }

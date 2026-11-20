@@ -24,27 +24,28 @@ class GanawidihaSpec extends VerbBaseSpec {
     def "conjugating Ganawidiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ganawidiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsinawidiha"
+        "SG1" | "" | Tense.PRESENT         | "jinawidiha, jinawidiha"
         "SG1" | "" | Tense.HABITUAL        | "tsinawidisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginawidvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinawidvhvi"
         "SG1" | "" | Tense.INFINITIVE      | "aginawitidi"
         "SG2" | "" | Tense.PRESENT         | "hinawidiha"
         "SG2" | "" | Tense.HABITUAL        | "hinawidisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanawidvhvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "janawidvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinawidvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanawitidi"
-        "SG1" | "" | Tense.PRESENT         | "tsinawidiha"
-        "SG1" | "" | Tense.HABITUAL        | "tsinawidisgoi"
+        "SG2" | "" | Tense.INFINITIVE      | "janawitdi"
+        "SG1" | "" | Tense.PRESENT         | "jinawidiha"
+        "SG1" | "" | Tense.HABITUAL        | "jinawidisgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "aginawidvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsinawidvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aginawitidi"
+        "SG1" | "" | Tense.INFINITIVE      | "aginawitdi"
         "PL3" | "" | Tense.PRESENT         | "aninawidiha"
         "PL3" | "" | Tense.HABITUAL        | "aninawidisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "uninawidvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninawidvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninawitidi"
+        "PL3" | "" | Tense.INFINITIVE      | "uninawitdi"
     }
 }

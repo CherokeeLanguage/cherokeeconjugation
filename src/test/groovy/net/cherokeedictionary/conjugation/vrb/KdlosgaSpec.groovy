@@ -22,17 +22,18 @@ class KdlosgaSpec extends VerbBaseSpec {
     def "conjugating Kdlosga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Kdlosga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG3" | "" | Tense.PRESENT         | "gvtlosga"
         "SG3" | "" | Tense.HABITUAL        | "gvtlosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwatlosvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwvtlosvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "vtlosvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwvtlohisdi"
-        "SG3" | "" | Tense.PRESENT         | "gvtlosga"
-        "SG3" | "" | Tense.HABITUAL        | "gvtlosgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwatlosvi"
+        "SG3" | "" | Tense.PRESENT         | "anvhdlosga"
+        "SG3" | "" | Tense.HABITUAL        | "anvhdlosgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "unhdlosvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "vtlosvi"
-        "SG3" | "" | Tense.INFINITIVE      | "uwvtlohisdi"
+        "SG3" | "" | Tense.INFINITIVE      | "unhdlohisdi"
     }
 }

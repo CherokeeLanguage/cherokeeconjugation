@@ -26,32 +26,33 @@ class KdihaSpec extends VerbBaseSpec {
     def "conjugating Kdiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Kdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gvdiha"
         "SG1" | "" | Tense.HABITUAL        | "gvdisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquvtanvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "aktanvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "gvtanvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agiwvdodi"
+        "SG1" | "" | Tense.INFINITIVE      | "akhdohdi"
         "SG2" | "" | Tense.PRESENT         | "hvdiha"
         "SG2" | "" | Tense.HABITUAL        | "hvdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsvtanvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jvtanvi"
         // "SG2" | "" | Tense.FUTURE_COMMAND      | "hvtanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsawvdodi"
+        "SG2" | "" | Tense.INFINITIVE      | "tstanvi"
         "SG3" | "" | Tense.PRESENT         | "gvdiha"
         "SG3" | "" | Tense.HABITUAL        | "gvdisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "uwatanvi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "uwvtanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "vtanvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwvdodi"
         "PL3" | "" | Tense.PRESENT         | "anvdiha"
         "PL3" | "" | Tense.HABITUAL        | "anvdisgoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unvtanvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anvtanvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwvdodi"
+        "PL3" | "" | Tense.INFINITIVE      | "unvhdohdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idvdiha"
         "PL1INCL" | "" | Tense.HABITUAL        | "idvdisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igvtanvi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "iktanvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idvtanvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igiwvdodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "ikhdohdi"
     }
 }

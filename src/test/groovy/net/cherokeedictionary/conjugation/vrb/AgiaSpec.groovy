@@ -24,27 +24,28 @@ class AgiaSpec extends VerbBaseSpec {
     def "conjugating Agia (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Agia", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsigia"
-        "SG1" | "" | Tense.HABITUAL        | "tsigisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agigisvi"
+        "SG1" | "" | Tense.PRESENT         | "jigia"
+        "SG1" | "" | Tense.HABITUAL        | "jigisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigisvi"
         "SG1" | "" | Tense.INFINITIVE      | "agigisdi"
         "SG2" | "" | Tense.PRESENT         | "higia"
         "SG2" | "" | Tense.HABITUAL        | "higisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsagisvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jagvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "higisvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsagisdi"
-        "SG1" | "" | Tense.PRESENT         | "tsigia"
-        "SG1" | "" | Tense.HABITUAL        | "tsigisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "agigisvi"
+        "SG2" | "" | Tense.INFINITIVE      | "jagisdi"
+        "SG1" | "" | Tense.PRESENT         | "jigia"
+        "SG1" | "" | Tense.HABITUAL        | "jigisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agigvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsigisvi"
         "SG1" | "" | Tense.INFINITIVE      | "agigisdi"
         "PL3" | "" | Tense.PRESENT         | "anigia"
         "PL3" | "" | Tense.HABITUAL        | "anigisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unigisvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unigvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anigisvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unigisdi"
+        "PL3" | "" | Tense.INFINITIVE      | "anigisdi"
     }
 }

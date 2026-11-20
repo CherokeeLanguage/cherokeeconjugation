@@ -28,6 +28,7 @@ class GahnehaSpec extends VerbBaseSpec {
     def "conjugating Gahneha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gahneha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "jineha"
@@ -35,20 +36,20 @@ class GahnehaSpec extends VerbBaseSpec {
         "SG1" | "" | Tense.REMOTE_PAST     | "jinehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "jinehvi"
         "SG1" | "" | Tense.INFINITIVE      | "jinehi"
-        "SG2" | "" | Tense.PRESENT         | "hineha"
-        "SG2" | "" | Tense.HABITUAL        | "hinehoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsanehvi"
+        "SG2" | "" | Tense.PRESENT         | "hihneha"
+        "SG2" | "" | Tense.HABITUAL        | "hihnehoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hihnehvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hinehvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsanehi"
+        "SG2" | "" | Tense.INFINITIVE      | "hihnehi"
         "SG1" | "" | Tense.PRESENT         | "jineha"
         "SG1" | "" | Tense.HABITUAL        | "jinehoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "jinehvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "jinehvi"
         "SG1" | "" | Tense.INFINITIVE      | "jinehi"
-        "PL3" | "" | Tense.PRESENT         | "anineha"
-        "PL3" | "" | Tense.HABITUAL        | "aninehoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uninehvi"
+        "PL3" | "" | Tense.PRESENT         | "anihneha"
+        "PL3" | "" | Tense.HABITUAL        | "anihnehoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "anihnehvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aninehvi"
-        "PL3" | "" | Tense.INFINITIVE      | "uninehi"
+        "PL3" | "" | Tense.INFINITIVE      | "anihnehi"
     }
 }

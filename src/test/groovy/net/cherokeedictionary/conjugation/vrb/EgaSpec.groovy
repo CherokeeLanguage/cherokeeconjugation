@@ -25,30 +25,31 @@ class EgaSpec extends VerbBaseSpec {
     def "conjugating Ega (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Ega", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
         "SG1" | "" | Tense.PRESENT         | "gega"
         "SG1" | "" | Tense.HABITUAL        | "gegoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "aquenvsvi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "agwenvsvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "genvsvi"
-        "SG1" | "" | Tense.INFINITIVE      | "aquenvsdi"
+        "SG1" | "" | Tense.INFINITIVE      | "agwenvsdi"
         "SG2" | "" | Tense.PRESENT         | "hega"
         "SG2" | "" | Tense.HABITUAL        | "hegoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsenvsvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "jenvsvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "henvsvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsenvsdi"
+        "SG2" | "" | Tense.INFINITIVE      | "jenvsdi"
         "SG3" | "" | Tense.PRESENT         | "ega"
         "SG3" | "" | Tense.HABITUAL        | "egoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "uwenvsvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "envsvi"
         "SG3" | "" | Tense.INFINITIVE      | "uwenvsdi"
         "PL3" | "" | Tense.PRESENT         | "anega"
-        "PL3" | "" | Tense.HABITUAL        | "anesoi"
+        "PL3" | "" | Tense.HABITUAL        | "anegoi"
         "PL3" | "" | Tense.REMOTE_PAST     | "unenvsvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anenvsvi"
         "PL3" | "" | Tense.INFINITIVE      | "unenvsdi"
         "PL1INCL" | "" | Tense.PRESENT         | "idega"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idesoi"
+        "PL1INCL" | "" | Tense.HABITUAL        | "idegoi"
         "PL1INCL" | "" | Tense.REMOTE_PAST     | "igenvsvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idenvsvi"
         "PL1INCL" | "" | Tense.INFINITIVE      | "igenvsdi"

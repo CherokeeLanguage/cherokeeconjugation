@@ -1,10 +1,66 @@
 # CHANGELOG — Cherokee Conjugation Engine
 
-Chronological record of the engine and validation work, 2026-11-11 → 2026-11-18.
+Chronological record of the engine and validation work, 2026-11-11 → 2026-11-20.
 Every code change carries a `-- tio <DDMMMYY>` comment tag traceable to these
-entries. Companion documents: [DISCREPANCIES.md](DISCREPANCIES.md) (the D1–D17
-ledger, each item with a verdict and citation) and [GAP.md](GAP.md) (the
-book-unattested stem gaps).
+entries. Companion documents: [DISCREPANCIES.md](DISCREPANCIES.md) (the D1–D24
+ledger, each item with a verdict and citation), [GAP.md](GAP.md) (the
+book-unattested stem gaps) and [D24-RESIDUAL-REPORT.tsv](D24-RESIDUAL-REPORT.tsv)
+(the vrb expectations-vs-engine inventory).
+
+---
+
+## 2026-11-20 — Montgomery-Anderson grammar settles D21/D20: Set A AN prefixes persist into Set B tenses
+
+**What happened.** The Montgomery-Anderson Cherokee Reference Grammar
+(docs/processed/Montgomery_Markup CRG Proofs.md) was uploaded as the D21
+tiebreaker. Its examples (2b)/(22)/(23b) — *ji-jii-hneél-vv́ʔi* "I gave him
+tobacco", *hii-hwas-e* "Did you buy the dog?", *jii-nvvɡalvvh-vv́ʔi* "I
+cleaned him" — show that for SET A VERBS the Set A animate-object prefixes
+(jii-/hii-/eenii-…) persist into the Set B completive/infinitive tenses when
+the object is animate; the Set B subject prefixes (agi-/ja-/uu-, Table 3.4)
+serve inanimate objects (ex. (21) *aàɡiɡoohvv́ʔi* "I saw IT" is the SG3IN
+cell). Guide Figure 4's columns are the 3sg.in/3pl.in IN columns — the
+"animacy collapse" reading explored the same day (fill the 8 SG3ANB twins
+with the Figure-4 subject prefixes) contradicts M-A and was implemented and
+then REVERTED: it broke 100 green cells the D20 Set A fallback was already
+composing correctly (e.g. Akilvdiha ᏥᏯᎩᎸᏔᏅᎢ jiyakilvtanvi).
+
+**Resolution.** D20 VINDICATED; D21 RESOLVED — the Ay* batch's ja-/igi-
+SG3AN remote/infinitive cells are inanimate-object Set B forms transcribed
+into AN-labeled cells. `fix_ayan_details.pl` (parked awaiting the D21
+adjudication) applied to the 8 Ay* specs' details rows (41 fields, engine
+compositions per M-A), followed by an `align_where.pl` re-pass (41 rows).
+Gotcha fixed in the script: an inline `//` comment inserted mid-row swallowed
+the rest of the row (compile error) — value-only substitution with one
+provenance comment block per spec. Combined suite 2,036 → 1,993 (43 cells
+fixed, none broken); default suite green. Engine unchanged. DISCREPANCIES.md
+D20/D21 rewritten with the M-A citations. Parked refinement: the D20
+fallback is strictly correct for Set A verbs; Set B verbs ('like'/'forget'
+class) use Set B prefixes for all 3rd-person objects (guide 'like' paradigm)
+— those cells are untested in the corpus. -- tio 20Nov26
+
+---
+
+## 2026-11-19 — vrb grid alignment, corrected pass (D24)
+
+**What happened.** A first bulk pass aligned every vrb `where:` expectation to
+the spec's own `details.conjugations` rows; it keyed on subject alone and
+mapped FUTURE_COMMAND to the details' `remote_past` surface. Both were wrong
+(multi-object grids got the wrong row; FUTURE_COMMAND is composed from a
+remote STEM, so its surface is not the remote surface). That pass produced
+3,553 failures, mostly artifacts.
+
+**Corrected pass.** `align_where.pl` now keys on (subject, object), pairs
+where blocks positionally with distinct detail rows only when the counts
+match, drops partial duplicate detail rows, never synthesizes FUTURE_COMMAND,
+and leaves genuinely competing rows as AMBIGUOUS. It changed 5,004 cells in
+382 specs, each marked above `where:` with `-- tio 19Nov26 ... (D24)`.
+
+**Result.** Default suite green. vrb suite: 19,140 tests, 2,034 failures =
+1,847 cells that now assert the book/CED detail row (the real D21/D22
+adjudication set) + 187 untouched-by-the-pass failures (171 FUTURE_COMMAND
+D1/D2 debt, 16 D22). Untouched by design: 87 ambiguous, 181 no-details, 1,777
+FUTURE_COMMAND. Inventory in `D24-RESIDUAL-REPORT.tsv`; no engine change.
 
 ---
 

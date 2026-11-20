@@ -22,12 +22,13 @@ class NigalstanvsgaSpec extends VerbBaseSpec {
     def "conjugating Nigalstanvsga (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Nigalstanvsga", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "nigalistanvsga"
-        "SG3" | "" | Tense.HABITUAL        | "nigalistanvsgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugalisda"
+        "SG3" | "" | Tense.PRESENT         | "nigalstanvsga"
+        "SG3" | "" | Tense.HABITUAL        | "nigalstanvsgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "nigalsda"
         // "SG3" | "" | Tense.FUTURE_COMMAND      | "gagalisda"
-        "SG3" | "" | Tense.INFINITIVE      | "ulistanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "nulstanvi"
     }
 }

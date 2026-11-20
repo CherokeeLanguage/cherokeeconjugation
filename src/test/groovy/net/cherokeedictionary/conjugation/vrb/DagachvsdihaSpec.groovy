@@ -24,27 +24,28 @@ class DagachvsdihaSpec extends VerbBaseSpec {
     def "conjugating Dagachvsdiha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Dagachvsdiha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG3" | "" | Tense.PRESENT         | "dagatsvsdiha"
-        "SG3" | "" | Tense.HABITUAL        | "dagatsvsdisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugatsvstanvi"
+        "SG3" | "" | Tense.PRESENT         | "dagachvsdiha"
+        "SG3" | "" | Tense.HABITUAL        | "dagachvsdisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "dagachvstanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agatsvstanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugatsvsdodi"
-        "SG2" | "" | Tense.PRESENT         | "hagatsvsdiha"
-        "SG2" | "" | Tense.HABITUAL        | "hagatsvsdisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsagatsvstanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "jagachvsdohdi"
+        "SG2" | "" | Tense.PRESENT         | "dejachsvsdiha"
+        "SG2" | "" | Tense.HABITUAL        | "dejachvsdisgoi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "dejachvstanvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hagatsvstanvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsagatsvsdodi"
-        "SG3" | "" | Tense.PRESENT         | "dagatsvsdiha"
-        "SG3" | "" | Tense.HABITUAL        | "dagatsvsdisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugatsvstanvi"
+        "SG2" | "" | Tense.INFINITIVE      | "dijachvsdohdi"
+        "SG3" | "" | Tense.PRESENT         | "dagachvsdiha"
+        "SG3" | "" | Tense.HABITUAL        | "dagachvsdisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "dagachvstanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agatsvstanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugatsvsdodi"
-        "SG3" | "" | Tense.PRESENT         | "dagatsvsdiha"
-        "SG3" | "" | Tense.HABITUAL        | "dagatsvsdisgoi"
-        "SG3" | "" | Tense.REMOTE_PAST     | "ugatsvstanvi"
+        "SG3" | "" | Tense.INFINITIVE      | "jagachvsdohdi"
+        "SG3" | "" | Tense.PRESENT         | "degegachvsdiha"
+        "SG3" | "" | Tense.HABITUAL        | "degegachvsdisgoi"
+        "SG3" | "" | Tense.REMOTE_PAST     | "degegachvstanvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "agatsvstanvi"
-        "SG3" | "" | Tense.INFINITIVE      | "ugatsvsdodi"
+        "SG3" | "" | Tense.INFINITIVE      | "jigegachvsdohdi"
     }
 }

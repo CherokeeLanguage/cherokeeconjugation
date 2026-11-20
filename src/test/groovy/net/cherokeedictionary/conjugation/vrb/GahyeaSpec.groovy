@@ -25,27 +25,28 @@ class GahyeaSpec extends VerbBaseSpec {
     def "conjugating Gahyea (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Gahyea", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "SG3AN" | Tense.PRESENT         | "tsiyea"
+        "SG1" | "SG3AN" | Tense.PRESENT         | "jiyea"
         // "SG1" | "SG3AN" | Tense.HABITUAL        | "/"
-        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "tsiwayavi"
+        "SG1" | "SG3AN" | Tense.REMOTE_PAST     | "jiyayea"
         "SG1" | "SG3AN" | Tense.FUTURE_COMMAND      | "tsiwayavi"
         // "SG1" | "SG3AN" | Tense.INFINITIVE      | "/"
-        "SG2" | "" | Tense.PRESENT         | "hiyea"
+        "SG2" | "" | Tense.PRESENT         | "hihyea"
         // "SG2" | "" | Tense.HABITUAL        | "/"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsawayavi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hiyayea"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hiwayavi"
         // "SG2" | "" | Tense.INFINITIVE      | "/"
-        "SG1" | "" | Tense.PRESENT         | "tsiyea"
+        "SG1" | "" | Tense.PRESENT         | "tsiyayea, tsiyea"
         "SG1" | "" | Tense.HABITUAL        | "tsiyesgoi"
         "SG1" | "" | Tense.REMOTE_PAST     | "agiwayavi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsiwayavi"
         "SG1" | "" | Tense.INFINITIVE      | "agiwayesdi"
-        "PL3" | "" | Tense.PRESENT         | "aniyea"
-        "PL3" | "" | Tense.HABITUAL        | "aniyesgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "uniwayavi"
+        "PL3" | "" | Tense.PRESENT         | "anihyea"
+        "PL3" | "" | Tense.HABITUAL        | "anihyesgoi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unahyavi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "aniwayavi"
-        "PL3" | "" | Tense.INFINITIVE      | "uniwayesdi"
+        "PL3" | "" | Tense.INFINITIVE      | "unahyesdi"
     }
 }

@@ -14,12 +14,6 @@ public class NormalizedVerbEntry {
 	public String habit;
 	public String imp;
 	public String inf;
-	// tio 19Nov26: one-shot guard for the d-family sg3-u strip in
-	// generateVowelStems -- the stem generators can run more than once on the
-	// same entry (a3rd/ga3rd/ka3rd fallback chain) and a second strip would
-	// eat a stem consonant (ᏚᏑᏫᏒᎢ -> ᏫᏒᎢ, lost Ꮡ).
-	public boolean daUStripped = false;
-
 	public List<String> getEntries(){
 		List<String> list = new ArrayList<String>();
 		list.add(pres3);

@@ -25,32 +25,33 @@ class AsdelihaSpec extends VerbBaseSpec {
     def "conjugating Asdeliha (subj=#subj, obj=#obj) in #tense should be #expected"() {
         expect:
         conjugateVerb("Asdeliha", details, subj, obj, tense.toString(), expected) == SyllabaryUtil.tsalagiToSyllabary(expected)
+        // tio 19Nov26: expectations aligned to this spec's VRB detail rows where unambiguous (D24)
         where:
         subj      | obj | tense             | expected
-        "SG1" | "" | Tense.PRESENT         | "tsisdeliha"
-        "SG1" | "" | Tense.HABITUAL        | "tsisdelisgoi"
-        "SG1" | "" | Tense.REMOTE_PAST     | "tsisdelvhvi"
+        "SG1" | "" | Tense.PRESENT         | "jisdeliha"
+        "SG1" | "" | Tense.HABITUAL        | "jisdelisgoi"
+        "SG1" | "" | Tense.REMOTE_PAST     | "jisdelvhvi"
         "SG1" | "" | Tense.FUTURE_COMMAND      | "tsisdelvhvi"
-        "SG1" | "" | Tense.INFINITIVE      | "agisdelodi"
+        "SG1" | "" | Tense.INFINITIVE      | "jisdehldi"
         "SG2" | "" | Tense.PRESENT         | "hisdeliha"
         "SG2" | "" | Tense.HABITUAL        | "hisdelisgoi"
-        "SG2" | "" | Tense.REMOTE_PAST     | "tsasdelvhvi"
+        "SG2" | "" | Tense.REMOTE_PAST     | "hisdelvhvi"
         "SG2" | "" | Tense.FUTURE_COMMAND      | "hisdelvhvi"
-        "SG2" | "" | Tense.INFINITIVE      | "tsasdelodi"
+        "SG2" | "" | Tense.INFINITIVE      | "hisdehldi"
         "SG3" | "" | Tense.PRESENT         | "asdeliha"
         "SG3" | "" | Tense.HABITUAL        | "asdelisgoi"
         "SG3" | "" | Tense.REMOTE_PAST     | "usdelvhvi"
         "SG3" | "" | Tense.FUTURE_COMMAND      | "asdelvhvi"
-        "SG3" | "" | Tense.INFINITIVE      | "usdelodi"
+        "SG3" | "" | Tense.INFINITIVE      | "usdehldi"
         "PL3" | "" | Tense.PRESENT         | "anisdeliha"
         "PL3" | "" | Tense.HABITUAL        | "anisdelisgoi"
-        "PL3" | "" | Tense.REMOTE_PAST     | "unisdelvhvi"
+        "PL3" | "" | Tense.REMOTE_PAST     | "unsdelvhvi"
         "PL3" | "" | Tense.FUTURE_COMMAND      | "anisdelvhvi"
-        "PL3" | "" | Tense.INFINITIVE      | "unisdelodi"
-        "PL1INCL" | "" | Tense.PRESENT         | "idisdeliha"
-        "PL1INCL" | "" | Tense.HABITUAL        | "idisdelisgoi"
-        "PL1INCL" | "" | Tense.REMOTE_PAST     | "igisdelvhvi"
+        "PL3" | "" | Tense.INFINITIVE      | "unsdehldi"
+        "PL1INCL" | "" | Tense.PRESENT         | "edisdeliha"
+        "PL1INCL" | "" | Tense.HABITUAL        | "edisdelisgoi"
+        "PL1INCL" | "" | Tense.REMOTE_PAST     | "edisdelvhvi"
         "PL1INCL" | "" | Tense.FUTURE_COMMAND      | "idisdelvhvi"
-        "PL1INCL" | "" | Tense.INFINITIVE      | "igisdelodi"
+        "PL1INCL" | "" | Tense.INFINITIVE      | "edisdehldi"
     }
 }
