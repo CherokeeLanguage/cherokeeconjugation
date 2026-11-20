@@ -21,6 +21,7 @@ class VerbRegistry {
         stemIIISyncopeStems.clear()
         fivSg3WStems.clear()
         iivSg3WStems.clear()
+        distributiveDst2Stems.clear()
         subjectSurfaceOverrides.clear()
         unifiedSg3PresentStems.clear()
         wiInsertionStems.clear()
@@ -52,6 +53,7 @@ class VerbRegistry {
         final Set<String> iivSg3WStems = []
         final Set<String> glottalInitialStems = []
         final Set<String> quvCoalescingStems = []
+        final Set<String> distributiveDst2Stems = []
         final Set<String> impersonalStems = []
         final Set<String> unifiedSg3PresentStems = []
         final Set<String> wiInsertionStems = []
@@ -327,6 +329,29 @@ class VerbRegistry {
     static boolean isQuvCoalescing(String present3rd) {
         if (!present3rd) return false
         return flag(quvCoalescingStems, activeScope.get()?.quvCoalescingStems, present3rd)
+    }
+
+    // tio 20Nov26: DST2 INFINITIVE (M-A Cherokee Reference Grammar §10.1) --
+    // de- distributive verbs whose INFINITIVE uses the alternate di- form
+    // ("an alternate form di- occurs with the Infinitive stem... DST2"):
+    // Dahlilosdiha/Danehldiha SG1/SG2 infinitives print dijiya-/digwa-/diga-
+    // while the de-style flag alone does NOT select them (Dadahnesea is
+    // de-style by its pres1 Ꮥ head but its book infinitive is dagi-, the
+    // da-family a-drop). Lexeme-level, keyed on the present3rd citation,
+    // registered via details.distributiveDst2. -- tio 20Nov26
+    private static final Set<String> distributiveDst2Stems = []
+
+    /** Registers a verb (by present3rd citation) whose infinitive uses the DST2 di- form. -- tio 20Nov26 */
+    static void registerDistributiveDst2(String present3rd) {
+        if (!present3rd) return
+        VerbScope scope = activeScope.get()
+        (scope ? scope.distributiveDst2Stems : distributiveDst2Stems).add(present3rd)
+    }
+
+    /** True when this verb's infinitive uses the DST2 di- form (M-A §10.1). -- tio 20Nov26 */
+    static boolean isDistributiveDst2(String present3rd) {
+        if (!present3rd) return false
+        return flag(distributiveDst2Stems, activeScope.get()?.distributiveDst2Stems, present3rd)
     }
 
     // tio 17Nov26: IMPERSONAL verbs -- weather/nature/impersonal "it is ..." verbs

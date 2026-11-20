@@ -11,6 +11,7 @@ class DahlilosdihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Drawing / Taking a Picture",
         part_of_speech: "v.t.",
+        distributiveDst2: true, // tio 20Nov26: infinitive uses the DST2 di- form (M-A §10.1; dijiyanehlda/diga- rows)
         conjugations: [
                 [subject: 'SG1', object: '', present: 'dejiyadlilosdiha, degadlilosdiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'dejiyadlilosdiha', habitual: 'dejiyadlilosdisgoi', remote_past: 'dejiyahlilostanvi', imperative: 'dijiyadlilosda', infinitive: ''],

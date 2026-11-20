@@ -41,7 +41,7 @@ class PrefixDa implements Affix {
                     // SG2 SG3AN present dehiyadlilosdiha). The di-family DOES
                     // contract (Danehldiha SG2 imperatives ᏘᏯᏁᎲᏓ tiyanehlda =
                     // di + hiya -> t+iya, "tahlilosda" = di + ha -> ta).
-                    if (word.stemmer?.normalizedDeStyle) {
+                    if (word.stemmer?.normalizedDeStyle && !isDst2Tense(word)) {
                         // de- keeps its e AND the h-glyph: de + ᎯᏯ -> ᏕᎯᏯ
                         // (the Ꮨ contraction absorbs the h into "ti"; Ꮥ cannot)
                         baseReturnValue = "Ꮥ" + baseReturnValue
@@ -86,7 +86,18 @@ class PrefixDa implements Affix {
                         // dagilvhwisdaneha): the stem-initial Ꭰ (of agi-/
                         // agw-) deletes and da- prepends, unlike the fused
                         // ᏛᎩ (He Is From) the guide D-map renders.
-                        baseReturnValue = "Ꮣ" + baseReturnValue.substring(1)
+                        // tio 20Nov26: DST2 (M-A §10.1) -- the de-family's
+                        // infinitive uses the di- form: da+agwa a-drop -> ᏗᏆ
+                        // (Danehldiha SG1 SG3IN infinitive digwanehldohdi =
+                        // di + gwa + nehldohdi).
+                        baseReturnValue = (isDst2Tense(word) ? "Ꮧ" : "Ꮣ") + baseReturnValue.substring(1)
+                    } else if (charAtZero == 'Ꭲ' && isDst2Tense(word)
+                            && word.stemmer?.normalizedDeStyle) {
+                        // tio 20Nov26: DST2 i-delete -- di + i-initial
+                        // pronominal: the i deletes and di- prepends
+                        // (Dahlilosdiha PL1INCL SG3IN infinitive
+                        // digahlilosdohdi = di + ᎢᎦ... -> ᏗᎦᎲᎵᎶᏍᏙᏗ).
+                        baseReturnValue = "Ꮧ" + baseReturnValue.substring(1)
                     } else {
                         baseReturnValue = StringUtility.getOptionsByVowel(charAtZero, baseReturnValue, ['Ꮫ', 'Ꮥ', 'Ꮣ', 'Ꮩ', 'Ꮪ', 'Ꮫ'])
                     }
@@ -102,7 +113,12 @@ class PrefixDa implements Affix {
                     // only this branch splits.
                     def consonantAllomorph = "Ꮣ"
                     if (word.stemmer?.normalizedDeStyle) {
-                        consonantAllomorph = "Ꮥ"
+                        // tio 20Nov26: DST2 -- the de-family's INFINITIVE uses
+                        // the di- form (M-A §10.1: "an alternate form di- occurs
+                        // with the Infinitive stem"; Danehldiha SG1 SG3AN
+                        // infinitive dijiyanehldohdi = di + jiya-), so the
+                        // infinitive renders Ꮧ like the di-family.
+                        consonantAllomorph = isDst2Tense(word) ? "Ꮧ" : "Ꮥ"
                     } else if (word.stemmer?.normalizedDiStyle) {
                         consonantAllomorph = "Ꮧ"
                     }
@@ -112,6 +128,21 @@ class PrefixDa implements Affix {
         }
 
         return baseReturnValue
+    }
+
+    /**
+     * tio 20Nov26: DST2 tenses (M-A §10.1 -- the de- distributive's alternate
+     * form di- occurs with the Infinitive stem and the command form of the
+     * Immediate). Scope: the INFINITIVE; imperative cells stay on dee- until
+     * the book imperatives demand otherwise (Danehldiha SG2 imperatives
+     * ᏘᏯᏁᎲᏓ suggest di+h contraction already, kept as-is under the
+     * da-style h-branch).
+     */
+    private static boolean isDst2Tense(Verb word) {
+        return (word?.tense == Tense.INFINITIVE &&
+                word?.stemmer?.normalizedDeStyle &&
+                net.cherokeedictionary.verb.metadata.VerbRegistry.isDistributiveDst2(
+                        word?.stemmer?.present3rd?.syllabary))
     }
 
     String toEnglish(String baseReturnValue, Verb word) {

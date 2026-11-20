@@ -113,6 +113,15 @@ abstract class VerbBaseSpec extends Specification {
             net.cherokeedictionary.verb.metadata.VerbRegistry.registerQuvCoalescing(toSyll(thirdPersonRow.present))
         }
 
+        // tio 20Nov26: DST2 infinitive (details.distributiveDst2) -- the de-
+        // distributive verbs whose infinitive uses the di- form (M-A §10.1;
+        // Dahlilosdiha/Danehldiha dijiya-/digwa-/diga- infinitives). See
+        // VerbRegistry.isDistributiveDst2, PrefixDa and
+        // VerbConjugationProcessor. -- tio 20Nov26
+        if (details.distributiveDst2 && thirdPersonRow?.present) {
+            net.cherokeedictionary.verb.metadata.VerbRegistry.registerDistributiveDst2(toSyll(thirdPersonRow.present))
+        }
+
         // tio 17Nov26: impersonal verbs (details.impersonal) -- the imperative is
         // impermissible ("you cannot tell the sun to shine"), a lexical property
         // not a data gap. See VerbRegistry.isImpersonal / Conjugate's

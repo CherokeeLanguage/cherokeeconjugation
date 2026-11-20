@@ -89,6 +89,9 @@ class VerbLexemeFlagLoader {
         if (entry.impersonal) {
             VerbRegistry.registerImpersonal(citation)
         }
+        if (entry.distributiveDst2) {
+            VerbRegistry.registerDistributiveDst2(citation) // tio 20Nov26
+        }
         (entry.surfaceOverrides ?: []).each { o ->
             VerbRegistry.registerSubjectSurface(citation, o.tense as String, o.subject as String,
                     (o.obj ?: "NONE") as String, toSyll(o.form as String))

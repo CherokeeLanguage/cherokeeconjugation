@@ -11,6 +11,7 @@ class DanehldihaSpec extends VerbBaseSpec {
     static def details = [
         definition: "Playing (with Him/It)",
         part_of_speech: "v.t.",
+        distributiveDst2: true, // tio 20Nov26: infinitive uses the DST2 di- form (M-A §10.1; dijiyanehldohdi/digwanehldohdi rows)
         conjugations: [
                 [subject: 'SG1', object: '', present: 'dejiyanehldiha, deganehldiha'],
             [subject: 'SG1', object: 'SG3AN', present: 'dejiyanehldiha', habitual: 'dejiyanehldisgoi', remote_past: 'dejiyanehltanvi', imperative: 'dijiyanehlda', infinitive: 'dijiyanehldohdi'],

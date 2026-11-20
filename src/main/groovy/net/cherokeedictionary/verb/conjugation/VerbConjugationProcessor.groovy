@@ -119,12 +119,49 @@ class VerbConjugationProcessor {
 
         def returnValue
 
-        if (it != null && StringUtility.startsWithVowelSyllabary(it)) {
+        // tio 20Nov26: DST2 infinitive (M-A §10.1) -- de-family verbs take
+        // the di- form with the preVowel compounds in the infinitive
+        // (Danehldiha SG1 SG3AN dijiyanehldohdi = di + jiya-, SG1 SG3IN
+        // digwanehldohdi = di + gwa-; both are the preVowel entries of the
+        // B twins, whose a-drop PrefixDa renders ᏗᏥᏯ/ᏗᏆ), so the a-dropped
+        // stems route to the preVowel branch instead of preConsonant.
+        boolean dst2Infinitive = (verbset == VerbSet.B &&
+                tense == Tense.INFINITIVE &&
+                verb.stemmer?.normalizedDeStyle &&
+                net.cherokeedictionary.verb.metadata.VerbRegistry.isDistributiveDst2(
+                        verb.stemmer?.present3rd?.syllabary))
+        if (it != null && (StringUtility.startsWithVowelSyllabary(it) || dst2Infinitive)) {
             //get the prefix from the table
             // tio 19Nov26: empty-B-twin Set A fallback, guide §I-B (see
             // resolveLookupPrefix). Override keys stay on the original B key.
             def lookupPrefix = resolveLookupPrefix(verbPrefix, pref?.prefix2, verbset)
             def tmpReturnPrefix = ((Prefix) CompoundPrefixes.prefixes.get(lookupPrefix))
+
+            // tio 20Nov26: DST2 infinitive direct composition. The preVowel
+            // entries carry a vowel head the de-family a-drops plus a latin
+            // fusion tail the y-fixup machinery cannot fuse with a consonant
+            // stem (fixPrefix('Ꮑ','y') -> null). Compose directly instead:
+            //   Ꮵy  -> ᏥᏯ  (ji-ya, Danehldiha SG1 SG3AN dijiyanehldohdi)
+            //   Ꭰgw -> Ꮖ   (a-drop + gwa, SG1 SG3IN digwanehldohdi = ᏗᏆᏁ...)
+            //   Ꭲg  -> Ꭶ   (i-delete, PL1INCL SG3IN digahlilosdohdi = ᏗᎦᎲ...)
+            // PrefixDa then prepends the DST2 Ꮧ on the merged form.
+            if (dst2Infinitive && tmpReturnPrefix?.preVowel
+                    && !StringUtility.startsWithVowelSyllabary(it)) {
+                def pv = tmpReturnPrefix.preVowel as String
+                def head = pv.substring(0, 1)
+                def rest = pv.substring(1)
+                // some preVowel entries are pure latin ('j' -- SG2SG3ANB); no glyph head
+                if (head =~ /[a-z]/) {
+                    rest = pv
+                    head = ''
+                }
+                def headGlyph = (head == 'Ꭰ' || head == 'Ꭲ') ? '' : head
+                def tailGlyph = (rest == 'y') ? 'Ꮿ' : (rest == 'gw' ? 'Ꮖ' : (rest == 'g' ? 'Ꭶ'
+                        : (rest == 'j' ? 'Ꮳ' : (rest == 'd' ? 'Ꮣ' : ''))))
+                if (tailGlyph) {
+                    returnPrefix = headGlyph + tailGlyph
+                }
+            }
 
             // timo 10Nov26: key-absent vs declared-empty are now distinguished.
             // A key absent from the map (either set) surfaces as MISSING_ENTRY so
@@ -138,6 +175,11 @@ class VerbConjugationProcessor {
             }
 
             tmpReturnPrefix = tmpReturnPrefix?.preVowel
+
+            // tio 20Nov26: DST2 direct composition already produced the merged
+            // prefix glyphs -- skip the fixPrefix fusion below (its y-fusion
+            // cannot handle consonant stems; see the block above).
+            if (!(dst2Infinitive && returnPrefix)) {
 
             // tio 15Nov26: per-verb compound-prefix override also applies on the
             // preVowel branch (vowel-initial routed stems — the a-branch
@@ -185,6 +227,7 @@ class VerbConjugationProcessor {
 
                 returnPrefix = prefixStart + fixedPrefix[0]
                 it = fixedPrefix[1]
+                }
             }
 
             returnValue = new RuleUW().process(pref.prefix1, pref.prefix2, returnPrefix, tense, false, it, verbset)

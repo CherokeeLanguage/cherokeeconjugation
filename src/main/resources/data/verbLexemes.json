@@ -35,6 +35,16 @@
         { "tense": "INFINITIVE", "subject": "SG1", "obj": "NONE", "form": "jinejehi" }
       ]
     },
+    "Dahlilosdiha": {
+      "citation": "dahlilosdiha",
+      "note": "Dahlilosdiha 'Drawing / Taking a Picture' -- de- distributive (DST, M-A section 10.1) whose infinitive uses the DST2 di- form (dijiyadlilosda/diga- rows) -- tio 20Nov26",
+      "distributiveDst2": true
+    },
+    "Danehldiha": {
+      "citation": "danehldiha",
+      "note": "Danehldiha 'Playing (with Him/It)' -- de- distributive (DST, M-A section 10.1) whose infinitive uses the DST2 di- form (dijiyanehldohdi/digwanehldohdi rows) -- tio 20Nov26",
+      "distributiveDst2": true
+    },
     "Adlvkwsga": {
       "citation": "adlvkwsga",
       "note": "Adlvkwsga 'Bragging' (2012 book p.68) -- D7 qu-series v-coalescing (ᏋᏍ -> ᏆᏍ before vowel-initial suffixes)",
