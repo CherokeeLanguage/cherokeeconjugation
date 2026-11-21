@@ -256,6 +256,23 @@ Remaining open question (narrower): whether a generalizable stem-shape rule
 exists at all, or the split stays per-verb data as it is today. Recommend:
 leave per-verb (current state), close the person-rule candidate.
 
+**SURVEY CLOSED THE QUESTION (2026-11-21 — full VRB habitual harvest, 1,786
+HABITUAL rows over 345 verbs):** the tail is a per-VERB property, UNIFORM
+across all persons — SG1/SG2 tail == SG3/PL3 tail for 344/345 verbs:
+-sg class 218 (adadolisdisgoʼi), -h class 60 (adlohyihoʼi), -g class 38
+(aliheligoi), -s class 6 (ahilisoi), other 21. The two split verbs are data
+artifacts, not rules: Ganeha (jineoi vs aninehoi — the apostrophe-drop
+convention makes jineʼoʼi a bare-oʼi "other" reading) and Uneguja
+(aginegujoi vs unegutsoi — the ts/s-insertion family). **And the split is
+NOT derivable from the stem shape either**: -sg, -h, and -g all follow
+VOWEL-final INC stems (adadolisdi+sgoʼi, adayi+hoʼi, aliheli+goʼi), so the
+choice among s-epenthesis/h/g after the same stem-final vowel is purely
+lexical. Final ruling state: the habitual tail stays per-verb book data
+(exactly what the engine's habitual column holds today); the person-rule
+candidate is closed at scale, and no stem-shape rule exists to implement.
+STEM-FREE habitual derivation remains blocked per-verb — consistent with
+the citation-in error contract (MISSING_STEM_HABITUAL).
+
 ---
 
 ## C. Outstanding variations — consolidated list (this file is the review copy)
