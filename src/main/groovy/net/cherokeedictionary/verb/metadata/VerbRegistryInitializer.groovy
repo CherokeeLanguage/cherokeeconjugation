@@ -264,6 +264,8 @@ class VerbRegistryInitializer {
         }
         VerbRegistry.registerStemIIISyncope("ᏍᎦᎵ")
         VerbRegistry.registerFivSg3W(BITE_STEM)
+        // tio 21Nov26: D27 -- hit takes the uw-a epenthesis (P8(5) ᎤᏩᏂᎸᎢ/P8(6) ᏚᏩᏂᎸᎢ) while real v-initial stems cluster wv (Kdega ᎤᏮᏕᏨᎢ)
+        VerbRegistry.registerUwEpenthesis("ᎬᏂᎭ")
         VerbRegistry.registerIivSg3W("ᎪᏩᏘ")
         VerbRegistry.registerUnifiedSg3PresentRow("ᎪᏩᏘ")
         VerbRegistry.registerUnifiedSg3PresentRow(BITE_STEM)

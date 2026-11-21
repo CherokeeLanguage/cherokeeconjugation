@@ -20,6 +20,7 @@ class VerbRegistry {
         compoundPrefixOverrides.clear()
         stemIIISyncopeStems.clear()
         fivSg3WStems.clear()
+        uwEpenthesisStems.clear() 
         iivSg3WStems.clear()
         distributiveDst2Stems.clear()
         subjectSurfaceOverrides.clear()
@@ -50,6 +51,7 @@ class VerbRegistry {
         final Map<String, String> compoundPrefixOverrides = [:]
         final Set<String> stemIIISyncopeStems = []
         final Set<String> fivSg3WStems = []
+        final Set<String> uwEpenthesisStems = [] 
         final Set<String> iivSg3WStems = []
         final Set<String> glottalInitialStems = []
         final Set<String> quvCoalescingStems = []
@@ -276,6 +278,30 @@ class VerbRegistry {
         // ᎠᎪᏩᏘᎭ = Ꭰ + ᎪᏩᏘ + -Ꭽ), so neither a whole-citation nor a
         // suffix match survives both shapes.
         return flag(fivSg3WStems, activeScope.get()?.fivSg3WStems, present3rd)
+    }
+
+    // tio 21Nov26: D27 -- verbs whose uw-/duw- prefix takes the A-EPENTHESIS
+    // before the stem (uw + hni -> uwa-hni, guide P8(5) ᎤᏩᏂᎸᎢ "he hit him,
+    // it"; duw -> duwa, P8(6) ᏚᏩᏂᎸᎢ, corpus ᏚᏩᏂᎦᎸ x7+), as opposed to the
+    // legal wv cluster (Kdega ᎤᏮᏕᏨᎢ uwvdetsvi, Uwanvga ᎤᏮᏆᏅᏍᏗ). The routed
+    // stem's leading Ꭵ alone cannot distinguish the two (both hit ᎥᏂᎸᎢ and
+    // Kdega ᎥᏕᏨᎢ arrive Ꭵ-initial), so this is LEXEME data keyed on the
+    // present3rd citation (contained-in match, mirroring isQuvCoalescing).
+    private static final Set<String> uwEpenthesisStems = []
+
+    /** Registers a verb whose uw-/duw- row takes the a-epenthesis (uwa-/duwa-). -- tio 21Nov26 */
+    static void registerUwEpenthesis(String present3rd) {
+        if (!present3rd) return
+        VerbScope scope = activeScope.get()
+        (scope ? scope.uwEpenthesisStems : uwEpenthesisStems).add(present3rd)
+    }
+
+    /** True when this verb's uw-/duw- prefix takes the a-epenthesis. -- tio 21Nov26 */
+    static boolean hasUwEpenthesis(String present3rd) {
+        if (!present3rd) return false
+        Set<String> scoped = activeScope.get()?.uwEpenthesisStems
+        if (scoped != null && scoped.find { present3rd.contains(it) } != null) return true
+        return uwEpenthesisStems.find { present3rd.contains(it) } != null
     }
 
     // tio 17Nov26: GLOTTAL-INITIAL stems take the ji- allomorph of the SG1

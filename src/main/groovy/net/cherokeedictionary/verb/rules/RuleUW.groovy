@@ -37,12 +37,20 @@ class RuleUW implements PrefixRule {
                 processedValue = "Ꭴ$verbStem"
             }
         } else if (pto != null && (pto == PrefixTableObject.PL3IN || pto == PrefixTableObject.PL3AN)) {
-            if (tmpValue.startsWith("ᎤᏩ")) {
-                processedValue = "Ꭴ$verbStem"
-            } else if(tmpValue.startsWith("ᏚᏩ")) {
-                processedValue = "Ꮪ$verbStem"
-            } else if(tmpValue.startsWith("ᏚᏅ") || tmpValue.startsWith("ᏓᏅ")) {
-                return null;
+            // tio 21Nov26: D27 -- the duw+a -> du contraction is TENSE-SCOPED:
+            // it is attested in the PRESENT (book "He/she loves them" ᏚᎨᏳᎭ
+            // dugeyuha; ᏚᏚᎵᎭ-family), while the non-present keeps duwa- (guide
+            // P8(6) ᏚᏩᏂᎸᎢ duw- "he hit them (an or in)" PAST; corpus
+            // ᏚᏩᏂᎦᎸ duwahngalv x7+ ROM 11/MAK/LUK). The old blanket
+            // contraction composed ᏚᏂᎸᎢ against P8(6).
+            if (tense == Tense.PRESENT) {
+                if (tmpValue.startsWith("ᎤᏩ")) {
+                    processedValue = "Ꭴ$verbStem"
+                } else if(tmpValue.startsWith("ᏚᏩ")) {
+                    processedValue = "Ꮪ$verbStem"
+                } else if(tmpValue.startsWith("ᏚᏅ") || tmpValue.startsWith("ᏓᏅ")) {
+                    return null;
+                }
             }
         }
 

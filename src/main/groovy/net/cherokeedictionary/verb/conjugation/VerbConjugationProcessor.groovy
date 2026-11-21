@@ -69,7 +69,7 @@ class VerbConjugationProcessor {
     static def processPrefixes(//final PronominalPrefix pref,
                                final Verb verb,
                                String it ) {
-        log "DEBUG: it=${it}"
+        log "DEBUG: it=${it} subj=${verb.subject} obj=${verb.object} set=${verb.verbset}"
         def returnPrefix = "";
 
         // tio 21Nov26: A2 OBJECT-FOCUS (unspecified-actor passive) -- guide
@@ -236,6 +236,32 @@ class VerbConjugationProcessor {
             }
 
             if (tmpReturnPrefix) {
+                // tio 21Nov26: D27 part 1 -- the routed PRESENT stem of agw-class
+                // verbs carries the baked 1sg marker (ᎠᏩ... from pres1st
+                // agwegesga); for the n/w FUSION tails (PL3 an-/uni-/dan-, SG3
+                // duw-) the real boundary is the artifact Ꮹ, so the baked Ꭰ is
+                // stripped before the fixPrefix merge and the artifact fuses:
+                // guide P4(21)-(23) ᎠᏅᎨᏩᏍᎦ/ᎤᏅᎨᏩᏍᎦ/ᏓᏅᎨᏩᏍᎦ (an/un/dan + w-artifact
+                // -> nv Ꮕ via the N map), corpus ᎤᏅᎨᏫᏒᎯ MAK 8:14. Scoped to the
+                // n/w tails only -- the gw tail (SG1 agw-) is the SG1 row's own
+                // prefix and must not strip.
+                if (tmpReturnPrefix.endsWith("n")
+                        && it?.size() > 1 && it.startsWith("Ꭰ")
+                        && it.charAt(1) == 'Ꮹ') { // tio 21Nov26: n tails only (PL3 an-/uni-/dan-) -- Ꮹ (wa) is the agw-normalization artifact (ᎠᏩ from pres1st agw-); real stem syllables like the Ꮼ of ᎠᏬᎯᎵᏴᎠ "replying" must NOT strip (book ᎠᎾᏬ unfused); the gw/w tails (SG1 agw- ᎠᏋ gwv cluster, SG3 uw-) excluded -- W['Ꮹ'] has no fusion
+                    it = it.substring(1)
+                }
+                // tio 21Nov26: D27 -- the uw-/duw- A-EPENTHESIS (lexeme-gated,
+                // VerbRegistry.hasUwEpenthesis): uw + hni -> uwa-hni (P8(5)
+                // ᎤᏩᏂᎸᎢ "he hit him, it"), duw -> duwa (P8(6) ᏚᏩᏂᎸᎢ). The
+                // routed stem's leading Ꭵ is the artifact; surfacing it as Ꭰ
+                // lets fixPrefix fuse wa (W map). Real v-initial stems (Kdega
+                // ᎤᏮᏕᏨᎢ uwvdetsvi) are NOT registered and keep the Ꮾ wv
+                // cluster.
+                else if (tmpReturnPrefix.endsWith("w") && !tmpReturnPrefix.endsWith("gw")
+                        && it?.startsWith("Ꭵ")
+                        && VerbRegistry.hasUwEpenthesis(verb.stemmer?.present3rd?.syllabary)) {
+                    it = "Ꭰ" + it.substring(1)
+                }
                 //timo 10Nov26: Grammar guide (Feeling 1975): -y- is inserted only
                 //between the prefix and a stem-initial vowel — "the insertion of -y-
                 //between the final vowel of the prefix and the initial vowel of the

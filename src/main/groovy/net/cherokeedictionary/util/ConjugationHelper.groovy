@@ -117,6 +117,27 @@ class ConjugationHelper {
             verbset = VerbSet.A
         }
 
+        // tio 21Nov26: D27 part 2 -- the PRESENT-SCOPED ANIMATE-OBJECT rule.
+        // M-A (~line 1831): "Set B verbs almost always take the Set B prefixes,
+        // the sole exception being the small set of transitive Set B verbs that
+        // may take the ANIMATE OBJECT prefixes." The verb book's PL3-subject
+        // present rows show it as a GENERAL rule, not a small set: PL3 -> HIM
+        // prints an-/ani- (the Set A animate column) for EVERY verb surveyed
+        // (Ahyoha anihyoha, Gvhniha anvhniha, Kdega anvdega, Ayega aniyega...
+        // 13 verbs, both classes), while PL3 -> IT keeps uni- for class-B verbs
+        // (Ugeyuha unigeyuha, Uwakewsga unvgewisga, Ulvkwdi unilvquodi). The
+        // non-present Set B tenses keep uni- (the 20Nov26 ruling; its evidence
+        // P7(15)/126a is all non-present). Same design shape as the reflexive
+        // P5 override above -- scoped to the PL3 SUBJECT + animate-object
+        // cells (the surveyed evidence); SG3-subject cells keep Set B (the
+        // To Love box: ugeyuha covers him AND it in the present).
+        if (verb.tense == Tense.PRESENT
+                && verb.subject == PrefixTableSubject.PL3
+                && (verb.object == PrefixTableObject.SG3AN
+                    || verb.object == PrefixTableObject.PL3AN)) {
+            verbset = VerbSet.A
+        }
+
         verb.verbset = verbset
     }
 

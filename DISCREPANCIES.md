@@ -798,7 +798,7 @@ v1 approximations (visible, not silently papered over):
    passive (object-focus) is composed in every tense the stems exist for.
 -- tio 21Nov26
 
-## D27. PL3-subject boundary fusion: prefix-final n/w + stem-initial v (2026-11-21, DOCUMENTED -- rulings needed, not auto-patched)
+## D27. PL3-subject boundary fusion: prefix-final n/w + stem-initial v (2026-11-21, RESOLVED -- implemented per user go-ahead)
 
 Validating the existing A3 fills (uni- / duw- / dan-) against guide P4(21)-(23)
 (forget, class-B-always, PRESENT, PL3 subject) and M-A P8(6) surfaced one root
@@ -838,3 +838,32 @@ unchanged, P1(14)). ToSeePresentSpec's SG2SG1 row re-pinned to
 ᏍᎩᎪᏩᏘᏘᎭ-class guide spelling (ᏍᎩᎪᏩᏘᎭ sgigowtiha) with the book form
 noted in the row comment. Both suites green (9,927 / 29,080) with no other
 spec depending on the elided composition. -- tio 21Nov26
+
+### D27 RESOLUTION (2026-11-21, implemented after user go-ahead -- both suites green)
+
+The user's question "which verbs are in the small set?" was answered by a
+survey of the wired verb-book rows (45 PL3-subject PRESENT rows): the
+animate-object exception is a GENERAL present-tense rule, not a small set --
+PL3 -> HIM prints ani- (Set A) for every verb surveyed, both classes, while
+PL3 -> IT keeps uni- for class-B verbs. Implemented as three pieces:
+
+1. BOUNDARY FUSION: Morphemes N map gained the Ꮹ-series artifact entries
+   (n + wa-stem -> nv Ꮕ, the artifact glyph consumed by fixPrefix), and the
+   preVowel branch strips the agw-normalization artifact (ᎠᏩ from pres1st)
+   before n-tail fusions only (Ꮹ-only discriminator; real stem syllables
+   like the Ꮼ of "replying" and the gw tails are excluded).
+2. PRESENT-SCOPED ANIMATE-OBJECT RULE: ConjugationHelper.determineVerbSet --
+   PRESENT + PL3 subject + SG3AN/PL3AN object -> Set A (same design shape as
+   the reflexive P5 override). SG3-subject cells keep Set B (To Love box:
+   ugeyuha covers him AND it in the present). Non-present Set B keeps uni-
+   (the 20Nov26 ruling, untouched).
+3. uw-/duw- A-EPENTHESIS (lexeme-gated, VerbRegistry.registerUwEpenthesis --
+   hit ᎬᏂᎭ registered): uw + hni -> uwa (P8(5) ᎤᏩᏂᎸᎢ), duw -> duwa (P8(6)
+   ᏚᏩᏂᎸᎢ); real v-initial stems cluster wv (Kdega ᎤᏮᏕᏨᎢ, Uwanvga
+   ᎤᏮᏆᏅᏍᏗ -- the W map Ꭵ->Ꮾ RESTORED after the blanket change broke them).
+   RuleUW's duw+a -> du contraction is TENSE-SCOPED: present contracts
+   (ᏚᎨᏳᎭ dugeyuha), non-present keeps duwa- (P8(6); corpus ᏚᏩᏂᎦᎸ x7+).
+
+Pinned in D27PrefixesSpec (12 rows, all citation-exact). No existing pins
+needed re-alignment -- both suites green (9,927 default / 29,080 combined,
+0 failures). -- tio 21Nov26
