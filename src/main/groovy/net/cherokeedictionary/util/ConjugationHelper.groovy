@@ -42,6 +42,16 @@ class ConjugationHelper {
                 || verb.tense == Tense.INFINITIVE) {
             verb.object = PrefixTableObject.SG3IN
         }
+
+        // tio 20Nov26: the reflexive consumes the object slot (guide hold1 P1/P2,
+        // pp. 296-297: "I see myself" = ᎦᏓᎪᏩᏘᎭ ga-da- with the SUBJECT-only
+        // compound; M-A §9.7 (30a) agi-adaad- the same). The adastem is
+        // vowel-initial (ᎠᏓ...), so the preVowel subject compounds (SG1SG3IN
+        // 'G', SG2SG3IN 'h', DL1INCL 'Ꭲn', ...) produce the paradigm rows
+        // directly: g+ada = ᎦᏓᎪ, h+ada = ᎭᏓᎪ, in+ada = ᎢᎾᏓᎪ...
+        if (verb.reflexiveHolderObject.isReflexive()) {
+            verb.object = PrefixTableObject.SG3IN
+        }
     }
 
     /**
@@ -96,6 +106,15 @@ class ConjugationHelper {
         if (verb.tense == Tense.INFINITIVE || verb.tense == Tense.REMOTE_PAST) {
             //remote past always starts with B - Durbin Feeling book pp21
             verbset = VerbSet.B
+        }
+
+        // tio 20Nov26: guide hold1 P5 "to forget oneself" -- class-B-always
+        // verbs take SET A prefixes in the present when the reflexive is used
+        // ("verbs like forget follow the same pattern as those verbs which take
+        // Set A prefixes in the present tense"), Set B in the non-progressive
+        // past (P6).
+        if (verb.reflexiveHolderObject.isReflexive() && verb.tense == Tense.PRESENT) {
+            verbset = VerbSet.A
         }
 
         verb.verbset = verbset

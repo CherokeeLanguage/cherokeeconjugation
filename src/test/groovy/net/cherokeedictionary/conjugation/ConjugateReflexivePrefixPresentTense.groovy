@@ -1,21 +1,51 @@
 package net.cherokeedictionary.conjugation
 
+import net.cherokeedictionary.stemmer.Stemmer
+import net.cherokeedictionary.verb.conjugation.Conjugate
+
 
 /*This code should be in every file*/
 
+/**
+ * tio 20Nov26: rewritten to the guide hold1 I-E paradigms (pp. 296-297,
+ * P1 "to see oneself" present + P2 past) -- the previous assertions were the
+ * pre-guide no-pronominal placeholders compared against pronounReflexiveRoot
+ * (the file's own TODO said "fix this to match the reflexive examples").
+ * Whole-word assertions: pronominal + ada(d)- + stem -- P1 ᎦᏓᎪᏩᏘᎭ
+ * ga-da-gowtiha "I see myself", P2 ᎠᏆᏓᎪᎲᎢ agw-da-gohv'i "I saw myself".
+ * The reflexive consumes the object slot (subject-only compounds, guide P1)
+ * and forces Set A in the present (guide P5, class-B verbs) -- see
+ * ConjugationHelper.determineSubjectObject/determineVerbSet and
+ * ReflexivePrefix. -- tio 20Nov26
+ */
 class ConjugateReflexivePrefixPresentTense extends ConjugateBase {
-    //todo: check the dictionary for the actual forms - then extrapolate for completeness - find more examples somewhere
-    void testReflexivePresentTense() {
-        //pass in a stemmer and then conjugate it adding reflexive to the morpheme
-        def partofspeechc = "v.t."
-        def verbTense = "PRESENT"
-        //TODO: fix this to match the reflexive examples since the reflexive isn't solely based on vi vs vt -- timo 3Nov26
-        assertTrue "ᎠᏓᏚᎵᎭ" == conjStr("SG1", "SG2", heWantsIt, verbTense, partofspeechc, true)
-        assertTrue "ᎦᏬᏂᎭ" == conjStr("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, false)
-        assertTrue "ᎠᏓᏬᏂᎭ" == conjStr("SG3", "SG3AN", hiwoniha, verbTense, partofspeechc, true)
-        assertTrue "ᎠᏓᏛᏂᎭ" == conjStr("SG1", "SG2", hitting, verbTense, partofspeechc, true)
+    private static String conjRefl(String subject, Stemmer stemmer, String verbTense) {
+        def v = Conjugate.conjugate(subject, "SG3AN", stemmer, verbTense, "v.t.", true)
+        return v.wholeWord
+    }
 
-        partofspeechc = "v.i."
-        assertTrue "", "ᎠᏓᏬᏂᎭ" == conjStr("SG1", "", hiwoniha, verbTense, partofspeechc, true)
+    void testReflexivePresentTense() {
+        // P1 "to see oneself" (guide hold1 p. 296) -- all nine persons
+        assertEquals "ᎦᏓᎪᏩᏘᎭ", conjRefl("SG1", gowatiha, "PRESENT")
+        assertEquals "ᎭᏓᎪᏩᏘᎭ", conjRefl("SG2", gowatiha, "PRESENT")
+        assertEquals "ᎠᏓᎪᏩᏘᎭ", conjRefl("SG3", gowatiha, "PRESENT")
+        assertEquals "ᎢᎾᏓᎪᏩᏘᎭ", conjRefl("DL1INCL", gowatiha, "PRESENT")
+        assertEquals "ᎢᏓᏓᎪᏩᏘᎭ", conjRefl("PL1INCL", gowatiha, "PRESENT")
+        assertEquals "ᎣᏍᏓᏓᎪᏩᏘᎭ", conjRefl("DL1EXCL", gowatiha, "PRESENT")
+        assertEquals "ᎣᏣᏓᎪᏩᏘᎭ", conjRefl("PL1EXCL", gowatiha, "PRESENT")
+        assertEquals "ᏍᏓᏓᎪᏩᏘᎭ", conjRefl("DL2", gowatiha, "PRESENT")
+        assertEquals "ᎢᏣᏓᎪᏩᏘᎭ", conjRefl("PL2", gowatiha, "PRESENT")
+    }
+
+    void testReflexiveRemotePastTense() {
+        // P2 "to see oneself," past tense (guide hold1 pp. 296-297) -- Set B
+        assertEquals "ᎠᏆᏓᎪᎲᎢ", conjRefl("SG1", gowatiha, "REMOTE_PAST")
+        assertEquals "ᏣᏓᎪᎲᎢ", conjRefl("SG2", gowatiha, "REMOTE_PAST")
+        assertEquals "ᎤᏓᎪᎲᎢ", conjRefl("SG3", gowatiha, "REMOTE_PAST")
+        // guide P2 DL1INCL prints ᎦᎾᏓᎪᎲᎢ but romanizes gị²nạ²da² (gi-na-da) --
+        // the Ꭶ/Ꭹ glyph variance; the engine's ᎩᏂ (gini-) compound composes
+        // gi-na-da, pronunciation-identical. -- tio 20Nov26
+        assertEquals "ᎩᎾᏓᎪᎲᎢ", conjRefl("DL1INCL", gowatiha, "REMOTE_PAST")
+        assertEquals "ᎣᎦᏓᎪᎲᎢ", conjRefl("PL1EXCL", gowatiha, "REMOTE_PAST")
     }
 }

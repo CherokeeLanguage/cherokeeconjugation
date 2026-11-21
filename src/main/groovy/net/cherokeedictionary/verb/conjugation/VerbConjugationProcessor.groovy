@@ -792,7 +792,14 @@ class VerbConjugationProcessor {
         }
 
         verbToConjugate = new ReflexivePrefix().toSyllabary(verbToConjugate, verb)
-        if (!verb.reflexiveHolderObject.isReflexive()) {
+        // tio 20Nov26: the reflexive no longer skips the pronominal layer --
+        // guide hold1 P1/P2 (pp. 296-297) show FULL pronominals + -adad-:
+        // ᎦᏓᎪᏩᏘᎭ ga-da-gowtiha "I see myself", ᎠᏆᏓᎪᎲᎢ agw-da-gohv'i
+        // "I saw myself". The ada(d) insertion happens on the STEM first, then
+        // the normal compound machinery merges the pronominal boundary.
+        // (The old !isReflexive gate composed the bare adastem with no
+        // pronominal -- every reflexive cell surfaced as the SG3 citation.)
+        if (true) {
             verbToConjugate = processPrefixes(verb, verbToConjugate)
             def lst = verb.stemmer.getRootWithEnding(verb.tense)
             //TODO: write more tests to cover this and make sure the values are correct
