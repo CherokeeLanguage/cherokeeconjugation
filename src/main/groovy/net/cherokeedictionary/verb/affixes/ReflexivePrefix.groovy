@@ -36,10 +36,23 @@ class ReflexivePrefix implements Affix {
     String toSyllabary(String verbToConjugate, Verb verb) {
         if (verb.reflexiveHolderObject.isReflexive()) {
             String stem = stripSg3Marker(verbToConjugate)
-            if (stem.startsWith("Ꭰ")) {
+            def artifactIdx = artifactGlyphIndex(stem)
+            if (stem.startsWith("Ꭰ") && artifactIdx != 1) {
                 // -ad- before -a- stems: the stem-initial a is consumed
                 verb.reflexivePrefix = "ᎠᏓ"
                 verbToConjugate = "ᎠᏓ" + stem.substring(1)
+            } else if (artifactIdx >= 0) {
+                // tio 20Nov26: the routed stem still carries the sg3 u/w
+                // artifact -- ᎥᏂᎭ (from ᎬᏂᎭ gvhniha) or ᎠᏩᎨᏫᏍᎦ (from
+                // ᎤᏩᎨᏫᏍᎦ uwagesga, Set A marker + w artifact). The -adad-
+                // allomorph fuses through it: the artifact glyph is
+                // REPLACED by the fused Ꮫ (dv) -- guide hold1 (1b)
+                // ᎬᏂᎭ -> ᎠᏓᏛᏂᎭ, P5/P6 forget ᎤᏩᎨᏫᏍᎦ -> ᎠᏓᏛᎨᏫᏍᎦ /
+                // ᎠᏆᏓᏛᎨᏫᏒᎢ. The compounds then merge against the
+                // vowel-initial ᎠᏓᏛ... string exactly as for the a-stems
+                // (ᎠᏆᏓ/ᎤᏓ/ᎦᎾᏓ...).
+                verb.reflexivePrefix = "ᎠᏓ"
+                verbToConjugate = "ᎠᏓᏛ" + stem.substring(artifactIdx + 1)
             } else if (StringUtility.startsWithVowelSyllabary(stem)) {
                 // non-a vowel stem: -adad-, the d fuses into the first glyph
                 // (Ꭵ->Ꮫ): ᎥᏂᎭ -> ᎠᏓᏛᏂᎭ
@@ -57,20 +70,29 @@ class ReflexivePrefix implements Affix {
         return verbToConjugate
     }
 
-    /** Strips the baked sg3 citation marker (Ꭴ/Ꭵ + optional Ꮹ-series artifact). */
+    /**
+     * Strips the baked sg3 Set B marker (leading Ꭴ only -- the Ꭵ and Ꮹ-series
+     * glyphs that follow it are the FUSION artifact and are handled by
+     * artifactGlyphIndex below, not stripped here). -- tio 20Nov26
+     */
     private static String stripSg3Marker(String syllabary) {
         if (!syllabary) { return syllabary }
-        String s = syllabary
-        if (s.startsWith("Ꭴ") || s.startsWith("Ꭵ")) {
-            s = s.substring(1)
-            // vowel-initial stems carry the Ꮹ-series w-artifact (ᎤᏩᏂᎸᎢ)
-            if (s && ['Ꮹ', 'Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ'].contains(String.valueOf(s.charAt(0)))
-                    && s.size() > 1
-                    && StringUtility.startsWithVowelSyllabary(s.substring(1))) {
-                s = s.substring(1)
-            }
-        }
-        return s
+        return syllabary.startsWith("Ꭴ") ? syllabary.substring(1) : syllabary
+    }
+
+    private static final List<String> WA_ARTIFACTS = ['Ꮹ', 'Ꮺ', 'Ꮻ', 'Ꮼ', 'Ꮽ', 'Ꮾ', 'Ꭵ']
+
+    /**
+     * Position of the sg3 u/w artifact glyph on the routed stem: 0 for a
+     * leading Ꭵ (ᎥᏂᎭ from ᎬᏂᎭ) or Ꮹ-series glyph (ᏩᎨᏫᏍᎦ), 1 for a baked
+     * Set A Ꭰ before the Ꮹ-series (ᎠᏩᎨᏫᏍᎦ from the forget present1st),
+     * -1 when none. -- tio 20Nov26
+     */
+    private static int artifactGlyphIndex(String stem) {
+        if (!stem || stem.size() < 2) { return -1 }
+        if (WA_ARTIFACTS.contains(String.valueOf(stem.charAt(0)))) { return 0 }
+        if (stem.startsWith("Ꭰ") && WA_ARTIFACTS.contains(String.valueOf(stem.charAt(1)))) { return 1 }
+        return -1
     }
 
     @Override

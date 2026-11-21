@@ -29,6 +29,8 @@ class ConjugateBase extends GroovyTestCase {
     static def hitting = new Stemmer()
     static def uwanvga = new Stemmer()
     static def gowatiha = new Stemmer()
+    static def gvhnixa = new Stemmer()
+    static def uwanegesga = new Stemmer()
 
     static {
         heWantsIt.habitual = new DefinitionLine(syllabary: "ᎤᏚᎵᏍᎪᎢ")
@@ -128,6 +130,22 @@ class ConjugateBase extends GroovyTestCase {
         gowatiha.present1st = new DefinitionLine(syllabary: "ᏥᎪᏩᏘᎭ")
         gowatiha.present3rd = new DefinitionLine(syllabary: "ᎠᎪᏩᏘᎭ")
         gowatiha.remotepast = new DefinitionLine(syllabary: "ᎤᎪᎲᎢ")
+
+        // guide hold1 reflexive fixtures: "to hit (oneself)" (1)/(4b) and
+        // "to forget oneself" (P5/P6) -- tio 20Nov26
+        gvhnixa.habitual = new DefinitionLine(syllabary: "ᎬᏂᎰᎢ")
+        gvhnixa.imperative = new DefinitionLine(syllabary: "ᎯᏴᏂᎦ")
+        gvhnixa.infinitive = new DefinitionLine(syllabary: "ᎤᏩᏂᏍᏗ")
+        gvhnixa.present1st = new DefinitionLine(syllabary: "ᏥᏴᏂᎭ")
+        gvhnixa.present3rd = new DefinitionLine(syllabary: "ᎬᏂᎭ")
+        gvhnixa.remotepast = new DefinitionLine(syllabary: "ᎤᏩᏂᎸᎢ")
+
+        uwanegesga.habitual = new DefinitionLine(syllabary: "ᎤᏩᎨᏫᏍᎪᎢ")
+        uwanegesga.imperative = new DefinitionLine(syllabary: "ᏫᎤᏩᎨᏩ")
+        uwanegesga.infinitive = new DefinitionLine(syllabary: "ᎤᏩᎨᏫᏍᏗ")
+        uwanegesga.present1st = new DefinitionLine(syllabary: "ᎠᏆᎨᏫᏍᎦ")
+        uwanegesga.present3rd = new DefinitionLine(syllabary: "ᎤᏩᎨᏫᏍᎦ")
+        uwanegesga.remotepast = new DefinitionLine(syllabary: "ᎤᏩᎨᏫᏒᎢ")
 
     }
 
