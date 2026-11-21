@@ -151,6 +151,18 @@ differs only in the preConsonant glyph: Ꮳ -> Ꮸ. Look up in the tables:
 (jaduliha ✓ Ꮳ). If you confirm, the fix is one glyph + the have-verb
 ᏣᎭ-family cells re-checked (their stems are vowel-initial, so they keep Ꮳ).
 
+**REFUTED BY BOOK EVIDENCE (2026-11-20 — implementation attempt reverted).**
+The positional rule was implemented (preConsonant Ꮸ) and broke ~90 suite
+cells: the VRB itself prints Ꮳ before consonant-l stems — ᏓᏣᎶᎯ datsalohi
+"you've brought him" (ta- da-layer + Ꮳ + consonant loh-) and the Want box
+SG2 set (ᏣᏚᎵᎭ jaduliha is vowel-initial BUT siblings like ᏣᎴᎩᎭ confirm Ꮳ
+elsewhere). Ꮸ appears only where the VRB/guide print it lexically. So
+Ꮸ-vs-Ꮳ is PER-VERB SPELLING VARIANCE (like the D15/ga-gi class), not a
+positional rule — the engine's uniform Ꮳ stays, and any verb the book
+prints with Ꮸ needs a per-lexeme surface override. Decision needed from
+you: leave uniform Ꮳ (current state) or survey which lexemes the book
+prints with Ꮸ and override those.
+
 ### B3. Ꮤ-vs-Ꮨ (imperatives of da-initial verbs) — examples to look up
 
 Recorded in D22: for da-verbs whose imperative triggers the da + h- contraction,
@@ -188,6 +200,18 @@ subjects — verify against 5-10 more VRB habitual columns before implementing;
 if confirmed, this also unblocks STEM-FREE habitual derivation (the C6
 h+sg machinery already exists).
 
+**REFUTED BY BOOK EVIDENCE (2026-11-20 — implementation attempt reverted).**
+The person-governed rule (SG1/SG2 = -soʼi, rest = -hoʼi) was implemented and
+broke the suite: the "Brushing It" box (VRB, Ganea'a family) prints
+-sgoʼi/-soʼi UNIFORMLY across all persons — SG3 janesoh**oʼi**-class rows
+disproved the "rest = hoʼi" half. Combined with "Breaking It" the pattern
+is STEM-SHAPE-governed (the INC stem's own final consonant + oʼi allomorphy,
+D24 class A per-verb split), not person-governed. The engine's current
+per-verb habitual column (book-printed forms in the specs) is correct.
+Remaining open question (narrower): whether a generalizable stem-shape rule
+exists at all, or the split stays per-verb data as it is today. Recommend:
+leave per-verb (current state), close the person-rule candidate.
+
 ---
 
 ## C. Outstanding variations — consolidated list (this file is the review copy)
@@ -195,9 +219,9 @@ h+sg machinery already exists).
 | # | Item | Status | Where |
 |---|---|---|---|
 | 1 | SG3SG3ANB g- vs Ꭴw vs u- | evidence-backed (ᎬᎨᏳᎢ x10 text) — needs your ruling | B1 above |
-| 2 | SG2SG3INB Ꮸ/Ꮳ | positional allomorphy — needs your confirmation | B2 above |
+| 2 | SG2SG3INB Ꮸ/Ꮳ | positional rule REFUTED by book (ᏓᏣᎶᎯ) — per-verb variance; uniform Ꮳ stays unless you order the lexeme survey | B2 above |
 | 3 | Ꮤ-vs-Ꮨ imperatives | needs your book eyes on the VRB boxes | B3 above |
-| 4 | Habitual -soʼi/-hoʼi person split | VRB row-by-row evidence — verify rule, then implement | B4 above |
+| 4 | Habitual -soʼi/-hoʼi split | person rule REFUTED by book (Brushing box uniform -sgoʼi) — per-verb data stays; close the rule candidate | B4 above |
 | 5 | PL3AN/PL3-object Set B columns | candidates dan-/duw-; unattested | A3 above |
 | 6 | D15 Ꭴw-fusion structural fix | parked (trigger: any new verb surfacing it) | DISCREPANCIES D15 |
 | 7 | PL3AN-object B twins keep Set A forms | unattested columns | CompoundPrefixes comment |
