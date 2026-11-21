@@ -116,7 +116,32 @@ class Conjugate {
                 }
             }
 
-            verb.wholeWord = PrefixProcessor.process(verb)
+            // tio 21Nov26: D29 -- the SG2 imperative of the da-family. The
+        // dictionary's imperative citation IS the printed addressee row, and
+        // for da-initial verbs it already carries the book's contracted
+        // d+h -> ta form (Barking ᏔᏑᏫ, Kneeling ᏔᎵᏂᏆᏅᎥᎦ, Defecating ᏔᏗᎦ --
+        // 29 intransitive citations surveyed). Composing da + hi + stem through
+        // the prefix machinery loses the contraction (the routed h-glyph Ꭽ
+        // conflates hi+ga vs hi+a-stem -- DISCREPANCIES D29), so after the
+        // WI-33 da re-declare above, echo the citation and clear the holder
+        // flags (PrefixProcessor would otherwise prepend Ꮥ/Ꮣ onto the
+        // already-contracted form).
+        def rawImp = verb.stemmer?.imperative?.syllabary
+        if (verb.tense == Tense.IMMEDIATE_COMMAND || verb.tense == Tense.RECENT_PAST_IMPERATIVE) {
+            if (verb.subject == PrefixTableSubject.SG2
+                    && (verb.stemmer?.normalizedDaInitialPrefix
+                        || verb.stemmer?.normalizedDeStyle
+                        || verb.stemmer?.normalizedDiStyle)
+                    && rawImp
+                    && ['Ꮤ', 'Ꮨ', 'Ꮦ'].contains(String.valueOf(rawImp.charAt(0)))) {
+                verb.initialPrefixHolder.da = false
+                verb.initialPrefixHolder.de = false
+                verb.initialPrefixHolder.di = false
+                verb.pronounReflexiveRoot = rawImp
+            }
+        }
+
+        verb.wholeWord = PrefixProcessor.process(verb)
             verb.wholeWord = NonFinalSuffixProcessor.process(verb)
             verb.wholeWord = FinalSuffixProcessor.process(verb)
 

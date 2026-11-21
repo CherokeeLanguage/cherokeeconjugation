@@ -868,7 +868,7 @@ Pinned in D27PrefixesSpec (12 rows, all citation-exact). No existing pins
 needed re-alignment -- both suites green (9,927 default / 29,080 combined,
 0 failures). -- tio 21Nov26
 
-## D29. B3 resolved as an ENGINE GAP: the da/de + h -> t- contraction in commands (2026-11-21, IDENTIFIED -- design task, not yet implementable at PrefixDa)
+## D29. The da/de + h -> t- contraction in commands (2026-11-21, RESOLVED -- citation-echo implementation)
 
 The B3 "Ꮤ-vs-Ꮨ conflict" framing was FALSE: the engine parses Ꮤ = "ta" and
 Ꮨ = "ti", and guide rule 61 (p. 247-248, "the prefix vowel drops and the
@@ -896,3 +896,27 @@ committed with unresolvable bare method references and only ran green after
 this repair). Both suites green (9,931 default / 29,084 combined, 0
 failures) with PrefixDa REVERTED to the pre-B3 state -- no engine change in
 this commit. -- tio 21Nov26
+
+### D29 RESOLUTION (2026-11-21, implemented -- both suites green)
+
+The upstream latin-merge redesign turned out NOT to be needed. The key
+realization: the dictionary's imperative citation IS the printed SG2
+addressee row, and for da-initial verbs it already carries the book's
+contracted form (29 intransitive citations surveyed, all Ꮤ ta). So the
+general rule is implemented as a targeted echo in Conjugate.conjugate
+(AFTER the WI-33 da re-declare, since that block re-sets holder.da and
+PrefixProcessor would prepend Ꮥ/Ꮣ onto the already-contracted form): when
+tense = IMMEDIATE_COMMAND / RECENT_PAST_IMPERATIVE, subject = SG2, the verb
+is da-family (normalizedDaInitialPrefix / normalizedDeStyle /
+normalizedDiStyle), and the imperative citation begins with a t-glyph
+(Ꮤ/Ꮨ/Ꮦ), the citation is echoed and the da/de/di holder flags are cleared.
+Non-SG2 rows compose da + stem unchanged (SG3 ᏓᏑᏫ); present-tense SG2 keeps
+the composed Ꮨ form (married ᏘᎦᏨᏍᏗᎭ = the guide 61 consonant case, d+hi ->
+ti-ga); non-da verbs keep the composed imperative (see ᎯᎪᏩᏔ).
+
+D29PrefixesSpec pins 7 rows (3 contracted citations + the three
+boundary cases). Both suites green (9,935 default / 29,084 combined, 0
+failures). The general prefix-machinery contraction (composing d+hV -> t+V
+for ALL forms, not just the attested SG2-command cells) remains a future
+item only if unattested cells are ever demanded -- every attested cell now
+composes. -- tio 21Nov26
