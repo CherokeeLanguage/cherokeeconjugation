@@ -118,6 +118,38 @@ PL3PL3ANB and the PL3-object columns are Set A stand-ins / unmodeled.
 So the documented plural-object rules: the **d-/duw- plural-object layer**
 (the CMF-style d- prepronominal) attaches for plural-animate objects, and
 3rd-person subjects merge the subject marker with it (an-/un-/dan-, duw-).
+
+**ATTESTATION-MINING RESULTS (2026-11-21):** the existing A3 fills are
+corpus-backed. ᎤᏂᎪᎲᎢ uni- (PL3 Set B) — attested in BOTH corpora (NT LUK
+19:37/9:36/2:20/MAK 9:9 + CORPUS 4497/4943/5287/5718/11067). The duw-/
+du-anv family — 123 ᏚᏩ/ᏚᏪ/ᏚᏫ forms incl. ᏚᏩᏂᎦᎸ duwahngalv "was cut off"
+(ROM 11, PL3AN object, x9+) and 77 ᏚᏅ du-anv forms (MAK 11:8 ᏚᏅᏂᎦᎸᎮᎢ,
+JHN 13:5). The dan- family — 23 ᏓᏅ forms (LUK 5:2 ᏓᏅᎩᎶᏍᎨ, REV 12:11
+ᏓᏅᏅ). The fills stand.
+
+**NEW CONFLICTS FOUND WHILE VALIDATING (2026-11-21 — D27, need your ruling,
+not auto-patched):** composing guide P4(21)-(23) (forget, class-B-always,
+PRESENT, PL3 subject) and M-A P8(6) against the engine surfaces a boundary-
+fusion class the engine does not model yet:
+1. **P4(22) PL3→SG3IN ᎤᏅᎨᏩᏍᎦ unv²-** — the engine's uni- (PL3SG3INB,
+   your 20Nov26 ruling) composes ᎤᎾᏩ...; the guide prints un- with the
+   stem's v FUSED at the boundary as Ꮕ (un+v → nv Ꮕ, the D16 convention)
+   in the present, while the remote keeps uni- (126a ᎤᏂᎪᎲᎢ, attested).
+   Candidate: PL3SG3INB preVowel = the nv-fused shape for v-initial stems.
+2. **P4(21) PL3→SG3AN ᎠᏅᎨᏩᏍᎦ anv²-** — Set A ani- with the same nv fusion
+   (and i-elision), for the ANIMATE object; the current PL3SG3ANB uni-
+   ruling composes ᎤᎾ... The P4(21) row conflicts with the "uni- serves
+   all 3rd objects" ruling for the PRESENT of class-B verbs specifically.
+3. **P4(23) PL3→PL3AN ᏓᏅᎨᏩᏍᎦ danv²-** — the d- layer + the same fused
+   an(v)-; engine composes ᏓᎾᏩ... (n+a where the guide fuses nv).
+4. **M-A P8(6) SG3→PL3AN ᏚᏩᏂᎸᎢ duw-v-** — the engine's 'Ꮪw' preVowel
+   fused against the stem artifact renders ᏚᏮ (wu) where M-A/guide print
+   ᏚᏩ (wa = du+w+v with the artifact surfacing as -a-). Corpus-attested
+   shape (ᏚᏩᏂᎦᎸ x9+). Candidate: fixPrefix(w, artifact) → Ꮹ (wa), not
+   Ꮾ (wu).
+All four are the SAME root class: prefix-final n/w + stem-initial v (the
+sg3 artifact) needs the D16 nv / wa boundary fusion, plus an i-elision
+before the fused Ꮕ.
 The engine's existing PL3-object du- guard (D22) already models the duw-
 family for SG3 subjects. What is unmodeled: PL3-subject + PL3AN-object in
 Set B (candidates per the guide: d- + uni- or dan-), and the PL3ANB twins

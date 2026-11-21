@@ -797,3 +797,27 @@ v1 approximations (visible, not silently papered over):
    subject+object in Set-A-allowing tenses -- not modeled; the first
    passive (object-focus) is composed in every tense the stems exist for.
 -- tio 21Nov26
+
+## D27. PL3-subject boundary fusion: prefix-final n/w + stem-initial v (2026-11-21, DOCUMENTED -- rulings needed, not auto-patched)
+
+Validating the existing A3 fills (uni- / duw- / dan-) against guide P4(21)-(23)
+(forget, class-B-always, PRESENT, PL3 subject) and M-A P8(6) surfaced one root
+class the engine does not model: prefix-final n/w + the stem's sg3 v artifact
+needs the D16 nv / wa boundary fusion, plus an i-elision before the fused Ꮕ.
+
+| cell | guide/M-A print | engine composes | delta |
+|---|---|---|---|
+| P4(21) PL3→SG3AN forget PRES | ᎠᏅᎨᏩᏍᎦ anv²- | ᎤᎾᏩᎨᏫᏍᎦ (uni-) | conflicts with the 20Nov26 "uni- serves all 3rd objects" ruling for the PRESENT of class-B verbs: P4(21) prints Set A an- with nv fusion |
+| P4(22) PL3→SG3IN forget PRES | ᎤᏅᎨᏩᏍᎦ un-v- | ᎤᎾᏩᎨᏫᏍᎦ (uni-) | uni- holds in the remote (126a ᎤᏂᎪᎲᎢ, both corpora) but the present fuses un + Ꮕ |
+| P4(23) PL3→PL3AN forget PRES | ᏓᏅᎨᏩᏍᎦ danv²- | ᏓᎾᏩᎨᏫᏍᎦ | d- layer + fused an(v); engine n+a instead of Ꮕ |
+| M-A P8(6) SG3→PL3AN hit remote | ᏚᏩᏂᎸᎢ du¹wa²- | ᏚᏮᏂᎸᎢ (wu) | the Ꮪw preVowel fused against the artifact should render Ꮹ (wa = du+w+v), not Ꮾ; the duwa- shape is corpus-attested (ᏚᏩᏂᎦᎸ x9+) |
+
+CORPUS BACKING for the fills themselves: ᎤᏂᎪᎲᎢ both corpora (NT LUK/MAK +
+CORPUS 5 ids); ᏚᏩ- 123 forms, ᏚᏅ- 77 forms (MAK 11:8, JHN 13:5), ᏓᏅ- 23
+forms (LUK 5:2, REV 12:11). Evidence detail in ENGINE-COMPLETENESS.md A3.
+Candidate fix (one class): prefix-final n/w + stem-initial v artifact →
+nv (Ꮕ) for the n-series, wa (Ꮹ) for the w-series, i-elided before the
+fused Ꮕ; scoped so the existing uni-/du- consonant-stem rows are untouched.
+RULINGS NEEDED: (a) does P4(21)-(23) overturn the uni- ruling for the
+present of class-B verbs, or is P4 a per-verb variance? (b) apply the
+boundary-fusion class? -- tio 21Nov26
