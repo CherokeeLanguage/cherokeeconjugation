@@ -24,6 +24,9 @@ import net.cherokeedictionary.verb.rules.RuleVtoA
  * Created by torr on 8/23/2015.
  */
 class VerbConjugationProcessor {
+
+    // tio 21Nov26: the sg3 u/w artifact glyph series (ᎤᏩᏂᎸᎢ-class routing)
+    private static final String WA_SERIES = "ᏩᏪᏫᏬᏭᏮ"
     static boolean isDebug = false
 
     // tio 19Nov26: guide §I-B (hold1.html): "Figure 4 shows those Set B
@@ -68,6 +71,40 @@ class VerbConjugationProcessor {
                                String it ) {
         log "DEBUG: it=${it}"
         def returnPrefix = "";
+
+        // tio 21Nov26: A2 OBJECT-FOCUS (unspecified-actor passive) -- guide
+        // hold1 pp. 300-301 (Paradigms Five/Six + Figure One); M-A §9.4. The
+        // focus prefix REPLACES the pronominal compound: the object is the
+        // only indexed person, the agent is unspecified, so the compound
+        // machinery is bypassed entirely. The prefix is keyed on the OBJECT
+        // person and chosen by the stem's own initial: the vowel-stem fused
+        // forms (Figure One "above" rows -- ᎥᏋ vgw-, ᎡᏨ ejv-, ᎠᎬ agv-...)
+        // apply when the routed stem carries the sg3 u/w artifact glyph
+        // (ᎥᏂᎭ, ᎠᏩ...), the consonant-stem forms (ᎥᎩ vgi-, ᎡᏣ eja-, ᎠᏥ
+        // aji-...) prepend directly to the bare stem (P5 ᎥᎩᎪᏩᏘᎭ). The
+        // h-alternation M-A marks for several prefixes is NOT modeled (v1).
+        if (verb.objectFocusHolderObject?.isObjectFocus()) {
+            def focusEntry = net.cherokeedictionary.util.ObjectFocusPrefixes.prefixes.get(String.valueOf(verb.object))
+            if (!focusEntry) {
+                return "MISSING_ENTRY" + it
+            }
+            String stem = it
+            if (stem.startsWith("Ꭴ")) { stem = stem.substring(1) }
+            int artIdx = -1
+            if (stem.startsWith("Ꭵ")) {
+                artIdx = 0
+            } else if (stem.size() > 1 && WA_SERIES.indexOf(String.valueOf(stem.charAt(0))) >= 0) {
+                artIdx = 0
+            } else if (stem.size() > 2 && stem.startsWith("Ꭰ") && WA_SERIES.indexOf(String.valueOf(stem.charAt(1))) >= 0) {
+                artIdx = 1
+            }
+            def glyphs = (artIdx >= 0) ? focusEntry.preVowel : focusEntry.preConsonant
+            if (!glyphs) {
+                return "MISSING_ENTRY" + it
+            }
+            if (artIdx >= 0) { stem = stem.substring(artIdx + 1) }
+            return glyphs + stem
+        }
 
         final CompoundPrefix pref = verb.compoundPrefix
         final VerbSet verbset = verb.verbset
@@ -253,6 +290,7 @@ class VerbConjugationProcessor {
                     && pref?.prefix1 == PrefixTableSubject.SG3
                     && pref?.prefix2 == PrefixTableObject.SG3AN
                     && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                     && verb.stemmer?.present3rd?.syllabary
                     && !VerbRegistry.hasUnifiedSg3PresentRow(verb.stemmer.present3rd.syllabary)
                     && it?.startsWith("Ꭰ")) {
@@ -438,7 +476,8 @@ class VerbConjugationProcessor {
         if (verb.nonFinalSuffixHolder?.el
                 && verb.tense == Tense.PRESENT
                 && verb.stemmer?.dativePresent?.syllabary
-                && !verb.reflexiveHolderObject.isReflexive()) {
+                && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()) {
             if (verb.compoundPrefix == CompoundPrefixes.SG3PL3AN
                     || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN) {
                 verb.initialPrefixHolder.de = true
@@ -464,12 +503,14 @@ class VerbConjugationProcessor {
         // still applies elsewhere.
         if (verb.compoundPrefix == CompoundPrefixes.SG3SG3IN
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.PRESENT
                 && verb.stemmer?.present3rd?.syllabary) {
             return verb.stemmer.present3rd.syllabary;
         }
         if (verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.PRESENT
                 && verb.stemmer?.present3rd?.syllabary
                 && VerbRegistry.hasUnifiedSg3PresentRow(verb.stemmer.present3rd.syllabary)) {
@@ -488,6 +529,7 @@ class VerbConjugationProcessor {
         if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
                 || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.HABITUAL
                 && verb.stemmer?.habitual?.syllabary) {
             return verb.stemmer.habitual.syllabary;
@@ -505,6 +547,7 @@ class VerbConjugationProcessor {
         if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
                 || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.HABITUAL
                 && verb.stemmer?.habitual?.syllabary) {
             return verb.stemmer.habitual.syllabary;
@@ -520,6 +563,7 @@ class VerbConjugationProcessor {
         if ((verb.compoundPrefix == CompoundPrefixes.SG3SG3AN
                 || verb.compoundPrefix == CompoundPrefixes.SG3SG3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.IMMEDIATE_PAST
                 && verb.stemmer?.immediatepast?.syllabary) {
             return verb.stemmer.immediatepast.syllabary;
@@ -614,6 +658,7 @@ class VerbConjugationProcessor {
         if ((verb.compoundPrefix == CompoundPrefixes.SG3PL3AN
                 || verb.compoundPrefix == CompoundPrefixes.SG3PL3IN)
                 && !verb.reflexiveHolderObject.isReflexive()
+                && !verb.objectFocusHolderObject?.isObjectFocus()
                 && verb.tense == Tense.PRESENT
                 && verb.stemmer?.present3rd?.syllabary) {
             if (verb.stemmer?.sg3Allomorph() == Stemmer.SG3_ALLOMORPH_A) {

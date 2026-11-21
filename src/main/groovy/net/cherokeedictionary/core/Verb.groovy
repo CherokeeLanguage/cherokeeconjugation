@@ -48,6 +48,11 @@ class Verb extends Word {
     ReflexiveHolderObject reflexiveHolderObject = new ReflexiveHolderObject()
     String reflexivePrefix
 
+    // tio 21Nov26: A2 object-focus (unspecified-actor passive) flag --
+    // guide hold1 pp. 300-301 / M-A §9.4; the focus prefix replaces the
+    // pronominal compound (see ObjectFocusPrefixes).
+    net.cherokeedictionary.verb.objectfocus.ObjectFocusHolderObject objectFocusHolderObject = new net.cherokeedictionary.verb.objectfocus.ObjectFocusHolderObject()
+
     VerbInitialPrefixHolderObject initialPrefixHolder = new VerbInitialPrefixHolderObject()
     String pronominalHolder = ""
     String reflexivePrefixHolder = "" // TODO: need to create this object

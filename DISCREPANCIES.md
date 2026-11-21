@@ -763,3 +763,37 @@ normalizedDaFuseU added to Stemmer as a documented (non-load-bearing)
 discriminator. Remaining: 4 bare-stem SG2 SG3AN FC where-cells (Ugeyuha/
 Uksesdi/Ulvkwdi/Utvdasdi -- likely truncated rows) for user eyeball. -- tio
 20Nov26
+
+## D26. Object-focus (unspecified-actor passive) prefixes implemented v1-approximate (2026-11-21, IMPLEMENTED -- approximations documented)
+
+Sources: guide hold1 I-E pp. 300-301 (Paradigms Five/Six + Figure One, the
+special passive pronoun prefixes) and M-A section 9.4 Table 9.3 (Object
+Focus Pronominal Prefixes) -- the same paradigm under two names ("the only
+grammatical person referenced is the object ... similar to an English
+passive", M-A p. 256). Implementation: ObjectFocusPrefixes (glyph-valued
+preVowel/preConsonant forms keyed on the OBJECT person), the focus prefix
+REPLACES the pronominal compound in processPrefixes (the compound machinery
+is bypassed; the citation echoes are guarded), request flag
+ConjugationRequest.objectFocus via the facade. Guide P5 (to be seen,
+consonant stem) and P6 (to be hit, v-stem) compose citation-exact for all
+7 paradigm rows each (ObjectFocusPrefixesSpec).
+
+v1 approximations (visible, not silently papered over):
+1. The M-A h-alternation (Table 9.3 marks eesdii/eejii/eeginii/eegii/aji/
+   geejii as triggering aspiration exchange with h-initial stems) is NOT
+   modeled -- h-initial stems compose plain forms.
+2. The P5 DL1INCL/PL1INCL book rows print ASPIRATED spellings
+   (ᎡᎩᏂᏆᏩᏘᎭ / ᎡᎩᏆᏩᏘᎭ-class, Ꮖ- for the stem's g after the inclusive
+   prefix) while the guide's own romanization (egini-gowhtiha,
+   egi-gowhtiha) matches the engine's plain composed shapes. The engine
+   asserts the romanization-consistent forms; the aspirated glyphs are a
+   documented spelling variance pending a ruling.
+3. SG3IN/PL3IN-object and DL3 focus cells have NO attested forms in either
+   source -- they surface MISSING_ENTRY (visible-gap convention). The 3rd-
+   person inanimate no-agent reading is covered by the guide's THIRD
+   passive (-ad-/al- before s/t/k, ali- before voiced -- pp. 302-303), a
+   separate future item.
+4. The guide restricts the SECOND passive (Set B inversion) to 3rd-person
+   subject+object in Set-A-allowing tenses -- not modeled; the first
+   passive (object-focus) is composed in every tense the stems exist for.
+-- tio 21Nov26

@@ -42,6 +42,7 @@ class ConjugationContext {
             toFlag(request.reflexive) // tio 21Nov26: the reflexive consumes the object slot (guide hold1 P1-P6) -- A1 facade wiring
         )
 
+        verb.objectFocusHolderObject.objectFocus = toFlag(request.objectFocus) // tio 21Nov26: A2 -- object-focus prefix replaces the pronominal (guide pp. 300-301)
         if (verb && verb.initialPrefixHolder) {
             // F: the holder flags are booleans -- coerce the request's string
             // flags ("true"/"false") instead of assigning them verbatim.

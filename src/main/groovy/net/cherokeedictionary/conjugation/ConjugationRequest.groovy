@@ -45,6 +45,14 @@ class ConjugationRequest {
     // class-B verbs (guide P5). -- tio 21Nov26
     String reflexive
 
+    // tio 21Nov26: object-focus / unspecified-actor passive flag (A2) --
+    // "I am being seen" ᎥᎩᎪᏩᏘᎭ class forms (guide hold1 pp. 300-301,
+    // Paradigms Five/Six + Figure One; M-A §9.4 Table 9.3). The OBJECT
+    // field names the undergoer ("he is being hit" = object SG3AN); the
+    // agent is unspecified and the focus prefix replaces the pronominal.
+    // -- tio 21Nov26
+    String objectFocus
+
     // tio 19Nov26: deconstruct input -- a fully conjugated verb surface form
     // for the analyze() path. When set, VerbConjugationFacade.analyze runs
     // the outside-in Deconstructor instead of the conjugation pipeline.
@@ -70,6 +78,7 @@ class ConjugationRequest {
             partofspeechc: partOfSpeech,
             lexeme       : lexeme,
             reflexive    : reflexive,
+            objectFocus  : objectFocus,
             form         : form,
             habitual     : habitual,
             imperative   : imperative,
