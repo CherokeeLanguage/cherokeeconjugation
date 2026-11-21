@@ -39,6 +39,12 @@ class ConjugationRequest {
     // from VerbBaseSpec. -- tio 18Nov26
     String lexeme
 
+    // tio 21Nov26: reflexive flag (A1) -- "he sees himself" ᎠᏓᎪᏩᏘᎭ class
+    // forms (guide hold1 I-E pp. 296-298). The reflexive consumes the object
+    // slot (subject-only compounds) and forces Set A in the present for
+    // class-B verbs (guide P5). -- tio 21Nov26
+    String reflexive
+
     // tio 19Nov26: deconstruct input -- a fully conjugated verb surface form
     // for the analyze() path. When set, VerbConjugationFacade.analyze runs
     // the outside-in Deconstructor instead of the conjugation pipeline.
@@ -63,6 +69,7 @@ class ConjugationRequest {
             verbTense    : verbTense,
             partofspeechc: partOfSpeech,
             lexeme       : lexeme,
+            reflexive    : reflexive,
             form         : form,
             habitual     : habitual,
             imperative   : imperative,

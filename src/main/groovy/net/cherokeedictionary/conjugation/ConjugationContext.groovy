@@ -34,12 +34,12 @@ class ConjugationContext {
         if (request.immediatepast) stemmer.immediatepast = new DefinitionLine(syllabary: stem(request.immediatepast))
 
         verb = Conjugate.createVerbToConjugate(
-            request.subject, 
-            request.object, 
-            stemmer, 
-            request.verbTense, 
-            request.partOfSpeech, 
-            false
+            request.subject,
+            request.object,
+            stemmer,
+            request.verbTense,
+            request.partOfSpeech,
+            toFlag(request.reflexive) // tio 21Nov26: the reflexive consumes the object slot (guide hold1 P1-P6) -- A1 facade wiring
         )
 
         if (verb && verb.initialPrefixHolder) {
