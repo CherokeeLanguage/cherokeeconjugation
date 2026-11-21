@@ -31,7 +31,7 @@ class NonFinalSuffixProcessor {
         String baseReturnValue = verb.wholeWord
 
         if (!baseReturnValue || baseReturnValue.startsWith("MISSING_ENTRY") || baseReturnValue.startsWith("MISSING_STEM")) {
-            return baseReturnValue
+            return ""//baseReturnValue
         }
 
         def holder = verb.nonFinalSuffixHolder

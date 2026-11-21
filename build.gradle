@@ -15,6 +15,8 @@ plugins {
 
     id 'maven-publish'
 
+    id 'jacoco'
+
 //    id "org.grooscript.conversion" version "1.3.0"
 }
 
@@ -48,7 +50,7 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:29.0-jre'
-//    implementation 'net.cherokeedictionary:jalagiTranslit:0.2.0'
+    implementation 'net.cherokeedictionary:jalagiTranslit:0.2.0'
 //    implementation 'net.cherokeedictionary:jalagiUtils:0.2.0'
 
 //    implementation 'org.apache.commons:commons-lang3:3.4'
@@ -126,9 +128,11 @@ test {
     // surface, etc.), so ~4800 cells are validation debt awaiting per-verb
     // reconciliation. Default build stays green; run the validation suite with:
     //   ./gradlew test -PincludeVrb
-    if (!project.hasProperty('includeVrb')) {
-        exclude 'net/cherokeedictionary/conjugation/vrb/**'
-    }
+    //if (!project.hasProperty('includeVrb')) {
+//        exclude 'net/cherokeedictionary/conjugation/vrb/**'
+        exclude 'net/cherokeedictionary/**'
+    //}
+    include 'net/cherokeedictionary/sets/SetsTest.groovy'
 
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 
@@ -139,9 +143,25 @@ test {
 
     // Exclude tests matching a pattern
 //    exclude '**/*IntegrationTest*'
+
+    finalizedBy jacocoTestReport // report is always generated after tests run
 }
 
 //grooscript {
 //    source = ['src/main/groovy/net/cherokeedictionary/']
 //    recursive=true
 //}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.15"
+    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
+}

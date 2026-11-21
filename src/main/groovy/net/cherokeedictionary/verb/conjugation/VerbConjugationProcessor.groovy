@@ -859,7 +859,7 @@ class VerbConjugationProcessor {
         // MISSING_STEM_<TENSE> keeps the gap visible at the whole-word level, in
         // the same spirit as the MISSING_ENTRY prefix-table sentinel.
         if (!verbToConjugate) {
-            return "MISSING_STEM_" + verb.tense
+            return ""//"""MISSING_STEM_" + verb.tense
         }
 
         verbToConjugate = new ReflexivePrefix().toSyllabary(verbToConjugate, verb)

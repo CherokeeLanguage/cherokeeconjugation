@@ -358,7 +358,8 @@ class CompoundPrefixes {
         prefixes.put("DL1EXCLSG2", new Prefix(preVowel: 'ᏍᏛy', preConsonant: 'ᏍᏛ', other: ''))
         prefixes.put("DL1EXCLSG3AN", new Prefix(preVowel: 'ᎣᏍd', preConsonant: 'ᎣᏍᏗ', other: ''))
         prefixes.put("DL1EXCLSG3IN", new Prefix(preVowel: 'ᎣᏍd', preConsonant: 'ᎣᏍᏗ', other: ''))
-//        prefixes.put("DL1EXCLDL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+//        prefixes.put("DL1EXCLDL1INCL", new Prefix(preVowel: '',
+//        preConsonant: '', other: ''))
 //        prefixes.put("DL1EXCLDL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1EXCLPL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1EXCLPL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
