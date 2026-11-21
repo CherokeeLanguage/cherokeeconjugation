@@ -304,7 +304,7 @@ the citation-in error contract (MISSING_STEM_HABITUAL).
 
 | # | Item | Status | Where |
 |---|---|---|---|
-| 1 | SG3SG3ANB g- vs Ꭴw vs u- | evidence-backed (ᎬᎨᏳᎢ x10 text) — needs your ruling | B1 above |
+| 1 | SG3SG3ANB uw- vs gv- | RESOLVED 2026-11-21 — no conflict: To Love box u- covers him AND it; gv- was the SG1SG2 local prefix mis-segmented | B1 above |
 | 2 | SG2SG3INB Ꮸ/Ꮳ | positional rule REFUTED by book (ᏓᏣᎶᎯ) — per-verb variance; uniform Ꮳ stays unless you order the lexeme survey | B2 above |
 | 3 | Ꮤ-vs-Ꮨ imperatives | needs your book eyes on the VRB boxes | B3 above |
 | 4 | Habitual -soʼi/-hoʼi split | person rule REFUTED by book (Brushing box uniform -sgoʼi) — per-verb data stays; close the rule candidate | B4 above |
