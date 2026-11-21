@@ -159,24 +159,37 @@ generally. Unattested in our corpus — the attestation index can be mined for
 
 ## B. Documented conflicts — evidence and what each needs
 
-### B1. SG3SG3ANB (guide g- vs engine Ꭴw vs CED u-/uya-)
+### B1. SG3SG3ANB (engine Ꭴw/Ꭴ uw- vs the attested ᎬᎨᏳᎢ gv- present forms)
 
-**The evidence now includes running text.** [INDEX] mining:
+**CORRECTED 2026-11-21 (user challenged the provenance):** an earlier
+version of this section cited "[M-A] P4(5) ᎬᎨᏩᏍᎦ gvkewsga analyzed
+'g- he--him'" — that analysis is NOT in the Montgomery OCR and the
+citation was wrong; retracted. What the sources actually say:
 
-- ᎬᎨᏳᎢ gvvé-yu-ha "he loves HIM" (3AN object, Set B verb in the present,
-  **g-** marker): NT 3JN 1:11, 3JN 1:5, 3JN 1:2, 2TM 1:2, LUK 3:22 + CORPUS
-  4176/4997/9761/10610/10613 — **attested in BOTH corpora**.
-- [M-A] P4(5) ᎬᎨᏩᏍᎦ gvkewsga "he's forgetting HIM" analyzed "g- 'he--him'"
-  vs (6) ᎤᏩᎨᏩᏍᎦ uw- "he's forgetting IT".
-- The g- forms of love (ᎬᎨᏳᎢ family) occur ~10x in the text; the u-/uya-
-  SG3AN candidates (ᎤᏩᎨᏩᏍᎦ etc.) occur 0x in the mined sample.
+- [Guide] P8(5) ᎤᏩᏂᎸᎢ uw- "he hit him, it" (PAST) — ONE form for both
+  objects; Figure 4's 3 sg. row "uw- u-" covers only the 3sg-in/3pl-in
+  columns (no animate Set B column exists in Figure 4). The engine's
+  Ꭴw/Ꭴ entry matches this. The guide never prints g- for SG3SG3ANB.
+- [M-A, line ~1831] mechanism note only: "Set B verbs almost always take
+  the Set B prefixes, the sole exception being the small set of transitive
+  Set B verbs that may take the ANIMATE OBJECT prefixes."
+- [INDEX] ᎬᎨᏳᎢ gvvéyuha "he loves him" — PRESENT of a class-B verb with
+  an animate object — 15+ attestations in BOTH corpora (NT 3JN 1:11/1:5/1:2,
+  2TM 1:2, LUK 3:22, REV 3:9, JHN 21:15-17 + CORPUS 4176/4997/9761/10610/
+  10613/11398...); the uw- candidate for this slot occurs 0x. The FORM is
+  corpus-solid; the slot assignment is the open question.
 
-**What is needed to solve it**: a ruling that [M-A] P4(5) + the ᎬᎨᏳᎢ
-attestations (g- for SG3+SG3AN) outrank the CED u-/uya- transcription rows —
-then SG3SG3ANB := g- (with the same vowel-merge behavior the Ꭶ- allomorph
-shows). The ᎤᏩᎨᏫ/uwa- forms in the text are the uw- "he--it" family (M-A
-P4(6)), confirming the AN/IT contrast for 3rd-person subjects. This is now
-evidence-backed enough to decide.
+**Two readings of ᎬᎨᏳᎢ**: (a) gv- is the SG3SG3ANB allomorph in the Set B
+PRESENT of class-B verbs (tense-scoped alongside uw- for the past — the
+corpus pattern fits: ᎤᏩ- 169 forms incl. past "he watched him"
+ᎤᏩᎢᏎᎸᎯ x9+, and 0 g- forms in any past column); or (b) gv- is the
+u- subject prefix's g-variant (guide (125b) ᎬᏩᎪᎲᎢ note: "u- changes to
+-a- following gvw-" treats gv- as a 3rd-person Set B subject allomorph
+family) with the animate marking carried another way.
+
+**What is needed**: book eyes on the To Love / To Forget PRESENT SG3 rows
+(ᎬᎨᏳᎢ-class vs ᎤᏩᎨᏳᎢ-class) to pick reading (a) or (b), then either a
+tense-scoped g- allomorph rule or a documented-variance closure.
 
 ### B2. SG2SG3INB Ꮸ-vs-Ꮳ — positional allomorphy, examples to look up
 
