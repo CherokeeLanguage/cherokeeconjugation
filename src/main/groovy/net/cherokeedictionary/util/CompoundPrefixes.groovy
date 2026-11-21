@@ -302,9 +302,9 @@ class CompoundPrefixes {
 //        prefixes.put("SG2SG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("SG2SG3AN", new Prefix(preVowel: 'Ꭿy', preConsonant: 'Ꭿ', other: ''))
         prefixes.put("SG2SG3IN", new Prefix(preVowel: 'h', preConsonant: 'Ꭿ', other: ''))
-//        prefixes.put("SG2DL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("SG2DL1INCL", new Prefix(preVowel: 'ᏍᎩn', preConsonant: 'ᏍᎩᏂ', other: '')) // tio 21Nov26: A2b -- guide P3(11) ᏍᎩᏂᎪᏩᏘᎭ "you see me and him" (sgin-)
         prefixes.put("SG2DL1EXCL", new Prefix(preVowel: 'ᏍᎩn', preConsonant: 'ᏍᎩᏂ', other: ''))
-//        prefixes.put("SG2PL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("SG2PL1INCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: '')) // tio 21Nov26: A2b -- guide P3(12) ᎢᏍᎩᎪᏩᏘᎭ "you see me and them" (isgi-)
         prefixes.put("SG2PL1EXCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: ''))
 //        prefixes.put("SG2DL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("SG2PL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
@@ -337,15 +337,15 @@ class CompoundPrefixes {
         prefixes.put("SG3PL3IN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᎩ', other: ''))
 
 //        prefixes.put("DL1INCLSG1", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("DL1INCLSG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("DL1INCLSG2", new Prefix(preVowel: 'ᏍᏛy', preConsonant: 'ᏍᏛ', other: '')) // tio 21Nov26: A2b -- M-A Table 9.2 dual (ii)sdvv-; mirrors DL1EXCLSG2
         prefixes.put("DL1INCLSG3AN", new Prefix(preVowel: 'Ꭱn', preConsonant: 'ᎡᏂ', other: ''))
         prefixes.put("DL1INCLSG3IN", new Prefix(preVowel: 'Ꭲn', preConsonant: 'ᎢᏂ', other: ''))
 //        prefixes.put("DL1INCLDL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1INCLDL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1INCLPL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL1INCLPL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("DL1INCLDL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("DL1INCLPL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("DL1INCLDL2", new Prefix(preVowel: 'ᏍᏛy', preConsonant: 'ᏍᏛ', other: '')) // tio 21Nov26: A2b -- M-A Table 9.2 dual sdvv (number applies to either person)
+        prefixes.put("DL1INCLPL2", new Prefix(preVowel: 'ᎢᏨy', preConsonant: 'ᎢᏨ', other: '')) // tio 21Nov26: A2b -- guide P1(68) ᎢᏨᏯᎸᎢᎭ "he and I are tying you (pl) up"
         prefixes.put("DL1INCLPL3AN", new Prefix(preVowel: 'Ꭸn', preConsonant: 'ᎨᏂ', other: ''))
         prefixes.put("DL1INCLPL3IN", new Prefix(preVowel: 'Ꮥn', preConsonant: 'ᏕᏂ', other: ''))
 
@@ -370,7 +370,7 @@ class CompoundPrefixes {
         prefixes.put("DL1EXCLPL3IN", new Prefix(preVowel: 'ᏙᏍd', preConsonant: 'ᏙᏍᏗ', other: ''))
 
 //        prefixes.put("PL1INCLSG1", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("PL1INCLSG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("PL1INCLSG2", new Prefix(preVowel: 'ᎢᏨy', preConsonant: 'ᎢᏨ', other: '')) // tio 21Nov26: A2b -- guide P1(73) ᎢᏨᏯᎸᎢᎭ "they and I are tying you up"
         prefixes.put("PL1INCLSG3AN", new Prefix(preVowel: 'Ꭱd', preConsonant: 'ᎡᏗ', other: ''))
         prefixes.put("PL1INCLSG3IN", new Prefix(preVowel: 'Ꭲd', preConsonant: 'ᎢᏗ', other: ''))
 //        prefixes.put("PL1INCLDL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
@@ -378,7 +378,7 @@ class CompoundPrefixes {
 //        prefixes.put("PL1INCLPL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("PL1INCLPL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("PL1INCLDL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("PL1INCLPL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("PL1INCLPL2", new Prefix(preVowel: 'ᎢᏨy', preConsonant: 'ᎢᏨ', other: '')) // tio 21Nov26: A2b -- guide P1(79) ᎢᏨᏯᎸᎢᎭ "they and I are tying you (dl,pl) up"
         prefixes.put("PL1INCLPL3AN", new Prefix(preVowel: 'Ꭸd', preConsonant: 'ᎨᏗ', other: ''))
         prefixes.put("PL1INCLPL3IN", new Prefix(preVowel: 'Ꮥd', preConsonant: 'ᏕᏗ', other: ''))
 
@@ -391,7 +391,7 @@ class CompoundPrefixes {
 //        prefixes.put("PL1EXCLPL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("PL1EXCLPL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("PL1EXCLDL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("PL1EXCLPL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("PL1EXCLPL2", new Prefix(preVowel: 'ᎢᏨy', preConsonant: 'ᎢᏨ', other: '')) // tio 21Nov26: A2b -- guide P1(79) same ijv- row (incl/excl share)
         prefixes.put("PL1EXCLPL3AN", new Prefix(preVowel: 'Ꭺj', preConsonant: 'ᎪᏥ', other: ''))
         prefixes.put("PL1EXCLPL3IN", new Prefix(preVowel: 'Ꮩj', preConsonant: 'ᏙᏥ', other: ''))
 
@@ -399,9 +399,9 @@ class CompoundPrefixes {
 //        prefixes.put("DL2SG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("DL2SG3AN", new Prefix(preVowel: 'ᎡᏍd', preConsonant: 'ᎡᏍᏗ', other: ''))
         prefixes.put("DL2SG3IN", new Prefix(preVowel: 'Ꮝd', preConsonant: 'ᏍᏗ', other: ''))
-//        prefixes.put("DL2DL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("DL2DL1INCL", new Prefix(preVowel: 'ᏍᎩn', preConsonant: 'ᏍᎩᏂ', other: '')) // tio 21Nov26: A2b -- guide P3(49) ᏍᎩᏂᎪᏩᏘᎭ "you (dl) see me and him"
         prefixes.put("DL2DL1EXCL", new Prefix(preVowel: 'ᏍᎩn', preConsonant: 'ᏍᎩᏂ', other: ''))
-//        prefixes.put("DL2PL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("DL2PL1INCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: '')) // tio 21Nov26: A2b -- guide P1(92) ᎢᏍᎩᏯᎸᎢᎭ "you (dl) are tying me and them up"
         prefixes.put("DL2PL1EXCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: ''))
 //        prefixes.put("DL2DL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("DL2PL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
@@ -412,10 +412,10 @@ class CompoundPrefixes {
 //        prefixes.put("PL2SG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("PL2SG3AN", new Prefix(preVowel: 'Ꭱj', preConsonant: 'ᎡᏥ', other: ''))
         prefixes.put("PL2SG3IN", new Prefix(preVowel: 'Ꭲj', preConsonant: 'ᎢᏥ', other: ''))
-//        prefixes.put("PL2DL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("PL2DL1INCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: '')) // tio 21Nov26: A2b -- guide P1(103) isgi- "you (pl) are tying me and him"
         prefixes.put("PL2DL1EXCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: ''))// NOTE: not attested in the Feeling guide excerpts; verify against Appendix B -- timo 10Nov26
-//        prefixes.put("PL2PL1INCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
-//        prefixes.put("PL2PL1EXCL", new Prefix(preVowel: '', preConsonant: '', other: ''))
+        prefixes.put("PL2PL1INCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: '')) // tio 21Nov26: A2b -- guide P3(53)/(56) ᎢᏍᎩᎪᏩᏘᎭ "you (pl) see me and them"
+        prefixes.put("PL2PL1EXCL", new Prefix(preVowel: 'ᎢᏍᎩy', preConsonant: 'ᎢᏍᎩ', other: '')) // tio 21Nov26: A2b -- guide P3(56) same isgi- row (incl/excl share)
 //        prefixes.put("PL2DL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
 //        prefixes.put("PL2PL2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("PL2PL3AN", new Prefix(preVowel: 'Ꭸj', preConsonant: 'ᎨᏥ', other: ''))

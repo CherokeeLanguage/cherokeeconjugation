@@ -85,6 +85,19 @@ to either or both persons). [Guide] P(13)-(16) prints the same sgw-/gvw- rows.
 These plural prefixes carry 3-5 possible glosses each — the occurrence-aware
 harness and the all-analyses deconstruction rule apply.
 
+**IMPLEMENTED 2026-11-21 (A2b done).** The 1→2 rows (SG1SG2 Ꭼ/Ꭼy, SG1DL2
+ᏍᏛ/ᏍᏛy, SG1PL2 ᎢᏨ/ᎢᏨy) were already filled; 13 previously-empty local keys
+are now citation-exact from the guide: SG2DL1INCL/SG2PL1INCL (P3(11)/(12)),
+DL1INCLSG2/DL1INCLDL2 (M-A dual sdvv), DL1INCLPL2 (P1(68)), PL1INCLSG2
+(P1(73)), PL1INCLPL2/PL1EXCLPL2 (P1(79)), DL2PL1INCL (P1(92)),
+DL2DL1INCL (P3(49)), PL2DL1INCL/PL2PL1INCL/PL2PL1EXCL (P1(103)/P3(53)/(56)).
+Set B tenses reach them via the D20 empty-twin fallback. LocalPairPrefixesSpec
+asserts 19 rows. **One variance recorded (not changed):** guide P3(8) prints
+ᏍᎩᎪᏩᏘᎭ sgigowtiha "you see me" while the book p.118 box prints ᏍᎪᏩᏘᎭ
+sgowtiha — the 12Nov26 ruling pinned bare Ꮝ (the guide's Ꭹ there is also the
+h-alternation class: the sg- row carries the aspirated wh²tị³ spelling), and
+the engine keeps the pin pending your adjudication.
+
 ### A3. PL3-object / PL3AN-object Set B columns — rules from the documented sources
 
 Current state: PL3SG3ANB := Ꭴn/ᎤᏂ (uni-, user ruling bd01227, guide P7(15));
