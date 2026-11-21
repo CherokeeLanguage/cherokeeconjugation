@@ -191,6 +191,18 @@ family) with the animate marking carried another way.
 (ᎬᎨᏳᎢ-class vs ᎤᏩᎨᏳᎢ-class) to pick reading (a) or (b), then either a
 tense-scoped g- allomorph rule or a documented-variance closure.
 
+**RESOLVED 2026-11-21 (same day — the To Love box closed it, no engine
+change):** the verb book's To Love present prints "He/she loves him/her"
+AND "He/she loves it" as the SAME form ᎤᎨᏳᎭ ugeyuha (u-, one form for
+both objects) — matching guide P8(5) uw- "he hit him, it" exactly. The
+SG3 Set B subject does NOT distinguish animate/inanimate objects; the
+engine's Ꭴw/Ꭴ entry is correct as-is. **The corpus ᎬᎨᏳᎢ forms were a
+mis-segmentation**: Ꭼ (gv-) is the SG1→SG2 LOCAL prefix — the same gv-
+as guide P1(1) ᎬᏯᎸᎢᎭ "I'm tying you up", implemented in A2b — and the
+corpus hits are "I love you (sg)" forms (JHN 21:15-17 ᏣᎬᎨᏳᎢᏳ "do you
+love me?" with gv- as the 1sg-object marker; 3JN 1:11 "beloved" used
+vocatively). B1 closes: no conflict, no change.
+
 ### B2. SG2SG3INB Ꮸ-vs-Ꮳ — positional allomorphy, examples to look up
 
 The evidence says this is NOT a conflict but a preVowel/preConsonant split:
