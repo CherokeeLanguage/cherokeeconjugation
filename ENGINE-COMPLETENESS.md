@@ -92,11 +92,10 @@ DL1INCLSG2/DL1INCLDL2 (M-A dual sdvv), DL1INCLPL2 (P1(68)), PL1INCLSG2
 (P1(73)), PL1INCLPL2/PL1EXCLPL2 (P1(79)), DL2PL1INCL (P1(92)),
 DL2DL1INCL (P3(49)), PL2DL1INCL/PL2PL1INCL/PL2PL1EXCL (P1(103)/P3(53)/(56)).
 Set B tenses reach them via the D20 empty-twin fallback. LocalPairPrefixesSpec
-asserts 19 rows. **One variance recorded (not changed):** guide P3(8) prints
-ᏍᎩᎪᏩᏘᎭ sgigowtiha "you see me" while the book p.118 box prints ᏍᎪᏩᏘᎭ
-sgowtiha — the 12Nov26 ruling pinned bare Ꮝ (the guide's Ꭹ there is also the
-h-alternation class: the sg- row carries the aspirated wh²tị³ spelling), and
-the engine keeps the pin pending your adjudication.
+asserts 19 rows. **SG2SG1 variance RESOLVED (2026-11-21, user ruling — D28):**
+the grammar guide wins (ᏍᎩᎪᏩᏘᎭ sgigowtiha, sgi- with -i- before consonants);
+the verb book's ᏍᎪᏩᏘᎭ sgowtiha is the elided spoken variant (its own "short
+vowel sgi'ow-" note) — documented, engine composes the guide form.
 
 ### A3. PL3-object / PL3AN-object Set B columns — rules from the documented sources
 
