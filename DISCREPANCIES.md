@@ -821,3 +821,20 @@ fused Ꮕ; scoped so the existing uni-/du- consonant-stem rows are untouched.
 RULINGS NEEDED: (a) does P4(21)-(23) overturn the uni- ruling for the
 present of class-B verbs, or is P4 a per-verb variance? (b) apply the
 boundary-fusion class? -- tio 21Nov26
+
+## D28. SG2SG1 consonant allomorph: sgi- (guide) vs sgowtiha elision (verb book) (2026-11-21, RESOLVED -- user ruling: the grammar guide wins)
+
+Guide hold1 P3(8) prints ᏍᎩᎪᏩᏘᎭ sgigowtiha "you see me" (sgi- "you--me",
+"-i- is inserted before a following consonant"; the guide's own Figure row
+1258 reads "sgw- sgi-"). The Cherokee Verb Conjugations book (To See box,
+Second Singular Forms) prints ᏍᎪᏩᏘᎭ sgowtiha with its own parenthetical
+"(short vowel sgi'ow-)" -- the i is ELIDED on the surface.
+
+USER RULING (2026-11-21): the grammar guide is correct; the book's elided
+spelling is also correct but is a SPOKEN preference, not the form we want
+for the grammar-guide target. The 12Nov26 bare-Ꮝ pin is OVERTURNED:
+CompoundPrefixes SG2SG1 preConsonant is now 'ᏍᎩ' (preVowel Ꮝgw/ᏍᏆ sgw-
+unchanged, P1(14)). ToSeePresentSpec's SG2SG1 row re-pinned to
+ᏍᎩᎪᏩᏘᏘᎭ-class guide spelling (ᏍᎩᎪᏩᏘᎭ sgigowtiha) with the book form
+noted in the row comment. Both suites green (9,927 / 29,080) with no other
+spec depending on the elided composition. -- tio 21Nov26

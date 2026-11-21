@@ -46,7 +46,11 @@ class ToSeePresentSpec extends VerbBaseSpec {
             [object: 'SG3IN', pronoun: "First Singular", romanized: "itsvgowtiha", syllabary: "ᎢᏨᎪᏩᏘᎭ", english: "I see you (more than two)", occurrence: 1],
             [object: 'SG3IN', pronoun: "First Singular", romanized: "gatsigowtiha", syllabary: "ᎦᏥᎪᏩᏘᎭ", english: "I see them", occurrence: 1],
             [object: 'SG3IN', pronoun: "First Singular", romanized: "detsigowtiha", syllabary: "ᏕᏥᎪᏩᏘᎭ", english: "I see those things", occurrence: 1],
-            [object: 'SG3IN', pronoun: "Second Singular", romanized: "sgowtiha", syllabary: "ᏍᎪᏩᏘᎭ", english: "You (singular) see me", occurrence: 1],  // as printed: (short vowel "sgi'ow-")
+            // tio 21Nov26: USER RULING -- grammar guide wins: guide P3(8)
+            // ᏍᎩᎪᏩᏘᎭ sgigowtiha; the book's ᏍᎪᏩᏘᎭ sgowtiha is the ELIDED
+            // spoken variant (its own "short vowel sgi'ow-" note) -- documented
+            // variance, DISCREPANCIES D28 -- tio 21Nov26
+            [object: 'SG3IN', pronoun: "Second Singular", romanized: "sgigowtiha", syllabary: "ᏍᎩᎪᏩᏘᎭ", english: "You (singular) see me", occurrence: 1],  // book prints elided sgowtiha (D28)
             [object: 'SG3IN', pronoun: "Second Singular", romanized: "higowtiha", syllabary: "ᎯᎪᏩᏘᎭ", english: "You (singular) see him/her", occurrence: 1],
             [object: 'SG3IN', pronoun: "Second Singular", romanized: "higowtiha", syllabary: "ᎯᎪᏩᏘᎭ", english: "You (singular) see it", occurrence: 1],
             [object: 'SG3IN', pronoun: "Second Singular", romanized: "sginigowtiha", syllabary: "ᏍᎩᏂᎪᏩᏘᎭ", english: "You (singular) see someone else and me", occurrence: 1],

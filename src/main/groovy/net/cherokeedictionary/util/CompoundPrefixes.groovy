@@ -295,10 +295,15 @@ class CompoundPrefixes {
         prefixes.put("SG1PL3AN", new Prefix(preVowel: 'ᎦᏥy', preConsonant: 'ᎦᏥ', other: ''))
         prefixes.put("SG1PL3IN", new Prefix(preVowel: 'Ꮥg', preConsonant: 'ᏕᏥ', other: ''))
 
-        // tio 12Nov26: book p.118 "You (singular) see me" sgowtiha ᏍᎪᏩᏘᎭ -- the
-        // consonant-stem allomorph is bare s- (the Ꭹ here is the stem's own g-,
-        // gowatiha); ᏍᎩ doubled it. preVowel Ꮝgw (P1.14 vowel-stem sgw-) kept.
-        prefixes.put("SG2SG1", new Prefix(preVowel: 'Ꮝgw', preConsonant: 'Ꮝ', other: ''))// NOTE: Feeling P1.14 attests ᏍᏆ sgw- before vowel stems; verify the Ꮝgw backspace-2 handling surfaces ᏍᏆ -- timo 10Nov26
+        // tio 21Nov26: USER RULING -- the grammar guide wins for SG2SG1's
+        // consonant allomorph: guide P3(8) ᏍᎩᎪᏩᏘᎭ sgigowtiha (sgi- "you--me",
+        // -i- inserted before a following consonant; Figure line 1258
+        // "sgw- sgi-"). The Cherokee Verb Conjugations book prints the
+        // ELIDED spelling ᏍᎪᏩᏘᎭ sgowtiha with its own "short vowel sgi'ow-"
+        // note -- a SPOKEN preference, correct but not the guide form
+        // (documented variance, DISCREPANCIES D28). The 12Nov26 bare-Ꮝ pin
+        // is overturned. preVowel Ꮝgw (P1.14 vowel-stem sgw- ᏍᏆ) kept.
+        prefixes.put("SG2SG1", new Prefix(preVowel: 'Ꮝgw', preConsonant: 'ᏍᎩ', other: ''))
 //        prefixes.put("SG2SG2", new Prefix(preVowel: '', preConsonant: '', other: ''))
         prefixes.put("SG2SG3AN", new Prefix(preVowel: 'Ꭿy', preConsonant: 'Ꭿ', other: ''))
         prefixes.put("SG2SG3IN", new Prefix(preVowel: 'h', preConsonant: 'Ꭿ', other: ''))

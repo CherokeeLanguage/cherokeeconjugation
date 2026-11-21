@@ -56,10 +56,10 @@ class LocalPairPrefixesSpec extends Specification {
 
         where:
         subject   | object    || expected
-        // guide P3(8) prints ᏍᎩᎪᏩᏘᎭ sgigowtiha, but the p.118 book box prints
-        // ᏍᎪᏩᏘᎭ sgowtiha (the 12Nov26 ruling pinned bare Ꮝ) -- the SG2SG1
-        // consonant allomorph is per-source variance, engine keeps the pin.
-        "SG2"     | "SG1"     || "ᏍᎪᏩᏘᎭ"    // book p.118 sgowtiha
+        // tio 21Nov26: USER RULING -- the grammar guide wins (D28): guide
+        // P3(8) ᏍᎩᎪᏩᏘᎭ sgigowtiha; the book box's ᏍᎪᏩᏘᎭ sgowtiha is the
+        // elided spoken variant (its own "short vowel sgi'ow-" note).
+        "SG2"     | "SG1"     || "ᏍᎩᎪᏩᏘᎭ"   // guide P3(8) sgigowtiha
         "SG2"     | "DL1INCL" || "ᏍᎩᏂᎪᏩᏘᎭ"  // guide P3(11) sgin- "you see me and him"
         "SG2"     | "DL1EXCL" || "ᏍᎩᏂᎪᏩᏘᎭ"  // P1(20) same sgin- row
         "SG2"     | "PL1INCL" || "ᎢᏍᎩᎪᏩᏘᎭ"  // guide P3(12) isgi- "you see me and them"
