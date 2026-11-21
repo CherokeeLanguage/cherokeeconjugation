@@ -867,3 +867,32 @@ PL3 -> IT keeps uni- for class-B verbs. Implemented as three pieces:
 Pinned in D27PrefixesSpec (12 rows, all citation-exact). No existing pins
 needed re-alignment -- both suites green (9,927 default / 29,080 combined,
 0 failures). -- tio 21Nov26
+
+## D29. B3 resolved as an ENGINE GAP: the da/de + h -> t- contraction in commands (2026-11-21, IDENTIFIED -- design task, not yet implementable at PrefixDa)
+
+The B3 "Ꮤ-vs-Ꮨ conflict" framing was FALSE: the engine parses Ꮤ = "ta" and
+Ꮨ = "ti", and guide rule 61 (p. 247-248, "the prefix vowel drops and the
+combination of d- plus -h- yields t-") is ONE rule whose outcome vowel is the
+SG2 pronominal's i, ELIDED before a stem-initial vowel:
+- d + hi + ga... -> ti-ga = ᏘᎦᏨᏍᏗᎭ ("being married", book-printed, present)
+- d + hi + a-suwi -> ti-asuwi -> ta-suwi = ᏔᏑᏫ (Barking, book-printed imperative)
+- d + hi + alinigwanv... -> ta- = ᏔᎵᏂᏆᏅᎥᎦ (Kneeling, book-printed imperative)
+- guide (61b) ᏫᏘᎪᏩᏘᎭ wi-ti-gowtiha = the consonant-stem case (user citation)
+
+ENGINE GAP CONFIRMED (measured): the engine composes Barking SG2 imperative
+ᏕᎭᏑᏫ (de+ha raw) and Kneeling ᏕᎭᎵᏂᏆᏅᎥᎦ where the book prints ᏔᏑᏫ / ᏔᎵᏂᏆᏅᎥᎦ.
+An implementation attempt at PrefixDa (h-branch: compose "ti" + stem latin,
+i-elide before vowel stems) broke the SG2 PRESENT rows of other da-verbs
+(married-family expects ᏘᎦᏨᏍᏗᎭ) -- ROOT CAUSE: the routed stem's h-glyph Ꭽ
+("ha") CONFLATES the two underlying forms (hi+ga with the i absorbed into
+the glyph spelling vs hi+a-stem with the i already elided), so the vowel
+information PrefixDa needs is already destroyed at the pronominal-merge
+layer. The fix belongs UPSTREAM (compose the SG2-pronominal + da-merge at
+the latin level before glyph conversion), a deliberate design task.
+
+Also fixed en route: D27PrefixesSpec's data tables now resolve stemmers by
+name (Spock where-tables cannot call methods; the de56c87 version was
+committed with unresolvable bare method references and only ran green after
+this repair). Both suites green (9,931 default / 29,084 combined, 0
+failures) with PrefixDa REVERTED to the pre-B3 state -- no engine change in
+this commit. -- tio 21Nov26

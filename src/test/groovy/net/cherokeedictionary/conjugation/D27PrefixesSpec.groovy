@@ -56,40 +56,44 @@ class D27PrefixesSpec extends Specification {
     }
 
     private static String conj(String subject, String object, String tense, Stemmer stemmer) {
-        return Conjugate.conjugate(subject, object, stemmer(), tense, "vt", false).wholeWord
+        return Conjugate.conjugate(subject, object, stemmer, tense, "vt", false).wholeWord
+    }
+
+    private static Stemmer stemmerByName(String name) {
+        return "hit".equals(name) ? hit() : "forget".equals(name) ? forget() : love()
     }
 
     def "n + w-artifact fuses to nv (Ꮕ) with i-elision"() {
         expect:
-        conj(subject, object, tense, stemmer) == expected
+        conj(subject, object, tense, stemmerByName(verb)) == expected
 
         where:
-        subject | object  | tense       | stemmer || expected
-        "PL3"   | "SG3AN" | "PRESENT"   | hit     || "ᎠᏅᏂᎭ"       // book anvhniha
-        "PL3"   | "SG3AN" | "PRESENT"   | forget  || "ᎠᏅᎨᏫᏍᎦ"     // guide P4(21) an+v
-        "PL3"   | "SG3IN" | "PRESENT"   | forget  || "ᎤᏅᎨᏫᏍᎦ"     // guide P4(22) un+v
-        "PL3"   | "PL3AN" | "PRESENT"   | forget  || "ᏓᏅᎨᏫᏍᎦ"     // guide P4(23) dan+v
+        subject | object  | tense       | verb    || expected
+        "PL3"   | "SG3AN" | "PRESENT"   | "hit"   || "ᎠᏅᏂᎭ"       // book anvhniha
+        "PL3"   | "SG3AN" | "PRESENT"   | "forget"|| "ᎠᏅᎨᏫᏍᎦ"     // guide P4(21) an+v
+        "PL3"   | "SG3IN" | "PRESENT"   | "forget"|| "ᎤᏅᎨᏫᏍᎦ"     // guide P4(22) un+v
+        "PL3"   | "PL3AN" | "PRESENT"   | "forget"|| "ᏓᏅᎨᏫᏍᎦ"     // guide P4(23) dan+v
     }
 
     def "present-scoped animate-object rule: PL3->him Set A, PL3->it class-B uni-"() {
         expect:
-        conj(subject, object, tense, stemmer) == expected
+        conj(subject, object, tense, stemmerByName(verb)) == expected
 
         where:
-        subject | object  | tense     | stemmer || expected
-        "PL3"   | "SG3IN" | "PRESENT" | love    || "ᎤᏂᎨᏳᎭ"       // book unigeyuha (uni-, i kept)
-        "PL3"   | "SG3AN" | "PRESENT" | love    || "ᎠᏂᎨᏳᎭ"       // survey default ani-
-        "SG3"   | "SG3AN" | "PRESENT" | love    || "ᎤᎨᏳᎭ"       // To Love box: u- covers him AND it (Set B kept)
+        subject | object  | tense     | verb   || expected
+        "PL3"   | "SG3IN" | "PRESENT" | "love" || "ᎤᏂᎨᏳᎭ"       // book unigeyuha (uni-, i kept)
+        "PL3"   | "SG3AN" | "PRESENT" | "love" || "ᎠᏂᎨᏳᎭ"       // survey default ani-
+        "SG3"   | "SG3AN" | "PRESENT" | "love" || "ᎤᎨᏳᎭ"       // To Love box: u- covers him AND it (Set B kept)
     }
 
     def "uw-/duw- a-epenthesis (hit) vs wv cluster (Kdega-family shape)"() {
         expect:
-        conj(subject, object, tense, stemmer) == expected
+        conj(subject, object, tense, stemmerByName(verb)) == expected
 
         where:
-        subject | object  | tense        | stemmer || expected
-        "SG3"   | "SG3AN" | "REMOTE_PAST"| hit     || "ᎤᏩᏂᎸᎢ"      // P8(5) uw- covers him AND it
-        "SG3"   | "PL3AN" | "REMOTE_PAST"| hit     || "ᏚᏩᏂᎸᎢ"      // P8(6) duwa- (non-present keeps wa)
+        subject | object  | tense        | verb  || expected
+        "SG3"   | "SG3AN" | "REMOTE_PAST"| "hit" || "ᎤᏩᏂᎸᎢ"      // P8(5) uw- covers him AND it
+        "SG3"   | "PL3AN" | "REMOTE_PAST"| "hit" || "ᏚᏩᏂᎸᎢ"      // P8(6) duwa- (non-present keeps wa)
     }
 
     def "gw cluster keeps gwv (no strip, no epenthesis on the gw tail)"() {
