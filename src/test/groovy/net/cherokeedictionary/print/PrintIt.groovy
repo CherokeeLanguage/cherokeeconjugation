@@ -9,6 +9,9 @@ import net.cherokeedictionary.stemmer.Stemmer
 import net.cherokeedictionary.util.PartOfSpeech
 import net.cherokeedictionary.util.PrefixTableSubject
 import net.cherokeedictionary.verb.conjugation.Conjugate
+import spock.lang.Ignore
+
+
 
 Verb verb = Conjugate.createVerbToConjugate("SG3", "SG3AN", ConjugateBase.gowatiha, "PRESENT", PartOfSpeech.VERB_TRANSITIVE.toString(), false)
 //def tableMaker = new TableMaker()

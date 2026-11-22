@@ -46,6 +46,10 @@ class VerbConjugationFacade {
         return conjugateInPipeline(request)
     }
 
+    Verb conjugate(Map<String, String> paramMap) {
+        return conjugate(ConjugationRequest.fromMap(paramMap))
+    }
+
     private Verb conjugateInPipeline(ConjugationRequest request) {
         def context = new ConjugationContext(request)
         context.buildBaseVerb()

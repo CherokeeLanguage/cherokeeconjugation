@@ -12,11 +12,25 @@ class FinalSuffixProcessor {
     // The past-family tenses end in the final Ꭲ (the -i / -v'i of the remote
     // past and future). When a position-13 particle is appended to them, the
     // final Ꭲ drops (e.g. remote past -v'i + ke -> -vke).
+    /**
+     * These tenses end their Stem in a vowel + i that optionally drops before
+     * the position-13 particles -sgo, -ju, -ke (grammar guide Figure 1,
+     * p.282 "Notes on the co-occurrence of suffixes"). Covered forms:
+     *   -v'i, past (remote past)
+     *   -e'i, reportative
+     *   -o'i, pluperfect / habitual (position-10 suffix -oi)
+     *   -v'i, future imperative / volative
+     *   -v'i, future expected / completive / completed future
+     *   -i, progressive past / immediate past
+     *
+     * See (130): ᎤᏬᏂᏎᎢᏍ? u-wo-ni-se-ʔi-s "Did he speak?" (-i retained)
+     *             ᎤᏬᏂᏎᏍ? u-wo-ni-se-s         "Did he speak?" (-i dropped before -sgo)
+     */
     private static boolean isPastFamily(Tense tense) {
         return tense in [Tense.REMOTE_PAST, Tense.COMPLETIVE_FUTURE, Tense.COMPLETED_FUTURE,
                          Tense.FUTURE_EXPECTED, Tense.FUTURE_COMMAND,
                          Tense.FUTURE_IMPERATIVE_VOLATIVE, Tense.PROGRESSIVE_PAST,
-                         Tense.IMMEDIATE_PAST]
+                         Tense.IMMEDIATE_PAST, Tense.HABITUAL]
     }
 
     /**

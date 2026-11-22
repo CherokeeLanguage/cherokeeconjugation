@@ -1,7 +1,6 @@
 package net.cherokeedictionary.conjugation
 
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.factory.VerbFactory
 import net.cherokeedictionary.util.PartOfSpeech
 import net.cherokeedictionary.util.PrefixTableObject
 import net.cherokeedictionary.util.PrefixTableSubject

@@ -1,8 +1,8 @@
 package net.cherokeedictionary.factory
 
 import net.cherokeedictionary.conjugation.ConjugateBase
+import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.verb.conjugation.Conjugate
 
 class VerbFactoryTest extends ConjugateBase {
     void testVerbFactory() {
@@ -17,25 +17,15 @@ class VerbFactoryTest extends ConjugateBase {
         paramMap.verbTense = 'PRESENT'
         paramMap.subject = "SG1"
         paramMap.object = "SG3AN"
-//        paramMap.yi = params.yi == 'on'
-//        paramMap.ji = false
-//        paramMap.wi = false
-//        paramMap.ni = params.ni == 'on'
-//        paramMap.de = params.de == 'on'
-//        paramMap.da = params.da == 'on'
-//        paramMap.di = params.di == 'on'
-//        paramMap.i = params.i == 'on'
-//        paramMap.ga = params.ga == 'on'
-//        paramMap.e = params.e == 'on'
-        Verb display = VerbFactory.createVerbFromParameters(paramMap)
-        //println display
+        
+        def facade = new VerbConjugationFacade()
+        Verb display = facade.conjugate(paramMap)
     }
 
     void testVerbFactory2() {
-        def paramMap = [habitual:"ᎠᎪᏩᏘᏍᎪᎢ", imperative:"ᎯᎪᏩᏔ", infinitive:"ᎤᎪᏩᏛᏗ", present1st:"ᏥᎪᏩᏘᎭ", present3rd:"ᎠᎪᏩᏘᎭ", remotepast:"ᎤᎪᎲᎢ", partofspeechc:"vt", verbTense:"PRESENT", subject:"SG1", object:"", yi:false, ji:false, wi:false, ni:false, de:false, da:false, di:false, i:false, ga:false, e:false]
-        def verb = VerbFactory.createVerbFromParameters(paramMap)
-
-        //println verb
+        def paramMap = [habitual:"ᎠᎪᏩᏘᏍᎪᎢ", imperative:"ᎯᎪᏩᏔ", infinitive:"ᎤᎪᏩᏛᏗ", present1st:"ᏥᎪᏩᏘᎭ", present3rd:"ᎠᎪᏩᏘᎭ", remotepast:"ᎤᎪᎲᎢ", partofspeechc:"vt", verbTense:"PRESENT", subject:"SG1", object:"", yi:"false", ji:"false", wi:"false", ni:"false", de:"false", da:"false", di:"false", i:"false", ga:"false", e:"false"]
+        def facade = new VerbConjugationFacade()
+        def verb = facade.conjugate(paramMap)
     }
 
     void testVerbFactoryYiGowatiha() {
@@ -50,18 +40,9 @@ class VerbFactoryTest extends ConjugateBase {
         paramMap.verbTense = 'PRESENT'
         paramMap.subject = "SG1"
         paramMap.object = "SG3AN"
-        paramMap.yi = true
-//        paramMap.ji = false
-//        paramMap.wi = false
-//        paramMap.ni = params.ni == 'on'
-//        paramMap.de = params.de == 'on'
-//        paramMap.da = params.da == 'on'
-//        paramMap.di = params.di == 'on'
-//        paramMap.i = params.i == 'on'
-//        paramMap.ga = params.ga == 'on'
-//        paramMap.e = params.e == 'on'
-        Verb display = VerbFactory.createVerbFromParameters(paramMap)
-        display = Conjugate.conjugate(display)
-        //println display
+        paramMap.yi = "true"
+        
+        def facade = new VerbConjugationFacade()
+        Verb display = facade.conjugate(paramMap)
     }
 }

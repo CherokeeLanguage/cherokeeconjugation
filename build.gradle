@@ -130,10 +130,11 @@ test {
     //   ./gradlew test -PincludeVrb
     //if (!project.hasProperty('includeVrb')) {
 //        exclude 'net/cherokeedictionary/conjugation/vrb/**'
-        exclude 'net/cherokeedictionary/**'
+        //exclude 'net/cherokeedictionary/**'
     //}
-    include 'net/cherokeedictionary/sets/SetsTest.groovy'
+//    include 'net/cherokeedictionary/sets/SetsTest.groovy'
 
+    exclude 'net/cherokeedictionary/print/**'
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 
     exclude '**/VerbBookFixtures*'

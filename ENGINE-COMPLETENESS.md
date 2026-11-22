@@ -11,7 +11,7 @@ Cherokee Reference Grammar (docs/processed/Montgomery_Markup CRG Proofs.md),
 
 ## A. Paradigms with NO engine data (real implementation work)
 
-### A1. Reflexive — [Guide] §I-E, pp. 296-298, complete paradigms
+### A1. Reflexive — [Guide] §I-E, pp. 296-300 — IMPLEMENTED
 
 The guide documents the reflexive prefix **-adad-**, placed AFTER the pronominal
 prefix and DIRECTLY BEFORE the stem, with three allomorphs:
@@ -32,19 +32,32 @@ Two structural rules the guide states explicitly:
    verbs: Paradigm Five "to forget oneself" prints Set A in the present and
    Set B in the non-progressive past (P6), "like verbs such as hit and tie up".
 
-**Full paradigms given** (all 9 persons, P1-P6): see myself present + past,
-hit myself present + past, forget myself present + past. These are direct
-test fixtures. [M-A] §9.7/§14.3.3 documents the same prefix (middle voice).
+**Full paradigms given** (P1-P4 all 10 persons; P5/P6 eight persons): see
+myself present + past, hit myself present + past, forget myself present +
+past. These are direct test fixtures. [M-A] §9.7/§14.3.3 documents the same
+prefix (middle voice).
 
-**Engine state**: the API accepts `isReflexive` (Conjugate.createVerbToConjugate
-arg 6, VerbFactory always passes false) and `verb.reflexiveHolderObject`
-exists — but there is NO reflexive prefix data; the reflexive cells
-(SG1SG1-class) are declared-empty in CompoundPrefixes and surface blank.
+**Engine state: IMPLEMENTED.** The allomorphy lives in
+`net.cherokeedictionary.verb.affixes.ReflexivePrefix` and is called from
+`VerbConjugationProcessor` as a STEM-LEVEL insertion between the pronominal
+and the stem (it strips the routed stem's baked SG3 marker, inserts
+ada(d)- per the allomorphy, applies the Set B u- a-drop, and lets
+`ConjugationHelper` force Set A in the present for class-B verbs while the
+reflexive consumes the object slot). The reciprocal `de-` + `-adad-`
+examples (5)-(7) and the non-reflexive uses (8), (9), (11) also compose.
 
-**Implementation shape**: the reflexive is a STEM-LEVEL insertion between the
-pronominal and the stem (not a CompoundPrefixes entry): insert ada(d)- per the
-allomorphy, apply the u- a-drop, and override verbset for the present of
-class-B verbs. The guide's P1-P6 grids become the fixture set.
+**Verification**: `ReflexiveGrammarGuideSpec` (package
+`net.cherokeedictionary.conjugation.cherokeeVerbConjugation`) asserts all
+P1-P6 cells plus examples (1)-(9), (11), (12), (19) and (20). Examples (10)
+and (13) are recorded as `@Ignore` features with the reason
+"ungrammatical per grammar guide; intentionally not asserted"; (14)-(18)
+are annotated as sentence-level/agentive constructions outside the
+conjugation engine's scope.
+
+Three guide print variances are annotated in the spec rather than changing
+the engine (the guide's romanization agrees with the engine in each case):
+P2/P4 DL1INCL `ᎦᎾ...` vs engine `ᎩᎾ...`; P5 DL1INCL `ᎢᎾᏗᏛ...` vs engine
+`ᎢᎾᏓᏛ...`; P6 PL3 `ᎤᎾᏓᏛᎨᏒᎢ` (missing Ꮻ) vs engine `ᎤᎾᏓᏛᎨᏫᏒᎢ`.
 
 ### A2. Object-focus prefixes — [M-A] §9.4, Table 9.3 (p. 256)
 

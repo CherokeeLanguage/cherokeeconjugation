@@ -10,6 +10,8 @@ import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.*
  * Figure 1, p.282: "shows the relative order in which the non-final and final
  * suffixes occur following the verb stem"):
  *
+ *   1 -gi-/-e-/-y-, reversive      -> NonFinalSuffixGi (NOT IMPLEMENTED YET)
+ *   2 -is-, duplicative / "become" -> NonFinalSuffixIs  (NOT IMPLEMENTED YET)
  *   3 -ilo-, repetitive            -> NonFinalSuffixIlo
  *   4 -dan-, instrumental-causative / -dohdan-, unintentional
  *   5 -ohn-, completive            -> NonFinalSuffixOhn
@@ -17,6 +19,8 @@ import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.*
  *   7 -idol- "around"              -> NonFinalSuffixIdol
  *   8 -e- "at intervals" / -ihl- "come to"
  *   9 -g-, progressive             -> NonFinalSuffixG
+ *   9 -idi-, pre-incipient         -> NonFinalSuffixIdi (NOT IMPLEMENTED YET)
+ *   9 -i-, future                  -> NonFinalSuffixI   (NOT IMPLEMENTED YET)
  *
  * Each suffix fires only when its flag is set on verb.nonFinalSuffixHolder;
  * with no flags set the word passes through unchanged (the historical
@@ -36,7 +40,17 @@ class NonFinalSuffixProcessor {
 
         def holder = verb.nonFinalSuffixHolder
 
-        // Grammar order (Figure 1): ilo -> dan/dohdan -> ohn -> el -> idol -> e/ihl -> g
+        // Grammar order (Figure 1): gi -> is -> ilo -> dan/dohdan -> ohn -> el -> idol -> e/ihl -> g/idi/i
+        // gi/is/idi/i are NOT-IMPLEMENTED-YET stubs (positions 1, 2, 9); the
+        // stubs pass the word through unchanged, so these only fire when the
+        // flags are set AND the suffixes are implemented. KNOWN-GAP(NONFINAL-GI)
+        // KNOWN-GAP(NONFINAL-IS) KNOWN-GAP(NONFINAL-IDI) KNOWN-GAP(NONFINAL-I)
+        if (holder.gi) {
+            baseReturnValue = new NonFinalSuffixGi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.is) {
+            baseReturnValue = new NonFinalSuffixIs().toSyllabary(baseReturnValue, verb)
+        }
         if (holder.ilo) {
             baseReturnValue = new NonFinalSuffixIlo().toSyllabary(baseReturnValue, verb)
         }
@@ -63,6 +77,12 @@ class NonFinalSuffixProcessor {
         }
         if (holder.g) {
             baseReturnValue = new NonFinalSuffixG().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.idi) {
+            baseReturnValue = new NonFinalSuffixIdi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.i) {
+            baseReturnValue = new NonFinalSuffixI().toSyllabary(baseReturnValue, verb)
         }
 
         return baseReturnValue ?: verb.wholeWord

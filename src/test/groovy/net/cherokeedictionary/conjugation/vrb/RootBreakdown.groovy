@@ -2,9 +2,8 @@ package net.cherokeedictionary.factory
 
 import net.cherokeedictionary.conjugation.ConjugateBase
 import net.cherokeedictionary.core.Verb
-import net.cherokeedictionary.factory.VerbFactory
+import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.util.Tense
-import net.cherokeedictionary.verb.conjugation.Conjugate
 
 class RootBreakdown extends ConjugateBase {
     void testVerbFactory() {
@@ -24,7 +23,8 @@ class RootBreakdown extends ConjugateBase {
         paramMap.subject = "SG1"
         paramMap.object = "SG3AN"
 
-        Verb display = VerbFactory.createVerbFromParameters(paramMap)
+        def facade = new VerbConjugationFacade()
+        Verb display = facade.conjugate(paramMap)
 
         //println "HABITUAL: " + paramMap.habitual + " stem: " + display.stemmer.getStem(Tense.HABITUAL)
         //println "IMMEDIATE_COMMAND: " + paramMap.imperative + " stem: " + display.stemmer.getStem(Tense.IMMEDIATE_COMMAND)

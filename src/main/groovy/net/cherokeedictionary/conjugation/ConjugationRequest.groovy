@@ -99,4 +99,34 @@ class ConjugationRequest {
             e            : e
         ].findAll { k, v -> v != null }
     }
+
+    static ConjugationRequest fromMap(Map<String, String> map) {
+        new ConjugationRequest(
+            subject: map.subject,
+            object: map.object,
+            verbTense: map.verbTense,
+            partOfSpeech: map.partofspeechc,
+            lexeme: map.lexeme,
+            reflexive: map.reflexive,
+            objectFocus: map.objectFocus,
+            form: map.form,
+            habitual: map.habitual,
+            imperative: map.imperative,
+            infinitive: map.infinitive,
+            present1st: map.present1st,
+            present3rd: map.present3rd,
+            remotepast: map.remotepast,
+            immediatepast: map.immediatepast,
+            yi: map.yi,
+            ji: map.ji,
+            wi: map.wi,
+            ni: map.ni,
+            de: map.de,
+            da: map.da,
+            di: map.di,
+            i: map.i,
+            ga: map.ga,
+            e: map.e
+        )
+    }
 }
