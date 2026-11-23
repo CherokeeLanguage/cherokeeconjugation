@@ -11,7 +11,7 @@ class AdadolisdihaSpec extends VerbBaseSpec {
         definition: "Praying",
         part_of_speech: "v.i.",
         conjugations: [
-                [subject: 'SG1', object: '', present: 'gadadolisdiha'],
+            [subject: 'SG1', object: '', present: 'gadadolisdiha'],
             [subject: 'SG1', object: '', present: 'gadadolisdiha', habitual: 'gadadolisdisgoi', remote_past: 'agwadadolistanvi', imperative: 'gadadolisda', infinitive: 'agwadadolisdohdi'],
             [subject: 'SG2', object: '', present: 'hadadolisdiha', habitual: 'hadadolisdisgoi', remote_past: 'jadadolistanvi', imperative: 'hadadolisda', infinitive: 'jadadolisdohdi'],
             [subject: 'SG3', object: '', habitual: 'adadolisdisgoi', imperative: 'hadadolisda', infinitive: 'udadolisdohdi', present: 'adadolisdiha', remote_past: 'udadolistanvi'],

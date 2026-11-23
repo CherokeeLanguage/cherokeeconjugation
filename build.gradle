@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.google.guava:guava:29.0-jre'
     implementation 'net.cherokeedictionary:jalagiTranslit:0.2.0'
 //    implementation 'net.cherokeedictionary:jalagiUtils:0.2.0'
+    implementation "mysql:mysql-connector-java:8.0.33"
 
 //    implementation 'org.apache.commons:commons-lang3:3.4'
     // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
@@ -133,9 +134,21 @@ test {
         //exclude 'net/cherokeedictionary/**'
     //}
 //    include 'net/cherokeedictionary/sets/SetsTest.groovy'
-
+    exclude 'net/cherokeedictionary/conjugation/**'
+    exclude 'net/cherokeedictionary/deconstruct/**'
+    exclude 'net/cherokeedictionary/dsl/**'
+    exclude 'net/cherokeedictionary/factory/**'
+    exclude 'net/cherokeedictionary/sets/**'
+    exclude 'net/cherokeedictionary/splitter/**'
+    exclude 'net/cherokeedictionary/stem/**'
+    exclude 'net/cherokeedictionary/stemmer/**'
+    exclude 'net/cherokeedictionary/transliteration/**'
+    exclude 'net/cherokeedictionary/util/**'
+    exclude 'net/cherokeedictionary/verb/**'
     exclude 'net/cherokeedictionary/print/**'
+//    exclude 'net/cherokeedictionary/sql/**'
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
+
 
     exclude '**/VerbBookFixtures*'
 

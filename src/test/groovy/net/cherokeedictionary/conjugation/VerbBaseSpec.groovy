@@ -4,6 +4,7 @@ import net.cherokeedictionary.grammarGuide.VerbBookEngineHarness
 import net.cherokeedictionary.conjugation.ConjugationRequest
 import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.transliteration.SyllabaryUtil
+import net.cherokeedictionary.verb.metadata.VerbRegistry
 import spock.lang.Specification
 
 abstract class VerbBaseSpec extends Specification {
@@ -41,7 +42,7 @@ abstract class VerbBaseSpec extends Specification {
     // ᎦᏁᎭ, so whichever spec ran first leaked its SG1 surfaces into the other
     // (order-dependent; 10 Gahneha cells in a bulk run).
     static def conjugateVerb(String verbName, Map details, String subj, String obj, String tense, String expected) {
-        return net.cherokeedictionary.verb.metadata.VerbRegistry.withVerbScope {
+        return VerbRegistry.withVerbScope {
             conjugateVerbInScope(verbName, details, subj, obj, tense, expected)
         }
     }
@@ -80,7 +81,7 @@ abstract class VerbBaseSpec extends Specification {
         // VerbLexemeFlagLoader) -- behavior byte-identical to the previous
         // private copy.
         def toSyll = { String s ->
-            return net.cherokeedictionary.conjugation.VerbInputNormalizer.toSyll(s)
+            return VerbInputNormalizer.toSyll(s)
         }
 
         // tio 20Nov26: competing-rows verbs (Asuhvsga's five alternant "good-
@@ -131,13 +132,13 @@ abstract class VerbBaseSpec extends Specification {
         // have-verb family prints ji'yeha etc., p.84; the yaml dropped the
         // glottal apostrophes). Specs declare details.glottalInitial: true.
         if (details.glottalInitial && thirdPersonRow?.present) {
-            net.cherokeedictionary.verb.metadata.VerbRegistry.registerGlottalInitial(toSyll(thirdPersonRow.present))
+            VerbRegistry.registerGlottalInitial(toSyll(thirdPersonRow.present))
         }
 
         // tio 17Nov26: qu-series v-coalescing (D7, book Adlvkwsga p.68) registers
         // lexically from details.quvCoalescing -- see VerbRegistry.isQuvCoalescing. -- tio 17Nov26
         if (details.quvCoalescing && thirdPersonRow?.present) {
-            net.cherokeedictionary.verb.metadata.VerbRegistry.registerQuvCoalescing(toSyll(thirdPersonRow.present))
+            VerbRegistry.registerQuvCoalescing(toSyll(thirdPersonRow.present))
         }
 
         // tio 20Nov26: DST2 infinitive (details.distributiveDst2) -- the de-
@@ -146,7 +147,7 @@ abstract class VerbBaseSpec extends Specification {
         // VerbRegistry.isDistributiveDst2, PrefixDa and
         // VerbConjugationProcessor. -- tio 20Nov26
         if (details.distributiveDst2 && thirdPersonRow?.present) {
-            net.cherokeedictionary.verb.metadata.VerbRegistry.registerDistributiveDst2(toSyll(thirdPersonRow.present))
+            VerbRegistry.registerDistributiveDst2(toSyll(thirdPersonRow.present))
         }
 
         // tio 17Nov26: impersonal verbs (details.impersonal) -- the imperative is
@@ -154,7 +155,7 @@ abstract class VerbBaseSpec extends Specification {
         // not a data gap. See VerbRegistry.isImpersonal / Conjugate's
         // NO_IMPERATIVE sentinel. -- tio 17Nov26
         if (details.impersonal && thirdPersonRow?.present) {
-            net.cherokeedictionary.verb.metadata.VerbRegistry.registerImpersonal(toSyll(thirdPersonRow.present))
+            VerbRegistry.registerImpersonal(toSyll(thirdPersonRow.present))
         }
 
         // tio 17Nov26: lexeme-specific whole-form surface overrides (D14
@@ -169,7 +170,7 @@ abstract class VerbBaseSpec extends Specification {
         // obj: 'NONE', form: 'jinevi'], ...] -- keyed on the SG3 citation
         // (contained-in match) and registered as book-final syllabary. -- tio 17Nov26
         (details.surfaceOverrides ?: []).each { o ->
-            net.cherokeedictionary.verb.metadata.VerbRegistry.registerSubjectSurface(
+            VerbRegistry.registerSubjectSurface(
                     toSyll(thirdPersonRow.present), o.tense, o.subject, o.obj ?: "NONE", toSyll(o.form))
         }
         

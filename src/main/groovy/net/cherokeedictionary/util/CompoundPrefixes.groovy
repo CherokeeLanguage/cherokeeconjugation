@@ -17,7 +17,7 @@ package net.cherokeedictionary.util
 // Remaining combos must be verified against the pp.178-180 scans once they are
 // available in readable form (text-layer PDF or transcription) -- timo 10Nov26
 class CompoundPrefixes {
-    static def prefixes = [:]
+    static Map<String, CompoundPrefix> prefixes = [:]
     static final def SG1SG1 = new CompoundPrefix(prefix1: PrefixTableSubject.SG1, prefix2: PrefixTableObject.SG1)
     static final def SG1SG2 = new CompoundPrefix(prefix1: PrefixTableSubject.SG1, prefix2: PrefixTableObject.SG2)
     static final def SG1SG3AN = new CompoundPrefix(prefix1: PrefixTableSubject.SG1, prefix2: PrefixTableObject.SG3AN)
