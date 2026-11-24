@@ -1,5 +1,6 @@
 package net.cherokeedictionary.conjugation.cherokeeVerbConjugation
 
+import net.cherokeedictionary.conjugation.ConjugationRequest
 import net.cherokeedictionary.conjugation.VerbBaseSpec
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.containers.FinalSuffixProcessor
@@ -42,7 +43,7 @@ class ToSpeakSpec extends VerbBaseSpec {
      */
     static String conjugateWithFlags(String tense, Map holderFlags) {
         // Build a ConjugationRequest for "to speak" (woni)
-        def request = new net.cherokeedictionary.conjugation.ConjugationRequest(
+        def request = new ConjugationRequest(
             subject: 'SG3',
             object: OBJECT,
             verbTense: tense,

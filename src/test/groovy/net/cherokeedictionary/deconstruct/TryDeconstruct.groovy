@@ -4,6 +4,9 @@ import groovy.json.JsonSlurper
 import net.cherokeedictionary.conjugation.Deconstructor
 import net.cherokeedictionary.conjugation.VerbConjugationFacade
 import net.cherokeedictionary.conjugation.ConjugationRequest
+import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.containers.FinalSuffixProcessor
+import net.cherokeedictionary.verb.containers.NonFinalSuffixProcessor
 
 // tio 19Nov26: interactive deconstruct scratch runner (DELETE when done, ops
 // rule 1). Usage:
@@ -30,7 +33,38 @@ if (req.containsKey('form')) {
     }
 }*/
 
-Deconstructor.deconstruct("ᎠᎪᏩᏘᎭ").eachWithIndex { d, i ->
+def facade = new VerbConjugationFacade()
+
+def see = new ConjugationRequest(
+        subject: "SG1",
+        object: "NONE",
+        verbTense: "PRESENT",
+        partOfSpeech: "VT",
+        present1st: "ᏥᎪᏩᏘᎭ",
+        present3rd: "ᎠᎪᏩᏘᎭ",
+        remotepast: "ᎤᎪᎲᎢ",
+        habitual: "ᎠᎪᏩᏘᏍᎪᎢ",
+        imperative: "ᎠᎪᏩᏙ",
+        infinitive: "ᎤᎪᏩᏘᏍᏗ",
+        reflexive: "true"
+)
+def vSee = facade.conjugate(see)
+println vSee.wholeWord
+assert vSee.wholeWord == "ᎦᏓᎪᏩᏘᎭ"
+
+see.reflexive = false
+vSee = facade.conjugate(see)
+println vSee.wholeWord
+assert vSee.wholeWord == "ᏥᎪᏩᏘᎭ"
+
+see.wi = true
+
+vSee = facade.conjugate(see)
+println vSee.wholeWord
+assert vSee.wholeWord == "ᏫᏥᎪᏩᏘᎭ"
+
+
+Deconstructor.deconstruct(vSee.wholeWord).eachWithIndex { d, i ->
     sw << "--- analysis ${i + 1} ---\n"
     sw << d.toString() << "\n\n"
 }

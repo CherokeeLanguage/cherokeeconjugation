@@ -3,6 +3,7 @@ package net.cherokeedictionary.conjugation.finalSuffixes
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.containers.FinalSuffixProcessor
+import net.cherokeedictionary.verb.containers.VerbFinalSuffixHolderObject
 import spock.lang.Specification
 
 /**
@@ -17,7 +18,7 @@ class FinalSuffixProcessorSpec extends Specification {
         v.setWholeWord(word)
         v.setTense(tense)
         v.setRootEnding(null)
-        v.setFinalSuffixHolder(new net.cherokeedictionary.verb.containers.VerbFinalSuffixHolderObject())
+        v.setFinalSuffixHolder(new VerbFinalSuffixHolderObject())
         v.metaClass.getTenseValue = { '' }
         return v
     }

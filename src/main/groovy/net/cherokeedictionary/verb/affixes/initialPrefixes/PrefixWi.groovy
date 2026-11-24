@@ -4,6 +4,7 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.StringUtility
 import net.cherokeedictionary.verb.affixes.Affix
+import net.cherokeedictionary.verb.affixes.PrefixWiResult
 
 class PrefixWi implements Affix {
     String wi;
@@ -12,26 +13,10 @@ class PrefixWi implements Affix {
         String data = word.pronounReflexiveRoot
         baseReturnValue = baseReturnValue ?: data
 
-        // Guard: an upstream pipeline gap can leave the base empty;
-        // charAt(0) below would throw StringIndexOutOfBoundsException.
         if (!baseReturnValue) {
             return "Ꮻ";
         }
 
-        // tio 13Nov26: guide (31b) ᏫᏥᏬᏂᎯ wi²ji²wo³ni²hi and (32b) ᏫᏬᏂᎯ
-        // wi²hi²wo³ni²hi attest that wi SURFACES before ji-/hi- bases — there
-        // is no elision rule for Ꮵ/Ꭿ/Ꮧ in the guide. The To Fall IIV mixed
-        // paradigm (Ꮻ only on some rows) is per-row book data, handled in the
-        // verb-book specs, not a phonological rule here.
-
-        // tio 14Nov26: To Go IIV/FIV (vowel-initial e-stem) bakes the wi- onto
-        // the stem vowel (wi + ena = wena ᏪᎾ, wi + ena = wenvs'i ᏪᏅᏒᎢ). The
-        // generic vowel branch below handles this via getOptionsByVowel. To Go
-        // SG1 and SG2 forms (gena/hena) carry pronominals, but the book
-        // REQUIRES w-insertion (wgena/whena) which the h-stripping logic below
-        // was eating. Scoped h-stripping: only strip h when it is followed by
-        // a VOWEL (hi- -> wi-, he- -> we-), never when followed by a consonant
-        // (whena ᏪᎿ vs ᎮᎿ).
         def latin = SyllabaryUtil.parseSyllabary(baseReturnValue)
         def startsWithH = latin.matches("^h[aeiouv].*")
         if (startsWithH) {
@@ -49,6 +34,58 @@ class PrefixWi implements Affix {
         return baseReturnValue;
     }
 
+    /**
+     * DECONSTRUCTION METHOD - Reverses toSyllabary
+     */
+    PrefixWiResult deconstructFromSyllabary(String fullWord, Verb word) {
+        PrefixWiResult result = new PrefixWiResult()
+        
+        if (!fullWord || fullWord.trim().isEmpty()) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            return result
+        }
+
+        // Check if word starts with any wi- variant
+        if (!fullWord.startsWith("Ꮹ") && !fullWord.startsWith("Ꮺ") && 
+            !fullWord.startsWith("Ꮻ") && !fullWord.startsWith("Ꮼ") && 
+            !fullWord.startsWith("Ꮽ") && !fullWord.startsWith("Ꮾ")) {
+            // No wi- prefix present
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            return result
+        }
+
+        // Extract the initial syllable (first character)
+        String initialSyllable = fullWord.charAt(0) as String
+        
+        List<String> wiVariants = ["Ꮹ", "Ꮺ", "Ꮻ", "Ꮼ", "Ꮽ", "Ꮾ"]
+        
+        if (wiVariants.contains(initialSyllable)) {
+            // Remove the initial syllable - what remains should be the base
+            String stripped = fullWord.length() > 1 ? fullWord.substring(1) : ""
+            
+            String data = word.pronounReflexiveRoot
+            if (stripped == "" || stripped == data) {
+                result.result = fullWord
+                result.prefixRemoved = false
+                result.detectedPrefix = initialSyllable
+                return result
+            }
+            
+            result.result = stripped
+            result.prefixRemoved = true
+            result.detectedPrefix = "Ꮻ"
+            return result
+        }
+        
+        result.result = fullWord
+        result.prefixRemoved = false
+        result.detectedPrefix = null
+        return result
+    }
 
     String toEnglish(String baseReturnValue, Verb word) {
         return null

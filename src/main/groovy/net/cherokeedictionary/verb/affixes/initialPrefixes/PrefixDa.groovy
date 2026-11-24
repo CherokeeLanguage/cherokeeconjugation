@@ -4,6 +4,7 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.util.StringUtility
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.Affix
+import net.cherokeedictionary.verb.metadata.VerbRegistry
 
 /**
  * Grammar Guide pp. 247-248 (61-62):
@@ -141,8 +142,7 @@ class PrefixDa implements Affix {
     private static boolean isDst2Tense(Verb word) {
         return (word?.tense == Tense.INFINITIVE &&
                 word?.stemmer?.normalizedDeStyle &&
-                net.cherokeedictionary.verb.metadata.VerbRegistry.isDistributiveDst2(
-                        word?.stemmer?.present3rd?.syllabary))
+                VerbRegistry.isDistributiveDst2(word?.stemmer?.present3rd?.syllabary))
     }
 
     String toEnglish(String baseReturnValue, Verb word) {

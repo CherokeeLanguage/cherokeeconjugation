@@ -1,8 +1,36 @@
 --- analysis 1 ---
-Ꭰ [PRONOMINAL_PREFIX: He/she -> Me [fused letter 'gw' merges with the stem's first syllable]
-They (more than two) -> Him/her [fused letter 'n' merges with the stem's first syllable]
-They (more than two) -> It [fused letter 'n' merges with the stem's first syllable]
-I -> It (Set B: d/ts/s-initial stems) [fused letter 'gw' merges with the stem's first syllable]
-They (more than two) -> Him/her (Set B: d/ts/s-initial stems) [fused letter 'n' merges with the stem's first syllable]]
-stem: ᎪᏩᏘᎭ
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [PRONOMINAL_PREFIX: I -> Him/her [fused letter 'y' merges with the stem's first syllable] / I -> It / I -> Him/her (Set B: d/ts/s-initial stems) [fused letter 'y' merges with the stem's first syllable]] | stem: ᎪᏩᏘᎭ
+
+--- analysis 2 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | stem: ᏥᎪᏩᏘᎭ
+
+--- analysis 3 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: 'just, still' (ji-)] | Ꭺ [PRONOMINAL_PREFIX: Others \& I -> Them [fused letter 'j' merges with the stem's first syllable] / They (more than two) -> Others and me [fused letter 'g' merges with the stem's first syllable] / Others \& I -> Them (Set B: d/ts/s-initial stems) [fused letter 'j' merges with the stem's first syllable]] | stem: ᏩᏘᎭ
+
+--- analysis 4 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: 'just, still' (ji-)] | stem: ᎪᏩᏘᎭ
+
+--- analysis 5 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: instrumental 'by means of' (di-)] | Ꭺ [PRONOMINAL_PREFIX: Others \& I -> Them [fused letter 'j' merges with the stem's first syllable] / They (more than two) -> Others and me [fused letter 'g' merges with the stem's first syllable] / Others \& I -> Them (Set B: d/ts/s-initial stems) [fused letter 'j' merges with the stem's first syllable]] | stem: ᏩᏘᎭ
+
+--- analysis 6 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: instrumental 'by means of' (di-)] | stem: ᎪᏩᏘᎭ
+
+--- analysis 7 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [PRONOMINAL_PREFIX: I -> Him/her [fused letter 'y' merges with the stem's first syllable] / I -> It / I -> Him/her (Set B: d/ts/s-initial stems) [fused letter 'y' merges with the stem's first syllable]] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᎪᏩᏘ
+
+--- analysis 8 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᏥᎪᏩᏘ
+
+--- analysis 9 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: 'just, still' (ji-)] | Ꭺ [PRONOMINAL_PREFIX: Others \& I -> Them [fused letter 'j' merges with the stem's first syllable] / They (more than two) -> Others and me [fused letter 'g' merges with the stem's first syllable] / Others \& I -> Them (Set B: d/ts/s-initial stems) [fused letter 'j' merges with the stem's first syllable]] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᏩᏘ
+
+--- analysis 10 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: 'just, still' (ji-)] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᎪᏩᏘ
+
+--- analysis 11 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: instrumental 'by means of' (di-)] | Ꭺ [PRONOMINAL_PREFIX: Others \& I -> Them [fused letter 'j' merges with the stem's first syllable] / They (more than two) -> Others and me [fused letter 'g' merges with the stem's first syllable] / Others \& I -> Them (Set B: d/ts/s-initial stems) [fused letter 'j' merges with the stem's first syllable]] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᏩᏘ
+
+--- analysis 12 ---
+Ꮻ [INITIAL_PREFIX: 'around, in the direction of' (wi-)] | Ꮵ [INITIAL_PREFIX: instrumental 'by means of' (di-)] | -a [FINAL_SUFFIX: stem tail -a (tense tail)] | stem: ᎪᏩᏘ
 

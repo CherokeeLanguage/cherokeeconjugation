@@ -10,8 +10,8 @@ import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.*
  * Figure 1, p.282: "shows the relative order in which the non-final and final
  * suffixes occur following the verb stem"):
  *
- *   1 -gi-/-e-/-y-, reversive      -> NonFinalSuffixGi (NOT IMPLEMENTED YET)
- *   2 -is-, duplicative / "become" -> NonFinalSuffixIs  (NOT IMPLEMENTED YET)
+ *   1 -gi-/-e-/-y-, reversive      -> NonFinalSuffixGi
+ *   2 -is-, duplicative / "become" -> NonFinalSuffixIs
  *   3 -ilo-, repetitive            -> NonFinalSuffixIlo
  *   4 -dan-, instrumental-causative / -dohdan-, unintentional
  *   5 -ohn-, completive            -> NonFinalSuffixOhn
@@ -19,8 +19,8 @@ import net.cherokeedictionary.verb.affixes.nonFinalSuffixes.*
  *   7 -idol- "around"              -> NonFinalSuffixIdol
  *   8 -e- "at intervals" / -ihl- "come to"
  *   9 -g-, progressive             -> NonFinalSuffixG
- *   9 -idi-, pre-incipient         -> NonFinalSuffixIdi (NOT IMPLEMENTED YET)
- *   9 -i-, future                  -> NonFinalSuffixI   (NOT IMPLEMENTED YET)
+ *   9 -idi-, pre-incipient         -> NonFinalSuffixIdi
+ *   9 -i-, future                  -> NonFinalSuffixI
  *
  * Each suffix fires only when its flag is set on verb.nonFinalSuffixHolder;
  * with no flags set the word passes through unchanged (the historical

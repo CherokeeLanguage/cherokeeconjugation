@@ -148,16 +148,14 @@ test {
     exclude 'net/cherokeedictionary/verb/**'
     exclude 'net/cherokeedictionary/print/**'
 
-include 'net/cherokeedictionary/conjugation/finalSuffixes/**'
+    include 'net/cherokeedictionary/conjugation/finalSuffixes/**'
 */
     exclude 'net/cherokeedictionary/sets/**'
     exclude 'net/cherokeedictionary/sql/**'
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 
-
     exclude '**/VerbBookFixtures*'
 
-    
     // Exclude a specific test class
 //    exclude '**/MySpecificTest.class'
 
