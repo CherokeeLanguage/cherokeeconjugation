@@ -5,6 +5,7 @@ import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.StringUtility
 import net.cherokeedictionary.util.Tense
 import net.cherokeedictionary.verb.affixes.Affix
+import net.cherokeedictionary.verb.affixes.PrefixIGaDeDaDiResult
 
 class PrefixDe implements Affix {
     String de;
@@ -86,6 +87,126 @@ class PrefixDe implements Affix {
         }
 
         return baseReturnValue;
+    }
+
+    /**
+     * DECONSTRUCTION METHOD - Reverses toSyllabary
+     */
+    PrefixIGaDeDaDiResult deconstructFromSyllabary(String fullWord, Verb word) {
+        PrefixIGaDeDaDiResult result = new PrefixIGaDeDaDiResult()
+        
+        if (!fullWord || fullWord.trim().isEmpty()) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            result.reason = null
+            return result
+        }
+
+        // Check for De- prefixes: Ꮣ, Ꮥ, Ꮧ, Ꮩ, Ꮪ, Ꮫ, or t- contraction (Ꮨ)
+        if (!fullWord.startsWith("Ꮣ") && !fullWord.startsWith("Ꮥ") && 
+            !fullWord.startsWith("Ꮧ") && !fullWord.startsWith("Ꮩ") && 
+            !fullWord.startsWith("Ꮪ") && !fullWord.startsWith("Ꮫ") &&
+            !fullWord.startsWith("Ꮨ")) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            result.reason = null
+            return result
+        }
+
+        String initialChar = fullWord.charAt(0) as String
+        
+        List<String> deVariants = ["Ꮣ", "Ꮥ", "Ꮧ", "Ꮩ", "Ꮪ", "Ꮫ", "Ꮨ"]
+        
+        if (!deVariants.contains(initialChar)) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            result.reason = null
+            return result
+        }
+
+        // Special case: Ꮩ can be I+da compound - check if likely separate I prefix first
+        if (initialChar == "Ꮩ") {
+            // If preceded by nothing (first syllable) and followed by vowel, could be I+da
+            // In that case, this is handled by PrefixI already removing Ꭲ
+            // So Ꮩ here is likely standalone da/de
+            String remainingAfterInitial = fullWord.length() > 1 ? fullWord.substring(1) : ""
+            
+            // Heuristic: if very short remaining, might be fused
+            if (remainingAfterInitial.length() < 2) {
+                result.result = fullWord
+                result.prefixRemoved = false
+                result.detectedPrefix = null
+                result.reason = "too_short"
+                return result
+            }
+            
+            // Otherwise safe to remove
+            result.result = remainingAfterInitial
+            result.prefixRemoved = true
+            result.detectedPrefix = "Ꮩ"
+            result.reason = null
+            return result
+        }
+        
+        // For Ꮨ (t- contraction from da+h), always treat as removed
+        if (initialChar == "Ꮨ") {
+            String remainingAfterInitial = fullWord.length() > 1 ? fullWord.substring(1) : ""
+            result.result = remainingAfterInitial
+            result.prefixRemoved = true
+            result.detectedPrefix = "Ꮨ"
+            result.reason = "h_contraction"
+            return result
+        }
+        
+        // For others (Ꮣ, Ꮥ, Ꮧ, Ꮪ, Ꮫ): check context
+        String remainingAfterInitial = fullWord.length() > 1 ? fullWord.substring(1) : ""
+        
+        if (remainingAfterInitial.length() < 2) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            result.reason = "too_short"
+            return result
+        }
+        
+        // Check for fusion patterns
+        boolean looksLikeKnownStemOrReflexive = looksLikeKnownStemOrReflexive(remainingAfterInitial, word)
+        
+        if (looksLikeKnownStemOrReflexive) {
+            result.result = fullWord
+            result.prefixRemoved = false
+            result.detectedPrefix = null
+            result.reason = "fused_into_stem"
+            return result
+        }
+
+        result.result = remainingAfterInitial
+        result.prefixRemoved = true
+        result.detectedPrefix = initialChar
+        result.reason = null
+        return result
+    }
+    
+    private boolean looksLikeKnownStemOrReflexive(String candidate, Verb word) {
+        if (candidate.length() < 2) {
+            return false
+        }
+        
+        // Heuristic: longer sequences that look like roots/stems
+        boolean hasConsonantCluster = candidate.matches(/^[Ꭰ-Ᏼ][Ꭰ-Ᏼ]{2,}$/)
+        
+        // Look for known reflexive or verb-final patterns
+        boolean looksReflexive = candidate.contains("ᏩᏘ") || 
+                                candidate.contains("Ꮏ") || 
+                                candidate.endsWith("Ꭽ") ||  
+                                candidate.endsWith("Ꭹ") ||
+                                candidate.endsWith("ᎢᎭ") ||
+                                candidate.endsWith("ᎩᎭ")
+        
+        return hasConsonantCluster || looksReflexive
     }
 
     String toEnglish(String baseReturnValue, Verb word) {

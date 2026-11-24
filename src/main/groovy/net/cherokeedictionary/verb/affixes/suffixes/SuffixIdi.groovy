@@ -2,6 +2,7 @@ package net.cherokeedictionary.verb.affixes.suffixes
 
 import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.verb.affixes.Affix
+import net.cherokeedictionary.verb.affixes.SuffixResult
 
 class SuffixIdi implements Affix {
     String suffix = "ᎢᏗ"
@@ -9,6 +10,46 @@ class SuffixIdi implements Affix {
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
         return baseReturnValue.endsWith(suffix) ? baseReturnValue : baseReturnValue + suffix
+    }
+
+    /**
+     * DECONSTRUCTION METHOD - Reverses toSyllabary
+     */
+    SuffixResult deconstructFromSyllabary(String fullWord, Verb word) {
+        SuffixResult result = new SuffixResult()
+        
+        if (!fullWord || fullWord.trim().isEmpty()) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        // Check for ᎢᏗ (variant infinitive or aspectual marker)
+        if (!fullWord.endsWith("ᎢᏗ")) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        String stem = fullWord.length() > 2 ? fullWord.substring(0, fullWord.length() - 2) : ""
+        
+        if (stem.isEmpty()) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        result.result = stem
+        result.suffixRemoved = true
+        result.detectedSuffix = "ᎢᏗ"
+        result.type = "INFINITIVE_VARIANT"
+        return result
     }
 
     @Override

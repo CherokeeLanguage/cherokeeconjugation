@@ -4,6 +4,7 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.verb.affixes.Affix
 import net.cherokeedictionary.transliteration.SyllabaryUtil
 import net.cherokeedictionary.util.Tense
+import net.cherokeedictionary.verb.affixes.SuffixResult
 
 /**
  * Position 14 / 15 (Feeling 1975, Figure 1, grammar guide p. 282):
@@ -36,6 +37,46 @@ class SuffixSvi implements Affix {
 
         // For now, append svi unconditionally - refine based on testing
         return baseReturnValue + svi
+    }
+
+    /**
+     * DECONSTRUCTION METHOD - Reverses toSyllabary
+     */
+    SuffixResult deconstructFromSyllabary(String fullWord, Verb word) {
+        SuffixResult result = new SuffixResult()
+        
+        if (!fullWord || fullWord.trim().isEmpty()) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        // Check for ᏍᎢ (vowel-finalization after nasal stems)
+        if (!fullWord.endsWith("ᏍᎢ")) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        String stem = fullWord.length() > 2 ? fullWord.substring(0, fullWord.length() - 2) : ""
+        
+        if (stem.isEmpty()) {
+            result.result = fullWord
+            result.suffixRemoved = false
+            result.detectedSuffix = null
+            result.type = null
+            return result
+        }
+
+        result.result = stem
+        result.suffixRemoved = true
+        result.detectedSuffix = "ᏍᎢ"
+        result.type = "VOWEL_FINALIZATION_NASAL"
+        return result
     }
 
     @Override
