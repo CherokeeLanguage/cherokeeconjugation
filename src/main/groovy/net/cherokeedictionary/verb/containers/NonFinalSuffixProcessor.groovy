@@ -140,6 +140,104 @@ class NonFinalSuffixProcessor {
     }
 
     /**
+     * Insert a non-final suffix AFTER any prefix/reversive elements but before
+     * the main stem. Used for position-2 suffixes like -is- (duplicative).
+     * 
+     * Pattern: [prefix][reversive]-is-[stem][-tail]
+     */
+    static String insertAfterPrefix(Verb verb, String allomorphLatin) {
+        String stem = verb.wholeWord
+        if (!stem) {
+            return stem
+        }
+
+        // Try to detect if there's a reversive prefix at the start
+        // Reversive typically starts with g/y/e before consonants
+        boolean hasReversiveAtStart = stem.matches("^[gGyYeE].*?[^\\s]")
+        
+        if (hasReversiveAtStart && stem.size() > 2) {
+            // Find where the reversive ends (rough heuristic: look for syllable boundary)
+            int insertPoint = findInsertionPointAfterReversive(stem)
+            if (insertPoint > 0) {
+                def stemLatin = SyllabaryUtil.parseSyllabary(stem)
+                def insertPointLatin = SyllabaryUtil.chr2lat(stem.substring(0, insertPoint)).length()
+                
+                def before = stemLatin.substring(0, insertPointLatin)
+                def after = stemLatin.substring(insertPointLatin)
+                
+                return SyllabaryUtil.tsalagiToSyllabary(before + allomorphLatin + after)
+            }
+        }
+
+        // Fallback to regular insertion
+        return insertBeforeTail(verb, allomorphLatin)
+    }
+
+    /**
+     * Helper: estimate where a reversive prefix ends so we can insert after it.
+     * Very rough heuristic - look for the second syllable as reversive marker end.
+     */
+    private static int findInsertionPointAfterReversive(String syllabary) {
+        // Count characters until we hit what looks like the stem proper
+        // This is approximate; real implementation would need better morphology parsing
+        if (syllabary.size() < 3) return 1
+        
+        // Look for pattern where reversive (-gi/-gis/-y) might end
+        // Heuristic: reverse usually 2-3 chars before stem begins
+        try {
+            def lat = SyllabaryUtil.parseSyllabary(syllabary)
+            // Simple: take first ~2-3 latin letters as potential reversive
+            int estimatedReversiveEnd = Math.min(lat.length(), 3)
+            
+            // Convert back to syllabary position
+            return SyllabaryUtil.lat2chr(lat.substring(0, Math.max(1, estimatedReversiveEnd))).length()
+        } catch (Exception e) {
+            return 1
+        }
+    }
+
+    /**
+     * Insert a non-final suffix before tense-final material, used for position-9
+     * suffixes like -idi- (pre-incipient) and -i- (future). These compete with
+     * each other and with built-in tense systems.
+     * 
+     * Pattern: [non-final-suffixes]-idi/[i]-[stem][-tense-final]
+     */
+    static String insertBeforeTense(Verb verb, String allomorphLatin) {
+        String stem = verb.wholeWord
+        if (!stem) {
+            return stem
+        }
+
+        def latin = SyllabaryUtil.parseSyllabary(stem)
+        String tenseSuffix = (verb.getTenseValue() ?: "").toLowerCase()
+        String rootEnding = (verb.rootEnding ?: "").toLowerCase()
+
+        // Try to find tense-final suffix to insert before
+        if (tenseSuffix && latin.endsWith(tenseSuffix)) {
+            def base = latin.substring(0, latin.size() - tenseSuffix.size())
+            return SyllabaryUtil.tsalagiToSyllabary(base + allomorphLatin + tenseSuffix)
+        }
+
+        // If no clear tense suffix, try root ending
+        if (rootEnding && latin.endsWith(rootEnding)) {
+            def base = latin.substring(0, latin.size() - rootEnding.size())
+            return SyllabaryUtil.tsalagiToSyllabary(base + allomorphLatin + rootEnding)
+        }
+
+        // Fallback: append before any final material
+        if (latin.size() > 2) {
+            // Insert near the end but before final syllables
+            def insertPos = Math.max(2, latin.size() - 2)
+            def before = latin.substring(0, insertPos)
+            def after = latin.substring(insertPos)
+            return SyllabaryUtil.tsalagiToSyllabary(before + allomorphLatin + after)
+        }
+
+        return stem
+    }
+
+    /**
      * True when the character immediately after the insertion point (the first
      * character of the tail) is a latin vowel.
      */

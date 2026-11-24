@@ -4,7 +4,7 @@ import net.cherokeedictionary.core.Verb
 import net.cherokeedictionary.verb.affixes.Affix
 
 class SuffixJu implements Affix {
-    String ju = "Ꮷ"
+    String suffix = "Ꮷ"
 
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
@@ -17,6 +17,6 @@ class SuffixJu implements Affix {
     }
 
     String toString() {
-        return ju
+        return suffix
     }
 }

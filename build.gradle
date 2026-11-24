@@ -134,11 +134,12 @@ test {
         //exclude 'net/cherokeedictionary/**'
     //}
 //    include 'net/cherokeedictionary/sets/SetsTest.groovy'
+/*
     exclude 'net/cherokeedictionary/conjugation/**'
     exclude 'net/cherokeedictionary/deconstruct/**'
     exclude 'net/cherokeedictionary/dsl/**'
     exclude 'net/cherokeedictionary/factory/**'
-    exclude 'net/cherokeedictionary/sets/**'
+    
     exclude 'net/cherokeedictionary/splitter/**'
     exclude 'net/cherokeedictionary/stem/**'
     exclude 'net/cherokeedictionary/stemmer/**'
@@ -146,12 +147,17 @@ test {
     exclude 'net/cherokeedictionary/util/**'
     exclude 'net/cherokeedictionary/verb/**'
     exclude 'net/cherokeedictionary/print/**'
-//    exclude 'net/cherokeedictionary/sql/**'
+
+include 'net/cherokeedictionary/conjugation/finalSuffixes/**'
+*/
+    exclude 'net/cherokeedictionary/sets/**'
+    exclude 'net/cherokeedictionary/sql/**'
     exclude 'net/cherokeedictionary/conjugation/grammarGuide/**'
 
 
     exclude '**/VerbBookFixtures*'
 
+    
     // Exclude a specific test class
 //    exclude '**/MySpecificTest.class'
 

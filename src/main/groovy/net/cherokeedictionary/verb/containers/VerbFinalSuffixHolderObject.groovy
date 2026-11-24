@@ -16,11 +16,12 @@ class VerbFinalSuffixHolderObject extends HolderObjectBase {
     def na = false
     def oi = false
     def sgo = false
+    def svi = false // Added: vowel-finalization after nasal stems
     def vi = false
     def i = false // <-- Added this missing property
 
     public String getTrueValue() {
-        map = ["a":a, "di":di, "dina":dina, "dv":dv, "ei":ei, "esdi":esdi, "gwu":gwu, "hv":hv, "idi":idi, "isi":isi, "ju":ju, "ke":ke, "na":na, "oi":oi, "sgo":sgo, "vi":vi]
+        map = ["a":a, "di":di, "dina":dina, "dv":dv, "ei":ei, "esdi":esdi, "gwu":gwu, "hv":hv, "idi":idi, "isi":isi, "ju":ju, "ke":ke, "na":na, "oi":oi, "sgo":sgo, "svi":svi, "vi":vi]
 
         return getTrueValues().get(0)
     }
@@ -43,6 +44,7 @@ class VerbFinalSuffixHolderObject extends HolderObjectBase {
                 ", na=" + na +
                 ", oi=" + oi +
                 ", sgo=" + sgo +
+                ", svi=" + svi +
                 ", vi=" + vi +
                 ", i=" + i +
                 '}';

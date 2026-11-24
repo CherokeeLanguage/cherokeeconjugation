@@ -97,6 +97,12 @@ class FinalSuffixProcessor {
         if (holder.ei) {
             baseReturnValue = new SuffixEi().toSyllabary(baseReturnValue, verb)
         }
+        if (holder.oi) {
+            baseReturnValue = new SuffixOi().toSyllabary(baseReturnValue, verb)
+        }
+        if (holder.svi) {
+            baseReturnValue = new SuffixSvi().toSyllabary(baseReturnValue, verb)
+        }
 
         return baseReturnValue
     }
@@ -116,8 +122,34 @@ class FinalSuffixProcessor {
     }
 
     //review because si and svi are not endings but vi after ni is svi and isi after ni is si
-    def static lstEndings = ["esdi", "idi", "gwu", "si", "sgo", "ju", "ke" , "na", "hv", "isi", "dina", "dv", "svi", "vi", "oi", "ei", "di",  "a", "i"]
+    def static lstEndings = ["esdi", "idi", "gwu", "si", "sgo", "ju", "ke" , "na", "hv", "isi", "dina", "dv", "oi", "svi", "vi", "ei", "di",  "a", "i"]
     def static finalEnding = ["g", "h", "t", "ts", "l", "y"]
     def vi = ["ᎥᎢ", "ᎬᎢ", "ᎲᎢ", "ᎸᎢ", "ᏅᎢ", "ᏋᎢ", "ᏒᎢ", "ᏛᎢ", "ᏢᎢ", "ᏨᎢ", "ᏮᎢ", "ᏴᎢ"]
     def ei = ["ᎡᎢ", "ᎨᎢ", "ᎮᎢ", "ᎴᎢ", "ᎺᎢ", "ᏁᎢ", "ᏇᎢ", "ᏎᎢ", "ᏕᎢ", "ᏞᎢ", "ᏤᎢ", "ᏪᎢ", "ᏰᎢ"]
+    
+    /**
+     * Suffix order for documentation (Feeling 1975, Figure 1, grammar guide p.282):
+     * 
+     * Position-9 family (tense-formant): idi, i
+     * Position-10: oi (habitual)
+     * Position-11: e (progressive) - NON-FINAL suffix handled separately
+     * Position-12+: 
+     *   gwu (also/too)
+     *   sgo (perhaps)
+     *   ju (just/recently)
+     *   ke (question/emphasis)
+     *   di (conditional)
+     *   dv (focus)
+     *   esdi (infinitive)
+     *   a (assertive)
+     *   i (factual)
+     *   dina (plural around)
+     *   na (contrastive)
+     *   hv (interrogative)
+     *   isi (exhaustive)
+     *   idi (pre-incipient)
+     *   svi (vowel-finalization after nasal)
+     *   vi (completive form)
+     *   ei (inchoative/resultative)
+     */
 }

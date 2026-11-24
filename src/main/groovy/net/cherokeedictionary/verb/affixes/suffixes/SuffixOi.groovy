@@ -11,7 +11,7 @@ import net.cherokeedictionary.verb.affixes.Affix
  * - Usually appends -oi or -sgoi to the stem.
  */
 class SuffixOi implements Affix {
-    String oi = "ᎣᎢ"
+    String suffix = "ᎣᎢ"
 
     @Override
     String toSyllabary(String baseReturnValue, Verb word) {
@@ -24,6 +24,6 @@ class SuffixOi implements Affix {
     }
 
     String toString() {
-        return oi
+        return suffix
     }
 }

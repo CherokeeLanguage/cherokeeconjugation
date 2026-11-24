@@ -1,10 +1,12 @@
 package net.cherokeedictionary.verb.containers
 
 class VerbNonFinalSuffixHolderObject extends HolderObjectBase {
-    // gi / is / idi / i are NOT-IMPLEMENTED-YET stubs (Feeling Figure 1,
-    // p.282 positions 1, 2, 9); the flags exist so the wiring is ready when
-    // the allomorphy is implemented. KNOWN-GAP(NONFINAL-GI) NONFINAL-IS
+    // gi / is / idi / i exist as placeholder classes but are NOT FULLY IMPLEMENTED YET
+    // (Feeling Figure 1, p.282 positions 1, 2, 8, 9); the flags exist so the wiring 
+    // is ready when the allomorphy is implemented. KNOWN-GAP(NONFINAL-GI) NONFINAL-IS
     // NONFINAL-IDI NONFINAL-I
+    // Note: Classes exist in src/main/groovy/net/cherokeedictionary/verb/affixes/nonFinalSuffixes/
+    // but each contains TODO comments indicating incomplete implementation.
     boolean gi = false
     boolean is = false
     boolean idi = false
@@ -28,7 +30,11 @@ class VerbNonFinalSuffixHolderObject extends HolderObjectBase {
     @Override
     public String toString() {
         return "VerbNonFinalSuffixHolderObject{" +
-                "dan=" + dan +
+                "gi=" + gi +
+                ", is=" + is +
+                ", idi=" + idi +
+                ", i=" + i +
+                ", dan=" + dan +
                 ", dohdan=" + dohdan +
                 ", e=" + e +
                 ", el=" + el +
